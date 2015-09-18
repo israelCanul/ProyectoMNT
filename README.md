@@ -6,6 +6,6 @@ Creacion del proyecto Mexico News Travel by Lomas Travel:
   <li>Transfers</li>
 <li>Actividades correspondientes a la cadena.</li>
 </lu>
-Servidor de Prueba
-URL:http://www.mexicotravelsnews.com/
-<label style="color:red">Israel canul</label>
+Servidor de Prueba<br>
+URL:http://www.mexicotravelsnews.com/<br>
+<label style="color:#00ff00">Israel canul</label><br>
