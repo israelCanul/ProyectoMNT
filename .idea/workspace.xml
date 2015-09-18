@@ -92,20 +92,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/views/checkout/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.3636364">
-              <caret line="195" column="40" selection-start-line="195" selection-start-column="30" selection-end-line="195" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.02685624">
+              <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CheckoutController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CheckoutController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/controllers/CheckoutController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48973143">
+            <state vertical-scroll-proportion="-5.6363635">
               <caret line="352" column="34" selection-start-line="352" selection-start-column="34" selection-end-line="352" selection-end-column="34" />
               <folding>
                 <marker date="1442593064735" expanded="true" signature="499:659" placeholder="Select venta..venta..." />
@@ -202,6 +202,7 @@
         <option value="$PROJECT_DIR$/protected/components/GenericFunctions.php" />
         <option value="$PROJECT_DIR$/protected/controllers/DestinationsController.php" />
         <option value="$PROJECT_DIR$/protected/controllers/CheckoutController.php" />
+        <option value="$PROJECT_DIR$/protected/views/checkout/index.php" />
       </list>
     </option>
   </component>
@@ -613,6 +614,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -674,6 +676,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -723,6 +726,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="110" column="26" selection-start-line="110" selection-start-column="26" selection-end-line="110" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -779,6 +783,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.068966">
           <caret line="206" column="15" selection-start-line="206" selection-start-column="15" selection-end-line="206" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -865,14 +870,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/checkout/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3636364">
-          <caret line="195" column="40" selection-start-line="195" selection-start-column="30" selection-end-line="195" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/controllers/TrasladosController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.018182">
@@ -896,13 +893,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/controllers/CheckoutController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48973143">
+        <state vertical-scroll-proportion="-5.6363635">
           <caret line="352" column="34" selection-start-line="352" selection-start-column="34" selection-end-line="352" selection-end-column="34" />
           <folding>
             <marker date="1442593064735" expanded="true" signature="499:659" placeholder="Select venta..venta..." />
             <marker date="1442593064735" expanded="true" signature="10177:10656" placeholder="Select * fro..tour_tarifa..." />
             <marker date="1442593064735" expanded="true" signature="10867:11300" placeholder="Select * fro..tour_tarifa..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/checkout/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.02685624">
+          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>

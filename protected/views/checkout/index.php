@@ -1,3 +1,6 @@
+<div class="row">
+    <div class="col "
+
 <?php $languaje=strtoupper(Yii::app()->language); ?>
 <div class="content contentPage">
 
