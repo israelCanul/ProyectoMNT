@@ -5624,3 +5624,51 @@ Stack trace:
 #1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
 #2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
 #3 {main} REQUEST_URI=/img/traslados/3.jpg
+2015/09/18 12:32:34 [error] [php] Object of class DateTime could not be converted to string (C:\AppServ\www\mexico-news-travel\protected\views\checkout\index.php:855)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(866): CheckoutController->renderFile()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(779): CheckoutController->renderPartial()
+#2 C:\AppServ\www\mexico-news-travel\protected\controllers\CheckoutController.php(376): CheckoutController->render()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\actions\CInlineAction.php(50): CheckoutController->actionIndex()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams()
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): CheckoutController->runAction()
+#6 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): CheckoutController->runActionWithFilters()
+#7 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CheckoutController->run()
+#8 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#9 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#10 C:\AppServ\www\mexico-news-travel\index.php(22): CWebApplication->run()
+REQUEST_URI=/checkout/index.html
+2015/09/18 12:33:18 [error] [php] Object of class DateTime could not be converted to string (C:\AppServ\www\mexico-news-travel\protected\views\checkout\index.php:855)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(866): CheckoutController->renderFile()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(779): CheckoutController->renderPartial()
+#2 C:\AppServ\www\mexico-news-travel\protected\controllers\CheckoutController.php(376): CheckoutController->render()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\actions\CInlineAction.php(50): CheckoutController->actionIndex()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams()
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): CheckoutController->runAction()
+#6 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): CheckoutController->runActionWithFilters()
+#7 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CheckoutController->run()
+#8 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#9 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#10 C:\AppServ\www\mexico-news-travel\index.php(22): CWebApplication->run()
+REQUEST_URI=/checkout/index.html
+2015/09/18 13:07:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tours/buscar".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('tours/buscar')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/tours/buscar.html?dest=Riviera_Maya&prod=Reef_Adventure_and_Parasailing_Combo_Tour&isTourCategory=0&tour_destination=Reef+Adventure+and+Parasailing+Combo+Tour+at+Maroma+Adventures&TourId=178&ProveedorId=0&checkout_tour=ajax&fecha=09%2F21%2F2015&tour_adults=3&tour_childs=1
+2015/09/18 13:07:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('img')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('img')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('checkout/img/aj...')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#5 {main} REQUEST_URI=/checkout/img/ajax-loader.gif
+2015/09/18 13:12:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "extras/agregar".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('extras/agregar')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/extras/agregar?jnfe=pmbkZQN6VwVlZxOND2kup3AcLlOKI0ONAQENDP9coJSaMKZip2IlqzywnJ9sMKu0pzRiLKAmnKA0K2Aupv5dpTqNDRSmp2ymqTShL2HtMz9lVUyiqKVtqUWcpRONZHkioJSmD2yDnUWup2HvBj%3D%3D&pgR=pmbkBQN6VzR6AGc7pmbkZGbvMKu0pzSsMz9fnJ8vB3Z6ZmbvZwVlVwgmBwRlBvWyrUElLI9uMUIfqUZvB3Z6ZGbvZlV7pmbkZGbvMKu0pzSsL2ucoTDvB3Z6ZGbvZFV7pmbkZmbvMKu0pzSsLKWlnKMuoPV7pmbkZQbvZQxiZwNiZwNkAFV7pmbkZwbvMKu0pzSspzI0qKWhVwgmBwRjBvVjBF8lZl8lZQR1Vwg9GT9gLKAQnIObpzSmMFV7&chekoutExtra=1

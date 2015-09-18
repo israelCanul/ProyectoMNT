@@ -1,6 +1,17 @@
+<style>
+    [type="radio"]:not(:checked), [type="radio"]:checked {
+        position: relative;
+        left: 0px;
+        visibility: visible;
+    }
+</style>
 <div class="row">
     <div class="col s12 m10 offset-m1"
+<?
 
+$checkInDate='';
+$checkOutDate='';
+?>
         <?php $languaje=strtoupper(Yii::app()->language); ?>
         <div class="content contentPage">
 
@@ -58,6 +69,8 @@
                                                     </span>
                                             <table>
                                                 <tr>
+
+
                                                     <td>Check-In:  <?= date_format($checkInDate, 'l M/d/Y'); ?></td>
                                                     <td class="hide_mobil"><?= $_p->descripcion_tarifa ?></td>
                                                 </tr>
@@ -701,7 +714,7 @@
                                                             <input type="hidden" name="checkout_tour" 	value="ajax"/>
                                                             <div>
                                                                 <label>Dates: </label>
-                                                                <input type="text" name="fecha" value="<?= date_format($temp_InDate, 'm/d/Y')?>" class="dateInput"/>
+                                                                <input type="text" name="fecha" value="<?= date_format($temp_InDate, 'm/d/Y')?>" class="datepicker-tour-checkout"/>
                                                             </div>
                                                             <div>
                                                                 <label>Adults: </label>
@@ -765,68 +778,73 @@
                     <? $Total = 0; ?>
                     <? foreach($_Productos as $_p){ ?>
                         <? $Total = $Total + $_p->descripcion_total; ?>
-                        <div>
-                            <label> <?= $_p->descripcion_producto ?> </label>
-                            <label class="shopping_moreDetails">More Details</label>
-                            <? echo CHtml::link("x|Remove",array("checkout/index","query"=> Yii::app()->GenericFunctions->ProtectVar($_p->descripcion_id)),array("title"=>"Remove Item","class"=>"remove_link_checkout_prod"))," "; ?>
+                        <div class="row">
+                            <div class="col s12">
+                                <div class="col s12"><label class="completo"> <?= $_p->descripcion_producto ?> </label></div>
+                                <div class="col s12">
+                                <label class="completo shopping_moreDetails">More Details</label>
+                                <div><? echo CHtml::link("x|Remove",array("checkout/index","query"=> Yii::app()->GenericFunctions->ProtectVar($_p->descripcion_id)),array("title"=>"Remove Item","class"=>"remove_link_checkout_prod"))," "; ?></div>
 
-                            <div class="shopping_moreInformation hide">
-                                <? if($_p->descripcion_id_cupon==1){?>
-                                    Valid to:
-                                <?}else{?>
-                                    Date:
-                                <?}?>
-                                <?= Yii::app()->GenericFunctions->convertPresentableDates($_p->descripcion_fecha1); ?>
+                                    <div class="shopping_moreInformation hide completo">
+                                        <? if($_p->descripcion_id_cupon==1){?>
+                                            Valid to:
+                                        <?}else{?>
+                                            Date:
+                                        <?}?>
+                                        <?= Yii::app()->GenericFunctions->convertPresentableDates($_p->descripcion_fecha1); ?>
 
-                                <? if($_p->descripcion_tipo_producto == 3){ ?>
-                                    <? if($_p->tipo_translado == 1 || $_p->tipo_translado == 5){ ?>
-                                        - <?= Yii::app()->GenericFunctions->convertPresentableDates($_p->descripcion_fecha2); ?>
-                                    <? } ?>
-                                <? } ?>
+                                        <? if($_p->descripcion_tipo_producto == 3){ ?>
+                                            <? if($_p->tipo_translado == 1 || $_p->tipo_translado == 5){ ?>
+                                                - <?= Yii::app()->GenericFunctions->convertPresentableDates($_p->descripcion_fecha2); ?>
+                                            <? } ?>
+                                        <? } ?>
 
-                                <? if($_p->descripcion_tipo_producto == 1){ ?>
-                                    - <?= Yii::app()->GenericFunctions->convertPresentableDates($_p->descripcion_fecha2); ?>
-                                <? } ?>
+                                        <? if($_p->descripcion_tipo_producto == 1){ ?>
+                                            - <?= Yii::app()->GenericFunctions->convertPresentableDates($_p->descripcion_fecha2); ?>
+                                        <? } ?>
 
-                                <br />
+                                        <br />
 
-                                <?= $_p->descripcion_adultos; ?>
-                                <?= Yii::t("global","Adulto|Adultos",$_p->descripcion_adultos); ?>
+                                        <?= $_p->descripcion_adultos; ?>
+                                        <?= Yii::t("global","Adulto|Adultos",$_p->descripcion_adultos); ?>
 
-                                <? if($_p->descripcion_menores > 0){ ?>
-                                    -
-                                    <?= $_p->descripcion_menores; ?>
-                                    <?= Yii::t("global","Menor|Menores",$_p->descripcion_menores); ?>
-                                <? } ?>
+                                        <? if($_p->descripcion_menores > 0){ ?>
+                                            -
+                                            <?= $_p->descripcion_menores; ?>
+                                            <?= Yii::t("global","Menor|Menores",$_p->descripcion_menores); ?>
+                                        <? } ?>
 
-                                <br />
+                                        <br />
 
-                                <? if($_p->descripcion_tipo_producto == 1){ ?>
-                                    <strong><?= Yii::t("global","Habitación") ?>:</strong>
-                                <? }else{ ?>
-                                    <strong><?= Yii::t("global","Servicio") ?>:</strong>
-                                <? } ?>
+                                        <? if($_p->descripcion_tipo_producto == 1){ ?>
+                                            <strong><?= Yii::t("global","Habitación") ?>:</strong>
+                                        <? }else{ ?>
+                                            <strong><?= Yii::t("global","Servicio") ?>:</strong>
+                                        <? } ?>
 
-                                <?= $_p->descripcion_tarifa; ?>
+                                        <?= $_p->descripcion_tarifa; ?>
 
-                                <br />
+                                        <br />
 
-                                <? if($_p->descripcion_tipo_producto == 1){ ?>
-                                    <? if($_p->valor_agregado!= "") {?>
-                                        <br /><strong><?= Yii::t("global","Valores Agregados") ?>:</strong>
-                                        <br /><?= $_p->valor_agregado; ?>
-                                    <? } ?>
-                                    <? if($_p->descripcion_promo_name != "") { ?>
-                                        <br /><strong><?= Yii::t("global","Promocion") ?>:</strong>
-                                        <br /><?= $_p->descripcion_promo_name; ?>
-                                    <? } ?>
-                                <? } ?>
+                                        <? if($_p->descripcion_tipo_producto == 1){ ?>
+                                            <? if($_p->valor_agregado!= "") {?>
+                                                <br /><strong><?= Yii::t("global","Valores Agregados") ?>:</strong>
+                                                <br /><?= $_p->valor_agregado; ?>
+                                            <? } ?>
+                                            <? if($_p->descripcion_promo_name != "") { ?>
+                                                <br /><strong><?= Yii::t("global","Promocion") ?>:</strong>
+                                                <br /><?= $_p->descripcion_promo_name; ?>
+                                            <? } ?>
+                                        <? } ?>
 
+                                    </div>
+                                </div>
+                                <div class="col s12" >
+                                    <label class="shopping_Price " style="float:right;">
+                                    <?=  $_SESSION["config"]["currency"] ." $". number_format($_p->descripcion_total,0); ?>
+                                    </label>
+                                </div>
                             </div>
-
-                            <label class="shopping_Price">
-                                <?=  $_SESSION["config"]["currency"] ." $". number_format($_p->descripcion_total,0); ?>
-                            </label>
                         </div>
                     <? } ?>
                     <div class="prod_service_resume_total">
@@ -850,6 +868,57 @@
         </script>
         <script>
             $(document).ready(function(e) {
+                <?
+                $dateIn=explode(",",date_format($checkInDate, 'Y,m,d'));
+                $dateIn=$dateIn[0].",".($dateIn[1]-1).",".$dateIn[2];
+                $dateOut=explode(",",date_format($checkOutDate, 'Y,m,d'));
+                $dateOut=$dateOut[0].",".($dateOut[1]-1).",".$dateOut[2];
+                ?>
+                $('.datepicker-tour-checkout').pickadate({
+                    selectMonths: true,// Creates a dropdown to control month
+                    selectYears: 15,// Creates a dropdown of 15 years to control year
+                    min:<? echo "[".$dateIn."]";?>,
+                    max:<? echo "[".$dateOut."]";?>,
+                    // The title label to use for the month nav buttons
+
+                    labelMonthNext: 'Next Month',
+                    labelMonthPrev: 'Beforre Month',
+                    // The title label to use for the dropdown selectors
+                    labelMonthSelect: 'Select a Month',
+                    labelYearSelect: 'Select a year',
+                    // Months and weekdays
+                    //monthsFull: [ 'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro' ],
+                    //monthsShort: [ 'Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez' ],
+                    //weekdaysFull: [ 'Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado' ],
+                    //weekdaysShort: [ 'Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab' ],
+                    // Materialize modified
+                    //weekdaysLetter: [ 'D', 'S', 'T', 'Q', 'Q', 'S', 'S' ],
+                    // Today and clear
+                    today: 'Today',
+                    clear: 'Clear',
+                    close: 'Close',
+                    // The format to show on the `input` element
+                    format: 'mm/dd/yyyy',
+                    onOpen: function() {
+                        //console.log('Opened up!')
+                    },
+                    onClose: function() {
+                        //console.log('Closed now');
+                    },
+                    onRender: function() {
+                        //
+                    },
+                    onStart: function() {
+                        //console.log('Hello there :)')
+                    },
+                    onStop: function() {
+                        //console.log('See ya')
+                    },
+                    onSet: function(thingSet) {
+                        //console.log('Set stuff:', thingSet)
+                    }
+                });
+
                 messageAjax="<?= Yii::t("global","Se ha agregado el producto"); ?>";
                 loadDateTransfers();
 
