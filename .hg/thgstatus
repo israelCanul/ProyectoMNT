@@ -1,8 +1,12 @@
 m
 rcss
+acss/page/activities
+acss/page/checkout
 acss/page/ofertas
 rfonts
 mjs
+ajs/page/activities
+ajs/page/checkout
 mprotected/components
 mprotected/config
 mprotected/controllers

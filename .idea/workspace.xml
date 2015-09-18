@@ -7,8 +7,12 @@
     <list default="true" id="85593adb-4e57-432e-bffb-001c130550c8" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/controllers/CheckoutController.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/controllers/TrasladosController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/page/activities/activities.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/page/activities/activities-detail.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/page/activities/activities-list.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/page/activities/activities.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/page/activities/activities.min.css" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/page/checkout/checkout.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/page/checkout/checkout.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/views/checkout/index.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/page/ofertas/ofertas.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Activities.php" afterPath="$PROJECT_DIR$/protected/models/Activities.php" />
@@ -49,54 +53,52 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/views/checkout/index.php">
+      <file leaf-file-name="ActivitiesController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/protected/controllers/ActivitiesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-51.072727">
-              <caret line="933" column="0" selection-start-line="933" selection-start-column="0" selection-end-line="933" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.38425198">
+              <caret line="258" column="33" selection-start-line="258" selection-start-column="33" selection-end-line="258" selection-end-column="33" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#label#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#label#2;n#li#0;n#ul#0;n#div#3;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#label#2;n#li#0;n#ul#0;n#div#3;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#label#2;n#li#1;n#ul#0;n#div#3;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#label#2;n#li#1;n#ul#0;n#div#3;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#label#2;n#li#2;n#ul#0;n#div#3;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#label#2;n#li#2;n#ul#0;n#div#3;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#label#2;n#li#4;n#ul#0;n#div#3;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#label#2;n#li#4;n#ul#0;n#div#3;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#5;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#span#0;n#a#0;n#h1#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#5;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#2;n#div#0;n#div#5;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#6;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#6;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#a#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#6;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#2;n#div#0;n#div#6;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <marker date="1442615057916" expanded="true" signature="13851:14098" placeholder="Select * fro..tour_tarifa..." />
+                <marker date="1442615057916" expanded="true" signature="14314:14570" placeholder="Select * fro..tour_tarifa..." />
+                <marker date="1442615057916" expanded="true" signature="14713:14992" placeholder="Select * fro..tour_tarifa..." />
+                <marker date="1442615057916" expanded="true" signature="15124:15378" placeholder="Select * fro..tour_tarifa..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ActivitiesController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/protected/controllers/ActivitiesController.php">
+      <file leaf-file-name="main.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/config/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46456692">
-              <caret line="159" column="99" selection-start-line="159" selection-start-column="99" selection-end-line="159" selection-end-column="99" />
+            <state vertical-scroll-proportion="-6.735849">
+              <caret line="73" column="68" selection-start-line="73" selection-start-column="68" selection-end-line="73" selection-end-column="68" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activities.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/page/activities/activities.css">
+      <file leaf-file-name="detalle.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/views/destinations/detalle.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="884" column="1" selection-start-line="884" selection-start-column="1" selection-end-line="884" selection-end-column="1" />
-              <folding />
+            <state vertical-scroll-proportion="241.96153">
+              <caret line="515" column="50" selection-start-line="515" selection-start-column="50" selection-end-line="515" selection-end-column="50" />
+              <folding>
+                <marker date="1442514596863" expanded="true" signature="8577:8589" placeholder="..." />
+                <marker date="1442514596863" expanded="true" signature="10965:11015" placeholder="..." />
+                <marker date="1442514596863" expanded="true" signature="11059:11168" placeholder="..." />
+                <marker date="1442514596863" expanded="true" signature="15150:15160" placeholder="..." />
+                <marker date="1442514596863" expanded="true" signature="16131:16141" placeholder="..." />
+                <marker date="1442514596863" expanded="true" signature="16271:16281" placeholder="..." />
+                <marker date="1442514596863" expanded="true" signature="18708:18727" placeholder="..." />
+                <marker date="1442514596863" expanded="true" signature="19122:19170" placeholder="..." />
+                <marker date="1442514596863" expanded="true" signature="24228:24239" placeholder="..." />
+                <marker date="1442514596863" expanded="true" signature="26895:27141" placeholder="..." />
+                <marker date="1442514596863" expanded="false" signature="27052:27066" placeholder="..." />
+                <marker date="1442514596863" expanded="true" signature="30055:30065" placeholder="..." />
+                <marker date="1442514596863" expanded="true" signature="31329:31339" placeholder="..." />
+                <marker date="1442514596863" expanded="true" signature="32522:32532" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -105,7 +107,7 @@
         <entry file="file://$PROJECT_DIR$/css/page/checkout/checkout.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+              <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -114,23 +116,13 @@
       <file leaf-file-name="CheckoutController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/controllers/CheckoutController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.115385">
-              <caret line="353" column="21" selection-start-line="353" selection-start-column="21" selection-end-line="353" selection-end-column="21" />
+            <state vertical-scroll-proportion="-22.846153">
+              <caret line="342" column="25" selection-start-line="342" selection-start-column="25" selection-end-line="342" selection-end-column="25" />
               <folding>
-                <marker date="1442600274099" expanded="true" signature="499:659" placeholder="Select venta..venta..." />
-                <marker date="1442600274099" expanded="true" signature="10177:10656" placeholder="Select * fro..tour_tarifa..." />
-                <marker date="1442600274099" expanded="true" signature="10867:11300" placeholder="Select * fro..tour_tarifa..." />
+                <marker date="1442608696500" expanded="true" signature="499:659" placeholder="Select venta..venta..." />
+                <marker date="1442608696500" expanded="true" signature="10177:10656" placeholder="Select * fro..tour_tarifa..." />
+                <marker date="1442608696500" expanded="true" signature="10867:11300" placeholder="Select * fro..tour_tarifa..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -139,17 +131,7 @@
         <entry file="file://$PROJECT_DIR$/js/page/destinations1.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="destinations.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/page/destinations/destinations.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -213,16 +195,20 @@
         <option value="$PROJECT_DIR$/protected/components/WebServices.php" />
         <option value="$PROJECT_DIR$/protected/models/Destination.php" />
         <option value="$PROJECT_DIR$/css/main.css" />
-        <option value="$PROJECT_DIR$/protected/config/main.php" />
         <option value="$PROJECT_DIR$/protected/components/Currency.php" />
         <option value="$PROJECT_DIR$/protected/controllers/TrasladosController.php" />
         <option value="$PROJECT_DIR$/protected/views/checkin/index.php" />
         <option value="$PROJECT_DIR$/protected/components/GenericFunctions.php" />
         <option value="$PROJECT_DIR$/protected/controllers/DestinationsController.php" />
         <option value="$PROJECT_DIR$/css/page/checkout/checkout.css" />
-        <option value="$PROJECT_DIR$/protected/controllers/CheckoutController.php" />
         <option value="$PROJECT_DIR$/protected/views/checkout/index.php" />
         <option value="$PROJECT_DIR$/js/page/activities/activities.css" />
+        <option value="$PROJECT_DIR$/js/page/checkout/checkout.js" />
+        <option value="$PROJECT_DIR$/protected/controllers/CheckoutController.php" />
+        <option value="$PROJECT_DIR$/js/page/activities/activities-list.js" />
+        <option value="$PROJECT_DIR$/css/page/activities/activities.min.css" />
+        <option value="$PROJECT_DIR$/js/page/activities/activities-detail.min.js" />
+        <option value="$PROJECT_DIR$/protected/config/main.php" />
         <option value="$PROJECT_DIR$/protected/controllers/ActivitiesController.php" />
       </list>
     </option>
@@ -297,7 +283,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="protected" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -311,11 +297,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="protected" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="page" />
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -329,15 +315,73 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="protected" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="page" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="destinations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mexico-news-travel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mexico-news-travel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="activities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mexico-news-travel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mexico-news-travel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mexico-news-travel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mexico-news-travel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -353,6 +397,11 @@
     <property name="SearchEverywhereHistoryKey" value="elementPriceInfo&#9;null&#9;null&#10;animated&#9;null&#9;null&#10;slideOutLeft&#9;null&#9;null&#10;.bookin&#9;null&#9;null&#10;&lt;hr&gt;&#9;null&#9;null" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="FullScreen" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\AppServ\www\mexico-news-travel\css\page\activities" />
+    </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.Unnamed">
     <configuration default="true" type="AppEnginePhpConfigurationType" factoryName="App Engine for PHP">
@@ -419,13 +468,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16197917" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24472573" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24472573" sideWeight="0.50625" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24472573" sideWeight="0.49375" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -436,7 +486,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24472573" sideWeight="0.49791667" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39978904" sideWeight="0.49791667" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -463,45 +512,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/protected/views/site/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="35" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/bookin-box.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="http://mexico-news.com.dev//js/bookin-box.js/">
-      <provider selected="true" editor-type-id="httpFileEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/jquery-ui.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33271718">
-          <caret line="7551" column="4" selection-start-line="7551" selection-start-column="4" selection-end-line="7551" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="https://code.jquery.com/jquery-2.1.4.js">
-      <provider selected="true" editor-type-id="httpFileEditor">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/animate.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -608,13 +618,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/destinations/detalle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="8.272727">
-          <caret line="515" column="50" selection-start-line="515" selection-start-column="50" selection-end-line="515" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.9230769">
@@ -699,6 +702,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -733,14 +737,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/config/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="83" column="13" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/components/Currency.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17824773">
@@ -754,7 +750,7 @@
         <state vertical-scroll-proportion="-10.018182">
           <caret line="47" column="50" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
           <folding>
-            <marker date="1442532879008" expanded="true" signature="-1:-1" placeholder="Select venta..venta..." />
+            <marker date="1442608696506" expanded="true" signature="-1:-1" placeholder="Select venta..venta..." />
           </folding>
         </state>
       </provider>
@@ -764,8 +760,8 @@
         <state vertical-scroll-proportion="-14.384615">
           <caret line="592" column="286" selection-start-line="592" selection-start-column="286" selection-end-line="592" selection-end-column="286" />
           <folding>
-            <marker date="1442593043793" expanded="true" signature="-1:-1" placeholder="SELECT ciuda..ciudades..." />
-            <marker date="1442593043793" expanded="true" signature="-1:-1" placeholder="Select venta..venta..." />
+            <marker date="1442608696524" expanded="true" signature="-1:-1" placeholder="SELECT ciuda..ciudades..." />
+            <marker date="1442608696524" expanded="true" signature="-1:-1" placeholder="Select venta..venta..." />
           </folding>
         </state>
       </provider>
@@ -782,52 +778,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/components/views/bookingbox.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-70.61539">
-          <caret line="108" column="67" selection-start-line="108" selection-start-column="67" selection-end-line="108" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/page/destinations1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/bookin-box.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="115" column="36" selection-start-line="115" selection-start-column="36" selection-end-line="115" selection-end-column="36" />
-          <folding>
-            <marker date="1441929566374" expanded="true" signature="9700:9712" placeholder="..." />
-            <marker date="1441929566374" expanded="true" signature="11392:11404" placeholder="..." />
-            <marker date="1441929566374" expanded="true" signature="11609:11621" placeholder="..." />
-            <marker date="1441929566374" expanded="true" signature="12968:12980" placeholder="..." />
-            <marker date="1441929566374" expanded="true" signature="13167:13179" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/page/checkout/checkout.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/page/activities/activities.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="884" column="1" selection-start-line="884" selection-start-column="1" selection-end-line="884" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -862,23 +812,137 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/page/activities/activities.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="884" column="1" selection-start-line="884" selection-start-column="1" selection-end-line="884" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/page/activities/activities-list.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="134" selection-start-line="0" selection-start-column="134" selection-end-line="0" selection-end-column="134" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/page/checkout/checkout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="35" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/page/checkout/checkout.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/bookin-box.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="115" column="36" selection-start-line="115" selection-start-column="36" selection-end-line="115" selection-end-column="36" />
+          <folding>
+            <marker date="1441929566374" expanded="true" signature="9700:9712" placeholder="..." />
+            <marker date="1441929566374" expanded="true" signature="11392:11404" placeholder="..." />
+            <marker date="1441929566374" expanded="true" signature="11609:11621" placeholder="..." />
+            <marker date="1441929566374" expanded="true" signature="12968:12980" placeholder="..." />
+            <marker date="1441929566374" expanded="true" signature="13167:13179" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/components/views/bookingbox.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-70.61539">
+          <caret line="108" column="67" selection-start-line="108" selection-start-column="67" selection-end-line="108" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/page/destinations1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/protected/controllers/CheckoutController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.115385">
-          <caret line="353" column="21" selection-start-line="353" selection-start-column="21" selection-end-line="353" selection-end-column="21" />
+        <state vertical-scroll-proportion="-22.846153">
+          <caret line="342" column="25" selection-start-line="342" selection-start-column="25" selection-end-line="342" selection-end-column="25" />
           <folding>
-            <marker date="1442600274099" expanded="true" signature="499:659" placeholder="Select venta..venta..." />
-            <marker date="1442600274099" expanded="true" signature="10177:10656" placeholder="Select * fro..tour_tarifa..." />
-            <marker date="1442600274099" expanded="true" signature="10867:11300" placeholder="Select * fro..tour_tarifa..." />
+            <marker date="1442608696500" expanded="true" signature="499:659" placeholder="Select venta..venta..." />
+            <marker date="1442608696500" expanded="true" signature="10177:10656" placeholder="Select * fro..tour_tarifa..." />
+            <marker date="1442608696500" expanded="true" signature="10867:11300" placeholder="Select * fro..tour_tarifa..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/page/activities/activities.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9505814">
+          <caret line="884" column="1" selection-start-line="884" selection-start-column="1" selection-end-line="884" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/page/activities/activities-detail.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="161" selection-start-line="0" selection-start-column="161" selection-end-line="0" selection-end-column="161" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/destinations/detalle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="241.96153">
+          <caret line="515" column="50" selection-start-line="515" selection-start-column="50" selection-end-line="515" selection-end-column="50" />
+          <folding>
+            <marker date="1442514596863" expanded="true" signature="8577:8589" placeholder="..." />
+            <marker date="1442514596863" expanded="true" signature="10965:11015" placeholder="..." />
+            <marker date="1442514596863" expanded="true" signature="11059:11168" placeholder="..." />
+            <marker date="1442514596863" expanded="true" signature="15150:15160" placeholder="..." />
+            <marker date="1442514596863" expanded="true" signature="16131:16141" placeholder="..." />
+            <marker date="1442514596863" expanded="true" signature="16271:16281" placeholder="..." />
+            <marker date="1442514596863" expanded="true" signature="18708:18727" placeholder="..." />
+            <marker date="1442514596863" expanded="true" signature="19122:19170" placeholder="..." />
+            <marker date="1442514596863" expanded="true" signature="24228:24239" placeholder="..." />
+            <marker date="1442514596863" expanded="true" signature="26895:27141" placeholder="..." />
+            <marker date="1442514596863" expanded="false" signature="27052:27066" placeholder="..." />
+            <marker date="1442514596863" expanded="true" signature="30055:30065" placeholder="..." />
+            <marker date="1442514596863" expanded="true" signature="31329:31339" placeholder="..." />
+            <marker date="1442514596863" expanded="true" signature="32522:32532" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/config/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.735849">
+          <caret line="73" column="68" selection-start-line="73" selection-start-column="68" selection-end-line="73" selection-end-column="68" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/controllers/ActivitiesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46456692">
-          <caret line="159" column="99" selection-start-line="159" selection-start-column="99" selection-end-line="159" selection-end-column="99" />
-          <folding />
+        <state vertical-scroll-proportion="0.38425198">
+          <caret line="258" column="33" selection-start-line="258" selection-start-column="33" selection-end-line="258" selection-end-column="33" />
+          <folding>
+            <marker date="1442615057916" expanded="true" signature="13851:14098" placeholder="Select * fro..tour_tarifa..." />
+            <marker date="1442615057916" expanded="true" signature="14314:14570" placeholder="Select * fro..tour_tarifa..." />
+            <marker date="1442615057916" expanded="true" signature="14713:14992" placeholder="Select * fro..tour_tarifa..." />
+            <marker date="1442615057916" expanded="true" signature="15124:15378" placeholder="Select * fro..tour_tarifa..." />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -5672,3 +5672,223 @@ Stack trace:
 #1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
 #2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
 #3 {main} REQUEST_URI=/extras/agregar?jnfe=pmbkZQN6VwVlZxOND2kup3AcLlOKI0ONAQENDP9coJSaMKZip2IlqzywnJ9sMKu0pzRiLKAmnKA0K2Aupv5dpTqNDRSmp2ymqTShL2HtMz9lVUyiqKVtqUWcpRONZHkioJSmD2yDnUWup2HvBj%3D%3D&pgR=pmbkBQN6VzR6AGc7pmbkZGbvMKu0pzSsMz9fnJ8vB3Z6ZmbvZwVlVwgmBwRlBvWyrUElLI9uMUIfqUZvB3Z6ZGbvZlV7pmbkZGbvMKu0pzSsL2ucoTDvB3Z6ZGbvZFV7pmbkZmbvMKu0pzSsLKWlnKMuoPV7pmbkZQbvZQxiZwNiZwNkAFV7pmbkZwbvMKu0pzSspzI0qKWhVwgmBwRjBvVjBF8lZl8lZQR1Vwg9GT9gLKAQnIObpzSmMFV7&chekoutExtra=1
+2015/09/18 15:48:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tours/index".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('tours/index')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/tours/index.html
+2015/09/18 15:48:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "activities".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('activities')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('activities')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('activities/acti...')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#5 {main} REQUEST_URI=/activities/activities?code=1005
+2015/09/18 15:50:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('img')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('img')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('checkout/img/aj...')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#5 {main} REQUEST_URI=/checkout/img/ajax-loader.gif
+2015/09/18 15:51:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tours/buscar".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('tours/buscar')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/tours/buscar.html?dest=Riviera_Maya&prod=Horseback_Riding_and_Reef_Adventure_Combo_Tour&isTourCategory=0&tour_destination=Horseback+Riding+%26+Reef+Adventure+Combo+Tour+at+Maroma+Adventures&TourId=172&ProveedorId=0&checkout_tour=ajax&fecha=09%2F21%2F2015&tour_adults=4&tour_childs=1
+2015/09/18 15:51:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tours/buscar".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('tours/buscar')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/tours/buscar.html?dest=Riviera_Maya&prod=Horseback_Riding_and_Reef_Adventure_Combo_Tour&isTourCategory=0&tour_destination=Horseback+Riding+%26+Reef+Adventure+Combo+Tour+at+Maroma+Adventures&TourId=172&ProveedorId=0&checkout_tour=ajax&fecha=09%2F21%2F2015&tour_adults=4&tour_childs=1
+2015/09/18 15:51:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "detalle".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('detalle')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('detalle')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('activities/deta...')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#5 {main} REQUEST_URI=/activities/detalle/dest/Riviera_Maya/prod//tour_fecha//tour_adults/4/tour_childs/1/checkout_tour/ajax.html
+2015/09/18 16:03:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('img')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('img')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('checkout/img/aj...')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#5 {main} REQUEST_URI=/checkout/img/ajax-loader.gif
+2015/09/18 16:03:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tours/buscar".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('tours/buscar')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/tours/buscar.html?dest=Riviera_Maya&prod=Horseback_Riding_and_Reef_Adventure_Combo_Tour&isTourCategory=0&tour_destination=Horseback+Riding+%26+Reef+Adventure+Combo+Tour+at+Maroma+Adventures&TourId=172&ProveedorId=0&checkout_tour=ajax&fecha=09%2F21%2F2015&tour_adults=4&tour_childs=1
+2015/09/18 16:03:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tours/buscar".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('tours/buscar')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/tours/buscar.html?dest=Riviera_Maya&prod=Horseback_Riding_and_Reef_Adventure_Combo_Tour&isTourCategory=0&tour_destination=Horseback+Riding+%26+Reef+Adventure+Combo+Tour+at+Maroma+Adventures&TourId=172&ProveedorId=0&checkout_tour=ajax&fecha=09%2F21%2F2015&tour_adults=4&tour_childs=1
+2015/09/18 16:48:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Riviera_Maya".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('Riviera_Maya')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('Riviera_Maya')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('activities/Rivi...')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#5 {main} REQUEST_URI=/activities/Riviera_Maya/.html?tour_fecha=09%2F21%2F2015&tour_adults=4&tour_childs=1&checkout_tour=ajax
+2015/09/18 16:54:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Riviera_Maya".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('Riviera_Maya')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('Riviera_Maya')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('activities/Rivi...')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#5 {main} REQUEST_URI=/activities/Riviera_Maya/Horseback_Riding_and_Reef_Adventure_Combo_Tour.html?tour_fecha=09%2F21%2F2015&tour_adults=4&tour_childs=1&checkout_tour=ajax
+2015/09/18 16:55:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Riviera_Maya".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('Riviera_Maya')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('Riviera_Maya')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('activities/Rivi...')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#5 {main} REQUEST_URI=/activities/Riviera_Maya/Horseback_Riding_and_Reef_Adventure_Combo_Tour.html?tour_fecha=09%2F21%2F2015&tour_adults=4&tour_childs=1&checkout_tour=ajax
+2015/09/18 16:57:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tours/buscar".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('tours/buscar')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/tours/buscar.html?dest=Riviera_Maya&prod=Horseback_Riding_and_Reef_Adventure_Combo_Tour&isTourCategory=0&tour_destination=Horseback+Riding+%26+Reef+Adventure+Combo+Tour+at+Maroma+Adventures&TourId=172&ProveedorId=0&checkout_tour=ajax&fecha=09%2F21%2F2015&tour_adults=4&tour_childs=1
+2015/09/18 16:58:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Riviera_Maya".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('Riviera_Maya')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('Riviera_Maya')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('activities/Rivi...')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#5 {main} REQUEST_URI=/activities/Riviera_Maya/Horseback_Riding_and_Reef_Adventure_Combo_Tour.html?tour_fecha=09%2F21%2F2015&tour_adults=4&tour_childs=1&checkout_tour=ajax
+2015/09/18 16:59:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Riviera_Maya".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('Riviera_Maya')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('Riviera_Maya')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('activities/Rivi...')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#5 {main} REQUEST_URI=/activities/Riviera_Maya/.html?tour_fecha=09%2F21%2F2015&tour_adults=4&tour_childs=1&checkout_tour=ajax
+2015/09/18 17:00:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "activitie/buscar".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('activitie/busca...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/activitie/buscar.html?dest=Riviera_Maya&prod=Horseback_Riding_and_Reef_Adventure_Combo_Tour&isTourCategory=0&tour_destination=Horseback+Riding+%26+Reef+Adventure+Combo+Tour+at+Maroma+Adventures&TourId=172&ProveedorId=0&checkout_tour=ajax&fecha=09%2F21%2F2015&tour_adults=4&tour_childs=1
+2015/09/18 17:00:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "activitie/buscar".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('activitie/busca...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/activitie/buscar.html?dest=Riviera_Maya&prod=Horseback_Riding_and_Reef_Adventure_Combo_Tour&isTourCategory=0&tour_destination=Horseback+Riding+%26+Reef+Adventure+Combo+Tour+at+Maroma+Adventures&TourId=172&ProveedorId=0&checkout_tour=ajax&fecha=09%2F21%2F2015&tour_adults=4&tour_childs=1
+2015/09/18 17:00:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "activitie/buscar".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('activitie/busca...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/activitie/buscar.html?dest=Riviera_Maya&prod=Horseback_Riding_and_Reef_Adventure_Combo_Tour&isTourCategory=0&tour_destination=Horseback+Riding+%26+Reef+Adventure+Combo+Tour+at+Maroma+Adventures&TourId=172&ProveedorId=0&checkout_tour=ajax&fecha=09%2F21%2F2015&tour_adults=4&tour_childs=1
+2015/09/18 17:01:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "activitie/buscar".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('activitie/busca...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/activitie/buscar.html?dest=Riviera_Maya&prod=Horseback_Riding_and_Reef_Adventure_Combo_Tour&isTourCategory=0&tour_destination=Horseback+Riding+%26+Reef+Adventure+Combo+Tour+at+Maroma+Adventures&TourId=172&ProveedorId=0&checkout_tour=ajax&fecha=09%2F21%2F2015&tour_adults=4&tour_childs=1
+2015/09/18 17:01:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "activitie/buscar".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('activitie/busca...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/activitie/buscar.html?dest=Riviera_Maya&prod=Horseback_Riding_and_Reef_Adventure_Combo_Tour&isTourCategory=0&tour_destination=Horseback+Riding+%26+Reef+Adventure+Combo+Tour+at+Maroma+Adventures&TourId=172&ProveedorId=0&checkout_tour=ajax&fecha=09%2F21%2F2015&tour_adults=4&tour_childs=1
+2015/09/18 17:02:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Riviera_Maya".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('Riviera_Maya')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('Riviera_Maya')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('activities/Rivi...')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#5 {main} REQUEST_URI=/activities/Riviera_Maya/Horseback_Riding_and_Reef_Adventure_Combo_Tour.html?tour_fecha=09%2F21%2F2015&tour_adults=4&tour_childs=1&checkout_tour=ajax
+2015/09/18 17:04:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "activitie/buscar".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('activitie/busca...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/activitie/buscar.html?dest=Riviera_Maya&prod=Horseback_Riding_and_Reef_Adventure_Combo_Tour&isTourCategory=0&tour_destination=Horseback+Riding+%26+Reef+Adventure+Combo+Tour+at+Maroma+Adventures&TourId=172&ProveedorId=0&checkout_tour=ajax&fecha=09%2F21%2F2015&tour_adults=4&tour_childs=1
+2015/09/18 17:04:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Riviera_Maya".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('Riviera_Maya')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('Riviera_Maya')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('activities/Rivi...')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#5 {main} REQUEST_URI=/activities/Riviera_Maya/Horseback_Riding_and_Reef_Adventure_Combo_Tour.html?tour_fecha=09%2F21%2F2015&tour_adults=4&tour_childs=1&checkout_tour=ajax
+2015/09/18 17:05:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "activitie/buscar".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('activitie/busca...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/activitie/buscar.html?dest=Riviera_Maya&prod=Horseback_Riding_and_Reef_Adventure_Combo_Tour&isTourCategory=0&tour_destination=Horseback+Riding+%26+Reef+Adventure+Combo+Tour+at+Maroma+Adventures&TourId=172&ProveedorId=0&checkout_tour=ajax&fecha=09%2F21%2F2015&tour_adults=4&tour_childs=1
+2015/09/18 17:05:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "activitie/Riviera_Maya/Horseback_Riding_and_Reef_Adventure_Combo_Tour".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('activitie/Rivie...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/activitie/Riviera_Maya/Horseback_Riding_and_Reef_Adventure_Combo_Tour.html?tour_fecha=09%2F21%2F2015&tour_adults=4&tour_childs=1&checkout_tour=ajax
+2015/09/18 17:07:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "activitie/Riviera_Maya/Horseback_Riding_and_Reef_Adventure_Combo_Tour".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('activitie/Rivie...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/activitie/Riviera_Maya/Horseback_Riding_and_Reef_Adventure_Combo_Tour.html?tour_fecha=09%2F21%2F2015&tour_adults=4&tour_childs=1&checkout_tour=ajax
+2015/09/18 17:13:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "activitie/Riviera_Maya/Horseback_Riding_and_Reef_Adventure_Combo_Tour".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('activitie/Rivie...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/activitie/Riviera_Maya/Horseback_Riding_and_Reef_Adventure_Combo_Tour.html?tour_fecha=09%2F21%2F2015&tour_adults=4&tour_childs=1&checkout_tour=ajax
+2015/09/18 17:14:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "activitie/Riviera_Maya/Horseback_Riding_and_Reef_Adventure_Combo_Tour".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('activitie/Rivie...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/activitie/Riviera_Maya/Horseback_Riding_and_Reef_Adventure_Combo_Tour.html
+2015/09/18 17:16:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "activitie/Riviera_Maya/Horseback_Riding_and_Reef_Adventure_Combo_Tour".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('activitie/Rivie...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/activitie/Riviera_Maya/Horseback_Riding_and_Reef_Adventure_Combo_Tour.html
+2015/09/18 17:17:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "activitie/Riviera_Maya/Horseback_Riding_and_Reef_Adventure_Combo_Tour".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('activitie/Rivie...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/activitie/Riviera_Maya/Horseback_Riding_and_Reef_Adventure_Combo_Tour.html
+2015/09/18 17:17:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "activitie/Riviera_Maya/Horseback_Riding_and_Reef_Adventure_Combo_Tour".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('activitie/Rivie...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/activitie/Riviera_Maya/Horseback_Riding_and_Reef_Adventure_Combo_Tour.html
+2015/09/18 17:18:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "activitie/Riviera-Maya/Horseback-Riding-and-Reef-Adventure-Combo-Tour".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('activitie/Rivie...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/activitie/Riviera-Maya/Horseback-Riding-and-Reef-Adventure-Combo-Tour.html
+2015/09/18 17:19:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "activitie/buscar".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('activitie/busca...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/activitie/buscar.html?dest=Riviera_Maya&prod=Horseback_Riding_and_Reef_Adventure_Combo_Tour&isTourCategory=0&tour_destination=Horseback+Riding+%26+Reef+Adventure+Combo+Tour+at+Maroma+Adventures&TourId=172&ProveedorId=0&checkout_tour=ajax&fecha=09%2F21%2F2015&tour_adults=4&tour_childs=1

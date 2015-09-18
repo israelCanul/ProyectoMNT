@@ -1,0 +1,1 @@
+$(document).ready(function(){$("#toursLF").jplist({itemsBox:".list",itemPath:".list-item",panelPath:".jplist-panel",effect:"fade"})});
