@@ -278,7 +278,7 @@
                                     </label>
                                     <a class="hide" href="<?= $transfer->urladd; ?>&chekoutTransfer=1 ">add</a>
                                     <div class="moreInformation hide">
-                                        <img src="/img/traslados/<?= $transfer->tipo_imagen ?>.jpg" class="moreinformationImg">
+                                        <img src="/images/traslados/<?= $transfer->tipo_imagen ?>.jpg" class="moreinformationImg">
                                         <p class="elementDesc">
                                             <?php echo $transfer->descripcion_tipo; ?>
                                             </br>
@@ -309,7 +309,7 @@
                                     </label>
                                     <a class="hide" href="<?= $transfer->urladd; ?>&chekoutTransfer=1 ">add</a>
                                     <div class="moreInformation hide">
-                                        <img src="/img/traslados/<?= $transfer->tipo_imagen ?>.jpg" class="moreinformationImg">
+                                        <img src="/images/traslados/<?= $transfer->tipo_imagen ?>.jpg" class="moreinformationImg">
                                         <p class="elementDesc">
                                             <?php echo $transfer->descripcion_tipo; ?>
                                             </br>
@@ -339,7 +339,7 @@
                                     </label>
                                     <a class="hide" href="<?= $transfer->urladd; ?>&chekoutTransfer=1 ">add</a>
                                     <div class="moreInformation hide">
-                                        <img src="/img/traslados/<?= $transfer->tipo_imagen ?>.jpg" class="moreinformationImg">
+                                        <img src="/images/traslados/<?= $transfer->tipo_imagen ?>.jpg" class="moreinformationImg">
                                         <p class="elementDesc">
                                             <?php echo $transfer->descripcion_tipo; ?>
                                             </br>
@@ -373,7 +373,7 @@
                                     <a class="hide" href="<?= $transfer->urladd; ?>&chekoutTransfer=1">add</a>
 
                                     <div class="moreInformation hide">
-                                        <img src="/img/traslados/<?= $transfer->tipo_imagen ?>.jpg" class="moreinformationImg">
+                                        <img src="/images/traslados/<?= $transfer->tipo_imagen ?>.jpg" class="moreinformationImg">
                                         <p class="elementDesc">
                                             <?php echo $transfer->descripcion_tipo; ?>
                                             </br>
@@ -408,7 +408,7 @@
                                 <a class="hide" href="<?= $_se['urladd']; ?>&chekoutExtra=1">add</a>
 
                                 <div class="moreInformation hide">
-                                    <img width="150" src="/img/servicio_extra/<?= $_se['foto'] ?>" class="moreinformationImg">
+                                    <img width="150" src="/images/servicio_extra/<?= $_se['foto'] ?>" class="moreinformationImg">
                                     <p class="elementDesc">
                                         <?php echo $_se['descripcion']; ?>
                                     </p>

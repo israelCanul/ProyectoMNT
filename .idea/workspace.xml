@@ -95,8 +95,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/views/checkout/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.18799368">
-              <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.5908373">
+              <caret line="703" column="152" selection-start-line="703" selection-start-column="152" selection-end-line="703" selection-end-column="161" />
               <folding />
             </state>
           </provider>
@@ -105,12 +105,12 @@
       <file leaf-file-name="CheckoutController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/controllers/CheckoutController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.6363635">
-              <caret line="352" column="34" selection-start-line="352" selection-start-column="34" selection-end-line="352" selection-end-column="34" />
+            <state vertical-scroll-proportion="-1.9272727">
+              <caret line="271" column="280" selection-start-line="271" selection-start-column="280" selection-end-line="271" selection-end-column="280" />
               <folding>
-                <marker date="1442593064735" expanded="true" signature="499:659" placeholder="Select venta..venta..." />
-                <marker date="1442593064735" expanded="true" signature="10177:10656" placeholder="Select * fro..tour_tarifa..." />
-                <marker date="1442593064735" expanded="true" signature="10867:11300" placeholder="Select * fro..tour_tarifa..." />
+                <marker date="1442595085266" expanded="true" signature="499:659" placeholder="Select venta..venta..." />
+                <marker date="1442595085266" expanded="true" signature="10177:10656" placeholder="Select * fro..tour_tarifa..." />
+                <marker date="1442595085266" expanded="true" signature="10867:11300" placeholder="Select * fro..tour_tarifa..." />
               </folding>
             </state>
           </provider>
@@ -895,20 +895,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/controllers/CheckoutController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.6363635">
-          <caret line="352" column="34" selection-start-line="352" selection-start-column="34" selection-end-line="352" selection-end-column="34" />
+        <state vertical-scroll-proportion="-1.9272727">
+          <caret line="271" column="280" selection-start-line="271" selection-start-column="280" selection-end-line="271" selection-end-column="280" />
           <folding>
-            <marker date="1442593064735" expanded="true" signature="499:659" placeholder="Select venta..venta..." />
-            <marker date="1442593064735" expanded="true" signature="10177:10656" placeholder="Select * fro..tour_tarifa..." />
-            <marker date="1442593064735" expanded="true" signature="10867:11300" placeholder="Select * fro..tour_tarifa..." />
+            <marker date="1442595085266" expanded="true" signature="499:659" placeholder="Select venta..venta..." />
+            <marker date="1442595085266" expanded="true" signature="10177:10656" placeholder="Select * fro..tour_tarifa..." />
+            <marker date="1442595085266" expanded="true" signature="10867:11300" placeholder="Select * fro..tour_tarifa..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/checkout/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18799368">
-          <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.5908373">
+          <caret line="703" column="152" selection-start-line="703" selection-start-column="152" selection-end-line="703" selection-end-column="161" />
           <folding />
         </state>
       </provider>

@@ -269,7 +269,7 @@ class CheckoutController extends Controller
 
                         $aux = ($numVehiculo > 1)? " (". $numVehiculo ." Vehicles )" : "";
                         $descripcion_tarifa = $ta["tipo_nombre_" . Yii::app()->language] . $aux;
-                        $jnfe           = Yii::app()->GenericFunctions->ProtectVar($ta["tarifa_id"] . "@@" . $ta["tarifa_tipo"] . "@@" . $ta["tarifa_transportacion"] . "@@" . $total . "@@" . 'Cancun Airport' . "@@" . $descripcion_producto . "@@" . $descripcion_tarifa . "@@/img/traslados/" . $ta["tipo_imagen"] . ".jpg@@" . 1);
+                        $jnfe           = Yii::app()->GenericFunctions->ProtectVar($ta["tarifa_id"] . "@@" . $ta["tarifa_tipo"] . "@@" . $ta["tarifa_transportacion"] . "@@" . $total . "@@" . 'Cancun Airport' . "@@" . $descripcion_producto . "@@" . $descripcion_tarifa . "@@/images/traslados/" . $ta["tipo_imagen"] . ".jpg@@" . 1);
                         $tipo_translado = 2;
 
                         $pgr = array(
@@ -331,7 +331,7 @@ class CheckoutController extends Controller
                     $ta['precio'] = number_format(Yii::app()->Currency->convert($_SESSION["config"]["currency"],$ta['precio']),0,".","");
                     $ta['precio_total'] = number_format($ta['precio']*$paxExtra*$bloque_dias,0,".","");
 
-                    $jnfe = Yii::app()->GenericFunctions->ProtectVar($ta["folio"] . "@@" . $ta["nombre"] . "@@" . $ta['precio_total'] . "@@/img/servicio_extra/" . $ta["foto"] . "@@" . "Assistance for your trip" . "@@" . 1);
+                    $jnfe = Yii::app()->GenericFunctions->ProtectVar($ta["folio"] . "@@" . $ta["nombre"] . "@@" . $ta['precio_total'] . "@@/images/servicio_extra/" . $ta["foto"] . "@@" . "Assistance for your trip" . "@@" . 1);
 
                     $pgr = array( 'extra_folio' => $ta['folio'], 'extra_adults'  => $adultosExtra, 'extra_child'   => $menoresExtra,'extra_arrival' => date_format($FechaIniExtra, 'm/d/Y'), 'extra_return'  => date_format($FechaFinExtra, 'm/d/Y'));
 
