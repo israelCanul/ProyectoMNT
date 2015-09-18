@@ -5570,3 +5570,21 @@ Stack trace:
 #1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
 #2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
 #3 {main} REQUEST_URI=/img/traslados/3.jpg
+2015/09/18 11:48:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/traslados/1.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('img/traslados/1...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/img/traslados/1.jpg
+2015/09/18 11:48:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/servicio_extra/assist_car.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('img/servicio_ex...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/img/servicio_extra/assist_car.jpg
+2015/09/18 11:48:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/traslados/3.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('img/traslados/3...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/img/traslados/3.jpg
