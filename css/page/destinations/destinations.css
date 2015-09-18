@@ -1,0 +1,1150 @@
+header{
+	background:url('/images/bg/destination.jpg');
+	background-size:cover;
+}
+a{ 
+  color:#f44336;  
+}
+#our-hotels, #mostWanted {
+    padding: 20px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+#itemContainer {
+    overflow: hidden
+}
+
+.OptionHotelMW {
+    overflow: hidden
+}
+
+.elementList {
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    margin: 10px 0
+}
+
+.elementList .hotelPhoto {
+    width: 100%;
+    padding: 0;
+    height: 250px;
+    overflow: hidden;
+    background: #000;
+    position: relative
+}
+
+.elementList .hotelPhoto img {
+    height: 250px;
+    width: auto;
+    float: none;
+    margin: 0 auto
+}
+
+.elementList .elementData, .elementList .elementTax {
+    width: 100%;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.elementList .elementData .elementName {
+    color: #000;
+    margin: 0;
+    text-align: left;
+    font-size: 18px;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.elementList .elementData .smallLetter {
+    text-align: center;
+    padding-bottom: 10px;
+    display: block;
+    font-size: 14px
+}
+
+.elementList .elementTax {
+    position: relative;
+    text-align: center
+}
+
+.elementList .elementTax .imgValorAgregado {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 200px;
+    position: relative;
+    top: 0;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 0 0 5px 5px;
+    background: #79cdcd
+}
+
+.elementList .elementTax .elementPrice {
+    color: #ee6e73;
+    font-size: 30px;
+    font-weight: 300;
+    padding: 5px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.elementList .elementTax .notAvailable {
+    font-size: 14px;
+    font-weight: 300;
+    color: #ee6e73
+}
+
+.elementList .elementTax .elementPrice .currency_code {
+    font-size: 22px
+}
+
+.elementList .elementTax .elementPriceInfo {
+    font-size: 14px;
+    padding: 5px 0
+}
+
+.elementList .elementTax .elementCategory {
+    margin: 0;
+    padding: 5px 0;
+    line-height: 100%
+}
+
+.elementList .elementTax .elementBook {
+    display: block;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.elementList .elementTax .elementBook .book {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 20px;
+    display: block;
+    border: none;
+    background: #ee6e73;
+    color: #fff;
+    cursor: pointer;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+#destinationsHotels, #interestHotels {
+    padding: 20px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+#destinationsHotels h5, #interestHotels h5 {
+    text-align: center;
+    margin-bottom: 50px;
+    -moz-transition: all 0.5s ease 0s;
+    -webkit-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s
+}
+
+#more_dest {
+    cursor: pointer;
+    text-align: center;
+    display: block
+}
+
+#hidde_more_dest {
+    display: none
+}
+
+.lista_md {
+    float: left;
+    text-align: center;
+    width: 50%
+}
+
+.owl-carousel .item {
+    margin: 3px
+}
+
+.owl-carousel .item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 272px;
+    margin: 0 auto
+}
+
+.owl-carousel .owl-item .item .caption {
+    max-width: 272px;
+    width: 100%;
+    background: #ee6e73;
+    color: #fff;
+    text-align: center;
+    font-size: 1rem;
+    margin: 0 auto;
+    padding: 5px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.owl-pagination {
+    display: none
+}
+
+.owl-carousel .owl-item:nth-child(odd) .item .caption {
+    background: #5291a5
+}
+
+.owl-prev, .owl-next {
+    background: #000;
+    position: absolute;
+    top: -50px
+}
+
+.owl-prev {
+    left: 0;
+    background: transparent url(/img/icons/owl-prev.png);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover
+}
+
+.owl-next {
+    right: 0;
+    background: transparent url(/img/icons/owl-next.png);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover
+}
+
+.owl-theme .owl-controls .owl-buttons div {
+    margin: 0;
+    padding: 0
+}
+
+.infoSearch {
+    font-size: 16px;
+    text-align: center;
+    color: #ee6e73;
+    padding: 10px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.infoResult {
+    font-size: 30px;
+    padding: 10px 0;
+    color: #ee6e73;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.infoRooms {
+    color: #ee6e73;
+    font-size: 16px;
+    text-align: left;
+    padding: 10px 0;
+    margin: 0;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.openBooking {
+    margin-top: 10px;
+    color: #fff;
+    background: #ee6e73;
+    display: block;
+    padding: 10px
+}
+
+.contentSide {
+    overflow: hidden
+}
+
+.leftSide, .rightSide {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.jplist .sortSearch {
+    background: #aaa;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.jplist .sortSearch .jfilterHotel {
+    color: #fff;
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 5px 0;
+    height: auto;
+    line-height: normal;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.jplist .sortSearch .jfilterHotel:first-child {
+    text-align: left;
+    cursor: default
+}
+
+.jplist-select {
+    width: 100%
+}
+
+.jplist-panel {
+    overflow: hidden;
+    background: #f1f1f1;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.jplist-panel label, .jplist-panel .jplist-group input, .jplist-panel .jplist-group label {
+    height: auto;
+    line-height: normal
+}
+
+.jplist .pagination {
+    float: right
+}
+
+.theme, .keywords, .stars, .price, .priceTotal {
+    display: none;
+    margin: 0;
+    padding: 0
+}
+
+#minPrice, #maxPrice, .aSide, #minTotalPrice, #maxTotalPrice {
+    display: none
+}
+
+.filter h4, .filter h6 {
+    color: #003d8d
+}
+
+.filter h4 {
+    font-size: 22px;
+    text-align: left;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.filter h6 {
+    font-size: 1rem
+}
+
+.filter .mapa {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px
+}
+
+.filter .mapa #map-canvas {
+    height: 100%;
+    margin: 0px;
+    padding: 0px
+}
+
+.filter .formFilter {
+    background: #f1f1f1;
+    padding: 10px;
+    margin: 10px 0
+}
+
+.filter .formFilter .elementFilter {
+    text-align: left;
+    overflow: hidden;
+    background: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #f1f1f1;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.filter .formFilter .sliderDiv {
+    float: left;
+    width: 100%
+}
+
+.filter .formFilter .filterCategory {
+    overflow: hidden;
+    width: 100%;
+    float: left;
+    padding: 5px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.jplist-panel .text-filter-box, .jplist-panel input[type="text"] {
+    height: auto;
+    font-weight: 300
+}
+
+.filter .formFilter .elementFilter .text-filter-box, .filter .formFilter .elementFilter .text-filter-box input {
+    width: 100%
+}
+
+.filter .formFilter .elementFilter .prev {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    font-size: 1rem
+}
+
+.filter .formFilter .elementFilter .next {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    font-size: 1rem
+}
+
+.rightSide #itemContainer {
+    background: #f1f1f1;
+    padding: 0 10px
+}
+
+.rightSide #itemContainer .elementList {
+    background: #fff;
+    border: none
+}
+
+.insideBooking #main_home_booking_box_new {
+    padding: 0 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.detail .detailHead {
+    border: 1px solid #d8d8d8;
+    padding: 10px;
+    margin: 10px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.detail .detailHead h4 {
+    color: #ee6e73;
+    text-align: center
+}
+
+.detail .detailHead h6 {
+    color: #ee6e73;
+    text-align: center
+}
+
+.detail .detailHead p {
+    margin: 0;
+    color: #ee6e73;
+    text-align: center
+}
+
+.detail .detailHead .hotelStars {
+    display: block;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.detail .detailHead .onlyAdultsLabel {
+    color: #ee6e73;
+    text-align: center
+}
+
+.detail .detailPhotos {
+    border: 1px solid #d8d8d8;
+    overflow: hidden;
+    margin: 10px 0
+}
+
+.detail .detailPhotos .mainPhoto {
+    width: 100%;
+    max-height: 250px;
+    float: left;
+    padding: 0 10px;
+    margin: 10px 0;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.detail .detailPhotos .mainPhoto .content-main-img {
+    background-color: #000;
+    text-align: center
+}
+
+.detail .detailPhotos .visiblePhotos {
+    width: 100%;
+    overflow: hidden;
+    float: left;
+    padding: 0 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.detail .detailPhotos .visiblePhotos .vp {
+    display: block;
+    width: 50%;
+    padding: 1px;
+    float: left;
+    height: 100px;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.detail .detailPhotos .visiblePhotos .vp .content-img {
+    height: 150%;
+    overflow: hidden;
+    background-color: #000;
+    text-align: center
+}
+
+.detail .detailPhotos .visiblePhotos .vp .content-img .full-width {
+    width: auto
+}
+
+.detail .detailPhotos .otherPhotos {
+    display: none
+}
+
+.detail .detailPhotos .mapPhoto {
+    width: 100%;
+    padding: 0 10px;
+    margin: 10px 0;
+    float: left;
+    height: 240px;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.detail .detailRooms {
+    overflow: hidden
+}
+
+.detail .detailRooms #readyBook {
+    color: #fff;
+    background: #717073;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.detail .elementList .elementData .elementName {
+    text-align: center
+}
+
+.detail .elementList .elementData .hotelPromotion, .detail .elementList .elementData .hotelBookWindow, .detail .elementList .elementData .hotelPromoValid {
+    margin: 10px 0;
+    color: #000;
+    font-weight: 400
+}
+
+.detail .elementList .elementData .hotelPromotion span, .detail .elementList .elementData .hotelBookWindow span, .detail .elementList .elementData .hotelPromoValid span {
+    color: #ee6e73;
+    display: block
+}
+
+.show_info_room, .show_room_info_display_btn {
+    text-align: center;
+    display: block;
+    margin-top: 10px
+}
+
+.show_detailed_rate_info, .show_detailed_room_info {
+    display: none;
+    margin-bottom: 10px;
+    overflow: hidden
+}
+
+.detail .elementList .elementData .roomAmenity {
+    display: block;
+    float: left;
+    width: 100%;
+    font-size: 14px;
+    padding: 3px 0;
+    text-align: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.detail .elementList .elementData .td_precioH {
+    height: 3rem;
+    border: 0px;
+    width: 15% padding: 0px 3px 3px 0px;
+    font-size: 1rem;
+    text-align: center
+}
+
+.detail .elementList .elementData .hotelRoomsTableFecha {
+    background: #e3e3e3;
+    color: #888;
+    font-size: 0.9rem
+}
+
+.moreRooms h6 {
+    font-size: 26px;
+    padding: 0 10px;
+    margin: 10px 0;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.detailInfo {
+    clear: both;
+    overflow: hidden;
+    margin: 40px 0
+}
+
+.elementInfo {
+    overflow: hidden
+}
+
+.elementInfo .titleInfo {
+    text-align: center;
+    color: #003d8d;
+    float: left;
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.elementInfo .contentInfo {
+    text-align: justify;
+    background: #f2f7fb;
+    font-size: 16px;
+    float: left;
+    width: 100%;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.elementInfo .roomsElement {
+    width: 100%;
+    float: left
+}
+
+.elementInfo .roomsElement .roomsTitle {
+    color: #003d8d
+}
+
+.elementInfo .roomsElement p {
+    display: inline-block;
+    margin: 0
+}
+
+.elementInfo .hotelCategories {
+    overflow: hidden
+}
+
+.elementInfo .hotelCategories li {
+    width: 50%;
+    float: left
+}
+
+.elementInfo .hotel_services, .elementInfo .hotel_facilities, .elementInfo .hotel_activities {
+    text-align: left;
+    overflow: hidden
+}
+
+.elementInfo .hotel_services li, .elementInfo .hotel_facilities li, .elementInfo .hotel_activities li {
+    width: 100%;
+    float: left
+}
+
+.elementInfo .roomResTitle {
+    overflow: hidden;
+    margin-bottom: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc
+}
+
+.elementInfo .roomResTitle:last-child {
+    border-bottom: none
+}
+
+.elementInfo .roomResName {
+    font-size: 18px;
+    text-align: center;
+    margin: 10px 0;
+    color: #003d8d
+}
+
+.elementInfo .roomResDes {
+    margin: 10px 0;
+    overflow: hidden
+}
+
+.elementInfo .roomResDes .schedule, .elementInfo .roomResDes .description, .elementInfo .roomResDes .dresscode {
+    margin: 10px 0
+}
+
+.elementInfo .roomResDes .dresscode {
+    display: none
+}
+
+.elementInfo .roomResPhoto {
+    text-align: center
+}
+
+.elementInfo .roomResPhoto .photoRest {
+    list-style: none;
+    height: 180px;
+    overflow: hidden
+}
+
+.elementInfo .roomResPhoto .photoRest img {
+    height: 100%
+}
+
+.elementInfo .roomResPhoto .photoResHide {
+    display: none
+}
+
+@media only screen and (min-width:480px) {
+    .elementList .elementData .smallLetter {
+        text-align: left
+    }
+    #destinationsHotels h5, #interestHotels h5 {
+        margin: 0
+    }
+    .filter .formFilter .sliderDiv {
+        width: 50%
+    }
+    .filter .formFilter .sliderDiv h6 {
+        text-align: center
+    }
+    .filter .formFilter .sliderDiv .stars {
+        display: none
+    }
+    .filter .formFilter .filterCategory {
+        width: 50%
+    }
+    .jplist .sortSearch .jfilterHotel {
+        width: 25%
+    }
+    .jplist .sortSearch .jfilterHotel:first-child {
+        width: 100%;
+        text-align: center
+    }
+    .detail .detailPhotos .mainPhoto {
+        max-height: 400px
+    }
+    .detail .detailPhotos .visiblePhotos .vp {
+        height: 120px
+    }
+    .detail .elementList .elementData .roomAmenity {
+        width: 50%
+    }
+    .elementInfo .hotel_services li, .elementInfo .hotel_facilities li, .elementInfo .hotel_activities li {
+        width: 50%
+    }
+}
+
+@media only screen and (min-width:630px) {
+    .elementList .hotelPhoto {
+        width: 100%;
+        float: left
+    }
+    .elementList .elementData {
+        width: 65%;
+        float: left
+    }
+    .elementList .elementData .elementName {
+        overflow: hidden;
+        text-align: left
+    }
+    .elementList .elementTax {
+        width: 35%;
+        float: left;
+        padding-top: 10px
+    }
+    .elementList .elementTax .elementBook .book {
+        max-width: 200px;
+        margin: 0 auto
+    }
+    .detail .detailPhotos .visiblePhotos .vp {
+        width: 25%
+    }
+    .detail .detailPhotos .visiblePhotos .vp .content-img {
+        height: 120%
+    }
+    .detail .elementList .elementData .elementName {
+        overflow: visible;
+        white-space: normal;
+        text-overflow: initial
+    }
+    .detail .elementList .elementData .hotelPromotion, .detail .elementList .elementData .hotelBookWindow, .detail .elementList .elementData .hotelPromoValid {
+        margin: 5px 0
+    }
+    .detail .elementList .elementData .hotelPromotion span, .detail .elementList .elementData .hotelBookWindow span, .detail .elementList .elementData .hotelPromoValid span {
+        display: inline-block
+    }
+    .detail .elementList .elementData, .detail .elementList .elementTax {
+        width: 100%
+    }
+    .elementInfo .roomsElement, .elementInfo .hotelCategories li {
+        width: 33.3%;
+        text-align: center
+    }
+    .elementInfo .roomsElement p {
+        text-align: center;
+        display: block
+    }
+}
+
+@media only screen and (min-width:768px) {
+    .elementList {
+        float: left;
+        width: 100%
+    }
+    .elementList .hotelPhoto {
+        width: 25%;
+        height: 200px
+    }
+    .elementList .hotelPhoto img {
+        height: 200px
+    }
+    .elementList .elementData {
+        width: 50%;
+        height: auto
+    }
+    .elementList .elementData .smallLetter {
+        padding-bottom: 0px
+    }
+    .elementList .elementTax {
+        width: 25%;
+        float: right;
+        max-width: 200px
+    }
+    .openBooking {
+        display: inline-block
+    }
+    .filter .formFilter .filterCategory {
+        width: 33.3%
+    }
+    .jplist .sortSearch .jfilterHotel, .jplist .sortSearch .jfilterHotel:first-child {
+        width: 20%
+    }
+    .detail .detailPhotos .mainPhoto {
+        width: 50%;
+        height: 240px
+    }
+    .detail .detailPhotos .mainPhoto .content-main-img {
+        height: 120%;
+        overflow: hidden
+    }
+    .detail .detailPhotos .mainPhoto .content-main-img .full-width {
+        height: 100%;
+        width: auto
+    }
+    .detail .detailPhotos .visiblePhotos {
+        width: 50%;
+        float: left;
+        padding-right: 10px;
+        padding-left: 0px;
+        margin: 10px 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .detail .detailPhotos .visiblePhotos .vp {
+        width: 50%;
+        height: 120px;
+        padding: 1px
+    }
+    .detail .detailPhotos .visiblePhotos .vp .content-img .full-width {
+        height: 100%
+    }
+    .detail .detailPhotos .mapPhoto {
+        margin-top: 0
+    }
+    .detail .elementList .elementData {
+        width: 70%
+    }
+    .detail .elementList .elementTax {
+        width: 30%
+    }
+    .elementInfo {
+        border-top: 1px solid #ccc
+    }
+    .elementInfo:last-child {
+        border-bottom: 1px solid #ccc
+    }
+    .elementInfo .titleInfo {
+        border: none;
+        width: 20%
+    }
+    .elementInfo .contentInfo {
+        width: 80%
+    }
+    .elementInfo .roomsElement, .elementInfo .roomsElement p, .elementInfo .hotelCategories li {
+        text-align: left
+    }
+    .detail .elementList .elementData .elementName {
+        text-align: left
+    }
+    .show_info_room, .show_room_info_display_btn {
+        text-align: left
+    }
+}
+
+@media only screen and (min-width:980px) {
+    #our-hotels {
+        margin-top: 100px
+    }
+    .fluid {
+        display: inline-block;
+        padding: 0 5px
+    }
+    .infoSearch {
+        text-align: left
+    }
+    .infoResult, .infoRooms {
+        padding: 0;
+        text-align: left
+    }
+    .openBooking {
+        display: inline-block;
+        margin: 0
+    }
+    .contentSide {
+        width: 80%;
+        float: left
+    }
+    .aSide {
+        display: block;
+        width: 20%;
+        float: right;
+        margin: 10px 0;
+        padding-left: 10px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .jplist .sortSearch .jfilterHotel, .jplist .sortSearch .jfilterHotel:first-child {
+        width: 16%;
+        padding: 10px 0
+    }
+    .jplist .sortSearch .jplist-select {
+        width: 20%
+    }
+    .jplist .sortSearch .jplist-panel label {
+        height: auto
+    }
+    .detail .detailHead h4, .detail .detailHead p, .detail .detailHead .onlyAdultsLabel, .detail .detailRooms #readyBook {
+        text-align: left
+    }
+    .detail .detailHead .hotelStars {
+        display: inline-block;
+        padding: 5px 0
+    }
+}
+
+@media only screen and (min-width:1024px) {
+    .contentSide {
+        width: 100%
+    }
+    .aSide {
+        width: 15%
+    }
+    .leftSide {
+        width: 30%;
+        float: left;
+        padding-right: 10px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .rightSide {
+        width: 70%;
+        float: right;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .filter .formFilter .sliderDiv, .filter .formFilter .filterCategory {
+        width: 100%
+    }
+    .filter .formFilter .sliderDiv h6 {
+        text-align: left
+    }
+    .jplist .sortSearch .jfilterHotel, .jplist .sortSearch .jfilterHotel:first-child {
+        width: 20%
+    }
+    .jplist .sortSearch .jplist-select {
+        width: 100%
+    }
+    #hotelsLF .elementList .elementData .elementDesc {
+        font-size: 14px
+    }
+    #hotelsLF .elementList .elementTax .elementPrice {
+        font-size: 24px
+    }
+    #hotelsLF .elementList .elementTax .notAvailable {
+        font-size: 14px
+    }
+    .detail .detailPhotos .mainPhoto, .detail .detailPhotos .visiblePhotos, .detail .detailPhotos .mapPhoto {
+        width: 33.3%;
+        float: left
+    }
+    .detail .detailPhotos .mainPhoto {
+        overflow: hidden
+    }
+    .detail .detailPhotos .mainPhoto .full-width {
+        height: 100%;
+        width: auto
+    }
+    .detail .detailPhotos .visiblePhotos {
+        padding: 0
+    }
+    .detail .detailPhotos .mapPhoto {
+        padding: 0 10px;
+        overflow: hidden;
+        margin-top: 10px
+    }
+    .show_info_room, .show_room_info_display_btn {
+        text-align: left
+    }
+}
+
+@media only screen and (min-width:1200px) {
+    .OptionHotelMW {
+        width: 50%;
+        float: left;
+        padding: 10px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .OptionHotelMW .elementList .hotelPhoto, .OptionHotelMW .elementList .hotelPhoto img {
+        height: 193px
+    }
+    .OptionHotelMW .elementList .elementTax .elementPrice {
+        font-size: 26px
+    }
+    .OptionHotelMW .elementList .elementTax .elementPrice .currency_code {
+        font-size: 20px
+    }
+    .leftSide {
+        width: 25%
+    }
+    .rightSide {
+        width: 75%
+    }
+    #hotelsLF .elementList .elementData .elementDesc {
+        font-size: 16px
+    }
+    #hotelsLF .elementList .elementTax .elementPrice {
+        font-size: 30px
+    }
+    #hotelsLF .elementList .elementTax .notAvailable {
+        font-size: 14px
+    }
+    .detail .elementList .miniPhoto {
+        width: 25%;
+        float: left;
+        padding: 10px;
+        height: 240px;
+        overflow: hidden;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .detail .elementList .miniPhoto .full-width {
+        width: auto;
+        height: 100%
+    }
+    .detail .elementList .elementData {
+        width: 55%
+    }
+    .detail .elementList .elementData .roomAmenity {
+        width: 33.3%;
+        padding-right: 5px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .detail .elementList .elementTax {
+        width: 20%
+    }
+    .elementInfo .hotel_services li, .elementInfo .hotel_facilities li, .elementInfo .hotel_activities li {
+        width: 33.3%
+    }
+    .elementInfo .roomResDes {
+        width: 65%;
+        float: left;
+        padding: 10px;
+        margin: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .elementInfo .roomResPhoto {
+        width: 35%;
+        float: left;
+        padding: 10px;
+        height: 240px;
+        overflow: hidden;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .elementInfo .roomResPhoto .photoRest {
+        height: 100%
+    }
+}
