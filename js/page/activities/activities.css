@@ -1,0 +1,885 @@
+#mostWanted {
+    padding: 20px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+#mostWanted .rslides_nav {
+    display: none
+}
+#itemContainer {
+    overflow: hidden
+}
+.OptionHotelMW {
+    overflow: hidden
+}
+.elementList {
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    margin: 10px 0
+}
+.elementList .miniPhoto {
+    padding: 10px;
+    overflow: hidden;
+    background: #fff;
+    position: relative;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+.elementList .miniPhoto img {
+    width: 200px;
+    max-width: 200px;
+    height: 180px;
+    max-height: 180px;
+    float: none;
+    margin: 0 auto
+}
+.elementList .elementData, .elementList .elementTax {
+    width: 100%;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+.elementList .elementData .elementName {
+    color: #000;
+    margin: 0;
+    text-align: left;
+    font-size: 18px;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+.elementList .elementData .smallLetter {
+    text-align: center;
+    padding-bottom: 10px;
+    display: block;
+    font-size: 14px
+}
+.elementList .elementTax {
+    position: relative;
+    text-align: center
+}
+.elementList .elementTax .elementPrice {
+    color: #00aaa6;
+    font-size: 30px;
+    font-weight: 400;
+    padding: 5px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+.elementList .elementTax .elementPrice .currency_code {
+    font-size: 22px
+}
+.elementList .elementTax .elementPriceInfo {
+    font-size: 14px;
+    padding: 5px 0
+}
+.elementList .elementTax .elementBook {
+    display: block;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+.elementList .elementTax .elementBook .book {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 20px;
+    display: block;
+    border: none;
+    background: #00aaa6;
+    color: #fff;
+    cursor: pointer;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+#openTicket, #banner {
+    width: 100%;
+    max-width: 100%;
+    text-align: center
+}
+#openTicket img, #banner img {
+    max-width: 100%
+}
+#destinationsActivities, #interestActivities {
+    padding: 20px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+#destinationsActivities h5, #interestActivities h5 {
+    text-align: center;
+    margin-bottom: 50px;
+    -moz-transition: all 0.5s ease 0s;
+    -webkit-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s
+}
+#more_dest {
+    cursor: pointer;
+    text-align: center;
+    display: block
+}
+#hidde_more_dest {
+    display: none
+}
+.lista_md {
+    float: left;
+    text-align: center;
+    width: 50%
+}
+.owl-carousel .item {
+    margin: 3px
+}
+.owl-carousel .item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 272px;
+    margin: 0 auto
+}
+.owl-carousel .owl-item .item .caption {
+    max-width: 272px;
+    width: 100%;
+    background: #00aaa6;
+    color: #fff;
+    text-align: center;
+    font-size: 1rem;
+    margin: 0 auto;
+    padding: 5px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+.owl-pagination {
+    display: none
+}
+.owl-carousel .owl-item:nth-child(odd) .item .caption {
+    background: #5291a5
+}
+.owl-prev, .owl-next {
+    background: #000;
+    position: absolute;
+    top: -50px
+}
+.owl-prev {
+    left: 0;
+    background: transparent url("/img/icons/owl-prev.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover
+}
+.owl-next {
+    right: 0;
+    background: transparent url("/img/icons/owl-next.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover
+}
+.owl-theme .owl-controls .owl-buttons div {
+    margin: 0;
+    padding: 0
+}
+.dataSearch {
+    margin: 20px 0;
+    float: left;
+    width: 100%
+}
+.infoResult {
+    font-size: 30px;
+    padding: 10px 0;
+    color: #00aaa6;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+.infoSearch {
+    font-size: 20px;
+    text-align: center;
+    color: #00aaa6;
+    padding: 5px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+.infoRooms {
+    color: #00aaa6;
+    font-size: 16px;
+    text-align: left;
+    padding: 5px 0;
+    margin: 0;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+.openBooking {
+    margin-top: 10px;
+    color: #fff;
+    background: #00aaa6;
+    display: block;
+    padding: 10px;
+    max-width: 200px;
+    margin: 0 auto;
+    text-align: center
+}
+.contentSide {
+    overflow: hidden
+}
+.leftSide, .rightSide {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+.jplist .sortSearch {
+    background: #aaa;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+.jplist .sortSearch .jfilterHotel {
+    color: #fff;
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 5px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+.jplist .sortSearch .jfilterHotel:first-child {
+    text-align: left;
+    cursor: default
+}
+.jplist-select {
+    width: 100%
+}
+.jplist-panel {
+    overflow: hidden;
+    background: #f1f1f1;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+.jplist-panel label, .jplist-panel .jplist-group input, .jplist-panel .jplist-group label {
+    height: auto;
+    line-height: normal
+}
+.jplist .pagination {
+    float: right
+}
+#main_tours {
+    clear: both
+}
+#toursLF {
+    margin: 10px 0
+}
+#toursLF #itemContainer {
+    background: #f1f1f1;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+#toursLF .elementList {
+    background: #fff;
+    border: none
+}
+.aSide {
+    display: none
+}
+.detail .detailHead {
+    border: 1px solid #d8d8d8;
+    padding: 10px;
+    margin: 10px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+.detail .detailHead h1 {
+    color: #00aaa6;
+    text-align: center;
+    font-size:28px;
+}
+.detail .detailHead h2 {
+    color: #00aaa6;
+    text-align: center;
+    font-size:24px;
+}
+.detail .detailHead h3 {
+    margin: 0;
+    color: #00aaa6;
+    text-align: center;
+    font-size: 20px
+}
+.detail .detailHead .operated {
+    display: block;
+    text-align: center;
+    color: #00aaa6;
+    margin-bottom: 10px
+}
+.detail .detailHead .operated .supplier {
+    display: block
+}
+.detail .detailDescription {
+    padding: 10px;
+    border: 1px solid #d8d8d8;
+    padding: 10px;
+    margin: 10px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+.detail .detailPhotos {
+    border: 1px solid #d8d8d8;
+    overflow: hidden;
+    margin: 10px 0
+}
+.detail .detailPhotos .mainPhoto {
+    width: 100%;
+    max-height: 250px;
+    float: left;
+    padding: 0 10px;
+    margin: 10px 0;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+.detail .detailPhotos .mainPhoto .content-main-img {
+    background-color: #000;
+    text-align: center
+}
+.detail .detailPhotos .mainPhoto .content-main-img .full-width {
+    width: auto
+}
+.detail .detailPhotos .visiblePhotos {
+    width: 100%;
+    overflow: hidden;
+    float: left;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+.detail .detailPhotos .visiblePhotos .vp {
+    display: block;
+    width: 50%;
+    padding: 1px;
+    float: left;
+    height: 100px;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+.detail .detailPhotos .visiblePhotos .vp .content-img {
+    height: 150%;
+    overflow: hidden;
+    background-color: #000;
+    text-align: center
+}
+.detail .detailPhotos .visiblePhotos .vp .content-img .full-width {
+    width: auto
+}
+.detail .detailPhotos .otherPhotos {
+    display: none
+}
+.insideBooking {
+    padding: 0 10px;
+    border: 3px solid #00aaa6;
+    margin: 10px 0
+}
+.rates {
+    background: #f1f1f1;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+.actRate {
+    text-align: center;
+    background: #fff;
+    padding: 10px;
+    margin: 10px 0;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+.actRate .rate-name {
+    text-align: center;
+    font-size: 18px
+}
+.actRate .rate-description {
+    padding: 10px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+.actRate .rate-book label {
+    color: #00aaa6;
+    font-size: 30px;
+    font-weight: 400;
+    padding: 5px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+.actRate .rate-book .currency_code {
+    font-size: 22px
+}
+.actRate .rate-book .misc_select_btn_green {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 20px;
+    display: block;
+    border: none;
+    background: #00aaa6;
+    color: #fff;
+    cursor: pointer;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+.actRate .rate-nobook {
+    color: #00aaa6
+}
+.infoAct {
+    margin: 20px 0
+}
+.infoAct h3 {
+    font-size: 20px;
+    color: #00aaa6;
+    text-align: center
+}
+.mapaSection {
+    margin: 20px 0;
+    display: block;
+    width: 100%;
+    float: left;
+    overflow: hidden
+}
+.filtrosCategorias {
+    width: 100%;
+    margin: 10px 0;
+    display: block;
+    float: left
+}
+#filterMap {
+    background: rgba(84, 181, 208, 0.9);
+    padding: 10px;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+#filterMap h1 {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center
+}
+#filterMap .select_map select {
+    width: 100%
+}
+.filtrosCategorias ul {
+    overflow: hidden;
+    background: rgba(84, 181, 208, 0.7);
+    width: 100%
+}
+.filtrosCategorias ul li {
+    padding: 5px 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+.filtrosCategorias ul li a {
+    cursor: pointer;
+    display: block;
+    color: #fff
+}
+.filtrosCategorias ul li a img {
+    width: 35px;
+    max-width: 35px;
+    height: 35px;
+    max-height: 35px
+}
+#map_canvas {
+    width: 100%;
+    height: 600px
+}
+#map_container {
+    width: 100%;
+    height: auto
+}
+#main_tours_golf .contentSide {
+    width: 100%
+}
+#golfGallery {
+    margin: 20px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 1024px
+}
+#golfGallery h1 {
+    font-size: 30px;
+    text-align: center
+}
+.html5gallery {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+    float: left
+}
+.html5gallery-elem-0 a, .html5gallery-title-text-0 {
+    display: none
+}
+@media only screen and (min-width:480px) {
+    .elementList .elementData .smallLetter {
+        text-align: left
+    }
+    #destinationsActivities h5, #interestActivities h5 {
+        margin: 0
+    }
+    .jplist-label {
+        float: none;
+        text-align: left
+    }
+    .jplist .sortSearch {
+        overflow: hidden
+    }
+    #jplist-select-sort {
+        float: left;
+        width: 65%
+    }
+    #jplist-select-paging {
+        float: right;
+        width: 34%;
+        margin-left: 1%
+    }
+    .detail .detailPhotos .mainPhoto {
+        max-height: 400px
+    }
+    .detail .detailPhotos .visiblePhotos .vp {
+        height: 120px
+    }
+    .actRate .rate-description, .actRate .rate-book, .actRate .rate-nobook {
+        width: 50%;
+        float: left
+    }
+    .actRate .rate-nobook {
+        padding: 5px 0
+    }
+    #filterMap h1 {
+        float: left;
+        width: 40%;
+        padding: 10px 0;
+        margin: 0;
+        font-size: 16px;
+        text-align: left;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    #filterMap .select_map {
+        width: 60%;
+        float: right
+    }
+    .filtrosCategorias ul li {
+        width: 50%;
+        float: left
+    }
+}
+@media only screen and (min-width:630px) {
+    .elementList  .miniPhoto {
+        width: 25%;
+        float: left;
+        max-width: 200px
+    }
+    .elementList .miniPhoto img {
+        width: 100%;
+        height: auto
+    }
+    .elementList .elementData {
+        width: 45%;
+        float: left
+    }
+    .elementList .elementData .elementName {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        text-align: left
+    }
+    .elementList .elementTax {
+        width: 30%;
+        float: left;
+        padding-top: 10px
+    }
+    .elementList .elementTax .elementBook .book {
+        max-width: 200px;
+        margin: 0 auto
+    }
+    .detail .detailPhotos .visiblePhotos .vp {
+        width: 25%
+    }
+    .detail .detailPhotos .visiblePhotos .vp .content-img {
+        height: 120%
+    }
+    .actRate .rate-description {
+        width: 100%;
+        float: left;
+        text-align: center
+    }
+    .actRate .rate-book, .actRate .rate-nobook {
+        max-width: 200px;
+        margin: 0 auto;
+        float: none;
+        display: block
+    }
+}
+@media only screen and (min-width:768px) {
+    .elementList {
+        float: left;
+        width: 100%
+    }
+    .elementList .elementData {
+        width: 50%;
+        height: auto
+    }
+    .elementList .elementData .smallLetter {
+        padding-bottom: 0px
+    }
+    .elementList .elementTax {
+        width: 25%;
+        float: right;
+        max-width: 200px
+    }
+    #jplist-select-sort {
+        width: 75%
+    }
+    #jplist-select-paging {
+        width: 24%
+    }
+    .detail .detailPhotos .mainPhoto {
+        width: 50%;
+        height: 240px
+    }
+    .detail .detailPhotos .mainPhoto .content-main-img {
+        height: 150%;
+        overflow: hidden
+    }
+    .detail .detailPhotos .mainPhoto .content-main-img .full-width {
+        height: 100%;
+        width: auto
+    }
+    .detail .detailPhotos .visiblePhotos {
+        width: 50%;
+        float: left;
+        padding-right: 10px;
+        padding-left: 0px;
+        margin: 10px 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .detail .detailPhotos .visiblePhotos .vp {
+        width: 50%;
+        height: 120px;
+        padding: 1px
+    }
+    .detail .detailPhotos .visiblePhotos .vp .content-img .full-width {
+        height: 100%
+    }
+    .actRate .rate-name {
+        text-align: left
+    }
+    .actRate .rate-description {
+        width: 50%
+    }
+    .actRate .rate-description .rate-amount {
+        width: 50%;
+        float: left;
+        text-align: left;
+        padding: 5px 0
+    }
+    .actRate .rate-book, .actRate .rate-nobook {
+        width: 45%;
+        max-width: 100%;
+        float: right
+    }
+    .actRate .rate-book label {
+        width: 50%;
+        float: left
+    }
+    .actRate .rate-book .misc_select_btn_green {
+        width: 50%;
+        float: right
+    }
+    .infoAct h3 {
+        text-align: left
+    }
+    #filterMap h1 {
+        width: 25%
+    }
+    #filterMap .select_map {
+        width: 75%
+    }
+    .filtrosCategorias ul li {
+        width: 33.3%
+    }
+}
+@media only screen and (min-width:980px) {
+    #mostWanted {
+        margin-top: 100px
+    }
+    .fluid {
+        display: inline-block;
+        padding: 0 5px
+    }
+    .infoSearch {
+        text-align: left;
+        display: inline-block
+    }
+    .infoResult {
+        padding: 0;
+        text-align: left
+    }
+    .openBooking {
+        display: inline-block;
+        margin: 0
+    }
+    .contentSide {
+        width: 80%;
+        float: left
+    }
+    .aSide {
+        display: block;
+        width: 20%;
+        float: right;
+        margin: 10px 0;
+        padding-left: 10px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .detail .detailHead h1, .detail .detailHead h2, .detail .detailHead h3 {
+        text-align: left
+    }
+    .detail .detailHead .operated {
+        display: block;
+        text-align: right;
+        margin: 0
+    }
+    .detail .detailHead .operated .supplier {
+        display: inline-block
+    }
+    .insideBooking {
+        padding: 0
+    }
+    .booking_options {
+        border: none
+    }
+    #filterMap h1 {
+        text-align: left
+    }
+    .filtrosCategorias ul li {
+        width: 25%
+    }
+}
+@media only screen and (min-width:1024px) {
+    .contentSide {
+        width: 85%
+    }
+    .aSide {
+        width: 15%
+    }
+    .actRate .rate-book, .actRate .rate-nobook {
+        width: 40%
+    }
+    .mapaSection {
+        position: relative
+    }
+    .filtrosCategorias {
+        position: absolute;
+        z-index: 10;
+        left: 10px;
+        width: 400px
+    }
+    #filterMap h1, #filterMap .select_map {
+        width: 50%
+    }
+    .filtrosCategorias ul {
+        background: transparent
+    }
+    .filtrosCategorias ul li {
+        width: 50%;
+        padding: 1px
+    }
+    .filtrosCategorias ul li a {
+        background: rgba(84, 181, 208, 0.9);
+        padding: 5px
+    }
+}
+@media only screen and (min-width:1200px) {
+    .toursWanted {
+        width: 48%;
+        float: left;
+        padding: 0;
+        margin: 1%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .toursWanted .miniPhoto {
+        padding: 10px;
+        width: 30%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    .toursWanted .elementData {
+        width: 45%
+    }
+    .toursWanted .elementTax .elementPrice {
+        font-size: 26px
+    }
+    .toursWanted .elementTax .elementPrice .currency_code {
+        font-size: 20px
+    }
+    .detail .detailPhotos .mainPhoto {
+        width: 20%;
+        height: 150px
+    }
+    .detail .detailPhotos .mainPhoto .content-main-img, .detail .detailPhotos .visiblePhotos .vp .content-img {
+        height: 100%
+    }
+    .detail .detailPhotos .visiblePhotos {
+        width: 80%
+    }
+    .detail .detailPhotos .visiblePhotos .vp {
+        width: 25%;
+        height: 150px
+    }
+    .actRate .rate-book, .actRate .rate-nobook {
+        width: 30%
+    }
+}
