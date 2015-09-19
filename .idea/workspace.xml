@@ -53,16 +53,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ActivitiesController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ActivitiesController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/controllers/ActivitiesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38425198">
-              <caret line="258" column="33" selection-start-line="258" selection-start-column="33" selection-end-line="258" selection-end-column="33" />
+            <state vertical-scroll-proportion="-9.622642">
+              <caret line="427" column="51" selection-start-line="427" selection-start-column="51" selection-end-line="427" selection-end-column="51" />
               <folding>
-                <marker date="1442615057916" expanded="true" signature="13851:14098" placeholder="Select * fro..tour_tarifa..." />
-                <marker date="1442615057916" expanded="true" signature="14314:14570" placeholder="Select * fro..tour_tarifa..." />
-                <marker date="1442615057916" expanded="true" signature="14713:14992" placeholder="Select * fro..tour_tarifa..." />
-                <marker date="1442615057916" expanded="true" signature="15124:15378" placeholder="Select * fro..tour_tarifa..." />
+                <marker date="1442620724292" expanded="true" signature="13828:14075" placeholder="Select * fro..tour_tarifa..." />
+                <marker date="1442620724292" expanded="true" signature="14291:14547" placeholder="Select * fro..tour_tarifa..." />
+                <marker date="1442620724292" expanded="true" signature="14690:14969" placeholder="Select * fro..tour_tarifa..." />
+                <marker date="1442620724292" expanded="true" signature="15101:15355" placeholder="Select * fro..tour_tarifa..." />
               </folding>
             </state>
           </provider>
@@ -78,11 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="detalle.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="detalle.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/views/destinations/detalle.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="241.96153">
-              <caret line="515" column="50" selection-start-line="515" selection-start-column="50" selection-end-line="515" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.43504533">
+              <caret line="902" column="43" selection-start-line="902" selection-start-column="43" selection-end-line="902" selection-end-column="43" />
               <folding>
                 <marker date="1442514596863" expanded="true" signature="8577:8589" placeholder="..." />
                 <marker date="1442514596863" expanded="true" signature="10965:11015" placeholder="..." />
@@ -902,10 +902,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/protected/config/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.735849">
+          <caret line="73" column="68" selection-start-line="73" selection-start-column="68" selection-end-line="73" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/ActivitiesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.622642">
+          <caret line="427" column="51" selection-start-line="427" selection-start-column="51" selection-end-line="427" selection-end-column="51" />
+          <folding>
+            <marker date="1442620724292" expanded="true" signature="13828:14075" placeholder="Select * fro..tour_tarifa..." />
+            <marker date="1442620724292" expanded="true" signature="14291:14547" placeholder="Select * fro..tour_tarifa..." />
+            <marker date="1442620724292" expanded="true" signature="14690:14969" placeholder="Select * fro..tour_tarifa..." />
+            <marker date="1442620724292" expanded="true" signature="15101:15355" placeholder="Select * fro..tour_tarifa..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/destinations/detalle.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="241.96153">
-          <caret line="515" column="50" selection-start-line="515" selection-start-column="50" selection-end-line="515" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.43504533">
+          <caret line="902" column="43" selection-start-line="902" selection-start-column="43" selection-end-line="902" selection-end-column="43" />
           <folding>
             <marker date="1442514596863" expanded="true" signature="8577:8589" placeholder="..." />
             <marker date="1442514596863" expanded="true" signature="10965:11015" placeholder="..." />
@@ -921,27 +942,6 @@
             <marker date="1442514596863" expanded="true" signature="30055:30065" placeholder="..." />
             <marker date="1442514596863" expanded="true" signature="31329:31339" placeholder="..." />
             <marker date="1442514596863" expanded="true" signature="32522:32532" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/config/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.735849">
-          <caret line="73" column="68" selection-start-line="73" selection-start-column="68" selection-end-line="73" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/ActivitiesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38425198">
-          <caret line="258" column="33" selection-start-line="258" selection-start-column="33" selection-end-line="258" selection-end-column="33" />
-          <folding>
-            <marker date="1442615057916" expanded="true" signature="13851:14098" placeholder="Select * fro..tour_tarifa..." />
-            <marker date="1442615057916" expanded="true" signature="14314:14570" placeholder="Select * fro..tour_tarifa..." />
-            <marker date="1442615057916" expanded="true" signature="14713:14992" placeholder="Select * fro..tour_tarifa..." />
-            <marker date="1442615057916" expanded="true" signature="15124:15378" placeholder="Select * fro..tour_tarifa..." />
           </folding>
         </state>
       </provider>

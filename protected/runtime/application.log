@@ -5892,3 +5892,49 @@ Stack trace:
 #1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
 #2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
 #3 {main} REQUEST_URI=/activitie/buscar.html?dest=Riviera_Maya&prod=Horseback_Riding_and_Reef_Adventure_Combo_Tour&isTourCategory=0&tour_destination=Horseback+Riding+%26+Reef+Adventure+Combo+Tour+at+Maroma+Adventures&TourId=172&ProveedorId=0&checkout_tour=ajax&fecha=09%2F21%2F2015&tour_adults=4&tour_childs=1
+2015/09/18 17:43:02 [error] [exception.CException] exception 'CException' with message 'ActivitiesController and its behaviors do not have a method or closure named "operaDia".' in C:\AppServ\www\mexico-news-travel\lib\yii\base\CComponent.php:269
+Stack trace:
+#0 [internal function]: CComponent->__call('operaDia', Array)
+#1 C:\AppServ\www\mexico-news-travel\protected\controllers\ActivitiesController.php(371): ActivitiesController->operaDia(Array, Array, '2015-09-21', '4', '1')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\actions\CInlineAction.php(50): ActivitiesController->actionDetalle()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams(Array)
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): CController->runAction(Object(CInlineAction))
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('detalle')
+#7 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('activities/deta...')
+#8 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#9 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#10 {main} REQUEST_URI=/activitie/Riviera_Maya/Horseback_Riding_and_Reef_Adventure_Combo_Tour.html?tour_fecha=09%2F21%2F2015&tour_adults=4&tour_childs=1&checkout_tour=ajax
+2015/09/18 17:43:08 [error] [exception.CException] exception 'CException' with message 'ActivitiesController and its behaviors do not have a method or closure named "operaDia".' in C:\AppServ\www\mexico-news-travel\lib\yii\base\CComponent.php:269
+Stack trace:
+#0 [internal function]: CComponent->__call('operaDia', Array)
+#1 C:\AppServ\www\mexico-news-travel\protected\controllers\ActivitiesController.php(371): ActivitiesController->operaDia(Array, Array, '2015-09-21', '4', '1')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\actions\CInlineAction.php(50): ActivitiesController->actionDetalle()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams(Array)
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): CController->runAction(Object(CInlineAction))
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('detalle')
+#7 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('activities/deta...')
+#8 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#9 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#10 {main} REQUEST_URI=/activitie/Riviera_Maya/Horseback_Riding_and_Reef_Adventure_Combo_Tour.html?tour_fecha=09%2F21%2F2015&tour_adults=4&tour_childs=1&checkout_tour=ajax
+2015/09/18 18:58:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tours/buscar".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('tours/buscar')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/tours/buscar.html?dest=Riviera_Maya&prod=Horseback_Riding_and_Reef_Adventure_Combo_Tour&isTourCategory=0&tour_destination=Horseback+Riding+%26+Reef+Adventure+Combo+Tour+at+Maroma+Adventures&TourId=172&ProveedorId=0&checkout_tour=ajax&fecha=09%2F21%2F2015&tour_adults=4&tour_childs=1
+2015/09/18 18:58:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "img".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('img')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('img')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('checkout/img/aj...')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#5 {main} REQUEST_URI=/checkout/img/ajax-loader.gif
+2015/09/18 18:58:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tours/buscar".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('tours/buscar')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/tours/buscar.html?dest=Riviera_Maya&prod=Horseback_Riding_and_Reef_Adventure_Combo_Tour&isTourCategory=0&tour_destination=Horseback+Riding+%26+Reef+Adventure+Combo+Tour+at+Maroma+Adventures&TourId=172&ProveedorId=0&checkout_tour=ajax&fecha=09%2F21%2F2015&tour_adults=4&tour_childs=1

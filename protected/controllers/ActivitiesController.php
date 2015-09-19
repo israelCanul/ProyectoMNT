@@ -260,8 +260,7 @@ class ActivitiesController extends Controller
 		$_act = new Activities();
 		$Tour = $_act->getActivityByCode($_REQUEST["prod"]);
 
-		print_r($_REQUEST);
-		exit();
+
 		if(intval($Tour["tour_id"]) != 0){
 			$cs = Yii::app()->getclientScript();
 			$cs->registerCssFile(Yii::app()->params["baseUrl"].'/css/plugins/fancybox/jquery.fancybox.css?a='. Yii::app()->params['assets'],'screen, projection');
@@ -275,8 +274,8 @@ class ActivitiesController extends Controller
 			$cs->registerScriptFile(Yii::app()->params["baseUrl"].'/js/plugins/fancybox/jquery.fancybox-thumbs.js?a='. Yii::app()->params['assets'],CClientScript::POS_END);
 			$cs->registerScriptFile(Yii::app()->params["baseUrl"].'/js/page/activities/activities-detail.min.js?a='. Yii::app()->params['assets'],CClientScript::POS_END);
 
-			$urlCanonical = $this->createUrl("tours/detalle",array("dest"=>$Tour["tour_clave_en"], "prod"=>$_REQUEST["prod"]));
-			Yii::app()->clientScript->registerLinkTag('canonical',"","http://www.lomastravel.com".$urlCanonical);
+			$urlCanonical = $this->createUrl("activities/detalle",array("dest"=>$Tour["tour_clave_en"], "prod"=>$_REQUEST["prod"]));
+			Yii::app()->clientScript->registerLinkTag('canonical',"",Yii::app()->params["baseUrl"].$urlCanonical);
 
 			$_Categorias = array();
 			$Categorias  = $_act->getCategoriesByActivity($Tour["tour_id"]);
@@ -285,6 +284,7 @@ class ActivitiesController extends Controller
 					$_Categorias[$_cat["categorias_tour"]] = array();
 				}
 				array_push($_Categorias[$_cat["categorias_tour"]],$_cat);
+
 			}
 
 			/* Validacion para el tour 1457 que no acepta adultos  */
@@ -310,6 +310,7 @@ class ActivitiesController extends Controller
 			unset($_REQUEST['dest']);
 			unset($_REQUEST['ProveedorId']);
 			unset($_REQUEST['isTourCategory']);
+
 
 			$minBook =  strtotime ( '+2 day' , strtotime ( date('Y-m-j') ) );
 			if ($minBook >  strtotime($_fecha)) {
@@ -340,6 +341,7 @@ class ActivitiesController extends Controller
 
 				}
 			}
+
 
 			$Imagenes = $_act->getPhotosByGallery($Tour["tour_galeria"]);
 			$_imgPrincipal  = "";
@@ -392,6 +394,9 @@ class ActivitiesController extends Controller
 			}else{
 				$selectAdulto["status"] = 0;
 			}
+
+
+
 
 			if(isset($_REQUEST["ws"])){
 				header('Content-Type: text/html; charset=iso-8859-1');
@@ -451,6 +456,106 @@ class ActivitiesController extends Controller
 
 	}
 
+	/* Funcion para validar las tarifas para poder ser reservadas */
+	public function operaDia($tour, $tarifa, $_fecha, $numAdulto, $numNiños){
+
+		/*Validacion de los dias que opera la tarifa */
+		$diaSemana =date("N", strtotime($_fecha));
+		switch ($diaSemana) {
+			case '1': $diaSemanaText = "opera_lunes"; break;
+			case '2': $diaSemanaText = "opera_martes"; break;
+			case '3': $diaSemanaText = "opera_miercoles"; break;
+			case '4': $diaSemanaText = "opera_jueves";	break;
+			case '5': $diaSemanaText = "opera_viernes";	break;
+			case '6': $diaSemanaText = "opera_sabado"; break;
+			case '7': $diaSemanaText = "opera_domingo";	break;
+		}
+
+		$opera_Dia  = ($tour[$diaSemanaText] == 1) ? "true" : "false" ;
+		$numPersonas = $numAdulto + $numNiños;
+		$descripcionNinos = '';
+
+		/* Validacion para tarifas compartidas ya que solo se pueden reservar en pax que son pares */
+		if ((stripos($tarifa["tarifa_nombre_en"], "/ Shared") !== false || $tarifa["tarifa_compartido"] == 1) && ($numPersonas % 2) != 0 ){
+			$opera_Dia 		= "false";
+			$descripcion 	= "Shared rates apply for even </br> number of passengers only.";
+		}
+
+		/* Validacion para tarifas con adulto abligatorio */
+		if ($tarifa["tarifa_adulto_obligatorio"] == 1 && $numAdulto < $numNiños) {
+			$opera_Dia 		= "false";
+			$descripcion 	= "Children must be accompanied by an adult.";
+		}
+
+		/* Validacion Para capacidad minima de un tour */
+		if (!($numPersonas >=  $tarifa["tarifa_min_adultos"] )) {
+			$opera_Dia 		= "false";
+			$descripcion 	= "Minimum capacity: ".$tarifa["tarifa_min_adultos"]." people.";
+		}
+
+		/* Validacion para capacidad Maxima de un paquete */
+		if ($tarifa["tarifa_es_paquete"] == 1 && $numPersonas > $tarifa['tarifa_max_pax']) {
+			$opera_Dia 		= "false";
+			$descripcion 	= "Maximum capacity: ".$tarifa["tarifa_max_pax"]." people.";
+		}
+
+		/* Validacion para capacidad Maxima de un tour */
+		if ($tarifa["tarifa_es_paquete"] != 1 && $numPersonas > $tarifa["tarifa_max_adultos"] ) {
+			$opera_Dia 		= "false";
+			$descripcion 	= "Maximum capacity: ".$tarifa["tarifa_max_adultos"]." people.";
+		}
+
+		/*Validacion para precio de niños para tours */
+		if ($tour["tour_adulto"] == 1 || $tarifa["tarifa_precio_menor"] <= 0) {
+			// no acepta niños
+			if ($numNiños != 0) {
+				$opera_Dia 		= "false";
+				$descripcion 	= "";
+				$descripcionNinos = "Only Adults";
+			}
+		}
+
+		/* Validacion para precio de adulto mayor a cero */
+		if ($tarifa["tarifa_precio_adulto"] <= 0 && $numAdulto > 0) {
+			$opera_Dia 		= "false";
+			$descripcion 	= "";
+		}
+
+		/* Validacion para tours especiales    ==== > */
+		if ($tarifa["tarifa_id"] == 4809 || $tarifa["tarifa_id"] == 4810) {
+			switch ($diaSemana) {
+				case '2':
+				case '5':
+				case '7':
+					$opera_Dia = "false";
+					$descripcion = "Available on Monday, Wednesday, Thursday and Saturday";
+					break;
+			}
+		}
+		if ($tarifa["tarifa_id"] == 4921 ) {
+			switch ($diaSemana) {
+				case '7':
+					$opera_Dia = "false";
+					$descripcion = "Available on Monday, Tuesday, Wednesday, Thursday, Friday, Saturday";
+					break;
+			}
+		}
+		/* Validacion para tours especiales     < ====*/
+
+		return array(
+			'opera' 			=> $opera_Dia,
+			"descripcion" 		=> $descripcion,
+			"descripcionNino" 	=> $descripcionNinos
+		);
+	}
+
+	public function difDays($a,$b){
+		$gd_a = getdate(strtotime($a));
+		$gd_b = getdate(strtotime($b));
+		$a_new = mktime(12,0,0,$gd_a['mon'],$gd_a['mday'],$gd_a['year']);
+		$b_new = mktime(12,0,0,$gd_b['mon'],$gd_b['mday'],$gd_b['year']);
+		return round(abs($a_new-$b_new)/86400);
+	}
 
 }
 ?>	
