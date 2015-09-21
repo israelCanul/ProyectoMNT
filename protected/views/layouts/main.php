@@ -218,22 +218,22 @@ $_SESSION['home']='listo';
 			<div class="row"></div>
 				<div class="row">
 					<div class="col s8 offset-4 m2 white-text medium">
-						<i class="material-icons">report</i>
+						<div class="responsive-img" src="" id="iconF"></div>
 					</div>
 					<div class="col s8 offset-2 m2 white-text medium">
-						<i class="material-icons">report</i>
+						<div class="responsive-img" src="" id="iconT"></div>
 					</div>
 					<div class="col s8 offset-2 m2 white-text medium">
-						<i class="material-icons">report</i>
+						<div class="responsive-img" src="" id="iconG"></div>
 					</div>
 					<div class="col s8 offset-2 m2 white-text medium">
-						<i class="material-icons">report</i>
+						<div class="responsive-img" src="" id="iconP"></div>
 					</div>
 					<div class="col s8 offset-2 m2 white-text medium">
-						<i class="material-icons">report</i>
+						<div class="responsive-img" src="" id="iconS"></div>
 					</div>
 					<div class="col s8 offset-2 m2 white-text medium">
-						<i class="material-icons">report</i>
+						<div class="responsive-img" src="" id="iconB"></div>
 					</div>					
 				</div>				
 			</div>

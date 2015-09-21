@@ -399,7 +399,7 @@ a,a:hover{color:white}
 .textoCaja{
       text-transform: uppercase;
     font-weight: bold;
-    font-size: 13px;
+    font-size: 15px;
     letter-spacing: 2px;
     /*font-family: sans-serif;*/
 }
@@ -409,3 +409,46 @@ a,a:hover{color:white}
 
 
 /* view de news [Final]*/
+/* iconos redes sociales*/
+#iconF{
+    background-image: url("/images/icon/redes-colores.png");
+    /* background-repeat: no-repeat; */
+    background-position: 565px 671px;
+    width: 50px;
+    height: 50px;
+}
+#iconT{
+    background-image: url("/images/icon/redes-colores.png");
+    /* background-repeat: no-repeat; */
+    background-position: 505px 671px;
+    width: 50px;
+    height: 50px;
+}
+#iconP{
+    background-image: url("/images/icon/redes-colores.png");
+    /* background-repeat: no-repeat; */
+    background-position: 445px 671px;
+    width: 50px;
+    height: 50px;
+}
+#iconG{
+    background-image: url("/images/icon/redes-colores.png");
+    /* background-repeat: no-repeat; */
+    background-position: 385px 671px;
+    width: 50px;
+    height: 50px;
+}
+#iconS{
+    background-image: url("/images/icon/redes-colores.png");
+    /* background-repeat: no-repeat; */
+    background-position: 145px 671px;
+    width: 50px;
+    height: 50px;
+}
+#iconB{
+    background-image: url("/images/icon/redes-colores.png");
+    /* background-repeat: no-repeat; */
+    background-position: 325px 610px;
+    width: 50px;
+    height: 49px;
+}

@@ -32,12 +32,7 @@
 </div>
 
 <!-- Footer de la seccion con el cambio de la imagen y las notas son las mismas  -->
-<div class="row">
-	<div class="col s10 offset-s1 parallax-container hide-on-med-and-down">
-		<div class="parallax"><img src="<?=Yii::app()->params['baseUrl']?>/images/bg/home-plane-mexiconews.jpg"></div>
-	</div>
 </div>
-</div>	
 <script type="text/javascript">
 	$(document).ready(function(){
 		$("#txtBanner").html("BEST FAMILY FRIENDLY VACATIONS");

@@ -101,7 +101,7 @@ if(count($notas)>0){
 				foreach ($notas2 as $key => $value) {
 					?>
 					<div class="col s12 m3 wrap_new" id="wrap_new_<?=$key?>">
-						<div class="card transparent hoverable new" data-key="<?=$key?>" style="height:200px;">
+						<div class="card transparent  new" data-key="<?=$key?>" style="height:200px;">
 							<div class="card-content black-text">
 								<span class="card-title black-text"><?=$value['titulo']?></span>
 								<div class="col s12  <? if($key==0){ echo "animated fadeInleft";}else{ echo "line_new"; }?> line_news" id="wrap_line_<?=$key?>" style="height: 5px;"></div>

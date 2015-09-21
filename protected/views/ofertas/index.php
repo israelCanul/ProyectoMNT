@@ -176,8 +176,10 @@
 </div>
 <!-- Footer de la seccion con el cambio de la imagen y las notas son las mismas  -->
 <div class="row">
-	<div class="col s10 offset-s1 parallax-container hide-on-med-and-down">
-		<div class="parallax"><img src="<?=Yii::app()->params['baseUrl']?>/images/bg/home-plane-mexiconews.jpg"></div>
+	<div class="row hide-on-med-and-down">
+		<div class="col s10 offset-s1 parallax-container">
+			<div class="parallax "><img src="<?=Yii::app()->params['baseUrl']?>/images/bg/home-plane-mexiconews.jpg"></div>
+		</div>
 	</div>
 
 	<? $value=$notas2;?>
@@ -189,15 +191,16 @@
 				foreach ($notas2 as $key => $value) {
 					?>
 					<div class="col s12 m3 wrap_new" id="wrap_new_<?=$key?>">
-						<div class="card transparent hoverable new" data-key="<?=$key?>" style="height:200px;">
+						<div class="card transparent  new" data-key="<?=$key?>" style="height:200px;">
 							<div class="card-content black-text">
 								<span class="card-title black-text"><?=$value['titulo']?></span>
+								<div class="col s12  <? if($key==0){ echo "animated fadeInleft";}else{ echo "line_new"; }?> line_news" id="wrap_line_<?=$key?>" style="height: 5px;"></div>
 								<p class="card-contenido"><?=$value['meta_description']?></p>
 								<a target="_blank" class="blue-text text-darken-2" href="<?=Yii::app()->params['news'].$value['uri']."/"?>">Read More</a>
 							</div>
 
 						</div>
-						<div class="col s12  <? if($key==0){ echo "animated fadeInleft";}else{ echo "line_new"; }?> line_news" id="wrap_line_<?=$key?>" style="height: 5px;"></div>
+
 					</div>
 
 					<?
