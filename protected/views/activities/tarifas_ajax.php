@@ -72,7 +72,7 @@ foreach ($Tarifas as $z) {
 		$firstTarifa = true;
     	echo "<form method='post' action='".$this->createUrl("tours/agregar")."'>";
 			echo '<label> ' . $z['tarifa_nombre_en'] . '<span>'. $_SESSION["config"]["currency"] . " $". number_format($price,0) .'</span>'. '</label>';
-			echo '<div class="rate-book prod_total_list"><input type="submit"  class="misc_select_btn_green" value="' . "BOOK" . '" /></div>';
+			echo '<div class="rate-book prod_total_list"><input type="submit"  class="misc_select_btn_green btn" value="' . "BOOK" . '" /></div>';
 			echo "<input type=\"hidden\" name=\"jnfe\" value=\"" . Yii::app()->GenericFunctions->ProtectVar($z["tarifa_id"] . "@@" . $_t["tour_id"] . "@@" . $z["servicio_id"] . "@@" . ((Yii::app()->language == "es") ? $_t["tour_nombre_es"] : $_t["tour_nombre"]) . "@@" . $z["tarifa_nombre_" . Yii::app()->language] . "@@" . $_t["descripcion_corta"] . "@@" . $z["tarifa_precio_adulto_mxp"] . "@@" . $price . "@@" . $_t["tour_reservable"] . "@@" . $_fecha . "@@" . $_ad . "@@" . $_mn . "@@" . $_t["tour_destino"] . "@@//apstatic.lomastravel.com.mx/180/" . $_imgPrincipal . "@@" . $openTk . "@@" . number_format($tarifa_precio_adulto,0,",",""). "@@" . number_format($tarifa_precio_menor,0,",",""). "") . "\" checked=\"checked\" /></td>";
 			echo "<input type='hidden' name = 'chekoutTour' value = '1'>";
 		echo "</form>";

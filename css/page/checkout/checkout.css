@@ -1,3 +1,7 @@
+header{
+    background:url('/images/bg/destination.jpg');
+    background-size:cover;
+}
 .completo {
     width: 100%;
 }
@@ -5,7 +9,8 @@ a{
 	color: #ee6e73;
 }
 a:hover{
-	color:;
+	color:#ee6e73;
+    cursor: pointer;
 }
 #main_tours .cotiza_tour_extra, #main_hotels .cotiza_hotel_extra {
     margin: 10px;

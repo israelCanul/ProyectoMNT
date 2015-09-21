@@ -24,11 +24,11 @@ if(count($notas)>0){
 ?>
 
 				<div class="row ">
-				<div class="col s12 m10 l8 offset-l2 card-panel hoverable" style="padding:5px;">
-					<div class="col s12 m6">
+				<div class="col s12 l10 offset-l1 card-panel hoverable" style="padding:15px 5px;">
+					<div class="col s12 m5">
 						<img data-caption="<?=$value['alt']?>" class="responsive-img " src="<?=Yii::app()->params['cdnNews'].$value['data']?>">
 					</div>
-					<div class="col s12 m6">
+					<div class="col s12 m7">
 						<a class="black-text " href="<?=Yii::app()->params['news'].$value['uri']."/"?>"><h5><?=$value['titulo']?></h5></a>
 						<p>
 							<?=$value['meta_description']?>
@@ -43,8 +43,8 @@ if(count($notas)>0){
 		$posicion=false;
 		}else{  ?>
 			<div class="row ">
-				<div class="col s12 m10 l8 offset-l2 card-panel hoverable" style="padding:5px;">
-					<div class="col s12 m6">
+				<div class="col s12 l10 offset-l1 card-panel hoverable" style="padding:15px 5px;">
+					<div class="col s12 m7">
 						<a class="black-text " href="<?=Yii::app()->params['news'].$value['uri']."/"?>"><h5><?=$value['titulo']?></h5></a>
 						<p>
 							<?=$value['meta_description']?>
@@ -53,7 +53,7 @@ if(count($notas)>0){
 			              <a class="blue-text text-darken-2" target="_blank" href="<?=Yii::app()->params['news'].$value['uri']."/"?>">Read more</a>
 			            </div>					
 					</div>
-					<div class="col s12 m6">
+					<div class="col s12 m5">
 						<img data-caption="<?=$value['alt']?>" class="responsive-img " src="<?=Yii::app()->params['cdnNews'].$value['data']?>">
 					</div>					
 				</div>			
@@ -104,12 +104,13 @@ if(count($notas)>0){
 						<div class="card transparent hoverable new" data-key="<?=$key?>" style="height:200px;">
 							<div class="card-content black-text">
 								<span class="card-title black-text"><?=$value['titulo']?></span>
+								<div class="col s12  <? if($key==0){ echo "animated fadeInleft";}else{ echo "line_new"; }?> line_news" id="wrap_line_<?=$key?>" style="height: 5px;"></div>
 								<p class="card-contenido"><?=$value['meta_description']?></p>
 								<a target="_blank" class="blue-text text-darken-2" href="<?=Yii::app()->params['news'].$value['uri']."/"?>">Read More</a>
 							</div>
 
 						</div>
-						<div class="col s12  <? if($key==0){ echo "animated fadeInleft";}else{ echo "line_new"; }?> line_news" id="wrap_line_<?=$key?>" style="height: 5px;"></div>
+
 					</div>
 
 					<?

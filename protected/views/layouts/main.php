@@ -8,8 +8,8 @@
 	<img class="img-intro" src="/images/bg/puertaLeft.jpg">
 </div>
 <div id="animacionIntroLogo">
-	<h4 style="font-size:2rem">Behind this doors you will find the best of Mexico and the world</h4>
-	<div class="row"><div class="col s12 m10 offset-m1 l8 offset-l2"><center><img style="width: 70%" class="responsive-img" src="<?=Yii::app()->params['baseUrl']?>/images/icon/logo.svg"></center></div></div>
+	<div class="row"><div class="col s12 m8 offset-m2 l6 offset-l3"><center><img style="width: 70%" class="responsive-img" src="<?=Yii::app()->params['baseUrl']?>/images/icon/logo.svg"></center></div></div>
+	<h3 style="font-size:3rem">Behind this doors you will find the best of Mexico and the world</h3>
 </div>
 <div id="animacionIntroRight">
 	<img class="img-intro" src="/images/bg/puertaRight.jpg">
@@ -71,31 +71,28 @@ $_SESSION['home']='listo';
 		    	<center>
 			      <ul class="hide-on-med-and-down">
 			        <li><a data-ajax="false" href="<?php echo $this->createUrl("/home"); ?>">HOME</a></li>
-			        <li><a data-ajax="false" href="<?php echo $this->createUrl("/destination"); ?>">DESTINATIONS</a></li>
+			        <li><a data-ajax="false" href="<?php echo $this->createUrl("/destination"); ?>">HOTELS</a></li>
+					  <li><a data-ajax="false" href="#">FLIGHTS</a></li>
 			        <li><a data-ajax="false" href="<?php echo $this->createUrl("/activities"); ?>">ACTIVITIES</a></li>
-			        <li><a data-ajax="false" href="<?php echo $this->createUrl("/promotions"); ?>">PROMOTIONS</a></li>
-					<li><a data-ajax="false" href="#">FLIGHTS</a></li>
 					<li><a data-ajax="false" href="#">PACKAGES</a></li>
  					<li><a data-ajax="false" href="#">WEDDINGS</a></li>
 					<li><a data-ajax="false" href="#">GROUPS</a></li>
 			        <li><a data-ajax="false" href="<?php echo $this->createUrl("/news"); ?>">NEWS</a></li>
+					<li><a data-ajax="false" href="<?php echo $this->createUrl("/promotions"); ?>">PROMOTIONS</a></li>
 			      </ul>
 		    	</center>  
 		    </div>  
 	      </div>
 	      <ul class="side-nav" id="mobile-demo">
-	        <li><a data-ajax="false" href="<?php echo $this->createUrl("/home"); ?>">HOME</a></li>
-	        <li><a data-ajax="false" href="<?php echo $this->createUrl("/destination"); ?>">DESTINATIONS</a></li>
-	        <li><a data-ajax="false" href="<?php echo $this->createUrl("/activities"); ?>">ACTIVITIES</a></li>
-	        <li><a data-ajax="false" href="<?php echo $this->createUrl("/promotions"); ?>">PROMOTIONS</a></li>
-			<li><a data-ajax="false" href="#">FLIGHTS</a></li>
-			<li><a data-ajax="false" href="#">PACKAGES</a></li>
-			<li><a data-ajax="false" href="#">WEDDINGS</a></li>
-			<li><a data-ajax="false" href="#">GROUPS</a></li>
-	        <li><a data-ajax="false" href="<?php echo $this->createUrl("/news"); ?>">NEWS</a></li>
-	        <li><a data-ajax="false" class="followBtn" data-open='follow'>FOLLOW US</a></li>
-	        <li><a data-ajax="false" class="followBtn" data-open='search'>SEARCH</a></li>
-	        <li><a data-ajax="false" class="followBtn" data-open='suscribe'>SUSCRIBE</a></li>	        
+			  <li><a data-ajax="false" href="<?php echo $this->createUrl("/home"); ?>">HOME</a></li>
+			  <li><a data-ajax="false" href="<?php echo $this->createUrl("/destination"); ?>">HOTELS</a></li>
+			  <li><a data-ajax="false" href="#">FLIGHTS</a></li>
+			  <li><a data-ajax="false" href="<?php echo $this->createUrl("/activities"); ?>">ACTIVITIES</a></li>
+			  <li><a data-ajax="false" href="#">PACKAGES</a></li>
+			  <li><a data-ajax="false" href="#">WEDDINGS</a></li>
+			  <li><a data-ajax="false" href="#">GROUPS</a></li>
+			  <li><a data-ajax="false" href="<?php echo $this->createUrl("/news"); ?>">NEWS</a></li>
+			  <li><a data-ajax="false" href="<?php echo $this->createUrl("/promotions"); ?>">PROMOTIONS</a></li>
 	      </ul>
 	    </div>
 	  </nav>		

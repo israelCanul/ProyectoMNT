@@ -472,7 +472,7 @@ $checkOutDate='';
                                                 $preciosaB = "871". "<span class='currency_code'>" . $_SESSION["config"]["currency"] . "</span>";
                                             }?>
                                             <div class="promotion_home_info_displayer checkout">
-                                                <a href="/hotel/<?php echo $urlHotel; ?>.html" title="<?= $p->attributes()->name; ?>" class="btn_img_tour_link curved">
+                                                <a href="/hotel/<?php echo $urlHotel; ?>.html" title="<?= $p->attributes()->name; ?>"  class="btn_img_tour_link curved">
                                                     <img class="full-width" src='<?php echo $p->attributes()->thumb; ?>' alt='<?php echo utf8_decode($p->attributes()->name); ?>' />
                                                 </a>
                                                 <h1 class="misc_book_info_txt_home nametur_mobile ">
@@ -660,7 +660,7 @@ $checkOutDate='';
                                                     $preciosaB = "871". "<span class='currency_code'>" . $_SESSION["config"]["currency"] . "</span>";
                                                 }?>
                                                 <div class="promotion_home_info_displayer checkout">
-                                                    <a href="<?= $link_tourDetalle ?>" title="<?= $p["tour_nombre_es"]; ?>" class="btn_img_tour_link curved">
+                                                    <a href="<?= $link_tourDetalle ?>" title="<?= $p["tour_nombre_es"]; ?>" style="overflow:hidden" class="btn_img_tour_link curved">
                                                         <div class="img_container_display curved" style="background-image: url(//apstatic.lomastravel.com.mx/300/<?= $Fotos[$p["tour_galeria"]]; ?>);"></div>
                                                     </a>
                                                     <h1 class="misc_book_info_txt_home nametur_mobile ">
@@ -700,7 +700,9 @@ $checkOutDate='';
                                                                 <? $tarifaGeneral = ($p["tarifa_precio_adulto"] > 0 )? $p["tarifa_precio_adulto"]: $p['tarifa_precio_menor'] ; ?>
                                                                 <?= $_SESSION["config"]["currency"] . " $" . number_format(Yii::app()->Currency->convert($_SESSION["config"]["currency"],$tarifaGeneral),0) ?>
                                                             </label>
-                                                            <a class="fontsize_mobil a_selectDatesTour col s12 m8 offset-m2" href="<?= $link_tourDetalle ?>">Select Dates</a>
+                                                            <button class="fontsize_mobil a_selectDatesTour btn waves-effect waves-light" style="padding:1px" href="<?= $link_tourDetalle ?>">Select Dates
+                                                                <i class="material-icons right">today</i>
+                                                            </button>
                                                         </div>
                                                     </div>
                                                     <div class="hide div_tourExtra card-panel grey lighten-4">
@@ -725,8 +727,8 @@ $checkOutDate='';
                                                                 <label>Children: </label>
                                                                 <input type= "number" name="tour_childs" value="<?= $temp_Childs ?>" class=""/>
                                                             </div>
-                                                            <button class="btn waves-effect waves-light submitForm" valu />Update Rates
-                                                            <i class="material-icons right">send</i>
+                                                            <button type="submit" class="btn waves-effect waves-light submitForm" />Update Rates
+                                                            <i class="material-icons">payment</i>
                                                             </button>
                                                         </form>
                                                         <div class="rate_tour_extra">
@@ -984,6 +986,8 @@ $checkOutDate='';
                     divRates = $(this).closest('.div_tourExtra');
                     data = $(this).serialize();
                     var url = $(this).attr('action');
+                    console.log(data);
+                    console.log(url);
                     $.ajax({
                         url: url,
                         type: "GET",
@@ -1013,6 +1017,8 @@ $checkOutDate='';
                     console.log($(this));
                     divRates = $(this).closest('.div_hotelExtra');
                     data = $(this).serialize();
+                    console.log(data);
+                    console.log(url);
                     var url = $(this).attr('action');
                     $.ajax({
                         url: url,

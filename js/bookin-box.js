@@ -1,5 +1,6 @@
 
 
+
 function despliegalistahoteles() {
     "undefined" != typeof searchToken && $.getJSON("/hoteles/ordenacion.html?hotelName=&Stars=0&minPrice=0&maxPrice=9999999&token=" + searchToken + "&Order=0", function(e) {
         for (var o = [], t = 0; t < e.Hotels.length; t++) o.push({
@@ -27,6 +28,9 @@ function despliegalistahoteles() {
 
 
 $(document).ready(function(){
+
+
+
 /* variables  de el js */
 var diasHotel=3;
 var dato=fecha.split(",");
@@ -52,7 +56,7 @@ $('.datepicker-hotel').pickadate({
     // Today and clear
     today: 'Today',
     clear: 'Clear',
-    close: 'Close',
+    close: 'Enter',
     // The format to show on the `input` element
         format: 'mm/dd/yyyy',
           onOpen: function() {
@@ -62,52 +66,65 @@ $('.datepicker-hotel').pickadate({
         //console.log('Closed now');
             var from_$input = $('#hotelCheckin').pickadate(),
             from_picker = from_$input.pickadate('picker')
-           
+
            var to_$input = $('#hotelCheckout').pickadate(),
                to_picker = to_$input.pickadate('picker')
-           
-           
+
+
            // Check if there’s a “from” or “to” date to start with.
            if ( from_picker.get('value') ) {
              to_picker.set('min', [from_picker.get('select')["year"],from_picker.get('select')["month"],from_picker.get('select')["date"]+diasHotel])
-             
+
              /*console.log(from_picker.get('select'));*/
            }
            if ( to_picker.get('value') ) {
              from_picker.set('max', to_picker.get('select'))
            }
-           
-           // When something is selected, update the “from” and “to” limits.
-           from_picker.on('set', function(event) {
-             if ( event.select ) {
-               to_picker.set('min', from_picker.get('select')),
-               to_picker.set('clear')    
-             }
-             else if ( 'clear' in event ) {
-               to_picker.set('min', false)
-             }
-           })
-           to_picker.on('set', function(event) {
-             if ( event.select ) {
-               from_picker.set('max', to_picker.get('select'))
-             }
-             else if ( 'clear' in event ) {
-               from_picker.set('max', false)
-             }
-           })        
+
+          // When something is selected, update the “from” and “to” limits.
+          from_picker.on('set', function(event) {
+              if ( event.select ) {
+                  to_picker.set('min', from_picker.get('select'),{ format:'mm/dd/yyyy'}),
+                      to_picker.set('clear',{ format:'mm/dd/yyyy'}),
+                      to_picker.open()
+                  console.log('entro');
+              }
+              else if ( 'clear' in event ) {
+                  to_picker.set('min', false,{ format:'mm/dd/yyyy'})
+              }
+          })
+          to_picker.on('set', function(event) {
+              if ( event.select ) {
+                  from_picker.set('max', to_picker.get('select'),{ format:'mm/dd/yyyy'})
+              }
+              else if ( 'clear' in event ) {
+                  from_picker.set('max', false,{ format:'mm/dd/yyyy'})
+              }
+          })
+
       },
       onRender: function() {
-        
-    
+
+
       },
       onStart: function() {
-        //console.log('Hello there :)')
+          var from_$input = $('#hotelCheckin').pickadate(),
+              from_picker = from_$input.pickadate('picker')
+
+
+          from_picker.on({
+              close: function() {
+                  var to_$input = $('#hotelCheckout').pickadate(),
+                      to_picker = to_$input.pickadate('picker');
+                  to_picker.open();
+              }
+          });
       },
       onStop: function() {
         //console.log('See ya')
       },
       onSet: function(thingSet) {
-        //console.log('Set stuff:', thingSet)
+
       }    
 }); 
 
@@ -151,7 +168,7 @@ $('.datepicker').pickadate({
         //console.log('See ya')
       },
       onSet: function(thingSet) {
-        //console.log('Set stuff:', thingSet)
+          this.close();
       }    
 });
 
