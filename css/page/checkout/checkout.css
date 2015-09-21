@@ -1,3 +1,728 @@
-.completo{
+.completo {
     width: 100%;
+}
+a{
+	color: #ee6e73;
+}
+a:hover{
+	color:;
+}
+#main_tours .cotiza_tour_extra, #main_hotels .cotiza_hotel_extra {
+    margin: 10px;
+    text-align: center
+}
+
+#main_tours .cotiza_tour_extra > div, #main_hotels .cotiza_hotel_extra > div {
+    display: inline-block
+}
+
+#main_tours .cotiza_tour_extra .dateInput, #main_hotels .cotiza_hotel_extra .dateInput {
+    width: 10rem
+}
+
+#main_tours .cotiza_tour_extra .num_adults, #main_hotels .cotiza_hotel_extra .num_adults {
+    width: 5rem
+}
+
+#main_tours .cotiza_tour_extra .num_childs, #main_hotels .cotiza_hotel_extra .num_childs {
+    width: 5rem
+}
+
+#main_tours .cotiza_tour_extra input[type='submit'], #main_hotels .cotiza_hotel_extra input[type='submit'], #main_tours .rate_tour_extra input[type='submit'] {
+    width: 10rem;
+    font-size: 10pt;
+    background-color: #ee6e73;
+    color: #fff;
+    cursor: pointer
+}
+
+.mainNoticeErr {
+    color: #f96;
+    display: block;
+    font-size: 14px
+}
+
+#main_tours .rate_tour_extra, #main_hotels .rate_hotel_extra {
+    text-align: center
+}
+
+#main_tours .rate_tour_extra input[type='submit'], #main_hotels .rate_hotel_extra input[type='submit'] {
+    width: 50%
+}
+
+#main_tours .rate_tour_extra .rate_no_available, #main_hotels .rate_hotel_extra .rate_no_available {
+    text-align: center;
+    color: red;
+    border: 1px solid;
+    padding: 5pt 0pt 3pt
+}
+
+#main_tours .div_tourExtra, #main_hotels .div_hotelExtra {
+    width: 70%;
+    margin: auto
+}
+
+#main_tours .rate_tour_extra form, #main_hotels .rate_hotel_extra form {
+    width: 80%;
+    margin: auto;
+    border: 1px solid #ccc;
+    padding: 5pt 15pt 4pt
+}
+
+#main_tours .rate_tour_extra form input[type='submit'], #main_hotels .rate_hotel_extra form input[type='submit'] {
+    background-color: #50A0D3
+}
+
+#main_tours .rate_tour_extra label, #main_hotels .rate_hotel_extra label {
+    display: inline-block;
+    width: 70%
+}
+
+#main_tours .rate_tour_extra span, #main_hotels .rate_hotel_extra span {
+    float: right;
+    margin: 4px
+}
+
+#main_tours .rate_tour_extra .rate-book, #main_hotels .rate_hotel_extra .rate-book {
+    display: inline-block;
+    width: 29%;
+    text-align: right
+}
+
+#formularioCheckout h2 {
+    font-size: 17pt;
+    border-bottom: 1px solid #dbdbdb;
+    color: rgb(0, 170, 166);
+    margin: 5px 0px 0px 10px
+}
+
+#formularioCheckout p {
+    display: inline-block;
+    margin-left: 30px;
+    text-align: left;
+    width: 260px;
+    vertical-align: top
+}
+
+#formularioCheckout p input {
+    width: 255px;
+    margin-top: 8px;
+    margin-bottom: 10px
+}
+
+#formularioCheckout p select {
+    width: 255px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-family: Arial;
+    vertical-align: top
+}
+
+#formularioCheckout table.banks_adquiring_cars td {
+    width: 30%;
+    text-align: center;
+    height: 30px;
+    vertical-align: bottom
+}
+
+#formularioCheckout table.banks_adquiring_cars tr:first-child {
+    height: 25px;
+    border-bottom: 1px solid;
+    margin-top: 2px
+}
+
+#formularioCheckout .btnGreen {
+    background-color: rgb(0, 170, 166);
+    color: white;
+    padding: 5px 18px;
+    font-size: 1.6em;
+    border: none
+}
+
+#formularioCheckout .btnback {
+    float: left;
+    height: 26px;
+    margin-left: 10px
+}
+
+#formularioCheckout .content_box_of_detail {
+    margin-top: 17px;
+    border: 1px solid #dbdbdb
+}
+
+#formularioCheckout .div_payment {
+    background-color: #f9fafc;
+    padding: 5px
+}
+
+#formularioCheckout .div_payment > div {
+    background-color: #fff;
+    margin: 10px
+}
+
+#formularioCheckout .div_btnpolicy div {
+    height: 20px;
+    margin-top: 10px;
+    margin-bottom: 25px
+}
+
+#formularioCheckout .div_btnpolicy .btnBlueSelectRoom {
+    float: right
+}
+
+#formularioCheckout #formCard p {
+    width: 100%;
+    margin: 10px
+}
+
+#formularioCheckout .method_payment {
+    margin: 0px 12px
+}
+
+#formularioCheckout .method_payment p {
+    width: 100%
+}
+
+#formularioCheckout .method_payment input {
+    display: inline-block;
+    width: 20px;
+    margin-top: 0px
+}
+
+#formularioCheckout .method_payment label {
+    display: inline-block
+}
+
+#formularioCheckout .p_especial_request {
+    display: block;
+    width: 600px
+}
+
+#formularioCheckout .p_especial_request textarea {
+    width: 50%;
+    height: 50px
+}
+
+#formularioCheckout .expeiration_card select {
+    width: 100px
+}
+
+.prod_service_resume .remove_link_checkout_prod {
+    font-size: .8rem;
+    color: red
+}
+
+.formularioCheckout_left {
+    margin-top: 0px
+}
+
+#pagination_product {
+    clear: none;
+    margin-top: 20px
+}
+
+.background_green {
+    background-color: #ee6e73;
+    color: #fff
+}
+
+.background_white {
+    background: none repeat scroll 0% 0% #FFF;
+    border: 1px solid #DBDBDB;
+    color: rgb(98, 173, 166)
+}
+
+.checkout_header {
+    margin-top: 15px;
+    margin-bottom: 15px
+}
+
+.checkout_header label {
+    display: inline-block;
+    padding: 5px 0px;
+    width: 165px;
+    text-align: center;
+    margin: 0px
+}
+
+.checkout_namehotel {
+    color: #4091A9
+}
+
+.checkout .misc_book_info_txt_home {
+    width: 100%
+}
+
+.checkout_div_price {
+    width: 20%;
+    text-align: right
+}
+
+.checkout_div_price label.description_price {
+    color: rgb(164, 164, 164);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 5px 2px
+}
+
+.checkout_div_price label.label_price {
+    color: #ee6e73;
+    font-size: 1.3rem;
+    margin-bottom: 15px
+}
+
+.checkout_div_price a {
+    background-color: #ee6e73;
+    color: white;
+    padding: 5px 12px;
+    text-align: center
+}
+
+.checkout_div_price a:hover {
+    text-decoration: none
+}
+
+.checkout_box_prod_transfer {
+    margin-bottom: 5px
+}
+
+.checkout_box_prod_transfer li {
+    display: block;
+    margin: 0.4rem 1rem;
+    border-bottom: 1px solid #DBDBDB;
+    padding: .2rem 0rem
+}
+
+.checkout_box_prod_transfer li:last-child {
+    border-bottom: none
+}
+
+.checkout_box_prod_transfer label {
+    display: inline-block;
+    width: 18%;
+    text-align: center
+}
+
+.checkout_box_prod_transfer li > label:first-child {
+    width: 38%;
+    text-align: left
+}
+
+.checkout_box_prod_transfer input {
+    vertical-align: top;
+    width: 18px;
+    margin-top: -1px
+}
+
+.checkout_box_prod_transfer .linkInformation {
+    color: rgb(102, 181, 223)
+}
+
+.checkout_box_prod_transfer .inlcude {
+    color: rgb(97, 157, 126)
+}
+
+.checkout_box_prod_transfer .price {
+    color: rgb(7, 167, 166);
+    text-align: right;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 40%
+}
+
+.checkout_box_prod_transfer .price span {
+    color: rgb(102, 181, 223);
+    font-size: .8rem
+}
+
+.checkout_box_prod_transfer .upscale {
+    color: #ee6e73;
+    font-size: 1.5rem
+}
+
+.checkoutProducto > img {
+    display: inline-block;
+    width: 160px;
+    margin: 10px
+}
+
+.checkoutProducto > div {
+    display: inline-block;
+    width: 70%
+}
+
+.descripcion_hotel {
+    width: 400px;
+    margin-left: 5px
+}
+
+.descripcion_hotel tr td:first-child {
+    width: 50%
+}
+
+.descripcion_hotel tr td:last-child {
+    width: 50%
+}
+
+.prod_resume_info_checkout {
+    padding: 10px
+}
+
+.prod_resume_info_checkout > div {
+    display: inline-block
+}
+
+.prod_form_blue_bg {
+    margin: 6px 13px;
+    background-color: #fff
+}
+
+.shopping_cart {
+    margin-top: 60px
+}
+
+.shopping_moreDetails {
+    color: rgb(125, 208, 245);
+    font-size: 15px
+}
+
+.shopping_moreDetails:hover, .linkInformation:hover {
+    cursor: pointer
+}
+
+.shopping_Price {
+    color: rgb(69, 115, 152);
+    font-size: 18px;
+    text-align: right;
+    margin: 2px
+}
+
+.shopping_table {
+    width: 100%;
+    color: rgb(69, 115, 152);
+    font-size: 18px
+}
+
+.shopping_continue {
+    background: #ee6e73;
+    padding: 5px 15px;
+    float: right;
+    margin-right: 5px;
+    font-size: 19px
+}
+
+.shopping_continue a {
+    color: #fff
+}
+
+.shopping_table tr td:last-child {
+    text-align: right
+}
+
+.shopping_moreInformation {
+    padding: 8px
+}
+
+.shopping_continue_tablet {
+    text-align: right;
+    display: none
+}
+
+.shopping_continue_tablet label {
+    margin-right: 16px;
+    margin-bottom: 5px;
+    color: rgb(69, 115, 152)
+}
+
+.shopping_continue_tablet a {
+    color: white;
+    background: #ee6e73;
+    padding: 5px 15px;
+    margin-right: 15px
+}
+
+.div_white {
+    height: 35px;
+    border: 1px solid #DBDBDB;
+    border-bottom: none;
+    background-color: #F7F7F7
+}
+
+.btn_img_tour_link {
+    display: inline-block
+}
+
+.div_misc_info_producto {
+    display: inline-block;
+    vertical-align: top;
+    width: 80%
+}
+
+.div_misc_info_producto label {
+    margin: 5px 0px
+}
+
+.div_misc_info_producto h1 {
+    font-size: 1.5rem;
+    text-align: left;
+    margin-bottom: 5px
+}
+
+.div_misc_info_producto div {
+    display: inline-block;
+    vertical-align: top
+}
+
+.div_misc_info_producto div:first-child {
+    width: 78%;
+    border-right: 1px solid #dbdbdb
+}
+
+.div_misc_info_producto td {
+    padding: 2px 10px
+}
+
+.hide {
+    display: none
+}
+
+.img_container_display {
+    width: 141px;
+    height: 123px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 2px
+}
+
+#misc_pagination_show_howmany {
+    display: none
+}
+
+#misc_controls_pages_show {
+    text-align: center
+}
+
+.ProductoStarsLevel {
+    padding-left: 10px
+}
+
+.prod_service_resume > div {
+    border-bottom: solid 1px #d8d8d8;
+    padding: 5px 0px 10px
+}
+
+.prod_service_resume .prod_service_resume_total {
+    background-color: #F7F7F7;
+    padding: 7px 0px 5px
+}
+
+.suplement_your_trip {
+    margin: 0px 0px 22px 11px;
+    color: #ee6e73;
+    font-size: 1.3rem
+}
+
+.title_product_recomendation {
+    color: #ee6e73;
+    font-size: 1.6rem;
+    background-color: rgb(247, 247, 247)
+}
+
+.borderGray {
+    border: 1px solid #DBDBDB
+}
+
+.title_product_recomendation {
+    color: #ee6e73;
+    font-size: 1.6rem;
+    background-color: #F7F7F7;
+    margin: 0px;
+    padding: 10px 21px
+}
+
+.promotion_home_info_displayer {
+    border-bottom: 1px solid #dbdbdb;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    padding-top: 12px
+}
+
+.prod_pagination > div:first-child {
+    padding-top: 0px
+}
+
+.checkut_moredetails {
+    color: #50A0D3;
+    margin: 10px 0px 0px 0px;
+    display: block;
+    font-size: 1rem
+}
+
+.btn_img_tour_link {
+    width: 18%
+}
+
+.normal_right {
+    width: 75%
+}
+
+.normal_left {
+    width: 24%
+}
+
+.nametur_mobile {
+    display: none
+}
+
+.enc_prod_resume {
+    font-size: 13pt!important;
+    padding: 9px;
+    border: solid 1px #dbdbdb;
+    background-color: #F7F7F7
+}
+
+.total_tablet {
+    color: rgb(69, 115, 152);
+    display: none;
+    margin-top: 8px;
+    margin-left: 10px
+}
+
+@media only screen and (max-width:1023px) {
+    .normal_left {
+        display: none
+    }
+    .normal_right {
+        width: 100%
+    }
+    .shopping_continue_tablet {
+        display: block
+    }
+    .total_tablet {
+        display: block
+    }
+}
+
+@media only screen and (max-width:800px) {
+    #main_tours .div_tourExtra {
+        width: 100%
+    }
+    #main_tours .rate_tour_extra form {
+        width: 98%
+    }
+    #main_tours .rate_tour_extra label {
+        width: 80%
+    }
+    #main_tours .rate_tour_extra input[type='submit'] {
+        min-width: 67px
+    }
+    .checkout_box_prod_transfer li > label:first-child {
+        width: 100%
+    }
+    .checkout_box_prod_transfer .linkInformation {
+        width: 48%
+    }
+    .checkout_box_prod_transfer .moreinformationImg {
+        display: block;
+        margin: auto
+    }
+    .checkout_box_prod_transfer .price {
+        width: 48%
+    }
+    .btn_img_tour_link {
+        width: 100%
+    }
+    .btn_img_tour_link div {
+        width: 100%;
+        height: 190px
+    }
+    .checkoutProducto {
+        font-size: 10pt
+    }
+    .checkoutProducto > div {
+        width: 74%
+    }
+    .checkoutProducto > img {
+        width: 25%;
+        padding: 0px;
+        margin: 0px
+    }
+    .div_misc_info_producto {
+        width: 100%
+    }
+    .div_misc_info_producto div:first-child {
+        width: 68%;
+        border: none
+    }
+    .checkout_div_price {
+        width: 30%
+    }
+    .hide_mobil {
+        display: none
+    }
+    .nametour_desk {
+        display: none
+    }
+    .nametur_mobile {
+        display: block;
+        font-size: 15pt
+    }
+    .prod_detail_contained {
+        border: none
+    }
+    .promotion_home_info_displayer {
+        border: none
+    }
+    .fontsize_mobil {
+        font-size: 10pt
+    }
+}
+
+@media only screen and (max-width:640px) {
+    .content_box_of_detail {
+        padding: 0px 10px
+    }
+    #formularioCheckout p, #formularioCheckout .p_especial_request {
+        width: 100%;
+        padding: 0px;
+        margin: 10px 0px
+    }
+    #formularioCheckout p input {
+        width: 95%
+    }
+    #formularioCheckout p select {
+        width: 95%
+    }
+    #formularioCheckout .method_payment label {
+        font-size: 10pt
+    }
+    #formularioCheckout .method_payment img {
+        width: 75px
+    }
+    #formularioCheckout .p_especial_request textarea {
+        width: 95%;
+        border-color: #ccc
+    }
+    #formularioCheckout .div_payment > div {
+        margin: 0px
+    }
+    #paymentCard {
+        font-size: 10pt
+    }
+    .method_payment {
+        margin: 0px
+    }
+}
+
+@media only screen and (max-width:470px) {
+    #main_tours .rate_tour_extra span {
+        width: 98%
+    }
+    #main_tours .cotiza_tour_extra .num_adults {
+        width: 3rem
+    }
+    #main_tours .cotiza_tour_extra .num_childs {
+        width: 4rem
+    }
 }

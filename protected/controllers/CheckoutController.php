@@ -347,8 +347,9 @@ class CheckoutController extends Controller
 
 
             $cs = Yii::app()->getclientScript();
-            $cs->registerCssFile('http://cdn.lomastravel.com/css/page/checkout.min.css');
+            //$cs->registerCssFile('http://cdn.lomastravel.com/css/page/checkout.min.css');
             $cs->registerCssFile('/css/page/checkout/checkout.css');
+            $cs->registerScriptFile(Yii::app()->params["baseUrl"].'/js/page/checkout/checkout.js?a='. Yii::app()->params['assets'],CClientScript::POS_END);
 
             /*print_r($Productos);
             exit();*/

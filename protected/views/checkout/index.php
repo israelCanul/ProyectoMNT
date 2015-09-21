@@ -498,12 +498,12 @@ $checkOutDate='';
                                                         </label>
                                                         <a class = 'checkut_moredetails' href="/hotel/<?php echo $urlHotel; ?>.html">More Details</a>
                                                     </div>
-                                                    <div class="checkout_div_price">
+                                                    <div class="checkout_div_price row">
                                                         <span class="elementCategory"><?php echo Yii::app()->GenericFunctions->makeStars((float)$p->attributes()->starsLevel); ?></span>
-                                                        <label class="description_price">
+                                                        <label class="description_price col s12">
                                                             From :
                                                         </label>
-                                                        <label class="label_price">
+                                                        <label class="label_price  col s12">
                                                             <?php if((float)$p->attributes()->minAverPrice == 99999999 || (float)$p->attributes()->minAverPrice == 0){ ?>
                                                                 <article class="elementPrice">
                                                                     <span><?php echo Yii::t("global","Agotado"); ?>	</span>
@@ -514,7 +514,7 @@ $checkOutDate='';
                                                                 </article>
                                                             <?php } ?>
                                                         </label>
-                                                        <a class="fontsize_mobil a_selectDatesHotel" href="/hotel/<?php echo $urlHotel; ?>.html" >BOOK</a>
+                                                        <a class="fontsize_mobil a_selectDatesHotel  col s12" href="/hotel/<?php echo $urlHotel; ?>.html" >BOOK</a>
                                                     </div>
                                                 </div>
                                                 <div class="hide div_hotelExtra">
@@ -692,19 +692,19 @@ $checkOutDate='';
                                                             </label>
                                                             <a class = 'checkut_moredetails' href="<?= $link_tourDetalle ?>">More Details</a>
                                                         </div>
-                                                        <div class="checkout_div_price">
-                                                            <label class="description_price">
+                                                        <div class="checkout_div_price row">
+                                                            <label class="description_price col s12 m8 offset-m2">
                                                                 From :
                                                             </label>
-                                                            <label class="label_price">
+                                                            <label class="label_price col s12 m8 offset-m2">
                                                                 <? $tarifaGeneral = ($p["tarifa_precio_adulto"] > 0 )? $p["tarifa_precio_adulto"]: $p['tarifa_precio_menor'] ; ?>
                                                                 <?= $_SESSION["config"]["currency"] . " $" . number_format(Yii::app()->Currency->convert($_SESSION["config"]["currency"],$tarifaGeneral),0) ?>
                                                             </label>
-                                                            <a class="fontsize_mobil a_selectDatesTour" href="<?= $link_tourDetalle ?>">Select Dates</a>
+                                                            <a class="fontsize_mobil a_selectDatesTour col s12 m8 offset-m2" href="<?= $link_tourDetalle ?>">Select Dates</a>
                                                         </div>
                                                     </div>
-                                                    <div class="hide div_tourExtra">
-                                                        <form class="cotiza_tour_extra" action="<?= $this->createUrl('tours/buscar') ?>">
+                                                    <div class="hide div_tourExtra card-panel grey lighten-4">
+                                                        <form class="cotiza_tour_extra" action="<?= $this->createUrl('activities/buscar') ?>">
                                                             <input type="hidden" name="dest"			 value="<?= $p["destino_clave"] ?>"/>
                                                             <input type="hidden" name="prod"			 value="<?= $p["tour_clave"] ?>"/>
                                                             <input type="hidden" name="isTourCategory"	 value="0"/>
@@ -712,19 +712,22 @@ $checkOutDate='';
                                                             <input type="hidden" name="TourId"			 value="<?= $p['tour_id'] ?>"/>
                                                             <input type="hidden" name="ProveedorId"		 value="0"/>
                                                             <input type="hidden" name="checkout_tour" 	value="ajax"/>
-                                                            <div>
+                                                            <div class="input-field col s4">
                                                                 <label>Dates: </label>
                                                                 <input type="text" name="fecha" value="<?= date_format($temp_InDate, 'm/d/Y')?>" class="datepicker-tour-checkout"/>
                                                             </div>
-                                                            <div>
-                                                                <label>Adults: </label>
-                                                                <input type="number" name="tour_adults" value="<?= $temp_Adults ?>" class="num_adults" />
+                                                            <div class="input-field col s4">
+
+                                                                <input type="number" name="tour_adults" value="<?= $temp_Adults ?>" id="adult-<?= $p["tour_clave"] ?>" class="" />
+                                                                <label for="adult-<?= $p["tour_clave"] ?>">Adults: </label>
                                                             </div>
-                                                            <div>
+                                                            <div class="input-field col s4">
                                                                 <label>Children: </label>
-                                                                <input type= "number" name="tour_childs" value="<?= $temp_Childs ?>" class="num_childs"/>
+                                                                <input type= "number" name="tour_childs" value="<?= $temp_Childs ?>" class=""/>
                                                             </div>
-                                                            <input type="submit" value="Update Rates" class="submitForm"/>
+                                                            <button class="btn waves-effect waves-light submitForm" valu />Update Rates
+                                                            <i class="material-icons right">send</i>
+                                                            </button>
                                                         </form>
                                                         <div class="rate_tour_extra">
 
@@ -990,7 +993,17 @@ $checkOutDate='';
                             divRates.find('.rate_tour_extra').html(data);
                         },
                         beforeSend : function () {
-                            divRates.find('.rate_tour_extra').html('<img src="img/ajax-loader.gif">');
+                            divRates.find('.rate_tour_extra').html('<div class="preloader-wrapper big active">'+
+                                '<div class="spinner-layer spinner-red-only">'+
+                                '<div class="circle-clipper left">'+
+                                '<div class="circle"></div>'+
+                                '</div><div class="gap-patch">'+
+                                '<div class="circle"></div>'+
+                                '</div><div class="circle-clipper right">'+
+                                '<div class="circle"></div>'+
+                                '</div>'+
+                                '</div>'+
+                                '</div>');
                         }
                     });
                 });
@@ -1010,7 +1023,17 @@ $checkOutDate='';
                             divRates.find('.rate_hotel_extra').html(data);
                         },
                         beforeSend : function () {
-                            divRates.find('.rate_hotel_extra').html('<img src="img/ajax-loader.gif">');
+                            divRates.find('.rate_hotel_extra').html('<div class="preloader-wrapper big active">'+
+                                '<div class="spinner-layer spinner-red-only">'+
+                                '<div class="circle-clipper left">'+
+                                '<div class="circle"></div>'+
+                                '</div><div class="gap-patch">'+
+                                '<div class="circle"></div>'+
+                                '</div><div class="circle-clipper right">'+
+                                '<div class="circle"></div>'+
+                                '</div>'+
+                                '</div>'+
+                                '</div>');
                         }
                     });
                 });
