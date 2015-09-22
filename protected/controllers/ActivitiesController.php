@@ -7,7 +7,8 @@ class ActivitiesController extends Controller
 		$_act 	= new Activities();
 		$_destinos 	 = $_act->getActivityDestinations();
 		$_categorias = $_act->getActivityCategories();
-
+		/*print_r($_destinos);
+		exit();*/
 
 		/* enviar las trending notes de Mexico news en la seccio9n de travel*/
 		$notasFooter=Yii::app()->GenericFunctions->notasFooter();

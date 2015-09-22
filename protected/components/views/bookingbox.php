@@ -211,14 +211,12 @@
 			    <div id="test3" class="col s12" >
 					<div class="row">
 						<div class="input-field col s12 m6 l3">
-							<select name="transfer_option_type" id="transfer_option_type">
-								<option value="1">Round Trip</option>
-								<option value="2">Airport →Hotel</option>
-								<option value="3">Hotel →Airport</option>
-								<option value="4">Hotel →Hotel ( One Way ) </option>
-								<option value="5">Hotel →Hotel ( Round Trip )</option>
-							</select>
-							<label>Type of Transfer</label>
+							<input required type="text" autocomplete="off" name="hotel_destination" value="<?=Yii::app()->GenericFunctions->makeSinAcento($_REQUEST["hotel_destination"]) ; ?>" id="tour_destination" class="validate">
+							<label for="tour_destination">Type of Transfer</label>
+							<input class="" type="hidden" name="dest" id="dest" value="<?=$_REQUEST["dest"]; ?>"/>
+							<input class="" type="hidden" name="TourId" id="TourId" value="<?=$_REQUEST["TourId"]; ?>"/>
+							<input class="" type="hidden" name="ProveedorId" id="ProveedorId" value="<?=$_REQUEST["ProveedorId"]; ?>"/>
+							<input class="" type="hidden" name="openTk" id="openTk" value="<?= (($openTk != 1) ? 0 : 1); ?>"/>
 						</div>
 						<div class="input-field col s12 m6 l3">
 							<select name="AirportCode" id="AirportCode">
@@ -230,10 +228,6 @@
 						<div class="input-field col s12 m3 l2">
 							<input required="required" value="<?=date('m/d/Y', strtotime('+2 day'))?>"  type="date" name="trans-Checkin" id="trans-Checkin" class="datepicker" >
 							<label for="trans-Checkin">Check-In *</label>
-						</div>
-						<div class="input-field col s12 m3 l2">
-							<input required="required" value="<?=date('m/d/Y', strtotime('+2 day'))?>" type="date" name="trans-Checkout" id="trans-Checkout" class="datepicker" >
-							<label for="trans-Checkout">Check-Out *</label>
 						</div>
 						<div class="input-field col s12 m4 l2">
 							<input required type="number" min="0" name="flyAdult" id="flyAdult" >
