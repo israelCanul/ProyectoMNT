@@ -33,7 +33,6 @@ $(document).ready(function(){
 
 /* variables  de el js */
 var diasHotel=3;
-var dato=fecha.split(",");
 
 
 $('.datepicker-hotel').pickadate({
@@ -70,7 +69,6 @@ $('.datepicker-hotel').pickadate({
            var to_$input = $('#hotelCheckout').pickadate(),
                to_picker = to_$input.pickadate('picker')
 
-
            // Check if there’s a “from” or “to” date to start with.
            if ( from_picker.get('value') ) {
              to_picker.set('min', [from_picker.get('select')["year"],from_picker.get('select')["month"],from_picker.get('select')["date"]+diasHotel])
@@ -81,52 +79,51 @@ $('.datepicker-hotel').pickadate({
              from_picker.set('max', to_picker.get('select'))
            }
 
-          // When something is selected, update the “from” and “to” limits.
-          from_picker.on('set', function(event) {
-              if ( event.select ) {
-                  to_picker.set('min', from_picker.get('select'),{ format:'mm/dd/yyyy'}),
-                      to_picker.set('clear',{ format:'mm/dd/yyyy'}),
-                      to_picker.open()
-                  console.log('entro');
-              }
-              else if ( 'clear' in event ) {
-                  to_picker.set('min', false,{ format:'mm/dd/yyyy'})
-              }
-          })
-          to_picker.on('set', function(event) {
-              if ( event.select ) {
-                  from_picker.set('max', to_picker.get('select'),{ format:'mm/dd/yyyy'})
-              }
-              else if ( 'clear' in event ) {
-                  from_picker.set('max', false,{ format:'mm/dd/yyyy'})
-              }
-          })
-
       },
       onRender: function() {
 
-
       },
       onStart: function() {
-          var from_$input = $('#hotelCheckin').pickadate(),
-              from_picker = from_$input.pickadate('picker')
 
-
-          from_picker.on({
-              close: function() {
-                  var to_$input = $('#hotelCheckout').pickadate(),
-                      to_picker = to_$input.pickadate('picker');
-                  to_picker.open();
-              }
-          });
       },
       onStop: function() {
-        //console.log('See ya')
       },
       onSet: function(thingSet) {
 
       }    
-}); 
+});
+    var to_$input = $('#hotelCheckout').pickadate();
+    var to_picker = to_$input.pickadate('picker');
+    var from_$input = $('#hotelCheckin').pickadate();
+    var from_picker = from_$input.pickadate('picker');
+
+    from_picker.on('close', function(event) {
+        var to_$input = $('#hotelCheckout').pickadate();
+        var to_picker = to_$input.pickadate('picker');
+        to_picker.open(true);
+    });
+
+    // When something is selected, update the “from” and “to” limits.
+    from_picker.on('set', function(event) {
+        if ( event.select ) {
+            to_picker.set('min', from_picker.get('select'),{ format:'mm/dd/yyyy'}),
+                to_picker.set('clear',{ format:'mm/dd/yyyy'}),
+                from_picker.close(),
+                to_picker.open()
+            console.log('entro');
+        }
+        else if ( 'clear' in event ) {
+            to_picker.set('min', false,{ format:'mm/dd/yyyy'})
+        }
+    });
+    to_picker.on('set', function(event) {
+        if ( event.select ) {
+            from_picker.set('max', to_picker.get('select'),{ format:'mm/dd/yyyy'})
+        }
+        else if ( 'clear' in event ) {
+            from_picker.set('max', false,{ format:'mm/dd/yyyy'})
+        }
+    });
 
 
 $('.datepicker').pickadate({
