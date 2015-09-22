@@ -74,7 +74,7 @@ if(count($notas)>0){
 			<?php foreach($destinations['top'] as $dest) {	?> 
 	    		<div class="col s12 m11 offset-m1">
 					<center>
-						<a target="_blank" href="<?php echo $this->createUrl("destinations/listar", array("clave" => $dest['ciudad_clave']));?>">
+						<a href="<?php echo $this->createUrl("destinations/listar", array("clave" => $dest['ciudad_clave']));?>">
 							<img class="responsive-img" src="<?php echo Yii::app()->params['cdnLomas']."/img/destinations/".$dest['ciudad_img']; ?> " alt="<?php echo utf8_encode($dest['ciudad_nombre']); ?>">
 						</a>
 					</center>

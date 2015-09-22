@@ -165,8 +165,11 @@ input[type=search]{
 
 .active{
   color: #ee6e73;
+  border-bottom: 2px solid #ee6e73;
 }
+.active a{
 
+}
 /*.card.small {
     height: 200px;
 }*/

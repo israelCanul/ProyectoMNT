@@ -69,17 +69,82 @@ $_SESSION['home']='listo';
 	      <div class="row">
 		    <div class="col m10 l10 offset-m1 offset-l1">
 		    	<center>
-			      <ul class="hide-on-med-and-down">
-			        <li><a data-ajax="false" href="<?php echo $this->createUrl("/home"); ?>">HOME</a></li>
-			        <li><a data-ajax="false" href="<?php echo $this->createUrl("/destination"); ?>">HOTELS</a></li>
+			      <!--<ul >
+			        <li><a data-ajax="false" href="<?php /*echo $this->createUrl("/home"); */?>">HOME</a></li>
+			        <li><a data-ajax="false" href="<?php /*echo $this->createUrl("/destination"); */?>">HOTELS</a></li>
 					  <li><a data-ajax="false" href="#">FLIGHTS</a></li>
-			        <li><a data-ajax="false" href="<?php echo $this->createUrl("/activities"); ?>">ACTIVITIES</a></li>
+			        <li><a data-ajax="false" href="<?php /*echo $this->createUrl("/activities"); */?>">ACTIVITIES</a></li>
 					<li><a data-ajax="false" href="#">PACKAGES</a></li>
  					<li><a data-ajax="false" href="#">WEDDINGS</a></li>
 					<li><a data-ajax="false" href="#">GROUPS</a></li>
-			        <li><a data-ajax="false" href="<?php echo $this->createUrl("/news"); ?>">NEWS</a></li>
-					<li><a data-ajax="false" href="<?php echo $this->createUrl("/promotions"); ?>">PROMOTIONS</a></li>
-			      </ul>
+			        <li><a data-ajax="false" href="<?php /*echo $this->createUrl("/news"); */?>">NEWS</a></li>
+					<li><a data-ajax="false" href="<?php /*echo $this->createUrl("/promotions"); */?>">PROMOTIONS</a></li>
+			      </ul>-->
+
+				<ul class="hide-on-med-and-down">
+				   <?php
+				   $this->widget('zii.widgets.CMenu',array(
+					   'activeCssClass'=>'active',
+					   'activateParents'=>true,
+					   'items'=>array(
+						   array(
+							   'label'=>'HOME',
+							   'url'=>array('site/index'),
+							   'linkOptions'=>array('class'=>''),
+							   /*'itemOptions'=>array('class'=>'purple-text text-darken-5'),
+							   'items'=>array(
+								 array('label'=>'Our Mission', 'url'=>array('/company/index')),
+								 array('label'=>'About Us', 'url'=>array('/company/aboutUs')),
+								 array('label'=>'Careers', 'url'=>array('/company/careers')),
+								 array('label'=>'Contact Us', 'url'=>array('/company/contactUs')),
+								 array('label'=>'Store Locator', 'url'=>array('/company/storeLocator')),
+							   ),*/
+						   ),
+						   array(
+							   'label'=>'HOTELS',
+							   'url'=>array('destinations/index'),
+							   'linkOptions'=>array('class'=>''),
+						   ),
+						   array(
+							   'label'=>'FLIGHTS',
+							   'url'=>array('#'),
+							   'linkOptions'=>array('class'=>''),
+						   ),
+						   array(
+							   'label'=>'ACTIVITIES',
+							   'url'=>array('activities/index'),
+							   'linkOptions'=>array('class'=>''),
+						   ),
+						   array(
+							   'label'=>'PACKAGES',
+							   'url'=>array('#'),
+							   'linkOptions'=>array('class'=>''),
+						   ),
+						   array(
+							   'label'=>'WEDDINGS',
+							   'url'=>'http://www.mexiconewsnetwork.com/services/bridal-moments/',
+							   'linkOptions'=>array('class'=>''),
+						   ),
+						   array(
+							   'label'=>'GROUPS',
+							   'url'=>array('#'),
+							   'linkOptions'=>array('class'=>''),
+						   ),
+						   array(
+							   'label'=>'NEWS',
+							   'url'=>array('site/news'),
+							   'linkOptions'=>array('class'=>''),
+						   ),
+						   array(
+							   'label'=>'PROMOTIONS',
+							   'url'=>array('ofertas/index'),
+							   'linkOptions'=>array('class'=>''),
+						   ),
+					   ),
+				   )); ?>
+					</ul>
+
+
 		    	</center>  
 		    </div>  
 	      </div>
