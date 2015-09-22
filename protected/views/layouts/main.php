@@ -171,12 +171,11 @@ $_SESSION['home']='listo';
 	</div>	
 </header>
 
-<div class="row" style="height: 500px;"></div>
+<div class="row" style="height: 500px;position: relative"></div>
 <!-- formulario de bookin [inicio] -->
-		<div class="row bookin-form1" style="z-index:10;">
+		<div class="row bookin-form1" style="z-index:10;position: relative;">
 			<?php	$this->widget('application.components.Bookingbox'); ?>
         	<?php $fecha = date("d/m/Y",mktime(0,0,0,date("m"),date("d")+3,date("Y"))); ?>
-
 
 		</div>
 

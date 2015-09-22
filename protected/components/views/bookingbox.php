@@ -147,11 +147,11 @@
 					        </div>
 			    			<div class="input-field col s12 m3 l2">
 					          <input required="required" value="<?=date('m/d/Y', strtotime('+2 day'))?>"  type="date" name="hotelCheckin" id="hotelCheckin" class="datepicker-hotel" >
-					          <label >Check-In *</label>
+					          <label for="hotelCheckin" class="active">Check-In *</label>
 					        </div>
 			    			<div class="input-field col s12 m3 l2">
 					          <input required="required" value="<?=date('m/d/Y', strtotime('+5 day'))?>" type="date" name="hotelCheckout" id="hotelCheckout" class="datepicker-hotel" >
-					          <label >Check-Out *</label>
+					          <label for="hotelCheckout" class="active" >Check-Out *</label>
 					        </div>
 			    			<div class="input-field col s12 m3 l1">
 					         	<select name="hotelRoom" value='1' id="hotelRoom">
