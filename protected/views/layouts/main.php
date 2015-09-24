@@ -8,8 +8,8 @@
 	<img class="img-intro" src="/images/bg/puertaLeft.jpg">
 </div>
 <div id="animacionIntroLogo">
-	<div class="row"><div class="col s12 m8 offset-m2 l6 offset-l3"><center><img style="width: 70%" class="responsive-img" src="<?=Yii::app()->params['baseUrl']?>/images/icon/logo.svg"></center></div></div>
-	<h3 style="font-size:3rem">Behind this doors you will find the best of Mexico and the world</h3>
+	<div class="row"><div class="col s12 m8 offset-m2 l6 offset-l3"><center><img style="width: 57%;background-color: rgba(0,0,0,0.2);" class="responsive-img" src="<?=Yii::app()->params['baseUrl']?>/images/icon/logo.svg"></center></div></div>
+	<h3 style="font-size:3rem;text-align: center;">Behind this doors you will find the best of Mexico and the world</h3>
 </div>
 <div id="animacionIntroRight">
 	<img class="img-intro" src="/images/bg/puertaRight.jpg">
@@ -26,12 +26,12 @@ $_SESSION['home']='listo';
 	<meta name="language" content="en">
    <!-- Archivos JS *************************************************************************************************** -->
     <script src="https://code.jquery.com/jquery-2.1.4.js" type="text/javascript"></script>
-    <script src="/js/jquery-ui.js" type="text/javascript"></script>  
+    <script src="/js/jquery-ui.js" type="text/javascript"></script>
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
    	<!--Import jQuery before materialize.js-->
 	<script src="/js/materialize.min.js"></script>
-    <!-- Archivos CSS ****************************************************************************************************** -->   
-   
+    <!-- Archivos CSS ****************************************************************************************************** -->
+
     <!-- Compiled and minified CSS -->
     <link type="text/css" rel="stylesheet" href="/css/page/jquery-ui.css"  media="screen,projection"/>
     <link type="text/css" rel="stylesheet" href="/css/materialize.css"  media="screen,projection"/>
@@ -39,7 +39,7 @@ $_SESSION['home']='listo';
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!-- css para la pagina -->
 	<link rel="stylesheet" href="/css/animate.css">
-    <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css">  
+    <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css">
 
 
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
@@ -57,7 +57,7 @@ $_SESSION['home']='listo';
 					<li><a class="followBtn" data-open='follow'>FOLLOW US</a></li>
 					<li><a class="followBtn" data-open='search'><i style="height:30px;" class="material-icons white-text">search</i></a></li>
 					<li><a class="followBtn" data-open='suscribe'>SUSCRIBE</a></li>
-				</ul>	
+				</ul>
 			</div>
 		</div>
 	</div>
@@ -145,8 +145,8 @@ $_SESSION['home']='listo';
 					</ul>
 
 
-		    	</center>  
-		    </div>  
+		    	</center>
+		    </div>
 	      </div>
 	      <ul class="side-nav" id="mobile-demo">
 			  <li><a data-ajax="false" href="<?php echo $this->createUrl("/home"); ?>">HOME</a></li>
@@ -160,28 +160,30 @@ $_SESSION['home']='listo';
 			  <li><a data-ajax="false" href="<?php echo $this->createUrl("/promotions"); ?>">PROMOTIONS</a></li>
 	      </ul>
 	    </div>
-	  </nav>		
+	  </nav>
 	</div>
 	<div class="row ">
 	    <div class="row"></div>
 		<div class="textoBanner">
 			<h5 class="txtTextoBanner"><center id="txtBanner">RELAX, SWIM AND ENJOY</center></h5>
 			<h4 class="txtTextoBanner"><center id="txtBanner1">THE <span class='txtCant'>10</span> BEST BEACHES OF MEXICO</center></h4>
-		</div>	
-	</div>	
+		</div>
+	</div>
 </header>
 
-<div class="row" style="height: 500px;position: relative"></div>
-<!-- formulario de bookin [inicio] -->
-		<div class="row bookin-form1" style="z-index:10;position: relative;">
-			<?php	$this->widget('application.components.Bookingbox'); ?>
-        	<?php $fecha = date("d/m/Y",mktime(0,0,0,date("m"),date("d")+3,date("Y"))); ?>
+<div class="row" style="height: 500px;"></div>
 
-		</div>
-
-<!-- formulario de bookin [final] -->
 <main>
+	<!-- formulario de bookin [inicio] -->
 
+	<div class="row bookin-form1" style="z-index:10;position: relative;">
+		<div class="col s12">
+			<?php	$this->widget('application.components.Bookingbox'); ?>
+			<?php $fecha = date("d/m/Y",mktime(0,0,0,date("m"),date("d")+3,date("Y"))); ?>
+		</div>
+	</div>
+
+	<!-- formulario de bookin [final] -->
 <?php echo $content; ?>
 
 </main>

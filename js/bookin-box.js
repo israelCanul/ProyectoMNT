@@ -229,7 +229,17 @@ $("#tour_destination").MixCombo({
             (null == t.item || void 0 == t.item) && $(this).val("")
         },
         select: function(e, t) {
-            $("#TourId").val("0"), $("#dest").val(""), $("#isTourCategory").val(0), 1 == t.item.tipo ? ($("#dest").val(t.item.id), $("#TourId").removeClass("notNull"), $("#ProveedorId").val(0)) : 2 == t.item.tipo ? ($("#TourId").val(t.item.id), $("#dest").removeClass("notNull"), $("#ProveedorId").val(0)) : 3 == t.item.tipo && ($("#dest").val("Category"), $("#TourId").removeClass("notNull"), $("#ProveedorId").val(0), $("#isTourCategory").val(t.item.id)), 4 == t.item.tipo && ($("#TourId").removeClass("notNull"), $("#dest").removeClass("notNull"), $("#ProveedorId").val(t.item.id))
+            $("#cat").val("");
+            $("#TourId").val("");
+            $("#ProveedorId").val("");
+            $("#dest").val("");
+            if (t.item.tipo == 'category')  $("#cat").val(t.item.id);
+            if (t.item.tipo == 'tour')  $("#TourId").val(t.item.id) ;
+            if (t.item.tipo == 'supplier') $("#ProveedorId").val(t.item.id);
+            if (t.item.tipo == 'destination') $("#dest").val(t.item.id);
+            $("#tipo").val(t.item.tipo)
+            console.log(t.item.id);
+            console.log(t.item.tipo);
         }
     });
 

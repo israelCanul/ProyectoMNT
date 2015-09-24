@@ -203,6 +203,16 @@ class GenericFunctions extends CApplicationComponent{
 		}
 		return $nDate;
 	}
-
+	public function makeComboInt($min,$max,$selected = 0,$strAd = ""){
+		$strInput = "";
+		for($i=$min;$i<=$max;$i++){
+			if($selected == $i){
+				$strInput .= "<option selected='selected' value='{$i}'>{$i}{$strAd}</option>";
+			}else{
+				$strInput .= "<option value='{$i}'>{$i}{$strAd}</option>";
+			}
+		}
+		return $strInput;
+	}
 }
 ?>
