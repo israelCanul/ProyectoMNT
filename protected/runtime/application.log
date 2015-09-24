@@ -6132,3 +6132,20 @@ Stack trace:
 #26 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
 #27 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
 #28 {main} REQUEST_URI=/
+2015/09/24 17:28:58 [error] [php] file_get_contents(http://apilomas.dev/RestTours/ListByZona/Cancun.html?date=2015-09-26&amp;lan=en&amp;moneda=USD) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: HTTP request failed! HTTP/1.0 500 Internal Server Error
+ (C:\AppServ\www\mexico-news-travel\protected\controllers\ActivitiesController.php:64)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): ActivitiesController->runAction()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): ActivitiesController->runActionWithFilters()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): ActivitiesController->run()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#6 C:\AppServ\www\mexico-news-travel\index.php(22): CWebApplication->run()
+REQUEST_URI=/tours/Cancun.html?tour_destination=Cancun&tipo=destination&cat=&TourId=&ProveedorId=&openTk=0&seg=&tour-Checkin=09%2F26%2F2015&tour_adults=2&tour_child=0&action=&PHPSESSID=e06c42b2b523aeb756afa282389a62f4&lan=en&moneda=USD
+2015/09/24 18:32:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toursBySup/".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('toursBySup/')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/toursBySup/.html?tour_destination=Bonanza&tipo=supplier&cat=&dest=&TourId=&openTk=0&seg=&tour-Checkin=09%2F26%2F2015&tour_adults=2&tour_child=0&action=&PHPSESSID=e06c42b2b523aeb756afa282389a62f4&lan=en&moneda=USD

@@ -231,11 +231,11 @@ $("#tour_destination").MixCombo({
         select: function(e, t) {
             $("#cat").val("");
             $("#TourId").val("");
-            $("#ProveedorId").val("");
+            $("#sup").val("");
             $("#dest").val("");
             if (t.item.tipo == 'category')  $("#cat").val(t.item.id);
             if (t.item.tipo == 'tour')  $("#TourId").val(t.item.id) ;
-            if (t.item.tipo == 'supplier') $("#ProveedorId").val(t.item.id);
+            if (t.item.tipo == 'supplier') $("#sup").val(t.item.id);
             if (t.item.tipo == 'destination') $("#dest").val(t.item.id);
             $("#tipo").val(t.item.tipo)
             console.log(t.item.id);

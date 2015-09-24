@@ -48,9 +48,9 @@ class ActivitiesController extends Controller
 			case 'destination':
 				$this->redirect($this->createUrl("activities/findByDest",$_REQUEST));break;
 			case 'category':
-				unset($_REQUEST['dest']);
-
 				$this->redirect($this->createUrl("activities/findByCat",$_REQUEST));break;
+			case 'supplier':
+				$this->redirect($this->createUrl("activities/findBySup",$_REQUEST));break;
 
 		}
 
@@ -70,6 +70,13 @@ class ActivitiesController extends Controller
 		$fecha=explode("/", $_REQUEST['tour-Checkin']);
 		$fecha=$fecha[2]."-".$fecha[0]."-".$fecha[1];
 		$tours= file_get_contents("http://apilomas.dev/RestTours/ListByCat/".$_REQUEST['cat'].".html?date=".$fecha."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda']);
+		print_r($tours);
+	}
+	public function actionFindBySup(){
+
+		$fecha=explode("/", $_REQUEST['tour-Checkin']);
+		$fecha=$fecha[2]."-".$fecha[0]."-".$fecha[1];
+		$tours= file_get_contents("http://apilomas.dev/RestTours/ListBySup/".$_REQUEST['sup'].".html?date=".$fecha."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda']);
 		print_r($tours);
 	}
 

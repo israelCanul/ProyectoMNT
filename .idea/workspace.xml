@@ -62,6 +62,8 @@
               <folding>
                 <element signature="n#style#0;n#img#0;n#center#0;n#div#0;n#div#0;n#div#1;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h3#0;n#div#1;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#a#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -84,8 +86,8 @@
       <file leaf-file-name="bookingbox.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/components/views/bookingbox.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.3207547">
-              <caret line="89" column="8" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="8" />
+            <state vertical-scroll-proportion="-5.773585">
+              <caret line="118" column="22" selection-start-line="118" selection-start-column="22" selection-end-line="118" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -94,23 +96,23 @@
       <file leaf-file-name="main.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/config/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.5660377">
-              <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+            <state vertical-scroll-proportion="-7.056604">
+              <caret line="77" column="51" selection-start-line="77" selection-start-column="51" selection-end-line="77" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ActivitiesController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ActivitiesController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/controllers/ActivitiesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.056604">
-              <caret line="46" column="34" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.6666667">
+              <caret line="58" column="39" selection-start-line="58" selection-start-column="39" selection-end-line="58" selection-end-column="39" />
               <folding>
-                <marker date="1443132768740" expanded="true" signature="12444:12691" placeholder="Select * fro..tour_tarifa..." />
-                <marker date="1443132768740" expanded="true" signature="12907:13163" placeholder="Select * fro..tour_tarifa..." />
-                <marker date="1443132768740" expanded="true" signature="13306:13585" placeholder="Select * fro..tour_tarifa..." />
-                <marker date="1443132768740" expanded="true" signature="13717:13971" placeholder="Select * fro..tour_tarifa..." />
+                <marker date="1443137738079" expanded="true" signature="12836:13083" placeholder="Select * fro..tour_tarifa..." />
+                <marker date="1443137738079" expanded="true" signature="13299:13555" placeholder="Select * fro..tour_tarifa..." />
+                <marker date="1443137738079" expanded="true" signature="13698:13977" placeholder="Select * fro..tour_tarifa..." />
+                <marker date="1443137738079" expanded="true" signature="14109:14363" placeholder="Select * fro..tour_tarifa..." />
               </folding>
             </state>
           </provider>
@@ -126,10 +128,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GenericFunctions.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GenericFunctions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/components/GenericFunctions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.96196866">
+            <state vertical-scroll-proportion="-29.153847">
               <caret line="215" column="5" selection-start-line="215" selection-start-column="5" selection-end-line="215" selection-end-column="5" />
               <folding>
                 <marker date="1443133106780" expanded="true" signature="143:638" placeholder="SELECT c.idc..ws_contenido..." />
@@ -147,13 +149,13 @@
         <entry file="file://$PROJECT_DIR$/js/bookin-box.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="208" column="111" selection-start-line="208" selection-start-column="111" selection-end-line="208" selection-end-column="111" />
+              <caret line="219" column="17" selection-start-line="219" selection-start-column="17" selection-end-line="219" selection-end-column="17" />
               <folding>
-                <marker date="1443132813063" expanded="true" signature="9957:9969" placeholder="..." />
-                <marker date="1443132813063" expanded="true" signature="11649:11661" placeholder="..." />
-                <marker date="1443132813063" expanded="true" signature="11866:11878" placeholder="..." />
-                <marker date="1443132813063" expanded="true" signature="13225:13237" placeholder="..." />
-                <marker date="1443132813063" expanded="true" signature="13424:13436" placeholder="..." />
+                <marker date="1443137651591" expanded="true" signature="9941:9953" placeholder="..." />
+                <marker date="1443137651591" expanded="true" signature="11633:11645" placeholder="..." />
+                <marker date="1443137651591" expanded="true" signature="11850:11862" placeholder="..." />
+                <marker date="1443137651591" expanded="true" signature="13209:13221" placeholder="..." />
+                <marker date="1443137651591" expanded="true" signature="13408:13420" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -215,12 +217,12 @@
         <option value="$PROJECT_DIR$/protected/components/views/BreadCrumb.php" />
         <option value="$PROJECT_DIR$/protected/views/site/index.php" />
         <option value="$PROJECT_DIR$/css/main.css" />
-        <option value="$PROJECT_DIR$/protected/controllers/ActivitiesController.php" />
-        <option value="$PROJECT_DIR$/protected/config/main.php" />
-        <option value="$PROJECT_DIR$/js/bookin-box.js" />
-        <option value="$PROJECT_DIR$/protected/components/views/bookingbox.php" />
         <option value="$PROJECT_DIR$/protected/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/protected/components/GenericFunctions.php" />
+        <option value="$PROJECT_DIR$/protected/config/main.php" />
+        <option value="$PROJECT_DIR$/protected/components/views/bookingbox.php" />
+        <option value="$PROJECT_DIR$/js/bookin-box.js" />
+        <option value="$PROJECT_DIR$/protected/controllers/ActivitiesController.php" />
       </list>
     </option>
   </component>
@@ -838,35 +840,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/config/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.5660377">
-          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/components/views/bookingbox.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.3207547">
-          <caret line="89" column="8" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.576923">
-          <caret line="164" column="22" selection-start-line="164" selection-start-column="22" selection-end-line="164" selection-end-column="22" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#center#0;n#div#0;n#div#0;n#div#1;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#div#1;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -885,20 +858,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/bookin-box.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="208" column="111" selection-start-line="208" selection-start-column="111" selection-end-line="208" selection-end-column="111" />
-          <folding>
-            <marker date="1443132813063" expanded="true" signature="9957:9969" placeholder="..." />
-            <marker date="1443132813063" expanded="true" signature="11649:11661" placeholder="..." />
-            <marker date="1443132813063" expanded="true" signature="11866:11878" placeholder="..." />
-            <marker date="1443132813063" expanded="true" signature="13225:13237" placeholder="..." />
-            <marker date="1443132813063" expanded="true" signature="13424:13436" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/components/MexInit.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.115385">
@@ -907,22 +866,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/ActivitiesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.056604">
-          <caret line="46" column="34" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
-          <folding>
-            <marker date="1443132768740" expanded="true" signature="12444:12691" placeholder="Select * fro..tour_tarifa..." />
-            <marker date="1443132768740" expanded="true" signature="12907:13163" placeholder="Select * fro..tour_tarifa..." />
-            <marker date="1443132768740" expanded="true" signature="13306:13585" placeholder="Select * fro..tour_tarifa..." />
-            <marker date="1443132768740" expanded="true" signature="13717:13971" placeholder="Select * fro..tour_tarifa..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/components/GenericFunctions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.96196866">
+        <state vertical-scroll-proportion="-29.153847">
           <caret line="215" column="5" selection-start-line="215" selection-start-column="5" selection-end-line="215" selection-end-column="5" />
           <folding>
             <marker date="1443133106780" expanded="true" signature="143:638" placeholder="SELECT c.idc..ws_contenido..." />
@@ -931,6 +877,64 @@
             <marker date="1443133106780" expanded="true" signature="2234:2286" placeholder="..." />
             <marker date="1443133106780" expanded="true" signature="2366:2418" placeholder="..." />
             <marker date="1443133106780" expanded="true" signature="2506:2558" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/config/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.056604">
+          <caret line="77" column="51" selection-start-line="77" selection-start-column="51" selection-end-line="77" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/components/views/bookingbox.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.773585">
+          <caret line="118" column="22" selection-start-line="118" selection-start-column="22" selection-end-line="118" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.576923">
+          <caret line="164" column="22" selection-start-line="164" selection-start-column="22" selection-end-line="164" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#center#0;n#div#0;n#div#0;n#div#1;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#div#1;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/bookin-box.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="219" column="17" selection-start-line="219" selection-start-column="17" selection-end-line="219" selection-end-column="17" />
+          <folding>
+            <marker date="1443137651591" expanded="true" signature="9941:9953" placeholder="..." />
+            <marker date="1443137651591" expanded="true" signature="11633:11645" placeholder="..." />
+            <marker date="1443137651591" expanded="true" signature="11850:11862" placeholder="..." />
+            <marker date="1443137651591" expanded="true" signature="13209:13221" placeholder="..." />
+            <marker date="1443137651591" expanded="true" signature="13408:13420" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/ActivitiesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6666667">
+          <caret line="58" column="39" selection-start-line="58" selection-start-column="39" selection-end-line="58" selection-end-column="39" />
+          <folding>
+            <marker date="1443137738079" expanded="true" signature="12836:13083" placeholder="Select * fro..tour_tarifa..." />
+            <marker date="1443137738079" expanded="true" signature="13299:13555" placeholder="Select * fro..tour_tarifa..." />
+            <marker date="1443137738079" expanded="true" signature="13698:13977" placeholder="Select * fro..tour_tarifa..." />
+            <marker date="1443137738079" expanded="true" signature="14109:14363" placeholder="Select * fro..tour_tarifa..." />
           </folding>
         </state>
       </provider>
