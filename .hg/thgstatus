@@ -12,6 +12,7 @@ mprotected/config
 mprotected/controllers
 mprotected/models
 mprotected/runtime
+aprotected/views/activities
 aprotected/views/checkout
 mprotected/views/layouts
 rprotected/views/site

@@ -6149,3 +6149,9 @@ Stack trace:
 #1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
 #2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
 #3 {main} REQUEST_URI=/toursBySup/.html?tour_destination=Bonanza&tipo=supplier&cat=&dest=&TourId=&openTk=0&seg=&tour-Checkin=09%2F26%2F2015&tour_adults=2&tour_child=0&action=&PHPSESSID=e06c42b2b523aeb756afa282389a62f4&lan=en&moneda=USD
+2015/09/25 10:48:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico

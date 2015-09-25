@@ -71,6 +71,7 @@ class ActivitiesController extends Controller
 		$fecha=$fecha[2]."-".$fecha[0]."-".$fecha[1];
 		$tours= file_get_contents("http://apilomas.dev/RestTours/ListByCat/".$_REQUEST['cat'].".html?date=".$fecha."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda']);
 		print_r($tours);
+
 	}
 	public function actionFindBySup(){
 
