@@ -158,6 +158,18 @@ class GenericFunctions extends CApplicationComponent{
 
 		}
 
+	public function convertDate($date){
+		if(Yii::app()->language == "es"){
+			list ($dia,$mes,$anio) = explode("/",$date);
+			$dias 		= array(1=>"lunes", 2=>"martes", 3=>"miércoles", 4=>"jueves", 5=>"viernes", 6=>"sábado", 7=>"domingo");
+			$meses 		= array("01" =>"Ene","02" => "Feb", "03" =>"Mar", "04" =>"Abr", "05" =>"May", "06" =>"Jun", "07" =>"Jul", "08" =>"Ago", "09" =>"Sep", "10" =>"Oct", "11" =>"Nov", "12" => "Dic");
+			$diaSemana 	= date('N', strtotime($anio.'-'.$mes.'-'.$dia));
+
+			return $dias[$diaSemana].', '.$dia.'/'.$meses[$mes].'/'.$anio;
+		}else{
+			return date('l, M d, Y', strtotime($date));
+		}
+	}
 		public function convertUsableDates($date){
 			$nDate = "";
 
@@ -213,6 +225,21 @@ class GenericFunctions extends CApplicationComponent{
 			}
 		}
 		return $strInput;
+	}
+
+	public function scriptsTours(){
+		$cs= Yii::app()->getclientScript();
+		$cs->registerCssFile(Yii::app()->params["baseUrl"].'/css/plugins/jPList/jplist-core.min.css?a='. Yii::app()->params['assets'],'screen, projection');
+		$cs->registerCssFile(Yii::app()->params["baseUrl"].'/css/plugins/jPList/jplist-pagination-bundle.min.css?a='. Yii::app()->params['assets'],'screen, projection');
+		$cs->registerCssFile(Yii::app()->params["baseUrl"].'/css/plugins/jPList/jplist-jquery-ui-bundle.min.css?a='. Yii::app()->params['assets'],'screen, projection');
+		$cs->registerCssFile(Yii::app()->params["baseUrl"].'/css/page/activities/tours.css?a='. Yii::app()->params['assets'],'screen, projection');
+		$cs->registerScriptFile(Yii::app()->params["baseUrl"].'/build/react.js?a='. Yii::app()->params['assets'],CClientScript::POS_END);
+		$cs->registerScriptFile(Yii::app()->params["baseUrl"].'/build/JSXTransformar.js?a='. Yii::app()->params['assets'],CClientScript::POS_END);
+		$cs->registerScriptFile(Yii::app()->params["baseUrl"].'/build/tour.js?a='. Yii::app()->params['assets'],CClientScript::POS_END);
+		$cs->registerScriptFile(Yii::app()->params["baseUrl"].'/js/plugins/jPList/jplist-core.min.js?a='. Yii::app()->params['assets'],CClientScript::POS_END);
+		$cs->registerScriptFile(Yii::app()->params["baseUrl"].'/js/plugins/jPList/jplist.sort-bundle.min.js?a='. Yii::app()->params['assets'],CClientScript::POS_END);
+		$cs->registerScriptFile(Yii::app()->params["baseUrl"].'/js/plugins/jPList/jplist.pagination-bundle.min.js?a='. Yii::app()->params['assets'],CClientScript::POS_END);
+		$cs->registerScriptFile(Yii::app()->params["baseUrl"].'/js/plugins/jPList/jplist.jquery-ui-bundle.min.js?a='. Yii::app()->params['assets'],CClientScript::POS_END);
 	}
 }
 ?>

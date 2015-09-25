@@ -6155,3 +6155,141 @@ Stack trace:
 #1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
 #2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
 #3 {main} REQUEST_URI=/favicon.ico
+2015/09/25 11:05:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toursBySup/img/imagen.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('toursBySup/img/...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/toursBySup/img/imagen.jpg
+2015/09/25 11:17:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toursBySup/img/imagen.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('toursBySup/img/...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/toursBySup/img/imagen.jpg
+2015/09/25 11:45:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=//css/images/ui-bg_flat_75_ffffff_40x100.png
+2015/09/25 11:45:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_e6e6e6_1x400.png".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=//css/images/ui-bg_glass_75_e6e6e6_1x400.png
+2015/09/25 11:45:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=//css/images/ui-bg_glass_75_dadada_1x400.png
+2015/09/25 12:04:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "toursapi/zona".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('toursapi/zona')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/tours/Riviera_Maya.html
+2015/09/25 12:05:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tours/Riviera_Maya".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('tours/Riviera_M...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/tours/Riviera_Maya.html
+2015/09/25 12:24:30 [error] [php] urlencode() expects parameter 1 to be string, array given (C:\AppServ\www\mexico-news-travel\protected\views\activities\listTours.php:4)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(88): ActivitiesController->renderInternal()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(866): ActivitiesController->renderFile()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(779): ActivitiesController->renderPartial()
+#3 C:\AppServ\www\mexico-news-travel\protected\controllers\ActivitiesController.php(69): ActivitiesController->render()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\actions\CInlineAction.php(50): ActivitiesController->actionFindByDest()
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams()
+#6 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): ActivitiesController->runAction()
+#7 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): ActivitiesController->runActionWithFilters()
+#8 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): ActivitiesController->run()
+#9 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#10 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#11 C:\AppServ\www\mexico-news-travel\index.php(22): CWebApplication->run()
+REQUEST_URI=/toursByDest/Cancun.html?tour_destination=Cancun&tipo=destination&cat=&TourId=&sup=&openTk=0&seg=&tour-Checkin=09%2F27%2F2015&tour_adults=2&tour_child=0&action=&PHPSESSID=208d81bd4f33f16ea89a69ef5442d9ea&lan=en&moneda=USD
+2015/09/25 12:26:28 [error] [php] urlencode() expects parameter 1 to be string, array given (C:\AppServ\www\mexico-news-travel\protected\views\activities\listTours.php:4)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(88): ActivitiesController->renderInternal()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(866): ActivitiesController->renderFile()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(779): ActivitiesController->renderPartial()
+#3 C:\AppServ\www\mexico-news-travel\protected\controllers\ActivitiesController.php(69): ActivitiesController->render()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\actions\CInlineAction.php(50): ActivitiesController->actionFindByDest()
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams()
+#6 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): ActivitiesController->runAction()
+#7 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): ActivitiesController->runActionWithFilters()
+#8 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): ActivitiesController->run()
+#9 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#10 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#11 C:\AppServ\www\mexico-news-travel\index.php(22): CWebApplication->run()
+REQUEST_URI=/toursByDest/Cancun.html?tour_destination=Cancun&tipo=destination&cat=&TourId=&sup=&openTk=0&seg=&tour-Checkin=09%2F27%2F2015&tour_adults=2&tour_child=0&action=&PHPSESSID=208d81bd4f33f16ea89a69ef5442d9ea&lan=en&moneda=USD
+2015/09/25 12:40:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tours/Horseback_Riding_and_Reef_Adventure_Combo_Tour".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('tours/Horseback...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/tours/Horseback_Riding_and_Reef_Adventure_Combo_Tour.html
+2015/09/25 13:47:20 [error] [php] urlencode() expects parameter 1 to be string, array given (C:\AppServ\www\mexico-news-travel\protected\views\activities\listTours.php:4)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(88): ActivitiesController->renderInternal()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(866): ActivitiesController->renderFile()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(779): ActivitiesController->renderPartial()
+#3 C:\AppServ\www\mexico-news-travel\protected\controllers\ActivitiesController.php(92): ActivitiesController->render()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\actions\CInlineAction.php(50): ActivitiesController->actionFindBySup()
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams()
+#6 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): ActivitiesController->runAction()
+#7 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): ActivitiesController->runActionWithFilters()
+#8 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): ActivitiesController->run()
+#9 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#10 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#11 C:\AppServ\www\mexico-news-travel\index.php(22): CWebApplication->run()
+REQUEST_URI=/toursBySup/bonanza.html?tour_destination=Bonanza&tipo=supplier&cat=&dest=&TourId=&openTk=0&seg=&tour-Checkin=09%2F27%2F2015&tour_adults=2&tour_child=0&action=&PHPSESSID=208d81bd4f33f16ea89a69ef5442d9ea&lan=en&moneda=USD
+2015/09/25 13:48:11 [error] [php] urlencode() expects parameter 1 to be string, array given (C:\AppServ\www\mexico-news-travel\protected\views\activities\listTours.php:4)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(88): ActivitiesController->renderInternal()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(866): ActivitiesController->renderFile()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(779): ActivitiesController->renderPartial()
+#3 C:\AppServ\www\mexico-news-travel\protected\controllers\ActivitiesController.php(92): ActivitiesController->render()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\actions\CInlineAction.php(50): ActivitiesController->actionFindBySup()
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams()
+#6 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): ActivitiesController->runAction()
+#7 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): ActivitiesController->runActionWithFilters()
+#8 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): ActivitiesController->run()
+#9 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#10 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#11 C:\AppServ\www\mexico-news-travel\index.php(22): CWebApplication->run()
+REQUEST_URI=/toursBySup/bonanza.html?tour_destination=Bonanza&tipo=supplier&cat=&dest=&TourId=&openTk=0&seg=&tour-Checkin=09%2F27%2F2015&tour_adults=2&tour_child=0&action=&PHPSESSID=208d81bd4f33f16ea89a69ef5442d9ea&lan=en&moneda=USD
+2015/09/25 13:48:21 [error] [php] urlencode() expects parameter 1 to be string, array given (C:\AppServ\www\mexico-news-travel\protected\views\activities\listTours.php:4)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(88): ActivitiesController->renderInternal()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(866): ActivitiesController->renderFile()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(779): ActivitiesController->renderPartial()
+#3 C:\AppServ\www\mexico-news-travel\protected\controllers\ActivitiesController.php(92): ActivitiesController->render()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\actions\CInlineAction.php(50): ActivitiesController->actionFindBySup()
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams()
+#6 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): ActivitiesController->runAction()
+#7 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): ActivitiesController->runActionWithFilters()
+#8 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): ActivitiesController->run()
+#9 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#10 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#11 C:\AppServ\www\mexico-news-travel\index.php(22): CWebApplication->run()
+REQUEST_URI=/toursBySup/bonanza.html?tour_destination=Bonanza&tipo=supplier&cat=&dest=&TourId=&openTk=0&seg=&tour-Checkin=09%2F27%2F2015&tour_adults=2&tour_child=0&action=&PHPSESSID=208d81bd4f33f16ea89a69ef5442d9ea&lan=en&moneda=USD
+2015/09/25 13:48:32 [error] [php] urlencode() expects parameter 1 to be string, array given (C:\AppServ\www\mexico-news-travel\protected\views\activities\listTours.php:4)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(88): ActivitiesController->renderInternal()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(866): ActivitiesController->renderFile()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(779): ActivitiesController->renderPartial()
+#3 C:\AppServ\www\mexico-news-travel\protected\controllers\ActivitiesController.php(92): ActivitiesController->render()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\actions\CInlineAction.php(50): ActivitiesController->actionFindBySup()
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams()
+#6 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): ActivitiesController->runAction()
+#7 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): ActivitiesController->runActionWithFilters()
+#8 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): ActivitiesController->run()
+#9 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#10 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#11 C:\AppServ\www\mexico-news-travel\index.php(22): CWebApplication->run()
+REQUEST_URI=/toursBySup/bonanza.html?tour_destination=Bonanza&tipo=supplier&cat=&dest=&TourId=&openTk=0&seg=&tour-Checkin=09%2F27%2F2015&tour_adults=2&tour_child=0&action=&PHPSESSID=208d81bd4f33f16ea89a69ef5442d9ea&lan=en&moneda=USD

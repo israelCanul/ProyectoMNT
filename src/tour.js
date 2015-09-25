@@ -1,34 +1,32 @@
-var data=[{'nom':'Park tour royale','desc':'esta es la descripcion del tour','img':'img/imagen.jpg','dest':'cancun','precio':'12','currency':'USD'},
-{'nom':'BOnanza','desc':'este es el tour de bonanza','img':'img/imagen.jpg','dest':'Puertomorelos','precio':'24','currency':'USD'}];
 
 var Tour=React.createClass({  
-  render: function() {  	
-  	var url="http://admin.lomastravel.com/tours/cancun.html?tour_fecha=09%2F26%2F2015&tour_adults=2&tour_childs=0";
-    var urlBook="http://lomastravel.com/tours/cancun.html";
+  render: function() {
+
     return (
-      <div className="card hoverable row">        
+      <div className={" card-panel hoverable row card-tours elementList list-item"}>
         <div className="col s12 m3 l2">
-        	<img src={this.props.data.img} className="responsive-img"/>
+        	<img alt={this.props.data.photo.alt} src={"//apstatic.lomastravel.com.mx/204/"+this.props.data.photo.file} className="responsive-img"/>
         </div>
         <div className="col s12 m5 l6">
-        <h3 className="left-align">{this.props.data.nom}</h3>
+        <a href={urlBase+"tours/"+this.props.data.tour.clave+".html?"+dataUrl}><h5 className="tituloCard red-text left-align">{this.props.data.tour.name}</h5></a>
+		<input type="hidden" name="idTour" value={this.props.data.tour.id} />
         <p>
-        {this.props.data.desc}
+        {this.props.data.description.short}
         </p>
-        Destination: 
-        <a href={url} className="red-text">
-        	{this.props.data.dest}
+
+        <a href={urlBase+"toursByDest/"+this.props.data.destination.clave+".html?"+dataUrl} className="red-text">
+        	{"Destination : "+this.props.data.destination.name}
         </a>
         </div>
-        <div className="col s12 m4 l4">
-        	<div className="right-align col s10">
+        <div className="col s12 m4 l4 precioDetalle">
+        	<div className="right-align col s10 from">
         		<small>From</small>
         	</div>
-        	<div className="right-align col s10">
-        		$ {this.props.data.currency} {this.props.data.precio}
+        	<div className="right-align col s10 price">
+        		<span>$ {this.props.data.price.currency}</span><span className="price"> {this.props.data.price.average}</span>
         	</div>
         	<div className="col s12 m8 offset-m2 l6 offset-l3">
-        		<a href={urlBook} className="col s12 btn red">
+        		<a href={urlBase+"tours/"+this.props.data.tour.clave+".html?"+dataUrl} className="col s12 btn red">
         			BOOK
         		</a>
         	</div>          	
@@ -40,20 +38,38 @@ var Tour=React.createClass({
 
 var ListTours=React.createClass({
 	render:function(){
-		var tours=this.props.data.map(function(tour){
-			return(
-				<Tour data={tour}/>	
-				);
-		});
-		return(
-            <div className="commentList">
-              {tours}  
-            </div>
+
+		var tours = this.props.data.map(function (tour) {
+			return (
+				<Tour data={tour}  />
 			);
+		});
+		if(this.props.data.length==0){
+			console.log(tours);
+			return(
+				<div className="commentList list box text-shadow">
+					<Nodatos />
+				</div>
+			);
+		}else{
+			return(
+				<div className="commentList list box text-shadow">
+					{tours}
+				</div>
+			);
+		}
+	}
+});
+
+var Nodatos=React.createClass({
+	render:function(){
+		return(
+			<p>No Data Found</p>
+		);
 	}
 });
 
 React.render(
 		<ListTours data={data}/>,
-		document.getElementById('elemento')
+		document.getElementById('listaTours')
 	);

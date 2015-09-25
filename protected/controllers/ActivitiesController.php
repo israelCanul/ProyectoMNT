@@ -57,28 +57,49 @@ class ActivitiesController extends Controller
 	}
 
 	public function actionFindByDest(){
+		$_REQUEST['tour_destination']=str_replace("_"," ",$_REQUEST['dest']);
 
 		$fecha=explode("/", $_REQUEST['tour-Checkin']);
 		$fecha=$fecha[2]."-".$fecha[0]."-".$fecha[1];
 
 		$tours= file_get_contents("http://apilomas.dev/RestTours/ListByZona/".$_REQUEST['dest'].".html?date=".$fecha."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda']);
-		print_r($tours);
+		$dataUrl="tour-Checkin=".$_REQUEST['tour-Checkin']."&tour_adults=".$_REQUEST['tour_adults']."&tour_child=".$_REQUEST['tour_child']."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda'];
+
+		Yii::app()->GenericFunctions->scriptsTours();
+		$this->render('listTours',array("tours"=>$tours,'dataUrl'=>$dataUrl,"tour_fecha"=>$_REQUEST['tour-Checkin']));
 	}
 
 	public function actionFindByCat(){
+		$_REQUEST['tour_destination']=str_replace("_"," ",$_REQUEST['cat']);
 
 		$fecha=explode("/", $_REQUEST['tour-Checkin']);
 		$fecha=$fecha[2]."-".$fecha[0]."-".$fecha[1];
+
 		$tours= file_get_contents("http://apilomas.dev/RestTours/ListByCat/".$_REQUEST['cat'].".html?date=".$fecha."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda']);
-		print_r($tours);
+		$dataUrl="tour-Checkin=".$_REQUEST['tour-Checkin']."&tour_adults=".$_REQUEST['tour_adults']."&tour_child=".$_REQUEST['tour_child']."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda'];
+
+		Yii::app()->GenericFunctions->scriptsTours();
+		$this->render('listTours',array("tours"=>$tours,'dataUrl'=>$dataUrl,"tour_fecha"=>$_REQUEST['tour-Checkin']));
 
 	}
 	public function actionFindBySup(){
+		$_REQUEST['tour_destination']=str_replace("_"," ",$_REQUEST['sup']);
+		// fechas
+		$fechaTem=explode("/", $_REQUEST['tour-Checkin']);
+		$fechaTem=$fechaTem[2]."-".$fechaTem[0]."-".$fechaTem[1];
 
-		$fecha=explode("/", $_REQUEST['tour-Checkin']);
-		$fecha=$fecha[2]."-".$fecha[0]."-".$fecha[1];
-		$tours= file_get_contents("http://apilomas.dev/RestTours/ListBySup/".$_REQUEST['sup'].".html?date=".$fecha."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda']);
-		print_r($tours);
+		// url y data para los tours
+		$tours= file_get_contents("http://apilomas.dev/RestTours/ListBySup/".$_REQUEST['sup'].".html?date=".$fechaTem."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda']);
+		$dataUrl="tour-Checkin=".$_REQUEST['tour-Checkin']."&tour_adults=".$_REQUEST['tour_adults']."&tour_child=".$_REQUEST['tour_child']."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda'];
+
+		// se importan los css y js de react
+		Yii::app()->GenericFunctions->scriptsTours();
+
+		$this->render('listTours',array("tours"=>$tours,'dataUrl'=>$dataUrl,"tour_fecha"=>$_REQUEST['tour-Checkin']));
+	}
+
+	public function actionDetalleTour(){
+
 	}
 
 	public function actionBuscar(){
