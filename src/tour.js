@@ -8,13 +8,13 @@ var Tour=React.createClass({
         	<img alt={this.props.data.photo.alt} src={"//apstatic.lomastravel.com.mx/204/"+this.props.data.photo.file} className="responsive-img"/>
         </div>
         <div className="col s12 m5 l6">
-        <a href={urlBase+"tours/"+this.props.data.tour.clave+".html?"+dataUrl}><h5 className="tituloCard red-text left-align">{this.props.data.tour.name}</h5></a>
+        <a href={urlBase+"tours/"+this.props.data.tour.clave+".html?"+dataUrl+"&TourId="+this.props.data.tour.id+"&tour_destination="+encodeURIComponent(this.props.data.tour.name).replace(/%20/g,'+')}><h5 className="tituloCard red-text left-align">{this.props.data.tour.name}</h5></a>
 		<input type="hidden" name="idTour" value={this.props.data.tour.id} />
         <p>
         {this.props.data.description.short}
         </p>
 
-        <a href={urlBase+"toursByDest/"+this.props.data.destination.clave+".html?"+dataUrl} className="red-text">
+        <a href={urlBase+"toursByDest/"+this.props.data.destination.clave+".html?"+dataUrl+"&tour_destination="+encodeURIComponent(this.props.data.destination.name).replace(/%20/g,'+')+"&dest="+this.props.data.destination.id} className="red-text">
         	{"Destination : "+this.props.data.destination.name}
         </a>
         </div>
@@ -26,7 +26,7 @@ var Tour=React.createClass({
         		<span>$ {this.props.data.price.currency}</span><span className="price"> {this.props.data.price.average}</span>
         	</div>
         	<div className="col s12 m8 offset-m2 l6 offset-l3">
-        		<a href={urlBase+"tours/"+this.props.data.tour.clave+".html?"+dataUrl} className="col s12 btn red">
+        		<a href={urlBase+"tours/"+this.props.data.tour.clave+".html?"+dataUrl+"&TourId="+this.props.data.tour.id+"&tour_destination="+encodeURIComponent(this.props.data.tour.name).replace(/%20/g,'+')} className="col s12 btn red">
         			BOOK
         		</a>
         	</div>          	

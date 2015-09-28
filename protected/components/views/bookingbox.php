@@ -130,6 +130,7 @@
 								<input class="" type="hidden" name="dest" id="dest" value="<?=$_REQUEST["dest"]; ?>"/>
 								<input class="" type="hidden" name="TourId" id="TourId" value="<?=$_REQUEST["TourId"]; ?>"/>
 								<input class="" type="hidden" name="sup" id="sup" value="<?=$_REQUEST["sup"]; ?>"/>
+								<input class="" type="hidden" name="clave" id="clave" value="<?=$_REQUEST["clave"]; ?>"/>
 								<input class="" type="hidden" name="openTk" id="openTk" value="<?= (($openTk != 1) ? 0 : 1); ?>"/>
 								<input class="" type="hidden" name="seg" id="seg" value="<?=$_REQUEST["seg"]; ?>"/>
 							</div>
