@@ -241,5 +241,13 @@ class GenericFunctions extends CApplicationComponent{
 		$cs->registerScriptFile(Yii::app()->params["baseUrl"].'/js/plugins/jPList/jplist.pagination-bundle.min.js?a='. Yii::app()->params['assets'],CClientScript::POS_END);
 		$cs->registerScriptFile(Yii::app()->params["baseUrl"].'/js/plugins/jPList/jplist.jquery-ui-bundle.min.js?a='. Yii::app()->params['assets'],CClientScript::POS_END);
 	}
+
+	public function scriptsTour(){
+		$cs= Yii::app()->getclientScript();
+		$cs->registerCssFile(Yii::app()->params["baseUrl"].'/css/page/activities/tours.css?a='. Yii::app()->params['assets'],'screen, projection');
+		$cs->registerScriptFile(Yii::app()->params["baseUrl"].'/build/react.js?a='. Yii::app()->params['assets'],CClientScript::POS_END);
+		$cs->registerScriptFile(Yii::app()->params["baseUrl"].'/build/JSXTransformar.js?a='. Yii::app()->params['assets'],CClientScript::POS_END);
+		$cs->registerScriptFile(Yii::app()->params["baseUrl"].'/build/tourDetalle.js?a='. Yii::app()->params['assets'],CClientScript::POS_END);
+	}
 }
 ?>
