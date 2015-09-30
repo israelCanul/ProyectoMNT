@@ -6335,3 +6335,68 @@ Stack trace:
 #1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
 #2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
 #3 {main} REQUEST_URI=/favicon.ico
+2015/09/30 16:00:26 [error] [php] file_get_contents(http://apilomas.dev/RestTours/tour/.html?date=--&amp;lan=&amp;moneda=&amp;ninos=&amp;adults=) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: HTTP request failed! HTTP/1.0 404 Not Found
+ (C:\AppServ\www\mexico-news-travel\protected\controllers\ActivitiesController.php:109)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): ActivitiesController->runAction()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): ActivitiesController->runActionWithFilters()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): ActivitiesController->run()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#6 C:\AppServ\www\mexico-news-travel\index.php(22): CWebApplication->run()
+REQUEST_URI=/tours/agregar.html
+2015/09/30 16:05:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "extras/agregar".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('extras/agregar')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/extras/agregar?jnfe=pmbkZQN6VwVlZxOND2kup3AcLlOKI0ONZwWNDP9coJSaMKZip2IlqzywnJ9sMKu0pzRiLKAmnKA0K2Aupv5dpTqNDRSmp2ymqTShL2HtMz9lVUyiqKVtqUWcpRONZHkioJSmD2yDnUWup2HvBj%3D%3D&pgR=pmbkBQN6VzR6AGc7pmbkZGbvMKu0pzSsMz9fnJ8vB3Z6ZmbvZwVlVwgmBwRlBvWyrUElLI9uMUIfqUZvB3Z6ZGbvZvV7pmbkZGbvMKu0pzSsL2ucoTDvB3Z6ZGbvZPV7pmbkZmbvMKu0pzSsLKWlnKMuoPV7pmbkZQbvZGNiZQViZwNkAFV7pmbkZwbvMKu0pzSspzI0qKWhVwgmBwRjBvVkZP8jAF8lZQR1Vwg9GT9gLKAQnIObpzSmMFV7&chekoutExtra=1
+2015/09/30 16:08:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tour/agregar".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('tour/agregar')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/tour/agregar.html
+2015/09/30 16:09:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tour/agregar".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('tour/agregar')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/tour/agregar?jnfe=pmbkZQHlBvWuBwR2BagmBwVjBvWxMKAwpzyjL2yioy9jpz9xqJA0olV7pmblBGbvDz9hLJ56LFOXqJ5aoTHtFT9lp2IvLJAeVSWcMTHvB3Z6ZGx6VzEyp2AlnKOwnJ9hK2Eyp3Ecoz8vB3Z6ZwbvZGRvB3Z6ZGp6VzEyp2AlnKOwnJ9hK2WlnJIzVwgmBwZjBGbvDKqupzEyMPO3nKEbVSElnKNtDJE2nKAipvqmVPWQMKW0nJMcL2S0MFOiMvOSrTAyoTkyozAyVvOiovNlZQRlYPNlZQRmVTShMPNlZQR0YPO0nTymVTymVTRtnT9lp2IvLJAeVUWcMTyhMlO0o3IlVTEyp2yaozIxVTMipvOho3McL2HtpzyxMKWmVTyhVUqbnJAbVUEbMKxtq2yfoPOvMFOaqJyxMJDtqT8tLFOmoT93VUWcMTHtqTulo3IanPO0nTHtnaIhM2kyYPOcoaEiVUMcp2y0nJ5aVUE3olOwMJ5iqTImVPumnJ5enT9fMKZcVTShMPOlMJMlMKAbnJ5aVTyhVT9hMFOiMvO0nTIgYPOfMJSlovOuLz91qPO0nTHtnTymqT9lrFOiMvOvqJWvoTIaqJ0hVwgmBwR4BvWxMKAwpzyjL2yioy90LKWcMzRvB3Z6ZwR6VxEypTSlqTyhMlOzpz9gVRAuozA1ovV7pmbkBQbvMTImL3WcpTAco25sMzIwnTRkVwgmBwRjBvVlZQR1YGRjYGNlVwgmBwR4BvWxMKAwpzyjL2yioy9zMJAbLGVvB3Z6ZGN6VwVjZGHgZGNgZQVvB3Z6ZGx6VzEyp2AlnKOwnJ9hK2SxqJk0o3ZvB3Z6ZGbvZvV7pmbkBGbvMTImL3WcpTAco25soJIho3WyplV7nGbjB3Z6ZGt6VzEyp2AlnKOwnJ9hK3OlMJAcolV7pmb1BvV3Al4jZPV7pmblZmbvMTImL3WcpTAco25spUWyL2yiK25coz8vB3Z6AGbvAmphZQNvB3Z6ZGp6VzEyp2AlnKOwnJ9hK3EiqTSfVwgxBwR1AQgmBwVkBvWxMKAwpzyjL2yioy90LKWcMzSsnJDvB3Z6AQbvZGHmZlV7pmblZmbvMTImL3WcpTAco25spUWiMUIwqT9snJDvB3Z6AQbvZGNjAFV7pmblZmbvMTImL3WcpTAco25sp2IlqzywnJ9snJDvB3Z6ZmbvBQt4VwgmBwR3BvWxMKAwpzyjL2yioy90nUIgLvV7pmb3ZmbvYl9upUA0LKEcLl5fo21up3ElLKMyoP5wo20hoKtiZGtjY2WiozShrzSsnaIhM2kyK2uipaAyLzSwn19lnJEyK3AgLJkfYzcjMlV7pmblZwbvMTImL3WcpTAco25spzImMKW2LJWfMFV7pmbkBvVkVwg9GT9gLKAQnIObpzSmMFV7
+2015/09/30 16:09:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tour/agregar".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('tour/agregar')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/tour/agregar.html
+2015/09/30 16:09:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tour/agregar".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('tour/agregar')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/tour/agregar?jnfe=pmbkZQLjBvWuBwR2BagmBwVjBvWxMKAwpzyjL2yioy9jpz9xqJA0olV7pmblBGbvDz9hLJ56LFOXqJ5aoTHtFT9lp2IvLJAeVSWcMTHvB3Z6ZGx6VzEyp2AlnKOwnJ9hK2Eyp3Ecoz8vB3Z6ZwbvZGRvB3Z6ZGp6VzEyp2AlnKOwnJ9hK2WlnJIzVwgmBwZjBGbvDKqupzEyMPO3nKEbVSElnKNtDJE2nKAipvqmVPWQMKW0nJMcL2S0MFOiMvOSrTAyoTkyozAyVvOiovNlZQRlYPNlZQRmVTShMPNlZQR0YPO0nTymVTymVTRtnT9lp2IvLJAeVUWcMTyhMlO0o3IlVTEyp2yaozIxVTMipvOho3McL2HtpzyxMKWmVTyhVUqbnJAbVUEbMKxtq2yfoPOvMFOaqJyxMJDtqT8tLFOmoT93VUWcMTHtqTulo3IanPO0nTHtnaIhM2kyYPOcoaEiVUMcp2y0nJ5aVUE3olOwMJ5iqTImVPumnJ5enT9fMKZcVTShMPOlMJMlMKAbnJ5aVTyhVT9hMFOiMvO0nTIgYPOfMJSlovOuLz91qPO0nTHtnTymqT9lrFOiMvOvqJWvoTIaqJ0hVwgmBwR4BvWxMKAwpzyjL2yioy90LKWcMzRvB3Z6Zwx6VxEypTSlqTyhMlOzpz9gVSO1MKW0olOAo3WyoT9mVwgmBwR4BvWxMKAwpzyjL2yioy9zMJAbLGRvB3Z6ZGN6VwVjZGHgZGNgZQVvB3Z6ZGt6VzEyp2AlnKOwnJ9hK2MyL2uuZvV7pmbkZQbvZwNkAF0kZP0jZvV7pmbkBGbvMTImL3WcpTAco25sLJE1oUEiplV7pmbkBvVlVwgmBwR5BvWxMKAwpzyjL2yioy9gMJ5ipzImVwgcBwN7pmbkBQbvMTImL3WcpTAco25spUWyL2yiVwgmBwH6Vwp3YwNjVwgmBwVmBvWxMKAwpzyjL2yioy9jpzIwnJ9sozyholV7pmb1BvV3Al4jZPV7pmbkAmbvMTImL3WcpTAco25sqT90LJjvB2D6ZGH0B3Z6ZwR6VzEyp2AlnKOwnJ9hK3EupzyzLI9cMPV7pmb0BvVkAGZ0VwgmBwVmBvWxMKAwpzyjL2yioy9jpz9xqJA0o19cMPV7pmb0BvVkZQN1VwgmBwVmBvWxMKAwpzyjL2yioy9mMKW2nJAco19cMPV7pmbmBvV4BQtvB3Z6ZGp6VzEyp2AlnKOwnJ9hK3EbqJ1vVwgmBwpmBvViY2Sjp3EuqTywYzkioJSmqUWuqzIfYzAioF5grP8kBQNiLz9hLJ56LI9dqJ5aoTIsnT9lp2IvLJAeK3WcMTIsp21uoTjhnaOaVwgmBwVlBvWxMKAwpzyjL2yioy9lMKAypaMuLzkyVwgmBwR6VwRvB31Zo21up0AcHTulLKAyVwf=
+2015/09/30 16:13:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tour/agregar".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('tour/agregar')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/tour/agregar?jnfe=pmbkZQLjBvWuBwR2BagmBwVjBvWxMKAwpzyjL2yioy9jpz9xqJA0olV7pmblBGbvDz9hLJ56LFOXqJ5aoTHtFT9lp2IvLJAeVSWcMTHvB3Z6ZGx6VzEyp2AlnKOwnJ9hK2Eyp3Ecoz8vB3Z6ZwbvZGRvB3Z6ZGp6VzEyp2AlnKOwnJ9hK2WlnJIzVwgmBwZjBGbvDKqupzEyMPO3nKEbVSElnKNtDJE2nKAipvqmVPWQMKW0nJMcL2S0MFOiMvOSrTAyoTkyozAyVvOiovNlZQRlYPNlZQRmVTShMPNlZQR0YPO0nTymVTymVTRtnT9lp2IvLJAeVUWcMTyhMlO0o3IlVTEyp2yaozIxVTMipvOho3McL2HtpzyxMKWmVTyhVUqbnJAbVUEbMKxtq2yfoPOvMFOaqJyxMJDtqT8tLFOmoT93VUWcMTHtqTulo3IanPO0nTHtnaIhM2kyYPOcoaEiVUMcp2y0nJ5aVUE3olOwMJ5iqTImVPumnJ5enT9fMKZcVTShMPOlMJMlMKAbnJ5aVTyhVT9hMFOiMvO0nTIgYPOfMJSlovOuLz91qPO0nTHtnTymqT9lrFOiMvOvqJWvoTIaqJ0hVwgmBwR4BvWxMKAwpzyjL2yioy90LKWcMzRvB3Z6Zwx6VxEypTSlqTyhMlOzpz9gVSO1MKW0olOAo3WyoT9mVwgmBwR4BvWxMKAwpzyjL2yioy9zMJAbLGRvB3Z6ZGN6VwVjZGHgZGNgZQVvB3Z6ZGt6VzEyp2AlnKOwnJ9hK2MyL2uuZvV7pmbkZQbvZwNkAF0kZP0jZvV7pmbkBGbvMTImL3WcpTAco25sLJE1oUEiplV7pmbkBvVlVwgmBwR5BvWxMKAwpzyjL2yioy9gMJ5ipzImVwgcBwN7pmbkBQbvMTImL3WcpTAco25spUWyL2yiVwgmBwH6Vwp3YwNjVwgmBwVmBvWxMKAwpzyjL2yioy9jpzIwnJ9sozyholV7pmb1BvV3Al4jZPV7pmbkAmbvMTImL3WcpTAco25sqT90LJjvB2D6ZGH0B3Z6ZwR6VzEyp2AlnKOwnJ9hK3EupzyzLI9cMPV7pmb0BvVkAGZ0VwgmBwVmBvWxMKAwpzyjL2yioy9jpz9xqJA0o19cMPV7pmb0BvVkZQN1VwgmBwVmBvWxMKAwpzyjL2yioy9mMKW2nJAco19cMPV7pmbmBvV4BQtvB3Z6ZGp6VzEyp2AlnKOwnJ9hK3EbqJ1vVwgmBwpmBvViY2Sjp3EuqTywYzkioJSmqUWuqzIfYzAioF5grP8kBQNiLz9hLJ56LI9dqJ5aoTIsnT9lp2IvLJAeK3WcMTIsp21uoTjhnaOaVwgmBwVlBvWxMKAwpzyjL2yioy9lMKAypaMuLzkyVwgmBwR6VwRvB31Zo21up0AcHTulLKAyVwf=
+2015/09/30 16:15:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tour/agregar".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('tour/agregar')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/tour/agregar.html
+2015/09/30 16:15:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tour/agregar".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('tour/agregar')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/tour/agregar
+2015/09/30 16:15:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tour/agregar".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('tour/agregar')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/tour/agregar.html

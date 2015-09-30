@@ -108,7 +108,9 @@ class ActivitiesController extends Controller
 		// url y data para los tours
 		$tours= file_get_contents("http://apilomas.dev/RestTours/tour/".$_REQUEST['TourId'].".html?date=".$fechaTem."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda']."&ninos=".$_REQUEST['tour_child']."&adults=".$_REQUEST['tour_adults']);
 		$dataUrl="tour-Checkin=".$_REQUEST['tour-Checkin']."&tour_adults=".$_REQUEST['tour_adults']."&tour_child=".$_REQUEST['tour_child']."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda'];
-
+		/*print_r("<pre>");
+		print_r($tours);
+		exit();*/
 		// se importan los css y js de react
 		Yii::app()->GenericFunctions->scriptsTour();
 
@@ -120,8 +122,7 @@ class ActivitiesController extends Controller
 		$_act = new Activities();
 
 		if(intval($_REQUEST["TourId"]) == 0 ){
-			print_r("tour id");
-			exit();
+
 			// Es proveedor
 			if(intval($_REQUEST["ProveedorId"] > 0)) {
 				$code = $_act->getSupplierCodeById($_REQUEST["ProveedorId"]);

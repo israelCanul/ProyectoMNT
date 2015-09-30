@@ -80,3 +80,26 @@ header{
     font-size: 15px;
     font-weight: bold;
 }
+.detalles h6{
+    color:#ee6e73 ;
+    font-weight: bold;
+
+}
+.rate{
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,0.2);
+    box-shadow: -1px 1px rgba(0,0,0,0.5);
+    margin-top: 5px;
+    background-color: white;
+}
+.wrap-rate{
+    padding: 10px;
+    background-color: #f1f1f1;
+}
+.row .col .wrap-rate{
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+}

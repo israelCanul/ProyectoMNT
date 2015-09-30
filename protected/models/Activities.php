@@ -60,6 +60,18 @@ class Activities{
     }
   }
 
+    public function isSupplier($code){
+        $supplier = Yii::app()->db->createCommand()
+            ->select('proveedores')
+            ->from('tour_proveedores')
+            ->where('proveedores_clave = :code',  array(':code' => $code))
+            ->queryScalar();
+        if(empty($supplier)){
+            return false;
+        }else{
+            return interes;
+        }
+    }
 
     public function getDestinationCode(){
         $destinos = Yii::app()->db->createCommand()

@@ -203,13 +203,13 @@
 											<td>Sunday</td>										
 										</tr>
 										<tr>
-											<td><img src="<?= (($_t["opera_lunes"] == 1) ? "https://cdn1.iconfinder.com/data/icons/oxygen/32x32/actions/ok.png" : "https://cdn1.iconfinder.com/data/icons/oxygen/22x22/actions/mail-delete.png"); ?>" alt="" /></td>
-											<td><img src="<?= (($_t["opera_martes"] == 1) ? "https://cdn1.iconfinder.com/data/icons/oxygen/32x32/actions/ok.png" : "https://cdn1.iconfinder.com/data/icons/oxygen/22x22/actions/mail-delete.png"); ?>" alt="" /></td>
-											<td><img src="<?= (($_t["opera_miercoles"] == 1) ? "https://cdn1.iconfinder.com/data/icons/oxygen/32x32/actions/ok.png" : "https://cdn1.iconfinder.com/data/icons/oxygen/22x22/actions/mail-delete.png"); ?>" alt="" /></td>
-											<td><img src="<?= (($_t["opera_jueves"] == 1) ? "https://cdn1.iconfinder.com/data/icons/oxygen/32x32/actions/ok.png" : "https://cdn1.iconfinder.com/data/icons/oxygen/22x22/actions/mail-delete.png"); ?>" alt="" /></td>
-											<td><img src="<?= (($_t["opera_viernes"] == 1) ? "https://cdn1.iconfinder.com/data/icons/oxygen/32x32/actions/ok.png" : "https://cdn1.iconfinder.com/data/icons/oxygen/22x22/actions/mail-delete.png"); ?>" alt="" /></td>
-											<td><img src="<?= (($_t["opera_sabado"] == 1) ? "https://cdn1.iconfinder.com/data/icons/oxygen/32x32/actions/ok.png" : "https://cdn1.iconfinder.com/data/icons/oxygen/22x22/actions/mail-delete.png"); ?>" alt="" /></td>
-											<td><img src="<?= (($_t["opera_domingo"] == 1) ? "https://cdn1.iconfinder.com/data/icons/oxygen/32x32/actions/ok.png" : "https://cdn1.iconfinder.com/data/icons/oxygen/22x22/actions/mail-delete.png"); ?>" alt="" /></td>
+											<td><img src="<?= (($_t["opera_lunes"] == 1) ? "https://cdn1.iconfinder.com/data/icons/oxygen/32x32/actions/1.png" : "https://cdn1.iconfinder.com/data/icons/oxygen/22x22/actions/mail-0.png"); ?>" alt="" /></td>
+											<td><img src="<?= (($_t["opera_martes"] == 1) ? "https://cdn1.iconfinder.com/data/icons/oxygen/32x32/actions/1.png" : "https://cdn1.iconfinder.com/data/icons/oxygen/22x22/actions/mail-0.png"); ?>" alt="" /></td>
+											<td><img src="<?= (($_t["opera_miercoles"] == 1) ? "https://cdn1.iconfinder.com/data/icons/oxygen/32x32/actions/1.png" : "https://cdn1.iconfinder.com/data/icons/oxygen/22x22/actions/mail-0.png"); ?>" alt="" /></td>
+											<td><img src="<?= (($_t["opera_jueves"] == 1) ? "https://cdn1.iconfinder.com/data/icons/oxygen/32x32/actions/1.png" : "https://cdn1.iconfinder.com/data/icons/oxygen/22x22/actions/mail-0.png"); ?>" alt="" /></td>
+											<td><img src="<?= (($_t["opera_viernes"] == 1) ? "https://cdn1.iconfinder.com/data/icons/oxygen/32x32/actions/1.png" : "https://cdn1.iconfinder.com/data/icons/oxygen/22x22/actions/mail-0.png"); ?>" alt="" /></td>
+											<td><img src="<?= (($_t["opera_sabado"] == 1) ? "https://cdn1.iconfinder.com/data/icons/oxygen/32x32/actions/1.png" : "https://cdn1.iconfinder.com/data/icons/oxygen/22x22/actions/mail-0.png"); ?>" alt="" /></td>
+											<td><img src="<?= (($_t["opera_domingo"] == 1) ? "https://cdn1.iconfinder.com/data/icons/oxygen/32x32/actions/1.png" : "https://cdn1.iconfinder.com/data/icons/oxygen/22x22/actions/mail-0.png"); ?>" alt="" /></td>
 										</tr>
 									</tbody>
 								</table>							

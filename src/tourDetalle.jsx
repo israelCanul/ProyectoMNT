@@ -1,3 +1,8 @@
+function nl2br (str, is_xhtml) {
+    var breakTag = (is_xhtml || typeof is_xhtml === 'undefined') ? '<br />' : '<br>';
+    return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + breakTag + '$2');
+}
+
 var Tour=React.createClass({
     getInitialState:function(){
         return{
@@ -18,21 +23,88 @@ var Tour=React.createClass({
                 <Titulo fecha={this.props.fecha} params={this.state.params} titulo={this.state.titulo} destination={this.state.destination} supplier={this.state.supplier}/>
                 <Description descripcion={this.state.description}/>
                 <Gallery gallery={this.state.gallery}/>
-                <Bookin params={this.state.params} />
                 <Rates rates={this.state.rates} params={this.state.params}/>
-                <Detalle descripcion={this.state.description} />
+                <Detalle descripcion={this.state.description} titulo={this.state.titulo} disponibilidad={this.state.availability}/>
             </div>
         );
     }
 });
 var Detalle=React.createClass({
     render:function(){
+        var departure=nl2br(this.props.descripcion.departure);inclutions
+        var inclutions=nl2br(this.props.descripcion.inclutions);
+        var noinclutions=nl2br(this.props.descripcion.exclusiones);
+        var recommendations=nl2br(this.props.descripcion.recomendations);
+        var regulations=nl2br(this.props.descripcion.regulations);
+        var policies=nl2br(this.props.descripcion.policies);
+        console.log(departure);
         return(
-            <div classname='col s12'>
+            <div className='col s12 detalles descriptionTour'>
                 <div className="col s12">
-                    <label>Departure</label>
+                    <h6>Duration:</h6>
                     <p>
-                        {this.props.descripcion}
+                        {this.props.titulo.duracion}
+                    </p>
+                </div>
+                <div className='col s12'>
+                    <h6>Available on the following days</h6>
+                    <div className='dayAvailable col s3 m2 l1'>
+                        <h6>Monday</h6>
+                        <img src={"/images/icon/"+this.props.disponibilidad.lunes} className='responsive-img'/>
+                    </div>
+                    <div className='dayAvailable col s3 m2 l1'>
+                        <h6>Tuesday</h6>
+                        <img src={"/images/icon/"+this.props.disponibilidad.martes} className='responsive-img'/>
+                    </div>
+                    <div className='dayAvailable col s3 m2 l1'>
+                        <h6>Wednesday</h6>
+                        <img src={"/images/icon/"+this.props.disponibilidad.miercoles} className='responsive-img'/>
+                    </div>
+                    <div className='dayAvailable col s3 m2 l1'>
+                        <h6>Thursday</h6>
+                        <img src={"/images/icon/"+this.props.disponibilidad.jueves} className='responsive-img'/>
+                    </div>
+                    <div className='dayAvailable col s3 m2 l1'>
+                        <h6>Friday</h6>
+                        <img src={"/images/icon/"+this.props.disponibilidad.viernes} className='responsive-img'/>
+                    </div>
+                    <div className='dayAvailable col s3 m2 l1'>
+                        <h6>Saturday</h6>
+                        <img src={"/images/icon/"+this.props.disponibilidad.sabado} className='responsive-img'/>
+                    </div>
+                    <div className='dayAvailable col s3 m2 l1'>
+                        <h6>Sunday</h6>
+                        <img src={"/images/icon/"+this.props.disponibilidad.domingo} className='responsive-img'/>
+                    </div>
+                </div>
+                <div className="col s12">
+                    <h6>Departure</h6>
+                    <p dangerouslySetInnerHTML={{__html: departure}}>
+                    </p>
+                </div>
+                <div className="col s12">
+                    <h6>Included</h6>
+                    <p dangerouslySetInnerHTML={{__html: inclutions}}>
+                    </p>
+                </div>
+                <div className="col s12">
+                    <h6>Not Included</h6>
+                    <p dangerouslySetInnerHTML={{__html: noinclutions}}>
+                    </p>
+                </div>
+                <div className="col s12">
+                    <h6>Recommendations</h6>
+                    <p dangerouslySetInnerHTML={{__html: recommendations}}>
+                    </p>
+                </div>
+                <div className="col s12">
+                    <h6>Regulations</h6>
+                    <p dangerouslySetInnerHTML={{__html: regulations}}>
+                    </p>
+                </div>
+                <div className="col s12">
+                    <h6>Cancellation Policies</h6>
+                    <p dangerouslySetInnerHTML={{__html: policies}}>
                     </p>
                 </div>
             </div>
@@ -48,33 +120,67 @@ var Rates=React.createClass({
     render:function(){
     var params=this.state.params;
     var rates= function (rate) {
-
-        return(
-            <div className='col s12'>
-                <h6>{rate.tarifaNombre}</h6>
-                <div className='col 12 m8 rateLeft'>
-                    <div className='col 12'>
-                        {"Children: "+params.currency+" "+rate.tarifaNino}
-                    </div>
+        var tarifaAdulto= function (rate) {
+            if(params.adults>0){
+                return(
                     <div className='col 12'>
                         {"Adults: "+params.currency+" "+rate.tarifaAdult}
                     </div>
+                );
+            }
+        }
+        var tarifaNino= function (rate) {
+            if(params.ninos>0){
+                return(
+                    <div className='col 12'>
+                        {"Children: "+params.currency+" "+rate.tarifaNino}
+                    </div>
+                );
+            }
+        }
+        var botonBook= function(rate){
+            if(rate.tarifaDisponible==1){
+                return(
+                    <input  name='jnfe' value={rate.jnfe} type='hidden' />
+                );
+            }
+        }
+        var precio=function(rate){
+            if(rate.tarifaDisponible==1){
+                return(
+                    <center>{params.currency+" $"+rate.tarifaTotal+" "}</center>
+                );
+            }else{
+                return(
+                    <center className='black-text' dangerouslySetInnerHTML={{__html: rate.tarifaTotal}}></center>
+                );
+            }
+        }
+        return(
+            <div className='col s12 rate'>
+                <form method="Post" action='/tour/agregar.html'>
+                <h6 className='red-text'>{rate.tarifaNombre}</h6>
+                <div className='col s12 m6 l8 rateLeft'>
+                    {tarifaNino(rate)}
+                    {tarifaAdulto(rate)}
                 </div>
-                <div className='col 12 m4 '>
+                <div className='col s12 m6 l4'>
                     <div className='row'>
                         <div className='col s12 m6 rateRight'>
-                        {params.currency+" $"+rate.tarifaTotal+" "}
+                            {precio(rate)}
                         </div>
                         <div className='col s12 m6 rateRight'>
-                            <a className='btn red' href={"/tour/agregar?jnfe="+rate.jnfe} >Book</a>
+                            <input type='submit' value='Book' className='btn btn-large col s12 red'/>
+                            {botonBook(rate)}
                         </div>
                     </div>
                 </div>
+                </form>
             </div>
         );
     }
         return(
-            <div className='descriptionTour col s12'>
+            <div className='descriptionTour col s12 wrap-rate'>
                 {this.props.rates.map(rates)}
             </div>
         );
@@ -125,7 +231,7 @@ var Description=React.createClass({
         return(
            <div className='col s12'>
                <p className='descriptionTextTour'>
-                   {this.props.descripcion}
+                   {this.props.descripcion.description}
                </p>
            </div>
         );
