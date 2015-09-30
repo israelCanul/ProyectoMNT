@@ -48,31 +48,31 @@ var Detalle=React.createClass({
                 </div>
                 <div className='col s12'>
                     <h6>Available on the following days</h6>
-                    <div className='dayAvailable col s3 m2 l1'>
+                    <div className='dayAvailable col s4 m3 l1'>
                         <h6>Monday</h6>
                         <img src={"/images/icon/"+this.props.disponibilidad.lunes} className='responsive-img'/>
                     </div>
-                    <div className='dayAvailable col s3 m2 l1'>
+                    <div className='dayAvailable col s4 m3 l1'>
                         <h6>Tuesday</h6>
                         <img src={"/images/icon/"+this.props.disponibilidad.martes} className='responsive-img'/>
                     </div>
-                    <div className='dayAvailable col s3 m2 l1'>
+                    <div className='dayAvailable col s4 m3 l1'>
                         <h6>Wednesday</h6>
                         <img src={"/images/icon/"+this.props.disponibilidad.miercoles} className='responsive-img'/>
                     </div>
-                    <div className='dayAvailable col s3 m2 l1'>
+                    <div className='dayAvailable col s4 m3 l1'>
                         <h6>Thursday</h6>
                         <img src={"/images/icon/"+this.props.disponibilidad.jueves} className='responsive-img'/>
                     </div>
-                    <div className='dayAvailable col s3 m2 l1'>
+                    <div className='dayAvailable col s4 m3 l1'>
                         <h6>Friday</h6>
                         <img src={"/images/icon/"+this.props.disponibilidad.viernes} className='responsive-img'/>
                     </div>
-                    <div className='dayAvailable col s3 m2 l1'>
+                    <div className='dayAvailable col s4 m3 l1'>
                         <h6>Saturday</h6>
                         <img src={"/images/icon/"+this.props.disponibilidad.sabado} className='responsive-img'/>
                     </div>
-                    <div className='dayAvailable col s3 m2 l1'>
+                    <div className='dayAvailable col s4 m3 l1'>
                         <h6>Sunday</h6>
                         <img src={"/images/icon/"+this.props.disponibilidad.domingo} className='responsive-img'/>
                     </div>
@@ -171,6 +171,7 @@ var Rates=React.createClass({
                         </div>
                         <div className='col s12 m6 rateRight'>
                             <input type='submit' value='Book' className='btn btn-large col s12 red'/>
+                            <input type='hidden' value='1' name='fromDetails' className='btn btn-large col s12 red'/>
                             {botonBook(rate)}
                         </div>
                     </div>

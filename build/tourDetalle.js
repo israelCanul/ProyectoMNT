@@ -71,7 +71,7 @@ var Detalle = React.createClass({
                 ),
                 React.createElement(
                     'div',
-                    { className: 'dayAvailable col s3 m2 l1' },
+                    { className: 'dayAvailable col s4 m3 l1' },
                     React.createElement(
                         'h6',
                         null,
@@ -81,7 +81,7 @@ var Detalle = React.createClass({
                 ),
                 React.createElement(
                     'div',
-                    { className: 'dayAvailable col s3 m2 l1' },
+                    { className: 'dayAvailable col s4 m3 l1' },
                     React.createElement(
                         'h6',
                         null,
@@ -91,7 +91,7 @@ var Detalle = React.createClass({
                 ),
                 React.createElement(
                     'div',
-                    { className: 'dayAvailable col s3 m2 l1' },
+                    { className: 'dayAvailable col s4 m3 l1' },
                     React.createElement(
                         'h6',
                         null,
@@ -101,7 +101,7 @@ var Detalle = React.createClass({
                 ),
                 React.createElement(
                     'div',
-                    { className: 'dayAvailable col s3 m2 l1' },
+                    { className: 'dayAvailable col s4 m3 l1' },
                     React.createElement(
                         'h6',
                         null,
@@ -111,7 +111,7 @@ var Detalle = React.createClass({
                 ),
                 React.createElement(
                     'div',
-                    { className: 'dayAvailable col s3 m2 l1' },
+                    { className: 'dayAvailable col s4 m3 l1' },
                     React.createElement(
                         'h6',
                         null,
@@ -121,7 +121,7 @@ var Detalle = React.createClass({
                 ),
                 React.createElement(
                     'div',
-                    { className: 'dayAvailable col s3 m2 l1' },
+                    { className: 'dayAvailable col s4 m3 l1' },
                     React.createElement(
                         'h6',
                         null,
@@ -131,7 +131,7 @@ var Detalle = React.createClass({
                 ),
                 React.createElement(
                     'div',
-                    { className: 'dayAvailable col s3 m2 l1' },
+                    { className: 'dayAvailable col s4 m3 l1' },
                     React.createElement(
                         'h6',
                         null,
@@ -280,6 +280,7 @@ var Rates = React.createClass({
                                 'div',
                                 { className: 'col s12 m6 rateRight' },
                                 React.createElement('input', { type: 'submit', value: 'Book', className: 'btn btn-large col s12 red' }),
+                                React.createElement('input', { type: 'hidden', value: '1', name: 'fromDetails', className: 'btn btn-large col s12 red' }),
                                 botonBook(rate)
                             )
                         )

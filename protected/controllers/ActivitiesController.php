@@ -580,5 +580,136 @@ class ActivitiesController extends Controller
 		return round(abs($a_new-$b_new)/86400);
 	}
 
+
+	public function actionAgregar(){
+		if(isset($_REQUEST["jnfe"])){
+			$_sql = "Select venta_id from venta where venta_session_id Like '" . $_SESSION["config"]["token"] . "' and venta_estt = '1' and venta_fecha Like '" . date("Y-m-d") . "%'";
+			$_vValidator = Venta::model()->findAllBySql($_sql);
+
+			if( !($_vValidator[0]->venta_id == 0 || $_vValidator[0]->venta_id == "")){
+				$Venta = $_vValidator[0]->venta_id;
+			}else{
+				$_venta = new Venta;
+				$_SESSION["config"]["token"] = Yii::app()->WebServices->getSecureKey(150);
+				$_venta->venta_session_id 	= $_SESSION["config"]["token"];
+				$_venta->venta_moneda 		= $_SESSION["config"]["currency"];
+				$_venta->venta_site_id 		= ((Yii::app()->language == "es") ? 2 : 1);
+				$_venta->venta_user_id 		= 0;
+				$_venta->venta_estt 		= 1;
+				$_venta->venta_total 		= 0;
+				$_venta->venta_fecha 		= date("Y-m-d H:i:s");
+				$_venta->venta_ip 			= Yii::app()->GenericFunctions->getRealIpAddr();
+				$_venta->save();
+				$Venta = $_venta->venta_id;
+			}
+
+			$_Productos = VentaDescripcion::model()->findAll("descripcion_venta = :venta", array(
+				":venta" => $Venta
+			));
+			/* From the CheckOut */
+			if(!isset($_REQUEST['fromDetails'])) {
+				$data = explode("@@", Yii::app()->GenericFunctions->ShowVar($_REQUEST["jnfe"]));
+
+				foreach ($_Productos as $p) {
+					if ($p->descripcion_tipo_producto == 2) {
+						if($p->descripcion_producto_id == $data[1]){
+							$p->delete();
+						}
+					}
+				}
+
+				$promo_seg  = "";
+				if(isset($_REQUEST["promo_seg"])){
+					$promo_seg = $_REQUEST["promo_seg"];
+				}
+
+
+				$t = new VentaDescripcion;
+				$t->descripcion_producto 	= ($data[3]);
+				$t->descripcion_destino 	= $data[12];
+				$t->descripcion_brief 		= addslashes($data[5]);
+				$t->descripcion_tarifa 		= $data[4];
+				$t->descripcion_venta 		= $Venta;
+				$t->descripcion_fecha 		= date("Y-m-d H:i:s");
+				$t->descripcion_fecha1 		= $data[9];
+				$t->descripcion_fecha2 		= $data[9];
+				$t->descripcion_adultos 	= $data[10];
+				$t->descripcion_menores 	= $data[11];
+				$t->descripcion_infantes 	= 0;
+				$t->descripcion_cuartos 	= 1;
+				$t->descripcion_precio 		= $data[15];
+				$t->descripcion_total 		= (str_replace(",","",$data[7]) * 1);
+				$t->descripcion_tipo_producto = 2;
+				$t->descripcion_tarifa_id 	= $data[0];
+				$t->descripcion_producto_id = $data[1];
+				$t->descripcion_servicio_id = $data[2];
+				$t->descripcion_thumb 		= $data[13];
+				$t->descripcion_reservable 	= $data[8];
+				$t->descripcion_pagado 		= 0;
+				$t->descripcion_id_cupon 	= $data[14];	//para el open ticket
+				$t->descripcion_seg 		= substr($promo_seg,1);	//guarda valor de ofertas
+				$t->descripcion_seg_tipo 	= substr($promo_seg,0,1);	//guarda valor del tipo de ofertas
+				$t->descripcion_precio_nino = $data[16];
+				$t->save();
+
+
+			/* From the Tours details*/
+			}else{
+				$data = unserialize(Yii::app()->GenericFunctions->ShowVar($_REQUEST["jnfe"]));
+
+				foreach ($_Productos as $p) {
+					//print_r($p->descripcion_producto);
+					if ($p->descripcion_tipo_producto == 2) {
+						if($p->descripcion_producto_id == $data['descripcion_producto_id']){
+							$p->delete();
+						}
+					}
+				}
+
+
+				$promo_seg  = "";
+				if(isset($_REQUEST["promo_seg"])){
+					$promo_seg = $_REQUEST["promo_seg"];
+				}
+
+
+				$t = new VentaDescripcion;
+				$t->descripcion_producto 	= $data['descripcion_producto'];
+				$t->descripcion_destino 	= $data['descripcion_destino'];
+				$t->descripcion_brief 		= addslashes($data['descripcion_brief']);
+				$t->descripcion_tarifa 		= $data['descripcion_tarifa'];
+				$t->descripcion_venta 		= $Venta;
+				$t->descripcion_fecha 		= date("Y-m-d H:i:s");
+				$t->descripcion_fecha1 		= $data['descripcion_fecha1'];
+				$t->descripcion_fecha2 		= $data['descripcion_fecha2'];
+				$t->descripcion_adultos 	= $data['descripcion_adultos'];
+				$t->descripcion_menores 	= $data['descripcion_menores'];
+				$t->descripcion_infantes 	= 0;
+				$t->descripcion_cuartos 	= 1;
+				$t->descripcion_precio 		= $data['descripcion_precio'];
+				$t->descripcion_total 		= (str_replace(",","",$data['descripcion_total']) * 1);
+				$t->descripcion_tipo_producto = 2;
+				$t->descripcion_tarifa_id 	= $data['descripcion_tarifa_id'];
+				$t->descripcion_producto_id = $data['descripcion_producto_id'];
+				$t->descripcion_servicio_id = $data['descripcion_servicio_id'];
+				$t->descripcion_thumb 		= $data['descripcion_thumb'];
+				$t->descripcion_reservable 	= $data['descripcion_reservable'];
+				$t->descripcion_pagado 		= 0;
+				$t->descripcion_id_cupon 	= 0;	//para el open ticket
+				$t->descripcion_seg 		= substr($promo_seg,1);	//guarda valor de ofertas
+				$t->descripcion_seg_tipo 	= substr($promo_seg,0,1);	//guarda valor del tipo de ofertas
+				$t->descripcion_precio_nino = $data['descripcion_precio_nino'];
+				$t->save();
+			}
+
+
+			$this->redirect(array("checkout/index"));
+		}else{
+			$this->redirect(array("activities/index"));
+		}
+
+	}
+
+
 }
 ?>	
