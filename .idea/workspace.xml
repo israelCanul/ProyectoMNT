@@ -92,10 +92,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ActivitiesController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ActivitiesController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/controllers/ActivitiesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4622871">
+            <state vertical-scroll-proportion="-4.634146">
               <caret line="673" column="0" selection-start-line="673" selection-start-column="0" selection-end-line="673" selection-end-column="0" />
               <folding>
                 <marker date="1443654367986" expanded="true" signature="15030:15277" placeholder="Select * fro..tour_tarifa..." />
@@ -104,6 +104,16 @@
                 <marker date="1443654367986" expanded="true" signature="16303:16557" placeholder="Select * fro..tour_tarifa..." />
                 <marker date="1443654367986" expanded="true" signature="23615:23775" placeholder="Select venta..venta..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/protected/views/checkout/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.3474676">
+              <caret line="893" column="0" selection-start-line="893" selection-start-column="0" selection-end-line="893" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -164,7 +174,6 @@
         <option value="$PROJECT_DIR$/js/page/checkout/checkout.js" />
         <option value="$PROJECT_DIR$/css/materialize.css" />
         <option value="$PROJECT_DIR$/css/page/checkout/checkout.css" />
-        <option value="$PROJECT_DIR$/protected/views/checkout/index.php" />
         <option value="$PROJECT_DIR$/protected/views/site/news.php" />
         <option value="$PROJECT_DIR$/protected/views/ofertas/index.php" />
         <option value="$PROJECT_DIR$/protected/views/destinations/index.php" />
@@ -190,6 +199,7 @@
         <option value="$PROJECT_DIR$/protected/controllers/TrasladosController.php" />
         <option value="$PROJECT_DIR$/src/tourDetalle.jsx" />
         <option value="$PROJECT_DIR$/protected/controllers/ActivitiesController.php" />
+        <option value="$PROJECT_DIR$/protected/views/checkout/index.php" />
       </list>
     </option>
   </component>
@@ -293,6 +303,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mexico-news-travel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mexico-news-travel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="checkout" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -567,13 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/checkout/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.116763">
-          <caret line="651" column="34" selection-start-line="651" selection-start-column="34" selection-end-line="651" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/page/checkout/checkout.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3880435">
@@ -746,6 +771,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="248" column="17" selection-start-line="248" selection-start-column="17" selection-end-line="248" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -887,7 +913,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/controllers/ActivitiesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4622871">
+        <state vertical-scroll-proportion="-4.634146">
           <caret line="673" column="0" selection-start-line="673" selection-start-column="0" selection-end-line="673" selection-end-column="0" />
           <folding>
             <marker date="1443654367986" expanded="true" signature="15030:15277" placeholder="Select * fro..tour_tarifa..." />
@@ -896,6 +922,14 @@
             <marker date="1443654367986" expanded="true" signature="16303:16557" placeholder="Select * fro..tour_tarifa..." />
             <marker date="1443654367986" expanded="true" signature="23615:23775" placeholder="Select venta..venta..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/checkout/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.3474676">
+          <caret line="893" column="0" selection-start-line="893" selection-start-column="0" selection-end-line="893" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

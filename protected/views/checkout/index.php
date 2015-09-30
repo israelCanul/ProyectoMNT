@@ -43,6 +43,9 @@ $checkOutDate='';
                             $temp_Childs        = 0;
                             $temp_Hotel         = 'false';
                             $temp_Transfer      = 'false';
+                            print_r(sizeof($Productos[1]));
+                            print_r($Productos[1]);
+
                             ?>
 
                             <?php if(sizeof($Productos[1]) > 0): // If productos ?>
@@ -99,7 +102,10 @@ $checkOutDate='';
 
                                 <? endforeach ?>
 
-                            <? endif // // If productos ?>
+                            <? endif; // // If productos
+                            print_r("no hoteles");
+                            exit();
+                            ?>
 
                             <? if(sizeof($Productos[2]) > 0){ ?>
                                 <!--  Si hay Tours -->
