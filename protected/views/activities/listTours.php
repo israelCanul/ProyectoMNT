@@ -1,3 +1,4 @@
+
 <script type="text/javascript">
  var data=<?print_r($tours)?>;
  var urlBase="<? echo Yii::app()->params['baseUrl']; ?>";

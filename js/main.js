@@ -1,5 +1,6 @@
 /* Inicializar componentes */
 $(document).ready(function(){
+
 	/* para llamar la funcion de menu responsive */
 	$(".button-collapse").sideNav();//
 	$('.datepicker').pickadate({

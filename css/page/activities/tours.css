@@ -35,3 +35,48 @@ header{
     color: #ee6e73;
     font-size: 22px;
 }
+.descriptionTour{
+    padding: 10px;
+    border: 1px solid #d8d8d8;
+    padding: 10px;
+    margin: 10px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+.descriptionTextTour{
+    padding: 10px;
+    border: 1px solid #d8d8d8;
+    padding: 10px;
+    margin: 10px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: justify;
+}
+.textoTitulo{
+    color: #ee6e73;
+    font-size: 15px;
+}
+/* estilo del carousel [Inicio]*/
+#owl-demo .item{
+    margin: 3px;
+}
+#owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+/* estilo del carousel [Final]*/
+.rateRight{
+    text-align: right;
+    color: #ee6e73;
+    font-size: 19px;
+    font-weight: bold;
+}
+.rateLeft{
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+}

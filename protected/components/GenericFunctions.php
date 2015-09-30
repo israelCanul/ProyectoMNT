@@ -245,9 +245,14 @@ class GenericFunctions extends CApplicationComponent{
 	public function scriptsTour(){
 		$cs= Yii::app()->getclientScript();
 		$cs->registerCssFile(Yii::app()->params["baseUrl"].'/css/page/activities/tours.css?a='. Yii::app()->params['assets'],'screen, projection');
+		$cs->registerCssFile(Yii::app()->params["baseUrl"].'/css/plugins/owlcarousel/owl.carousel.css?a='. Yii::app()->params['assets'],'screen, projection');
+		$cs->registerCssFile(Yii::app()->params["baseUrl"].'/css/plugins/owlcarousel/owl.theme.min.css?a='. Yii::app()->params['assets'],'screen, projection');
 		$cs->registerScriptFile(Yii::app()->params["baseUrl"].'/build/react.js?a='. Yii::app()->params['assets'],CClientScript::POS_END);
 		$cs->registerScriptFile(Yii::app()->params["baseUrl"].'/build/JSXTransformar.js?a='. Yii::app()->params['assets'],CClientScript::POS_END);
 		$cs->registerScriptFile(Yii::app()->params["baseUrl"].'/build/tourDetalle.js?a='. Yii::app()->params['assets'],CClientScript::POS_END);
+		$cs->registerScriptFile(Yii::app()->params["baseUrl"].'/js/plugins/owlcarousel/owl.carousel.min.js?a='. Yii::app()->params['assets'],CClientScript::POS_END);
+		$cs->registerScriptFile(Yii::app()->params["baseUrl"].'/js/page/activities/tours.js?a='. Yii::app()->params['assets'],CClientScript::POS_END);
+
 	}
 }
 ?>

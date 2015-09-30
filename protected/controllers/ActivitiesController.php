@@ -102,6 +102,7 @@ class ActivitiesController extends Controller
 
 		// fechas
 		$fechaTem=explode("/", $_REQUEST['tour-Checkin']);
+		$fechaTitulo=$fechaTem[0]."/".$fechaTem[1]."/".$fechaTem[2];
 		$fechaTem=$fechaTem[2]."-".$fechaTem[0]."-".$fechaTem[1];
 
 		// url y data para los tours
@@ -111,7 +112,7 @@ class ActivitiesController extends Controller
 		// se importan los css y js de react
 		Yii::app()->GenericFunctions->scriptsTour();
 
-		$this->render('tour',array("tours"=>$tours,'dataUrl'=>$dataUrl,"tour_fecha"=>$_REQUEST['tour-Checkin']));
+		$this->render('tour',array("tours"=>$tours,'dataUrl'=>$dataUrl,"tour_fecha"=>$_REQUEST['tour-Checkin'],"fechaTitulo"=>$fechaTitulo));
 	}
 
 	public function actionBuscar(){
