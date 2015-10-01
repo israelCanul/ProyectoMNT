@@ -43,8 +43,8 @@ $checkOutDate='';
                             $temp_Childs        = 0;
                             $temp_Hotel         = 'false';
                             $temp_Transfer      = 'false';
-                            print_r(sizeof($Productos[1]));
-                            print_r($Productos[1]);
+                           // print_r(sizeof($Productos[1]));
+                           // print_r($Productos[1]);
 
                             ?>
 
@@ -103,8 +103,7 @@ $checkOutDate='';
                                 <? endforeach ?>
 
                             <? endif; // // If productos
-                            print_r("no hoteles");
-                            exit();
+
                             ?>
 
                             <? if(sizeof($Productos[2]) > 0){ ?>
@@ -880,6 +879,8 @@ $checkOutDate='';
         <script>
             $(document).ready(function(e) {
                 <?
+                if($checkInDate!=''){
+
                 $dateIn=explode(",",date_format($checkInDate, 'Y,m,d'));
                 $dateIn=$dateIn[0].",".($dateIn[1]-1).",".$dateIn[2];
                 $dateOut=explode(",",date_format($checkOutDate, 'Y,m,d'));
@@ -929,7 +930,57 @@ $checkOutDate='';
                         //console.log('Set stuff:', thingSet)
                     }
                 });
+                <?
+                }else{
+                ?>
 
+                $('.datepicker-tour-checkout').pickadate({
+                    selectMonths: true,// Creates a dropdown to control month
+                    selectYears: 15,// Creates a dropdown of 15 years to control year
+                    min:2,
+                    //max:,
+                // The title label to use for the month nav buttons
+
+                labelMonthNext: 'Next Month',
+                    labelMonthPrev: 'Beforre Month',
+                    // The title label to use for the dropdown selectors
+                    labelMonthSelect: 'Select a Month',
+                    labelYearSelect: 'Select a year',
+                    // Months and weekdays
+                    //monthsFull: [ 'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro' ],
+                    //monthsShort: [ 'Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez' ],
+                    //weekdaysFull: [ 'Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado' ],
+                    //weekdaysShort: [ 'Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab' ],
+                    // Materialize modified
+                    //weekdaysLetter: [ 'D', 'S', 'T', 'Q', 'Q', 'S', 'S' ],
+                    // Today and clear
+                    today: 'Today',
+                    clear: 'Clear',
+                    close: 'Close',
+                    // The format to show on the `input` element
+                    format: 'mm/dd/yyyy',
+                    onOpen: function() {
+                    //console.log('Opened up!')
+                },
+                onClose: function() {
+                    //console.log('Closed now');
+                },
+                onRender: function() {
+                    //
+                },
+                onStart: function() {
+                    //console.log('Hello there :)')
+                },
+                onStop: function() {
+                    //console.log('See ya')
+                },
+                onSet: function(thingSet) {
+                    //console.log('Set stuff:', thingSet)
+                }
+            });
+               <?
+                }
+                ?>
                 messageAjax="<?= Yii::t("global","Se ha agregado el producto"); ?>";
                 loadDateTransfers();
 

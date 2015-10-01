@@ -283,22 +283,21 @@ class ActivitiesController extends Controller
 		$_act = new Activities();
 		$Tour = $_act->getActivityByCode($_REQUEST["prod"]);
 
-
 		if(intval($Tour["tour_id"]) != 0){
 			$cs = Yii::app()->getclientScript();
 			$cs->registerCssFile(Yii::app()->params["baseUrl"].'/css/plugins/fancybox/jquery.fancybox.css?a='. Yii::app()->params['assets'],'screen, projection');
 			$cs->registerCssFile(Yii::app()->params["baseUrl"].'/css/plugins/fancybox/jquery.fancybox-buttons.css?a='. Yii::app()->params['assets'],'screen, projection');
 			$cs->registerCssFile(Yii::app()->params["baseUrl"].'/css/plugins/fancybox/jquery.fancybox-thumbs.css?a='. Yii::app()->params['assets'],'screen, projection');
-			$cs->registerCssFile(Yii::app()->params["baseUrl"].'/css/page/activities/activities.min.css?a='. Yii::app()->params['assets'],'screen, projection');
+			$cs->registerCssFile(Yii::app()->params["baseUrl"].'/css/page/activities.min.css?a='. Yii::app()->params['assets'],'screen, projection');
 
 			$cs->registerScriptFile(Yii::app()->params["baseUrl"].'/js/plugins/fancybox/jquery.fancybox.pack.js?a='. Yii::app()->params['assets'],CClientScript::POS_END);
 			$cs->registerScriptFile(Yii::app()->params["baseUrl"].'/js/plugins/fancybox/jquery.fancybox-buttons.js?a='. Yii::app()->params['assets'],CClientScript::POS_END);
 			$cs->registerScriptFile(Yii::app()->params["baseUrl"].'/js/plugins/fancybox/jquery.fancybox-media.js?a='. Yii::app()->params['assets'],CClientScript::POS_END);
 			$cs->registerScriptFile(Yii::app()->params["baseUrl"].'/js/plugins/fancybox/jquery.fancybox-thumbs.js?a='. Yii::app()->params['assets'],CClientScript::POS_END);
-			$cs->registerScriptFile(Yii::app()->params["baseUrl"].'/js/page/activities/activities-detail.min.js?a='. Yii::app()->params['assets'],CClientScript::POS_END);
+			$cs->registerScriptFile(Yii::app()->params["baseUrl"].'/js/page/activities-detail.min.js?a='. Yii::app()->params['assets'],CClientScript::POS_END);
 
-			$urlCanonical = $this->createUrl("activities/detalle",array("dest"=>$Tour["tour_clave_en"], "prod"=>$_REQUEST["prod"]));
-			Yii::app()->clientScript->registerLinkTag('canonical',"",Yii::app()->params["baseUrl"].$urlCanonical);
+			$urlCanonical = $this->createUrl("tours/detalle",array("dest"=>$_REQUEST["dest"], "prod"=>$_REQUEST["prod"]));
+			Yii::app()->clientScript->registerLinkTag('canonical',"","http://www.lomastravel.com".$urlCanonical);
 
 			$_Categorias = array();
 			$Categorias  = $_act->getCategoriesByActivity($Tour["tour_id"]);
@@ -307,7 +306,6 @@ class ActivitiesController extends Controller
 					$_Categorias[$_cat["categorias_tour"]] = array();
 				}
 				array_push($_Categorias[$_cat["categorias_tour"]],$_cat);
-
 			}
 
 			/* Validacion para el tour 1457 que no acepta adultos  */
@@ -323,8 +321,10 @@ class ActivitiesController extends Controller
 			//Informacion para auto llendo del formulario del booking
 			$_ad 	= (isset($_REQUEST["tour_adults"]) ? $_REQUEST["tour_adults"] : (isset($_REQUEST["pax_adulto"]) ? $_REQUEST["pax_adulto"] : 2));
 			$_mn 	= (isset($_REQUEST["tour_childs"]) ? $_REQUEST["tour_childs"] : (isset($_REQUEST["pax_menor"]) ? $_REQUEST["pax_menor"] : 0));
-			$_fecha = (isset($_REQUEST["fecha"]) ? Yii::app()->GenericFunctions->convertUsableDates($_REQUEST["fecha"]) : date("Y-m-d",mktime(0,0,0,date("m"),date("d")+3,date("Y"))) );
+			$_fecha = (isset($_REQUEST["tour_fecha"]) ? Yii::app()->GenericFunctions->convertUsableDates($_REQUEST["tour_fecha"]) : date("Y-m-d",mktime(0,0,0,date("m"),date("d")+3,date("Y"))) );
 			$_REQUEST['tour_fecha'] 		= date('m/d/Y', strtotime($_fecha));
+
+			//print_r($_REQUEST);
 			$_REQUEST['tour_adults'] 		= $_ad;
 			$_REQUEST['tour_childs'] 		= $_mn;
 
@@ -333,7 +333,6 @@ class ActivitiesController extends Controller
 			unset($_REQUEST['dest']);
 			unset($_REQUEST['ProveedorId']);
 			unset($_REQUEST['isTourCategory']);
-
 
 			$minBook =  strtotime ( '+2 day' , strtotime ( date('Y-m-j') ) );
 			if ($minBook >  strtotime($_fecha)) {
@@ -364,7 +363,6 @@ class ActivitiesController extends Controller
 
 				}
 			}
-
 
 			$Imagenes = $_act->getPhotosByGallery($Tour["tour_galeria"]);
 			$_imgPrincipal  = "";
@@ -418,9 +416,6 @@ class ActivitiesController extends Controller
 				$selectAdulto["status"] = 0;
 			}
 
-
-
-
 			if(isset($_REQUEST["ws"])){
 				header('Content-Type: text/html; charset=iso-8859-1');
 				$this->renderPartial('detalle_ajax', array(
@@ -472,7 +467,6 @@ class ActivitiesController extends Controller
 						"_BannersLaterales" => $_BannersLaterales));
 				}
 			}
-
 		}else{
 			$this->redirect($this->createUrl("activities/index"));
 		}
