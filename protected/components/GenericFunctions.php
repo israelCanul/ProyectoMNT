@@ -155,7 +155,6 @@ class GenericFunctions extends CApplicationComponent{
 			$url = str_replace("Ú","u",$url);
 			$url = str_replace("Ñ","n",$url);			
 			return $url;
-
 		}
 
 	public function convertDate($date){

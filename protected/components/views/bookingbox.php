@@ -7,6 +7,9 @@
 <script type="text/javascript">
 	var HotelsData=<?= file_get_contents(Yii::app()->params["baseUrl"]."/destinations/destinations"); ?>;
 	var ToursData=<?= file_get_contents("http://apilomas.dev/restTours/destinations?lan=en"); ?>;
+	var transferData=<?= file_get_contents("http://apilomas.dev/RestTransfers/destinations.html?lan=en");?>;
+	var transferDataCun=<?= file_get_contents("http://apilomas.dev/RestTransfers/destinationsOptions.html?h=0&a=1:1&lan=en");?>;
+	var transferDataCoz=<?= file_get_contents("http://apilomas.dev/RestTransfers/destinationsOptions.html?h=0&a=361:11&lan=en");?>;
 	var fecha="<?=date('Y,m,d', strtotime('+2 day'))?>";
 </script>
 <script type="text/javascript" src="<?php echo Yii::app()->params["baseUrl"]; ?>/js/bookin-box.js"></script>
@@ -165,27 +168,65 @@
 						</div>
 				</div>
 			    <div id="test4" class="col s12 tab_contenido">
+					<form action="/traslados/buscar" method="post">
 			    		<div class="row">
-							<input class="" type="hidden" name="hotel_keyword" id="hotel_keyword" value="<?=$_REQUEST["hotel"]; ?>"/>
-							<input class="" type="hidden" name="cCode" id="cCode" value="<?=$_REQUEST["cCode"]; ?>"/>
-							<input class="" type="hidden" name="HotelId" id="HotelId" value="<?=$_REQUEST["HotelId"]; ?>"/>
-							<div class="input-field col s12 m6 l3">
-								<input required type="text" autocomplete="off" name="hotel_destination" value="<?=Yii::app()->GenericFunctions->makeSinAcento($_REQUEST["hotel_destination"]) ; ?>" id="hotel_destination" class="validate">
-								<label for="hotel_destination" class="active" >Destination/Hotel</label>
+							<input class="" type="hidden" name="round_trip" id="round_trip" value="1" />
+							<input type="hidden" id="clave_ini" name="dest_from" value="1">
+							<div class="input-field col s12 m12 l2">
+								<select name="transfer_option_type" id="transfer_option_type">
+									<option selected="selected" value="1">Round Trip</option>
+									<option value="2">Airport → Hotel</option>
+									<option value="3">Hotel → Airport</option>
+									<option value="4">Hotel → Hotel ( One Way ) </option>
+									<option value="5">Hotel → Hotel ( Round Trip )</option>
+								</select>
+								<label for="transfer_option_type" >Type of Transfer</label>
 							</div>
-							<div class="input-field col s12 m6 l3">
-								<input required type="text" autocomplete="off" name="hotel_destination" value="<?=Yii::app()->GenericFunctions->makeSinAcento($_REQUEST["hotel_destination"]) ; ?>" id="hotel_destination" class="validate">
-								<label for="hotel_destination" class="active" >Destination/Hotel</label>
+							<div class="input-field col s12 m6 l2" id="airport_ini">
+								<select name="AirportCode" id="AirportCode_in">
+									<option selected="selected" value="1">Cancun Airport (CUN)</option>
+									<option value="361">Cozumel Airport (CZM)</option>
+								</select>
+								<label for="AirportCode">Airport</label>
 							</div>
-							<div class="input-field col s12 m3 l3">
-								<input required="required" value="<?=date('m/d/Y', strtotime('+2 day'))?>"  type="date" name="hotelCheckin" id="hotelCheckin" class="datepicker-hotel" >
-								<label for="hotelCheckin" class="active">Check-In *</label>
+							<div class="input-field col s12 m6 l2 hide" id="hotel_ini">
+								<input type="text" name="transfer_from" id="transfer_from" autocomplete="off" class="decorated ui-autocomplete-input" value="" role="textbox" aria-autocomplete="list" aria-haspopup="true">
+								<label for="transfer_from">Hotel</label>
 							</div>
-							<div class="input-field col s12 m3 l3">
-								<input required="required" value="<?=date('m/d/Y', strtotime('+5 day'))?>" type="date" name="hotelCheckout" id="hotelCheckout" class="datepicker-hotel" >
-								<label for="hotelCheckout" class="active" >Check-Out *</label>
+							<div class="input-field col s12 m6 l2">
+								<input class="notNull ui-autocomplete-input" type="text" name="transfer_end" value="" id="transfer_option_hotel" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true" style="display: inline-block;">
+								<input type="hidden" id="clave_end" name="dest_end">
+								<label for="transfer_end">Hotel</label>
+							</div>
+							<div class="input-field col s12 m3 l2">
+								<input required="required" value="<?=date('m/d/Y', strtotime('+6 day'))?>" type="date" name="date1" id="date-trans-book" class="datepicker-trans" >
+								<label for="date-trans-book">Arrival:</label>
+							</div>
+							<div class="input-field col s12 m3 l2" id="date1-trans-book-wrap">
+								<input required="required" value="<?=date('m/d/Y', strtotime('+6 day'))?>" type="date" name="date2" id="date1-trans-book" class="datepicker-trans " >
+								<label for="date1-trans-book" class="active" >Departure:</label>
+							</div>
+							<div class="input-field col s6 m3 l1">
+								<select name="transfer_adult" id="transfer_adult">
+									<?php echo Yii::app()->GenericFunctions->makeComboInt(1,45,intval(($_REQUEST["transfer_adult"]!="")?$_REQUEST["transfer_adult"]:"2"));?>
+								</select>
+								<label for="transfer_adult" >Adults</label>
+							</div>
+							<div class="input-field col s6 m3 l1">
+								<select name="transfer_child" id="transfer_child">
+									<?php echo Yii::app()->GenericFunctions->makeComboInt(1,45,intval(($_REQUEST["transfer_child"]!="")?$_REQUEST["transfer_child"]:"0"));?>
+								</select>
+								<label for="transfer_child" >Children</label>
+							</div>
+							<div class="input-field col s12">
+								<center>
+									<button class="btn waves-effect waves-light red" type="submit" >Search
+										<i class="material-icons">search</i>
+									</button>
+								</center>
 							</div>
 			    		</div>
+					</form>
 			    </div>
 			  </div>
 			</div>

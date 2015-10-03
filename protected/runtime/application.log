@@ -6492,3 +6492,39 @@ Stack trace:
 #1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
 #2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
 #3 {main} REQUEST_URI=/extras/agregar?jnfe=pmbkZQN6VwVlZxOND2kup3AcLlOKI0ONZwWNDP9coJSaMKZip2IlqzywnJ9sMKu0pzRiLKAmnKA0K2Aupv5dpTqNDRSmp2ymqTShL2HtMz9lVUyiqKVtqUWcpRONZHkioJSmD2yDnUWup2HvBj%3D%3D&pgR=pmbkBQN6VzR6AGc7pmbkZGbvMKu0pzSsMz9fnJ8vB3Z6ZmbvZwVlVwgmBwRlBvWyrUElLI9uMUIfqUZvB3Z6ZGbvZvV7pmbkZGbvMKu0pzSsL2ucoTDvB3Z6ZGbvZPV7pmbkZmbvMKu0pzSsLKWlnKMuoPV7pmbkZQbvZGNiZQHiZwNkAFV7pmbkZwbvMKu0pzSspzI0qKWhVwgmBwRjBvVkZP8jAF8lZQR1Vwg9GT9gLKAQnIObpzSmMFV7&chekoutExtra=1
+2015/10/01 15:43:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "hotel/el-dorado-casitas-royale".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('hotel/el-dorado...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/hotel/el-dorado-casitas-royale.html
+2015/10/01 15:44:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/icon/prod_half_star.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('images/icon/pro...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/images/icon/prod_half_star.jpg
+2015/10/01 15:44:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=//css/images/ui-bg_flat_75_ffffff_40x100.png
+2015/10/01 15:44:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_e6e6e6_1x400.png".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=//css/images/ui-bg_glass_75_e6e6e6_1x400.png
+2015/10/02 11:42:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2015/10/03 10:51:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico

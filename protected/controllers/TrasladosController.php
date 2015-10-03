@@ -106,5 +106,10 @@ class TrasladosController extends CController
         }
     }
 
+    public function actionBuscar(){
+        print_r($_REQUEST);
+    }
+
+
 }
 ?>

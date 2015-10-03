@@ -26,9 +26,9 @@ $_SESSION['home']='listo';
 	<meta name="language" content="en">
    <!-- Archivos JS *************************************************************************************************** -->
     <script src="/js/jquery-1.9.1.min.js" type="text/javascript"></script>
-    <script src="/js/jquery-ui.js" type="text/javascript"></script>
-	<!--
-    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>-->
+	<!--<script src="/js/jquery-ui.js" type="text/javascript"></script>
+    -->
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
    	<!--Import jQuery before materialize.js-->
 	<script src="/js/materialize.min.js"></script>
     <!-- Archivos CSS ****************************************************************************************************** -->

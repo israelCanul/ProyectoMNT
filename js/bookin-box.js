@@ -32,8 +32,105 @@ $(document).ready(function(){
 
 
 /* variables  de el js */
-var diasHotel=3;
 
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////   */
+    var diasTrans=0;
+    $('.datepicker-trans').pickadate({
+        selectMonths: true,// Creates a dropdown to control month
+        selectYears: 15,// Creates a dropdown of 15 years to control year
+        min:2,
+        // The title label to use for the month nav buttons
+        labelMonthNext: 'Next Month',
+        labelMonthPrev: 'Beforre Month',
+        // The title label to use for the dropdown selectors
+        labelMonthSelect: 'Select a Month',
+        labelYearSelect: 'Select a year',
+        // Months and weekdays
+        //monthsFull: [ 'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro' ],
+        //monthsShort: [ 'Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez' ],
+        //weekdaysFull: [ 'Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado' ],
+        //weekdaysShort: [ 'Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab' ],
+        // Materialize modified
+        //weekdaysLetter: [ 'D', 'S', 'T', 'Q', 'Q', 'S', 'S' ],
+        // Today and clear
+        today: 'Today',
+        clear: 'Clear',
+        close: 'Enter',
+        // The format to show on the `input` element
+        format: 'mm/dd/yyyy',
+        onOpen: function() {
+            //console.log('Opened up!')
+        },
+        onClose: function() {
+            //console.log('Closed now');
+            var from_$input_trans = $('#date-trans-book').pickadate(),
+                from_picker_trans = from_$input_trans.pickadate('picker')
+
+            var to_$input = $('#date1-trans-book').pickadate(),
+                to_picker = to_$input.pickadate('picker')
+
+            // Check if there’s a “from” or “to” date to start with.
+            if ( from_picker_trans.get('value') ) {
+                to_picker.set('min', [from_picker_trans.get('select')["year"],from_picker_trans.get('select')["month"],from_picker_trans.get('select')["date"]+diasTrans])
+
+                /*console.log(from_picker_trans.get('select'));*/
+            }
+            if ( to_picker.get('value') ) {
+                from_picker_trans.set('max', to_picker.get('select'))
+            }
+
+        },
+        onRender: function() {
+
+        },
+        onStart: function() {
+
+        },
+        onStop: function() {
+        },
+        onSet: function(thingSet) {
+
+        }
+    });
+    var to_$input = $('#date1-trans-book').pickadate();
+    var to_picker = to_$input.pickadate('picker');
+    var from_$input_trans = $('#date-trans-book').pickadate();
+    var from_picker_trans = from_$input_trans.pickadate('picker');
+
+    from_picker_trans.on('close', function(event) {
+        var to_$input = $('#date1-trans-book').pickadate();
+        var to_picker = to_$input.pickadate('picker');
+        to_picker.open(true);
+    });
+
+    // When something is selected, update the “from” and “to” limits.
+    from_picker_trans.on('set', function(event) {
+        if ( event.select ) {
+            to_picker.set('min', from_picker_trans.get('select'),{ format:'mm/dd/yyyy'}),
+                to_picker.set('clear',{ format:'mm/dd/yyyy'}),
+                from_picker_trans.close(),
+                to_picker.open()
+            console.log('entro');
+        }
+        else if ( 'clear' in event ) {
+            to_picker.set('min', false,{ format:'mm/dd/yyyy'})
+        }
+    });
+    to_picker.on('set', function(event) {
+        if ( event.select ) {
+            from_picker_trans.set('max', to_picker.get('select'),{ format:'mm/dd/yyyy'})
+        }
+        else if ( 'clear' in event ) {
+            from_picker_trans.set('max', false,{ format:'mm/dd/yyyy'})
+        }
+    });
+
+
+
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////   */
+    var diasHotel=3;// dia de diferencia para la reserva y regreso
 
 $('.datepicker-hotel').pickadate({
     selectMonths: true,// Creates a dropdown to control month
@@ -216,6 +313,108 @@ $("#hotel_destination").MixCombo({
         1 == t.item.tipo ? ($("#cCode").val(t.item.id), $("#HotelId").removeClass("notNull")) : ($("#HotelId").val(t.item.id), $("#hotel_keyword").val(t.item.keyword), $("#cCode").removeClass("notNull"))
     }
 });
+    $("#transfer_from").MixCombo({
+        delay: 0,
+        minLength: 3,
+        source: function(e, t) {
+            var o = new RegExp($.ui.autocomplete.escapeRegex(e.term), "i");
+            t($.grep(transferData, function(e) {
+                return e = e.label || e.value || e, o.test(e) || o.test(normalize(e))
+            }))
+        },
+        change: function(e, t) {
+
+        },
+        select: function(e, t) {
+            $("#clave_ini").val(t.item.id);
+            if(t.item.zona==12){
+                $("#transfer_option_hotel").val("");
+                setAutocomplete(transferDataCoz);
+            }else{
+                $("#transfer_option_hotel").val("");
+                setAutocomplete(transferDataCun);
+            }
+        }
+    });
+    setAutocomplete(transferDataCun);
+
+
+    function setAutocomplete(data){
+        $("#transfer_option_hotel").MixCombo({
+            delay: 0,
+            minLength: 3,
+            source: function(e, t) {
+                var o = new RegExp($.ui.autocomplete.escapeRegex(e.term), "i");
+                t($.grep(data, function(e) {
+                    return e = e.label || e.value || e, o.test(e) || o.test(normalize(e))
+                }))
+            },
+            change: function(e, t) {
+
+            },
+            select: function(e, t) {
+                $("#clave_end").val(t.item.id);
+                if($("#clave_end").val() == $("#clave_ini").val()){
+                    $("#clave_end").val("");
+                    $("#transfer_option_hotel").val("");
+                    $("#transfer_option_hotel").text('');
+                    Materialize.toast('wrong!,The origin and  destination is the same', 5000, 'rounded') // 'rounded' is the class I'm applying to the toast
+                    return false;
+                }else{
+                    $("#clave_end").val(t.item.id);
+                }
+            }
+        });
+    }
+
+    $("#AirportCode_in").change(function () {
+        if($(this).val()==1){
+            $("#clave_ini").val("1");
+            $("#transfer_option_hotel").val("");
+            setAutocomplete(transferDataCun);
+        }else{
+            $("#clave_ini").val("361");
+            $("#transfer_option_hotel").val("");
+            setAutocomplete(transferDataCoz);
+        }
+    });
+
+    $("#transfer_option_type").change(function(){
+        switch (parseInt($(this).val())){
+           case 1:
+               $("#round_trip").val("1");
+               $("#hotel_ini").addClass("hide");
+               $("#airport_ini").removeClass("hide");
+               $("#date1-trans-book-wrap").removeClass("hide");
+               break;
+            case 2:
+                $("#round_trip").val("0");
+                $("#hotel_ini").addClass("hide");
+                $("#airport_ini").removeClass("hide");
+                $("#date1-trans-book-wrap").addClass("hide");
+                break;
+            case 3:
+                $("#round_trip").val("0");
+                $("#hotel_ini").addClass("hide");
+                $("#airport_ini").removeClass("hide");
+                $("#date1-trans-book-wrap").addClass("hide");
+                break;
+            case 4:
+                $("#round_trip").val("0");
+                $("#hotel_ini").removeClass("hide");
+                $("#airport_ini").addClass("hide");
+                $("#date1-trans-book-wrap").addClass("hide");
+                break;
+            case 5:
+                $("#round_trip").val("1");
+                $("#hotel_ini").removeClass("hide");
+                $("#airport_ini").addClass("hide");
+                $("#date1-trans-book-wrap").removeClass("hide");
+                break;
+        }
+
+    });
+
 $("#tour_destination").MixCombo({
         delay: 0,
         minLength: 3,

@@ -5592,7 +5592,7 @@ small {
       margin: 0;
       color: inherit; }
     .card .card-content .card-title {
-      line-height: 48px; }
+      line-height: 20px; }
   .card .card-action {
     border-top: 1px solid rgba(160, 160, 160, 0.2);
     padding: 20px; }
@@ -5893,7 +5893,7 @@ button.btn-floating {
     .dropdown-content li:hover, .dropdown-content li.active {
       background-color: #eee; }
     .dropdown-content li > a, .dropdown-content li > span {
-      font-size: 1.2rem;
+      font-size: 0.9rem;
       color: #ee6e73;
       display: block;
       padding: 1rem 1rem; }

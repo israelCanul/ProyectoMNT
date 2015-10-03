@@ -8,6 +8,7 @@ rfonts
 mjs
 ajs/page/activities
 ajs/page/checkout
+mlib/yii/zii/widgets/grid
 mprotected/components
 mprotected/config
 mprotected/controllers
