@@ -43,7 +43,7 @@ var Detalle = React.createClass({
         var recommendations = nl2br(this.props.descripcion.recomendations);
         var regulations = nl2br(this.props.descripcion.regulations);
         var policies = nl2br(this.props.descripcion.policies);
-        console.log(departure);
+
         return React.createElement(
             'div',
             { className: 'col s12 detalles descriptionTour' },
@@ -234,7 +234,13 @@ var Rates = React.createClass({
             };
             var botonBook = function botonBook(rate) {
                 if (rate.tarifaDisponible == 1) {
-                    return React.createElement('input', { name: 'jnfe', value: rate.jnfe, type: 'hidden' });
+                    return React.createElement(
+                        'div',
+                        { className: 'col s12 m6 rateRight' },
+                        React.createElement('input', { type: 'submit', value: 'Book', className: 'btn btn-large col s12 red' }),
+                        React.createElement('input', { type: 'hidden', value: '1', name: 'fromDetails', className: 'btn btn-large col s12 red' }),
+                        React.createElement('input', { name: 'jnfe', value: rate.jnfe, type: 'hidden' })
+                    );
                 }
             };
             var precio = function precio(rate) {
@@ -276,13 +282,7 @@ var Rates = React.createClass({
                                 { className: 'col s12 m6 rateRight' },
                                 precio(rate)
                             ),
-                            React.createElement(
-                                'div',
-                                { className: 'col s12 m6 rateRight' },
-                                React.createElement('input', { type: 'submit', value: 'Book', className: 'btn btn-large col s12 red' }),
-                                React.createElement('input', { type: 'hidden', value: '1', name: 'fromDetails', className: 'btn btn-large col s12 red' }),
-                                botonBook(rate)
-                            )
+                            botonBook(rate)
                         )
                     )
                 )
@@ -305,7 +305,7 @@ var Bookin = React.createClass({
             React.createElement(
                 'div',
                 { className: 'input-field col s12 m4' },
-                React.createElement('input', { type: 'date', className: 'datepicker', type: 'date', name: 'tour-Checkin', id: 'tour-Checkin' })
+                React.createElement('input', { type: 'date', className: 'datepicker', name: 'tour-Checkin', id: 'tour-Checkin' })
             ),
             React.createElement(
                 'div',

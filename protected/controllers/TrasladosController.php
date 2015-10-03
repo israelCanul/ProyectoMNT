@@ -107,7 +107,36 @@ class TrasladosController extends CController
     }
 
     public function actionBuscar(){
-        print_r($_REQUEST);
+        $date1=explode("/",$_REQUEST['date1']);
+        $date1=$date1[2]."-".$date1[0]."-".$date1[1];
+        $date2=explode("/",$_REQUEST['date2']);
+        $date2=$date2[2]."-".$date2[0]."-".$date2[1];
+        $fecha1=date('D, F d Y', strtotime($_REQUEST["date1"]));// textos para fecha 1
+        $fecha2=date('D, F d Y', strtotime($_REQUEST["date2"]));// textos para fecha 2
+        $textoFecha=$fecha1;
+        if(intval($_REQUEST["transfer_option_type"]) == 1 || intval($_REQUEST["transfer_option_type"]) == 5){
+            $textoFecha=$fecha1.", ".$fecha2;
+        }
+
+        switch(intval($_REQUEST['transfer_option_type'])){
+            case 1:
+                $transfers=file_get_contents("http://apilomas.dev/RestTransfers/rates.html?moneda=USD&lan=en&adults=".$_REQUEST['transfer_adult']."&ninos=".$_REQUEST['transfer_child']."&dest_ini=".$_REQUEST['dest_from']."&dest_end=".$_REQUEST['dest_end']."&round_trip=".$_REQUEST['round_trip']."&transfer_option_type=".$_REQUEST['transfer_option_type']."&date=".$date1."&date2=".$date2."");
+                break;
+            case 2:
+                $transfers=file_get_contents("http://apilomas.dev/RestTransfers/rates.html?moneda=USD&lan=en&adults=".$_REQUEST['transfer_adult']."&ninos=".$_REQUEST['transfer_child']."&dest_ini=".$_REQUEST['dest_from']."&dest_end=".$_REQUEST['dest_end']."&round_trip=".$_REQUEST['round_trip']."&transfer_option_type=".$_REQUEST['transfer_option_type']."&date=".$date1."&date2=".$date2."");
+                break;
+            case 3:
+                $transfers=file_get_contents("http://apilomas.dev/RestTransfers/rates.html?moneda=USD&lan=en&adults=".$_REQUEST['transfer_adult']."&ninos=".$_REQUEST['transfer_child']."&dest_ini=".$_REQUEST['dest_end']."&dest_end=".$_REQUEST['dest_from']."&round_trip=".$_REQUEST['round_trip']."&transfer_option_type=".$_REQUEST['transfer_option_type']."&date=".$date1."&date2=".$date2."");
+                break;
+            case 4:
+                $transfers=file_get_contents("http://apilomas.dev/RestTransfers/rates.html?moneda=USD&lan=en&adults=".$_REQUEST['transfer_adult']."&ninos=".$_REQUEST['transfer_child']."&dest_ini=".$_REQUEST['dest_from']."&dest_end=".$_REQUEST['dest_end']."&round_trip=".$_REQUEST['round_trip']."&transfer_option_type=".$_REQUEST['transfer_option_type']."&date=".$date1."&date2=".$date2."");
+                break;
+            case 5:
+                $transfers=file_get_contents("http://apilomas.dev/RestTransfers/rates.html?moneda=USD&lan=en&adults=".$_REQUEST['transfer_adult']."&ninos=".$_REQUEST['transfer_child']."&dest_ini=".$_REQUEST['dest_from']."&dest_end=".$_REQUEST['dest_end']."&round_trip=".$_REQUEST['round_trip']."&transfer_option_type=".$_REQUEST['transfer_option_type']."&date=".$date1."&date2=".$date2."");
+                break;
+        }
+        GenericFunctions::scriptsTransfer();
+        $this->render('traslados',array('transfers' => $transfers,'fecha'=> $textoFecha));
     }
 
 

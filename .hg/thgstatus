@@ -4,10 +4,12 @@ rcss
 acss/page/activities
 acss/page/checkout
 acss/page/ofertas
+acss/page/transfers
 rfonts
 mjs
 ajs/page/activities
 ajs/page/checkout
+ajs/page/transfers
 mlib/yii/zii/widgets/grid
 mprotected/components
 mprotected/config
@@ -18,4 +20,5 @@ aprotected/views/activities
 aprotected/views/checkout
 mprotected/views/layouts
 rprotected/views/site
+aprotected/views/traslados
 asrc

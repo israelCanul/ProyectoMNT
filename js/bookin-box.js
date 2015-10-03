@@ -327,19 +327,24 @@ $("#hotel_destination").MixCombo({
         },
         select: function(e, t) {
             $("#clave_ini").val(t.item.id);
-            if(t.item.zona==12){
-                $("#transfer_option_hotel").val("");
-                setAutocomplete(transferDataCoz);
-            }else{
-                $("#transfer_option_hotel").val("");
-                setAutocomplete(transferDataCun);
-            }
+            $("#transfer_option_hotel").val("");
+            setAutocomplete(t.item.id,t.item.zona);
         }
     });
-    setAutocomplete(transferDataCun);
+    setAutocomplete(1,1);
 
 
-    function setAutocomplete(data){
+    function setAutocomplete(dest,zona){
+        var url="http://apilomas.dev/RestTransfers/destinationsOptions.html?h=0&a="+dest+":"+zona+"&lan=en";
+        var data=[];
+        $.ajax({
+            url: url,
+            dataType: "json",
+            success: function(response) {
+             data=response;
+            }
+        });
+
         $("#transfer_option_hotel").MixCombo({
             delay: 0,
             minLength: 3,
@@ -371,11 +376,11 @@ $("#hotel_destination").MixCombo({
         if($(this).val()==1){
             $("#clave_ini").val("1");
             $("#transfer_option_hotel").val("");
-            setAutocomplete(transferDataCun);
+            setAutocomplete(1,1);
         }else{
             $("#clave_ini").val("361");
             $("#transfer_option_hotel").val("");
-            setAutocomplete(transferDataCoz);
+            setAutocomplete(361,11);
         }
     });
 
@@ -412,6 +417,7 @@ $("#hotel_destination").MixCombo({
                 $("#date1-trans-book-wrap").removeClass("hide");
                 break;
         }
+        $("#transfer_option_hotel").val("");
 
     });
 

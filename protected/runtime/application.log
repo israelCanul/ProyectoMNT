@@ -6528,3 +6528,215 @@ Stack trace:
 #1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
 #2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
 #3 {main} REQUEST_URI=/favicon.ico
+2015/10/03 13:46:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/page/transfers/transfers.css".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('css/page/transf...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=//css/page/transfers/transfers.css?a=1
+2015/10/03 13:46:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/page/transfers/transfers.js".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('js/page/transfe...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=//js/page/transfers/transfers.js?a=1
+2015/10/03 13:47:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/page/transfers/transfers.css".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('css/page/transf...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=//css/page/transfers/transfers.css?a=1
+2015/10/03 13:47:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/page/transfers/transfers.js".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('js/page/transfe...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=//js/page/transfers/transfers.js?a=1
+2015/10/03 13:48:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/page/transfers/transfers.css".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('css/page/transf...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=//css/page/transfers/transfers.css?a=1
+2015/10/03 13:48:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/page/transfers/transfers.js".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('js/page/transfe...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=//js/page/transfers/transfers.js?a=1
+2015/10/03 14:59:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('1.jpg')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('1.jpg')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('traslados/1.jpg')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#5 {main} REQUEST_URI=/traslados/1.jpg
+2015/10/03 14:59:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "7.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('7.jpg')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('7.jpg')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('traslados/7.jpg')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#5 {main} REQUEST_URI=/traslados/7.jpg
+2015/10/03 14:59:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "3.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('3.jpg')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('3.jpg')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('traslados/3.jpg')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#5 {main} REQUEST_URI=/traslados/3.jpg
+2015/10/03 14:59:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "10.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('10.jpg')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('10.jpg')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('traslados/10.jp...')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#5 {main} REQUEST_URI=/traslados/10.jpg
+2015/10/03 14:59:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jaguar.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('jaguar.jpg')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('jaguar.jpg')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('traslados/jagua...')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#5 {main} REQUEST_URI=/traslados/jaguar.jpg
+2015/10/03 14:59:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "9.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('9.jpg')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('9.jpg')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('traslados/9.jpg')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#5 {main} REQUEST_URI=/traslados/9.jpg
+2015/10/03 14:59:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "11.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('11.jpg')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('11.jpg')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('traslados/11.jp...')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#5 {main} REQUEST_URI=/traslados/11.jpg
+2015/10/03 14:59:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "12.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('12.jpg')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('12.jpg')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('traslados/12.jp...')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#5 {main} REQUEST_URI=/traslados/12.jpg
+2015/10/03 14:59:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "9.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('9.jpg')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('9.jpg')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('traslados/9.jpg')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#5 {main} REQUEST_URI=/traslados/9.jpg
+2015/10/03 14:59:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('1.jpg')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('1.jpg')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('traslados/1.jpg')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#5 {main} REQUEST_URI=/traslados/1.jpg
+2015/10/03 14:59:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "10.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('10.jpg')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('10.jpg')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('traslados/10.jp...')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#5 {main} REQUEST_URI=/traslados/10.jpg
+2015/10/03 14:59:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "7.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('7.jpg')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('7.jpg')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('traslados/7.jpg')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#5 {main} REQUEST_URI=/traslados/7.jpg
+2015/10/03 14:59:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "3.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('3.jpg')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('3.jpg')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('traslados/3.jpg')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#5 {main} REQUEST_URI=/traslados/3.jpg
+2015/10/03 14:59:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jaguar.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('jaguar.jpg')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('jaguar.jpg')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('traslados/jagua...')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#5 {main} REQUEST_URI=/traslados/jaguar.jpg
+2015/10/03 14:59:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "11.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('11.jpg')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('11.jpg')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('traslados/11.jp...')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#5 {main} REQUEST_URI=/traslados/11.jpg
+2015/10/03 14:59:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "12.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('12.jpg')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('12.jpg')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('traslados/12.jp...')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#5 {main} REQUEST_URI=/traslados/12.jpg
+2015/10/03 15:02:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/1.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('images/1.jpg')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/images/1.jpg
+2015/10/03 15:02:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/3.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('images/3.jpg')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/images/3.jpg
+2015/10/03 15:02:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/7.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('images/7.jpg')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/images/7.jpg
+2015/10/03 15:02:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/jaguar.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('images/jaguar.j...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/images/jaguar.jpg
+2015/10/03 15:02:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/9.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('images/9.jpg')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/images/9.jpg
+2015/10/03 15:02:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/10.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('images/10.jpg')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/images/10.jpg
+2015/10/03 15:02:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/11.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('images/11.jpg')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/images/11.jpg
+2015/10/03 15:02:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/12.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('images/12.jpg')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(22): CApplication->run()
+#3 {main} REQUEST_URI=/images/12.jpg

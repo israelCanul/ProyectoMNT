@@ -8,8 +8,8 @@
 	var HotelsData=<?= file_get_contents(Yii::app()->params["baseUrl"]."/destinations/destinations"); ?>;
 	var ToursData=<?= file_get_contents("http://apilomas.dev/restTours/destinations?lan=en"); ?>;
 	var transferData=<?= file_get_contents("http://apilomas.dev/RestTransfers/destinations.html?lan=en");?>;
-	var transferDataCun=<?= file_get_contents("http://apilomas.dev/RestTransfers/destinationsOptions.html?h=0&a=1:1&lan=en");?>;
-	var transferDataCoz=<?= file_get_contents("http://apilomas.dev/RestTransfers/destinationsOptions.html?h=0&a=361:11&lan=en");?>;
+	//var transferDataCun=<? //file_get_contents("http://apilomas.dev/RestTransfers/destinationsOptions.html?h=0&a=1:1&lan=en");?>;
+	//var transferDataCoz=<? //file_get_contents("http://apilomas.dev/RestTransfers/destinationsOptions.html?h=0&a=361:11&lan=en");?>;
 	var fecha="<?=date('Y,m,d', strtotime('+2 day'))?>";
 </script>
 <script type="text/javascript" src="<?php echo Yii::app()->params["baseUrl"]; ?>/js/bookin-box.js"></script>
@@ -214,7 +214,7 @@
 							</div>
 							<div class="input-field col s6 m3 l1">
 								<select name="transfer_child" id="transfer_child">
-									<?php echo Yii::app()->GenericFunctions->makeComboInt(1,45,intval(($_REQUEST["transfer_child"]!="")?$_REQUEST["transfer_child"]:"0"));?>
+									<?php echo Yii::app()->GenericFunctions->makeComboInt(0,45,intval(($_REQUEST["transfer_child"]!="")?$_REQUEST["transfer_child"]:"0"));?>
 								</select>
 								<label for="transfer_child" >Children</label>
 							</div>

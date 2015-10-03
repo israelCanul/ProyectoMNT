@@ -37,7 +37,7 @@ var Detalle=React.createClass({
         var recommendations=nl2br(this.props.descripcion.recomendations);
         var regulations=nl2br(this.props.descripcion.regulations);
         var policies=nl2br(this.props.descripcion.policies);
-        console.log(departure);
+
         return(
             <div className='col s12 detalles descriptionTour'>
                 <div className="col s12">
@@ -141,7 +141,11 @@ var Rates=React.createClass({
         var botonBook= function(rate){
             if(rate.tarifaDisponible==1){
                 return(
-                    <input  name='jnfe' value={rate.jnfe} type='hidden' />
+                    <div className='col s12 m6 rateRight'>
+                        <input type='submit' value='Book' className='btn btn-large col s12 red'/>
+                        <input type='hidden' value='1' name='fromDetails' className='btn btn-large col s12 red'/>
+                        <input  name='jnfe' value={rate.jnfe} type='hidden' />
+                    </div>
                 );
             }
         }
@@ -169,11 +173,7 @@ var Rates=React.createClass({
                         <div className='col s12 m6 rateRight'>
                             {precio(rate)}
                         </div>
-                        <div className='col s12 m6 rateRight'>
-                            <input type='submit' value='Book' className='btn btn-large col s12 red'/>
-                            <input type='hidden' value='1' name='fromDetails' className='btn btn-large col s12 red'/>
-                            {botonBook(rate)}
-                        </div>
+                        {botonBook(rate)}
                     </div>
                 </div>
                 </form>
@@ -192,7 +192,7 @@ var Bookin=React.createClass({
         return(
             <div classname='col s12'>
                 <div className="input-field col s12 m4">
-                    <input type="date" className="datepicker" type="date" name="tour-Checkin" id="tour-Checkin"/>
+                    <input type="date" className="datepicker"  name="tour-Checkin" id="tour-Checkin"/>
                 </div>
                 <div className="input-field col s12 m4">
                     <input type="text" id='adults' name="tour-Checkin" />
