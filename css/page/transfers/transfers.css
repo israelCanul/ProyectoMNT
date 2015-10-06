@@ -2,3 +2,39 @@ header{
     background:url('/images/bg/activities.jpg');
     background-size:cover;
 }
+.titulosColor{
+    color:#ee6e73;
+}
+.card-tours{
+    padding:10px;
+}
+.tituloCard {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: justify;
+}
+.price{
+    font-size: 18px;
+    font-weight: bold;
+    color: #F44336 !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: roboto;
+}
+.from{
+    font-size: 18px;
+    font-weight: bold;
+    color: #F44336 !important;
+    margin-top: 10px;
+}
+.precioDetalle{
+    border-left: 2px solid rgba(0,0,0,0.5);
+}
+.infoResult{
+    color: #ee6e73;
+    font-size: 37px;
+}
+.infoSearch{
+    color: #ee6e73;
+    font-size: 22px;
+}

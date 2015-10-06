@@ -106,7 +106,12 @@ class TrasladosController extends CController
         }
     }
 
-    public function actionBuscar(){
+    public function actionBuscar()
+    {
+        $this->redirect($this->createUrl("traslados/detalle",$_REQUEST));
+    }
+    public function actionDetalle(){
+
         $date1=explode("/",$_REQUEST['date1']);
         $date1=$date1[2]."-".$date1[0]."-".$date1[1];
         $date2=explode("/",$_REQUEST['date2']);

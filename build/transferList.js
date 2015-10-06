@@ -88,7 +88,7 @@ var Transfer = React.createClass({
                 ),
                 React.createElement(
                     'div',
-                    { className: 'col s12 m8 offset-m2 l6 offset-l3' },
+                    { className: 'col s12 m8 offset-m2 l6 offset-l4' },
                     React.createElement(
                         'a',
                         { href: "/transfers/agregar.html?jnfe=" + this.props.data.rate.jnfe, className: 'col s12 btn red' },
@@ -147,18 +147,18 @@ var Titulo = React.createClass({
             { classname: 'col s12' },
             React.createElement(
                 'h6',
-                null,
+                { className: 'titulosColor' },
                 this.props.fecha
             ),
             React.createElement(
                 'h5',
-                null,
+                { className: 'titulosColor' },
                 ' ',
                 "Transfer " + this.props.destination.dest_ini.name + " to " + this.props.destination.dest_end.name
             ),
             React.createElement(
                 'h6',
-                null,
+                { className: 'titulosColor' },
                 "Adults: " + this.props.params.adults + " - Children: " + this.props.params.ninos
             )
         );

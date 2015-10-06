@@ -335,7 +335,7 @@ $("#hotel_destination").MixCombo({
 
 
     function setAutocomplete(dest,zona){
-        var url="http://apilomas.dev/RestTransfers/destinationsOptions.html?h=0&a="+dest+":"+zona+"&lan=en";
+        var url="http://apilomas.dev/RestTransfers/FindDestinations.html?zona_inicio="+dest+":"+zona+"&lan=en";
         var data=[];
         $.ajax({
             url: url,
@@ -359,6 +359,7 @@ $("#hotel_destination").MixCombo({
             },
             select: function(e, t) {
                 $("#clave_end").val(t.item.id);
+                $("#clave_transfer").val(t.item.clave);
                 if($("#clave_end").val() == $("#clave_ini").val()){
                     $("#clave_end").val("");
                     $("#transfer_option_hotel").val("");
@@ -420,6 +421,8 @@ $("#hotel_destination").MixCombo({
         $("#transfer_option_hotel").val("");
 
     });
+
+    $("#book_tours").validate();
 
 $("#tour_destination").MixCombo({
         delay: 0,

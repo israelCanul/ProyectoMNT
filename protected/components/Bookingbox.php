@@ -9,159 +9,96 @@
 		
 		public function run(){
 			$cs = Yii::app()->getclientScript();
-
-			
-			if(!isset($_REQUEST["hotel_destination"])){
-				$_REQUEST["hotel_destination"] = "";
+			$cs->registerScriptFile(Yii::app()->params["baseUrl"].'/js/validate.jquery.js?a='. Yii::app()->params['assets'],CClientScript::POS_END);
+			// destino del tour o busqueda
+			if(!isset($_REQUEST['tour_destination'])){
+				$_REQUEST['tour_destination']="";
+				$_REQUEST['dest']='8';
+				$_REQUEST['tipo']='destination';
+			}
+			if(!isset($_REQUEST['tour-Checkin'])){
+				$_REQUEST['tour-Checkin']=date('m/d/Y', strtotime('+2 day'));
+			}
+			if(!isset($_REQUEST['tour_adults'])){
+				$_REQUEST['tour_adults']=2;
+			}
+			if(!isset($_REQUEST['tour_child'])){
+				$_REQUEST['tour_child']=0;
 			}
 
-			if(!isset($_REQUEST["cCode"])){
-				$_REQUEST["cCode"] = "";
+			if($_REQUEST['tour_destination']!="" && isset($_REQUEST['tour-Checkin']) && isset($_REQUEST['tipo'])){
+				$_REQUEST['trans_act']="";
+				$_REQUEST['tour_act']="active";
+				$_REQUEST['hotel_act']="";
 			}
 
-			if(!isset($_REQUEST["HotelId"])){
-				$_REQUEST["HotelId"] = "";
-			} 
+			if(isset($_REQUEST['tour-Checkin'])&& isset($_REQUEST['clave']) && isset($_REQUEST['tour_destination'])){
+				$_REQUEST['tipo']='tour';
+			}
+			/*print_r($_REQUEST);
+			exit();*/
 
-			if(!isset($_REQUEST["seg"])){
-				$_REQUEST["seg"] = "";
-			} 
-
-			if(!isset($_REQUEST["hotel_checkin"])){
-				$_REQUEST["hotel_checkin"] = "";
-			} 
-
-			if(!isset($_REQUEST["hotel_checkout"])){
-				$_REQUEST["hotel_checkout"] = "";
-			} 
-
-			if(!isset($_REQUEST["hotel_rooms"])){
-				$_REQUEST["hotel_rooms"] = "";
-			} 
-
-			if(!isset($_REQUEST["Room"][0]["Adults"])){
-				$_REQUEST["Room"][0]["Adults"] = "";
-			} 
-
-			if(!isset($_REQUEST["Room"][0]["Childs"])){
-				$_REQUEST["Room"][0]["Childs"] = "";
-			} 
-
-			if(!isset($_REQUEST["Room"][0]["Childs"])){
-				$_REQUEST["Room"][0]["Childs"] = "";
+			/*  cuando se viene desde una busqueda de un transfer */
+			// destino from por default es 1=aeropuerto cancun
+			if(!isset($_REQUEST['dest_from'])){
+				$_REQUEST['dest_from']=1;
+			}
+			// validar que la busqueda por default sea redondo=1
+			if(!isset($_REQUEST['round_trip'])){
+				$_REQUEST['round_trip']=1;
+			}
+			// vuelo redondo es igual a 1 por default
+			if(!isset($_REQUEST['transfer_option_type'])){
+				$_REQUEST['transfer_option_type']=1;
+			}
+			// id del aeropuerto de cancun 1 si no existe un id enviado
+			if(!isset($_REQUEST['AirportCode'])){
+				$_REQUEST['AirportCode']=1;
+			}
+			//transfer_from
+			if(!isset($_REQUEST['transfer_from'])){
+				$_REQUEST['transfer_from']="";
+			}
+			//transfer_end
+			if(!isset($_REQUEST['transfer_end'])){
+				$_REQUEST['transfer_end']="";
+			}
+			// si no recibe id de llegada se pone el "" por default
+			if(!isset($_REQUEST['dest_end'])){
+				$_REQUEST['dest_end']="";
+			}
+			//date1 salida
+			if(!isset($_REQUEST['date1'])){
+				$_REQUEST['date1']=date('m/d/Y', strtotime('+6 day'));
+			}
+			//date 2 llegada
+			if(!isset($_REQUEST['date2'])){
+				$_REQUEST['date2']=date('m/d/Y', strtotime('+6 day'));
+			}
+			// numero de adultos
+			if(!isset($_REQUEST['transfer_adult'])){
+				$_REQUEST['transfer_adult']=2;
+			}
+			// numero de niños
+			if(!isset($_REQUEST['transfer_child'])){
+				$_REQUEST['transfer_child']=0;
+			}
+			// clave de la transferencia
+			if(!isset($_REQUEST['clave_trans'])){
+				$_REQUEST['clave_trans']="";
 			}
 
-			if(!isset($_REQUEST["isTourCategory"])){
-				$_REQUEST["isTourCategory"] = "";
-			} 
+			if($_REQUEST['clave_trans']!="" && $_REQUEST['dest_end']!="" && $_REQUEST['transfer_end']!=""){
+				$_REQUEST['trans_act']="active";
+				$_REQUEST['tour_act']="";
+				$_REQUEST['hotel_act']="";
+				$classDate2="";
+				if($_REQUEST['transfer_option_type']!=1 && $_REQUEST['transfer_option_type']!=5){
+					$classDate2="hide";
+					$_REQUEST["classDate2"]=$classDate2;
+				}
+			}
 
-
-			if(!isset($_REQUEST["tour_destination"])){
-				$_REQUEST["tour_destination"] = "";
-			} 
-
-
-			if(!isset($_REQUEST["dest"])){
-				$_REQUEST["dest"] = "";
-			} 
-
-
-			if(!isset($_REQUEST["TourId"])){
-				$_REQUEST["TourId"] = "";
-			} 
-
-
-			if(!isset($_REQUEST["ProveedorId"])){
-				$_REQUEST["ProveedorId"] = "";
-			} 
-
-
-			if(!isset($_REQUEST["openTk"])){
-				$_REQUEST["openTk"] = "";
-			} 
-
-			
-			if(!isset($_REQUEST["tour_fecha"])){
-				$_REQUEST["tour_fecha"] = "";
-			} 
-
-			if(!isset($_REQUEST["tour_adults"])){
-				$_REQUEST["tour_adults"] = "";
-			} 
-
-			if(!isset($_REQUEST["tour_childs"])){
-				$_REQUEST["tour_childs"] = "";
-			} 
-
-			if(!isset($_REQUEST["transfer_option_type"])){
-				$_REQUEST["transfer_option_type"] = "";
-			} 
-
-			if(!isset($_REQUEST["transfer_option_airport"])){
-				$_REQUEST["transfer_option_airport"] = "";
-			} 
-
-			if(!isset($_REQUEST["transfer_from"])){
-				$_REQUEST["transfer_from"] = "";
-			} 
-
-			if(!isset($_REQUEST["transfer_option_hotel"])){
-				$_REQUEST["transfer_option_hotel"] = "";
-			} 
-
-			if(!isset($_REQUEST["transfer_arrival"])){
-				$_REQUEST["transfer_arrival"] = "";
-			} 
-
-			if(!isset($_REQUEST["transfer_return"])){
-				$_REQUEST["transfer_return"] = "";
-			} 
-
-			if(!isset($_REQUEST["transfer_adults"])){
-				$_REQUEST["transfer_adults"] = "";
-			} 
-
-			if(!isset($_REQUEST["transfer_child"])){
-				$_REQUEST["transfer_child"] = "";
-			} 
-
-
-			if(!isset($_REQUEST["flight_directions"])){
-				$_REQUEST["flight_directions"] = "";
-			} 
-			if(!isset($_REQUEST["flight_airport_from"])){
-				$_REQUEST["flight_airport_from"] = "";
-			} 
-			if(!isset($_REQUEST["flight_departure"])){
-				$_REQUEST["flight_departure"] = "";
-			} 
-			if(!isset($_REQUEST["flight_arrive"])){
-				$_REQUEST["flight_arrive"] = "";
-			} 
-			if(!isset($_REQUEST["flight_airport_to"])){
-				$_REQUEST["flight_airport_to"] = "";
-			} 
-			if(!isset($_REQUEST["flight_depDate"])){
-				$_REQUEST["flight_depDate"] = "";
-			} 
-			if(!isset($_REQUEST["flight_retDate"])){
-				$_REQUEST["flight_retDate"] = "";
-			} 
-			if(!isset($_REQUEST["flight_numAdt"])){
-				$_REQUEST["flight_numAdt"]= "";
-			} 
-			if(!isset($_REQUEST["flight_numChd"])){
-				$_REQUEST["flight_numChd"] = "";
-			} 
-			if(!isset($_REQUEST["flight_numInf"])){
-				$_REQUEST["flight_numInf"] = "";
-			} 
-			if(!isset($_REQUEST["flight_class"])){
-				$_REQUEST["flight_class"] = "";
-			} 
-			if(!isset($_REQUEST["flight_directFlight"])){
-				$_REQUEST["flight_directFlight"] = "";
-			} 
 
 			/*$cs = Yii::app()->getclientScript();
 			$cs->registerCssFile(Yii::app()->params["baseUrl"].'/css/page/booking.min.css?a='. Yii::app()->params['assets'],'screen, projection');*/

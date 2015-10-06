@@ -40,7 +40,7 @@ var Transfer=React.createClass({
                     <div className="right-align col s10 price">
                         <span>$ {this.props.params.currency}</span><span className="price"> {this.props.data.rate.total}</span>
                     </div>
-                    <div className="col s12 m8 offset-m2 l6 offset-l3">
+                    <div className="col s12 m8 offset-m2 l6 offset-l4">
                         <a href={"/transfers/agregar.html?jnfe="+this.props.data.rate.jnfe} className="col s12 btn red">
                             BOOK
                         </a>
@@ -91,9 +91,9 @@ var Titulo=React.createClass({
     render:function(){
         return(
             <div classname='col s12'>
-                <h6>{this.props.fecha}</h6>
-                <h5> {"Transfer "+this.props.destination.dest_ini.name+" to "+this.props.destination.dest_end.name}</h5>
-                <h6>{"Adults: "+this.props.params.adults+" - Children: "+this.props.params.ninos}</h6>
+                <h6 className='titulosColor'>{this.props.fecha}</h6>
+                <h5 className='titulosColor'> {"Transfer "+this.props.destination.dest_ini.name+" to "+this.props.destination.dest_end.name}</h5>
+                <h6 className='titulosColor'>{"Adults: "+this.props.params.adults+" - Children: "+this.props.params.ninos}</h6>
             </div>
         );
     }
