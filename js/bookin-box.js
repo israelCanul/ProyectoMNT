@@ -1,3 +1,94 @@
+// funcion que carga los parametros  de busquedas en hoteles
+function generaBookin(habitaciones,detalle){
+
+    var hab=habitaciones;
+	var room =detalle;
+
+		for (var i = 1; i < hab; i++) {
+			var details= room[i];
+			var cadena='<div class="col s12 m6 l4">'+
+				'<div class="col s12"><h6 class="red white-text" style="padding:5px;">Room <span id="numHab">'+(i+1)+'</span></h6></div>'+
+				'<div class="input-field col s12 m12 l6">'+
+				'<input required type="number" min="1" max="9" value="'+details.Adults+'" name="hotelAdults_'+i+'" id="hotelAdults_'+i+'"  >'+
+				'<label for="hotelAdults" class="label-activo">Adult(s)</label>'+
+				'</div>'+
+				'<div class="input-field col s12 m12 l6">'+
+				'<select required type="number" min="0" data-hab="'+i+'" class="age_nino1 select-Numchild" value="0" name="hotelChild_'+i+'" id="hotelChild_'+i+'" >';
+				for(var a=0;a<10;a++){
+					var selected='';
+					if(details.Childs==a){ selected='selected="selected"';}
+					cadena+='<option value="'+a+'" ' + selected + '>'+a+'</option>';
+				}
+
+			cadena+='</select>'+
+				'<label>Children</label>'+
+				'</div>'+
+				'<div>';
+
+			$("#guesthab").append(cadena);
+		}
+
+		/* se generan las edades de los niños */
+		var numCuartos=hab;
+		for (var i =1; i < numCuartos; i++) {
+			var details= room[i];
+			var hab=$('#hotelChild_'+i).data('hab');
+			//console.log("hab: "+hab);
+			var num=$('#hotelChild_'+i).val();
+			//console.log(num);
+			if(num>0){
+				console.log("hab: "+hab);
+				console.log(num);
+				var cadena='<div class="col s12">'+
+					'<div class="col s12"><h6 class="red lighten-3 white-text" style="padding:5px;">Children on room <span id="numHab">'+(hab+1)+'</span></h6></div>';
+				for (var y = 0; y < num; y++) {
+					cadena+='<div class="col s6 m4 l3">'+
+						'<h6 class="red-text" style="padding:5px;">Child <span id="numHab">'+(y+1)+'</span></h6>'+
+						'<div class="input-field col s12">'+
+						'<select required class="select-child1" required type="number" min="0" max="9" value="" name="child_'+(i)+'_'+(y)+'">';
+						for(var a=0;a<10;a++){
+							var selected='';
+							if(details.ChildAges[y]==a){ selected='selected="selected"';}
+							cadena+='<option value="'+a+'" ' + selected + '>'+a+'</option>';
+						}
+
+					cadena+='</select>'+
+						'<label>Children</label>'+
+						'</div></div>';
+				}
+				cadena+='<div>';
+				$("#dataChild").append(cadena);
+			}
+		};
+
+		$("#dataChild1").html("");
+
+		var num=room[0].ChildAges.length;
+		if(num!=0) {
+			var cadena = '<div class="col s12">' +
+				'<div class="col s12"><h6 class="red lighten-3 white-text" style="padding:5px;">Children on room <span id="numHab">1</span></h6></div>';
+			for (var i = 0; i < num; i++) {
+				cadena += '<div class="col s6 m3">' +
+					'<h6 class="red-text" style="padding:5px;">Child <span id="numHab">' + (i + 1) + '</span></h6>' +
+					'<div class="input-field col s12">' +
+					'<select required class="select-child" required type="number" min="0" max="9" value="" name="child_0_' + i + '">';
+				for (var a = 0; a < 10; a++) {
+					var selected = '';
+					if (room[0].ChildAges[i] == a) {
+						selected = 'selected="selected"';
+					}
+					cadena += '<option value="' + a + '" ' + selected + '>' + a + '</option>';
+				}
+
+				cadena += '</select>' +
+					'<label>Children</label>' +
+					'</div></div>';
+			}
+			cadena += '<div>';
+			$("#dataChild1").append(cadena);
+		}
+
+}
 
 
 
@@ -29,7 +120,14 @@ function despliegalistahoteles() {
 
 $(document).ready(function(){
 
-
+    $("#ocultarContenedorBookin").on("click",function(){
+        console.log("W");
+        if($("#contenedorBookin").hasClass('oculta')){
+            $("#contenedorBookin").switchClass("oculta","nooculta",1000);
+        }else{
+            $("#contenedorBookin").switchClass("nooculta","oculta",1000);
+        }
+    });
 
 /* variables  de el js */
 
@@ -267,9 +365,9 @@ $('.datepicker').pickadate({
 });
 
 
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////
         
-
+        // autocomplete customisado para el bookin
         $.widget("custom.MixCombo", $.ui.autocomplete, {
             _create: function() {
                 this._super();
@@ -294,7 +392,7 @@ $('.datepicker').pickadate({
                 });
             }
         });
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 $("#hotel_destination").MixCombo({
     delay: 0,
@@ -313,6 +411,8 @@ $("#hotel_destination").MixCombo({
         1 == t.item.tipo ? ($("#cCode").val(t.item.id), $("#HotelId").removeClass("notNull")) : ($("#HotelId").val(t.item.id), $("#hotel_keyword").val(t.item.keyword), $("#cCode").removeClass("notNull"))
     }
 });
+
+    ////////////////////////////////////////////////////////////// autocomplete y funciones de transfers [Inicio]  ///////////////////
     $("#transfer_from").MixCombo({
         delay: 0,
         minLength: 3,
@@ -422,8 +522,19 @@ $("#hotel_destination").MixCombo({
 
     });
 
-    $("#book_tours").validate();
 
+    ////////////////////////////////////////////////////////////// autocomplete y funciones de transfers [Final] ///////////////////
+
+    /* validate del formulario de bookin [Inicio]*/
+
+    $("#book_hotels").validate();
+    $("#book_tours").validate();
+    $("#book_tranfers").validate();
+
+    /* validate del formulario de bookin [final]*/
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////77
 $("#tour_destination").MixCombo({
         delay: 0,
         minLength: 3,
@@ -453,7 +564,7 @@ $("#tour_destination").MixCombo({
         }
     });
 
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 var accentMap = {
     "á": "a",
     "é": "e",
@@ -475,11 +586,10 @@ Object.size = function(obj) {
 };
 
 
-// formularios de la pagina bookin de hoteles [Inicio]
-
+// formularios de la pagina bookin de hoteles [Inicio] /////////////////////////////////////////////////////////////////
 
 $("#hotelRoom").on("change",function(){
-$("#dataChild").html("");     
+ $("#dataChild").html("");
  $("#dataChild").html("");
  $("#guesthab").html("");          
   var hab=$(this).val();
@@ -487,8 +597,8 @@ $("#dataChild").html("");
   var cadena='<div class="col s12 m6 l4">'+
              '<div class="col s12"><h6 class="red white-text" style="padding:5px;">Room <span id="numHab">'+(i+1)+'</span></h6></div>'+
              '<div class="input-field col s12 m12 l6">'+
-             '<input required type="number" min="1" max="9" value="" name="hotelAdults_'+i+'" id="hotelAdults"  >'+
-             '<label for="hotelAdults">Adult(s)</label>'+
+             '<input required type="number" min="1" max="9" value="" name="hotelAdults_'+i+'" id="hotelAdults_'+i+'"  >'+
+             '<label for="hotelAdults" class="label-activo">Adult(s)</label>'+
              '</div>'+
              '<div class="input-field col s12 m12 l6">'+
              '<select required type="number" min="0" data-hab="'+i+'" class="age_nino1 select-Numchild" value="0" name="hotelChild_'+i+'" id="hotelChild_'+i+'" >'+
@@ -528,7 +638,7 @@ $("#dataChild").html("");
            cadena+='<div class="col s6 m4 l3">'+
                '<h6 class="red-text" style="padding:5px;">Child <span id="numHab">'+(y+1)+'</span></h6>'+
                '<div class="input-field col s12">'+
-                   '<select class="select-child1" required type="number" min="0" max="9" value="" name="child_'+(i)+'_'+(y)+'">'+
+                   '<select required class="select-child1" required type="number" min="0" max="9" value="" name="child_'+(i)+'_'+(y)+'">'+
               '<option value="">0</option>'+
               '<option value="1">1</option>'+
               '<option value="2">2</option>'+
@@ -539,19 +649,62 @@ $("#dataChild").html("");
               '<option value="7">7</option>'+
               '<option value="8">8</option>'+
               '<option value="9">9</option>'+
-             '</select>'+              
+             '</select>'+
                    '<label>Children</label>'+
-                   '</div></div>';           
-         }      
+                   '</div></div>';
+         }
           cadena+='<div>';
           $("#dataChild").append(cadena);
-      }         
+      }
       };
       $('.select-child1').material_select();// inicializar los select de la pagina
       return false;
-    
+
   });
 });
+
+
+    $(".age_nino1").on("change",function(){
+        $("#dataChild").html("");
+        var numCuartos=$("#hotelRoom").val();
+        for (var i =1; i < numCuartos; i++) {
+            var hab=$('#hotelChild_'+i).data('hab');
+            //console.log("hab: "+hab);
+            var num=$('#hotelChild_'+i).val();
+            //console.log(num);
+            if(num>0){
+                console.log("hab: "+hab);
+                console.log(num);
+                var cadena='<div class="col s12">'+
+                    '<div class="col s12"><h6 class="red lighten-3 white-text" style="padding:5px;">Children on room <span id="numHab">'+(hab+1)+'</span></h6></div>';
+                for (var y = 0; y < num; y++) {
+                    cadena+='<div class="col s6 m4 l3">'+
+                        '<h6 class="red-text" style="padding:5px;">Child <span id="numHab">'+(y+1)+'</span></h6>'+
+                        '<div class="input-field col s12">'+
+                        '<select required class="select-child1" required type="number" min="0" max="9" value="" name="child_'+(i)+'_'+(y)+'">'+
+                        '<option value="">0</option>'+
+                        '<option value="1">1</option>'+
+                        '<option value="2">2</option>'+
+                        '<option value="3">3</option>'+
+                        '<option value="4">4</option>'+
+                        '<option value="5">5</option>'+
+                        '<option value="6">6</option>'+
+                        '<option value="7">7</option>'+
+                        '<option value="8">8</option>'+
+                        '<option value="9">9</option>'+
+                        '</select>'+
+                        '<label>Children</label>'+
+                        '</div></div>';
+                }
+                cadena+='<div>';
+                $("#dataChild").append(cadena);
+            }
+        };
+        $('.select-child1').material_select();// inicializar los select de la pagina
+        return false;
+
+    });
+
 
 $(".age_nino").change(function(){
   $("#dataChild1").html("");          
@@ -565,7 +718,7 @@ $(".age_nino").change(function(){
        cadena+='<div class="col s6 m3">'+
            '<h6 class="red-text" style="padding:5px;">Child <span id="numHab">'+(i+1)+'</span></h6>'+
            '<div class="input-field col s12">'+
-               '<select class="select-child" required type="number" min="0" max="9" value="" name="child_0_'+i+'">'+
+               '<select required class="select-child" required type="number" min="0" max="9" value="" name="child_0_'+i+'">'+
           '<option value="">0</option>'+
           '<option value="1">1</option>'+
           '<option value="2">2</option>'+
@@ -584,7 +737,8 @@ $(".age_nino").change(function(){
   $("#dataChild1").append(cadena);
   $('.select-child').material_select();// inicializar los select de la pagina
 });
-// formularios de la pagina bookin de hoteles [Final]
+
+// formularios de la pagina bookin de hoteles [Final] ///////////////////////////////////////////////////////////////
 
 
 });

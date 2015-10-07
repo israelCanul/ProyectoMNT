@@ -16,4 +16,14 @@
 }
 .ui-state-focus{
 	background-color: rgba(0,0,0,0.4);
-}    
+}
+.oculta{
+    position: relative;
+    height:0px;
+    overflow: hidden;
+}
+.nooculta{
+    position: relative;
+    height:auto;
+
+}

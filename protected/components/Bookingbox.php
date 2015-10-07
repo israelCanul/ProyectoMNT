@@ -10,6 +10,29 @@
 		public function run(){
 			$cs = Yii::app()->getclientScript();
 			$cs->registerScriptFile(Yii::app()->params["baseUrl"].'/js/validate.jquery.js?a='. Yii::app()->params['assets'],CClientScript::POS_END);
+
+			// si no llegan parametros de busquedas request queda activo para hoteles
+			$_REQUEST['request']="active";
+			//
+			//
+			if(!isset($_REQUEST['hotelAdults_0'])){
+				$_REQUEST['hotelAdults_0']=2;
+			}
+			if(isset($_REQUEST['hotelCheckin']) && isset($_REQUEST['hotelCheckout'])){
+				$_REQUEST['hotel_act']="active";
+				$_REQUEST['trans_act']="";
+				$_REQUEST['tour_act']="";
+				$_REQUEST['request']=1;
+			}
+			if(!isset($_REQUEST['hotelCheckin'])){
+				$_REQUEST['hotelCheckin']=date('m/d/Y', strtotime('+2 day'));
+			}
+			if(!isset($_REQUEST['hotelCheckout'])){
+				$_REQUEST['hotelCheckout']=date('m/d/Y', strtotime('+5 day'));
+			}
+
+
+
 			// destino del tour o busqueda
 			if(!isset($_REQUEST['tour_destination'])){
 				$_REQUEST['tour_destination']="";
@@ -30,13 +53,13 @@
 				$_REQUEST['trans_act']="";
 				$_REQUEST['tour_act']="active";
 				$_REQUEST['hotel_act']="";
+				$_REQUEST['request']=1;
 			}
 
 			if(isset($_REQUEST['tour-Checkin'])&& isset($_REQUEST['clave']) && isset($_REQUEST['tour_destination'])){
 				$_REQUEST['tipo']='tour';
 			}
-			/*print_r($_REQUEST);
-			exit();*/
+
 
 			/*  cuando se viene desde una busqueda de un transfer */
 			// destino from por default es 1=aeropuerto cancun
@@ -92,6 +115,7 @@
 				$_REQUEST['trans_act']="active";
 				$_REQUEST['tour_act']="";
 				$_REQUEST['hotel_act']="";
+				$_REQUEST['request']=1;
 				$classDate2="";
 				if($_REQUEST['transfer_option_type']!=1 && $_REQUEST['transfer_option_type']!=5){
 					$classDate2="hide";

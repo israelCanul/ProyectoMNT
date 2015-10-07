@@ -456,4 +456,19 @@ a,a:hover{color:white}
     height: 49px;
 }
 
+.error{
+    background-color: white;
+    color: red;
+    z-index: 1;
+}
+.label-activo{
+    color: #ee6e73;
+    border-bottom: 2px solid #ee6e73;
+    font-size: 0.8rem;
+    -webkit-transform: translateY(-140%);
+    -moz-transform: translateY(-140%);
+    -ms-transform: translateY(-140%);
+    -o-transform: translateY(-140%);
+    transform: translateY(-140%);
+}
 

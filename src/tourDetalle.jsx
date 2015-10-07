@@ -187,6 +187,7 @@ var Rates=React.createClass({
         );
     }
 });
+
 var Bookin=React.createClass({
     render:function(){
         return(
