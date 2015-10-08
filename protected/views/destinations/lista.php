@@ -33,6 +33,7 @@
 
 	<!-- TITULARES -->
 	<h6 class="infoSearch">
+		<? //print_r(Yii::app()->_Hotels->Config["Dates"]);?>
 		<?php echo Yii::app()->GenericFunctions->makeSinAcento(utf8_decode($locacion));?> &#8226; 
 		<?php echo date('D, M d', strtotime(Yii::app()->_Hotels->Config["Dates"]["CheckIn"])); ?> - 
 		<?php echo date('D, M d', strtotime(Yii::app()->_Hotels->Config["Dates"]["CheckOut"])); ?> &#8226; 

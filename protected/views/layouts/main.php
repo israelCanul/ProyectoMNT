@@ -8,7 +8,7 @@
 	<img class="img-intro" src="/images/bg/puertaLeft.jpg">
 </div>
 <div id="animacionIntroLogo">
-	<div class="row"><div class="col s12 m8 offset-m2 l6 offset-l3"><center><img style="width: 57%;background-color: rgba(0,0,0,0.2);" class="responsive-img" src="<?=Yii::app()->params['baseUrl']?>/images/icon/logo.svg"></center></div></div>
+	<div class="row"><div class="col s12 m8 offset-m2 l6 offset-l3"><center><img style="width: 40%;" class="responsive-img" src="<?=Yii::app()->params['baseUrl']?>/images/icon/logo.svg"></center></div></div>
 	<h3 style="font-size:3rem;text-align: center;">Behind this doors you will find the best of Mexico and the world</h3>
 </div>
 <div id="animacionIntroRight">
@@ -92,14 +92,6 @@ $_SESSION['home']='listo';
 							   'label'=>'HOME',
 							   'url'=>array('site/index'),
 							   'linkOptions'=>array('class'=>''),
-							   /*'itemOptions'=>array('class'=>'purple-text text-darken-5'),
-							   'items'=>array(
-								 array('label'=>'Our Mission', 'url'=>array('/company/index')),
-								 array('label'=>'About Us', 'url'=>array('/company/aboutUs')),
-								 array('label'=>'Careers', 'url'=>array('/company/careers')),
-								 array('label'=>'Contact Us', 'url'=>array('/company/contactUs')),
-								 array('label'=>'Store Locator', 'url'=>array('/company/storeLocator')),
-							   ),*/
 						   ),
 						   array(
 							   'label'=>'HOTELS',
@@ -108,7 +100,7 @@ $_SESSION['home']='listo';
 						   ),
 						   array(
 							   'label'=>'FLIGHTS',
-							   'url'=>array('#'),
+							   'url'=>array(''),
 							   'linkOptions'=>array('class'=>''),
 						   ),
 						   array(
@@ -118,7 +110,7 @@ $_SESSION['home']='listo';
 						   ),
 						   array(
 							   'label'=>'PACKAGES',
-							   'url'=>array('#'),
+							   'url'=>array(''),
 							   'linkOptions'=>array('class'=>''),
 						   ),
 						   array(
@@ -128,7 +120,7 @@ $_SESSION['home']='listo';
 						   ),
 						   array(
 							   'label'=>'GROUPS',
-							   'url'=>array('#'),
+							   'url'=>array(''),
 							   'linkOptions'=>array('class'=>''),
 						   ),
 						   array(

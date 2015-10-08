@@ -4,6 +4,7 @@
 		<div class="row" >
 		<? if(count($destinos)>0){
 				foreach ($destinos as $key => $value) {
+
 		?>
 				<div class="small col s12 m6 l4 ">
 		          <div class="card-destinos">
@@ -13,13 +14,14 @@
 			              <span class="card-title"></span>
 			            </div>
 			            <div class="card-content card-action hoverable contenidoDestinos">
-			              <a class="red-text" href="#">
+			              <a class="red-text" href="/destinations/<? echo $value['clave'] ?>.html?hotel_keyword=&cCode=<? echo $value['codigo']?>&HotelId=&hotel_destination=<? echo urlencode( GenericFunctions::makeSinAcento( $value['nombre'])) ?>&hotelCheckin=<? echo urlencode(date('m/d/Y', strtotime('+2 day')));?>&hotelCheckout=<? echo urlencode(date('m/d/Y', strtotime('+5 day')));?>&hotelRoom=1&hotelAdults_0=2&hotelChild_0=0&action=&Room%5B0%5D%5BAdults%5D=2&Room%5B0%5D%5BChilds%5D=0">
 			              <?
 			              if($value['nombre']!=$value['estado']){
 			              ?>
 			              <p class="center-align"><label class="textoCaja"><?=$value['nombre']?></label></p>
 			              <p class="center-align"><?=$value['estado']?></p>
 			              <? }else{ ?>
+
 			              	<p class="center-align"><label class="textoCaja"><?=$value['estado']?></label></p>
 			              <?}?>
 			              </a>
@@ -41,7 +43,7 @@
 <div class="row">
 	<div class="row hide-on-med-and-down">
 		<div class="col s10 offset-s1 parallax-container">
-			<div class="parallax "><img src="<?=Yii::app()->params['baseUrl']?>/images/bg/home-plane-mexiconews.jpg"></div>
+			<div class="parallax "><img src="<?=Yii::app()->params['baseUrl']?>/images/bg/footer-hotels.jpg"></div>
 		</div>
 	</div>
 

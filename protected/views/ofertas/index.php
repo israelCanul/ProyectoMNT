@@ -9,8 +9,11 @@
 	      </ul>
 	    </div>
 	    <div id="hotels" class="col s12">
+
 			<?
+			$index=0;
 			foreach($_Promociones as $p){
+
 				if($p["promocion_producto"] == "hotel"){
 					if($p["promocion_archivo_" . Yii::app()->language] != ''  &&  $p["promocion_miniatura_". Yii::app()->language] != ''){
 						$url = "/offer/" . Yii::app()->GenericFunctions->makeUrl(str_replace("%","",(str_replace("&","&amp;",(str_replace(",","", $p["promocion_" . Yii::app()->language] )))))) . "-" . $p["promocion_id"] . ".html?seg=L". $p["promocion_id"];		
@@ -19,7 +22,7 @@
 						}
 			?>
 				
-					<?if(($index%5)==0){?>
+					<? if(($index%5)==0){ ?>
 						<div class='col s12 m6'>
 							<div class="card-destinos">
 								<div class="card">
@@ -79,13 +82,21 @@
 								</div>	
 							</div>	
 						</div>				
-					<?}
+					<? }
 					$index++;		
 					?>
 
 				<?  
 					}
 				}
+				if($index==0){ ?>
+					<div class="col s12">
+						<div class="row"><br></div>
+						<center><h5 class="offerName red-text">We have no offers in Hotels</h5></center>
+						<div class="row"><br></div>
+					</div>
+
+			<?	}
 			}
 	?>	    	
 
@@ -168,6 +179,7 @@
 				<?  
 					}
 				}
+	
 			}
 	?>    	
 
@@ -178,7 +190,7 @@
 <div class="row">
 	<div class="row hide-on-med-and-down">
 		<div class="col s10 offset-s1 parallax-container">
-			<div class="parallax "><img src="<?=Yii::app()->params['baseUrl']?>/images/bg/home-plane-mexiconews.jpg"></div>
+			<div class="parallax "><img src="<?=Yii::app()->params['baseUrl']?>/images/bg/footer-deals.jpg"></div>
 		</div>
 	</div>
 

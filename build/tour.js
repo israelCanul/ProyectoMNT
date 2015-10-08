@@ -33,7 +33,7 @@ var Tour = React.createClass({
         ),
         React.createElement(
           "a",
-          { href: urlBase + "toursByDest/" + this.props.data.destination.clave + ".html?" + dataUrl + "&tour_destination=" + encodeURIComponent(this.props.data.destination.name).replace(/%20/g, '+') + "&dest=" + this.props.data.destination.id, className: "red-text" },
+          { href: urlBase + "toursByDest/" + this.props.data.destination.clave + ".html?" + dataUrl + "&tipo=destination&tour_destination=" + encodeURIComponent(this.props.data.destination.name).replace(/%20/g, '+') + "&dest=" + this.props.data.destination.id, className: "red-text" },
           "Destination : " + this.props.data.destination.name
         )
       ),

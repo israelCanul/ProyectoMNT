@@ -88,7 +88,7 @@ if(count($notas)>0){
 
 <div class="row hide-on-med-and-down">
 	<div class="col s10 offset-s1 parallax-container">
-		<div class="parallax "><img src="<?=Yii::app()->params['baseUrl']?>/images/bg/home-plane-mexiconews.jpg"></div>
+		<div class="parallax "><img src="<?=Yii::app()->params['baseUrl']?>/images/bg/footer-home.jpg"></div>
 	</div>
 </div>
 

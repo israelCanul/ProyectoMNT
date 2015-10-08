@@ -24,6 +24,8 @@
 				$_REQUEST['tour_act']="";
 				$_REQUEST['request']=1;
 			}
+			/*print_r($_REQUEST);
+			exit();*/
 			if(!isset($_REQUEST['hotelCheckin'])){
 				$_REQUEST['hotelCheckin']=date('m/d/Y', strtotime('+2 day'));
 			}
@@ -45,6 +47,7 @@
 			if(!isset($_REQUEST['tour_adults'])){
 				$_REQUEST['tour_adults']=2;
 			}
+
 			if(!isset($_REQUEST['tour_child'])){
 				$_REQUEST['tour_child']=0;
 			}
@@ -56,10 +59,15 @@
 				$_REQUEST['request']=1;
 			}
 
-			if(isset($_REQUEST['tour-Checkin'])&& isset($_REQUEST['clave']) && isset($_REQUEST['tour_destination'])){
+			if(isset($_REQUEST['TourId']) && $_REQUEST['TourId']!="" ){
 				$_REQUEST['tipo']='tour';
+				$_REQUEST['trans_act']="";
+				$_REQUEST['tour_act']="active";
+				$_REQUEST['hotel_act']="";
+				$_REQUEST['request']=1;
 			}
-
+			/*print_r($_REQUEST);
+			exit();*/
 
 			/*  cuando se viene desde una busqueda de un transfer */
 			// destino from por default es 1=aeropuerto cancun

@@ -63,7 +63,7 @@ class ActivitiesController extends Controller
 		$fecha=$fecha[2]."-".$fecha[0]."-".$fecha[1];
 
 
-		$tours= file_get_contents("http://apilomas.dev/RestTours/ListByZona/".$_REQUEST['dest'].".html?date=".$fecha."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda']."&ninos=0&adults=2");
+		$tours= file_get_contents(Yii::app()->params['api']."/RestTours/ListByZona/".$_REQUEST['dest'].".html?date=".$fecha."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda']."&ninos=0&adults=2");
 		$dataUrl="tour-Checkin=".$_REQUEST['tour-Checkin']."&tour_adults=".$_REQUEST['tour_adults']."&tour_child=".$_REQUEST['tour_child']."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda'];
 
 		Yii::app()->GenericFunctions->scriptsTours();
@@ -75,7 +75,7 @@ class ActivitiesController extends Controller
 		$fecha=explode("/", $_REQUEST['tour-Checkin']);
 		$fecha=$fecha[2]."-".$fecha[0]."-".$fecha[1];
 
-		$tours= file_get_contents("http://apilomas.dev/RestTours/ListByCat/".$_REQUEST['cat'].".html?date=".$fecha."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda']."&ninos=0&adults=2");
+		$tours= file_get_contents(Yii::app()->params['api']."/RestTours/ListByCat/".$_REQUEST['cat'].".html?date=".$fecha."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda']."&ninos=0&adults=2");
 		$dataUrl="tour-Checkin=".$_REQUEST['tour-Checkin']."&tour_adults=".$_REQUEST['tour_adults']."&tour_child=".$_REQUEST['tour_child']."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda'];
 
 		Yii::app()->GenericFunctions->scriptsTours();
@@ -89,7 +89,7 @@ class ActivitiesController extends Controller
 		$fechaTem=$fechaTem[2]."-".$fechaTem[0]."-".$fechaTem[1];
 
 		// url y data para los tours
-		$tours= file_get_contents("http://apilomas.dev/RestTours/ListBySup/".$_REQUEST['sup'].".html?date=".$fechaTem."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda']."&ninos=0&adults=2");
+		$tours= file_get_contents(Yii::app()->params['api']."/RestTours/ListBySup/".$_REQUEST['sup'].".html?date=".$fechaTem."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda']."&ninos=0&adults=2");
 		$dataUrl="tour-Checkin=".$_REQUEST['tour-Checkin']."&tour_adults=".$_REQUEST['tour_adults']."&tour_child=".$_REQUEST['tour_child']."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda'];
 
 		// se importan los css y js de react
@@ -106,7 +106,7 @@ class ActivitiesController extends Controller
 		$fechaTem=$fechaTem[2]."-".$fechaTem[0]."-".$fechaTem[1];
 
 		// url y data para los tours
-		$tours= file_get_contents("http://apilomas.dev/RestTours/tour/".$_REQUEST['TourId'].".html?date=".$fechaTem."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda']."&ninos=".$_REQUEST['tour_child']."&adults=".$_REQUEST['tour_adults']);
+		$tours= file_get_contents(Yii::app()->params['api']."/RestTours/tour/".$_REQUEST['TourId'].".html?date=".$fechaTem."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda']."&ninos=".$_REQUEST['tour_child']."&adults=".$_REQUEST['tour_adults']);
 		$dataUrl="tour-Checkin=".$_REQUEST['tour-Checkin']."&tour_adults=".$_REQUEST['tour_adults']."&tour_child=".$_REQUEST['tour_child']."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda'];
 		/*print_r("<pre>");
 		print_r($tours);

@@ -81,10 +81,12 @@ class DestinationsController extends Controller
 							"hotel" => $_REQUEST["hotel_keyword"]
 						)
 					);
+
 					$this->redirect($_url."?" . $_param);
 				
 				// Busqueda por Destino
 				}else{
+
 					$_hotel = new Hotel();
 					$ciudad = $_hotel->getClaveCiudad($_REQUEST['cCode']);
 					$_param = http_build_query($_REQUEST);
@@ -93,6 +95,7 @@ class DestinationsController extends Controller
 							"clave" => $ciudad
 						)
 					);
+
 					$this->redirect($_url."?" . $_param);
 				}
 
@@ -317,14 +320,16 @@ class DestinationsController extends Controller
 			if(!isset($_SESSION["iServices"]["Hoteles"])){
 				$_SESSION["iServices"]["Hoteles"] = array();			
 			}
-			
-			if(isset($_REQUEST["hotelCheckin"]) && isset($_REQUEST["hotel_checkout"])){
-				Yii::app()->_Hotels->chDates(Yii::app()->GenericFunctions->convertUsableDates($_REQUEST["hotelCheckin"]),Yii::app()->GenericFunctions->convertUsableDates($_REQUEST["hotel_checkout"]));
+
+
+			if(isset($_REQUEST["hotelCheckin"]) && isset($_REQUEST["hotelCheckout"])){
+				Yii::app()->_Hotels->chDates(Yii::app()->GenericFunctions->convertUsableDates($_REQUEST["hotelCheckin"]),Yii::app()->GenericFunctions->convertUsableDates($_REQUEST["hotelCheckout"]));
+
 			}
-			
+
 			if(isset($_REQUEST["Room"])){
 				Yii::app()->_Hotels->Config["Rooms"] = $_REQUEST["Room"];
-			}			
+			}
 
 			//Destino
 			if($esDestino){

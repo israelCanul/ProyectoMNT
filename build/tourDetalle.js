@@ -77,7 +77,7 @@ var Detalle = React.createClass({
                         null,
                         'Monday'
                     ),
-                    React.createElement('img', { src: "/images/icon/" + this.props.disponibilidad.lunes, className: 'responsive-img' })
+                    React.createElement('img', { src: "/images/icon/" + this.props.disponibilidad.lunes+".png", className: 'responsive-img' })
                 ),
                 React.createElement(
                     'div',
@@ -87,7 +87,7 @@ var Detalle = React.createClass({
                         null,
                         'Tuesday'
                     ),
-                    React.createElement('img', { src: "/images/icon/" + this.props.disponibilidad.martes, className: 'responsive-img' })
+                    React.createElement('img', { src: "/images/icon/" + this.props.disponibilidad.martes+".png", className: 'responsive-img' })
                 ),
                 React.createElement(
                     'div',
@@ -97,7 +97,7 @@ var Detalle = React.createClass({
                         null,
                         'Wednesday'
                     ),
-                    React.createElement('img', { src: "/images/icon/" + this.props.disponibilidad.miercoles, className: 'responsive-img' })
+                    React.createElement('img', { src: "/images/icon/" + this.props.disponibilidad.miercoles+".png", className: 'responsive-img' })
                 ),
                 React.createElement(
                     'div',
@@ -107,7 +107,7 @@ var Detalle = React.createClass({
                         null,
                         'Thursday'
                     ),
-                    React.createElement('img', { src: "/images/icon/" + this.props.disponibilidad.jueves, className: 'responsive-img' })
+                    React.createElement('img', { src: "/images/icon/" + this.props.disponibilidad.jueves+".png", className: 'responsive-img' })
                 ),
                 React.createElement(
                     'div',
@@ -117,7 +117,7 @@ var Detalle = React.createClass({
                         null,
                         'Friday'
                     ),
-                    React.createElement('img', { src: "/images/icon/" + this.props.disponibilidad.viernes, className: 'responsive-img' })
+                    React.createElement('img', { src: "/images/icon/" + this.props.disponibilidad.viernes+".png", className: 'responsive-img' })
                 ),
                 React.createElement(
                     'div',
@@ -127,7 +127,7 @@ var Detalle = React.createClass({
                         null,
                         'Saturday'
                     ),
-                    React.createElement('img', { src: "/images/icon/" + this.props.disponibilidad.sabado, className: 'responsive-img' })
+                    React.createElement('img', { src: "/images/icon/" + this.props.disponibilidad.sabado+".png", className: 'responsive-img' })
                 ),
                 React.createElement(
                     'div',
@@ -137,7 +137,7 @@ var Detalle = React.createClass({
                         null,
                         'Sunday'
                     ),
-                    React.createElement('img', { src: "/images/icon/" + this.props.disponibilidad.domingo, className: 'responsive-img' })
+                    React.createElement('img', { src: "/images/icon/" + this.props.disponibilidad.domingo+".png", className: 'responsive-img' })
                 )
             ),
             React.createElement(

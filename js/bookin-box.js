@@ -2,92 +2,98 @@
 function generaBookin(habitaciones,detalle){
 
     var hab=habitaciones;
-	var room =detalle;
+    if(hab>1) {
+        var room = detalle;
 
-		for (var i = 1; i < hab; i++) {
-			var details= room[i];
-			var cadena='<div class="col s12 m6 l4">'+
-				'<div class="col s12"><h6 class="red white-text" style="padding:5px;">Room <span id="numHab">'+(i+1)+'</span></h6></div>'+
-				'<div class="input-field col s12 m12 l6">'+
-				'<input required type="number" min="1" max="9" value="'+details.Adults+'" name="hotelAdults_'+i+'" id="hotelAdults_'+i+'"  >'+
-				'<label for="hotelAdults" class="label-activo">Adult(s)</label>'+
-				'</div>'+
-				'<div class="input-field col s12 m12 l6">'+
-				'<select required type="number" min="0" data-hab="'+i+'" class="age_nino1 select-Numchild" value="0" name="hotelChild_'+i+'" id="hotelChild_'+i+'" >';
-				for(var a=0;a<10;a++){
-					var selected='';
-					if(details.Childs==a){ selected='selected="selected"';}
-					cadena+='<option value="'+a+'" ' + selected + '>'+a+'</option>';
-				}
+        for (var i = 1; i < hab; i++) {
+            var details = room[i];
+            var cadena = '<div class="col s12 m6 l4">' +
+                '<div class="col s12"><h6 class="red white-text" style="padding:5px;">Room <span id="numHab">' + (i + 1) + '</span></h6></div>' +
+                '<div class="input-field col s12 m12 l6">' +
+                '<input required type="number" min="1" max="9" value="' + details.Adults + '" name="hotelAdults_' + i + '" id="hotelAdults_' + i + '"  >' +
+                '<label for="hotelAdults" class="label-activo">Adult(s)</label>' +
+                '</div>' +
+                '<div class="input-field col s12 m12 l6">' +
+                '<select required type="number" min="0" data-hab="' + i + '" class="age_nino1 select-Numchild" value="0" name="hotelChild_' + i + '" id="hotelChild_' + i + '" >';
+            for (var a = 0; a < 10; a++) {
+                var selected = '';
+                if (details.Childs == a) {
+                    selected = 'selected="selected"';
+                }
+                cadena += '<option value="' + a + '" ' + selected + '>' + a + '</option>';
+            }
 
-			cadena+='</select>'+
-				'<label>Children</label>'+
-				'</div>'+
-				'<div>';
+            cadena += '</select>' +
+                '<label>Children</label>' +
+                '</div>' +
+                '<div>';
 
-			$("#guesthab").append(cadena);
-		}
+            $("#guesthab").append(cadena);
+        }
 
-		/* se generan las edades de los niños */
-		var numCuartos=hab;
-		for (var i =1; i < numCuartos; i++) {
-			var details= room[i];
-			var hab=$('#hotelChild_'+i).data('hab');
-			//console.log("hab: "+hab);
-			var num=$('#hotelChild_'+i).val();
-			//console.log(num);
-			if(num>0){
-				console.log("hab: "+hab);
-				console.log(num);
-				var cadena='<div class="col s12">'+
-					'<div class="col s12"><h6 class="red lighten-3 white-text" style="padding:5px;">Children on room <span id="numHab">'+(hab+1)+'</span></h6></div>';
-				for (var y = 0; y < num; y++) {
-					cadena+='<div class="col s6 m4 l3">'+
-						'<h6 class="red-text" style="padding:5px;">Child <span id="numHab">'+(y+1)+'</span></h6>'+
-						'<div class="input-field col s12">'+
-						'<select required class="select-child1" required type="number" min="0" max="9" value="" name="child_'+(i)+'_'+(y)+'">';
-						for(var a=0;a<10;a++){
-							var selected='';
-							if(details.ChildAges[y]==a){ selected='selected="selected"';}
-							cadena+='<option value="'+a+'" ' + selected + '>'+a+'</option>';
-						}
+        /* se generan las edades de los niños */
+        var numCuartos = hab;
+        for (var i = 1; i < numCuartos; i++) {
+            var details = room[i];
+            var hab = $('#hotelChild_' + i).data('hab');
+            //console.log("hab: "+hab);
+            var num = $('#hotelChild_' + i).val();
+            //console.log(num);
+            if (num > 0) {
+                console.log("hab: " + hab);
+                console.log(num);
+                var cadena = '<div class="col s12">' +
+                    '<div class="col s12"><h6 class="red lighten-3 white-text" style="padding:5px;">Children on room <span id="numHab">' + (hab + 1) + '</span></h6></div>';
+                for (var y = 0; y < num; y++) {
+                    cadena += '<div class="col s6 m4 l3">' +
+                        '<h6 class="red-text" style="padding:5px;">Child <span id="numHab">' + (y + 1) + '</span></h6>' +
+                        '<div class="input-field col s12">' +
+                        '<select required class="select-child1" required type="number" min="0" max="9" value="" name="child_' + (i) + '_' + (y) + '">';
+                    for (var a = 0; a < 10; a++) {
+                        var selected = '';
+                        if (details.ChildAges[y] == a) {
+                            selected = 'selected="selected"';
+                        }
+                        cadena += '<option value="' + a + '" ' + selected + '>' + a + '</option>';
+                    }
 
-					cadena+='</select>'+
-						'<label>Children</label>'+
-						'</div></div>';
-				}
-				cadena+='<div>';
-				$("#dataChild").append(cadena);
-			}
-		};
+                    cadena += '</select>' +
+                        '<label>Children</label>' +
+                        '</div></div>';
+                }
+                cadena += '<div>';
+                $("#dataChild").append(cadena);
+            }
+        }
+        ;
 
-		$("#dataChild1").html("");
+        $("#dataChild1").html("");
 
-		var num=room[0].ChildAges.length;
-		if(num!=0) {
-			var cadena = '<div class="col s12">' +
-				'<div class="col s12"><h6 class="red lighten-3 white-text" style="padding:5px;">Children on room <span id="numHab">1</span></h6></div>';
-			for (var i = 0; i < num; i++) {
-				cadena += '<div class="col s6 m3">' +
-					'<h6 class="red-text" style="padding:5px;">Child <span id="numHab">' + (i + 1) + '</span></h6>' +
-					'<div class="input-field col s12">' +
-					'<select required class="select-child" required type="number" min="0" max="9" value="" name="child_0_' + i + '">';
-				for (var a = 0; a < 10; a++) {
-					var selected = '';
-					if (room[0].ChildAges[i] == a) {
-						selected = 'selected="selected"';
-					}
-					cadena += '<option value="' + a + '" ' + selected + '>' + a + '</option>';
-				}
+        var num = room[0].ChildAges.length;
+        if (num != 0) {
+            var cadena = '<div class="col s12">' +
+                '<div class="col s12"><h6 class="red lighten-3 white-text" style="padding:5px;">Children on room <span id="numHab">1</span></h6></div>';
+            for (var i = 0; i < num; i++) {
+                cadena += '<div class="col s6 m3">' +
+                    '<h6 class="red-text" style="padding:5px;">Child <span id="numHab">' + (i + 1) + '</span></h6>' +
+                    '<div class="input-field col s12">' +
+                    '<select required class="select-child" required type="number" min="0" max="9" value="" name="child_0_' + i + '">';
+                for (var a = 0; a < 10; a++) {
+                    var selected = '';
+                    if (room[0].ChildAges[i] == a) {
+                        selected = 'selected="selected"';
+                    }
+                    cadena += '<option value="' + a + '" ' + selected + '>' + a + '</option>';
+                }
 
-				cadena += '</select>' +
-					'<label>Children</label>' +
-					'</div></div>';
-			}
-			cadena += '<div>';
-			$("#dataChild1").append(cadena);
-		}
-
+                cadena += '</select>' +
+                    '<label>Children</label>' +
+                    '</div></div>';
+            }
+            cadena += '<div>';
+            $("#dataChild1").append(cadena);
+        }
+    }
 }
 
 
@@ -435,7 +441,7 @@ $("#hotel_destination").MixCombo({
 
 
     function setAutocomplete(dest,zona){
-        var url="http://apilomas.dev/RestTransfers/FindDestinations.html?zona_inicio="+dest+":"+zona+"&lan=en";
+        var url="http://beta.etravelpartners.com/RestTransfers/FindDestinations.html?zona_inicio="+dest+":"+zona+"&lan=en";
         var data=[];
         $.ajax({
             url: url,

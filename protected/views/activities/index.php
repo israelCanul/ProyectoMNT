@@ -7,6 +7,7 @@
 	<div class="row">
 		<div class="col s12 m10 offset-m1">
 		  	<?php foreach($_destinos as $_destino): ?>
+
 	  			<?php if($_destino->getEnLista()){ ?>
 					<div class="small col s12 m6 l4 ">
 			          <div class="card-destinos">
@@ -16,7 +17,7 @@
 				              	<span class="card-title"></span>
 				            </div>
 				            <div class="card-content card-action hoverable contenidoDestinos">
-				              <a title="<?php echo $_destino->getNombre();?>" href="/activities/<?php echo $_destino->getClave();?>.html?isTourCategory=0&amp;tour_destination=<?php echo Yii::app()->GenericFunctions->makeUrl($_destino->getNombre());?>&amp;TourId=0">
+				              <a title="<?php echo $_destino->getNombre();?>" href="/toursByDest/<?php echo $_destino->getClave();?>.html?isTourCategory=0&amp;tour_destination=<?php echo  urlencode($_destino->getNombre());?>&amp;tipo=destination&cat=&dest=<?php echo $_destino->id;?>&TourId=&sup=&openTk=0&seg=&tour-Checkin=<?echo urlencode(date('m/d/Y', strtotime('+2 day'))); ?>&tour_adults=2&tour_child=0&action=&lan=en&moneda=USD">
 				             	 <p class="center-align textoCaja red-text"><?=$_destino->getNombre()?></p>
 				              </a>
 				            </div>
@@ -50,7 +51,7 @@
 				              	<span class="card-title"></span>
 				            </div>
 				            <div class="card-content card-action hoverable contenidoDestinos">
-				              <a  title="<?php echo $_categoria->getNombre();?>" href="/activities/Category.html?isTourCategory=<?=$_categoria->getId(); ?>&amp;tour_destination=<?= $_categoria->getClave(); ?>&amp;TourId=0">
+				              <a  title="<?php echo $_categoria->getNombre();?>" href="/toursByCat/Category.html?tour_destination=<?php echo urlencode($_categoria->getNombre());?>&tipo=category&cat=<?=$_categoria->getId(); ?>&dest=&TourId=&sup=&openTk=0&seg=&tour-Checkin=<?echo urlencode(date('m/d/Y', strtotime('+2 day'))); ?>&tour_adults=2&tour_child=0&action=&lan=en&moneda=USD">
 				              <p class="center-align textoCaja red-text"><?=$_categoria->getNombre()?></p>
 				              </a>
 				            </div>
@@ -74,7 +75,7 @@
 				      <div class="collapsible-body">
 						<?php foreach ($_categorias as $_categoria):?>
 							<?php if($_categoria->getEnLista() && $lista>=9){ ?>
-								<div class="small col s12 m6 l3 ">
+								<div class="small col s12 m6 l4 ">
 						          <div class="card-destinos">
 							          <div class="card ">
 							            <div class="card-image hoverable">
@@ -82,7 +83,7 @@
 							              	<span class="card-title"></span>
 							            </div>
 							            <div class="card-content card-action hoverable contenidoDestinos">
-							              <a  title="<?php echo $_categoria->getNombre();?>" href="/activities/Category.html?isTourCategory=<?=$_categoria->getId(); ?>&amp;tour_destination=<?= $_categoria->getClave(); ?>&amp;TourId=0">
+							              <a  title="<?php echo $_categoria->getNombre();?>" href="/toursByCat/Category.html?tour_destination=<?php echo urlencode($_categoria->getNombre());?>&tipo=category&cat=<?=$_categoria->getId(); ?>&dest=&TourId=&sup=&openTk=0&seg=&tour-Checkin=<?echo urlencode(date('m/d/Y', strtotime('+2 day'))); ?>&tour_adults=2&tour_child=0&action=&lan=en&moneda=USD">
 							              <p class="center-align textoCaja red-text"><?=$_categoria->getNombre()?></p>
 							              </a>
 							            </div>
@@ -108,7 +109,7 @@
 
 <div class="row hide-on-med-and-down">
 	<div class="col s10 offset-s1 parallax-container">
-		<div class="parallax "><img src="<?=Yii::app()->params['baseUrl']?>/images/bg/home-plane-mexiconews.jpg"></div>
+		<div class="parallax "><img src="<?=Yii::app()->params['baseUrl']?>/images/bg/footer-activities.jpg"></div>
 	</div>
 </div>
 

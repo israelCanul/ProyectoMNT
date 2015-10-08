@@ -5,9 +5,9 @@
 ?>
 
 <script type="text/javascript">
-	var HotelsData=<?= file_get_contents(Yii::app()->params["baseUrl"]."/destinations/destinations"); ?>;
-	var ToursData=<?= file_get_contents("http://apilomas.dev/restTours/destinations?lan=en"); ?>;
-	var transferData=<?= file_get_contents("http://apilomas.dev/RestTransfers/destinations.html?lan=en");?>;
+	var HotelsData=<?= file_get_contents(Yii::app()->params["baseUrl"]."destinations/destinations.html"); ?>;
+	var ToursData=<?= file_get_contents(Yii::app()->params['api']."/restTours/destinations?lan=en"); ?>;
+	var transferData=<?= file_get_contents(Yii::app()->params['api']."/RestTransfers/destinations.html?lan=en");?>;
 	//var transferDataCun=<? //file_get_contents("http://apilomas.dev/RestTransfers/destinationsOptions.html?h=0&a=1:1&lan=en");?>;
 	//var transferDataCoz=<? //file_get_contents("http://apilomas.dev/RestTransfers/destinationsOptions.html?h=0&a=361:11&lan=en");?>;
 	var fecha="<?=date('Y,m,d', strtotime('+2 day'))?>";
