@@ -1,5 +1,5 @@
 <script type="text/javascript">
-	var hotelsOrderingXML = "<?= $this->createUrl("hoteles/ordenacion"); ?>";
+	var hotelsOrderingXML = "<?= $this->createUrl("destinations/ordenacion"); ?>";
 	var searchToken = "<?= $_Cr; ?>";
 </script>
 <div class="row">
@@ -420,7 +420,7 @@
 			<div class="jplist-panel box panel-top">
 				
 				<!-- Controles -->
-				<div class="sortSearch">
+				<div class="sortSearch grey darken-2 row">
 					
 					<!-- Control de Paginacion -->
 					<!--
@@ -433,7 +433,7 @@
 					<label class="jfilterHotel" data-action = "6"> Best Deals </label>
 
 					<!-- Selector de elementos por pagina -->
-					<select class="jplist-select browser-default" data-control-type="items-per-page-select" data-control-name="paging" data-control-action="paging">
+					<select class="jplist-select browser-default" data-control-type="items-per-page-select" style="float:left;" data-control-name="paging" data-control-action="paging">
 						<option data-number="3"> 3 per page </option>
 					    <option data-number="5" data-default="true"> 5 per page </option>
 					    <option data-number="10"> 10 per page </option>
@@ -442,7 +442,7 @@
 				
 					<!-- Selector de ordenacion -->
 
-					<select id="controlSortHotels" class="jplist-select browser-default" data-control-type="sort-select" data-control-name="sort" data-control-action="sort" >
+					<select id="controlSortHotels" class="jplist-select browser-default" style="float:right;" data-control-type="sort-select" data-control-name="sort" data-control-action="sort" >
 			   			<option data-path="default">Sort by</option>
 					  	<option data-path=".price" data-order="asc" data-type="number" value="1"> Price (low to high) </option>
 				  		<option data-path=".price" data-order="desc" data-type="number" value="2"> Price (high to low) </option>
@@ -469,7 +469,7 @@
 				foreach($_Htls[0]->Hotel as $_h){
 					?>
 					<div class="title elementName" style='display:none' id="hotel_titulo_<?=$_h->attributes()->hotelId?>">
-						<a  href='<?php echo $this->createUrl('hoteles/detalle', array('hotel' => $_h->attributes()->hotel_keyword) );?>' title='<?php echo Yii::app()->GenericFunctions->makeSinAcento(utf8_decode($_h->attributes()->name)); ?>'><span class="titleHotel"><?php echo Yii::app()->GenericFunctions->makeSinAcento(utf8_decode($_h->attributes()->name)); ?><span></a>
+						<a  href='<?php echo $this->createUrl('destinations/detalle', array('hotel' => $_h->attributes()->hotel_keyword) );?>' title='<?php echo Yii::app()->GenericFunctions->makeSinAcento(utf8_decode($_h->attributes()->name)); ?>'><span class="titleHotel"><?php echo Yii::app()->GenericFunctions->makeSinAcento(utf8_decode($_h->attributes()->name)); ?><span></a>
 					</div>			
 				<?}
 			}
@@ -622,9 +622,9 @@
 						<div class='hotelContent elementData'>
 							<div class="title elementName">
 								<?php if((float)$_h->attributes()->minAverPrice == 99999999 || (float)$_h->attributes()->minAverPrice == 0){ ?>
-									<a  href='<?php echo $this->createUrl('hoteles/detalle', array('hotel' => $_h->attributes()->hotel_keyword) );?><?=$_getPrecioMax?>' title='<?php echo $_h->attributes()->name; ?>'><span class="titleHotel"><div style="display:none">z</div><?php echo Yii::app()->GenericFunctions->makeSinAcento($_h->attributes()->name); ?><span></a>
+									<a  href='<?php echo $this->createUrl('destinations/detalle', array('hotel' => $_h->attributes()->hotel_keyword) );?><?=$_getPrecioMax?>' title='<?php echo $_h->attributes()->name; ?>'><span class="titleHotel"><div style="display:none">z</div><?php echo Yii::app()->GenericFunctions->makeSinAcento($_h->attributes()->name); ?><span></a>
 								<?}else{?>
-									<a  href='<?php echo $this->createUrl('hoteles/detalle', array('hotel' => $_h->attributes()->hotel_keyword) );?><?=$_getPrecioMax?>' title='<?php echo Yii::app()->GenericFunctions->makeSinAcento(utf8_decode($_h->attributes()->name)); ?>'><span class="titleHotel"><?php echo Yii::app()->GenericFunctions->makeSinAcento($_h->attributes()->name); ?><span></a>
+									<a  href='<?php echo $this->createUrl('destinations/detalle', array('hotel' => $_h->attributes()->hotel_keyword) );?><?=$_getPrecioMax?>' title='<?php echo Yii::app()->GenericFunctions->makeSinAcento(utf8_decode($_h->attributes()->name)); ?>'><span class="titleHotel"><?php echo Yii::app()->GenericFunctions->makeSinAcento($_h->attributes()->name); ?><span></a>
 								<?}?>
 								<br/>
 								<? if($_h->attributes()->tripAd_calificacion!=""){?>
@@ -693,7 +693,7 @@
 
 							<?php 
 								if($_pPromoH["hasPromo"]){ ?>
-									<div class=' red imgValorAgregado'>
+									<div class='imgValorAgregado '>
 										<span class = "promoHotel"><?php echo $_pPromoH["promoLabel"]; ?></span>
 									</div>
 							<?php } else{?>
@@ -732,7 +732,7 @@
 									</div>
 								
 									<div class="elementBook">
-										<a class='book curved misc_select_btn_green' href='<?php echo $this->createUrl('destinations/detalle', array('hotel' => $_h->attributes()->hotel_keyword) );?><?=$_getPrecioMax?>' title='BOOK'>BOOK</a>
+										<a class='btn book curved misc_select_btn_green' href='<?php echo $this->createUrl('destinations/detalle', array('hotel' => $_h->attributes()->hotel_keyword) );?><?=$_getPrecioMax?>' title='BOOK'>BOOK</a>
 									</div>
 							<?php } ?>
 

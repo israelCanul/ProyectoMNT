@@ -3,7 +3,7 @@
 	ini_set("display_errors",1);
 	ini_set("memory_limit", -1 );
 	ini_set("xmlrpc_errors",true);
-ob_start();
+    ob_start();
 
 date_default_timezone_set('America/Cancun');
 // change the following paths if necessary

@@ -353,6 +353,7 @@ class CheckoutController extends Controller
 
             /*print_r($Productos);
             exit();*/
+            $this->layout='checkout';
             $this->render('index', array(
                 "_Htls"=>$Hoteles,
                 "ProductoStarsLevel" => $ProductoStarsLevel,

@@ -21,11 +21,11 @@
                 <div class="row">
 			    <div class="col s12 m8 offset-m2 grey lighten-3">
 			      <ul class="tabs">
-			        <li class="tab col s12 m3"><a href="#test1"><span class="hide-on-med-and-down">Flights</span><i class="material-icons hide-on-large-only small">airplanemode_active</i></a></li>
-					<li class="tab col s12 m3"><a href="#testPack"><span class="hide-on-med-and-down">Packages</span><i class="material-icons hide-on-large-only small">shop_two</i></a></li>
-			        <li class="tab col s12 m3"><a class="<?=$_REQUEST['hotel_act']?> <?=$_REQUEST['request']?>" href="#test2"><span class="hide-on-med-and-down">Hotel</span><i class="material-icons hide-on-large-only small">business</i></a></li>
-			        <li class="tab col s12 m3"><a class="<?=$_REQUEST['tour_act']?>" href="#test3"><span class="hide-on-med-and-down">Activities</span><i class="material-icons hide-on-large-only small">accessibility</i></a></li>
-			        <li class="tab col s12 m3"><a class="<?=$_REQUEST['trans_act']?>" href="#test4"><span class="hide-on-med-and-down">Transportation</span><i class="material-icons hide-on-large-only small">directions_car</i></a></li>
+			        <li class="tab col s12 m3"><a href="#test1"><span class="hide-on-med-and-down">Flights</span><i class="material-icons animated infinite wobble red-text zmdi-hc-2x hide-on-large-only">airplanemode_active</i></a></li>
+					<li class="tab col s12 m3"><a href="#testPack"><span class="hide-on-med-and-down">Packages</span><i class="material-icons animated infinite tada red-text zmdi-hc-2x hide-on-large-only">shop_two</i></a></li>
+			        <li class="tab col s12 m3"><a class="<?=$_REQUEST['hotel_act']?> <?=$_REQUEST['request']?>" href="#test2"><span class="hide-on-med-and-down">Hotel</span><i class="zmdi red-text zmdi-hotel animated infinite wobble red-text zmdi-hc-2x hide-on-large-only"></i></a></li>
+			        <li class="tab col s12 m3"><a class="<?=$_REQUEST['tour_act']?>" href="#test3"><span class="hide-on-med-and-down">Activities</span><i class="zmdi zmdi-directions-bike animated red-text infinite tada zmdi-hc-2x hide-on-large-only"></i></a></li>
+			        <li class="tab col s12 m3"><a class="<?=$_REQUEST['trans_act']?>" href="#test4"><span class="hide-on-med-and-down">Transportation</span><i class="zmdi zmdi-car-taxi animated infinite red-text wobble zmdi-hc-2x hide-on-large-only"></i></a></li>
 			      </ul>
 			    </div>
                 </div>
@@ -215,7 +215,7 @@
 					</div>
 				  <? if($_REQUEST['request']==1 && isset($_REQUEST['request'])){ ?>
 					<div class="col s12">
-						<a class="btn  col s12" id="ocultarContenedorBookin">
+						<a class="btn grey darken-2  col s12" id="ocultarContenedorBookin">
 							Change Parameters
 						</a>
 					</div>

@@ -1,15 +1,14 @@
 header{
-    background:url('/images/bg/destination.jpg');
-    background-size:cover;
+    background:#212121 !important;
 }
 .completo {
     width: 100%;
 }
 a{
-	color: #ee6e73;
+	color: #FF5A14;
 }
 a:hover{
-	color:#ee6e73;
+	color:#FF5A14;
     cursor: pointer;
 }
 #main_tours .cotiza_tour_extra, #main_hotels .cotiza_hotel_extra {
@@ -36,7 +35,7 @@ a:hover{
 #main_tours .cotiza_tour_extra input[type='submit'], #main_hotels .cotiza_hotel_extra input[type='submit'], #main_tours .rate_tour_extra input[type='submit'] {
     width: 10rem;
     font-size: 10pt;
-    background-color: #ee6e73;
+    background-color: #FF5A14;
     color: #fff;
     cursor: pointer
 }
@@ -227,7 +226,7 @@ a:hover{
 }
 
 .background_green {
-    background-color: #ee6e73;
+    background-color: #FF5A14;
     color: #fff
 }
 
@@ -271,13 +270,13 @@ a:hover{
 }
 
 .checkout_div_price label.label_price {
-    color: #ee6e73;
+    color: #FF5A14;
     font-size: 1.3rem;
     margin-bottom: 15px
 }
 
 .checkout_div_price a {
-    background-color: #ee6e73;
+    background-color: #FF5A14;
     color: white;
     padding: 5px 12px;
     text-align: center
@@ -341,7 +340,7 @@ a:hover{
 }
 
 .checkout_box_prod_transfer .upscale {
-    color: #ee6e73;
+    color: #FF5A14;
     font-size: 1.5rem
 }
 
@@ -409,7 +408,7 @@ a:hover{
 }
 
 .shopping_continue {
-    background: #ee6e73;
+    background: #FF5A14;
     padding: 5px 15px;
     float: right;
     margin-right: 5px;
@@ -441,7 +440,7 @@ a:hover{
 
 .shopping_continue_tablet a {
     color: white;
-    background: #ee6e73;
+    background: #FF5A14;
     padding: 5px 15px;
     margin-right: 15px
 }
@@ -524,12 +523,12 @@ a:hover{
 
 .suplement_your_trip {
     margin: 0px 0px 22px 11px;
-    color: #ee6e73;
+    color: #FF5A14;
     font-size: 1.3rem
 }
 
 .title_product_recomendation {
-    color: #ee6e73;
+    color: #FF5A14;
     font-size: 1.6rem;
     background-color: rgb(247, 247, 247)
 }
@@ -539,7 +538,7 @@ a:hover{
 }
 
 .title_product_recomendation {
-    color: #ee6e73;
+    color: #FF5A14;
     font-size: 1.6rem;
     background-color: #F7F7F7;
     margin: 0px;

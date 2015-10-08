@@ -40,7 +40,7 @@ $_SESSION['home']='listo';
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!-- css para la pagina -->
 	<link rel="stylesheet" href="/css/animate.css">
-    <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css">
+    <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/checkout.css">
 
 
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
@@ -66,7 +66,7 @@ $_SESSION['home']='listo';
 	  <nav>
 	    <div class="nav-wrapper">
 	      <a href="#!" class="brand-logo hide-on-large-only"><img class="imgLogo" src="<?=Yii::app()->params['baseUrl']?>/images/icon/logo.svg"></a>
-	      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+	      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons red-text">menu</i></a>
 	      <div class="row">
 		    <div class="col m10 l10 offset-m1 offset-l1">
 		    	<center>
@@ -164,19 +164,9 @@ $_SESSION['home']='listo';
 	</div>
 </header>
 
-<div class="row" style="height: 500px;"></div>
-
+<div class="row" style="height: 124px;"></div>
 <main>
-	<!-- formulario de bookin [inicio] -->
 
-	<div class="row bookin-form1" style="z-index:10;position: relative;">
-		<div class="col s12">
-			<?php	$this->widget('application.components.Bookingbox'); ?>
-			<?php $fecha = date("d/m/Y",mktime(0,0,0,date("m"),date("d")+3,date("Y"))); ?>
-		</div>
-	</div>
-
-	<!-- formulario de bookin [final] -->
 <?php echo $content; ?>
 
 </main>

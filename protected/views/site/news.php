@@ -17,11 +17,11 @@
 		              <span class="card-title"><?=$value['alt']?></span>
 		            </div>
 		            <div class="card-content">
-						<a class="black-text " href="<?=Yii::app()->params['news'].$value['uri']."/"?>"><h5><?=$value['titulo']?></h5></a>
+						<a class="black-text " target="_blank" href="<?=Yii::app()->params['news'].$value['uri']."/"?>"><h5><?=$value['titulo']?></h5></a>
 						<p><?=$value['meta_description']?></p>
 		            </div>
 		            <div class="card-action">
-		              <a class="blue-text text-darken-2" href="<?=Yii::app()->params['news'].$value['uri']."/"?>">Read more</a>
+		              <a class="blue-text text-darken-2" target="_blank" href="<?=Yii::app()->params['news'].$value['uri']."/"?>">Read more</a>
 		            </div>
 		        </div>
 		        </div>
