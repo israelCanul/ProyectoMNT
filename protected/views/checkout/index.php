@@ -477,7 +477,7 @@ $checkOutDate='';
                                                 $preciosaB = "871". "<span class='currency_code'>" . $_SESSION["config"]["currency"] . "</span>";
                                             }?>
                                             <div class="promotion_home_info_displayer checkout">
-                                                <a href="/hotel/<?php echo $urlHotel; ?>.html" title="<?= $p->attributes()->name; ?>"  class="btn_img_tour_link curved">
+                                                <a href="/destination/<?php echo $urlHotel; ?>.html" title="<?= $p->attributes()->name; ?>"  class="btn_img_tour_link curved">
                                                     <img class="full-width" src='<?php echo $p->attributes()->thumb; ?>' alt='<?php echo utf8_decode($p->attributes()->name); ?>' />
                                                 </a>
                                                 <h1 class="misc_book_info_txt_home nametur_mobile ">
@@ -490,9 +490,9 @@ $checkOutDate='';
                                                     <div class="fontsize_mobil">
                                                         <h1 class="misc_book_info_txt_home nametour_desk">
                                                             <?php if((float)$p->attributes()->minAverPrice == 99999999 || (float)$p->attributes()->minAverPrice == 0){ ?>
-                                                                <a  href='/hotel/<?php echo $urlHotel; ?>.html' title='<?php echo Yii::app()->GenericFunctions->makeSinAcento(utf8_decode($p->attributes()->name)); ?>'><span class="titleHotel"><div style="display:none">z</div><?php echo Yii::app()->GenericFunctions->makeSinAcento(utf8_decode($p->attributes()->name)); ?><span></a>
+                                                                <a  href='/destination/<?php echo $urlHotel; ?>.html' title='<?php echo Yii::app()->GenericFunctions->makeSinAcento(utf8_decode($p->attributes()->name)); ?>'><span class="titleHotel"><div style="display:none">z</div><?php echo Yii::app()->GenericFunctions->makeSinAcento($p->attributes()->name); ?><span></a>
                                                             <?}else{?>
-                                                                <a  href='/hotel/<?php echo $urlHotel; ?>.html' title='<?php echo Yii::app()->GenericFunctions->makeSinAcento(utf8_decode($p->attributes()->name)); ?>'><span class="titleHotel"><?php echo Yii::app()->GenericFunctions->makeSinAcento(utf8_decode($p->attributes()->name)); ?><span></a>
+                                                                <a  href='/destination/<?php echo $urlHotel; ?>.html' title='<?php echo Yii::app()->GenericFunctions->makeSinAcento(utf8_decode($p->attributes()->name)); ?>'><span class="titleHotel"><?php echo Yii::app()->GenericFunctions->makeSinAcento($p->attributes()->name); ?><span></a>
                                                             <?}?>
                                                         </h1>
                                                         <label >Location: <?= Yii::app()->GenericFunctions->makeSinAcento(utf8_decode($p->Location->attributes()->city)); ?></label>
@@ -501,7 +501,7 @@ $checkOutDate='';
                                                             echo substr($p->attributes()->desc,0,190);
                                                             ?>
                                                         </label>
-                                                        <a class = 'checkut_moredetails' href="/hotel/<?php echo $urlHotel; ?>.html">More Details</a>
+                                                        <a class = 'checkut_moredetails' href="/destination/<?php echo $urlHotel; ?>.html">More Details</a>
                                                     </div>
                                                     <div class="checkout_div_price row">
                                                         <span class="elementCategory"><?php echo Yii::app()->GenericFunctions->makeStars((float)$p->attributes()->starsLevel); ?></span>
@@ -519,7 +519,7 @@ $checkOutDate='';
                                                                 </article>
                                                             <?php } ?>
                                                         </label>
-                                                        <a class="fontsize_mobil a_selectDatesHotel  col s12" href="/hotel/<?php echo $urlHotel; ?>.html" >BOOK</a>
+                                                        <a class="fontsize_mobil a_selectDatesHotel  col s12" href="/destination/<?php echo $urlHotel; ?>.html" >BOOK</a>
                                                     </div>
                                                 </div>
                                                 <div class="hide div_hotelExtra">

@@ -19,6 +19,7 @@ label {
     min-height: 100vh;
     flex-direction: column;
   }
+
 /* modales*/
 
 .inActiveM{
@@ -472,3 +473,6 @@ a,a:hover{color:black}
     transform: translateY(-140%);
 }
 
+.imagen-footer{
+  width:70%;
+}

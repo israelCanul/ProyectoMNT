@@ -69,7 +69,7 @@ class SiteController extends Controller
 												AND buen_entendedor=0
 												GROUP BY img.`idcontenido` 
 												ORDER BY fecha DESC 
-												limit 0,25")->queryAll();		
+												limit 0,25")->queryAll();
 
 		/* enviar las trending notes de Mexico news en la seccio9n de travel*/
 		$notasFooter=Yii::app()->GenericFunctions->notasFooter();

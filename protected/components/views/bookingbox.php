@@ -15,7 +15,7 @@
 <script type="text/javascript" src="<?php echo Yii::app()->params["baseUrl"]; ?>/js/bookin-box.js"></script>
 <link type="text/css" rel="stylesheet" href="/css/page/booking.min.css"  media="screen,projection"/>
 
-			<div class="col s12"><center><label>Reserve your vacation in mexico</label></center></div>
+			<div class="col s12"><center><label id="labelInBookin">Reserve your vacation in Mexico</label></center></div>
 			<div class="col s12 m10  offset-m1 grey lighten-3 bookin">
 			  <div class="row ">
                 <div class="row">
