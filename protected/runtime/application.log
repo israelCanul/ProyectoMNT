@@ -8242,3 +8242,338 @@ Stack trace:
 #1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
 #2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
 #3 {main} REQUEST_URI=/favicon.ico
+2015/10/12 12:16:07 [error] [php] file_get_contents() [<a href='function.file-get-contents'>function.file-get-contents</a>]: php_network_getaddresses: getaddrinfo failed: Host desconocido.  (C:\AppServ\www\mexico-news-travel\protected\components\views\bookingbox.php:9)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(88): Bookingbox->renderInternal()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\widgets\CWidget.php(242): Bookingbox->renderFile()
+#2 C:\AppServ\www\mexico-news-travel\protected\components\Bookingbox.php(138): Bookingbox->render()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(166): Bookingbox->run()
+#4 C:\AppServ\www\mexico-news-travel\protected\views\layouts\main.php(175): SiteController->widget()
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(119): require()
+#6 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(88): SiteController->renderInternal()
+#7 C:\AppServ\www\mexico-news-travel\lib\yii\web\widgets\CContentDecorator.php(78): SiteController->renderFile()
+#8 C:\AppServ\www\mexico-news-travel\lib\yii\web\widgets\CContentDecorator.php(56): CContentDecorator->decorate()
+#9 C:\AppServ\www\mexico-news-travel\lib\yii\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput()
+#10 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(199): CContentDecorator->run()
+#11 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(294): SiteController->endWidget()
+#12 C:\AppServ\www\mexico-news-travel\protected\views\layouts\column1.php(6): SiteController->endContent()
+#13 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(119): require()
+#14 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(88): SiteController->renderInternal()
+#15 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(781): SiteController->renderFile()
+#16 C:\AppServ\www\mexico-news-travel\protected\controllers\SiteController.php(54): SiteController->render()
+#17 C:\AppServ\www\mexico-news-travel\lib\yii\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#18 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams()
+#19 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): SiteController->runAction()
+#20 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): SiteController->runActionWithFilters()
+#21 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): SiteController->run()
+#22 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#23 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#24 C:\AppServ\www\mexico-news-travel\index.php(23): CWebApplication->run()
+REQUEST_URI=/
+2015/10/12 12:49:57 [error] [exception.CException] exception 'CException' with message 'GenericFunctions and its behaviors do not have a method or closure named "buildFlightTimeCombo".' in C:\AppServ\www\mexico-news-travel\lib\yii\base\CComponent.php:269
+Stack trace:
+#0 [internal function]: CComponent->__call('buildFlightTime...', Array)
+#1 C:\AppServ\www\mexico-news-travel\protected\views\checkout\detalle.php(152): GenericFunctions->buildFlightTimeCombo()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(119): require('C:\AppServ\www\...')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(88): CBaseController->renderInternal('C:\AppServ\www\...', Array, true)
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(866): CBaseController->renderFile('C:\AppServ\www\...', Array, true)
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(779): CController->renderPartial('detalle', Array, true)
+#6 C:\AppServ\www\mexico-news-travel\protected\controllers\CheckoutController.php(441): CController->render('detalle', Array)
+#7 C:\AppServ\www\mexico-news-travel\lib\yii\web\actions\CInlineAction.php(50): CheckoutController->actionDetalle()
+#8 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams(Array)
+#9 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): CController->runAction(Object(CInlineAction))
+#10 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('detalle')
+#12 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('checkout/detall...')
+#13 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#14 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#15 {main} REQUEST_URI=/checkout/detalle.html
+2015/10/12 12:59:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "hoteles/destinations".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('hoteles/destina...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/hoteles/destinations
+2015/10/12 12:59:03 [error] [php] file_get_contents(http://mexico-news.com.dev/hoteles/destinations) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: HTTP request failed! HTTP/1.0 404 CHttpException
+ (C:\AppServ\www\mexico-news-travel\protected\views\checkout\detalle.php:570)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(88): CheckoutController->renderInternal()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(866): CheckoutController->renderFile()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(779): CheckoutController->renderPartial()
+#3 C:\AppServ\www\mexico-news-travel\protected\controllers\CheckoutController.php(441): CheckoutController->render()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\actions\CInlineAction.php(50): CheckoutController->actionDetalle()
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams()
+#6 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): CheckoutController->runAction()
+#7 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): CheckoutController->runActionWithFilters()
+#8 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CheckoutController->run()
+#9 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#10 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#11 C:\AppServ\www\mexico-news-travel\index.php(23): CWebApplication->run()
+REQUEST_URI=/checkout/detalle.html
+2015/10/12 13:01:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/page/checkout.min.css".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('css/page/checko...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=//css/page/checkout.min.css
+2015/10/12 13:01:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/hoteles-min.js".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('js/hoteles-min....')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=//js/hoteles-min.js
+2015/10/12 13:01:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/tarjetas.png".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('img/tarjetas.pn...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/img/tarjetas.png
+2015/10/12 13:02:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/hoteles-min.js".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('js/hoteles-min....')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=//js/hoteles-min.js
+2015/10/12 13:02:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/tarjetas.png".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('img/tarjetas.pn...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/img/tarjetas.png
+2015/10/12 13:03:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/hoteles-min.js".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('js/hoteles-min....')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=//js/hoteles-min.js
+2015/10/12 13:03:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/tarjetas.png".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('img/tarjetas.pn...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/img/tarjetas.png
+2015/10/12 13:08:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/tarjetas.png".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('img/tarjetas.pn...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/img/tarjetas.png
+2015/10/12 13:20:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "privacidad".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('privacidad')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('privacidad')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('site/privacidad')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#5 {main} REQUEST_URI=/site/privacidad.html
+2015/10/12 13:22:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/tarjetas.png".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('img/tarjetas.pn...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/img/tarjetas.png
+2015/10/12 13:23:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/tarjetas.png".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('img/tarjetas.pn...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/img/tarjetas.png
+2015/10/12 13:44:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/tarjetas.png".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('img/tarjetas.pn...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/img/tarjetas.png
+2015/10/12 13:45:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/tarjetas.png".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('img/tarjetas.pn...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/img/tarjetas.png
+2015/10/12 13:45:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/tarjetas.png".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('img/tarjetas.pn...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/img/tarjetas.png
+2015/10/12 13:45:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/tarjetas.png".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('img/tarjetas.pn...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/img/tarjetas.png
+2015/10/13 14:14:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2015/10/14 16:32:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2015/10/19 17:37:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2015/10/20 16:07:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2015/10/20 16:07:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=//css/images/ui-bg_flat_75_ffffff_40x100.png
+2015/10/21 18:18:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2015/10/22 11:46:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2015/10/22 15:21:09 [error] [php] simplexml_load_string() [<a href='function.simplexml-load-string'>function.simplexml-load-string</a>]: Entity: line 1: parser error : Start tag expected, '&lt;' not found (C:\AppServ\www\mexico-news-travel\protected\components\WebServices.php:80)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\actions\CInlineAction.php(50): CheckoutController->actionIndex()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): CheckoutController->runAction()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): CheckoutController->runActionWithFilters()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CheckoutController->run()
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#6 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#7 C:\AppServ\www\mexico-news-travel\index.php(23): CWebApplication->run()
+REQUEST_URI=/checkout/index.html
+2015/10/22 15:21:35 [error] [php] simplexml_load_string() [<a href='function.simplexml-load-string'>function.simplexml-load-string</a>]: Entity: line 1: parser error : Start tag expected, '&lt;' not found (C:\AppServ\www\mexico-news-travel\protected\components\WebServices.php:80)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\actions\CInlineAction.php(50): CheckoutController->actionIndex()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): CheckoutController->runAction()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): CheckoutController->runActionWithFilters()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CheckoutController->run()
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#6 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#7 C:\AppServ\www\mexico-news-travel\index.php(23): CWebApplication->run()
+REQUEST_URI=/checkout/index.html
+2015/10/22 15:21:42 [error] [php] simplexml_load_string() [<a href='function.simplexml-load-string'>function.simplexml-load-string</a>]: Entity: line 1: parser error : Start tag expected, '&lt;' not found (C:\AppServ\www\mexico-news-travel\protected\components\WebServices.php:80)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\actions\CInlineAction.php(50): CheckoutController->actionIndex()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): CheckoutController->runAction()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): CheckoutController->runActionWithFilters()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CheckoutController->run()
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#6 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#7 C:\AppServ\www\mexico-news-travel\index.php(23): CWebApplication->run()
+REQUEST_URI=/checkout/index.html
+2015/10/22 15:23:36 [error] [php] simplexml_load_string() [<a href='function.simplexml-load-string'>function.simplexml-load-string</a>]: Entity: line 1: parser error : Start tag expected, '&lt;' not found (C:\AppServ\www\mexico-news-travel\protected\components\WebServices.php:80)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\actions\CInlineAction.php(50): CheckoutController->actionIndex()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): CheckoutController->runAction()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): CheckoutController->runActionWithFilters()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CheckoutController->run()
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#6 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#7 C:\AppServ\www\mexico-news-travel\index.php(23): CWebApplication->run()
+REQUEST_URI=/checkout/index.html
+2015/10/22 15:27:26 [error] [php] simplexml_load_string() [<a href='function.simplexml-load-string'>function.simplexml-load-string</a>]: Entity: line 1: parser error : Start tag expected, '&lt;' not found (C:\AppServ\www\mexico-news-travel\protected\components\WebServices.php:80)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\actions\CInlineAction.php(50): CheckoutController->actionIndex()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): CheckoutController->runAction()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): CheckoutController->runActionWithFilters()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CheckoutController->run()
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#6 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#7 C:\AppServ\www\mexico-news-travel\index.php(23): CWebApplication->run()
+REQUEST_URI=/checkout/index.html
+2015/10/22 16:59:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "validar".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('validar')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('validar')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('checkout/valida...')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#5 {main} REQUEST_URI=/checkout/validar.html
+2015/10/22 18:04:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "privacidad".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('privacidad')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('privacidad')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('site/privacidad')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#5 {main} REQUEST_URI=/site/privacidad.html
+2015/10/22 18:11:20 [error] [php] YiiBase::include(TestCard.php) [<a href='yiibase.include'>yiibase.include</a>]: failed to open stream: No such file or directory (C:\AppServ\www\mexico-news-travel\lib\yii\YiiBase.php:421)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\protected\controllers\CheckoutController.php(514): spl_autoload_call()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\actions\CInlineAction.php(50): CheckoutController->actionValidar()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): CheckoutController->runAction()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): CheckoutController->runActionWithFilters()
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CheckoutController->run()
+#6 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#7 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#8 C:\AppServ\www\mexico-news-travel\index.php(23): CWebApplication->run()
+REQUEST_URI=/checkout/validar.html
+2015/10/22 18:12:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "privacidad".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('privacidad')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('privacidad')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('site/privacidad')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#5 {main} REQUEST_URI=/site/privacidad.html
+2015/10/22 18:19:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/page/text.min.css".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('css/page/text.m...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=//css/page/text.min.css?a=1
+2015/10/22 18:20:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/page/text.min.css".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('css/page/text.m...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=//css/page/text.min.css?a=1
+2015/10/22 18:23:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/page/text.min.css".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('css/page/text.m...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=//css/page/text.min.css?a=1
+2015/10/22 18:24:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/page/text.min.css".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('css/page/text.m...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=//css/page/text.min.css?a=1
+2015/10/22 18:25:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/page/text.min.css".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('css/page/text.m...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=//css/page/text.min.css?a=1
+2015/10/22 18:27:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/page/text.min.css".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('css/page/text.m...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=//css/page/text.min.css?a=1
+2015/10/22 18:27:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/page/text.min.css".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('css/page/text.m...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=//css/page/text.min.css?a=1

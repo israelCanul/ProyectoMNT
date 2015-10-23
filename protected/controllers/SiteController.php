@@ -97,10 +97,15 @@ class SiteController extends Controller
 				echo $error['message'];
 			else
 				$this->render('error', $error);
-		}
+		} 
 	}
 
-
-
+	public function actionPrivacy(){	    	
+		$cs = Yii::app()->getclientScript();
+		$cs->registerCssFile(Yii::app()->params["baseUrl"].'/css/page/text.min.css?a='. Yii::app()->params['assets'],'screen, projection');
+		$cs->registerCssFile(Yii::app()->params["baseUrl"].'/css/page/checkout/checkout.css?a='. Yii::app()->params['assets'],'screen, projection');
+		$this->layout='checkout';
+		$this->render("privacy");	    	
+	}
 
 }

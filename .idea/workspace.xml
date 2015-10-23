@@ -2,50 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85593adb-4e57-432e-bffb-001c130550c8" name="Default" comment="modificaciones del dia">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/components/BreadCrumb.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/controllers/CheckoutController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/controllers/ExtrasController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/controllers/TrasladosController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/page/activities/activities-detail.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/page/activities/activities-list.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/page/activities/activities.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/page/activities/activities.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/page/checkout/checkout.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/page/checkout/checkout.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/views/checkout/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/views/activities/listTours.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/controllers/CheckoutController.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/views/activities/listToursOld.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/page/ofertas/ofertas.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/views/activities/tour.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tourDetalle.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/page/activities/tours.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/page/activities/tours.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/transferList.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/page/activities/tours.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/page/checkout/checkout.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/tourDetalle.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/page/activities/activities-detail.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/components/BreadCrumb.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/controllers/TrasladosController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/page/activities/activities.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/views/checkout/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/page/activities/tours.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/views/activities/tour.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/page/activities/activities-list.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/page/transfers/transfers.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/page/transfers/transfers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/views/traslados/traslados.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/page/activities/activities.min.css" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/validate.jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/bg/puertaLeft.jpg" afterPath="$PROJECT_DIR$/images/bg/puertaLeft.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/bg/puertaRight.jpg" afterPath="$PROJECT_DIR$/images/bg/puertaRight.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Activities.php" afterPath="$PROJECT_DIR$/protected/models/Activities.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Activity.php" afterPath="$PROJECT_DIR$/protected/models/Activity.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/ActivityCategory.php" afterPath="$PROJECT_DIR$/protected/models/ActivityCategory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/yii/zii/widgets/grid/CButtonColumn.php" afterPath="$PROJECT_DIR$/lib/yii/zii/widgets/grid/CButtonColumn.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Destination.php" afterPath="$PROJECT_DIR$/protected/models/Destination.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Destinations.php" afterPath="$PROJECT_DIR$/protected/models/Destinations.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/GenericFunctions.php" afterPath="$PROJECT_DIR$/protected/components/GenericFunctions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/page/ofertas/ofertas.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/page/checkout/checkout.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/controllers/ExtrasController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/views/traslados/traslados.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/page/transfers/transfers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/MexInit.php" afterPath="$PROJECT_DIR$/protected/components/MexInit.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Activity.php" afterPath="$PROJECT_DIR$/protected/models/Activity.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Activities.php" afterPath="$PROJECT_DIR$/protected/models/Activities.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/config/main.php" afterPath="$PROJECT_DIR$/protected/config/main.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery-ui.js" afterPath="$PROJECT_DIR$/js/jquery-ui.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/bg/puertaRight.jpg" afterPath="$PROJECT_DIR$/images/bg/puertaRight.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Destination.php" afterPath="$PROJECT_DIR$/protected/models/Destination.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/site/index.php" afterPath="$PROJECT_DIR$/protected/views/site/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/components/GenericFunctions.php" afterPath="$PROJECT_DIR$/protected/components/GenericFunctions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/layouts/main.php" afterPath="$PROJECT_DIR$/protected/views/layouts/main.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Destinations.php" afterPath="$PROJECT_DIR$/protected/models/Destinations.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/SiteController.php" afterPath="$PROJECT_DIR$/protected/controllers/SiteController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/animate.css" afterPath="$PROJECT_DIR$/css/animate.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/runtime/application.log" afterPath="$PROJECT_DIR$/protected/runtime/application.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/site/index.php" afterPath="$PROJECT_DIR$/protected/views/site/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery-ui.js" afterPath="$PROJECT_DIR$/js/jquery-ui.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/ActivityCategory.php" afterPath="$PROJECT_DIR$/protected/models/ActivityCategory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/bg/puertaLeft.jpg" afterPath="$PROJECT_DIR$/images/bg/puertaLeft.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/config/main.php" afterPath="$PROJECT_DIR$/protected/config/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/layouts/main.php" afterPath="$PROJECT_DIR$/protected/views/layouts/main.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/runtime/application.log" afterPath="$PROJECT_DIR$/protected/runtime/application.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/yii/zii/widgets/grid/CButtonColumn.php" afterPath="$PROJECT_DIR$/lib/yii/zii/widgets/grid/CButtonColumn.php" />
     </list>
     <ignored path="mexico-news-travel.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -487,7 +487,6 @@
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15454546" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24472573" sideWeight="0.50625" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -496,6 +495,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -800,7 +800,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.073913045">
           <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -871,7 +870,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="102" selection-start-line="7" selection-start-column="102" selection-end-line="7" selection-end-column="102" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -879,7 +877,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="76" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -887,9 +884,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="105" column="48" selection-start-line="105" selection-start-column="48" selection-end-line="105" selection-end-column="48" />
-          <folding>
-            <marker date="1444258034860" expanded="true" signature="-1:-1" placeholder="Select venta..venta..." />
-          </folding>
         </state>
       </provider>
     </entry>

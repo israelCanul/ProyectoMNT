@@ -261,5 +261,28 @@ class GenericFunctions extends CApplicationComponent{
 		$cs->registerScriptFile(Yii::app()->params["baseUrl"].'/build/transferList.js?a='. Yii::app()->params['assets'],CClientScript::POS_END);
 		$cs->registerScriptFile(Yii::app()->params["baseUrl"].'/js/page/transfers/transfers.js?a='. Yii::app()->params['assets'],CClientScript::POS_END);
 	}
+
+	public function buildFlightTimeCombo(){
+	         $xHTML = "";
+	         	for($h=0; $h <= 11; $h++){
+		         	for($m = 0; $m <= 55; $m+=5){
+			         	$xHTML .= "<option value='" . str_pad($h, 2, "0", STR_PAD_LEFT) . ":" . str_pad($m, 2, "0", STR_PAD_LEFT) . " am'>" . str_pad($h, 2, "0", STR_PAD_LEFT) . ":" . str_pad($m, 2, "0", STR_PAD_LEFT) . " am</option>";
+		         	}
+	         	}
+			 	$h = 12;
+		        for($m = 0; $m <= 55; $m+=5){
+		         	if($m == 0){
+			         	$xHTML .= "<option selected='selected' value='" . str_pad($h, 2, "0", STR_PAD_LEFT) . ":" . str_pad($m, 2, "0", STR_PAD_LEFT) . " pm'>" . str_pad($h, 2, "0", STR_PAD_LEFT) . ":" . str_pad($m, 2, "0", STR_PAD_LEFT) . " pm</option>";
+		         	}else{
+			         	$xHTML .= "<option value='" . str_pad($h, 2, "0", STR_PAD_LEFT) . ":" . str_pad($m, 2, "0", STR_PAD_LEFT) . " pm'>" . str_pad($h, 2, "0", STR_PAD_LEFT) . ":" . str_pad($m, 2, "0", STR_PAD_LEFT) . " pm</option>";
+		         	}
+	         	}
+	         	for($h=1; $h <= 11; $h++){
+			         for($m = 0; $m <= 55; $m+=5){
+			         	$xHTML .= "<option value='" . str_pad($h, 2, "0", STR_PAD_LEFT) . ":" . str_pad($m, 2, "0", STR_PAD_LEFT) . " pm'>" . str_pad($h, 2, "0", STR_PAD_LEFT) . ":" . str_pad($m, 2, "0", STR_PAD_LEFT) . " pm</option>";
+		         	}
+	         	}
+	    return $xHTML;
+    }
 }
 ?>

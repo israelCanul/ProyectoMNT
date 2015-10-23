@@ -495,7 +495,7 @@ $checkOutDate='';
                                                                 <a  href='/destination/<?php echo $urlHotel; ?>.html' title='<?php echo Yii::app()->GenericFunctions->makeSinAcento(utf8_decode($p->attributes()->name)); ?>'><span class="titleHotel"><?php echo Yii::app()->GenericFunctions->makeSinAcento($p->attributes()->name); ?><span></a>
                                                             <?}?>
                                                         </h1>
-                                                        <label >Location: <?= Yii::app()->GenericFunctions->makeSinAcento(utf8_decode($p->Location->attributes()->city)); ?></label>
+                                                        <h6 >Location: <?= Yii::app()->GenericFunctions->makeSinAcento($p->Location->attributes()->city); ?></h6>
                                                         <label>
                                                             <?php
                                                             echo substr($p->attributes()->desc,0,190);

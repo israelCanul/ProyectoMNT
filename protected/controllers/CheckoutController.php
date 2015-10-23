@@ -132,7 +132,7 @@ class CheckoutController extends Controller
         /*se regreso seccion*/
         if (sizeof($Productos) > 0) {
             $this->pageTitle = ((Yii::app()->language == "es") ? "Lomas Travel: Traslados, Hoteles en Cancun, Vallarta, Los Cabos" : "Lomas Travel: Transfers & Hotels in Cancun, Vallarta, Cabos & Riviera ");
-            $this->pageDescription = ((Yii::app()->language == "es") ? "Viaja con Lomas Travel. Reserva tus boletos de avión, transportación, actividades y noches de hotel en Cancún, Los Cabos y los mejores destinos de México" : "Travel with Lomas Travel. Buy airport transfers, tours and reserve a hotel in Cancun, Vallarta, Los Cabos and Riviera Maya. Great prices guaranteed!");
+            $this->pageDescription = ((Yii::app()->language == "es") ? "Viaja con Lomas Travel. Reserva tus boletos de aviÃ³n, transportaciÃ³n, actividades y noches de hotel en CancÃºn, Los Cabos y los mejores destinos de MÃ©xico" : "Travel with Lomas Travel. Buy airport transfers, tours and reserve a hotel in Cancun, Vallarta, Los Cabos and Riviera Maya. Great prices guaranteed!");
             $this->pageKeywords = ((Yii::app()->language == "es") ? "hoteles mexico, actividades y tours, transportacion, lomas travel" : "hotels mexico, tours and activities, airport transfers mexico, lomas travel");
 
             if($hotelInfo["hotel_ciudad"] == "" || ($hotelInfo["hotel_ciudad"] >= 14 && $hotelInfo["hotel_ciudad"] <= 21)){
@@ -382,6 +382,530 @@ class CheckoutController extends Controller
             ));
         }
     }
+
+     public function actionDetalle() {
+        
+        /* aqui vamos a poner un cataogo*/
+        $Paises = Yii::app()->db->createCommand()->select('*')->from('paises')->order("PAI_NOMBRE ASC")->queryAll();
+        
+        if (isset($_REQUEST["query"])) {
+            $id = intval(Yii::app()->GenericFunctions->ShowVar($_REQUEST["query"]));
+            $_prod = VentaDescripcion::model()->findByPk($id);
+            $_prod->delete();
+            
+            $this->redirect(array(
+                "checkout/index"
+            ));
+            
+        }
+        
+        $_sql = "Select venta_id from venta where venta_session_id Like '" . $_SESSION["config"]["token"] . "' and venta_estt = '1' and venta_fecha Like '" . date("Y-m-d") . "%'";
+        $_vValidator = Venta::model()->findAllBySql($_sql);
+        
+        if ($_vValidator[0]->venta_id == 0 || $_vValidator[0]->venta_id == "") {
+            $_venta = new Venta;
+            $_venta->venta_session_id = $_SESSION["config"]["token"];
+            $_venta->venta_moneda = $_SESSION["config"]["currency"];
+            $_venta->venta_site_id = ((Yii::app()->language == "es") ? 2 : 1);
+            $_venta->venta_user_id = 0;
+            $_venta->venta_estt = 1;
+            $_venta->venta_total = 0;
+            $_venta->venta_fecha = date("Y-m-d H:i:s");
+            
+            $_venta->save();
+            $Venta = $_venta->venta_id;
+        } else {
+            $Venta = $_vValidator[0]->venta_id;
+        }
+        
+        $_Productos = VentaDescripcion::model()->findAll("descripcion_venta = :venta", array(
+            ":venta" => $Venta
+        ));
+        $Productos = array();
+        foreach ($_Productos as $_p) {
+            if (!isset($Productos[$_p->descripcion_tipo_producto])) {
+                $Productos[$_p->descripcion_tipo_producto] = array();
+            }
+            array_push($Productos[$_p->descripcion_tipo_producto], $_p);
+        }
+        
+        if (sizeof($Productos) > 0) {
+            $cs = Yii::app()->getclientScript();
+            $cs->registerScriptFile(Yii::app()->params["baseUrl"] . '/js/page/checkout/checkout.js', CClientScript::POS_END);
+            $cs->registerCssFile(Yii::app()->params["baseUrl"] . '/css/page/checkout/checkout.css');
+            
+            $this->layout='checkout';
+            $this->render('detalle', array(
+                "Productos" => $Productos,
+                "_Productos" => $_Productos,
+                "_Paises" => $Paises
+            ));
+        } else {
+            $this->redirect(array(
+                "site/index"
+            ));
+        }
+    }
+
+    public function actionValidar() {        
+         //-> Es un pago con Tarjeta de Credito
+            $GatewayMethod = explode("_", $_REQUEST["gateway_method"]);
+            
+            if (Yii::app()->language == "es" && $GatewayMethod[0] == "santander") {
+                if ($GatewayMethod[1] == 1) {
+                    Yii::app()->Santander->setVars("4018", "001", "MEX", "4018WEUS0", "4018WEUS0", "15365", "3", "MXN", "A7BEC7D1", "prod");
+                } else if ($GatewayMethod[1] == 3) {
+                    Yii::app()->Santander->setVars("4018", "001", "MEX", "4018WEUS0", "4018WEUS0", "15531", "3", "MXN", "A7BEC7D1", "prod");
+                } else if ($GatewayMethod[1] == 6) {
+                    Yii::app()->Santander->setVars("4018", "001", "MEX", "4018WEUS0", "4018WEUS0", "15532", "3", "MXN", "A7BEC7D1", "prod");
+                }
+            }
+            
+            $status = 2;
+            $sucess = false;
+            $auth = "";
+            $authCode = "";
+            $_sql = "Select venta_id from venta where venta_session_id Like '" . $_SESSION["config"]["token"] . "' and venta_estt = '1' and venta_fecha Like '" . date("Y-m-d") . "%'";
+            $_vValidator = Venta::model()->findAllBySql($_sql);
+            
+            if ($_vValidator[0]->venta_id == 0 || $_vValidator[0]->venta_id == "") {
+                $this->render("error", array(
+                    "ErrorMessage" => Yii::t("global", "No es una venta valida")
+                ));
+            } else {
+
+
+
+                /* Inserta o actualiza el cliente para la venta */
+                $_Cliente = null;
+                if ($_vValidator[0]->venta_user_id == 0) {
+                    $_Cliente = new Cliente;
+                } else {
+                    $_Cliente = Cliente::model()->findByPk($_vValidator[0]->venta_user_id);
+                }
+                $_Cliente->cliente_nombre = $_REQUEST["nombre"];
+                $_Cliente->cliente_apellido = $_REQUEST["apellido"];
+                $_Cliente->cliente_email = $_REQUEST["email"];
+                $_Cliente->cliente_pais_n = $_REQUEST["pais"];
+                $_Cliente->cliente_domicilio = $_REQUEST["direccion"];
+                $_Cliente->cliente_estado = $_REQUEST["estado"];
+                $_Cliente->cliente_ciudad = $_REQUEST["ciudad"];
+                $_Cliente->cliente_postal_code = $_REQUEST["cp"];
+                $_Cliente->cliente_telefono = $_REQUEST["telefono"];
+
+                print_r($_vValidator[0]->venta_id);
+                print_r("<pre>");
+                print_r($_Cliente->cliente_nombre);                
+                exit();                
+                $_Cliente->save();
+                $clientId = $_Cliente->cliente_id;
+                
+                $ventaUserid = Venta::model()->findByPk($_vValidator[0]->venta_id);
+                $ventaUserid->venta_user_id = $clientId;
+                $ventaUserid->save();
+                
+                /* Inserta o actualiza el cliente para la venta */
+                
+                $Venta = $_vValidator[0];
+                
+                $_Productos = VentaDescripcion::model()->findAll("descripcion_venta = :venta", array(
+                    ":venta" => $Venta->venta_id
+                ));
+                
+                $total = 0;
+                
+                foreach ($_Productos as $_p) {
+                    $total+= $_p->descripcion_total;
+                }
+                $total = number_format($total, 0, ".", "");
+                
+                $Card = TestCard::model()->find("card_number=:tarjeta", array(
+                    ":tarjeta" => $_REQUEST["numero"]
+                ));
+                if (isset($Card->card_mail)) {
+                    if ($Card->card_mail == $_REQUEST["email"] && $Card->card_month == $_REQUEST["cc_month"] && $Card->card_year == $_REQUEST["cc_year"] && $Card->card_cvv == $_REQUEST["ccv"]) {
+                        
+                        //-> Es una TestCard Valida
+                        $status = 15;
+                        $sucess = true;
+                        $authCode = Yii::app()->WebServices->getKey(11);
+                        $auth = "Test Card";
+                    } else {
+                        $this->render("error", array(
+                            "ErrorMessage" => Yii::t("global", "No es una Test Card valida")
+                        ));
+                    }
+                } else {
+                    
+                    //-> No es una TestCard vamos a cobrar
+                    
+                    //$total = 1;
+                    if ($GatewayMethod[0] == "santander") {
+                        $xml = Yii::app()->Santander->makeXML($Venta->venta_id, $Venta->venta_user_id, $total, $_REQUEST["nombre"], trim($_REQUEST["numero"]) , trim($_REQUEST["cc_month"]) , trim($_REQUEST["cc_year"]) , trim($_REQUEST["ccv"]));
+                        
+                        //$xml = Yii::app()->Santander->makeXML($Venta->venta_id,$Venta->venta_user_id,1,$_REQUEST["nombre"],trim($_REQUEST["numero"]),trim($_REQUEST["cc_month"]),trim($_REQUEST["cc_year"]),trim($_REQUEST["ccv"]));
+                        $iService = Yii::app()->Santander->callService($xml);
+                        
+                        //$answerSantander = get_object_vars($iService);
+                        
+                        $answerSantander = get_object_vars($iService);
+                        foreach ($answerSantander as $k => $v) {
+                            if (is_object($v)) {
+                                $answerSantander[$k] = get_object_vars($v);
+                            }
+                        }
+                        
+                        $tmpTns = array_merge($answerSantander, $_REQUEST);
+                        $_tns = new VentaTns;
+                        $_tns->venta_id = $Venta->venta_id;
+                        $_tns->venta_fecha = date("Y-m-d H:i:s");
+                        $_tns->venta_data = serialize($tmpTns);
+                        $_tns->save();
+                             
+                        if ($iService->response == "approved") {
+                            $Productos = array();
+                            foreach ($_Productos as $_p) {
+                                if (!isset($Productos[$_p->descripcion_tipo_producto])) {
+                                    $Productos[$_p->descripcion_tipo_producto] = array();
+                                }
+                                array_push($Productos[$_p->descripcion_tipo_producto], $_p);
+                            }
+                            $authCode = $iService->auth;
+                            $auth = "Santander";
+                            
+                            $sucess = true;
+                        } else {
+                            if ($iService->response == "denied") {
+                                
+                                /* Insertar Estado de la venta */
+                                $ventaUserid = Venta::model()->findByPk($_vValidator[0]->venta_id);
+                                $ventaUserid->venta_estt = "7";
+                                $ventaUserid->venta_total = $total;
+                                $ventaUserid->save();
+                                
+                                /* Insertar Estado de la venta */
+                                
+                                $this->render("error", array(
+                                    "ErrorMessage" => Yii::t("global", "El banco emisor denego el cargo a la tarjeta")
+                                ));
+                            } else {
+                                
+                                /* Insertar Estado de la venta */
+                                $ventaUserid = Venta::model()->findByPk($_vValidator[0]->venta_id);
+                                $ventaUserid->venta_estt = "6";
+                                $ventaUserid->venta_total = $total;
+                                $ventaUserid->save();
+                                
+                                /* Insertar Estado de la venta */
+                                
+                                $this->render("error", array(
+                                    "ErrorMessage" => $iService->nb_error
+                                ));
+                            }
+                        }
+                    }
+                    if ($GatewayMethod[0] == "hsbc") {
+                        $cs = Yii::app()->getclientScript();
+                        
+                        //$cs->registerCssFile(Yii::app()->baseUrl.'/css/cleared_checkout.css');
+                        $MerchantHSBC = array(
+                            1 => "7068547",
+                            3 => "7149668",
+                            6 => "7149673"
+                        );
+                        if (Yii::app()->language == "es") $MonedaHSBC = 484;
+                        
+                        $this->render("hsbcform", array(
+                            "_Productos" => $_Productos,
+                            "Venta" => $Venta,
+                            "merchant" => $MerchantHSBC[$GatewayMethod[1]]
+                        ));
+                    }
+                }
+        
+        
+                    if (sizeof($_REQUEST["TransferAddInfo"]) > 0) {
+                        
+                        foreach ($_REQUEST["TransferAddInfo"] as $vdId => $info) {
+                            $_vD = VentaDescripcion::model()->findByPk($vdId);
+                            
+                                $_vD->descripcion_hora_llegada_vuelo1 = $info["descripcion_hora_llegada_vuelo1"];
+                                $_vD->descripcion_num_vuelo1 = $info["descripcion_num_vuelo1"];
+                                $_vD->descripcion_linea_area1 = $info["descripcion_linea_area1"];
+
+                                $_vD->descripcion_hora_llegada_vuelo2 = $info["descripcion_hora_llegada_vuelo2"];
+                                $_vD->descripcion_num_vuelo2 = $info["descripcion_num_vuelo2"];
+                                $_vD->descripcion_linea_area2 = $info["descripcion_linea_area2"];
+                          
+                            $_vD->descripcion_serialized = serialize($_REQUEST["TransferInfoPasajeros"][$vdId]);
+                            
+                            $_vD->save();
+                        }
+                    }       
+                
+                if ($sucess) {
+            
+            foreach ($_Productos as $v) {
+            if ($v->descripcion_tipo_producto == 4) {
+                foreach ($_REQUEST["TransferInfoPasajeros"] as $vdId => $info) {
+                $_vD = VentaDescripcion::model()->findByPk($v->descripcion_id);
+                $_vD->descripcion_serialized = serialize($_REQUEST["TransferInfoPasajeros"][$vdId]);
+                $_vD->save();
+                
+                $m["mail_titulo"] = "Lomas Travel | Asistencia en tu viaje | #" . $v->descripcion_id;
+                
+                $mailAC = new PHPMailer(true);
+                $mailAC->isSMTP(); 
+                $mailAC->Host = "smtp.gmail.com";
+                $mailAC->SMTPAuth = true; 
+                $mailAC->Username = "envios@lomas-travel.com";
+                $mailAC->Password = "r5J8Rg<S";
+                $mailAC->SMTPSecure = "tls"; 
+                $mailAC->Port = 587;   
+                
+                $mailAC->SetFrom("envios@lomas-travel.com", $m["mail_titulo"]);
+                $mailAC->AddAddress("iris.flores@assistcard.com");
+                $mailAC->AddCC("egonzalez@dexabyte.com.mx");
+                $mailAC->AddCC("contratos@lomas-travel.com", "Contratos Lomas Travel");
+                $mailAC->AddBCC("lcaballero@dexabyte.com.mx");
+                
+                $link = "http://www.lomastravel.com.mx/extras/asistencia.html?id=" . Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);
+                $info = file_get_contents($link);
+                $mailAC->Subject = $m["mail_titulo"];
+                $mailAC->MsgHTML($info);
+                $mailAC->Send();                
+                }               
+            }
+            }           
+                    
+
+                    
+                    
+                    $this->pageBase = true;
+                    
+                    $_Tarjeta = new Tarjeta;
+                    $_Tarjeta->tarjeta_cliente = $clientId;
+                    $_Tarjeta->tarjeta_venta = $Venta->venta_id;
+                    $_Tarjeta->Ecom_Payment_Name = $_REQUEST["titular"];
+                    $_Tarjeta->Ecom_Payment_Card_Number = $_REQUEST["numero"];
+                    $_Tarjeta->Ecom_Payment_Card_Month = $_REQUEST["cc_month"];
+                    $_Tarjeta->Ecom_Payment_Card_Year = $_REQUEST["cc_year"];
+                    
+                    //$_Tarjeta->tipo_pago = 1; //otros santander visa
+                    $_Tarjeta->save();
+                    
+                    $_vV = Venta::model()->findByPk($Venta->venta_id);
+                    $_vV->venta_total = $total;
+                    $_vV->venta_estt = $status;
+                    $_vV->venta_user_id = $clientId;
+                    $_vV->venta_authcode = $auth;
+                    $_vV->venta_autorizador = $authCode;
+                    $_vV->tipo_pago = 2;
+                     //todo lo que venga de santander u otros
+                    if ($_SESSION["id_agente"] != "") {
+                        $_vV->venta_agente_id = $_SESSION["id_agente"];
+                         //guardo el id del agente si contiene login
+                        
+                    }
+                    $_vV->save();
+                    
+            $vende_hotel=false;
+                    foreach ($_Productos as $v) {
+            
+            
+                        if ($v->descripcion_tipo_producto == 2) {
+                            $_vD = VentaDescripcion::model()->findByPk($v->descripcion_id);
+                            $_vD->hotel_huesped = $_REQUEST["hotel_huesped"];
+                            $_vD->save();
+                        }
+            
+            
+                        //Se agrega papeleta del hotel 20140407
+                        if ($v->descripcion_tipo_producto == 1) {
+                $vende_hotel=true;
+                
+                //Nuevo Habitacion extra
+                $_sqlVentaD = "Select descripcion_serialized from venta_descripcion where descripcion_venta = " . $Venta->venta_id;
+                $_vDescrip = VentaDescripcion::model()->findAllBySql($_sqlVentaD);
+                $hab_allotment= unserialize($_vDescrip[0]->descripcion_serialized);
+                
+                //Ezequiel 20141229 Descuenta 1 habitacion del inventario extra
+                foreach($hab_allotment[0] as $key=>$info){
+                    for($i=0;$i<count($info);$i++){
+                    for($j=0;$j<count($info[$i]);$j++){
+                        $tarifaID=$info[$i][$j]['@attributes']['id'];
+                        $_sqlHab_ext = Yii::app()->dbExtranet->createCommand()->select('tarifa_hab_extra')->from('tarifas')->where("tarifa_id =" . $tarifaID)->queryRow();
+                        $hab_ext = $_sqlHab_ext['tarifa_hab_extra'];                        
+                        
+                        if($hab_ext>0){
+                        $upd_hab = $hab_ext-1;
+                        Yii::app()->dbExtranet
+                            ->createCommand("UPDATE tarifas SET tarifa_hab_extra = '".$upd_hab."' WHERE tarifa_id=:tarifa_id")
+                            ->bindValues(array(':tarifa_id' => $tarifaID))
+                            ->execute();                            
+                        }
+                    }
+                    }
+                }
+            
+                            $link_papeleta = "http://www.lomastravel.com.mx/preconfirma.html?id=" . Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);
+                            $m["mail_titulo"] = "Lomas Travel | Solicitud de Reservacion | #" . $v->descripcion_id;
+                           $mail2 = new PHPMailer(true);
+                            $mail2->isSMTP(); 
+                            $mail2->Host = "smtp.gmail.com";
+                            $mail2->SMTPAuth = true; 
+                            $mail2->Username = "envios@lomas-travel.com";
+                            $mail2->Password = "r5J8Rg<S";
+                            $mail2->SMTPSecure = "tls"; 
+                            $mail2->Port = 587;
+                            $mail2->SetFrom("envios@lomas-travel.com", $m["mail_titulo"]);
+                            
+                if($_Cliente->cliente_email!="egonzalez@dexabyte.com.mx"){
+                
+                $_contacto = Yii::app()->dbExtranet->createCommand()->select('hotel_contacto_de_reservas_mail')->from('hoteles')->where("hotel_id =" . $v->descripcion_producto_id)->queryRow();
+                $mail2->AddAddress("analista@lomas-travel.com", "Contratos Lomas Travel");
+                   
+                   $email_enviar = $_contacto['hotel_contacto_de_reservas_mail'];
+                   $lista_email = explode(";", $email_enviar);
+                   if (count($lista_email) > 0) {
+                   foreach ($lista_email as $li_email) {
+                       if (strlen(trim($li_email)) > 0) $mail2->AddCC(trim($li_email));
+                   }
+                   }
+                   $mail2->AddCC("analista2@lomas-travel.com", "Contratos Lomas Travel");
+                   $mail2->AddCC("analista3@lomas-travel.com", "Contratos Lomas Travel");
+                   $mail2->AddCC("contratos@lomas-travel.com", "Contratos Lomas Travel");
+                   $mail2->AddCC("webmaster@lomas-travel.com", "Webmaster");
+                   $mail2->AddBCC("lcaballero@dexabyte.com.mx", "Webmaster");
+                   
+                   $LatamContries = array("mx","mexico");
+                   if ($v->descripcion_adultos > 11) {
+                   $mail2->AddCC("groupsmanager@lomas-travel.com", "Gerardo Valdï¿½s");
+                   } else {
+                   if (in_array(Yii::app()->GenericFunctions->makeNormal(strtolower($_Cliente->cliente_pais_n)) , $LatamContries)) {
+                       $mail2->AddCC("afiliados@lomas-travel.com", "Gloria Quezada");
+                   } else {
+                       $mail2->AddCC("sales@lomas-travel.com", "Ventas Lomas Travel");
+                   }
+                   }            
+                
+                }else{
+                $mail2->AddAddress("egonzalez@dexabyte.com.mx");
+                }
+                   $info = file_get_contents($link_papeleta);
+                   $mail2->Subject = $m["mail_titulo"];
+                   $mail2->MsgHTML($info);
+                   $mail2->Send();                  
+                           
+                            
+                            //////////////////////////////////////////////////////////////////////////////
+                            $link_factura = "http://www.lomastravel.com.mx/factura.html?id=" . Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);
+                            $m["mail_titulo"] = "Lomas Travel | Solicitud de Factura | #" . $v->descripcion_id;
+                            $mail3 = new PHPMailer(true);
+                            $mail3->isSMTP(); 
+                            $mail3->Host = "smtp.gmail.com";
+                            $mail3->SMTPAuth = true; 
+                            $mail3->Username = "codireccion@lomas-travel.com";
+                            $mail3->Password = "YSTd=C5X";
+                            $mail3->SMTPSecure = "tls"; 
+                            $mail3->Port = 587;
+
+                            $mail3->SetFrom("codireccion@lomas-travel.com", $m["mail_titulo"]);
+                            
+                if($_Cliente->cliente_email!="egonzalez@dexabyte.com.mx"){
+                $_contacto = Yii::app()->dbExtranet->createCommand()->select('hotel_contacto_administrativo_mail')->from('hoteles')->where("hotel_id =" . $v->descripcion_producto_id)->queryRow();
+                
+                $mail3->AddAddress("analista@lomas-travel.com", "Contratos Lomas Travel");
+                $email_enviar = $_contacto['hotel_contacto_administrativo_mail'];
+                $lista_email = explode(";", $email_enviar);
+                if (count($lista_email) > 0) {
+                    foreach ($lista_email as $li_email) {
+                    if (strlen(trim($li_email)) > 0) $mail3->AddCC(trim($li_email));
+                    }
+                }
+                $mail3->AddCC("analista2@lomas-travel.com", "Contratos Lomas Travel");
+                $mail3->AddCC("analista3@lomas-travel.com", "Contratos Lomas Travel");
+                $mail3->AddCC("contratos@lomas-travel.com", "Contratos Lomas Travel");
+                $mail3->AddCC("webmaster@lomas-travel.com", "Webmaster");
+                $mail3->AddBCC("lcaballero@dexabyte.com.mx", "Webmaster");
+                $mail3->AddBCC("facteac@grupolomas.com", "Facturacion");
+                $mail3->AddBCC("codireccion@lomas-travel.com", "Facturacion");
+                
+
+                }else{
+                $mail3->AddAddress("egonzalez@dexabyte.com.mx");
+                }
+                $info = file_get_contents($link_factura);
+                $mail3->Subject = $m["mail_titulo"];
+                $mail3->MsgHTML($info);
+                $mail3->Send();             
+                        }
+            
+            }           
+                                
+            $link = "http://www.lomastravel.com/voucher.html?id=" . Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);
+            $m["mail_titulo"] = "Lomas Travel | Confirmation Letter | #" . $v->descripcion_id;
+            
+            if($vende_hotel){
+                $link = "http://www.lomastravel.com/booking-request.html?id=" . Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);
+                $m["mail_titulo"] = "Lomas Travel | Online Booking Request | #" . $v->descripcion_id; 
+            }           
+            
+                        
+            $mail = new PHPMailer(true);
+            $mail->isSMTP(); 
+            $mail->Host = "smtp.gmail.com";
+            $mail->SMTPAuth = true; 
+            $mail->Username = "envios@lomas-travel.com";
+            $mail->Password = "r5J8Rg<S";
+            $mail->SMTPSecure = "tls"; 
+            $mail->Port = 587;
+                        
+            $mail->SetFrom("envios@lomas-travel.com", $m["mail_titulo"]);
+            
+            $mail->AddAddress($_Cliente->cliente_email, "Cliente Lomas Travel");
+            
+            if($_Cliente->cliente_email!="egonzalez@dexabyte.com.mx"){
+                $LatamContries = array("mx","mexico");
+                if ($v->descripcion_adultos > 11) {
+                $mail->AddCC("groupsmanager@lomas-travel.com", "Gerardo Valdï¿½s");
+                } else {
+                if (in_array(Yii::app()->GenericFunctions->makeNormal(strtolower($_Cliente->cliente_pais_n)) , $LatamContries)) {
+                    $mail->AddCC("afiliados@lomas-travel.com", "Gloria Quezada");
+                } else {
+                    $mail->AddCC("sales@lomas-travel.com", "Ventas Lomas Travel");
+                }
+                }
+                $mail->AddCC("webmaster@lomas-travel.com", "Webmaster");
+                $mail->AddBCC("lcaballero@dexabyte.com.mx", "Webmaster");
+                if ($v->descripcion_tipo_producto == 1) {
+                $mail->AddCC("analista@lomas-travel.com", "Contratos Lomas Travel");
+                $mail->AddCC("analista2@lomas-travel.com", "Contratos Lomas Travel");
+                $mail->AddCC("analista3@lomas-travel.com", "Contratos Lomas Travel");
+                $mail->AddCC("contratos@lomas-travel.com", "Contratos Lomas Travel");
+                }
+            }
+                        $info = file_get_contents($link);
+                        $mail->Subject = $m["mail_titulo"];
+                        $mail->MsgHTML($info);
+                        $mail->Send();
+                        
+            
+                    $this->render("exito", array(
+                        "_Productos" => $_Productos,
+                        "vv_Venta" => $Venta->venta_id,
+                        "total" => $total
+                    ));
+                    unset($_SESSION["config"]["token"]);
+                    $_SESSION["config"]["token"] = Yii::app()->WebServices->getSecureKey(150);
+                } else {
+                }
+            }
+
+
+    }
+
+
 
 }
 ?>

@@ -15,9 +15,7 @@
 			Yii::app()->layout 	 = "main";
 			Yii::app()->language = "en";
 			
-			if(isset($_GET["lang"])){
-				Yii::app()->language = $_GET["lang"];
-			}
+			
 
 		}
 	}

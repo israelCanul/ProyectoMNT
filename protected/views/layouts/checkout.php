@@ -218,7 +218,7 @@ $_SESSION['home']='listo';
 		              <div class="col l8 s12">
 		                <h5 class="white-text">More</h5>
 		                <ul>
-		                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Privacy Guidelines" href="#!">Privacy guidelines /</a></li>
+		                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Privacy Guidelines" href="/privacy.html">Privacy guidelines /</a></li>
 		                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Terms of Service" href="#!">Terms of service /</a></li>
 		                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Site Map" href="#!">Site Map /</a></li>
 		                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Contact US" href="#!">Contact US /</a></li>
@@ -392,3 +392,4 @@ $_SESSION['home']='listo';
 
 <!-- Compiled and minified JavaScript -->
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/main.js"></script>
+

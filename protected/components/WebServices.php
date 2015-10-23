@@ -70,6 +70,7 @@ class WebServices extends CApplicationComponent{
 
 		}
 
+		
 
 		if (curl_errno($ch)) {
 			$data = curl_error($ch);

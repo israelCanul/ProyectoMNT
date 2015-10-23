@@ -6351,9 +6351,9 @@ textarea {
 ***************/
 /* Remove default Radio Buttons */
 [type="radio"]:not(:checked), [type="radio"]:checked {
-  position: absolute;
+  /*position: absolute;
   left: -9999px;
-  visibility: hidden; }
+  visibility: hidden;*/ }
 
 [type="radio"]:not(:checked) + label, [type="radio"]:checked + label {
   position: relative;
@@ -6413,7 +6413,7 @@ textarea {
   border: 2px solid transparent; }
 
 [type="radio"]:checked + label:after {
-  border-radius: 50%;
+  /*border-radius: 50%;
   border: 2px solid #FF5A14;
   background-color: #FF5A14;
   z-index: 0;
@@ -6421,7 +6421,7 @@ textarea {
   -moz-transform: scale(1.02);
   -ms-transform: scale(1.02);
   -o-transform: scale(1.02);
-  transform: scale(1.02); }
+  transform: scale(1.02);*/ }
 
 /* Radio With gap */
 [type="radio"].with-gap:checked + label:before {
