@@ -36,14 +36,19 @@ class TrasladosController extends CController
                 ":venta" => $Venta
             ));
 
+
             foreach ($_Productos as $p) {
 
                 if ($p->descripcion_tipo_producto == 3) {
                     $p->delete();
                 }
+                if ($p->descripcion_tipo_producto == 4 ) {
+                    //print_r("extra");
+                    $p->delete();
+                }
             }
-
-
+            
+            
             if(!isset($_REQUEST['oftransfer'])){
                 //$cs = Yii::app()->getclientScript();
                 //$cs->registerScriptFile(Yii::app()->params["baseUrl"] . '/js/suscripcion.js', CClientScript::POS_END);

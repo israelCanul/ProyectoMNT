@@ -8577,3 +8577,33 @@ Stack trace:
 #1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
 #2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
 #3 {main} REQUEST_URI=//css/page/text.min.css?a=1
+2015/10/23 10:46:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2015/10/23 13:04:19 [error] [php] YiiBase::include(PHPMailer.php) [<a href='yiibase.include'>yiibase.include</a>]: failed to open stream: No such file or directory (C:\AppServ\www\mexico-news-travel\lib\yii\YiiBase.php:421)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\protected\controllers\CheckoutController.php(668): spl_autoload_call()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\actions\CInlineAction.php(50): CheckoutController->actionValidar()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): CheckoutController->runAction()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): CheckoutController->runActionWithFilters()
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CheckoutController->run()
+#6 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#7 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#8 C:\AppServ\www\mexico-news-travel\index.php(23): CWebApplication->run()
+REQUEST_URI=/checkout/validar.html
+2015/10/23 13:07:59 [error] [php] PHPMailer::require_once(class.smtp.php) [<a href='phpmailer.require-once'>phpmailer.require-once</a>]: failed to open stream: No such file or directory (C:\AppServ\www\mexico-news-travel\protected\components\PHPMailer.php:702)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\protected\controllers\CheckoutController.php(692): PHPMailer->Send()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\actions\CInlineAction.php(50): CheckoutController->actionValidar()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): CheckoutController->runAction()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): CheckoutController->runActionWithFilters()
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CheckoutController->run()
+#6 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#7 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#8 C:\AppServ\www\mexico-news-travel\index.php(23): CWebApplication->run()
+REQUEST_URI=/checkout/validar.html

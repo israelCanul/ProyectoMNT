@@ -491,6 +491,14 @@ class DestinationsController extends Controller
 				$Venta = $_venta->venta_id;
 			}
 
+			$_ProductosPExtra  = VentaDescripcion::model()->findAll("descripcion_venta = :venta", array(":venta" => $Venta ));
+	        
+	        //Agregar servicio extra
+	        foreach ($_ProductosPExtra as $_p) {
+	            if ($_p->descripcion_tipo_producto == 4 ) {
+	            	$_p->delete();
+	            }
+	        }
 
 			$data = explode("@@",Yii::app()->GenericFunctions->ShowVar($_REQUEST["jnfe"]));
 
