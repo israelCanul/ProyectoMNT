@@ -8607,3 +8607,121 @@ Stack trace:
 #7 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
 #8 C:\AppServ\www\mexico-news-travel\index.php(23): CWebApplication->run()
 REQUEST_URI=/checkout/validar.html
+2015/10/26 09:33:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2015/10/26 11:09:04 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.Santander" is not defined.' in C:\AppServ\www\mexico-news-travel\lib\yii\base\CComponent.php:131
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\base\CModule.php(88): CComponent->__get('Santander')
+#1 C:\AppServ\www\mexico-news-travel\protected\controllers\CheckoutController.php(580): CModule->__get('Santander')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\actions\CInlineAction.php(50): CheckoutController->actionValidar()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams(Array)
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): CController->runAction(Object(CInlineAction))
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('validar')
+#7 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('checkout/valida...')
+#8 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#9 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#10 {main} REQUEST_URI=/checkout/validar.html
+2015/10/26 11:12:16 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.Santander" is not defined.' in C:\AppServ\www\mexico-news-travel\lib\yii\base\CComponent.php:131
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\base\CModule.php(88): CComponent->__get('Santander')
+#1 C:\AppServ\www\mexico-news-travel\protected\controllers\CheckoutController.php(580): CModule->__get('Santander')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\actions\CInlineAction.php(50): CheckoutController->actionValidar()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams(Array)
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): CController->runAction(Object(CInlineAction))
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('validar')
+#7 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('checkout/valida...')
+#8 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#9 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#10 {main} REQUEST_URI=/checkout/validar.html
+2015/10/26 11:16:05 [error] [php] YiiBase::include(PaymentGatewaySantander.php) [<a href='yiibase.include'>yiibase.include</a>]: failed to open stream: No such file or directory (C:\AppServ\www\mexico-news-travel\lib\yii\YiiBase.php:421)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\YiiBase.php(201): import()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CModule.php(371): createComponent()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\base\CModule.php(86): CWebApplication->getComponent()
+#3 C:\AppServ\www\mexico-news-travel\protected\controllers\CheckoutController.php(580): CWebApplication->__get()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\actions\CInlineAction.php(50): CheckoutController->actionValidar()
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams()
+#6 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): CheckoutController->runAction()
+#7 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): CheckoutController->runActionWithFilters()
+#8 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CheckoutController->run()
+#9 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#10 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#11 C:\AppServ\www\mexico-news-travel\index.php(23): CWebApplication->run()
+REQUEST_URI=/checkout/validar.html
+2015/10/26 11:17:33 [error] [php] YiiBase::include(PaymentGatewaySantander.php) [<a href='yiibase.include'>yiibase.include</a>]: failed to open stream: No such file or directory (C:\AppServ\www\mexico-news-travel\lib\yii\YiiBase.php:421)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\YiiBase.php(201): import()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CModule.php(371): createComponent()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\base\CModule.php(86): CWebApplication->getComponent()
+#3 C:\AppServ\www\mexico-news-travel\protected\controllers\CheckoutController.php(483): CWebApplication->__get()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\actions\CInlineAction.php(50): CheckoutController->actionValidar()
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams()
+#6 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): CheckoutController->runAction()
+#7 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): CheckoutController->runActionWithFilters()
+#8 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CheckoutController->run()
+#9 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#10 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#11 C:\AppServ\www\mexico-news-travel\index.php(23): CWebApplication->run()
+REQUEST_URI=/checkout/validar.html
+2015/10/26 11:24:13 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.dbExtranet" is not defined.' in C:\AppServ\www\mexico-news-travel\lib\yii\base\CComponent.php:131
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\base\CModule.php(88): CComponent->__get('dbExtranet')
+#1 C:\AppServ\www\mexico-news-travel\protected\controllers\CheckoutController.php(787): CModule->__get('dbExtranet')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\actions\CInlineAction.php(50): CheckoutController->actionValidar()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams(Array)
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): CController->runAction(Object(CInlineAction))
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('validar')
+#7 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('checkout/valida...')
+#8 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#9 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#10 {main} REQUEST_URI=/checkout/validar.html
+2015/10/26 11:51:26 [error] [exception.CException] exception 'CException' with message 'CheckoutController cannot find the requested view "exito".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:875
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(779): CController->renderPartial('exito', Array, true)
+#1 C:\AppServ\www\mexico-news-travel\protected\controllers\CheckoutController.php(962): CController->render('exito', Array)
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\actions\CInlineAction.php(50): CheckoutController->actionValidar()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams(Array)
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): CController->runAction(Object(CInlineAction))
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('validar')
+#7 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('checkout/valida...')
+#8 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#9 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#10 {main} REQUEST_URI=/checkout/validar.html
+2015/10/26 12:03:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2015/10/26 15:31:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/img/traslados/1.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('images/img/tras...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/images/img/traslados/1.jpg
+2015/10/26 15:33:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/img/traslados/1.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('images/img/tras...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/images/img/traslados/1.jpg
+2015/10/26 15:41:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/img/traslados/1.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('images/img/tras...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/images/img/traslados/1.jpg
+2015/10/27 09:11:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico

@@ -101,7 +101,7 @@ $_SESSION['home']='listo';
 						   array(
 							   'label'=>'FLIGHTS',
 							   'url'=>array(''),
-							   'linkOptions'=>array('class'=>''),
+							   'linkOptions'=>array('class'=>'hide'),
 						   ),
 						   array(
 							   'label'=>'ACTIVITIES',
@@ -111,7 +111,7 @@ $_SESSION['home']='listo';
 						   array(
 							   'label'=>'PACKAGES',
 							   'url'=>array(''),
-							   'linkOptions'=>array('class'=>''),
+							   'linkOptions'=>array('class'=>'hide'),
 						   ),
 						   array(
 							   'label'=>'WEDDINGS',
@@ -194,25 +194,13 @@ $_SESSION['home']='listo';
 			                <h5 class="white-text">Menu</h5>
 			                <ul style="display: inline;">
 								<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Home" href="<?php echo $this->createUrl("/home"); ?>">HOME /</a></li>
-								<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Destinations" href="<?php echo $this->createUrl("/destination"); ?>">DESTINATIONS /</a></li>
+								<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Destinations" href="<?php echo $this->createUrl("/destination"); ?>">HOTELS /</a></li>
 								<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Activities" href="<?php echo $this->createUrl("/activities"); ?>">ACTIVITIES /</a></li>
 								<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Promotions" href="<?php echo $this->createUrl("/promotions"); ?>">PROMOTIONS /</a></li>
 								<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Flights" href="#!">FLIGHTS /</a></li>
 								<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Packages" href="#!">PACKAGES /</a></li>
-								<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Weddings" href="#!">WEDDINGS /</a></li>
+								<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Weddings" target="_blank" href="http://www.mexiconewsnetwork.com/services/bridal-moments/">WEDDINGS /</a></li>
 								<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Groups" href="#!">GROUPS /</a></li>
-			                  <!--<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Breaking News" href="#!">Breaking News /</a></li>
-			                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Daily Report" href="#!">Daily Report /</a></li>
-			                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="News" href="#!">News /</a></li>
-			                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Business & Investment" href="#!">Business & Investment /</a></li>
-			                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Tv & Video" href="#!">TV & Video /</a></li>
-			                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Green News" href="#!">Green News /</a></li>
-			                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Travel" href="#!">Travel /</a></li>
-			                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Art & Culture" href="#!">Art & Culture /</a></li>
-			                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Gastronomy" href="#!">Gastronomy /</a></li>
-			                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Lifestyle" href="#!">Lifestyle /</a></li>
-			                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Events" href="#!">Events /</a></li>
-			                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Alliances" href="#!">Alliances /</a></li>-->
 			                </ul>
 		              </div>
 		              <div class="col l4 s12">
@@ -237,8 +225,8 @@ $_SESSION['home']='listo';
 		              <div class="col l4 s12">
 		                <h5 class="white-text">About Us</h5>
 			                <ul>
-			                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Mexico News Network Live Broadcast" href="#!">México News Network Live Broadcast /</a></li>
-			                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Brides Moments" href="#!">Brides Moments /</a></li>
+			                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Mexico News Network Live Broadcast" target="_blank" href="http://www.mexiconewsnetwork.com/">México News Network Live Broadcast /</a></li>
+			                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Brides Moments" target="_blank" href="http://www.mexiconewsnetwork.com/services/bridal-moments/">Brides Moments /</a></li>
 			                </ul>
 		              </div>
 		            </div>
@@ -247,7 +235,7 @@ $_SESSION['home']='listo';
 		</div>
           <div class="footer-copyright">
             <div class="white-text">
-            © 2015 Copyright Mexicó News Travel
+            © 2015 Copyright Mexico News Travel
            
             </div>
           </div>		

@@ -4,9 +4,9 @@
 		<div class="row" >
 		<? if(count($destinos)>0){
 				foreach ($destinos as $key => $value) {
-
+				if($value['nombre']!=$value['estado']){
 		?>
-				<div class="small col s12 m6 l4 ">
+				<div class="small col s12 m6 l4 " style="height: 280px;">
 		          <div class="card-destinos">
 			          <div class="card ">
 			            <div class="card-image">
@@ -16,14 +16,11 @@
 			            <div class="card-content card-action hoverable contenidoDestinos">
 			              <a class="red-text" href="/destinations/<? echo $value['clave'] ?>.html?hotel_keyword=&cCode=<? echo $value['codigo']?>&HotelId=&hotel_destination=<? echo urlencode( GenericFunctions::makeSinAcento( $value['nombre'])) ?>&hotelCheckin=<? echo urlencode(date('m/d/Y', strtotime('+2 day')));?>&hotelCheckout=<? echo urlencode(date('m/d/Y', strtotime('+5 day')));?>&hotelRoom=1&hotelAdults_0=2&hotelChild_0=0&action=&Room%5B0%5D%5BAdults%5D=2&Room%5B0%5D%5BChilds%5D=0">
 			              <?
-			              if($value['nombre']!=$value['estado']){
+			              
 			              ?>
 			              <p class="center-align"><label class="textoCaja"><?=$value['nombre']?></label></p>
 			              <p class="center-align"><?=$value['estado']?></p>
-			              <? }else{ ?>
 
-			              	<p class="center-align"><label class="textoCaja"><?=$value['estado']?></label></p>
-			              <?}?>
 			              </a>
 			            </div>
 			            <!-- <div class="card-action">
@@ -34,6 +31,7 @@
 		        </div>  				
 		<?
 				}
+				}	
 			}
 		?>	
 		</div>
@@ -47,8 +45,8 @@
 		</div>
 	</div>
 
-	<? $value=$notas2;?>
-	<div class="row hide-on-med-and-down">
+	<? //$value=$notas2;?>
+	<!-- <div class="row hide-on-med-and-down">
 		<div class="col 12">
 			<?
 			//notas de la pagina http://www.mexiconewsnetwork.com/travel/
@@ -74,7 +72,7 @@
 			?>
 
 		</div>
-	</div>
+	</div> -->
 </div>
 <script type="text/javascript">
 	$(document).ready(function(){

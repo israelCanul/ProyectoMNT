@@ -25,7 +25,7 @@ class CheckoutController extends Controller
         if ($_vValidator[0]->venta_id == 0 || $_vValidator[0]->venta_id == "") {
             $_venta = new Venta;
             $_venta->venta_session_id = $_SESSION["config"]["token"];
-            $_venta->venta_moneda     = $_SESSION["config"]["currency"];
+            $_venta->venta_moneda     = Yii::app()->params['Moneda'];
             $_venta->venta_site_id    = ((Yii::app()->language == "es") ? 2 : 1);
             $_venta->venta_user_id    = 0;
             $_venta->venta_estt       = 1;
@@ -276,26 +276,26 @@ class CheckoutController extends Controller
                         $total = 0;
                         $numVehiculo = 1;
                         if($tPax>=$ta["tarifa_cap_ini"] && $tPax <= $ta["tarifa_cap_fin"]){
-                            $total = number_format(Yii::app()->Currency->convert($_SESSION["config"]["currency"],$ta["tarifa_precio"]),0,".","");
+                            $total = number_format(Yii::app()->Currency->convert(Yii::app()->params['Moneda'],$ta["tarifa_precio"]),0,".","");
                         }else{
                             if($ta["tarifa_tipo"]==1 || $ta["tarifa_tipo"]==2 || $ta["tarifa_tipo"]==3 || $ta["tarifa_tipo"]==4){
                                 if($tPax > $ta["tarifa_cap_fin"]){
                                     $ta["tarifa_precio"] = $ta["tarifa_precio"] + (($tPax - $ta["tarifa_cap_fin"]) * $ta["tarifa_pax_ext"]);
                                 }
-                                $total = number_format(Yii::app()->Currency->convert($_SESSION["config"]["currency"],$ta["tarifa_precio"]),0,".","");
+                                $total = number_format(Yii::app()->Currency->convert(Yii::app()->params['Moneda'],$ta["tarifa_precio"]),0,".","");
                             }else{
                                 if ($ta["tarifa_tipo"] == 6 || $ta["tarifa_tipo"] == 16) {
                                     $numVehiculo =  ceil($tPax / $ta['tarifa_cap_fin']);
 
                                     $ta["tarifa_precio"] = $numVehiculo * $ta["tarifa_pax_ext"];
-                                    $total = number_format(Yii::app()->Currency->convert($_SESSION["config"]["currency"],$ta["tarifa_precio"]),0,".","");
+                                    $total = number_format(Yii::app()->Currency->convert(Yii::app()->params['Moneda'],$ta["tarifa_precio"]),0,".","");
                                 }
                             }
                         }
 
                         $aux = ($numVehiculo > 1)? " (". $numVehiculo ." Vehicles )" : "";
                         $descripcion_tarifa = $ta["tipo_nombre_" . Yii::app()->language] . $aux;
-                        $jnfe           = Yii::app()->GenericFunctions->ProtectVar($ta["tarifa_id"] . "@@" . $ta["tarifa_tipo"] . "@@" . $ta["tarifa_transportacion"] . "@@" . $total . "@@" . 'Cancun Airport' . "@@" . $descripcion_producto . "@@" . $descripcion_tarifa . "@@/images/traslados/" . $ta["tipo_imagen"] . ".jpg@@" . 1);
+                        $jnfe           = Yii::app()->GenericFunctions->ProtectVar($ta["tarifa_id"] . "@@" . $ta["tarifa_tipo"] . "@@" . $ta["tarifa_transportacion"] . "@@" . $total . "@@" . 'Cancun Airport' . "@@" . $descripcion_producto . "@@" . $descripcion_tarifa . "@@/img/traslados/" . $ta["tipo_imagen"] . ".jpg@@" . 1);
                         $tipo_translado = 2;
 
                         $pgr = array(
@@ -354,10 +354,10 @@ class CheckoutController extends Controller
                 }
                 foreach ($_Serv_ex as  $ta) {
 
-                    $ta['precio'] = number_format(Yii::app()->Currency->convert($_SESSION["config"]["currency"],$ta['precio']),0,".","");
+                    $ta['precio'] = number_format(Yii::app()->Currency->convert(Yii::app()->params['Moneda'],$ta['precio']),0,".","");
                     $ta['precio_total'] = number_format($ta['precio']*$paxExtra*$bloque_dias,0,".","");
 
-                    $jnfe = Yii::app()->GenericFunctions->ProtectVar($ta["folio"] . "@@" . $ta["nombre"] . "@@" . $ta['precio_total'] . "@@/images/servicio_extra/" . $ta["foto"] . "@@" . "Assistance for your trip" . "@@" . 1);
+                    $jnfe = Yii::app()->GenericFunctions->ProtectVar($ta["folio"] . "@@" . $ta["nombre"] . "@@" . $ta['precio_total'] . "@@/img/servicio_extra/" . $ta["foto"] . "@@" . "Assistance for your trip" . "@@" . 1);
 
                     $pgr = array( 'extra_folio' => $ta['folio'], 'extra_adults'  => $adultosExtra, 'extra_child'   => $menoresExtra,'extra_arrival' => date_format($FechaIniExtra, 'm/d/Y'), 'extra_return'  => date_format($FechaFinExtra, 'm/d/Y'));
 
@@ -411,6 +411,7 @@ class CheckoutController extends Controller
 
      public function actionDetalle() {
         
+
         /* aqui vamos a poner un cataogo*/
         $Paises = Yii::app()->db->createCommand()->select('*')->from('paises')->order("PAI_NOMBRE ASC")->queryAll();
         
@@ -424,14 +425,24 @@ class CheckoutController extends Controller
             ));
             
         }
+        if(isset($_REQUEST['TryAgain']) && $_REQUEST['TryAgain']==1){
+            $_sql = "Select venta_id from venta where venta_session_id Like '" . $_SESSION["config"]["token"] . "' and venta_estt != '2' and venta_fecha Like '" . date("Y-m-d") . "%'";
+            $_vValidator = Venta::model()->findAllBySql($_sql);
+            $_venta = Venta::model()->findByPk($_vValidator[0]->venta_id);
+            $_venta->venta_estt = 1;
+            $_venta->save();
+            //print_r($_venta);
+        }
+
         
         $_sql = "Select venta_id from venta where venta_session_id Like '" . $_SESSION["config"]["token"] . "' and venta_estt = '1' and venta_fecha Like '" . date("Y-m-d") . "%'";
         $_vValidator = Venta::model()->findAllBySql($_sql);
-        
+
+
         if ($_vValidator[0]->venta_id == 0 || $_vValidator[0]->venta_id == "") {
             $_venta = new Venta;
             $_venta->venta_session_id = $_SESSION["config"]["token"];
-            $_venta->venta_moneda = $_SESSION["config"]["currency"];
+            $_venta->venta_moneda = Yii::app()->params['Moneda'];
             $_venta->venta_site_id = ((Yii::app()->language == "es") ? 2 : 1);
             $_venta->venta_user_id = 0;
             $_venta->venta_estt = 1;
@@ -443,10 +454,13 @@ class CheckoutController extends Controller
         } else {
             $Venta = $_vValidator[0]->venta_id;
         }
-        
+        /*print_r($Venta."<br>");
+        print_r($_SESSION["config"]["token"]);
+        exit();*/
         $_Productos = VentaDescripcion::model()->findAll("descripcion_venta = :venta", array(
             ":venta" => $Venta
         ));
+
         $Productos = array();
         foreach ($_Productos as $_p) {
             if (!isset($Productos[$_p->descripcion_tipo_producto])) {
@@ -474,11 +488,14 @@ class CheckoutController extends Controller
     }
 
     public function actionValidar() { 
-
+            $this->layout='checkout';
+            $cs = Yii::app()->getclientScript();
+            $cs->registerScriptFile(Yii::app()->params["baseUrl"] . '/js/page/checkout/checkout.js', CClientScript::POS_END);
+            $cs->registerCssFile(Yii::app()->params["baseUrl"] . '/css/page/checkout/checkout.css');
          //-> Es un pago con Tarjeta de Credito
             $GatewayMethod = explode("_", $_REQUEST["gateway_method"]);
             
-            if (Yii::app()->language == "es" && $GatewayMethod[0] == "santander") {
+            if (Yii::app()->language == "en" && $GatewayMethod[0] == "santander") {
                 if ($GatewayMethod[1] == 1) {
                     Yii::app()->Santander->setVars("4018", "001", "MEX", "4018WEUS0", "4018WEUS0", "15365", "3", "MXN", "A7BEC7D1", "prod");
                 } else if ($GatewayMethod[1] == 3) {
@@ -494,7 +511,7 @@ class CheckoutController extends Controller
             $authCode = "";
             $_sql = "Select venta_id from venta where venta_session_id Like '" . $_SESSION["config"]["token"] . "' and venta_estt = '1' and venta_fecha Like '" . date("Y-m-d") . "%'";
             $_vValidator = Venta::model()->findAllBySql($_sql);
-            
+
             if ($_vValidator[0]->venta_id == 0 || $_vValidator[0]->venta_id == "") {
                 $this->render("error", array(
                     "ErrorMessage" => Yii::t("global", "No es una venta valida")
@@ -502,7 +519,8 @@ class CheckoutController extends Controller
             } else {
 
 
-
+/*            print_r($_vValidator[0]->venta_id);
+            exit();*/
                 /* Inserta o actualiza el cliente para la venta */
                 $_Cliente = null;
                 if ($_vValidator[0]->venta_user_id == 0) {
@@ -624,6 +642,7 @@ class CheckoutController extends Controller
                                 $this->render("error", array(
                                     "ErrorMessage" => Yii::t("global", "El banco emisor denego el cargo a la tarjeta")
                                 ));
+                                exit();
                             } else {
                                 
                                 /* Insertar Estado de la venta */
@@ -637,6 +656,7 @@ class CheckoutController extends Controller
                                 $this->render("error", array(
                                     "ErrorMessage" => $iService->nb_error
                                 ));
+                                exit();
                             }
                         }
                     }
@@ -713,12 +733,12 @@ class CheckoutController extends Controller
                                 //$link = "http://www.lomastravel.com.mx/extras/asistencia.html?id=" . Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);
                                 // Pruebas
                                 $link = "http://lomasmx.dev/extras/asistencia.html?id=" . Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);
-                                print_r($link);
+                                //print_r($link);
                                 $info = file_get_contents($link);
                                 $mailAC->AddBCC("icanul@dexabyte.com.mx","Correo Prueba Extras");
                                 $mailAC->Subject = $m["mail_titulo"];
                                 $mailAC->MsgHTML($info);
-                                //$mailAC->Send();                
+                                $mailAC->Send();                
                             }               
                         }
                     }           
@@ -738,7 +758,7 @@ class CheckoutController extends Controller
                     
                     //$_Tarjeta->tipo_pago = 1; //otros santander visa
                     $_Tarjeta->save();
-                                    print_r($_REQUEST["numero"]);
+                                    //print_r($_REQUEST["numero"]);
 
                     $_vV = Venta::model()->findByPk($Venta->venta_id);
                     $_vV->venta_total = $total;
@@ -756,9 +776,9 @@ class CheckoutController extends Controller
 
                     $_vV->save();
 
-                    print_r("<pre>");
+                    /*print_r("<pre>");
                     print_r($Card->card_mail);                
-                    exit();                    
+                    exit();*/                    
                     $vende_hotel=false;
                     foreach ($_Productos as $v) {
             
@@ -784,15 +804,15 @@ class CheckoutController extends Controller
                                 for($i=0;$i<count($info);$i++){
                                     for($j=0;$j<count($info[$i]);$j++){
                                         $tarifaID=$info[$i][$j]['@attributes']['id'];
-                                        $_sqlHab_ext = Yii::app()->dbExtranet->createCommand()->select('tarifa_hab_extra')->from('tarifas')->where("tarifa_id =" . $tarifaID)->queryRow();
+                                        $_sqlHab_ext = Yii::app()->dbWeblt->createCommand()->select('tarifa_hab_extra')->from('tarifas')->where("tarifa_id =" . $tarifaID)->queryRow();
                                         $hab_ext = $_sqlHab_ext['tarifa_hab_extra'];                        
                                         
                                         if($hab_ext>0){
                                         $upd_hab = $hab_ext-1;
-                                        Yii::app()->dbExtranet
+                                       /* Yii::app()->dbWeblt
                                             ->createCommand("UPDATE tarifas SET tarifa_hab_extra = '".$upd_hab."' WHERE tarifa_id=:tarifa_id")
                                             ->bindValues(array(':tarifa_id' => $tarifaID))
-                                            ->execute();                            
+                                            ->execute();*/                            
                                         }
                                     }
                                 }
@@ -800,10 +820,10 @@ class CheckoutController extends Controller
             
                             //$link_papeleta = "http://www.lomastravel.com.mx/preconfirma.html?id=" . Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);
                             // Pruebas
-                            $link_papeleta = "http://lomasmx.dev/extras/asistencia.html?id=" . Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);
+                            $link_papeleta = "http://lomasmx.dev/preconfirma.html?id=" . Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);
 
                             $m["mail_titulo"] = "Lomas Travel | Solicitud de Reservacion | #" . $v->descripcion_id;
-                           $mail2 = new PHPMailer(true);
+                            $mail2 = new PHPMailer(true);
                             $mail2->isSMTP(); 
                             $mail2->Host = "smtp.gmail.com";
                             $mail2->SMTPAuth = true; 
@@ -815,7 +835,7 @@ class CheckoutController extends Controller
                             
                             if($_Cliente->cliente_email!="icanul@dexabyte.com.mx"){
                             
-                               //$_contacto = Yii::app()->dbExtranet->createCommand()->select('hotel_contacto_de_reservas_mail')->from('hoteles')->where("hotel_id =" . $v->descripcion_producto_id)->queryRow();
+                               $_contacto = Yii::app()->dbWeblt->createCommand()->select('hotel_contacto_de_reservas_mail')->from('hoteles')->where("hotel_id =" . $v->descripcion_producto_id)->queryRow();
                                //$mail2->AddAddress("analista@lomas-travel.com", "Contratos Lomas Travel");
                                
                                $email_enviar = $_contacto['hotel_contacto_de_reservas_mail'];
@@ -870,23 +890,23 @@ class CheckoutController extends Controller
                             $mail3->SetFrom("codireccion@lomas-travel.com", $m["mail_titulo"]);
                             
                             if($_Cliente->cliente_email!="icanul@dexabyte.com.mx"){
-                                $_contacto = Yii::app()->dbExtranet->createCommand()->select('hotel_contacto_administrativo_mail')->from('hoteles')->where("hotel_id =" . $v->descripcion_producto_id)->queryRow();
+                                $_contacto = Yii::app()->dbWeblt->createCommand()->select('hotel_contacto_administrativo_mail')->from('hoteles')->where("hotel_id =" . $v->descripcion_producto_id)->queryRow();
                                 
-                                $mail3->AddAddress("analista@lomas-travel.com", "Contratos Lomas Travel");
+                                //$mail3->AddAddress("analista@lomas-travel.com", "Contratos Lomas Travel");
                                 $email_enviar = $_contacto['hotel_contacto_administrativo_mail'];
                                 $lista_email = explode(";", $email_enviar);
                                 if (count($lista_email) > 0) {
                                     foreach ($lista_email as $li_email) {
-                                    if (strlen(trim($li_email)) > 0) $mail3->AddCC(trim($li_email));
+                                        //if (strlen(trim($li_email)) > 0) $mail3->AddCC(trim($li_email));
                                     }
                                 }
-                                $mail3->AddCC("analista2@lomas-travel.com", "Contratos Lomas Travel");
-                                $mail3->AddCC("analista3@lomas-travel.com", "Contratos Lomas Travel");
-                                $mail3->AddCC("contratos@lomas-travel.com", "Contratos Lomas Travel");
-                                $mail3->AddCC("webmaster@lomas-travel.com", "Webmaster");
-                                $mail3->AddBCC("lcaballero@dexabyte.com.mx", "Webmaster");
-                                $mail3->AddBCC("facteac@grupolomas.com", "Facturacion");
-                                $mail3->AddBCC("codireccion@lomas-travel.com", "Facturacion");
+                                //$mail3->AddCC("analista2@lomas-travel.com", "Contratos Lomas Travel");
+                                //$mail3->AddCC("analista3@lomas-travel.com", "Contratos Lomas Travel");
+                                //$mail3->AddCC("contratos@lomas-travel.com", "Contratos Lomas Travel");
+                                //$mail3->AddCC("webmaster@lomas-travel.com", "Webmaster");
+                                //$mail3->AddBCC("lcaballero@dexabyte.com.mx", "Webmaster");
+                                //$mail3->AddBCC("facteac@grupolomas.com", "Facturacion");
+                                //$mail3->AddBCC("codireccion@lomas-travel.com", "Facturacion");
                                 
 
                             }else{
@@ -895,17 +915,25 @@ class CheckoutController extends Controller
                             $info = file_get_contents($link_factura);
                             $mail3->Subject = $m["mail_titulo"];
                             $mail3->MsgHTML($info);
-                            $mail3->Send();             
+                            $mail3->Send();
+
                         }
-                }           
-                                
-                $link = "http://www.lomastravel.com/voucher.html?id=" . Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);
+                    }           
+                //Produccion                
+                //$link = "http://www.lomastravel.com/voucher.html?id=" . Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);
+                // Pruebas
+                $link = "http://lomasbeta.dev/voucher.html?id=" . Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);                
+
+
                 $m["mail_titulo"] = "Lomas Travel | Confirmation Letter | #" . $v->descripcion_id;
             
-                        if($vende_hotel){
-                            $link = "http://www.lomastravel.com/booking-request.html?id=" . Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);
-                            $m["mail_titulo"] = "Lomas Travel | Online Booking Request | #" . $v->descripcion_id; 
-                        }           
+                    if($vende_hotel){
+                        //Produccion
+                        //$link = "http://www.lomastravel.com/booking-request.html?id=" . Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);
+                        //Pruebas
+                        $link = "http://lomasbeta.dev/booking-request.html?id=" . Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);
+                        $m["mail_titulo"] = "Lomas Travel | Online Booking Request | #" . $v->descripcion_id; 
+                    }           
             
                         
                     $mail = new PHPMailer(true);
@@ -921,44 +949,53 @@ class CheckoutController extends Controller
                     
                     $mail->AddAddress($_Cliente->cliente_email, "Cliente Lomas Travel");
             
-                    if($_Cliente->cliente_email!="egonzalez@dexabyte.com.mx"){
+                    if($_Cliente->cliente_email!="icanul@dexabyte.com.mx"){
+
                         $LatamContries = array("mx","mexico");
                         if ($v->descripcion_adultos > 11) {
-                        $mail->AddCC("groupsmanager@lomas-travel.com", "Gerardo Vald�s");
+                            //$mail->AddCC("groupsmanager@lomas-travel.com", "Gerardo Vald�s");
                         } else {
-                        if (in_array(Yii::app()->GenericFunctions->makeNormal(strtolower($_Cliente->cliente_pais_n)) , $LatamContries)) {
-                            $mail->AddCC("afiliados@lomas-travel.com", "Gloria Quezada");
-                        } else {
-                            $mail->AddCC("sales@lomas-travel.com", "Ventas Lomas Travel");
+                            if (in_array(Yii::app()->GenericFunctions->makeNormal(strtolower($_Cliente->cliente_pais_n)) , $LatamContries)) {
+                                //$mail->AddCC("afiliados@lomas-travel.com", "Gloria Quezada");
+                            } else {
+                                //$mail->AddCC("sales@lomas-travel.com", "Ventas Lomas Travel");
+                            }
                         }
-                        }
-                        $mail->AddCC("webmaster@lomas-travel.com", "Webmaster");
-                        $mail->AddBCC("lcaballero@dexabyte.com.mx", "Webmaster");
+                        //$mail->AddCC("webmaster@lomas-travel.com", "Webmaster");
+                        //$mail->AddBCC("lcaballero@dexabyte.com.mx", "Webmaster");
                         if ($v->descripcion_tipo_producto == 1) {
-                        $mail->AddCC("analista@lomas-travel.com", "Contratos Lomas Travel");
-                        $mail->AddCC("analista2@lomas-travel.com", "Contratos Lomas Travel");
-                        $mail->AddCC("analista3@lomas-travel.com", "Contratos Lomas Travel");
-                        $mail->AddCC("contratos@lomas-travel.com", "Contratos Lomas Travel");
+                            //$mail->AddCC("analista@lomas-travel.com", "Contratos Lomas Travel");
+                            //$mail->AddCC("analista2@lomas-travel.com", "Contratos Lomas Travel");
+                            //$mail->AddCC("analista3@lomas-travel.com", "Contratos Lomas Travel");
+                            //$mail->AddCC("contratos@lomas-travel.com", "Contratos Lomas Travel");
                         }
+                    
                     }
-                        $info = file_get_contents($link);
-                        $mail->Subject = $m["mail_titulo"];
-                        $mail->MsgHTML($info);
-                        $mail->Send();
+                    
+                    $info = file_get_contents($link);
+                    $mail->Subject = $m["mail_titulo"];
+                    $mail->MsgHTML($info);
+                    $mail->Send();
                         
-            
+                    
                     $this->render("exito", array(
                         "_Productos" => $_Productos,
                         "vv_Venta" => $Venta->venta_id,
                         "total" => $total
                     ));
-                    unset($_SESSION["config"]["token"]);
-                    $_SESSION["config"]["token"] = Yii::app()->WebServices->getSecureKey(150);
 
-
+                    //unset($_SESSION["config"]["token"]);
+                    //$_SESSION["config"]["token"] = Yii::app()->WebServices->getSecureKey(150);
+                    print_r("llego hasta aqui ");
+            }else{
+                print_r("no success");
+            }
+        }          
     }
 
+    public function actionValidar1() { 
 
+    }    
 
 }
 ?>

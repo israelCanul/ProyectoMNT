@@ -9,7 +9,7 @@
 		  	<?php foreach($_destinos as $_destino): ?>
 
 	  			<?php if($_destino->getEnLista()){ ?>
-					<div class="small col s12 m6 l4 ">
+					<div class="small col s12 m6 l4 " style=" height: 250px;">
 			          <div class="card-destinos">
 				          <div class="card ">
 				            <div class="card-image hoverable">
@@ -42,8 +42,8 @@
 			$lista=0;
 		?>
 			<?php foreach ($_categorias as $_categoria):?>
-				<?php if($_categoria->getEnLista() && $lista<=9){ ?>
-					<div class="small col s12 m6 l4 ">
+				<?php if($_categoria->getEnLista() && $lista<9){ ?>
+					<div class="small col s12 m6 l4 " style="height: 250px;">
 			          <div class="card-destinos">
 				          <div class="card ">
 				            <div class="card-image hoverable">
@@ -75,7 +75,7 @@
 				      <div class="collapsible-body">
 						<?php foreach ($_categorias as $_categoria):?>
 							<?php if($_categoria->getEnLista() && $lista>=9){ ?>
-								<div class="small col s12 m6 l4 ">
+								<div class="small col s12 m6 l4 " style="height: 300px;">
 						          <div class="card-destinos">
 							          <div class="card ">
 							            <div class="card-image hoverable">
@@ -113,8 +113,8 @@
 	</div>
 </div>
 
-<? $value=$notas2;?>
-<div class="row hide-on-med-and-down">
+<? //$value=$notas2;?>
+<!-- <div class="row hide-on-med-and-down">
 	<div class="col 12">
 		<?
 		//notas de la pagina http://www.mexiconewsnetwork.com/travel/
@@ -140,7 +140,7 @@
 		?>
 
 	</div>
-</div>
+</div> -->
 <script type="text/javascript">
 	$(document).ready(function(){
 		$("#txtBanner").html("PRE-HISPANIC CITY OF CHICHEN-ITZA");

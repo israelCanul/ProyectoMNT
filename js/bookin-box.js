@@ -123,16 +123,26 @@ function despliegalistahoteles() {
     })
 }
 
+function abrirContenedor(){
+    if($("#contenedorBookin").hasClass('oculta')){
+        $("#contenedorBookin").switchClass("oculta","nooculta",1000);
+    }else{
+        $("#contenedorBookin").switchClass("nooculta","oculta",1000);
+    }    
+}
 
 $(document).ready(function(){
 
-    $("#ocultarContenedorBookin").on("click",function(){
-        console.log("W");
+    // realizar que al seleccionar una tab si el bookin esta replegado .. cambie de estado y se despliege
+    $('li.tab a').on("click",function(){
         if($("#contenedorBookin").hasClass('oculta')){
             $("#contenedorBookin").switchClass("oculta","nooculta",1000);
-        }else{
-            $("#contenedorBookin").switchClass("nooculta","oculta",1000);
         }
+    });
+    //plegar desplegar el bookin
+    $("#ocultarContenedorBookin").on("click",function(){
+        console.log("W");
+        abrirContenedor();
     });
 
 /* variables  de el js */

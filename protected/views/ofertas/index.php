@@ -20,10 +20,14 @@
 						if($p["promocion_tipo_contenido"] == 3){
 							$url = $p["promocion_link_" . Yii::app()->language];
 						}
+
+					if($index%2==0){
+					?>
+						<div class='row'>
+					<?	
+					}						
 			?>
-				
-					<? if(($index%5)==0){ ?>
-						<div class='col s12 m6'>
+					<div class='col s12 m6'>
 							<div class="card-destinos">
 								<div class="card">
 									<div class="card-image hoverable">
@@ -50,43 +54,16 @@
 									</div>
 								</div>	
 							</div>	
-						</div>				
-					<?}else{?>
-						<div class=' col s12 m3'>
-							<div class="card-destinos">
-								<div class="card small">
-									<div class="card-image">
-										<?php if($p["promocion_miniatura_". Yii::app()->language] != ""){ ?>
-											<a href='<?php echo $url; ?>' title='<?php echo $p['promocion_' . Yii::app()->language];?>' class='bloque promo-div-coined-img'>
-												<img class='full-width' src="<?php echo Yii::app()->request->baseUrl; ?><?php echo $p['promocion_miniatura_'. Yii::app()->language];?>" />
-											</a>	
-										<?php }else{ ?>
-											<div class='bloque promo-div-coined-img promo-no-image'></div>
-										<?php } ?>			
-									</div>	
-									<div class="card-content">
-										<div class='offerName'>
-											<a class="red-text" href='<?php echo $url; ?>' title='<?php echo $p["promocion_" . Yii::app()->language]; ?>'><?php echo $p["promocion_" . Yii::app()->language];?></a>
-										</div>
-							
-										<?php if($p["promocion_aplica_descripcion"] == 1){ ?>
-											<div class='bloque promo-div-coined-desc'><?php echo $p["promocion_desc_" . Yii::app()->language]; ?> </div>
-										<?php } ?>
-									</div>
-									<div class="card-action">
-										<a class="waves-effect waves-light btn white-text" href='<?php echo $url; ?>' title='<?php echo $p["promocion_" . Yii::app()->language];?>' class='promo-div-coined-btn misc_select_btn_green'>
-											<i class="material-icons left">input</i>
-											<?php echo (($p["promocion_bookingbox"] == 0) ? Yii::t("global","Ver información de promoción"): Yii::t("global","BOOK"));?>
-										</a>									
-									</div>
-								</div>	
-							</div>	
-						</div>				
-					<? }
-					$index++;		
+					</div>				
+					
+					<?
+					if($index%2!=0){
 					?>
-
-				<?  
+						</div>
+					<?	
+					}
+					
+					$index++;
 					}
 				}
 				if($index==0){ ?>
@@ -111,10 +88,14 @@
 						if($p["promocion_tipo_contenido"] == 3){
 							$url = $p["promocion_link_" . Yii::app()->language];
 						}
+
+					if($index%2==0){
+					?>
+						<div class='row'>
+					<?	
+					}	
 			?>
-				
-					<?if(($index%5)==0){?>
-						<div class='small col s12 m6'>
+					<div class='small col s12 m6'>
 							<div class="card-destinos">
 								<div class="card ">
 									<div class="card-image hoverable">
@@ -141,43 +122,24 @@
 									</div>
 								</div>	
 							</div>	
-						</div>				
-					<?}else{?>
-						<div class='small col s12 m3'>
-							<div class="card-destinos">
-								<div class="card ">
-									<div class="card-image ">
-										<?php if($p["promocion_miniatura_". Yii::app()->language] != ""){ ?>
-											<a href='<?php echo $url; ?>' title='<?php echo $p['promocion_' . Yii::app()->language];?>' class='bloque promo-div-coined-img'>
-												<img class='full-width' src="<?php echo Yii::app()->request->baseUrl; ?><?php echo $p['promocion_miniatura_'. Yii::app()->language];?>" />
-											</a>	
-										<?php }else{ ?>
-											<div class='bloque promo-div-coined-img promo-no-image'></div>
-										<?php } ?>			
-									</div>	
-									<div class="card-content">
-										<div class='offerName'>
-											<a class="red-text" href='<?php echo $url; ?>' title='<?php echo $p["promocion_" . Yii::app()->language]; ?>'><?php echo $p["promocion_" . Yii::app()->language];?></a>
-										</div>
-							
-										<?php if($p["promocion_aplica_descripcion"] == 1){ ?>
-											<div class='bloque promo-div-coined-desc'><?php echo $p["promocion_desc_" . Yii::app()->language]; ?> </div>
-										<?php } ?>
-									</div>
-									<div class="card-action">
-										<a class="waves-effect waves-light btn white-text" href='<?php echo $url; ?>' title='<?php echo $p["promocion_" . Yii::app()->language];?>' class='promo-div-coined-btn misc_select_btn_green'>
-											<i class="material-icons left">input</i>
-											<?php echo (($p["promocion_bookingbox"] == 0) ? Yii::t("global","Ver información de promoción"): Yii::t("global","BOOK"));?>
-										</a>									
-									</div>
-								</div>	
-							</div>	
-						</div>				
-					<?}
+					</div>
+
+					<?
+					if($index%2!=0){
+					?>
+						</div>
+					<?	
+					}
+
 					$index++;		
 					?>
+
+
 				<?  
+
+
 					}
+
 				}
 	
 			}
@@ -194,8 +156,8 @@
 		</div>
 	</div>
 
-	<? $value=$notas2;?>
-	<div class="row hide-on-med-and-down">
+	<? //$value=$notas2;?>
+	<!-- <div class="row hide-on-med-and-down">
 		<div class="col 12">
 			<?
 			//notas de la pagina http://www.mexiconewsnetwork.com/travel/
@@ -221,7 +183,7 @@
 			?>
 
 		</div>
-	</div>
+	</div> -->
 </div>
  <script type="text/javascript">
 	 $(document).ready(function(){
