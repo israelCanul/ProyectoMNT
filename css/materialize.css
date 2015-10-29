@@ -5425,12 +5425,12 @@ h3 {
   margin: 1.46rem 0 1.168rem 0; }
 
 h4 {
-  font-size: 2.28rem;
+  font-size: 2rem;
   line-height: 110%;
   margin: 1.14rem 0 0.912rem 0; }
 
 h5 {
-  font-size: 1.64rem;
+  font-size: 1.5rem;
   line-height: 110%;
   margin: 0.82rem 0 0.656rem 0; }
 
@@ -5896,9 +5896,19 @@ button.btn-floating {
       background-color: #eee; }
     .dropdown-content li > a, .dropdown-content li > span {
       font-size: 0.9rem;
-      color: #FF5A14;
+     
       display: block;
       padding: 1rem 1rem; }
+    .dropdown-content li > a, .dropdown-content li > span:hover {
+      font-size: 0.9rem;
+      color: #FFFFFF;
+      display: block;
+      padding: 1rem 1rem;
+      background-color: #FF5A14; } 
+    .dropdown-content li.active{
+        background-color: #FF5A14;
+        color:#FFFFFF ;
+    }       
     .dropdown-content li > a > i {
       height: inherit;
       line-height: inherit; }
@@ -7988,13 +7998,13 @@ select {
   font-size: .9rem; }
 
 .picker__day--selected, .picker__day--selected:hover, .picker--focused .picker__day--selected {
-  border-radius: 50%;
+  border-radius: 5%;
   -webkit-transform: scale(.9);
   -moz-transform: scale(.9);
   -ms-transform: scale(.9);
   -o-transform: scale(.9);
   transform: scale(.9);
-  background-color: #FF5A14;
+  background-color: #f6861f;
   color: #ffffff; }
   .picker__day--selected.picker__day--outfocus, .picker__day--selected:hover.picker__day--outfocus, .picker--focused .picker__day--selected.picker__day--outfocus {
     background-color: #a1ded8; }

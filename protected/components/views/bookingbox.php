@@ -21,8 +21,8 @@
                 <div class="row">
 			    <div class="col s12 m8 offset-m2 grey lighten-3">
 			      <ul class="tabs">
-			        <li class="tab col s12 m3 disabled"><a href="#test1"><span class="hide-on-med-and-down">Flights</span><i class="material-icons  wobble red-text zmdi-hc-2x hide-on-large-only">airplanemode_active</i></a></li>
-					<li class="tab col s12 m3 disabled"><a href="#testPack"><span class="hide-on-med-and-down">Packages</span><i class="material-icons  tada red-text zmdi-hc-2x hide-on-large-only">shop_two</i></a></li>
+			        <!-- <li class="tab col s12 m3 disabled "><a href="#test1"><span class="hide-on-med-and-down">Flights</span><i class="material-icons  wobble red-text zmdi-hc-2x hide-on-large-only">airplanemode_active</i></a></li>
+					<li class="tab col s12 m3 disabled "><a href="#testPack"><span class="hide-on-med-and-down">Packages</span><i class="material-icons  tada red-text zmdi-hc-2x hide-on-large-only">shop_two</i></a></li> -->
 			        <li class="tab col s12 m3"><a class="<?=$_REQUEST['hotel_act']?> <?=$_REQUEST['request']?>" href="#test2"><span class="hide-on-med-and-down">Hotel</span><i class="zmdi red-text zmdi-hotel  wobble red-text zmdi-hc-2x hide-on-large-only"></i></a></li>
 			        <li class="tab col s12 m3"><a class="<?=$_REQUEST['tour_act']?>" href="#test3"><span class="hide-on-med-and-down">Activities</span><i class="zmdi zmdi-directions-bike  red-text  tada zmdi-hc-2x hide-on-large-only"></i></a></li>
 			        <li class="tab col s12 m3"><a class="<?=$_REQUEST['trans_act']?>" href="#test4"><span class="hide-on-med-and-down">Transportation</span><i class="zmdi zmdi-car-taxi  red-text wobble zmdi-hc-2x hide-on-large-only"></i></a></li>

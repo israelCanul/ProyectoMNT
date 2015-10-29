@@ -1,3 +1,11 @@
+header {
+    background: url('/images/bg/activities.jpg');
+    background-size: cover;
+}
+
+#labelInBookin {
+    color: white;
+}
 /* fuente de la pagina */
 @font-face {font-family: Junction;src: url("/font/Junction.otf") format("opentype");}
 body{	font-family:Junction, serif;}
@@ -14,11 +22,11 @@ label {
     font-size: 0.8rem;
     color: #000; 
 }
-  body {
+body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-  }
+}
 
 /* modales*/
 
@@ -285,6 +293,7 @@ nav a{
 }
 nav ul li {
     margin-left: 35px;
+    width: 11%;
 }
 @media screen and (max-width:1400px ) {
     nav ul li {

@@ -8821,3 +8821,47 @@ Stack trace:
 #1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
 #2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
 #3 {main} REQUEST_URI=/favicon.ico
+2015/10/29 14:32:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Solicitud".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('Solicitud')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('Solicitud')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('grupos/Solicitu...')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#5 {main} REQUEST_URI=/grupos/Solicitud
+2015/10/29 14:46:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Solicitud".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('Solicitud')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('Solicitud')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('grupos/Solicitu...')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#5 {main} REQUEST_URI=/grupos/Solicitud
+2015/10/29 14:47:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Solicitud".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('Solicitud')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('Solicitud')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('grupos/Solicitu...')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#5 {main} REQUEST_URI=/grupos/Solicitud
+2015/10/29 14:49:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Solicitud".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('Solicitud')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('Solicitud')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('grupos/Solicitu...')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#5 {main} REQUEST_URI=/grupos/Solicitud
+2015/10/29 17:10:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/no_results_display.png".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('img/no_results_...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/img/no_results_display.png
+2015/10/29 17:11:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/no_results_display.png".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('img/no_results_...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/img/no_results_display.png

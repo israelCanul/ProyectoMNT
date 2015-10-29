@@ -233,6 +233,7 @@ $(document).ready(function(){
     to_picker.on('set', function(event) {
         if ( event.select ) {
             from_picker_trans.set('max', to_picker.get('select'),{ format:'mm/dd/yyyy'})
+
         }
         else if ( 'clear' in event ) {
             from_picker_trans.set('max', false,{ format:'mm/dd/yyyy'})
@@ -320,7 +321,9 @@ $('.datepicker-hotel').pickadate({
             to_picker.set('min', from_picker.get('select'),{ format:'mm/dd/yyyy'}),
                 to_picker.set('clear',{ format:'mm/dd/yyyy'}),
                 from_picker.close(),
-                to_picker.open()
+                setTimeout(function(){
+                   to_picker.open(); 
+                },8000); 
             console.log('entro');
         }
         else if ( 'clear' in event ) {
@@ -329,7 +332,8 @@ $('.datepicker-hotel').pickadate({
     });
     to_picker.on('set', function(event) {
         if ( event.select ) {
-            from_picker.set('max', to_picker.get('select'),{ format:'mm/dd/yyyy'})
+            from_picker.set('max', to_picker.get('select'),{ format:'mm/dd/yyyy'}),
+            to_picker.close()
         }
         else if ( 'clear' in event ) {
             from_picker.set('max', false,{ format:'mm/dd/yyyy'})

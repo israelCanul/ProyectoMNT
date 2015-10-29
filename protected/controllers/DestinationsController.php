@@ -293,7 +293,7 @@ class DestinationsController extends Controller
 			$cs->registerCssFile(Yii::app()->params["baseUrl"].'/css/plugins/jPList/jplist-jquery-ui-bundle.min.css?a='. Yii::app()->params['assets'],'screen, projection');
 			$cs->registerCssFile(Yii::app()->params["baseUrl"].'/css/plugins/jPList/jplist-filter-toggle-bundle.min.css?a='. Yii::app()->params['assets'],'screen, projection');
 			$cs->registerCssFile(Yii::app()->params["baseUrl"].'/css/page/destinations/destinations.css');
-			$cs->registerCssFile(Yii::app()->params["baseUrl"].'/css/jquery-ui.css');
+			$cs->registerCssFile(Yii::app()->params["baseUrl"].'/css/page/jquery-ui.css');
 
 			
 			$cs->registerScriptFile(Yii::app()->params["baseUrl"].'/js/plugins/responsiveslides/responsiveslides.min.js?a='. Yii::app()->params['assets'],CClientScript::POS_END);

@@ -31,7 +31,8 @@ $(document).ready(function(e) {
             	url: "/grupos/Solicitud",
             	data: dataString,
             	success: function(data) {
-                  alert(data.children[0].textContent);
+                  console.log(data);
+                  alert(data);
                   $("#form_grupos")[0].reset();
                   location.reload();
             	},
@@ -109,13 +110,18 @@ $(document).ready(function(e) {
             window.document.insert.destCity.focus();
             return false;
          }
+
          var existAges = false;
+         
          //Verific daca sunt toate grupele de varsta deselectate
-         for (var i = 0; i < window.document.insert.ages.length; i++){
-            if(eval("window.document.insert.ages[" + i + "].checked")){
-               existAges = true;
+         for (var i = 0; i < $('.ages').length; i++){
+            
+            if(eval('window.document.getElementById("ages' + i + '").checked')){
+
+               var existAges = true;
             }
          }
+         
          if (isNaN(window.document.insert.numberP.value) || (!existAges)){
             alert("Insert Participants as required fields !");
             window.document.insert.numberP.focus();
@@ -123,8 +129,8 @@ $(document).ready(function(e) {
          }
          var existAcc = false;
          //Verific daca sunt toate evenimentele deselectate
-         for (var i = 0; i < window.document.insert.accommodation.length; i++){
-            if(eval("window.document.insert.accommodation[" + i + "].checked")){
+         for (var i = 0; i < $('.accommodation').length; i++){
+            if(eval('window.document.getElementById("accommodation' + i + '").checked')){
                existAcc = true;
             }
          }
@@ -135,8 +141,8 @@ $(document).ready(function(e) {
          }
          var existLoc = false;
          //Verific daca sunt toate evenimentele deselectate
-         for (var i = 0; i < window.document.insert.location.length; i++){
-            if(eval("window.document.insert.location[" + i + "].checked")){
+         for (var i = 0; i < $('.location').length; i++){
+            if(eval('window.document.getElementById("location' + i + '").checked')){
                existLoc = true;
             }
          }
@@ -152,8 +158,8 @@ $(document).ready(function(e) {
          }
          var existBudget = false;
          //Verific daca sunt toate grupele de varsta deselectate
-         for (var i = 0; i < window.document.insert.budget.length; i++){
-            if(eval("window.document.insert.budget[" + i + "].checked")){
+         for (var i = 0; i < $('.budget').length; i++){
+            if(eval('window.document.getElementById("budget' + i + '").checked')){
                existBudget = true;
             }
          }
