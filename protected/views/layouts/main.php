@@ -120,7 +120,7 @@ $_SESSION['home']='listo';
 						   ),
 						   array(
 							   'label'=>'GROUPS',
-							   'url'=>array(''),
+							   'url'=>array('grupos/index'),
 							   'linkOptions'=>array('class'=>''),
 						   ),
 						   array(

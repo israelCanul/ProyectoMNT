@@ -662,186 +662,207 @@
 								}						
 							?>
 						</div>
-
 								<article class="detailInfo">
-									<div class="elementInfo">
-										<div class="titleInfo">Description </div>
-										<div class="contentInfo"><?= nl2br(utf8_encode(base64_decode($Hotel->Descriptions->longDescription))); ?></div>
-									</div>
-									
-									<div class="elementInfo">
-										<div class="titleInfo">Rooms </div>
-										<div class="contentInfo">
-											<?php foreach($_HL as $_il){
-		                    					if($_il["hotel_id"]== $Hotel->attributes()->hotelId){  
-		                       						$Room_habitacion = $_il["hotel_habitaciones"];
-		                    					}
-											}?>
+								<div class="readyBook">HOTEL DESCRIPTION</div>
+								
+								<ul class="collapsible popout" data-collapsible="accordion">
+									<li>
+										<div class="collapsible-header red-text"><i class="material-icons">filter_drama</i>Description </div>
+										<div class="collapsible-body"><p class="black-text"><?= nl2br(utf8_encode(base64_decode($Hotel->Descriptions->longDescription))); ?></p></div>
+									</li>
+									<li>
+										<div class="collapsible-header red-text"><i class="material-icons">filter_drama</i>Rooms </div>
+										<div class="collapsible-body">
+											<div class="row">
+												<?php foreach($_HL as $_il){
+			                    					if($_il["hotel_id"]== $Hotel->attributes()->hotelId){  
+			                       						$Room_habitacion = $_il["hotel_habitaciones"];
+			                    					}
+												}?>
 
-											<div class="roomsElement">
-												<p class="roomsTitle">Arrival</p>
-												<? if($Hotel['hotel_checkin']==""){?>
-													<p>15:00 hrs.</p>
-												<?}else{?>
-													<p><?=substr($Hotel['hotel_checkin'],0,2)?>:00 hrs.</p>
-												<?}?>	
+												<div class="col s12 m4">
+													<h6 class="roomsTitle center-align blue-grey-text">Arrival</h6>
+													<? if($Hotel['hotel_checkin']==""){?>
+														<h6 class="black-text center-align">15:00 hrs.</h6>
+													<?}else{?>
+														<h6 class="black-text center-align"><?=substr($Hotel['hotel_checkin'],0,2)?>:00 hrs.</h6>
+													<?}?>	
+												</div>
+
+												<div class="col s12 m4">
+													<h6 class="roomsTitle center-align blue-grey-text">Check Out</h6>
+													<? if($Hotel['hotel_checkout']==""){?>
+														<h6 class="black-text center-align">12:00 hrs.</h6>
+													<?}else{?>
+														<h6 class="black-text center-align"><?=substr($Hotel['hotel_checkout'],0,2)?>:00 hrs.</h6>
+													<?}?>	
+												</div>
+
+												<div class="col s12 m4">
+													<h6 class="roomsTitle center-align blue-grey-text">Total</h6>
+													<h6 class="black-text center-align"><? echo $Room_habitacion . ' Rooms'; ?></h6>
+												</div>		
 											</div>
+										</div>
+									</li>
+									<li>
+										<div class="collapsible-header red-text"><i class="material-icons">filter_drama</i>Category </div>
+										<div class="collapsible-body">
+											<div class="row">
+												<?php $hotelCategories = explode("," , $Hotel->attributes()->category);?>
 
-											<div class="roomsElement">
-												<p class="roomsTitle">Check Out</p>
-												<? if($Hotel['hotel_checkout']==""){?>
-													<p>12:00 hrs.</p>
-												<?}else{?>
-													<p><?=substr($Hotel['hotel_checkout'],0,2)?>:00 hrs.</p>
-												<?}?>	
+												<div class="col s12">
+													<div class="row">
+														<?php 
+														foreach ($hotelCategories as $hc):
+															 echo '<div class=" col s4 m3 l2 black-text center-align"><h6>' . utf8_decode($hc) . "</h6></div>";
+														endforeach; 
+														?>
+													</div>
+												</div>		
 											</div>
-
-											<div class="roomsElement">
-												<p class="roomsTitle">Total</p>
-												<p><?php echo $Room_habitacion . ' Rooms'; ?></p>
-											</div>
-											
 										</div>
-									</div>
-
-									<div class="elementInfo">
-										<div class="titleInfo">Category </div>
-										<?php $hotelCategories = explode("," , $Hotel->attributes()->category);?>
-										<div class="contentInfo">
-											<ul class="hotelCategories">
-											<?php 
-											foreach ($hotelCategories as $hc):
-												 echo "<li>" . utf8_decode($hc) . "</li>";
-											endforeach; 
-											?>
-											</ul>
-										</div>
-									</div>
-									
-									<div class="elementInfo">
-										<div class="titleInfo">Services</div>
-										<div class="contentInfo">
-											<ul class="hotel_services">
-												<?php
-					                            if(sizeof($Hotel->Amenities->Amenity) > 0){
-													foreach($Hotel->Amenities->Amenity as $_a){
-														if($_a->attributes()->amenityTipo ==1){
-															echo "<li>";
-					             							$s =  Yii::app()->GenericFunctions->obtenerHotelCargos($_a->attributes()->amenityID,$Hotel->attributes()->hotelId);
-															if($s["cargo"]){
-					                                            echo ucfirst(strtolower($_a->attributes()->name))," <span style='color:red;'> $</span>",($s["habitaciones_cuenta"]==0 ? "" : "(".$s["habitaciones_cuenta"].")");
-					               					        }else{
-					               					        	echo ucfirst(strtolower($_a->attributes()->name))," ",($s["habitaciones_cuenta"]==0 ? "" : "(".$s["habitaciones_cuenta"].")");
-					                                        }
-					                                        echo "</li>";                                   
-								                 		}
-													}
-												}
-												?>	
-											</ul>
-										</div>
-									</div>
-
-									<div class="elementInfo">
-										<div class="titleInfo">Facilities</div>
-										<div class="contentInfo">
-											<ul class="hotel_facilities">
-												<?php
-					                            if(sizeof($Hotel->Amenities->Amenity) > 0){	
-					                            	foreach($Hotel->Amenities->Amenity as $_a){
-														if($_a->attributes()->amenityTipo ==2){
-															echo "<li>";
-					             							$s =  Yii::app()->GenericFunctions->obtenerHotelCargos($_a->attributes()->amenityID,$Hotel->attributes()->hotelId);
-															if($s["cargo"]){
-			                                                    echo ucfirst(strtolower($_a->attributes()->name))," <span style='color:red;'> $</span>",($s["habitaciones_cuenta"]==0 ? "" : "(".$s["habitaciones_cuenta"].")");
-			                                                }else{
-			                                                	echo ucfirst(strtolower($_a->attributes()->name))," ",($s["habitaciones_cuenta"]==0 ? "" : "(".$s["habitaciones_cuenta"].")");
-			                                                }
-					                                        echo "</li>";                                   
-					     					             }
-													}
-												}
-												?>	
-											</ul>
-										</div>
-									</div>
-									
-									<div class="elementInfo">
-										<div class="titleInfo">Activities</div>
-										<div class="contentInfo">
-											<ul class="hotel_activities">
-												<?php
-												$activities =array();                         
-												foreach($_HA as $_xl){
-													if($_xl["hotel"]== $Hotel->attributes()->hotelId){  
-														if($_xl["descripcion"] != ""){
-															if(!in_array($_xl["descripcion"], $activities)){
-																if($_xl["con_costo"] == 1){
-																	echo "<li>".ucfirst(strtolower($_xl["descripcion"]))." <span style='color:red;'> $</span></li>";	
-																}else{
-																	echo "<li>".ucfirst(strtolower($_xl["descripcion"]))."</li>";
-																}
-																$activities[]=ucfirst(strtolower($_xl["descripcion"]));
+									</li>																		
+									<li>
+										<div class="collapsible-header red-text"><i class="material-icons">filter_drama</i>Services </div>
+										<div class="collapsible-body">
+											<div class="row">
+												<div class="col s12">
+													<ul class="collection">
+														<?php
+							                            if(sizeof($Hotel->Amenities->Amenity) > 0){
+															foreach($Hotel->Amenities->Amenity as $_a){
+																if($_a->attributes()->amenityTipo ==1){
+																	echo '<li class="collection-item black-text center-align">';
+							             							$s =  Yii::app()->GenericFunctions->obtenerHotelCargos($_a->attributes()->amenityID,$Hotel->attributes()->hotelId);
+																	if($s["cargo"]){
+							                                            echo ucfirst(strtolower($_a->attributes()->name))," <span style='color:red;'> $</span>",($s["habitaciones_cuenta"]==0 ? "" : "(".$s["habitaciones_cuenta"].")");
+							               					        }else{
+							               					        	echo ucfirst(strtolower($_a->attributes()->name))," ",($s["habitaciones_cuenta"]==0 ? "" : "(".$s["habitaciones_cuenta"].")");
+							                                        }
+							                                        echo "</li>";                                   
+										                 		}
 															}
 														}
-													}
-												} 
-												?>
-											</ul>
+														?>													
+													</ul>
+												</div>		
+											</div>
 										</div>
-									</div>
-									
-									<div class="elementInfo">
-										<div class="titleInfo">Restaurants & Bars</div>
-										<div class="contentInfo">
-											<?php if(sizeof($Hotel->Restaurants->Restaurant) > 0){
-											$rst = 0;
-											foreach($Hotel->Restaurants->Restaurant as $_res){?>
-											<div class="roomResTitle roomResTitleD">
-												<div class="roomResName"><?php echo nl2br($_res->attributes()->name); ?></div>
-												<div class="roomResDes">
-													<?php
-													if($_res->attributes()->schedule!=""){
-														echo "<div class='schedule'>" .nl2br($_res->attributes()->schedule)."</div>";
-													}
-													if($_res->attributes()->description!=""){
-														echo "<div class='description'>".nl2br($_res->attributes()->description). "</div>";
-													}
-													if($_res->attributes()->dress_code!=""){
-														echo "<div class='dresscode'>".nl2br($_res->attributes()->dress_code). "</div>"; 	
-													}
-													?>
-													</div>
-												
-													<div class="roomResPhoto roomResPhotoD">
-														<?php $class = ""; ?>
-														<?php foreach ($_res->Images as $photoRes): ?>
-															<?php if($photoRes->attributes()->path!=""): ?>
-																<li class="<?php echo $class; ?> photoRest" data-src="//xtstatic.lomastravel.com.mx/image/1000/<?php echo $photoRes->attributes()->path;?>" >
-																	<a class='roomResPhoto-thumb_<?php echo $rst;?>' rel='roomResPhoto-thumb_<?php echo $rst;?>' href="//xtstatic.lomastravel.com.mx/image/1000/<?php echo $photoRes->attributes()->path;?>" class="fancybox-thumb">
-																		<img src="//xtstatic.lomastravel.com.mx/image/1000/<?php echo $photoRes->attributes()->path;?>" />
-																	</a>
-																</li>
-															<?php endif; ?>
-															<?php $class="photoResHide"; ?>
-														<?php endforeach; ?>
-													</div>
-												</div>
-												<?php $rst ++; ?>
-											<?php }} ?>
-		                                    
+									</li>									
+									<li>
+										<div class="collapsible-header red-text"><i class="material-icons">filter_drama</i>Facilities </div>
+										<div class="collapsible-body">
+											<div class="row">
+												<div class="col s12">
+													<ul class="collection">
+														<?php
+							                            if(sizeof($Hotel->Amenities->Amenity) > 0){
+															foreach($Hotel->Amenities->Amenity as $_a){
+																if($_a->attributes()->amenityTipo ==2){
+																	echo '<li class="collection-item black-text center-align">';
+							             							$s =  Yii::app()->GenericFunctions->obtenerHotelCargos($_a->attributes()->amenityID,$Hotel->attributes()->hotelId);
+																	if($s["cargo"]){
+							                                            echo ucfirst(strtolower($_a->attributes()->name))," <span style='color:red;'> $</span>",($s["habitaciones_cuenta"]==0 ? "" : "(".$s["habitaciones_cuenta"].")");
+							               					        }else{
+							               					        	echo ucfirst(strtolower($_a->attributes()->name))," ",($s["habitaciones_cuenta"]==0 ? "" : "(".$s["habitaciones_cuenta"].")");
+							                                        }
+							                                        echo "</li>";                                   
+										                 		}
+															}
+														}
+														?>													
+													</ul>
+												</div>		
+											</div>
 										</div>
-									</div>
+									</li>
+									<li>
+										<div class="collapsible-header red-text"><i class="material-icons">filter_drama</i>Activities </div>
+										<div class="collapsible-body">
+											<div class="row">
+												<div class="col s12">
+													<ul class="collection">
+														
+														<?php
+														$activities =array();                         
+														foreach($_HA as $_xl){
+															if($_xl["hotel"]== $Hotel->attributes()->hotelId){  
+																if($_xl["descripcion"] != ""){
+																	if(!in_array($_xl["descripcion"], $activities)){
+																		if($_xl["con_costo"] == 1){
+																			echo '<li class="collection-item black-text center-align">'.ucfirst(strtolower($_xl["descripcion"]))." <span style='color:red;'> $</span></li>";	
+																		}else{
+																			echo '<li class="collection-item black-text center-align">'.ucfirst(strtolower($_xl["descripcion"]))."</li>";
+																		}
+																		$activities[]=ucfirst(strtolower($_xl["descripcion"]));
+																	}
+																}
+															}
+														} 
+														?>													
+													</ul>
+												</div>		
+											</div>
+										</div>
+									</li>									
+									<li>
+										<div class="collapsible-header red-text"><i class="material-icons">filter_drama</i>Restaurants & Bars </div>
+										<div class="collapsible-body">
+											<div class="row">
 
-									<div class="elementInfo">
-										<div class="titleInfo">Policies </div>
-										<div class="contentInfo">
-											<div class="roomPolicies"><?= nl2br(base64_decode(utf8_encode($Hotel->Descriptions->legal))); ?></div>
+												<?php if(sizeof($Hotel->Restaurants->Restaurant) > 0){
+												$rst = 0;
+												foreach($Hotel->Restaurants->Restaurant as $_res){?>
+													<div class="col s12 card-panel hoverable">
+														<div class="row"></div>
+															<h5 class="center-align black-text"><?php echo nl2br($_res->attributes()->name); ?></h5>
+															<div class="col s12 m9 l10 black-text">
+																<?php
+																if($_res->attributes()->schedule!=""){
+																	echo "<div class='schedule'>" .nl2br($_res->attributes()->schedule)."</div>";
+																}
+																if($_res->attributes()->description!=""){
+																	echo "<div class='description'>".nl2br($_res->attributes()->description). "</div>";
+																}
+																if($_res->attributes()->dress_code!=""){
+																	echo "<div class='dresscode'>".nl2br($_res->attributes()->dress_code). "</div>"; 	
+																}
+																?>
+															</div>
+														
+															<div class="col s12 m3 l2 roomResPhotoD">
+																<?php $class = ""; ?>
+																<ul>
+																<?php foreach ($_res->Images as $photoRes): ?>
+																	<?php if($photoRes->attributes()->path!=""): ?>
+																		<li class="<?php echo $class; ?> photoRest" data-src="//xtstatic.lomastravel.com.mx/image/1000/<?php echo $photoRes->attributes()->path;?>" >
+																			<a class='roomResPhoto-thumb_<?php echo $rst;?>' rel='roomResPhoto-thumb_<?php echo $rst;?>' href="//xtstatic.lomastravel.com.mx/image/1000/<?php echo $photoRes->attributes()->path;?>" class="fancybox-thumb">
+																				<img class="responsive-img" src="//xtstatic.lomastravel.com.mx/image/1000/<?php echo $photoRes->attributes()->path;?>" />
+																			</a>
+																		</li>
+																	<?php endif; ?>
+																	<?php $class="hide"; ?>
+																<?php endforeach; ?>
+																</ul>
+															</div>
+														
+													</div>
+													<?php $rst ++; ?>
+												<?php }} ?>
+
+											</div>
 										</div>
-									</div>
-								
+
+
+									</li>								
+									<li>
+										<div class="collapsible-header red-text"><i class="material-icons">filter_drama</i>Policies </div>
+										<div class="collapsible-body"><p class="black-text"><?= nl2br(base64_decode(utf8_encode($Hotel->Descriptions->legal))); ?></p></div>
+									</li>									
+								</ul>
 								</article>
-							
+						
 						</section>
 
 						<!-- Banner Lateral Derecho -->
@@ -850,7 +871,32 @@
 						</aside> -->
 							
 					</div>
+											<!-- para inicializar el slide de imagenes [Inicio] -->
+											<?php if(sizeof($Hotel->Restaurants->Restaurant) > 0){
+											
+											foreach($Hotel->Restaurants->Restaurant as $_res){?>
+											<div class="roomResTitle roomResTitleD">
+													<? $rst = 0; ?>
+													<div class="roomResPhoto roomResPhotoD">
+														<?php $class = ""; ?>
+														<?php foreach ($_res->Images as $photoRes): ?>
+															<? if($class==""): ?>
+															<?php if($photoRes->attributes()->path!=""): ?>
 
+																<li class="hide photoRest" data-src="//xtstatic.lomastravel.com.mx/image/1000/<?php echo $photoRes->attributes()->path;?>" >
+																	<a class='roomResPhoto-thumb_<?php echo $rst;?>' rel='roomResPhoto-thumb_<?php echo $rst;?>' href="//xtstatic.lomastravel.com.mx/image/1000/<?php echo $photoRes->attributes()->path;?>" class="fancybox-thumb">
+																		<img src="//xtstatic.lomastravel.com.mx/image/1000/<?php echo $photoRes->attributes()->path;?>" />
+																	</a>
+																</li>
+															<?php endif; ?>
+															<?php $class="photoResHide"; ?>
+															<? endif; ?>
+														<?php endforeach; ?>
+													</div>
+												</div>
+												<?php $rst ++; ?>
+											<?php }} ?>
+											<!-- para inicializar el slide de imagenes [Final] -->	
 					
 		<script type="text/javascript">
 			<?php

@@ -5,6 +5,16 @@ header{
 a{ 
   color:#FF5A14;  
 }
+.readyBook {
+    color: #fff;
+    background: #717073;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 #our-hotels, #mostWanted {
     padding: 20px 0;
     -webkit-box-sizing: border-box;

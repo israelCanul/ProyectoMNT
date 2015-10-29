@@ -14,7 +14,7 @@ $pax_menor=$_REQUEST['tour_child'];
         <div class="col s12 m10 offset-m1">
             <h1 class="infoResult">Activities in <?php echo $_REQUEST["tour_destination"]; ?></h1>
             <h2 class="infoSearch">
-                traveling on <?php echo Yii::app()->GenericFunctions->convertDate($tour_fecha); ?>
+                Traveling on <?php echo Yii::app()->GenericFunctions->convertDate($tour_fecha); ?>
                 - <?php echo $pax_adulto; ?> <?php echo ($pax_adulto == 1) ? "Adult" : "Adults"; ?>, <?php echo $pax_menor; ?> <?php echo ($pax_menor == 1) ? "Child" : "Children"; ?>
             </h2>
         </div>

@@ -8725,3 +8725,99 @@ Stack trace:
 #1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
 #2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
 #3 {main} REQUEST_URI=/favicon.ico
+2015/10/28 10:32:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2015/10/28 14:43:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/slideshow/grupo1.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('img/slideshow/g...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/img/slideshow/grupo1.jpg
+2015/10/28 14:43:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/grupos.js".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('js/grupos.js')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/js/grupos.js?v=2
+2015/10/28 14:43:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/slide-show-min.js".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('js/slide-show-m...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/js/slide-show-min.js?v=4
+2015/10/28 14:55:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/page/images/ui-bg_highlight-soft_100_eeeeee_1x100.png".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('css/page/images...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/css/page/images/ui-bg_highlight-soft_100_eeeeee_1x100.png
+2015/10/28 14:55:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/page/images/ui-bg_glass_100_f6f6f6_1x400.png".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('css/page/images...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/css/page/images/ui-bg_glass_100_f6f6f6_1x400.png
+2015/10/28 14:55:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/page/images/ui-icons_ffffff_256x240.png".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('css/page/images...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/css/page/images/ui-icons_ffffff_256x240.png
+2015/10/28 14:55:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/page/images/ui-bg_glass_65_ffffff_1x400.png".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('css/page/images...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/css/page/images/ui-bg_glass_65_ffffff_1x400.png
+2015/10/28 14:55:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/page/images/ui-bg_glass_100_fdf5ce_1x400.png".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('css/page/images...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/css/page/images/ui-bg_glass_100_fdf5ce_1x400.png
+2015/10/28 14:55:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/page/images/ui-icons_ef8c08_256x240.png".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('css/page/images...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/css/page/images/ui-icons_ef8c08_256x240.png
+2015/10/28 14:56:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/page/images/ui-bg_highlight-soft_100_eeeeee_1x100.png".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('css/page/images...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/css/page/images/ui-bg_highlight-soft_100_eeeeee_1x100.png
+2015/10/28 14:56:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/page/images/ui-icons_ffffff_256x240.png".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('css/page/images...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/css/page/images/ui-icons_ffffff_256x240.png
+2015/10/28 14:56:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/page/images/ui-icons_ef8c08_256x240.png".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('css/page/images...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/css/page/images/ui-icons_ef8c08_256x240.png
+2015/10/28 15:00:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/page/images/ui-icons_ffffff_256x240.png".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('css/page/images...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/css/page/images/ui-icons_ffffff_256x240.png
+2015/10/28 15:00:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/page/images/ui-bg_highlight-soft_100_eeeeee_1x100.png".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('css/page/images...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/css/page/images/ui-bg_highlight-soft_100_eeeeee_1x100.png
+2015/10/29 09:36:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico

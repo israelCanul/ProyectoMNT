@@ -1,6 +1,8 @@
 /* Inicializar componentes */
 $(document).ready(function(){
-
+	$('.collapsible').collapsible({
+      accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+    });
 	/* para llamar la funcion de menu responsive */
 	$(".button-collapse").sideNav();//
 	$('.datepicker').pickadate({
