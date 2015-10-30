@@ -2,6 +2,13 @@
 	var hotelsOrderingXML = "<?= $this->createUrl("destinations/ordenacion"); ?>";
 	var searchToken = "<?= $_Cr; ?>";
 </script>
+<div class="row"></div>
+<div class="row bookin-form1" style="z-index:10;position: relative;">
+	<div class="col s12">
+		<?php	$this->widget('application.components.Bookingbox'); ?>
+		<?php $fecha = date("d/m/Y",mktime(0,0,0,date("m"),date("d")+3,date("Y"))); ?>
+	</div>
+</div>
 <div class="row">
 <div class="col s12 m10 offset-m1 l10 offset-l1">
 <!-- INICIO DE LA VISTA -->
@@ -348,7 +355,7 @@
 				       		</h6>
 
 				      		<div class="jplist-range-slider" data-control-type="range-slider" data-control-name="range-slider-stars"  data-control-action="filter" data-path=".stars" data-slider-func="starsSlider" data-setvalues-func="starsValues">
-								<div class="ui-slider red" data-type="ui-slider"></div>
+								<div class="ui-slider" data-type="ui-slider"></div>
 								<div class="value prev" data-type="prev-value"></div>
 								<div class="value next" data-type="next-value"></div>
 							</div>
@@ -396,13 +403,17 @@
 						<div class="elementFilter">
 			    			<h6><?php echo Yii::t("global","Plan de Alimentos"); ?></h6>
 							<div class="jplist-group" data-control-type="checkbox-text-filter" data-control-action="filter" data-control-name="keywords" data-path=".keywords" data-logic="or">
+								<div class="row">
+									
+				         				<?php foreach($MealsPlan as $_mPlan){ ?>
+				         					<div class="input-field col s12" style="padding:0px;">
+				         						<input value="<?php echo strtolower($_mPlan);?>" id="<?php echo strtolower($_mPlan);?>" type="checkbox"  />
+				         						<label class="label_meal" for="<?php echo strtolower($_mPlan);?>"><?php echo ucwords($_mPlan);?></label >
+				         					</div>
+				         				<?php } ?>
+									
+								</div> 
 
-	         				<?php foreach($MealsPlan as $_mPlan){ ?>
-	         					<div style="overflow: hidden; padding: 5px 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;  box-sizing: border-box;">
-	         						<input value="<?php echo strtolower($_mPlan);?>" id="<?php echo strtolower($_mPlan);?>" type="checkbox" style="position: relative;left: 0;visibility: visible;" />
-	         						<span><?php echo ucwords($_mPlan);?></span>
-	         					</div>
-	         				<?php } ?>
 	        				</div>
 	   					</div>
 				
@@ -410,6 +421,8 @@
 				</div>
 			</div>
 
+<!-- style="position: relative;left: 0;visibility: visible;" -->
+<!-- style="overflow: hidden; padding: 5px 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;  box-sizing: border-box;" -->
 			<?php } ?>
 
 		</section>

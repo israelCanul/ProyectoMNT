@@ -18,10 +18,10 @@
 			              <?
 			              
 			              ?>
-			              <p class="center-align"><label class="textoCaja"><?=$value['nombre']?></label></p>
-			              <p class="center-align"><?=$value['estado']?></p>
+			              <p class="center-align"><label class="textoCaja"><?=GenericFunctions::makeSinAcento($value['nombre'])?></label></p>
+			              <p class="center-align"><?=GenericFunctions::makeSinAcento($value['estado'])?></p>
 
-			              </a>
+			              </a> 
 			            </div>
 			            <!-- <div class="card-action">
 			              <a href="#">This is a link</a>
@@ -45,8 +45,8 @@
 		</div>
 	</div>
 
-	<? //$value=$notas2;?>
-	<!-- <div class="row hide-on-med-and-down">
+	<? $value=$notas2;?>
+	<div class="row hide-on-med-and-down">
 		<div class="col 12">
 			<?
 			//notas de la pagina http://www.mexiconewsnetwork.com/travel/
@@ -72,7 +72,7 @@
 			?>
 
 		</div>
-	</div> -->
+	</div>
 </div>
 <script type="text/javascript">
 	$(document).ready(function(){

@@ -1,5 +1,28 @@
 /* Inicializar componentes */
 $(document).ready(function(){
+	$('#form_contact').validate({
+		
+		submitHandler: function(form) {
+		    $("input[type=submit]").attr("disabled", "disabled");
+		    var dataString 	= $(this).serialize();
+			$.ajax({
+            	type: "POST",
+            	url: "/site/contact",
+            	data: dataString,
+            	success: function(data) {
+                  console.log(data);
+                  alert(data);
+                  $("#form_contact")[0].reset();
+                  location.reload();
+            	},
+				error: function(data) {
+					alert(data);
+				}
+        	});
+		}
+
+	});
+
 	$('.collapsible').collapsible({
       accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
     });
@@ -29,7 +52,7 @@ $(document).ready(function(){
 		if($(".news-panel").hasClass('grid')){
 			$('.grid').masonry({	
 				itemSelector: '.item'	  
-			});
+			}); 
 		}			
 	}, 2000);
 	

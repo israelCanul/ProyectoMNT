@@ -92,8 +92,8 @@ if(count($notas)>0){
 	</div>
 </div>
 
-	<? //$value=$notas2;?>
-	<!-- <div class="row hide-on-med-and-down">
+	<? $value=$notas2;?>
+	<div class="row hide-on-med-and-down">
 		<div class="col 12">
 			<?
 			//notas de la pagina http://www.mexiconewsnetwork.com/travel/
@@ -119,4 +119,4 @@ if(count($notas)>0){
 			?>
 
 		</div>
-	</div> -->
+	</div>

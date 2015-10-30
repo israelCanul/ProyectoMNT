@@ -9,7 +9,7 @@
 		  	<?php foreach($_destinos as $_destino): ?>
 
 	  			<?php if($_destino->getEnLista()){ ?>
-					<div class="small col s12 m6 l4 " style=" height: 250px;">
+					<div class="small col s12 m6 l4 " style=" height: 250px;overflow: hidden;">
 			          <div class="card-destinos">
 				          <div class="card ">
 				            <div class="card-image hoverable">
@@ -43,7 +43,7 @@
 		?>
 			<?php foreach ($_categorias as $_categoria):?>
 				<?php if($_categoria->getEnLista() && $lista<9){ ?>
-					<div class="small col s12 m6 l4 " style="height: 250px;">
+					<div class="small col s12 m6 l4 " style="height: 250px;overflow: hidden;">
 			          <div class="card-destinos">
 				          <div class="card ">
 				            <div class="card-image hoverable">
@@ -52,7 +52,7 @@
 				            </div>
 				            <div class="card-content card-action hoverable contenidoDestinos">
 				              <a  title="<?php echo $_categoria->getNombre();?>" href="/toursByCat/Category.html?tour_destination=<?php echo urlencode($_categoria->getNombre());?>&tipo=category&cat=<?=$_categoria->getId(); ?>&dest=&TourId=&sup=&openTk=0&seg=&tour-Checkin=<?echo urlencode(date('m/d/Y', strtotime('+2 day'))); ?>&tour_adults=2&tour_child=0&action=&lan=en&moneda=USD">
-				              <p class="center-align textoCaja red-text"><?=$_categoria->getNombre()?></p>
+				              <p class="center-align textoCaja red-text"><?=GenericFunctions::makeSinAcento($_categoria->getNombre())?></p>
 				              </a>
 				            </div>
 				          </div>
@@ -75,7 +75,7 @@
 				      <div class="collapsible-body">
 						<?php foreach ($_categorias as $_categoria):?>
 							<?php if($_categoria->getEnLista() && $lista>=9){ ?>
-								<div class="small col s12 m6 l4 " style="height: 300px;">
+								<div class="small col s12 m6 l4 " style="height: 300px;overflow: hidden;">
 						          <div class="card-destinos">
 							          <div class="card ">
 							            <div class="card-image hoverable">
@@ -84,7 +84,7 @@
 							            </div>
 							            <div class="card-content card-action hoverable contenidoDestinos">
 							              <a  title="<?php echo $_categoria->getNombre();?>" href="/toursByCat/Category.html?tour_destination=<?php echo urlencode($_categoria->getNombre());?>&tipo=category&cat=<?=$_categoria->getId(); ?>&dest=&TourId=&sup=&openTk=0&seg=&tour-Checkin=<?echo urlencode(date('m/d/Y', strtotime('+2 day'))); ?>&tour_adults=2&tour_child=0&action=&lan=en&moneda=USD">
-							              <p class="center-align textoCaja red-text"><?=$_categoria->getNombre()?></p>
+							              <p class="center-align textoCaja red-text"><?=GenericFunctions::makeSinAcento($_categoria->getNombre())?></p>
 							              </a>
 							            </div>
 							          </div>
@@ -113,8 +113,8 @@
 	</div>
 </div>
 
-<? //$value=$notas2;?>
-<!-- <div class="row hide-on-med-and-down">
+<? $value=$notas2;?>
+<div class="row hide-on-med-and-down">
 	<div class="col 12">
 		<?
 		//notas de la pagina http://www.mexiconewsnetwork.com/travel/
@@ -122,7 +122,7 @@
 			foreach ($notas2 as $key => $value) {
 				?>
 				<div class="col s12 m3 wrap_new" id="wrap_new_<?=$key?>">
-					<div class="card transparent  new" data-key="<?=$key?>" style="height:200px;">
+					<div class="card transparent  new" data-key="<?=$key?>" style="height:200px;overflow: hidden;">
 						<div class="card-content black-text">
 							<span class="card-title black-text"><?=$value['titulo']?></span>
 							<div class="col s12  <? if($key==0){ echo "animated fadeInleft";}else{ echo "line_new"; }?> line_news" id="wrap_line_<?=$key?>" style="height: 5px;"></div>
@@ -140,7 +140,7 @@
 		?>
 
 	</div>
-</div> -->
+</div>
 <script type="text/javascript">
 	$(document).ready(function(){
 		$("#txtBanner").html("PRE-HISPANIC CITY OF CHICHEN-ITZA");

@@ -9,7 +9,7 @@
 		
 		public function run(){
 			$cs = Yii::app()->getclientScript();
-			$cs->registerScriptFile(Yii::app()->params["baseUrl"].'/js/validate.jquery.js?a='. Yii::app()->params['assets'],CClientScript::POS_END);
+			//$cs->registerScriptFile(Yii::app()->params["baseUrl"].'/js/validate.jquery.js?a='. Yii::app()->params['assets'],CClientScript::POS_END);
 
 			// si no llegan parametros de busquedas request queda activo para hoteles
 			$_REQUEST['request']="active";

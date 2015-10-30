@@ -3,7 +3,7 @@
 body{	font-family:Junction, serif;}
 .txtCant{font-family:serif;}
 /* declaracion del header*/
-header{position: absolute;top: 0px;left: 0px;width: 100%;height:150px;}
+header{position: absolute;top: 0px;left: 0px;width: 100%;height:150px;background-color: #212121 !important}
 h5,h4,h3,h2,h1,label{
     -webkit-margin-before: 0em;
     -webkit-margin-after: 0em;
@@ -284,6 +284,7 @@ nav a{
 }
 nav ul li {
     margin-left: 35px;
+    width: 11%;
 }
 @media screen and (max-width:1400px ) {
     nav ul li {
@@ -302,6 +303,7 @@ nav ul a {
     display: block;
     padding: 0 15px;
 } 
+nav ul a:hover{color:#FF5A14}
 a,a:hover{color:black}
 @media screen and (max-width:1150px ) {
   nav ul a {font-size:0.8rem;}

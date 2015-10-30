@@ -414,7 +414,7 @@ class DestinationsController extends Controller
             $_HL 	=  $_hotel->getBenefitsHotel();		// Beneficion del Hotel
             $_PM 	=  $_hotel->getDealsHotel();   		// Promocion Descripcion
             
-			
+			$this->layout='checkout';
 			$this->render('lista',array(
 				"_Htls" 	=> $Hoteles,
 				"_Cr" 		=> $_Cr,

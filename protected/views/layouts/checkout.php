@@ -16,9 +16,9 @@
 </div>
 
 <?
-$_SESSION['home']='listo';
+	$_SESSION['home']='listo';
 }?>
-<head>
+<head> 
 
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -28,6 +28,8 @@ $_SESSION['home']='listo';
     <script src="/js/jquery-1.9.1.min.js" type="text/javascript"></script>
 	<!--<script src="/js/jquery-ui.js" type="text/javascript"></script> -->
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <!-- validate -->
+    <script src="<? echo '/js/validate.jquery.js?a='. Yii::app()->params['assets']; ?>" ></script>
    	<!--Import jQuery before materialize.js-->
 	<script src="/js/materialize.min.js"></script>
     <!-- Archivos CSS ****************************************************************************************************** -->
@@ -70,18 +72,6 @@ $_SESSION['home']='listo';
 	      <div class="row">
 		    <div class="col m10 l10 offset-m1 offset-l1">
 		    	<center>
-			      <!--<ul >
-			        <li><a data-ajax="false" href="<?php /*echo $this->createUrl("/home"); */?>">HOME</a></li>
-			        <li><a data-ajax="false" href="<?php /*echo $this->createUrl("/destination"); */?>">HOTELS</a></li>
-					  <li><a data-ajax="false" href="#">FLIGHTS</a></li>
-			        <li><a data-ajax="false" href="<?php /*echo $this->createUrl("/activities"); */?>">ACTIVITIES</a></li>
-					<li><a data-ajax="false" href="#">PACKAGES</a></li>
- 					<li><a data-ajax="false" href="#">WEDDINGS</a></li>
-					<li><a data-ajax="false" href="#">GROUPS</a></li>
-			        <li><a data-ajax="false" href="<?php /*echo $this->createUrl("/news"); */?>">NEWS</a></li>
-					<li><a data-ajax="false" href="<?php /*echo $this->createUrl("/promotions"); */?>">PROMOTIONS</a></li>
-			      </ul>-->
-
 				<ul class="hide-on-med-and-down">
 				   <?php
 				   $this->widget('zii.widgets.CMenu',array(
@@ -101,7 +91,7 @@ $_SESSION['home']='listo';
 						   array(
 							   'label'=>'FLIGHTS',
 							   'url'=>array(''),
-							   'linkOptions'=>array('class'=>''),
+							   'linkOptions'=>array('class'=>'hide'),
 						   ),
 						   array(
 							   'label'=>'ACTIVITIES',
@@ -111,7 +101,7 @@ $_SESSION['home']='listo';
 						   array(
 							   'label'=>'PACKAGES',
 							   'url'=>array(''),
-							   'linkOptions'=>array('class'=>''),
+							   'linkOptions'=>array('class'=>'hide'),
 						   ),
 						   array(
 							   'label'=>'WEDDINGS',
@@ -120,7 +110,7 @@ $_SESSION['home']='listo';
 						   ),
 						   array(
 							   'label'=>'GROUPS',
-							   'url'=>array(''),
+							   'url'=>array('site/news'),
 							   'linkOptions'=>array('class'=>''),
 						   ),
 						   array(
@@ -137,18 +127,17 @@ $_SESSION['home']='listo';
 				   )); ?>
 					</ul>
 
-
 		    	</center>
 		    </div>
 	      </div>
 	      <ul class="side-nav" id="mobile-demo">
 			  <li><a data-ajax="false" href="<?php echo $this->createUrl("/home"); ?>">HOME</a></li>
 			  <li><a data-ajax="false" href="<?php echo $this->createUrl("/destination"); ?>">HOTELS</a></li>
-			  <li><a data-ajax="false" href="#">FLIGHTS</a></li>
+			  <!-- <li><a data-ajax="false" href="#">FLIGHTS</a></li> -->
 			  <li><a data-ajax="false" href="<?php echo $this->createUrl("/activities"); ?>">ACTIVITIES</a></li>
-			  <li><a data-ajax="false" href="#">PACKAGES</a></li>
-			  <li><a data-ajax="false" href="#">WEDDINGS</a></li>
-			  <li><a data-ajax="false" href="#">GROUPS</a></li>
+			  <!-- <li><a data-ajax="false" href="#">PACKAGES</a></li> -->
+			  <li><a data-ajax="false" target="_blank" href="http://www.mexiconewsnetwork.com/services/bridal-moments/">WEDDINGS</a></li>
+			  <li><a data-ajax="false" href="/groups.html">GROUPS</a></li>
 			  <li><a data-ajax="false" href="<?php echo $this->createUrl("/news"); ?>">NEWS</a></li>
 			  <li><a data-ajax="false" href="<?php echo $this->createUrl("/promotions"); ?>">PROMOTIONS</a></li>
 	      </ul>
@@ -184,13 +173,13 @@ $_SESSION['home']='listo';
 			                <h5 class="white-text">Menu</h5>
 			                <ul style="display: inline;">
 								<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Home" href="<?php echo $this->createUrl("/home"); ?>">HOME /</a></li>
-								<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Destinations" href="<?php echo $this->createUrl("/destination"); ?>">DESTINATIONS /</a></li>
+								<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Hotels" href="<?php echo $this->createUrl("/destination"); ?>">HOTELS /</a></li>
 								<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Activities" href="<?php echo $this->createUrl("/activities"); ?>">ACTIVITIES /</a></li>
 								<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Promotions" href="<?php echo $this->createUrl("/promotions"); ?>">PROMOTIONS /</a></li>
-								<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Flights" href="#!">FLIGHTS /</a></li>
-								<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Packages" href="#!">PACKAGES /</a></li>
-								<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Weddings" href="#!">WEDDINGS /</a></li>
-								<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Groups" href="#!">GROUPS /</a></li>
+<!-- 								<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Flights" href="#!">FLIGHTS /</a></li>
+								<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Packages" href="#!">PACKAGES /</a></li> -->
+								<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Weddings" href="http://www.mexiconewsnetwork.com/services/bridal-moments/">WEDDINGS /</a></li>
+								<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Groups" href="/groups.html">GROUPS /</a></li>
 			                  <!--<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Breaking News" href="#!">Breaking News /</a></li>
 			                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Daily Report" href="#!">Daily Report /</a></li>
 			                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="News" href="#!">News /</a></li>

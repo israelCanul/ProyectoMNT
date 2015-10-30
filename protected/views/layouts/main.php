@@ -28,6 +28,8 @@ $_SESSION['home']='listo';
     <script src="/js/jquery-1.9.1.min.js" type="text/javascript"></script>
 	<!--<script src="/js/jquery-ui.js" type="text/javascript"></script> -->
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <!-- validate -->
+    <script src="<? echo '/js/validate.jquery.js?a='. Yii::app()->params['assets']; ?>" ></script>
    	<!--Import jQuery before materialize.js-->
 	<script src="/js/materialize.min.js"></script>
     <!-- Archivos CSS ****************************************************************************************************** -->
@@ -144,11 +146,11 @@ $_SESSION['home']='listo';
 	      <ul class="side-nav" id="mobile-demo">
 			  <li><a data-ajax="false" href="<?php echo $this->createUrl("/home"); ?>">HOME</a></li>
 			  <li><a data-ajax="false" href="<?php echo $this->createUrl("/destination"); ?>">HOTELS</a></li>
-			  <li><a data-ajax="false" href="#">FLIGHTS</a></li>
+			  <!-- <li><a data-ajax="false" href="#">FLIGHTS</a></li> -->
 			  <li><a data-ajax="false" href="<?php echo $this->createUrl("/activities"); ?>">ACTIVITIES</a></li>
-			  <li><a data-ajax="false" href="#">PACKAGES</a></li>
-			  <li><a data-ajax="false" href="#">WEDDINGS</a></li>
-			  <li><a data-ajax="false" href="#">GROUPS</a></li>
+			  <!-- <li><a data-ajax="false" href="#">PACKAGES</a></li> -->
+			  <li><a data-ajax="false" target="_blank" href="http://www.mexiconewsnetwork.com/services/bridal-moments/">WEDDINGS</a></li>
+			  <li><a data-ajax="false" href="/groups.html">GROUPS</a></li>
 			  <li><a data-ajax="false" href="<?php echo $this->createUrl("/news"); ?>">NEWS</a></li>
 			  <li><a data-ajax="false" href="<?php echo $this->createUrl("/promotions"); ?>">PROMOTIONS</a></li>
 	      </ul>
@@ -194,13 +196,25 @@ $_SESSION['home']='listo';
 			                <h5 class="white-text">Menu</h5>
 			                <ul style="display: inline;">
 								<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Home" href="<?php echo $this->createUrl("/home"); ?>">HOME /</a></li>
-								<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Destinations" href="<?php echo $this->createUrl("/destination"); ?>">HOTELS /</a></li>
+								<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Hotels" href="<?php echo $this->createUrl("/destination"); ?>">HOTELS /</a></li>
 								<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Activities" href="<?php echo $this->createUrl("/activities"); ?>">ACTIVITIES /</a></li>
 								<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Promotions" href="<?php echo $this->createUrl("/promotions"); ?>">PROMOTIONS /</a></li>
-								<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Flights" href="#!">FLIGHTS /</a></li>
-								<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Packages" href="#!">PACKAGES /</a></li>
-								<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Weddings" target="_blank" href="http://www.mexiconewsnetwork.com/services/bridal-moments/">WEDDINGS /</a></li>
-								<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Groups" href="#!">GROUPS /</a></li>
+<!-- 								<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Flights" href="#!">FLIGHTS /</a></li>
+								<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Packages" href="#!">PACKAGES /</a></li> -->
+								<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Weddings" href="http://www.mexiconewsnetwork.com/services/bridal-moments/">WEDDINGS /</a></li>
+								<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Groups" href="/groups.html">GROUPS /</a></li>
+			                  <!--<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Breaking News" href="#!">Breaking News /</a></li>
+			                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Daily Report" href="#!">Daily Report /</a></li>
+			                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="News" href="#!">News /</a></li>
+			                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Business & Investment" href="#!">Business & Investment /</a></li>
+			                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Tv & Video" href="#!">TV & Video /</a></li>
+			                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Green News" href="#!">Green News /</a></li>
+			                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Travel" href="#!">Travel /</a></li>
+			                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Art & Culture" href="#!">Art & Culture /</a></li>
+			                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Gastronomy" href="#!">Gastronomy /</a></li>
+			                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Lifestyle" href="#!">Lifestyle /</a></li>
+			                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Events" href="#!">Events /</a></li>
+			                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Alliances" href="#!">Alliances /</a></li>-->
 			                </ul>
 		              </div>
 		              <div class="col l4 s12">
@@ -219,7 +233,7 @@ $_SESSION['home']='listo';
 		                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Privacy Guidelines" href="#!">Privacy guidelines /</a></li>
 		                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Terms of Service" href="#!">Terms of service /</a></li>
 		                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Site Map" href="#!">Site Map /</a></li>
-		                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Contact US" href="#!">Contact US /</a></li>
+		                  <li><a class="grey-text text-lighten-3 tooltipped followBtn" data-open='contac_us' data-position="bottom" data-delay="50" data-tooltip="Contact US" href="#">Contact US /</a></li>
 		                </ul>
 		              </div>
 		              <div class="col l4 s12">
@@ -380,6 +394,74 @@ $_SESSION['home']='listo';
 					</div>
 										
 				</div>				
+			</div>
+		</div> 
+	</div>	
+</div>
+<!-- modal de suscribe -->
+<div id="contac_us" class="inActiveM modales">
+	<div class="row">
+		<div class="col s12 m8 offset-m2 " style="">
+			<div class="col s12 m6 menuLogo hide-on-med-and-down">
+			 	<img class="imgLogo " src="<?=Yii::app()->params['baseUrl']?>/images/icon/logo.svg">
+			</div>
+			<div class="col s12 m6 menuLogo hide-on-med-and-down">
+				<!-- <ul class="menuLogoItems">
+					<li><a class="followBtn" data-open='follow'>FOLLOW US</a></li>
+					<li><a class="followBtn" data-open='search'><i style="height:30px;" class="material-icons white-text">search</i></a></li>
+					<li><a class="followBtn" style="border-bottom: 2px solid white;" data-open='suscribe'>SUSCRIBE</a></li>
+				</ul> -->	
+			</div>
+			<div class="col s12"><i style='float:right;font-size:50px;' data-close='contac_us' class="material-icons cerrar-close white-text tooltipped" data-position="bottom" data-delay="50" data-tooltip="Close">close</i></div>
+		</div>
+	</div>
+	<div class="panel-modal transparent"> 
+		<div class="row">
+			<div class="col s12">
+			<h5 class="white-text center-align">Contact Form</h5>
+			<div class="row"></div>
+				<form method="post" id="form_contact" action="<? $this->createUrl('site/contact'); ?>" >
+					<div class="row">
+						<div class="col s12 m6 white-text medium">
+					       <div class="input-field col s12">
+					         <i class="material-icons prefix white-text">account_circle</i>
+					         <input required='required' id="name" type="text" name="name" class="validate" style="background-color: white;">
+					         <label for="name">Name</label>
+					       </div>
+						</div>
+						<div class="col s12 m6 white-text medium">
+					       <div class="input-field col s12">
+					         <i class="material-icons prefix white-text">phone</i>
+					         <input required='required' id="telephone" name="phone" type="text" class="validate" style="background-color: white;">
+					         <label for="telephone">Telephone</label>
+					       </div>
+						</div>
+						<div class="col s12  white-text medium">
+					       <div class="input-field col s12">
+					         <i class="material-icons prefix white-text">email</i>
+					         <input required='required' id="email" name="email" type="text" class="validate" style="background-color: white;">
+					         <label for="email">Email</label>
+					       </div>
+						</div>
+						<div class="col s12  white-text medium">
+					       <div class="input-field col s12">
+					         <input required='required' id="interested" type="text" name="interested" class="validate" style="background-color: white;">
+					         <label for="interested">Interested In</label>
+					       </div>
+						</div>
+						<div class="col s12  white-text medium">
+					       <div class="input-field col s12">
+					         <textarea required='required' id="text_area" name="message" class="materialize-textarea" style="background-color: white;"></textarea>
+					         <label for="text_area">Message</label>
+					       </div>
+						</div>
+						<div class="col s12  white-text medium">
+						  <button style="float:right" class="btn waves-effect waves-light" type="submit" name="action">Submit
+						    <i class="material-icons">send</i>
+						  </button>											
+						</div>
+					</div>
+				</form>				
 			</div>
 		</div> 
 	</div>	

@@ -4,15 +4,15 @@ class GenericFunctions extends CApplicationComponent{
 
 	public function notasFooter(){
 		$notasFooter=Yii::app()->dbNews->CreateCommand("SELECT c.idcontenido, c.titulo, c.uri AS uri,alt,data,c.meta_description
-										     FROM ws_contenido c, ws_categoria ca,ws_imagenes AS img
-										     WHERE c.ididioma = '2' AND c.`idcontenido`=img.`idcontenido` 
-										     AND ca.ididioma = '2' 
-										     AND c.counter > 0 
-										     AND ca.idcategoria=c.idcategoria 
-										     AND c.idcategoria='4' 
-										     AND c.idstatus='1'
-										     GROUP BY c.titulo
-										     ORDER BY c.counter DESC LIMIT 0,4")->queryAll();
+												FROM ws_contenido AS c,ws_imagenes AS img 
+												WHERE c.idcontenido=img.idcontenido
+												AND ididioma='2' 
+												AND idcategoria='22' 
+												AND idstatus='1' 
+												AND buen_entendedor=0
+												GROUP BY img.idcontenido
+												ORDER BY fecha DESC
+												LIMIT 0,4")->queryAll();
 		return $notasFooter;
 	}
 		public function makeUrl($name){
