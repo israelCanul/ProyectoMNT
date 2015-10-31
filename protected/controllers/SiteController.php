@@ -107,5 +107,48 @@ class SiteController extends Controller
 		$this->layout='checkout';
 		$this->render("privacy");	    	
 	}
+	public function actionContact(){
+		$mail = new PHPMailer(true);
+		$mail->isSMTP(); 
+		$mail->Host = "smtp.gmail.com";
+		$mail->SMTPAuth = true; 
+		$mail->Username = "envios@lomas-travel.com";
+		$mail->Password = "r5J8Rg<S";
+		$mail->SMTPSecure = "tls"; 
+		$mail->Port = 587;
+			
+		$from 	= 'envios@lomas-travel.com';
+		
+		/*switch ($_POST['cboDepartamento']){
+			case 'Sales' 	: $to = 'sales@lomas-travel.com'; break;
+			case 'Webmaster': $to = 'webmaster@lomas-travel.com'; break;
+		}*/
+		//pruebas
+		if($_POST['email']=='icanul@dexabyte.com.mx'){
+			$to = $_POST['email'];
+		}
+		
+		$bcc 	= 'lcaballero@dexabyte.com.mx';
+		$cco 	= 'webmaster@lomas-travel.com';
+		$cco2 	= 'e-marketing@lomas-travel.com';
+
+		$subject = 'Contact Request | Lomas Travel';
+		$message = $this->renderPartial('application.views.partials.contact', $_REQUEST, true);
+
+		$mail->SetFrom( $from );
+		$mail->AddAddress ( $to );
+		//$mail->AddBCC( $bcc );
+		//$mail->AddBCC( $cco );
+		//$mail->AddBCC( $cco2 );
+
+		$mail->Subject = $subject;
+		$mail->MsgHTML( $message );
+		
+		if(!$mail->Send()) {
+			echo 'WE ARE HAVING TECHNICAL DIFFICULTIES, Please try again later';
+		} else {
+			echo 'YOUR REQUEST HAS BEEN SUCCESFULLY SENT, You will be contacted soon';
+		}
+	}
 
 }

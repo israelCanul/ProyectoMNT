@@ -6,7 +6,7 @@
 				foreach ($destinos as $key => $value) {
 				if($value['nombre']!=$value['estado']){
 		?>
-				<div class="small col s12 m6 l4 " style="height: 280px;">
+				<div class="small col s12 m6 l4 " style="height: 350px;">
 		          <div class="card-destinos">
 			          <div class="card ">
 			            <div class="card-image">

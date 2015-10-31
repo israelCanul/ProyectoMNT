@@ -48,136 +48,22 @@ $_SESSION['home']='listo';
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 <body >
+<?
+$this->renderPartial('application.views.partials.menu_fixed',true);
 
-<header>
-	<div class="row">
-		<div class="col s12 m10 offset-m1 hide-on-med-and-down" style="">
-			<div class="col s12 m6 menuLogo">
-			 	<a href="/"><img class="imgLogo " src="<?=Yii::app()->params['baseUrl']?>/images/icon/logo.svg"></a>
-			</div>
-			<div class="col s12 m6 menuLogo">
-				<ul class="menuLogoItems">
-					<li><a class="followBtn" data-open='follow'>FOLLOW US</a></li>
-					<li><a class="followBtn" data-open='search'><i style="height:30px;" class="material-icons white-text">search</i></a></li>
-					<li><a class="followBtn" data-open='suscribe'>SUSCRIBE</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div class="row" style="margin-bottom: 100px;">
-	  <nav>
-	    <div class="nav-wrapper">
-	      <a href="#!" class="brand-logo hide-on-large-only"><img class="imgLogo" src="<?=Yii::app()->params['baseUrl']?>/images/icon/logo.svg"></a>
-	      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-	      <div class="row">
-		    <div class="col m10 l10 offset-m1 offset-l1">
-		    	<center>
-			      <!--<ul >
-			        <li><a data-ajax="false" href="<?php /*echo $this->createUrl("/home"); */?>">HOME</a></li>
-			        <li><a data-ajax="false" href="<?php /*echo $this->createUrl("/destination"); */?>">HOTELS</a></li>
-					  <li><a data-ajax="false" href="#">FLIGHTS</a></li>
-			        <li><a data-ajax="false" href="<?php /*echo $this->createUrl("/activities"); */?>">ACTIVITIES</a></li>
-					<li><a data-ajax="false" href="#">PACKAGES</a></li>
- 					<li><a data-ajax="false" href="#">WEDDINGS</a></li>
-					<li><a data-ajax="false" href="#">GROUPS</a></li>
-			        <li><a data-ajax="false" href="<?php /*echo $this->createUrl("/news"); */?>">NEWS</a></li>
-					<li><a data-ajax="false" href="<?php /*echo $this->createUrl("/promotions"); */?>">PROMOTIONS</a></li>
-			      </ul>-->
-
-				<ul class="hide-on-med-and-down">
-				   <?php
-				   $this->widget('zii.widgets.CMenu',array(
-					   'activeCssClass'=>'active',
-					   'activateParents'=>true,
-					   'items'=>array(
-						   array(
-							   'label'=>'HOME',
-							   'url'=>array('site/index'),
-							   'linkOptions'=>array('class'=>''),
-						   ),
-						   array(
-							   'label'=>'HOTELS',
-							   'url'=>array('destinations/index'),
-							   'linkOptions'=>array('class'=>''),
-						   ),
-						   array(
-							   'label'=>'FLIGHTS',
-							   'url'=>array(''),
-							   'linkOptions'=>array('class'=>'hide'),
-						   ),
-						   array(
-							   'label'=>'ACTIVITIES',
-							   'url'=>array('activities/index'),
-							   'linkOptions'=>array('class'=>''),
-						   ),
-						   array(
-							   'label'=>'PACKAGES',
-							   'url'=>array(''),
-							   'linkOptions'=>array('class'=>'hide'),
-						   ),
-						   array(
-							   'label'=>'WEDDINGS',
-							   'url'=>'http://www.mexiconewsnetwork.com/services/bridal-moments/',
-							   'linkOptions'=>array('target'=>'_blank'),
-						   ),
-						   array(
-							   'label'=>'GROUPS',
-							   'url'=>array('grupos/index'),
-							   'linkOptions'=>array('class'=>''),
-						   ),
-						   array(
-							   'label'=>'NEWS',
-							   'url'=>array('site/news'),
-							   'linkOptions'=>array('class'=>''),
-						   ),
-						   array(
-							   'label'=>'PROMOTIONS',
-							   'url'=>array('ofertas/index'),
-							   'linkOptions'=>array('class'=>''),
-						   ),
-					   ),
-				   )); ?>
-					</ul>
-
-
-		    	</center>
-		    </div>
-	      </div>
-	      <ul class="side-nav" id="mobile-demo">
-			  <li><a data-ajax="false" href="<?php echo $this->createUrl("/home"); ?>">HOME</a></li>
-			  <li><a data-ajax="false" href="<?php echo $this->createUrl("/destination"); ?>">HOTELS</a></li>
-			  <!-- <li><a data-ajax="false" href="#">FLIGHTS</a></li> -->
-			  <li><a data-ajax="false" href="<?php echo $this->createUrl("/activities"); ?>">ACTIVITIES</a></li>
-			  <!-- <li><a data-ajax="false" href="#">PACKAGES</a></li> -->
-			  <li><a data-ajax="false" target="_blank" href="http://www.mexiconewsnetwork.com/services/bridal-moments/">WEDDINGS</a></li>
-			  <li><a data-ajax="false" href="/groups.html">GROUPS</a></li>
-			  <li><a data-ajax="false" href="<?php echo $this->createUrl("/news"); ?>">NEWS</a></li>
-			  <li><a data-ajax="false" href="<?php echo $this->createUrl("/promotions"); ?>">PROMOTIONS</a></li>
-	      </ul>
-	    </div>
-	  </nav>
-	</div>
-	<div class="row ">
-	    <div class="row"></div>
-		<div class="textoBanner">
-			<h5 class="txtTextoBanner"><center id="txtBanner">RELAX, SWIM AND ENJOY</center></h5>
-			<h4 class="txtTextoBanner"><center id="txtBanner1">THE <span class='txtCant'>10</span> BEST BEACHES OF MEXICO</center></h4>
-		</div>
-	</div>
-</header>
+$this->renderPartial('application.views.partials.menu',true);
+?>
 
 <div class="row" style="height: 500px;"></div>
 
 <main>
 	<!-- formulario de bookin [inicio] -->
-
 	<div class="row bookin-form1" style="z-index:10;position: relative;">
 		<div class="col s12">
 			<?php	$this->widget('application.components.Bookingbox'); ?>
 			<?php $fecha = date("d/m/Y",mktime(0,0,0,date("m"),date("d")+3,date("Y"))); ?>
 		</div>
 	</div>
-
 	<!-- formulario de bookin [final] -->
 <?php echo $content; ?>
 
@@ -398,74 +284,10 @@ $_SESSION['home']='listo';
 		</div> 
 	</div>	
 </div>
-<!-- modal de suscribe -->
-<div id="contac_us" class="inActiveM modales">
-	<div class="row">
-		<div class="col s12 m8 offset-m2 " style="">
-			<div class="col s12 m6 menuLogo hide-on-med-and-down">
-			 	<img class="imgLogo " src="<?=Yii::app()->params['baseUrl']?>/images/icon/logo.svg">
-			</div>
-			<div class="col s12 m6 menuLogo hide-on-med-and-down">
-				<!-- <ul class="menuLogoItems">
-					<li><a class="followBtn" data-open='follow'>FOLLOW US</a></li>
-					<li><a class="followBtn" data-open='search'><i style="height:30px;" class="material-icons white-text">search</i></a></li>
-					<li><a class="followBtn" style="border-bottom: 2px solid white;" data-open='suscribe'>SUSCRIBE</a></li>
-				</ul> -->	
-			</div>
-			<div class="col s12"><i style='float:right;font-size:50px;' data-close='contac_us' class="material-icons cerrar-close white-text tooltipped" data-position="bottom" data-delay="50" data-tooltip="Close">close</i></div>
-		</div>
-	</div>
-	<div class="panel-modal transparent"> 
-		<div class="row">
-			<div class="col s12">
-			<h5 class="white-text center-align">Contact Form</h5>
-			<div class="row"></div>
-				<form method="post" id="form_contact" action="<? $this->createUrl('site/contact'); ?>" >
-					<div class="row">
-						<div class="col s12 m6 white-text medium">
-					       <div class="input-field col s12">
-					         <i class="material-icons prefix white-text">account_circle</i>
-					         <input required='required' id="name" type="text" name="name" class="validate" style="background-color: white;">
-					         <label for="name">Name</label>
-					       </div>
-						</div>
-						<div class="col s12 m6 white-text medium">
-					       <div class="input-field col s12">
-					         <i class="material-icons prefix white-text">phone</i>
-					         <input required='required' id="telephone" name="phone" type="text" class="validate" style="background-color: white;">
-					         <label for="telephone">Telephone</label>
-					       </div>
-						</div>
-						<div class="col s12  white-text medium">
-					       <div class="input-field col s12">
-					         <i class="material-icons prefix white-text">email</i>
-					         <input required='required' id="email" name="email" type="text" class="validate" style="background-color: white;">
-					         <label for="email">Email</label>
-					       </div>
-						</div>
-						<div class="col s12  white-text medium">
-					       <div class="input-field col s12">
-					         <input required='required' id="interested" type="text" name="interested" class="validate" style="background-color: white;">
-					         <label for="interested">Interested In</label>
-					       </div>
-						</div>
-						<div class="col s12  white-text medium">
-					       <div class="input-field col s12">
-					         <textarea required='required' id="text_area" name="message" class="materialize-textarea" style="background-color: white;"></textarea>
-					         <label for="text_area">Message</label>
-					       </div>
-						</div>
-						<div class="col s12  white-text medium">
-						  <button style="float:right" class="btn waves-effect waves-light" type="submit" name="action">Submit
-						    <i class="material-icons">send</i>
-						  </button>											
-						</div>
-					</div>
-				</form>				
-			</div>
-		</div> 
-	</div>	
-</div>
+
+<?
+$this->renderPartial('application.views.partials.form_contact',true);
+?>
 
 </body>
 </html>

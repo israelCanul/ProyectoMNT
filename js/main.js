@@ -1,27 +1,40 @@
 /* Inicializar componentes */
 $(document).ready(function(){
+	//validate del formulario de contacto 
 	$('#form_contact').validate({
 		
 		submitHandler: function(form) {
 		    $("input[type=submit]").attr("disabled", "disabled");
-		    var dataString 	= $(this).serialize();
+		    var dataString 	= $('#form_contact').serialize();
 			$.ajax({
             	type: "POST",
             	url: "/site/contact",
             	data: dataString,
+
             	success: function(data) {
                   console.log(data);
                   alert(data);
                   $("#form_contact")[0].reset();
-                  location.reload();
+                  //location.reload();
             	},
 				error: function(data) {
 					alert(data);
-				}
+				} 
         	});
 		}
 
 	});
+	//scroll para el menu fixeado 
+	$(window).on("scroll", function() {
+		var actual = $(this).scrollTop();
+		
+		if(actual>=200){
+			$('.menu_fixed').removeClass('hide');
+		}else{
+			$('.menu_fixed').addClass('hide');
+		}
+	});
+
 
 	$('.collapsible').collapsible({
       accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style

@@ -41,23 +41,9 @@ $(document).ready(function(e) {
 				}
         	});
 
-		/*$.ajax({
-				cache: false,
-				dataType: "xml",
-				url: "/grupos/Enviamail", // direccion del servicio
-				data: request,
-				contentType: "application/xml;charset=utf-8",
-				success: function(data) {
-					alert(data.children[0].textContent);
-					form.reset();
-					location.reload();
-					 },
-				error: function() {
-				}
-			});*/
-      	}
-		else
+      }else{
 			$("input").removeAttr('disabled');
+      }
 	});
 
 

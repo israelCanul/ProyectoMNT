@@ -11,7 +11,7 @@
 
 ?>
 <style type="text/css">
- input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
+input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
     background-color: transparent;
     border: none;
     border: 1px solid #9e9e9e;
@@ -20,7 +20,7 @@
     height: 3rem;
     width: 100%;
     font-size: 1rem;
-    margin: 0 0 0px 0;
+    margin: 0 0 15px 0;
     padding: 0;
     box-shadow: none;
     -webkit-box-sizing: content-box;
@@ -28,18 +28,7 @@
     box-sizing: content-box;
     transition: all .3s;
 }
-input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
-    border: 1px solid #FF5A14;
-    box-shadow: 0 1px 0 0 #FF5A14;
-}
-.input-field label.active {
-    font-size: 1rem;
-    -webkit-transform: translateY(-140%);
-    -moz-transform: translateY(-140%);
-    -ms-transform: translateY(-140%);
-    -o-transform: translateY(-140%);
-    transform: translateY(-140%);
-}
+
 </style>
 <div class="row"></div>
 <div class="row">

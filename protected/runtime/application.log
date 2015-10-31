@@ -8904,3 +8904,38 @@ Stack trace:
 #9 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
 #10 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
 #11 {main} REQUEST_URI=/home.html
+2015/10/31 09:29:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2015/10/31 10:17:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "contact".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('contact')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('contact')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('site/contact')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#5 {main} REQUEST_URI=/site/contact
+2015/10/31 10:18:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "contact".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('contact')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('contact')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('site/contact')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#5 {main} REQUEST_URI=/site/contact
+2015/10/31 11:15:14 [error] [exception.phpmailerException] exception 'phpmailerException' with message 'Invalid address: ' in C:\AppServ\www\mexico-news-travel\protected\components\PHPMailer.php:462
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\protected\components\PHPMailer.php(408): PHPMailer->AddAnAddress('to', NULL, '')
+#1 C:\AppServ\www\mexico-news-travel\protected\controllers\SiteController.php(138): PHPMailer->AddAddress(NULL)
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\actions\CInlineAction.php(50): SiteController->actionContact()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams(Array)
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): CController->runAction(Object(CInlineAction))
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('contact')
+#7 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('site/contact')
+#8 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#9 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#10 {main} REQUEST_URI=/site/contact

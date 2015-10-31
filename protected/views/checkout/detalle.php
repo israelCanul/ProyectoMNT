@@ -411,7 +411,7 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
 								<h6><?= Yii::t("global","Fecha que expira"); ?></h6>
 								<div class="row">
 									<div class="col s6 m2">
-										<h6 class="red-text">Year</h6>
+										<h6 class="red-text">Month</h6>
 										<select name="cc_month" id="cc_month" class="decorated" style="margin-top: 10px;">						
 											<option <?= ((isset($Param["cc_month"]) && $Param["cc_month"] == "01") ? "selected='selected'" : ""); ?> value="01"><?= Yii::t("global","Enero"); ?></option>
 											<option <?= ((isset($Param["cc_month"]) && $Param["cc_month"] == "02") ? "selected='selected'" : ""); ?> value="02"><?= Yii::t("global","Febrero"); ?></option>
@@ -431,7 +431,7 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
 
 									</div>
 									<div class="col s5 m2">
-										<h6 class="red-text">Month</h6>
+										<h6 class="red-text">Year</h6>
 										<select name="cc_year" id="cc_year" class="decorated req nonempty " style="margin-top: 10px;">
 											<?php
 											
@@ -543,7 +543,8 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
 								
 							<? if($_p->descripcion_tipo_producto == 1){ ?>
 									 - <?= Yii::app()->GenericFunctions->convertPresentableDates($_p->descripcion_fecha2); ?>
-							<? } ?>								
+							<? } ?>	
+							<br>							
 							<?= $_p->descripcion_adultos; ?>
 							<?= Yii::t("global","Adulto|Adultos",$_p->descripcion_adultos); ?>
 								
