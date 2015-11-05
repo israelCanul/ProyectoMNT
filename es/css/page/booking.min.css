@@ -1,0 +1,32 @@
+.ui-autocomplete-destination {
+    background: #FF5A14;
+    color: #fff;
+    padding: 2px;
+}
+.ui-menu {
+    list-style: none;
+    padding: 2px;
+    margin: 0;
+    display: block;
+    outline: none;
+    background-color: white;
+    border: 1px solid rgba(0,0,0,0.6);
+    max-height: 300px;
+    overflow-y: auto;
+}
+.ui-state-focus{
+	background-color: rgba(0,0,0,0.4);
+}
+.oculta{
+    position: relative;
+    height:0px;
+    overflow: hidden;
+}
+.nooculta{
+    position: relative;
+    height:auto;
+
+}
+#labelInBookin{
+    font-size: 17px;
+}

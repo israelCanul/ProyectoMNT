@@ -1,0 +1,97 @@
+
+
+#ajaxSlideShow ul.controls {
+    margin: 0 auto;
+    text-indent: -9999px
+}
+
+#text-groups {
+    width: 80%;
+    margin: auto
+}
+
+#text-groups .expert_groups {
+    width: 95%;
+    margin: 0 auto;
+    overflow: hidden;
+    margin: 1% 0
+}
+
+#text-groups .expert_groups ul {
+    font-size: 1.4em;
+    font-size: 1rem;
+    margin: 0 3%;
+    list-style-type: square;
+    width: 44%;
+    float: left
+}
+
+#form_groups {
+    width: 80%;
+    margin: auto
+}
+
+#form_groups .title_group h6 {
+    color: #00aaa6
+}
+
+#form_groups .control-group {
+    margin: 2% 0
+}
+
+#form_groups .control-group .controls {
+    margin: 0 2%
+}
+
+#form_groups .control-group > div {
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+    min-width: 250px
+}
+
+#form_groups div.checkbox-group {
+    width: 100%;
+    min-width: 150px
+}
+
+#form_groups input[type='text'] {
+    height: 2rem;
+    margin: 1%;
+    width: 100%
+}
+
+#form_groups input[type='number'], #form_groups input[type='text'].number_input {
+    width: 6%;
+    height: 21px;
+    margin: 5px 13px;
+    min-width: 50px
+}
+
+#form_groups textarea {
+    width: 100%;
+    border: 1px solid #ccc
+}
+
+#enviaFormaGrupos {
+    background: #00aaa6;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 12pt
+}
+
+.grupsImg {
+    width: 700px;
+    margin: auto
+}
+
+@media only screen and (max-width:695px) {
+    #form_groups .control-group > div {
+        width: 100%
+    }
+    #form_groups .title_group h6 {
+        font-size: 15pt
+    }
+}

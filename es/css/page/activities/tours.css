@@ -1,0 +1,105 @@
+header{
+    background:url('/images/bg/activities.jpg');
+    background-size:cover;
+}
+.card-tours{
+    padding:10px;
+}
+.tituloCard {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: justify;
+}
+.price{
+    font-size: 18px;
+    font-weight: bold;
+    color: #FF5A14 !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: roboto;
+}
+.from{
+    font-size: 18px;
+    font-weight: bold;
+    color: #FF5A14 !important;
+    margin-top: 10px;
+}
+.precioDetalle{
+    border-left: 2px solid rgba(0,0,0,0.5);
+}
+.infoResult{
+    color: #FF5A14;
+    font-size: 37px;
+}
+.infoSearch{
+    color: #FF5A14;
+    font-size: 22px;
+}
+.descriptionTour{
+    padding: 10px;
+    border: 1px solid #d8d8d8;
+    padding: 10px;
+    margin: 10px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+.descriptionTextTour{
+    padding: 10px;
+    border: 1px solid #d8d8d8;
+    padding: 10px;
+    margin: 10px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: justify;
+}
+.textoTitulo{
+    color: #FF5A14;
+    font-size: 15px;
+}
+/* estilo del carousel [Inicio]*/
+#owl-demo .item{
+    margin: 3px;
+}
+#owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+/* estilo del carousel [Final]*/
+.rateRight{
+    text-align: right;
+    color: #FF5A14;
+    font-size: 19px;
+    font-weight: bold;
+}
+.rateLeft{
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+}
+.detalles h6{
+    color:#FF5A14 ;
+    font-weight: bold;
+
+}
+.rate{
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,0.2);
+    box-shadow: -1px 1px rgba(0,0,0,0.5);
+    margin-top: 5px;
+    background-color: white;
+}
+.wrap-rate{
+    padding: 10px;
+    background-color: #f1f1f1;
+}
+.row .col .wrap-rate{
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+}
