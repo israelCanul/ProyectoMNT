@@ -17,7 +17,7 @@ class Activity{
         ->queryRow();
 
       $this->id               = $act['tour_id'];
-      $this->nombre           = $act['tour_nombre'];
+      $this->nombre           = $act['tour_nombre_es'];
       $this->clave            = $act['tour_clave'];
       $this->status           = $act['tour_status'];
       $this->checkout         = $act['tour_checkout'];

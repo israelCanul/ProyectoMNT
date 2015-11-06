@@ -9154,3 +9154,366 @@ Stack trace:
 #1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
 #2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
 #3 {main} REQUEST_URI=/favicon.ico
+2015/11/05 10:37:10 [error] [php] file_get_contents(http://mexico-news.com.dev/es/destinations/destinations.html) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: HTTP request failed! HTTP/1.0 404 CHttpException
+ (C:\AppServ\www\mexico-news-travel\es\protected\components\views\bookingbox.php:8)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(88): Bookingbox->renderInternal()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\widgets\CWidget.php(242): Bookingbox->renderFile()
+#2 C:\AppServ\www\mexico-news-travel\es\protected\components\Bookingbox.php(141): Bookingbox->render()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(166): Bookingbox->run()
+#4 C:\AppServ\www\mexico-news-travel\es\protected\views\layouts\main.php(58): SiteController->widget()
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(119): require()
+#6 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(88): SiteController->renderInternal()
+#7 C:\AppServ\www\mexico-news-travel\lib\yii\web\widgets\CContentDecorator.php(78): SiteController->renderFile()
+#8 C:\AppServ\www\mexico-news-travel\lib\yii\web\widgets\CContentDecorator.php(56): CContentDecorator->decorate()
+#9 C:\AppServ\www\mexico-news-travel\lib\yii\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput()
+#10 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(199): CContentDecorator->run()
+#11 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(294): SiteController->endWidget()
+#12 C:\AppServ\www\mexico-news-travel\es\protected\views\layouts\column1.php(6): SiteController->endContent()
+#13 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(119): require()
+#14 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(88): SiteController->renderInternal()
+#15 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(781): SiteController->renderFile()
+#16 C:\AppServ\www\mexico-news-travel\es\protected\controllers\SiteController.php(51): SiteController->render()
+#17 C:\AppServ\www\mexico-news-travel\lib\yii\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#18 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams()
+#19 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): SiteController->runAction()
+#20 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): SiteController->runActionWithFilters()
+#21 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): SiteController->run()
+#22 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#23 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#24 C:\AppServ\www\mexico-news-travel\es\index.php(24): CWebApplication->run()
+REQUEST_URI=/es/
+2015/11/05 10:38:17 [error] [php] file_get_contents(http://mexico-news.com.dev/es/destinations/destinations.html) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: HTTP request failed! HTTP/1.0 404 CHttpException
+ (C:\AppServ\www\mexico-news-travel\es\protected\components\views\bookingbox.php:8)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(88): Bookingbox->renderInternal()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\widgets\CWidget.php(242): Bookingbox->renderFile()
+#2 C:\AppServ\www\mexico-news-travel\es\protected\components\Bookingbox.php(141): Bookingbox->render()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(166): Bookingbox->run()
+#4 C:\AppServ\www\mexico-news-travel\es\protected\views\layouts\main.php(58): SiteController->widget()
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(119): require()
+#6 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(88): SiteController->renderInternal()
+#7 C:\AppServ\www\mexico-news-travel\lib\yii\web\widgets\CContentDecorator.php(78): SiteController->renderFile()
+#8 C:\AppServ\www\mexico-news-travel\lib\yii\web\widgets\CContentDecorator.php(56): CContentDecorator->decorate()
+#9 C:\AppServ\www\mexico-news-travel\lib\yii\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput()
+#10 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(199): CContentDecorator->run()
+#11 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(294): SiteController->endWidget()
+#12 C:\AppServ\www\mexico-news-travel\es\protected\views\layouts\column1.php(6): SiteController->endContent()
+#13 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(119): require()
+#14 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(88): SiteController->renderInternal()
+#15 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(781): SiteController->renderFile()
+#16 C:\AppServ\www\mexico-news-travel\es\protected\controllers\SiteController.php(51): SiteController->render()
+#17 C:\AppServ\www\mexico-news-travel\lib\yii\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#18 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams()
+#19 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): SiteController->runAction()
+#20 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): SiteController->runActionWithFilters()
+#21 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): SiteController->run()
+#22 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#23 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#24 C:\AppServ\www\mexico-news-travel\es\index.php(24): CWebApplication->run()
+REQUEST_URI=/es/
+2015/11/05 10:43:33 [error] [php] file_get_contents(http://mexico-news.com.dev/es/destinations/destinations.html) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: HTTP request failed! HTTP/1.0 404 CHttpException
+ (C:\AppServ\www\mexico-news-travel\es\protected\components\views\bookingbox.php:8)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(88): Bookingbox->renderInternal()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\widgets\CWidget.php(242): Bookingbox->renderFile()
+#2 C:\AppServ\www\mexico-news-travel\es\protected\components\Bookingbox.php(141): Bookingbox->render()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(166): Bookingbox->run()
+#4 C:\AppServ\www\mexico-news-travel\es\protected\views\layouts\main.php(58): SiteController->widget()
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(119): require()
+#6 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(88): SiteController->renderInternal()
+#7 C:\AppServ\www\mexico-news-travel\lib\yii\web\widgets\CContentDecorator.php(78): SiteController->renderFile()
+#8 C:\AppServ\www\mexico-news-travel\lib\yii\web\widgets\CContentDecorator.php(56): CContentDecorator->decorate()
+#9 C:\AppServ\www\mexico-news-travel\lib\yii\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput()
+#10 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(199): CContentDecorator->run()
+#11 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(294): SiteController->endWidget()
+#12 C:\AppServ\www\mexico-news-travel\es\protected\views\layouts\column1.php(6): SiteController->endContent()
+#13 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(119): require()
+#14 C:\AppServ\www\mexico-news-travel\lib\yii\web\CBaseController.php(88): SiteController->renderInternal()
+#15 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(781): SiteController->renderFile()
+#16 C:\AppServ\www\mexico-news-travel\es\protected\controllers\SiteController.php(51): SiteController->render()
+#17 C:\AppServ\www\mexico-news-travel\lib\yii\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#18 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams()
+#19 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): SiteController->runAction()
+#20 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): SiteController->runActionWithFilters()
+#21 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): SiteController->run()
+#22 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#23 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#24 C:\AppServ\www\mexico-news-travel\es\index.php(24): CWebApplication->run()
+REQUEST_URI=/es/
+2015/11/05 11:14:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1438380470ad1da224b7c7d9067a1e95bf5ea80d6b_20150731.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1438380470ad1da224b7c7d9067a1e95bf5ea80d6b_20150731.jpg
+2015/11/05 11:14:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1433970399ad1da224b7c7d9067a1e95bf5ea80d6b_20150610.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1433970399ad1da224b7c7d9067a1e95bf5ea80d6b_20150610.jpg
+2015/11/05 11:14:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1438441358ad1da224b7c7d9067a1e95bf5ea80d6b_20150801.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1438441358ad1da224b7c7d9067a1e95bf5ea80d6b_20150801.jpg
+2015/11/05 11:15:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1438441358ad1da224b7c7d9067a1e95bf5ea80d6b_20150801.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1438441358ad1da224b7c7d9067a1e95bf5ea80d6b_20150801.jpg
+2015/11/05 11:15:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1438380470ad1da224b7c7d9067a1e95bf5ea80d6b_20150731.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1438380470ad1da224b7c7d9067a1e95bf5ea80d6b_20150731.jpg
+2015/11/05 11:15:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1433970399ad1da224b7c7d9067a1e95bf5ea80d6b_20150610.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1433970399ad1da224b7c7d9067a1e95bf5ea80d6b_20150610.jpg
+2015/11/05 11:35:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1438441358ad1da224b7c7d9067a1e95bf5ea80d6b_20150801.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1438441358ad1da224b7c7d9067a1e95bf5ea80d6b_20150801.jpg
+2015/11/05 11:35:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1438380470ad1da224b7c7d9067a1e95bf5ea80d6b_20150731.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1438380470ad1da224b7c7d9067a1e95bf5ea80d6b_20150731.jpg
+2015/11/05 11:35:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1433970399ad1da224b7c7d9067a1e95bf5ea80d6b_20150610.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1433970399ad1da224b7c7d9067a1e95bf5ea80d6b_20150610.jpg
+2015/11/05 11:41:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1438441358ad1da224b7c7d9067a1e95bf5ea80d6b_20150801.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1438441358ad1da224b7c7d9067a1e95bf5ea80d6b_20150801.jpg
+2015/11/05 11:41:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1433970399ad1da224b7c7d9067a1e95bf5ea80d6b_20150610.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1433970399ad1da224b7c7d9067a1e95bf5ea80d6b_20150610.jpg
+2015/11/05 11:41:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1438380470ad1da224b7c7d9067a1e95bf5ea80d6b_20150731.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1438380470ad1da224b7c7d9067a1e95bf5ea80d6b_20150731.jpg
+2015/11/05 11:42:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1438441358ad1da224b7c7d9067a1e95bf5ea80d6b_20150801.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1438441358ad1da224b7c7d9067a1e95bf5ea80d6b_20150801.jpg
+2015/11/05 11:42:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1433970399ad1da224b7c7d9067a1e95bf5ea80d6b_20150610.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1433970399ad1da224b7c7d9067a1e95bf5ea80d6b_20150610.jpg
+2015/11/05 11:42:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1438380470ad1da224b7c7d9067a1e95bf5ea80d6b_20150731.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1438380470ad1da224b7c7d9067a1e95bf5ea80d6b_20150731.jpg
+2015/11/05 11:54:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1438441358ad1da224b7c7d9067a1e95bf5ea80d6b_20150801.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1438441358ad1da224b7c7d9067a1e95bf5ea80d6b_20150801.jpg
+2015/11/05 11:54:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1433970399ad1da224b7c7d9067a1e95bf5ea80d6b_20150610.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1433970399ad1da224b7c7d9067a1e95bf5ea80d6b_20150610.jpg
+2015/11/05 11:54:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1438380470ad1da224b7c7d9067a1e95bf5ea80d6b_20150731.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1438380470ad1da224b7c7d9067a1e95bf5ea80d6b_20150731.jpg
+2015/11/05 11:56:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1438441358ad1da224b7c7d9067a1e95bf5ea80d6b_20150801.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1438441358ad1da224b7c7d9067a1e95bf5ea80d6b_20150801.jpg
+2015/11/05 11:56:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1433970399ad1da224b7c7d9067a1e95bf5ea80d6b_20150610.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1433970399ad1da224b7c7d9067a1e95bf5ea80d6b_20150610.jpg
+2015/11/05 11:56:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1438380470ad1da224b7c7d9067a1e95bf5ea80d6b_20150731.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1438380470ad1da224b7c7d9067a1e95bf5ea80d6b_20150731.jpg
+2015/11/05 12:00:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1438441358ad1da224b7c7d9067a1e95bf5ea80d6b_20150801.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1438441358ad1da224b7c7d9067a1e95bf5ea80d6b_20150801.jpg
+2015/11/05 12:00:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1433970399ad1da224b7c7d9067a1e95bf5ea80d6b_20150610.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1433970399ad1da224b7c7d9067a1e95bf5ea80d6b_20150610.jpg
+2015/11/05 12:00:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1438380470ad1da224b7c7d9067a1e95bf5ea80d6b_20150731.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1438380470ad1da224b7c7d9067a1e95bf5ea80d6b_20150731.jpg
+2015/11/05 12:07:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1438441358ad1da224b7c7d9067a1e95bf5ea80d6b_20150801.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1438441358ad1da224b7c7d9067a1e95bf5ea80d6b_20150801.jpg
+2015/11/05 12:07:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1433970399ad1da224b7c7d9067a1e95bf5ea80d6b_20150610.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1433970399ad1da224b7c7d9067a1e95bf5ea80d6b_20150610.jpg
+2015/11/05 12:07:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1438380470ad1da224b7c7d9067a1e95bf5ea80d6b_20150731.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1438380470ad1da224b7c7d9067a1e95bf5ea80d6b_20150731.jpg
+2015/11/05 12:20:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1438441358ad1da224b7c7d9067a1e95bf5ea80d6b_20150801.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1438441358ad1da224b7c7d9067a1e95bf5ea80d6b_20150801.jpg
+2015/11/05 12:20:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1438380470ad1da224b7c7d9067a1e95bf5ea80d6b_20150731.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1438380470ad1da224b7c7d9067a1e95bf5ea80d6b_20150731.jpg
+2015/11/05 12:20:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1433970399ad1da224b7c7d9067a1e95bf5ea80d6b_20150610.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1433970399ad1da224b7c7d9067a1e95bf5ea80d6b_20150610.jpg
+2015/11/05 12:41:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1438441358ad1da224b7c7d9067a1e95bf5ea80d6b_20150801.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1438441358ad1da224b7c7d9067a1e95bf5ea80d6b_20150801.jpg
+2015/11/05 12:41:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1438380470ad1da224b7c7d9067a1e95bf5ea80d6b_20150731.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1438380470ad1da224b7c7d9067a1e95bf5ea80d6b_20150731.jpg
+2015/11/05 12:41:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1433970399ad1da224b7c7d9067a1e95bf5ea80d6b_20150610.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1433970399ad1da224b7c7d9067a1e95bf5ea80d6b_20150610.jpg
+2015/11/05 12:52:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1438441358ad1da224b7c7d9067a1e95bf5ea80d6b_20150801.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1438441358ad1da224b7c7d9067a1e95bf5ea80d6b_20150801.jpg
+2015/11/05 12:52:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1433970399ad1da224b7c7d9067a1e95bf5ea80d6b_20150610.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1433970399ad1da224b7c7d9067a1e95bf5ea80d6b_20150610.jpg
+2015/11/05 12:52:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1438380470ad1da224b7c7d9067a1e95bf5ea80d6b_20150731.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1438380470ad1da224b7c7d9067a1e95bf5ea80d6b_20150731.jpg
+2015/11/05 12:53:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1438441358ad1da224b7c7d9067a1e95bf5ea80d6b_20150801.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1438441358ad1da224b7c7d9067a1e95bf5ea80d6b_20150801.jpg
+2015/11/05 12:53:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1438380470ad1da224b7c7d9067a1e95bf5ea80d6b_20150731.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1438380470ad1da224b7c7d9067a1e95bf5ea80d6b_20150731.jpg
+2015/11/05 12:53:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1433970399ad1da224b7c7d9067a1e95bf5ea80d6b_20150610.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1433970399ad1da224b7c7d9067a1e95bf5ea80d6b_20150610.jpg
+2015/11/05 18:23:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1438441358ad1da224b7c7d9067a1e95bf5ea80d6b_20150801.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1438441358ad1da224b7c7d9067a1e95bf5ea80d6b_20150801.jpg
+2015/11/05 18:23:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1438380470ad1da224b7c7d9067a1e95bf5ea80d6b_20150731.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1438380470ad1da224b7c7d9067a1e95bf5ea80d6b_20150731.jpg
+2015/11/05 18:23:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1433970399ad1da224b7c7d9067a1e95bf5ea80d6b_20150610.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1433970399ad1da224b7c7d9067a1e95bf5ea80d6b_20150610.jpg
+2015/11/05 18:24:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/promociones/palace_mediana.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('img/promociones...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es/img/promociones/palace_mediana.jpg
+2015/11/05 18:24:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1433970399ad1da224b7c7d9067a1e95bf5ea80d6b_20150610.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1433970399ad1da224b7c7d9067a1e95bf5ea80d6b_20150610.jpg
+2015/11/05 18:25:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/promociones/palace_mediana.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('img/promociones...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es/img/promociones/palace_mediana.jpg
+2015/11/05 18:25:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cdn.lomastravel.com.mx/img_promociones/1433970399ad1da224b7c7d9067a1e95bf5ea80d6b_20150610.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('cdn.lomastravel...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//cdn.lomastravel.com.mx/img_promociones/1433970399ad1da224b7c7d9067a1e95bf5ea80d6b_20150610.jpg

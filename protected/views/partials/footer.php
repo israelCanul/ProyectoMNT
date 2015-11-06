@@ -22,7 +22,7 @@
 		              <div class="col l4 s12">
 		                <h5 class="white-text">Language</h5>
 		                <ul>
-							<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Español" href="#!">Español</a><span style='color: white;font-size:21px;'> | </span><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="English" href="#!">English</a></li>
+							<li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Español" href="/es">Español</a><span style='color: white;font-size:21px;'> | </span><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="English" href="#!">English</a></li>
 		                </ul>
 		              </div>
 		            </div>

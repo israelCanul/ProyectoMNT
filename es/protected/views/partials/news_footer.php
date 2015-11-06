@@ -13,7 +13,7 @@
 								<span class="card-title black-text"><?=$value['titulo']?></span>
 								<div class="col s12  <? if($key==0){ echo "animated fadeInleft";}else{ echo "line_new"; }?> line_news" id="wrap_line_<?=$key?>" style="height: 5px;"></div>
 								<p class="card-contenido"><?=$value['meta_description']?></p>
-								<a target="_blank" class="blue-text text-darken-2" href="<?=Yii::app()->params['news'].$value['uri']."/"?>">Read More</a>
+								<a target="_blank" class="blue-text text-darken-2" href="<?=Yii::app()->params['news'].$value['uri']."/"?>">Leer Más</a>
 							</div>
 
 						</div>

@@ -9154,3 +9154,111 @@ Stack trace:
 #1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
 #2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
 #3 {main} REQUEST_URI=/favicon.ico
+2015/11/05 10:31:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "font/Junction_02.otf".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('font/Junction_0...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/font/Junction_02.otf
+2015/11/05 10:36:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "es/destinations/destinations".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('es/destinations...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/es/destinations/destinations.html
+2015/11/05 10:38:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "es/destinations/destinations".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('es/destinations...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/es/destinations/destinations.html
+2015/11/05 10:38:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "es/destinations/destinations".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('es/destinations...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/es/destinations/destinations.html
+2015/11/05 10:39:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "es/destinations/destinations".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('es/destinations...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/es/destinations/destinations.html
+2015/11/05 10:40:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "es/destinations/destinations".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('es/destinations...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/es/destinations/destinations.html
+2015/11/05 10:41:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "es/destinations/destinations".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('es/destinations...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/es/destinations/destinations.html
+2015/11/05 10:41:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "es/destinations/destinations".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('es/destinations...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/es/destinations/destinations.html
+2015/11/05 10:43:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "es/destinations/destinations".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('es/destinations...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/es/destinations/destinations.html
+2015/11/05 10:43:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "es/destinations/destinations".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('es/destinations...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/es/destinations/destinations.html
+2015/11/05 10:43:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "es/destinations/destinations".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('es/destinations...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/es/destinations/destinations.html
+2015/11/05 10:44:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "es/destinations/destinations".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('es/destinations...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/es/destinations/destinations.html
+2015/11/05 10:44:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "es/destinations/destinations".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('es/destinations...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/es/destinations/destinations.html
+2015/11/05 10:46:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "es/destinations/destinations".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('es/destinations...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/es/destinations/destinations.html
+2015/11/05 10:46:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "font/Junction_02.otf".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('font/Junction_0...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/font/Junction_02.otf
+2015/11/05 10:48:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "es/font/Junction_02.otf".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('es/font/Junctio...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/es/font/Junction_02.otf
+2015/11/05 10:49:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "es/font/Junction_02.otf".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('es/font/Junctio...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/es/font/Junction_02.otf
+2015/11/05 10:51:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "es/destinations/destinations".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('es/destinations...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/es/destinations/destinations.html

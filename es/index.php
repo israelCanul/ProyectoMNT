@@ -8,7 +8,8 @@ exit();*/
 
 date_default_timezone_set('America/Cancun');
 // change the following paths if necessary
-$yii=dirname(__FILE__).'/lib/yii/yii.php';
+//$yii=dirname(__FILE__).'/lib/yii/yii.php';
+$yii='../lib/yii/yii.php';
 $config=dirname(__FILE__).'/protected/config/main.php';
 
 // remove the following lines when in production mode

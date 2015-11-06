@@ -8,10 +8,10 @@ function generaBookin(habitaciones,detalle){
         for (var i = 1; i < hab; i++) {
             var details = room[i];
             var cadena = '<div class="col s12 m6 l4">' +
-                '<div class="col s12"><h6 class="red white-text" style="padding:5px;">Room <span id="numHab">' + (i + 1) + '</span></h6></div>' +
+                '<div class="col s12"><h6 class="red white-text" style="padding:5px;">Habitación <span id="numHab">' + (i + 1) + '</span></h6></div>' +
                 '<div class="input-field col s12 m12 l6">' +
                 '<input required type="number" min="1" max="9" value="' + details.Adults + '" name="hotelAdults_' + i + '" id="hotelAdults_' + i + '"  >' +
-                '<label for="hotelAdults" class="label-activo">Adult(s)</label>' +
+                '<label for="hotelAdults" class="label-activo">Adulto(s)</label>' +
                 '</div>' +
                 '<div class="input-field col s12 m12 l6">' +
                 '<select required type="number" min="0" data-hab="' + i + '" class="age_nino1 select-Numchild" value="0" name="hotelChild_' + i + '" id="hotelChild_' + i + '" >';
@@ -24,7 +24,7 @@ function generaBookin(habitaciones,detalle){
             }
 
             cadena += '</select>' +
-                '<label>Children</label>' +
+                '<label>Niños</label>' +
                 '</div>' +
                 '<div>';
 
@@ -43,10 +43,10 @@ function generaBookin(habitaciones,detalle){
                 console.log("hab: " + hab);
                 console.log(num);
                 var cadena = '<div class="col s12">' +
-                    '<div class="col s12"><h6 class="red lighten-3 white-text" style="padding:5px;">Children on room <span id="numHab">' + (hab + 1) + '</span></h6></div>';
+                    '<div class="col s12"><h6 class="red lighten-3 white-text" style="padding:5px;">Niños en Habitación <span id="numHab">' + (hab + 1) + '</span></h6></div>';
                 for (var y = 0; y < num; y++) {
                     cadena += '<div class="col s6 m4 l3">' +
-                        '<h6 class="red-text" style="padding:5px;">Child <span id="numHab">' + (y + 1) + '</span></h6>' +
+                        '<h6 class="red-text" style="padding:5px;">Niño <span id="numHab">' + (y + 1) + '</span></h6>' +
                         '<div class="input-field col s12">' +
                         '<select required class="select-child1" required type="number" min="0" max="9" value="" name="child_' + (i) + '_' + (y) + '">';
                     for (var a = 0; a < 10; a++) {
@@ -58,7 +58,7 @@ function generaBookin(habitaciones,detalle){
                     }
 
                     cadena += '</select>' +
-                        '<label>Children</label>' +
+                        '<label>Edad</label>' +
                         '</div></div>';
                 }
                 cadena += '<div>';
@@ -72,10 +72,10 @@ function generaBookin(habitaciones,detalle){
         var num = room[0].ChildAges.length;
         if (num != 0) {
             var cadena = '<div class="col s12">' +
-                '<div class="col s12"><h6 class="red lighten-3 white-text" style="padding:5px;">Children on room <span id="numHab">1</span></h6></div>';
+                '<div class="col s12"><h6 class="red lighten-3 white-text" style="padding:5px;">Niños en Habitación<span id="numHab">1</span></h6></div>';
             for (var i = 0; i < num; i++) {
                 cadena += '<div class="col s6 m3">' +
-                    '<h6 class="red-text" style="padding:5px;">Child <span id="numHab">' + (i + 1) + '</span></h6>' +
+                    '<h6 class="red-text" style="padding:5px;">Niño <span id="numHab">' + (i + 1) + '</span></h6>' +
                     '<div class="input-field col s12">' +
                     '<select required class="select-child" required type="number" min="0" max="9" value="" name="child_0_' + i + '">';
                 for (var a = 0; a < 10; a++) {
@@ -87,7 +87,7 @@ function generaBookin(habitaciones,detalle){
                 }
 
                 cadena += '</select>' +
-                    '<label>Children</label>' +
+                    '<label>Edad</label>' +
                     '</div></div>';
             }
             cadena += '<div>';
@@ -455,7 +455,7 @@ $("#hotel_destination").MixCombo({
 
 
     function setAutocomplete(dest,zona){
-        var url="http://beta.etravelpartners.com/RestTransfers/FindDestinations.html?zona_inicio="+dest+":"+zona+"&lan=en";
+        var url="http://beta.etravelpartners.com/RestTransfers/FindDestinations.html?zona_inicio="+dest+":"+zona+"&lan=es";
         var data=[];
         $.ajax({
             url: url,
@@ -615,25 +615,25 @@ $("#hotelRoom").on("change",function(){
   var hab=$(this).val();
   for (var i = 1; i < hab; i++) {
   var cadena='<div class="col s12 m6 l4">'+
-             '<div class="col s12"><h6 class="red white-text" style="padding:5px;">Room <span id="numHab">'+(i+1)+'</span></h6></div>'+
+             '<div class="col s12"><h6 class="red white-text" style="padding:5px;">Habitación <span id="numHab">'+(i+1)+'</span></h6></div>'+
              '<div class="input-field col s12 m12 l6">'+
              '<input required type="number" min="1" max="9" value="" name="hotelAdults_'+i+'" id="hotelAdults_'+i+'"  >'+
-             '<label for="hotelAdults" class="label-activo">Adult(s)</label>'+
+             '<label for="hotelAdults" class="label-activo">Adulto(s)</label>'+
              '</div>'+
              '<div class="input-field col s12 m12 l6">'+
              '<select required type="number" min="0" data-hab="'+i+'" class="age_nino1 select-Numchild" value="0" name="hotelChild_'+i+'" id="hotelChild_'+i+'" >'+
-        '<option value="0">0</option>'+
-        '<option value="1">1</option>'+
-        '<option value="2">2</option>'+
-        '<option value="3">3</option>'+
-        '<option value="4">4</option>'+
-        '<option value="5">5</option>'+
-        '<option value="6">6</option>'+
-        '<option value="7">7</option>'+
-        '<option value="8">8</option>'+
-        '<option value="9">9</option>'+
-      '</select>'+  
-             '<label>Children</label>'+
+                '<option value="0">0</option>'+
+                '<option value="1">1</option>'+
+                '<option value="2">2</option>'+
+                '<option value="3">3</option>'+
+                '<option value="4">4</option>'+
+                '<option value="5">5</option>'+
+                '<option value="6">6</option>'+
+                '<option value="7">7</option>'+
+                '<option value="8">8</option>'+
+                '<option value="9">9</option>'+
+             '</select>'+  
+             '<label>Edad</label>'+
              '</div>'+
              '<div>'; 
     
@@ -653,24 +653,24 @@ $("#hotelRoom").on("change",function(){
         console.log("hab: "+hab);
         console.log(num);
         var cadena='<div class="col s12">'+
-                 '<div class="col s12"><h6 class="red lighten-3 white-text" style="padding:5px;">Children on room <span id="numHab">'+(hab+1)+'</span></h6></div>';
+                 '<div class="col s12"><h6 class="red lighten-3 white-text" style="padding:5px;">Niños en habitación <span id="numHab">'+(hab+1)+'</span></h6></div>';
            for (var y = 0; y < num; y++) {
            cadena+='<div class="col s6 m4 l3">'+
-               '<h6 class="red-text" style="padding:5px;">Child <span id="numHab">'+(y+1)+'</span></h6>'+
+               '<h6 class="red-text" style="padding:5px;">Niño <span id="numHab">'+(y+1)+'</span></h6>'+
                '<div class="input-field col s12">'+
                    '<select required class="select-child1" required type="number" min="0" max="9" value="" name="child_'+(i)+'_'+(y)+'">'+
-              '<option value="">0</option>'+
-              '<option value="1">1</option>'+
-              '<option value="2">2</option>'+
-              '<option value="3">3</option>'+
-              '<option value="4">4</option>'+
-              '<option value="5">5</option>'+
-              '<option value="6">6</option>'+
-              '<option value="7">7</option>'+
-              '<option value="8">8</option>'+
-              '<option value="9">9</option>'+
-             '</select>'+
-                   '<label>Children</label>'+
+                  '<option value="">0</option>'+
+                  '<option value="1">1</option>'+
+                  '<option value="2">2</option>'+
+                  '<option value="3">3</option>'+
+                  '<option value="4">4</option>'+
+                  '<option value="5">5</option>'+
+                  '<option value="6">6</option>'+
+                  '<option value="7">7</option>'+
+                  '<option value="8">8</option>'+
+                  '<option value="9">9</option>'+
+                 '</select>'+
+                   '<label>Edad</label>'+
                    '</div></div>';
          }
           cadena+='<div>';
@@ -696,10 +696,10 @@ $("#hotelRoom").on("change",function(){
                 console.log("hab: "+hab);
                 console.log(num);
                 var cadena='<div class="col s12">'+
-                    '<div class="col s12"><h6 class="red lighten-3 white-text" style="padding:5px;">Children on room <span id="numHab">'+(hab+1)+'</span></h6></div>';
+                    '<div class="col s12"><h6 class="red lighten-3 white-text" style="padding:5px;">Niños en Habitación <span id="numHab">'+(hab+1)+'</span></h6></div>';
                 for (var y = 0; y < num; y++) {
                     cadena+='<div class="col s6 m4 l3">'+
-                        '<h6 class="red-text" style="padding:5px;">Child <span id="numHab">'+(y+1)+'</span></h6>'+
+                        '<h6 class="red-text" style="padding:5px;">Niño <span id="numHab">'+(y+1)+'</span></h6>'+
                         '<div class="input-field col s12">'+
                         '<select required class="select-child1" required type="number" min="0" max="9" value="" name="child_'+(i)+'_'+(y)+'">'+
                         '<option value="">0</option>'+
@@ -713,7 +713,7 @@ $("#hotelRoom").on("change",function(){
                         '<option value="8">8</option>'+
                         '<option value="9">9</option>'+
                         '</select>'+
-                        '<label>Children</label>'+
+                        '<label>Edad</label>'+
                         '</div></div>';
                 }
                 cadena+='<div>';
@@ -733,10 +733,10 @@ $(".age_nino").change(function(){
   var num=$(this).val();
   if(num==0) return false;
   var cadena='<div class="col s12">'+
-             '<div class="col s12"><h6 class="red lighten-3 white-text" style="padding:5px;">Children on room <span id="numHab">'+(hab+1)+'</span></h6></div>';
+             '<div class="col s12"><h6 class="red lighten-3 white-text" style="padding:5px;">Niños en habitación <span id="numHab">'+(hab+1)+'</span></h6></div>';
     for (var i = 0; i < num; i++) {
        cadena+='<div class="col s6 m3">'+
-           '<h6 class="red-text" style="padding:5px;">Child <span id="numHab">'+(i+1)+'</span></h6>'+
+           '<h6 class="red-text" style="padding:5px;">Niño <span id="numHab">'+(i+1)+'</span></h6>'+
            '<div class="input-field col s12">'+
                '<select required class="select-child" required type="number" min="0" max="9" value="" name="child_0_'+i+'">'+
           '<option value="">0</option>'+
@@ -750,7 +750,7 @@ $(".age_nino").change(function(){
           '<option value="8">8</option>'+
           '<option value="9">9</option>'+
          '</select>'+              
-               '<label>Children</label>'+
+               '<label>Edad</label>'+
                '</div></div>';           
      }
     cadena+='<div>';

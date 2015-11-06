@@ -10,9 +10,9 @@ class ActivityCategory{
         ->queryRow();
 
       $this->id       = $category['categoria_id'];
-      $this->nombre   = $category['categoria_nombre_en'];
+      $this->nombre   = $category['categoria_nombre_es'];
       $this->imagen   = $category['categoria_icono'];
-      $this->clave    = $category['categoria_clave_en'];
+      $this->clave    = $category['categoria_clave_es'];
       $this->enLista  = $category['categoria_enlista'];
     }
 

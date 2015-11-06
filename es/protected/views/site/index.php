@@ -26,7 +26,7 @@ if(count($notas)>0){
 				<div class="row ">
 				<div class="col s12 l10 offset-l1 card-panel hoverable" style="padding:15px 5px;">
 					<div class="col s12 m5">
-						<img data-caption="<?=$value['alt']?>" class="responsive-img " src="<?=Yii::app()->params['cdnNews'].$value['data']?>">
+						<img data-caption="<?=$value['alt']?>" class="responsive-img " src="<?=Yii::app()->params['cdnNews'].$value['DATA']?>">
 					</div>
 					<div class="col s12 m7">
 						<a class="black-text " href="<?=Yii::app()->params['news'].$value['uri']."/"?>"><h5><?=$value['titulo']?></h5></a>
@@ -34,7 +34,7 @@ if(count($notas)>0){
 							<?=$value['meta_description']?>
 						</p>
 			            <div class="card-action">
-			              <a class="blue-text text-darken-2" target="_blank" href="<?=Yii::app()->params['news'].$value['uri']."/"?>">Read more</a>
+			              <a class="blue-text text-darken-2" target="_blank" href="<?=Yii::app()->params['news'].$value['uri']."/"?>">Leer Más</a>
 			            </div>					
 					</div>
 				</div>			
@@ -50,11 +50,11 @@ if(count($notas)>0){
 							<?=$value['meta_description']?>
 						</p>
 			            <div class="card-action">
-			              <a class="blue-text text-darken-2" target="_blank" href="<?=Yii::app()->params['news'].$value['uri']."/"?>">Read more</a>
+			              <a class="blue-text text-darken-2" target="_blank" href="<?=Yii::app()->params['news'].$value['uri']."/"?>">Leer Más</a>
 			            </div>					
 					</div>
 					<div class="col s12 m5">
-						<img data-caption="<?=$value['alt']?>" class="responsive-img " src="<?=Yii::app()->params['cdnNews'].$value['data']?>">
+						<img data-caption="<?=$value['alt']?>" class="responsive-img " src="<?=Yii::app()->params['cdnNews'].$value['DATA']?>">
 					</div>					
 				</div>			
 			</div>
@@ -69,7 +69,7 @@ if(count($notas)>0){
 		<div class="col s12 m3" style="border-left: 2px solid rgba(0,0,0,0.5);">
 			<div class="row">
 
-			<h5>Top Destinations</h5>
+			<h5>Top Destinos</h5>
 			<div class="row"></div>
 			<?php foreach($destinations['top'] as $dest) {	?> 
 	    		<div class="col s12 m11 offset-m1">

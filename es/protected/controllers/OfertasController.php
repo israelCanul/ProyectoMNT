@@ -8,7 +8,7 @@ class OfertasController extends CController
 		$_Promociones = Yii::app()->db->createCommand()
 						    ->select("*")
 						    ->from('promos')									    
-						    ->where(':date BETWEEN promocion_inicio and promocion_fin and promocion_sitio_aplica IN (0,1) and promocion_en_listado = 1',array(":date"=>date("Y-m-d")))								    
+						    ->where(':date BETWEEN promocion_inicio and promocion_fin and promocion_sitio_aplica IN (0,2) and promocion_en_listado = 1',array(":date"=>date("Y-m-d")))								    
 						     ->order("promocion_orden")
 						    ->queryAll();
 		/* enviar las trending notes de Mexico news en la seccio9n de travel*/

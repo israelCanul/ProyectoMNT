@@ -15,7 +15,7 @@
 <script type="text/javascript" src="<?php echo Yii::app()->params["baseUrl"]; ?>/js/bookin-box.js"></script>
 <link type="text/css" rel="stylesheet" href="/css/page/booking.min.css"  media="screen,projection"/>
 
-			<div class="col s12"><center><label id="labelInBookin">Reserve your vacation in Mexico</label></center></div>
+			<div class="col s12"><center><label id="labelInBookin">Reserve sus vacaciones en México</label></center></div>
 			<div class="col s12 m10  offset-m1 grey lighten-3 bookin">
 			  <div class="row ">
                 <div class="row">
@@ -24,8 +24,8 @@
 			        <!-- <li class="tab col s12 m3 disabled "><a href="#test1"><span class="hide-on-med-and-down">Flights</span><i class="material-icons  wobble red-text zmdi-hc-2x hide-on-large-only">airplanemode_active</i></a></li>
 					<li class="tab col s12 m3 disabled "><a href="#testPack"><span class="hide-on-med-and-down">Packages</span><i class="material-icons  tada red-text zmdi-hc-2x hide-on-large-only">shop_two</i></a></li> -->
 			        <li class="tab col s12 m3"><a class="<?=$_REQUEST['hotel_act']?> <?=$_REQUEST['request']?>" href="#test2"><span class="hide-on-med-and-down">Hotel</span><i class="zmdi red-text zmdi-hotel  wobble red-text zmdi-hc-2x hide-on-large-only"></i></a></li>
-			        <li class="tab col s12 m3"><a class="<?=$_REQUEST['tour_act']?>" href="#test3"><span class="hide-on-med-and-down">Activities</span><i class="zmdi zmdi-directions-bike  red-text  tada zmdi-hc-2x hide-on-large-only"></i></a></li>
-			        <li class="tab col s12 m3"><a class="<?=$_REQUEST['trans_act']?>" href="#test4"><span class="hide-on-med-and-down">Transportation</span><i class="zmdi zmdi-car-taxi  red-text wobble zmdi-hc-2x hide-on-large-only"></i></a></li>
+			        <li class="tab col s12 m3"><a class="<?=$_REQUEST['tour_act']?>" href="#test3"><span class="hide-on-med-and-down">Actividades</span><i class="zmdi zmdi-directions-bike  red-text  tada zmdi-hc-2x hide-on-large-only"></i></a></li>
+			        <li class="tab col s12 m3"><a class="<?=$_REQUEST['trans_act']?>" href="#test4"><span class="hide-on-med-and-down">Transportación</span><i class="zmdi zmdi-car-taxi  red-text wobble zmdi-hc-2x hide-on-large-only"></i></a></li>
 			      </ul>
 			    </div>
                 </div>
@@ -56,7 +56,7 @@
 									<input class="" type="hidden" name="HotelId" id="HotelId" value="<?=$_REQUEST["HotelId"]; ?>"/>
 									<div class="input-field col s12 m6 l3">
 										<input required type="text" autocomplete="off" name="hotel_destination" value="<?=Yii::app()->GenericFunctions->makeSinAcento($_REQUEST["hotel_destination"]) ; ?>" id="hotel_destination" class="validate">
-										<label for="hotel_destination" class="label-activo" >Destination/Hotel</label>
+										<label for="hotel_destination" class="label-activo" >Destino/Hotel</label>
 									</div>
 									<div class="input-field col s12 m3 l3">
 									  <input required="required" value="<?=$_REQUEST['hotelCheckin']?>"  type="date" name="hotelCheckin" id="hotelCheckin" class="datepicker-hotel" >
@@ -70,17 +70,17 @@
 										<select required name="hotelRoom" value='1' id="hotelRoom">
 											<?php echo Yii::app()->GenericFunctions->makeComboInt(1,9,intval($_REQUEST["hotelRoom"])); ?>
 										</select>
-									  <label >Rooms</label>
+									  <label >Habitaciones</label>
 									</div>
 									<div class="input-field col s12 m4 l1">
 									  <input required type="number" min="1" value="<?=$_REQUEST['hotelAdults_0']?>" name="hotelAdults_0" id="hotelAdults"  >
-									  <label for="hotelAdults">Adult(s)</label>
+									  <label for="hotelAdults">Adulto(s)</label>
 									</div>
 									<div class="input-field col s12 m4 l1">
 									  <select required type="number" min="0" data-hab="0" class="age_nino hotelChild_0" value="0" name="hotelChild_0" id="hotelChild" >
 										  <?php echo Yii::app()->GenericFunctions->makeComboInt(0,9,intval($_REQUEST["hotelChild_0"])); ?>
 									  </select>
-									  <label >Children</label>
+									  <label >Niños</label>
 									</div>
 
 									<div class="col s12 guesthab" id="guesthab">
@@ -94,7 +94,7 @@
 									</div>
 									<div class="input-field col s12">
 										<center>
-										<button class="btn waves-effect waves-light red" type="submit" name="action">Search
+										<button class="btn waves-effect waves-light red" type="submit" name="action">Buscar
 										   <i class="material-icons">search</i>
 										</button>
 										</center>
@@ -126,23 +126,23 @@
 									</div>
 									<div class="input-field col s12 m6 l2">
 										<input required="required" value="<?=$_REQUEST["tour-Checkin"]?>"  type="date" name="tour-Checkin" id="tour-Checkin" class="datepicker" >
-										<label for="tour-Checkin" class="active">Date *</label>
+										<label for="tour-Checkin" class="active">Fecha *</label>
 									</div>
 									<div class="input-field col s12 m6 l2">
 										<select required="required" name="tour_adults" id="tour_adults">
 												<?php echo Yii::app()->GenericFunctions->makeComboInt(0,50,intval($_REQUEST["tour_adults"]));?>
 										</select>
-										<label for="tour_adults">Adults</label>
+										<label for="tour_adults">Adultos</label>
 									</div>
 									<div class="input-field col s12 m6 l2">
 										<select required="required" name="tour_child" id="tour_child">
 											<?php echo Yii::app()->GenericFunctions->makeComboInt(0,10,intval($_REQUEST["tour_child"])); ?>
 										</select>
-										<label for="tour_child">Children</label>
+										<label for="tour_child">Niños</label>
 									</div>
 
 									<div class="input-field col s12 m12 l2">
-										<button class="btn waves-effect waves-light red" type="submit" name="action">Search
+										<button class="btn waves-effect waves-light red" type="submit" name="action">Buscar
 											<i class="material-icons">search</i>
 										</button>
 									</div>
@@ -158,20 +158,22 @@
 									<input type="hidden" id="clave_transfer" name="clave_trans" value="<?=$_REQUEST['clave_trans']?>">
 									<div class="input-field col s12 m12 l4">
 										<select required="required" name="transfer_option_type" id="transfer_option_type">
-											<option value="1" <?if($_REQUEST['transfer_option_type']==1){echo "selected='selected'";}?>>Round Trip</option>
-											<option value="2" <?if($_REQUEST['transfer_option_type']==2){echo "selected='selected'";}?>>Airport → Hotel</option>
-											<option value="3" <?if($_REQUEST['transfer_option_type']==3){echo "selected='selected'";}?>>Hotel → Airport</option>
-											<option value="4" <?if($_REQUEST['transfer_option_type']==4){echo "selected='selected'";}?>>Hotel → Hotel ( One Way ) </option>
-											<option value="5" <?if($_REQUEST['transfer_option_type']==5){echo "selected='selected'";}?>>Hotel → Hotel ( Round Trip )</option>
+											<option <?=((!isset($_REQUEST["transfer_option_type"]) || $_REQUEST["transfer_option_type"]==1) ? "selected='selected'": ""); ?> value="1">Redondo</option>
+											<option <?=(($_REQUEST["transfer_option_type"]==2) ? "selected='selected'": ""); ?> value="2">Aeropuerto &rarr;Hotel</option>
+											<option <?=(($_REQUEST["transfer_option_type"]==3) ? "selected='selected'": ""); ?> value="3">Hotel &rarr;Aeropuerto</option>
+											<option <?=(($_REQUEST["transfer_option_type"]==4) ? "selected='selected'": ""); ?> value="4">Hotel &rarr;Hotel ( One Way ) </option>
+											<option <?=(($_REQUEST["transfer_option_type"]==5) ? "selected='selected'": ""); ?> value="5">Hotel &rarr;Hotel ( Redondo )</option>
 										</select>
-										<label for="transfer_option_type" >Type of Transfer</label>
+										<label for="transfer_option_type" >Tipo de Traslado</label>
 									</div>
 									<div class="input-field col s12 m6 l4" id="airport_ini">
 										<select required="required" name="AirportCode" id="AirportCode_in" >
-											<option selected="selected" value="1">Cancun Airport (CUN)</option>
-											<option value="361">Cozumel Airport (CZM)</option>
+											<!-- <option selected="selected" value="1">Cancun Airport (CUN)</option>
+											<option value="361">Cozumel Airport (CZM)</option> -->
+											<option <?=((!isset($_REQUEST["AirportCode"]) || $_REQUEST["AirportCode"]=="1") ? "selected='selected'": ""); ?> value="1">Cancun Aeropuerto (CUN)</option>
+											<option <?=(($_REQUEST["AirportCode"]=="361") ? "selected='selected'": ""); ?> value="361">Cozumel Aeropuerto (CZM)</option>	
 										</select>
-										<label for="AirportCode">Airport</label>
+										<label for="AirportCode">Aeropuerto</label>
 									</div>
 									<div class="input-field col s12 m6 l4 hide" id="hotel_ini">
 										<input required="required" type="text" name="transfer_from" id="transfer_from" autocomplete="off" class="decorated ui-autocomplete-input" value="<?=$_REQUEST['transfer_from']?>" role="textbox" aria-autocomplete="list" aria-haspopup="true">
@@ -184,27 +186,27 @@
 									</div>
 									<div class="input-field col s12 m3 l3">
 										<input required="required" value="<?=$_REQUEST['date1']?>" type="date" name="date1" id="date-trans-book" class="datepicker-trans" >
-										<label for="date-trans-book " class="label-activo">Arrival:</label>
+										<label for="date-trans-book " class="label-activo">Llegada:</label>
 									</div>
 									<div class="input-field col s12 m3 l3 <?=$_REQUEST["classDate2"]?>" id="date1-trans-book-wrap">
 										<input required="required" value="<?=$_REQUEST['date2']?>" type="date" name="date2" id="date1-trans-book" class="datepicker-trans " >
-										<label for="date1-trans-book" class="active label-activo" >Departure:</label>
+										<label for="date1-trans-book" class="active label-activo" >Salida:</label>
 									</div>
 									<div class="input-field col s6 m3 l3">
 										<select required="required" name="transfer_adult" id="transfer_adult">
 											<?php echo Yii::app()->GenericFunctions->makeComboInt(1,45,intval(($_REQUEST["transfer_adult"]!="")?$_REQUEST["transfer_adult"]:"2"));?>
 										</select>
-										<label for="transfer_adult" >Adults</label>
+										<label for="transfer_adult" >Adultos</label>
 									</div>
 									<div class="input-field col s6 m3 l3">
 										<select required="required" name="transfer_child" id="transfer_child">
 											<?php echo Yii::app()->GenericFunctions->makeComboInt(0,45,intval(($_REQUEST["transfer_child"]!="")?$_REQUEST["transfer_child"]:"0"));?>
 										</select>
-										<label for="transfer_child" >Children</label>
+										<label for="transfer_child" >Niños</label>
 									</div>
 									<div class="input-field col s12">
 										<center>
-											<button class="btn waves-effect waves-light red" type="submit" >Search
+											<button class="btn waves-effect waves-light red" type="submit" >Buscar
 												<i class="material-icons">search</i>
 											</button>
 										</center>
@@ -216,7 +218,7 @@
 				  <? if($_REQUEST['request']==1 && isset($_REQUEST['request'])){ ?>
 					<div class="col s12">
 						<a class="btn grey darken-2  col s12" id="ocultarContenedorBookin">
-							Change Parameters
+							Cambiar Parametros
 						</a>
 					</div>
 				  <?}?>

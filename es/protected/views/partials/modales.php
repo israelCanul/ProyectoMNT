@@ -7,9 +7,9 @@
 			</div>
 			<div class="col s12 m6 menuLogo hide-on-med-and-down">
 				<ul class="menuLogoItems">
-					<li><a class="followBtn" style="border-bottom: 2px solid white;" data-open='follow'>FOLLOW US</a></li>
+					<li><a class="followBtn" style="border-bottom: 2px solid white;" data-open='follow'>SÍGANOS</a></li>
 					<li><a class="followBtn" data-open='search'><i style="height:30px;" class="material-icons white-text">search</i></a></li>
-					<li><a class="followBtn" data-open='suscribe'>SUSCRIBE</a></li>
+					<li><a class="followBtn" data-open='suscribe'>SUSCRIBASE</a></li>
 				</ul>	
 			</div>
 			<div class="col s12"><i style='float:right;font-size:50px;' data-close='follow' class="material-icons cerrar-close white-text tooltipped" data-position="bottom" data-delay="50" data-tooltip="Close">close</i></div>
@@ -18,7 +18,7 @@
 	<div class="panel-modal transparent">
 		<div class="row">
 			<div class="col s12">
-			<h5 class="white-text center-align">FOLLOW US. WE ARE EVERYWHERE</h5>
+			<h5 class="white-text center-align">SÍGANOS. ESTAMOS EN TODAS PARTES</h5>
 			<div class="row"></div>
 				<div class="row">
 					<div class="col s8 offset-4 m2 white-text medium">
@@ -53,9 +53,9 @@
 			</div>
 			<div class="col s12 m6 menuLogo hide-on-med-and-down">
 				<ul class="menuLogoItems">
-					<li><a class="followBtn" data-open='follow'>FOLLOW US</a></li>
+					<li><a class="followBtn" data-open='follow'>SÍGANOS</a></li>
 					<li><a class="followBtn" style="border-bottom: 2px solid white;" data-open='search'><i style="height:30px;" class="material-icons white-text">search</i></a></li>
-					<li><a class="followBtn" data-open='suscribe'>SUSCRIBE</a></li>
+					<li><a class="followBtn" data-open='suscribe'>SUSCRIBASE</a></li>
 				</ul>	
 			</div>
 			<div class="col s12"><i style='float:right;font-size:50px;' data-close='search' class="material-icons cerrar-close white-text tooltipped" data-position="bottom" data-delay="50" data-tooltip="Close">close</i></div>
@@ -64,7 +64,7 @@
 	<div class="panel-modal transparent">
 		<div class="row">
 			<div class="col s12">
-			<h5 class="white-text">Search</h5>
+			<h5 class="white-text">Buscar</h5>
 				  <nav>
 				    <div class="nav-wrapper">
 				      <form>
@@ -88,9 +88,9 @@
 			</div>
 			<div class="col s12 m6 menuLogo hide-on-med-and-down">
 				<ul class="menuLogoItems">
-					<li><a class="followBtn" data-open='follow'>FOLLOW US</a></li>
+					<li><a class="followBtn" data-open='follow'>SÍGANOS</a></li>
 					<li><a class="followBtn" data-open='search'><i style="height:30px;" class="material-icons white-text">search</i></a></li>
-					<li><a class="followBtn" style="border-bottom: 2px solid white;" data-open='suscribe'>SUSCRIBE</a></li>
+					<li><a class="followBtn" style="border-bottom: 2px solid white;" data-open='suscribe'>SUSCRIBASE</a></li>
 				</ul>	
 			</div>
 			<div class="col s12"><i style='float:right;font-size:50px;' data-close='suscribe' class="material-icons cerrar-close white-text tooltipped" data-position="bottom" data-delay="50" data-tooltip="Close">close</i></div>
@@ -99,39 +99,39 @@
 	<div class="panel-modal transparent">
 		<div class="row">
 			<div class="col s12">
-			<h5 class="white-text center-align">FOLLOW US. WE ARE EVERYWHERE</h5>
+			<h5 class="white-text center-align">SÍGANOS. ESTAMOS EN TODAS PARTES</h5>
 			<div class="row"></div>
 				<div class="row">
 					<div class="col s12  white-text medium">
 				       <div class="input-field col s12">
 				         <i class="material-icons prefix white-text">account_circle</i>
 				         <input id="icon_prefix" type="text" class="validate">
-				         <label for="icon_prefix white-text">Name</label>
+				         <label for="icon_prefix white-text">Nombre</label>
 				       </div>
 					</div>
 					<div class="col s12  white-text medium">
 				       <div class="input-field col s12">
 				         <i class="material-icons prefix white-text">email</i>
 				         <input id="icon_prefix" type="text" class="validate">
-				         <label for="icon_prefix white-text">Email</label>
+				         <label for="icon_prefix white-text">Correo</label>
 				       </div>
 					</div>
 					<div class="col s12  white-text medium">
 				       <div class="input-field col s12">
 				         <i class="material-icons prefix white-text">flag</i>
 				         <input id="icon_prefix" type="text" class="validate">
-				         <label for="icon_prefix white-text">Country</label>
+				         <label for="icon_prefix white-text">País</label>
 				       </div>
 					</div>
 					<div class="col s12  white-text medium">
 				       <div class="input-field col s12">
 				         <i class="material-icons prefix white-text">location_city</i>
 				         <input id="icon_prefix" type="text" class="validate">
-				         <label for="icon_prefix white-text">City</label>
+				         <label for="icon_prefix white-text">Ciudad</label>
 				       </div>
 					</div>
 					<div class="col s12  white-text medium">
-					  <button style="float:right" class="btn waves-effect waves-light" type="submit" name="action">Submit
+					  <button style="float:right" class="btn waves-effect waves-light" type="submit" name="action">Enviar
 					    <i class="material-icons">send</i>
 					  </button>											
 					</div>

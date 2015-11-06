@@ -18,49 +18,49 @@
 	<div class="panel-modal transparent"> 
 		<div class="row">
 			<div class="col s12">
-			<h5 class="white-text center-align">Contact Form</h5>
+			<h5 class="white-text center-align">Formulario de Contacto</h5>
 			<div class="row"></div>
 				<form method="post" id="form_contact" action="<? $this->createUrl('site/contact'); ?>" >
 					<div class="row">						
 					        <div class="row">
-					        	<h6 class="white-text">Interested In</h6>
+					        	<h6 class="white-text">Interesado en :</h6>
 						        <div class=" col s12 m6">
 						       		<input type="radio" checked required='required' value="Webmaster" id="interested0" name="cboDepartamento" class="validate"/>
-						       		<label for="interested0" class="white-text">Webmaster (Comments and suggestions about the website)</label>					        	
+						       		<label for="interested0" class="white-text">Webmaster (Comentarios y sugerencias sobre el sitio web)</label>					        	
 						        </div>
 						        <div class=" col s12 m6">
 						       		<input type="radio" value="Sales" required='required' id="interested1" name="cboDepartamento" class="validate"/>
-						       		<label for="interested1" class="white-text">Reservations (Price Request)</label>					        	
+						       		<label for="interested1" class="white-text">Reservaciones (Solicitud de Precios)</label>					        	
 						        </div>
 					        </div>
 					        <div class="input-field col s12">
 					        	 <i class="material-icons prefix white-text">account_circle</i>
 					         	<input required='required' id="name" type="text" name="name" class="validate" style="background-color: white;color:black;">
-					         	<label for="name" class="label-activo">Name</label>
+					         	<label for="name" class="label-activo">Nombre</label>
 					        </div>
 							<div class="input-field col s12">
 					          	<i class="material-icons prefix white-text">phone</i>
 					          	<input required='required' id="telephone" name="phone" type="text" class="validate" style="background-color: white;color:black;">
-					          	<label for="telephone" class="label-activo">Telephone</label>
+					          	<label for="telephone" class="label-activo">Teléfono</label>
 					        </div>
 							<div class="input-field col s12">
 					         	<i class="material-icons prefix white-text">email</i>
 					         	<input required='required' id="email" name="email" type="text" class="validate" style="background-color: white;color:black;">
-					         	<label for="email" class="label-activo">Email</label>
+					         	<label for="email" class="label-activo">Correo</label>
 					        </div>
 					        <div class="input-field col s12">
 					         	<i class="material-icons prefix white-text">flag</i>
 					         	<input required='required' id="country" name="country" type="text" class="validate" style="background-color: white;color:black;">
-					         	<label for="country" class="label-activo">Country</label>
+					         	<label for="country" class="label-activo">País</label>
 					        </div>					
 							<div class="input-field col s12">
 						       	 <i class="material-icons prefix white-text">receipt</i>	
 						         <textarea required='required' id="text_area" name="message" class="materialize-textarea" style="background-color: white;color:black;"></textarea>
-						         <label for="text_area" class="label-activo">Message</label>
+						         <label for="text_area" class="label-activo">Mensaje</label>
 					        </div>
 
 						<div class="col s12  white-text medium">
-						  <button style="float:right" class="btn waves-effect waves-light" type="submit" name="action">Submit
+						  <button style="float:right" class="btn waves-effect waves-light" type="submit" name="action">Enviar
 						    <i class="material-icons">send</i>
 						  </button>											
 						</div>

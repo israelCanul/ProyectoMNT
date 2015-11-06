@@ -9,17 +9,21 @@
 	<div class="col s12 m10 offset-m1">
 	    <div class="col s12 m6 offset-m3">
 	      <ul class="tabs">
-	        <li class="tab col s3"><a href="#hotels" class="active">Hotels</a></li>
-	        <li class="tab col s3"><a href="#tours">Tours</a></li>
+	        <li class="tab col s3"><a href="#hotels" class="active">Hoteles</a></li>
+	        <li class="tab col s3"><a href="#tours">Actividades</a></li>
 	      </ul>
 	    </div>
 	    <div id="hotels" class="col s12">
 
 			<?
 			$index=0;
-			foreach($_Promociones as $p){
 
+
+			foreach($_Promociones as $p){
+				
 				if($p["promocion_producto"] == "hotel"){
+					print_r($p);
+				exit();
 					if($p["promocion_archivo_" . Yii::app()->language] != ''  &&  $p["promocion_miniatura_". Yii::app()->language] != ''){
 						$url = "/offer/" . Yii::app()->GenericFunctions->makeUrl(str_replace("%","",(str_replace("&","&amp;",(str_replace(",","", $p["promocion_" . Yii::app()->language] )))))) . "-" . $p["promocion_id"] . ".html?seg=L". $p["promocion_id"];		
 						if($p["promocion_tipo_contenido"] == 3){

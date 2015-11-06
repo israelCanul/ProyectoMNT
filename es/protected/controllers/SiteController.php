@@ -27,24 +27,24 @@ class SiteController extends Controller
 	 */
 	public function actionIndex()
 	{ 
-		$notas=Yii::app()->dbNews->CreateCommand("SELECT titulo,meta_description,uri,alt,data 
+		$notas=Yii::app()->dbNews->CreateCommand("SELECT titulo,meta_description,uri,alt,DATA 
 												FROM ws_contenido AS cont,ws_imagenes AS img 
 												WHERE cont.idcontenido=img.idcontenido
-												AND ididioma='2' 
-												AND idcategoria='4' 
+												AND idcategoria='3' 
 												AND idstatus='1' 
 												AND buen_entendedor=0
 												GROUP BY img.idcontenido
 												ORDER BY fecha DESC
 												LIMIT 0,5")->queryAll();
-
+		/*print_r($notas);
+		exit();*/
 		/* destinos de los tours */
 		$_dest 	= new Destination();
 		$destinations['top'] = $_dest->getTopDestinations();
 
 
 		$cs = Yii::app()->getclientScript(); 
-		$cs->registerCssFile(Yii::app()->baseUrl.'/css/page/home.css');	
+		$cs->registerCssFile(Yii::app()->params['baseUrl'].'/css/page/home.css');	
 		$params=array(
 			'notas'=>$notas,
 			'destinations'=>$destinations);
@@ -57,16 +57,15 @@ class SiteController extends Controller
 
 	public function actionNews()
 	{
-		$notas=Yii::app()->dbNews->CreateCommand("SELECT titulo,meta_description,uri,alt,data 
+		$notas=Yii::app()->dbNews->CreateCommand("SELECT titulo,meta_description,uri,alt,DATA 
 												FROM ws_contenido AS cont,ws_imagenes AS img 
-												WHERE cont.`idcontenido`=img.`idcontenido` 
-												AND ididioma='2' 
-												AND idcategoria='4' 
+												WHERE cont.idcontenido=img.idcontenido
+												AND idcategoria='3' 
 												AND idstatus='1' 
 												AND buen_entendedor=0
-												GROUP BY img.`idcontenido` 
-												ORDER BY fecha DESC 
-												limit 0,25")->queryAll();
+												GROUP BY img.idcontenido
+												ORDER BY fecha DESC
+												LIMIT 0,25")->queryAll();
 
 
 

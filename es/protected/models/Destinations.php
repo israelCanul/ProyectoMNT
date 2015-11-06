@@ -10,7 +10,7 @@ class Destinations{
         ->queryRow();
 
       $this->id           = $destination['destino_id'];
-      $this->nombre       = $destination['nombre_en'];
+      $this->nombre       = $destination['nombre_es'];
       $this->clave        = $destination['destino_clave'];
       $this->image        = $destination['destino_img'];
       $this->codExtranet  = $destination['destino_extranet_codigo'];

@@ -1,7 +1,7 @@
 <div class="row">
 	<div class="row">
 		<div class="col s12 m10 offset-m1">
-			<h5 class="center-align card-panel">Activities by Destination</h5>
+			<h5 class="center-align card-panel">Actividades por destino</h5>
 		</div>
 	</div>
 	<div class="row">
@@ -9,7 +9,7 @@
 		  	<?php foreach($_destinos as $_destino): ?>
 
 	  			<?php if($_destino->getEnLista()){ ?>
-					<div class="small col s12 m6 l4 " style=" height: 250px;overflow: hidden;">
+					<div class="small col s12 m6 l4 " style=" height: 350px;overflow: hidden;">
 			          <div class="card-destinos">
 				          <div class="card ">
 				            <div class="card-image hoverable">
@@ -17,7 +17,7 @@
 				              	<span class="card-title"></span>
 				            </div>
 				            <div class="card-content card-action hoverable contenidoDestinos">
-				              <a title="<?php echo $_destino->getNombre();?>" href="/toursByDest/<?php echo $_destino->getClave();?>.html?isTourCategory=0&amp;tour_destination=<?php echo  urlencode($_destino->getNombre());?>&amp;tipo=destination&cat=&dest=<?php echo $_destino->id;?>&TourId=&sup=&openTk=0&seg=&tour-Checkin=<?echo urlencode(date('m/d/Y', strtotime('+2 day'))); ?>&tour_adults=2&tour_child=0&action=&lan=en&moneda=USD">
+				              <a title="<?php echo $_destino->getNombre();?>" href="/es/toursByDest/<?php echo $_destino->getClave();?>.html?isTourCategory=0&amp;tour_destination=<?php echo  urlencode($_destino->getNombre());?>&amp;tipo=destination&cat=&dest=<?php echo $_destino->id;?>&TourId=&sup=&openTk=0&seg=&tour-Checkin=<?echo urlencode(date('m/d/Y', strtotime('+2 day'))); ?>&tour_adults=2&tour_child=0&action=&lan=en&moneda=USD">
 				             	 <p class="center-align textoCaja red-text"><?=$_destino->getNombre()?></p>
 				              </a>
 				            </div>
@@ -33,7 +33,7 @@
 	</div>
 	<div class="row">
 		<div class="col s12 m10 offset-m1">
-			<h5 class="center-align card-panel">Activities by Category</h5>
+			<h5 class="center-align card-panel">Actividades por Categoría</h5>
 		</div>
 	</div>	 
 	<div class="col s12 m10 offset-m1">
@@ -43,7 +43,7 @@
 		?>
 			<?php foreach ($_categorias as $_categoria):?>
 				<?php if($_categoria->getEnLista() && $lista<9){ ?>
-					<div class="small col s12 m6 l4 " style="height: 250px;overflow: hidden;">
+					<div class="small col s12 m6 l4 " style="height: 350px;overflow: hidden;">
 			          <div class="card-destinos">
 				          <div class="card ">
 				            <div class="card-image hoverable">
@@ -51,8 +51,8 @@
 				              	<span class="card-title"></span>
 				            </div>
 				            <div class="card-content card-action hoverable contenidoDestinos">
-				              <a  title="<?php echo $_categoria->getNombre();?>" href="/toursByCat/Category.html?tour_destination=<?php echo urlencode($_categoria->getNombre());?>&tipo=category&cat=<?=$_categoria->getId(); ?>&dest=&TourId=&sup=&openTk=0&seg=&tour-Checkin=<?echo urlencode(date('m/d/Y', strtotime('+2 day'))); ?>&tour_adults=2&tour_child=0&action=&lan=en&moneda=USD">
-				              <p class="center-align textoCaja red-text"><?=GenericFunctions::makeSinAcento($_categoria->getNombre())?></p>
+				              <a  title="<?php echo $_categoria->getNombre();?>" href="/es/toursByCat/Category.html?tour_destination=<?php echo urlencode($_categoria->getNombre());?>&tipo=category&cat=<?=$_categoria->getId(); ?>&dest=&TourId=&sup=&openTk=0&seg=&tour-Checkin=<?echo urlencode(date('m/d/Y', strtotime('+2 day'))); ?>&tour_adults=2&tour_child=0&action=&lan=en&moneda=USD">
+				              <p class="center-align textoCaja red-text"><?=$_categoria->getNombre()?></p>
 				              </a>
 				            </div>
 				          </div>
@@ -71,11 +71,11 @@
 			<div class="col s12">
 				<ul class="collapsible" data-collapsible="accordion">
 				    <li>
-				      <div class="collapsible-header center-aling red-text"><div style="width:100%;position:relative" class="center-align red-text"><i class="large material-icons">zoom_in</i>Show More</div></div>
+				      <div class="collapsible-header center-aling red-text"><div style="width:100%;position:relative" class="center-align red-text"><i class="large material-icons">zoom_in</i>Mostrar más</div></div>
 				      <div class="collapsible-body">
 						<?php foreach ($_categorias as $_categoria):?>
 							<?php if($_categoria->getEnLista() && $lista>=9){ ?>
-								<div class="small col s12 m6 l4 " style="height: 300px;overflow: hidden;">
+								<div class="small col s12 m6 l4 " style="height: 350px;overflow: hidden;">
 						          <div class="card-destinos">
 							          <div class="card ">
 							            <div class="card-image hoverable">
@@ -83,8 +83,8 @@
 							              	<span class="card-title"></span>
 							            </div>
 							            <div class="card-content card-action hoverable contenidoDestinos">
-							              <a  title="<?php echo $_categoria->getNombre();?>" href="/toursByCat/Category.html?tour_destination=<?php echo urlencode($_categoria->getNombre());?>&tipo=category&cat=<?=$_categoria->getId(); ?>&dest=&TourId=&sup=&openTk=0&seg=&tour-Checkin=<?echo urlencode(date('m/d/Y', strtotime('+2 day'))); ?>&tour_adults=2&tour_child=0&action=&lan=en&moneda=USD">
-							              <p class="center-align textoCaja red-text"><?=GenericFunctions::makeSinAcento($_categoria->getNombre())?></p>
+							              <a  title="<?php echo $_categoria->getNombre();?>" href="/es/toursByCat/Category.html?tour_destination=<?php echo urlencode($_categoria->getNombre());?>&tipo=category&cat=<?=$_categoria->getId(); ?>&dest=&TourId=&sup=&openTk=0&seg=&tour-Checkin=<?echo urlencode(date('m/d/Y', strtotime('+2 day'))); ?>&tour_adults=2&tour_child=0&action=&lan=en&moneda=USD">
+							              <p class="center-align textoCaja red-text"><?=$_categoria->getNombre()?></p>
 							              </a>
 							            </div>
 							          </div>

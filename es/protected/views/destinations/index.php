@@ -1,5 +1,5 @@
 <div class="row">
-	<h5 class="center-align">Top Destinations</h5>
+	<h5 class="center-align">Top Destinos</h5>
 	<div class="col s12 m10 offset-m1">
 		<div class="row" >
 		<? if(count($destinos)>0){
@@ -14,12 +14,12 @@
 			              <span class="card-title"></span>
 			            </div>
 			            <div class="card-content card-action hoverable contenidoDestinos">
-			              <a class="red-text" href="/destinations/<? echo $value['clave'] ?>.html?hotel_keyword=&cCode=<? echo $value['codigo']?>&HotelId=&hotel_destination=<? echo urlencode( GenericFunctions::makeSinAcento( $value['nombre'])) ?>&hotelCheckin=<? echo urlencode(date('m/d/Y', strtotime('+2 day')));?>&hotelCheckout=<? echo urlencode(date('m/d/Y', strtotime('+5 day')));?>&hotelRoom=1&hotelAdults_0=2&hotelChild_0=0&action=&Room%5B0%5D%5BAdults%5D=2&Room%5B0%5D%5BChilds%5D=0">
+			              <a class="red-text" href="/es/destinations/<? echo $value['clave'] ?>.html?hotel_keyword=&cCode=<? echo $value['codigo']?>&HotelId=&hotel_destination=<? echo urlencode( GenericFunctions::makeSinAcento( $value['nombre'])) ?>&hotelCheckin=<? echo urlencode(date('m/d/Y', strtotime('+2 day')));?>&hotelCheckout=<? echo urlencode(date('m/d/Y', strtotime('+5 day')));?>&hotelRoom=1&hotelAdults_0=2&hotelChild_0=0&action=&Room%5B0%5D%5BAdults%5D=2&Room%5B0%5D%5BChilds%5D=0">
 			              <?
 			              
 			              ?>
-			              <p class="center-align"><label class="textoCaja"><?=GenericFunctions::makeSinAcento($value['nombre'])?></label></p>
-			              <p class="center-align"><?=GenericFunctions::makeSinAcento($value['estado'])?></p>
+			              <p class="center-align"><label class="textoCaja"><?=$value['nombre']?></label></p>
+			              <p class="center-align"><?=$value['estado']?></p>
 
 			              </a> 
 			            </div>
