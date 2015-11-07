@@ -60,7 +60,7 @@ class WebServices extends CApplicationComponent{
 
 		$data = curl_exec($ch);
 
-
+			
 		if(isset($_REQUEST["debug"])){
 			echo "<pre>";
 			print_r($xml);

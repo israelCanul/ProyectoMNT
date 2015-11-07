@@ -3,15 +3,19 @@
 		public $Config = array();
 		public $User = "cheke";
 		public $Pwd = "sandra";
-		//public $WSDL = "http://test.lomasbeta.mx/extranet/ServicesUS/";
-		public $WSDL = "http://extranet.lomastravel.com.mx/ServicesUS/";
-		//public $WSDL = "http://lomas/extranet/Services/";
+		public $WSDL = "http://extranet.lomastravel.com.mx/Services/";
+		//public $WSDL = "http://test.lomasbeta.mx/extranet/Services/";
 		public $WSDLVar = "";
 		public $Lng = array("es"=>"es","en"=>"en");
-		public $CurLng = "en";
+		public $CurLng = "es";
+		public $Moneda = "MXN";
 		
 		public function __construct(){
-			date_default_timezone_set('America/Cancun');
+
+			if ($_SESSION["config"]["currency"] != 'MXN') {
+				$this->Moneda = 'USD';
+				$this->WSDL = "http://extranet.lomastravel.com.mx/ServicesUS/";
+			}
 
 			$this->Config = array();
 			
@@ -64,8 +68,8 @@
 			$Header = '<Security>
 			  <Username>' . $this->User . '</Username>
 			  <Password>' . $this->Pwd . '</Password>
-			  <Culture>en</Culture>
-			  <Currency>USD</Currency>
+			  <Culture>es</Culture>
+			  <Currency>'.$this->Moneda.'</Currency>
 			</Security>';
 			
 			return $Header;
@@ -394,10 +398,10 @@
 			date_default_timezone_set("America/Mexico_City");
 			if($fecha_inicio!=""){
 				$promo_inicio=$fecha_inicio;
-				$promo_final=$fecha_fin;			
+				$promo_final=$fecha_fin;	
+					
 			}else{
-				
-				if(mktime(0,0,0,substr($landing,5,2),substr($landing,8,2) + 2,substr($landing,0,4))<=mktime(0,0,0,date("m"),date("d") + 2,date("Y"))){
+				if(mktime(0,0,0,substr($landing,5,2),substr($landing,8,2) + 2,substr($landing,0,4))<mktime(0,0,0,date("m"),date("d") + 2,date("Y"))){
 					if($fecha_inicio=="" && $fecha_inicio==""){
 						#Fecha sin book
 						$promo_inicio = date("Y-m-d",mktime(0,0,0,date("m"),date("d") + 2,date("Y")));
@@ -405,7 +409,7 @@
 					}else{
 						$promo_inicio = date("Y-m-d",mktime(0,0,0,substr($fecha_inicio,5,2),substr($fecha_inicio,8,2),substr($fecha_inicio,0,4)));
 						$promo_final = date("Y-m-d",mktime(0,0,0,substr($fecha_fin,5,2),substr($fecha_fin,8,2),substr($fecha_fin,0,4)));
-					}						
+					}
 				}else{
 					$promo_inicio = date("Y-m-d",mktime(0,0,0,substr($landing,5,2),substr($landing,8,2) + 2,substr($landing,0,4)));
 					$promo_final = date("Y-m-d",mktime(0,0,0,substr($landing,5,2),substr($landing,8,2) + 5,substr($landing,0,4)));
@@ -424,7 +428,7 @@
 					}
 				}
 				//para que tome base doble				
-				$Room["Adults"]=2;				
+				//$Room["Adults"]=2;				
 				$roomInfo .= '	
 							<RoomInfo>
 								<AdultsNum>' . $Room["Adults"] . '</AdultsNum> 
@@ -445,7 +449,7 @@
 			$ContentService .= "</clHotelIdInfo>";
 			$ContentService .= '
 					<hIds>'.$Destinations.'</hIds>
-					<sPackage>false</sPackage>
+			  		<sPackage>false</sPackage>
 			  		<Dates>
 				  		<dCheckIn>' . $promo_inicio . '</dCheckIn> 
 				  		<dCheckOut>' .$promo_final . '</dCheckOut> 

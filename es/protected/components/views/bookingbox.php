@@ -5,9 +5,9 @@
 ?>
 
 <script type="text/javascript">
-	var HotelsData=<?= file_get_contents(Yii::app()->params["baseUrl"]."destinations/destinations.html"); ?>;
-	var ToursData=<?= file_get_contents(Yii::app()->params['api']."/restTours/destinations?lan=en"); ?>;
-	var transferData=<?= file_get_contents(Yii::app()->params['api']."/RestTransfers/destinations.html?lan=en");?>;
+	var HotelsData=<?=file_get_contents(Yii::app()->params["baseUrl"]."destinations/destinations.html")?>;
+	var ToursData=<?=file_get_contents(Yii::app()->params['api']."/restTours/destinations?lan=en"); ?>;
+	var transferData=<?=file_get_contents(Yii::app()->params['api']."/RestTransfers/destinations.html?lan=en");?>;
 	//var transferDataCun=<? //file_get_contents("http://apilomas.dev/RestTransfers/destinationsOptions.html?h=0&a=1:1&lan=en");?>;
 	//var transferDataCoz=<? //file_get_contents("http://apilomas.dev/RestTransfers/destinationsOptions.html?h=0&a=361:11&lan=en");?>;
 	var fecha="<?=date('Y,m,d', strtotime('+2 day'))?>";
@@ -50,7 +50,7 @@
 						 <!-- hoteles -->
 						<div id="test2" class="col s12 tab_contenido">
 
-							<form class="col s12" action="/destinations/buscar" id="book_hotels" ><div class="row">
+							<form class="col s12" action="/es/destinations/buscar" id="book_hotels" ><div class="row">
 									<input class="" type="hidden" name="hotel_keyword" id="hotel_keyword" value="<?=$_REQUEST["hotel"]; ?>"/>
 									<input class="" type="hidden" name="cCode" id="cCode" value="<?=$_REQUEST["cCode"]; ?>"/>
 									<input class="" type="hidden" name="HotelId" id="HotelId" value="<?=$_REQUEST["HotelId"]; ?>"/>
@@ -111,7 +111,7 @@
 						 <!-- Tours -->
 						<div id="test3" class="col s12 tab_contenido" >
 								<div class="row">
-								<form class="col s12" action="/activities/BuscarTours" id="book_tours">
+								<form class="col s12" action="/es/activities/BuscarTours" id="book_tours">
 									<div class="input-field col s12 m6 l4">
 										<input required="required" type="text" autocomplete="off" name="tour_destination" value="<?=Yii::app()->GenericFunctions->makeSinAcento($_REQUEST["tour_destination"]) ; ?>" id="tour_destination" class="validate">
 										<label for="tour_destination" class="label-activo" >Tour</label>
@@ -151,7 +151,7 @@
 								</div>
 						</div>
 						<div id="test4" class="col s12 tab_contenido">
-							<form id="book_tranfers"  action="/traslados/buscar" method="post">
+							<form id="book_tranfers"  action="/es/traslados/buscar" method="post">
 								<div class="row">
 									<input type="hidden" name="round_trip" id="round_trip" value="<?=$_REQUEST['round_trip']?>" />
 									<input type="hidden" id="clave_ini" name="dest_from" value="<?=$_REQUEST['dest_from']?>">

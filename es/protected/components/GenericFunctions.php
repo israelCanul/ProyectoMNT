@@ -1,6 +1,18 @@
 <?
 
 class GenericFunctions extends CApplicationComponent{  
+	
+	public function detectarPais(){
+			require_once($_SERVER['DOCUMENT_ROOT']."/es/includes/getRealIP.php");
+			require_once($_SERVER['DOCUMENT_ROOT']."/es/includes/geoip.inc");
+			$gi = geoip_open($_SERVER['DOCUMENT_ROOT']."/es/includes/GeoIP.dat",GEOIP_STANDARD);
+			$ipCliente = getRealIP();
+			$t_cod_pais = geoip_country_code_by_addr($gi, $ipCliente);
+			if ($ipCliente == '127.0.0.1') {
+				$t_cod_pais = 'MX';
+			}
+			return $t_cod_pais;
+	}
 
 	public function notasFooter(){
 		$notasFooter=Yii::app()->dbNews->CreateCommand("SELECT c.idcontenido, c.titulo,c.meta_description

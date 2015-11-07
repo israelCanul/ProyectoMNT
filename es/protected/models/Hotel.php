@@ -1,6 +1,6 @@
 <?php
 
-class Hotel{
+class Hotel{ 
 
 	public function getHotelByCode($code){
 		$hotel = Yii::app()->dbWeblt->createCommand()

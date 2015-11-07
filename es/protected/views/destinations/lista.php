@@ -13,12 +13,10 @@
 <div class="col s12 m10 offset-m1 l10 offset-l1">
 <!-- INICIO DE LA VISTA -->
 <div class="content">
-
-<?php
-	
-
+	<?php
 	$Htls 			= array();
 	$languaje 		= strtoupper(Yii::app()->language);
+	
 
 	if(sizeof($_Htls[0]->Hotel) && isset($_Htls[0]->Hotel[0]->attributes()->minAverPrice)){
 		if(isset($_REQUEST["hotel_category"])){
@@ -28,13 +26,12 @@
     		if($locacion == "Cancun" && $languaje=="ES"){
     			$locacion  ="Canc&uacute;n";
        		}
-       	}
-						
+       	}						
 		$_getPrecioMax="";
 		if(intval($_GET['price_max'])>0){
 			$_getPrecioMax="?price_max=".$_GET['price_max'];
 		}       	
-?>
+	?>
 
 	
 
@@ -655,12 +652,12 @@
 							if(count($categoryH)>1){
 								foreach($categoryH as $cH){?>
 									<p class="theme block">
-										<span class="<?php echo Yii::app()->GenericFunctions->makeUrl(strtolower($cH));?>"><?php echo $cH; ?></span>
+										<span class="<?php echo Yii::app()->GenericFunctions->makeUrl(strtolower(GenericFunctions::makeSinAcento($cH)));?>"><?php echo $cH; ?></span>
 									</p>									
 								<?}
 							}else{?>
 								<p class="theme block">
-									<span class="<?php echo Yii::app()->GenericFunctions->makeUrl(strtolower($_h->attributes()->category));?>"><?php echo $_h->attributes()->category; ?></span>
+									<span class="<?php echo Yii::app()->GenericFunctions->makeUrl(strtolower(GenericFunctions::makeSinAcento($_h->attributes()->category)));?>"><?php echo $_h->attributes()->category; ?></span>
 								</p>								
 								
 							<?}?>
@@ -668,7 +665,7 @@
 							<p class="keywords">
 								<?php 
 									foreach ($plan_meals as $planm){ ?>
-										<span><?php echo $planm; ?></span>
+										<span><?php echo GenericFunctions::makeSinAcento($planm); ?></span>
 								<?php } ?>
 							</p>
 

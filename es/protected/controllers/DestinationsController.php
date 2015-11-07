@@ -315,7 +315,7 @@ class DestinationsController extends Controller
 				$_SESSION["iServices"] = array();			
 			}
 			
-			if(!isset($_SESSION["iServices"]["Hoteles"])){
+			if(!isset($_SESSION["iServices"]["Hoteles"])){ 
 				$_SESSION["iServices"]["Hoteles"] = array();			
 			}
 
