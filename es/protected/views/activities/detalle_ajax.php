@@ -27,7 +27,7 @@
 										echo "<div class='clear' style='margin-left:-1px'>";
 										echo "<div class='hotelPrice'></div>";
 										
-										echo "<span style='font-size: 20px; font-weight: bold; color: #7d7c81;'>$" . number_format((float)$minPrice,0) . "</span><span style='color:#7d7c81;' class='currency_code'>" . $_SESSION["config"]["currency"] . "</span><br />";
+										echo "<span style='font-size: 20px; font-weight: bold; color: #7d7c81;'>$" . number_format((float)$minPrice,0) . "</span><span style='color:#7d7c81;' class='currency_code'>" . $_SESSION["config_es"]["currency"] . "</span><br />";
 										echo "<span style='font-size: 9px; color: #9a999f;'>" . Yii::t("global", "Tarifa promedio más baja por persona") . ".</span>";
 										
 										echo "<div class='tour_categoria_info_displayer'>";
@@ -91,8 +91,8 @@
 												}
 
 										 //$price; 
-                                             		$price = Yii::app()->Currency->convert($_SESSION["config"]["currency"],$price);   
-                                         //Yii::app()->Currency->convert($_SESSION["config"]["currency"],$price);
+                                             		$price = Yii::app()->Currency->convert($_SESSION["config_es"]["currency"],$price);   
+                                         //Yii::app()->Currency->convert($_SESSION["config_es"]["currency"],$price);
 												echo "<tr>";
 												echo "<td>";
 													if(trim($z["tarifa_nombre_" . Yii::app()->language]) != ""){
@@ -104,13 +104,13 @@
 														echo "<br />";
 													}
 													if($z["tarifa_tipo_cobro"] == 1){							
-														echo Yii::t("global","Precio por adulto") . ": $" . number_format(Yii::app()->Currency->convert($_SESSION["config"]["currency"],$z["tarifa_precio_adulto"]),0);
+														echo Yii::t("global","Precio por adulto") . ": $" . number_format(Yii::app()->Currency->convert($_SESSION["config_es"]["currency"],$z["tarifa_precio_adulto"]),0);
 														echo "<br />";
                                                         if($_t["tour_id"] != 73)
                                                         {
                                                         if($z["tarifa_precio_menor"] != 0)
                                                           {
-														  echo Yii::t("global","Precio por menor")  . ": $" . number_format(Yii::app()->Currency->convert($_SESSION["config"]["currency"],$z["tarifa_precio_menor"]),0);
+														  echo Yii::t("global","Precio por menor")  . ": $" . number_format(Yii::app()->Currency->convert($_SESSION["config_es"]["currency"],$z["tarifa_precio_menor"]),0);
                                                           }
                                                         }
 														

@@ -25,24 +25,24 @@
 	<meta charset="utf-8">
 	<meta name="language" content="en">
    <!-- Archivos JS *************************************************************************************************** -->
-    <script src="/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="<?=Yii::app()->params['baseUrl']?>js/jquery-1.9.1.min.js" type="text/javascript"></script>
 	<!--<script src="/js/jquery-ui.js" type="text/javascript"></script> -->
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <!-- validate -->
-    <script src="<? echo '/js/validate.jquery.js?a='. Yii::app()->params['assets']; ?>" ></script>
+    <script src="<?=Yii::app()->params['baseUrl']?><? echo 'js/validate.jquery.js?a='. Yii::app()->params['assets']; ?>" ></script>
    	<!--Import jQuery before materialize.js-->
-	<script src="/js/materialize.min.js"></script>
+	<script src="<?=Yii::app()->params['baseUrl']?>js/materialize.min.js"></script>
     <!-- Archivos CSS ****************************************************************************************************** -->
 
     <!-- Compiled and minified CSS -->
-    <link type="text/css" rel="stylesheet" href="/css/page/jquery-ui.css"  media="screen,projection"/>
-    <link type="text/css" rel="stylesheet" href="/css/materialize.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="<?=Yii::app()->params['baseUrl']?>css/page/jquery-ui.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="<?=Yii::app()->params['baseUrl']?>css/materialize.css"  media="screen,projection"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.1.2/css/material-design-iconic-font.min.css">
     <!-- iconos de materializecss -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!-- css para la pagina -->
-	<link rel="stylesheet" href="/css/animate.css">
-    <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/checkout.css">
+	<link rel="stylesheet" href="<?=Yii::app()->params['baseUrl']?>css/animate.css">
+    <link rel="stylesheet" href="<?=Yii::app()->params['baseUrl']?>css/checkout.css">
 
 
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>

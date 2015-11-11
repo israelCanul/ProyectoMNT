@@ -53,6 +53,34 @@ class GenericFunctions extends CApplicationComponent{
 			$url = urlencode($url);
 			return $url;
 	}
+	
+	public function convierteFechaLetra($fecha,$idioma,$completo){
+			list ($dia,$mes, $anio) = explode("/",$fecha);
+			//Domingo es 0
+			$numDiaSemana = date("w",strtotime($anio."-".$mes."-".$dia));
+			$meses_ing_letra=array("01"=>"January", "02"=>"February", "03"=>"March", "04"=>"April", "05"=>"May", "06"=>"June",
+			       "07"=>"July", "08"=>"August", "09"=>"September", "10"=>"October", "11"=>"November", "12"=>"December");
+	        $meses_esp_letra=array("01"=>"Enero", "02"=>"Febrero", "03"=>"Marzo", "04"=>"Abril", "05"=>"Mayo", "06"=>"Junio",
+                    "07"=>"Julio", "08"=>"Agosto", "09"=>"Septiembre", "10"=>"Octubre", "11"=>"Noviembre", "12"=>"Diciembre");
+	        $dia_esp_letra=array("0"=>"Domingo", "1"=>"Lunes", "2"=>"Martes", "3"=>"Miercoles", "4"=>"Jueves", "5"=>"Viernes","6"=>"Sabado");
+	        $dia_ing_letra=array("0"=>"Sunday", "1"=>"Monday", "2"=>"Tuesday", "3"=>"Wednesday", "4"=>"Thursday", "5"=>"Friday","6"=>"Saturday");
+			    switch($idioma) {
+			   	  case '1':$fecha_letra=(($completo==1) ? $meses_ing_letra[$mes]." ".$dia.", ".$anio : substr($meses_ing_letra[$mes],0,3)." ".$dia.", ".$anio);
+			   	  		   break;
+				  case '2':$fecha_letra=(($completo==1) ? $dia." de ".$meses_esp_letra[$mes]." de ".$anio : $dia." de ".substr($meses_esp_letra[$mes],0,3)." de ".$anio);
+				  		   break;
+				  case '3':$fecha_letra=(($completo==1) ? $dia_ing_letra[$numDiaSemana].", $dia/".$meses_ing_letra[$mes]."/$anio" : substr($dia_ing_letra[$numDiaSemana],0,3).", $dia/".substr($meses_ing_letra[$mes],0,3)."/$anio");
+					  	   break;
+				  case '4':$fecha_letra=(($completo==1) ? $dia_esp_letra[$numDiaSemana].", $dia/".$meses_esp_letra[$mes]."/$anio" : substr($dia_esp_letra[$numDiaSemana],0,3).", $dia/".substr($meses_esp_letra[$mes],0,3)."/$anio");
+				  		   break;
+				  case '5':$fecha_letra=(($completo==1) ? $dia_ing_letra[$numDiaSemana]." $dia ".$meses_ing_letra[$mes]." $anio" : substr($dia_ing_letra[$numDiaSemana],0,2)." $dia ".substr($meses_ing_letra[$mes],0,3)." ".substr($anio,2,2));
+					  	   break;
+				  case '6':$fecha_letra=(($completo==1) ? $dia_esp_letra[$numDiaSemana].", $dia/".$meses_esp_letra[$mes]."/$anio" : substr($dia_esp_letra[$numDiaSemana],0,3).", $dia/".substr($meses_esp_letra[$mes],0,3)."/$anio");
+				  		   break;
+			    }
+			return $fecha_letra;
+	}
+
 
 	public function makeStars($i,$big = "jpg"){
 			$i = number_format($i,1);
@@ -271,5 +299,20 @@ class GenericFunctions extends CApplicationComponent{
 	         	}
 	    return $xHTML;
     }
+	
+	function mostrar_dias($fecha) {  
+		$dia = date("l", $fecha); 
+		switch($dia) {
+			case "Sunday": $resultado = "Domingo"; break;
+			case "Monday": $resultado = "Lunes"; break;
+			case "Tuesday": $resultado = "Martes"; break;
+			case "Wednesday": $resultado = "Miércoles"; break;
+			case "Thursday": $resultado = "Jueves"; break;
+			case "Friday": $resultado = "Viernes"; break;
+			case "Saturday": $resultado = "Sábado"; break; 
+		}
+		return $resultado;
+	}
+
 }
 ?>

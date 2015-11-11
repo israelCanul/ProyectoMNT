@@ -31,9 +31,9 @@ foreach ($Tarifas as $z) {
 
 	//Convierte a dolares la tarifa si la tarifa_tipo_cobro es MXN
 	if ($z["tarifa_tipo_tarifa"] == 2) {
-		$price = Yii::app()->Currency->convertMXN($_SESSION["config"]["currency"], $price);
+		$price = Yii::app()->Currency->convertMXN($_SESSION["config_es"]["currency"], $price);
 	} else {
-		$price = Yii::app()->Currency->convert($_SESSION["config"]["currency"], $price);
+		$price = Yii::app()->Currency->convert($_SESSION["config_es"]["currency"], $price);
 	}
 
 	if (trim($z["tarifa_nombre_" . Yii::app()->language]) != "") {
@@ -49,11 +49,11 @@ foreach ($Tarifas as $z) {
 
 			//Convierte a dolares la tarifa si la tarifa_tipo_cobro es MXN
 			if ($z["tarifa_tipo_tarifa"] == 2) {
-				$tarifa_precio_adulto = Yii::app()->Currency->convertMXN($_SESSION["config"]["currency"], $z["tarifa_precio_adulto"]);
-				$tarifa_precio_menor = Yii::app()->Currency->convertMXN($_SESSION["config"]["currency"], $z["tarifa_precio_menor"]);
+				$tarifa_precio_adulto = Yii::app()->Currency->convertMXN($_SESSION["config_es"]["currency"], $z["tarifa_precio_adulto"]);
+				$tarifa_precio_menor = Yii::app()->Currency->convertMXN($_SESSION["config_es"]["currency"], $z["tarifa_precio_menor"]);
 			} else {
-				$tarifa_precio_adulto = Yii::app()->Currency->convert($_SESSION["config"]["currency"], $z["tarifa_precio_adulto"]);
-				$tarifa_precio_menor = Yii::app()->Currency->convert($_SESSION["config"]["currency"], $z["tarifa_precio_menor"]);
+				$tarifa_precio_adulto = Yii::app()->Currency->convert($_SESSION["config_es"]["currency"], $z["tarifa_precio_adulto"]);
+				$tarifa_precio_menor = Yii::app()->Currency->convert($_SESSION["config_es"]["currency"], $z["tarifa_precio_menor"]);
 			}
 		}
 
@@ -71,7 +71,7 @@ foreach ($Tarifas as $z) {
 	if ($z["opera_Dia"] == "true") {
 		$firstTarifa = true;
 		echo "<form method='post' action='".$this->createUrl("tour/agregar")."'>";
-		echo '<label> ' . $z['tarifa_nombre_en'] . '<span>'. $_SESSION["config"]["currency"] . " $". number_format($price,0) .'</span>'. '</label>';
+		echo '<label> ' . $z['tarifa_nombre_en'] . '<span>'. $_SESSION["config_es"]["currency"] . " $". number_format($price,0) .'</span>'. '</label>';
 		echo '<div class="rate-book prod_total_list"><input type="submit"  class="misc_select_btn_green" value="' . "BOOK" . '" /></div>';
 		echo "<input type=\"hidden\" name=\"jnfe\" value=\"" . Yii::app()->GenericFunctions->ProtectVar($z["tarifa_id"] . "@@" . $_t["tour_id"] . "@@" . $z["servicio_id"] . "@@" . ((Yii::app()->language == "es") ? $_t["tour_nombre_es"] : $_t["tour_nombre"]) . "@@" . $z["tarifa_nombre_" . Yii::app()->language] . "@@" . $_t["descripcion_corta"] . "@@" . $z["tarifa_precio_adulto_mxp"] . "@@" . $price . "@@" . $_t["tour_reservable"] . "@@" . $_fecha . "@@" . $_ad . "@@" . $_mn . "@@" . $_t["tour_destino"] . "@@//apstatic.lomastravel.com.mx/180/" . $_imgPrincipal . "@@" . $openTk . "@@" . number_format($tarifa_precio_adulto,0,",",""). "@@" . number_format($tarifa_precio_menor,0,",",""). "") . "\" checked=\"checked\" /></td>";
 		echo "<input type='hidden' name = 'chekoutTour' value = '1'>";

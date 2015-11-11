@@ -9,7 +9,7 @@ class ExtrasController extends CController
 
         if (isset($_REQUEST["jnfe"])) {
 
-            $_sql = "Select venta_id from venta where venta_session_id Like '" . $_SESSION["config"]["token"] . "' and venta_estt = '1' and venta_fecha Like '" . date("Y-m-d") . "%'";
+            $_sql = "Select venta_id from venta where venta_session_id Like '" . $_SESSION["config_es"]["token"] . "' and venta_estt = '1' and venta_fecha Like '" . date("Y-m-d") . "%'";
             $_vValidator = Venta::model()->findAllBySql($_sql);
 
             //if ($_vValidator[0]->venta_id == 0 || $_vValidator[0]->venta_id == "") {
@@ -18,9 +18,9 @@ class ExtrasController extends CController
 
             } else {
                 $_venta = new Venta;
-                $_SESSION["config"]["token"] = Yii::app()->WebServices->getSecureKey(150);
-                $_venta->venta_session_id = $_SESSION["config"]["token"];
-                $_venta->venta_moneda = $_SESSION["config"]["currency"];
+                $_SESSION["config_es"]["token"] = Yii::app()->WebServices->getSecureKey(150);
+                $_venta->venta_session_id = $_SESSION["config_es"]["token"];
+                $_venta->venta_moneda = $_SESSION["config_es"]["currency"];
                 $_venta->venta_site_id = ((Yii::app()->language == "es") ? 2 : 1);
                 $_venta->venta_user_id = 0;
                 $_venta->venta_estt = 1;
@@ -80,7 +80,7 @@ class ExtrasController extends CController
 
 
             $this->redirect(array(
-                "/checkout/index"
+                "/es/checkout/index"
             ));
         } else {
             $this->redirect("/traslados/index");

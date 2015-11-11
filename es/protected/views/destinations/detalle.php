@@ -1,4 +1,10 @@
-
+<div class="row"></div>
+<div class="row bookin-form1" style="z-index:10;position: relative;">
+	<div class="col s12">
+		<?php	$this->widget('application.components.Bookingbox'); ?>
+		<?php $fecha = date("d/m/Y",mktime(0,0,0,date("m"),date("d")+3,date("Y"))); ?>
+	</div>
+</div>
 <div class="row">
 	<div class="col s12 m10 offset-m1">
 		<style>
@@ -6,23 +12,12 @@
 			#main_home_booking_box_new .booking_options {border: none;}
 		</style>
 
-		<?php
+		<?php 
 			$Hotel = $Hoteles[0];
 
-			function mostrar_dias($fecha) {  
-				$dia = date("l", $fecha); 
-				switch($dia) {
-					case "Sunday": $resultado = "Sun"; break;
-					case "Monday": $resultado = "Mon"; break;
-					case "Tuesday": $resultado = "Tue"; break;
-					case "Wednesday": $resultado = "Wed"; break;
-					case "Thursday": $resultado = "Thu"; break;
-					case "Friday": $resultado = "Fri"; break;
-					case "Saturday": $resultado = "Sat"; break; 
-				}
-				return $resultado;
-			}
-							
+
+
+						
 			$_fini = Yii::app()->_Hotels->Config["Dates"]["CheckIn"];
 			$_ffin = Yii::app()->_Hotels->Config["Dates"]["CheckOut"];
 			$_noches = Yii::app()->GenericFunctions->difDays($_fini,$_ffin);
@@ -33,8 +28,8 @@
 
 			<h6 class="infoSearch">
 				<?php echo $Hotel->Location->attributes()->city.', '.$Hotel->Location->attributes()->searchingState;?> &#8226; 
-				<?php echo date('D, M d', strtotime(Yii::app()->_Hotels->Config["Dates"]["CheckIn"])); ?> - 
-				<?php echo date('D, M d', strtotime(Yii::app()->_Hotels->Config["Dates"]["CheckOut"])); ?> &#8226; 
+				<?php echo GenericFunctions::convierteFechaLetra(date('d/m/y', strtotime(Yii::app()->_Hotels->Config["Dates"]["CheckIn"])),4,2); ?> - 
+				<?php echo GenericFunctions::convierteFechaLetra(date('d/m/y', strtotime(Yii::app()->_Hotels->Config["Dates"]["CheckOut"])),4,2); ?> 
 				<?
 				$totalAdultos=0;
 				$totalNinos=0;
@@ -44,12 +39,12 @@
 				}?>		
 				<?php echo sizeof(Yii::app()->_Hotels->Config["Rooms"])." ";
 				if(sizeof(Yii::app()->_Hotels->Config["Rooms"])==1){
-					echo "Room";
+					echo "Habitación";
 				}else{
-					echo "Rooms";
+					echo "Habitaciones";
 				}?> &#8226
-				<?php echo "".$totalAdultos." Adults ";
-				if($totalNinos>0){ echo ", ".$totalNinos." Children"; }
+				<?php echo "".$totalAdultos." Adultos ";
+				if($totalNinos>0){ echo ", ".$totalNinos." Niños"; }
 				?> 
 				
 			</h6>
@@ -61,7 +56,7 @@
 				</div> -->
 
 				<div class="detailHead">
-					<h4><?php echo  Yii::app()->GenericFunctions->makeSinAcento($Hotel->attributes()->name); ?></h4>
+					<h4><?php echo  $Hotel->attributes()->name; ?></h4>
 					<p>
 						<span class="hotelStars"><?php echo Yii::app()->GenericFunctions->makeStars((float)$Hotel->attributes()->starsLevel); ?></span>
 						<?php echo $Hotel->Location->attributes()->address; ?>
@@ -171,7 +166,7 @@
 				</div>
 
 				<div class="detailRooms">
-					<div id="readyBook">READY TO BOOK YOUR ROOM AT <?php echo Yii::app()->GenericFunctions->strtoupper(Yii::app()->GenericFunctions->makeSinAcento($Hotel->attributes()->name)) ?></div>
+					<div id="readyBook">LISTO PARA REALIZAR SU RESERVA EN <?php echo Yii::app()->GenericFunctions->strtoupper(Yii::app()->GenericFunctions->makeSinAcento($Hotel->attributes()->name)) ?></div>
 					<!--<div id="roomRecommended">We recommend this room</div>-->
 				
 		        <div class="">
@@ -202,6 +197,8 @@
 		                                    
 							<?php                 
 								$_Rooms = $Hotel->RoomType;
+								/*print_r($_Rooms);
+								exit()*/
 								$room = 0;
 								$mostrar_op_ad=true;
 								foreach($_Rooms as $_r){
@@ -314,6 +311,8 @@
 									$room++;
 
 
+									/*print_r("<pre>");
+									print_r($_RoomH);*/
 
 									// DESCRIPCION DEL CUARTO 	
 									echo "<div class='elementData roomInformationOpt'>";                                                         
@@ -327,10 +326,10 @@
 									$promoImprimidas = array();
 									foreach($_r->Occup->Price as $ppHall){
 										if((int)$ppHall->attributes()->promotion>0&&!in_array((string)$ppHall->attributes()->promotion,$promoImprimidas)&&(int)$ppHall->attributes()->available==1){
-										echo "<div class='hotelPromotion'>Promotion: <span>" . (string) $ppHall->attributes()->promotiondescrip."</span></div>";
+										echo "<div class='hotelPromotion'>Promoción: <span>" . (string) $ppHall->attributes()->promotiondescrip."</span></div>";
 										$promoImprimidas[]=(string)$ppHall->attributes()->promotion;
-										echo "<div class='hotelBookWindow'>Booking Window: <span>" . date('d M Y', strtotime($ppHall->attributes()->promotionini))." to ".date('d M Y', strtotime($ppHall->attributes()->promotionfin)).".</span></div>";
-										echo "<div class='hotelPromoValid'> Valid: <span>" . date('d M Y', strtotime($ppHall->attributes()->promotionestadiaini))." to ".date('d M Y', strtotime($ppHall->attributes()->promotionestadiafin)).".</span></div>";	
+										echo "<div class='hotelBookWindow'>Reservando del : <span>" . GenericFunctions::convierteFechaLetra(date('d/m/Y', strtotime($ppHall->attributes()->promotionini)),2,2)." a ". GenericFunctions::convierteFechaLetra(date('d/m/Y', strtotime($ppHall->attributes()->promotionfin)),2,2).".</span></div>";
+										echo "<div class='hotelPromoValid'> Válido: <span>" . GenericFunctions::convierteFechaLetra(date('d/m/Y', strtotime($ppHall->attributes()->promotionestadiaini)),2,2)." a ".GenericFunctions::convierteFechaLetra(date('d/m/Y', strtotime($ppHall->attributes()->promotionestadiafin)),2,2).".</span></div>";	
 										}
 									}
 									                    	
@@ -338,15 +337,15 @@
 
 									foreach($_RoomH as $_g){
 										if($_g["descripcion_habitacion"]== $_r->attributes()->roomId){
-											echo "<p class='elementDesc'>" . utf8_encode(nl2br(strip_tags($_g["descripcion_larga"]))) ."</p>";
+											echo "<p class='elementDesc'>" . nl2br(strip_tags($_g["descripcion_larga"])) ."</p>";
 										}               
 									}
 									?>
 								
 
 								<a href='#' title='More...' class='bloque show_info_room' rel='room_detail_id_<?php echo str_replace(";","_",$productId);?>'>
-									<span class='show_more_opt_room red-text'>Show room information &darr; </span>
-									<span class='show_less_opt_room red-text' style='display: none;'><?php echo "Hide room information";?> &uarr; </span>	
+									<span class='show_more_opt_room red-text'>Ver información de la habitación &darr; </span>
+									<span class='show_less_opt_room red-text' style='display: none;'><?php echo "Ocultar información de la habitación";?> &uarr; </span>	
 								</a>
 								<div class='room-type-description show_detailed_room_info' id='room_detail_id_<?php echo str_replace(";","_",$productId);?>'>	
 				                    <!--<a class="openAmenities">Down</a>-->
@@ -371,7 +370,7 @@
 								</div>
 								
 								<a href='#' title='More...' class='bloque show_room_info_display_btn' rel='room_ocupp_id_<?php echo str_replace(";","_",$productId);?>'>
-									<span class='show_more_opt_label red-text'>Show rate detail &darr; </span>
+									<span class='show_more_opt_label red-text'>Mostrar detalle de precio &darr; </span>
 									<span class='show_less_opt_label red-text' style='display: none;'><?php echo Yii::t("global","Ocultar detalle de precio");?> &uarr; </span>	
 								</a>
 
@@ -447,7 +446,7 @@
 										
 										
 										echo "<td class='td_precioH' >";
-										echo  "<div class='hotelRoomsTableFecha'>".date("l",$curTime)." ".date("j",$curTime)."</div>";
+										echo "<div class='hotelRoomsTableFecha' >". GenericFunctions::mostrar_dias($curTime)." ".date("j",$curTime)."</div>";
 										
 										if($thisDayAvailable == 1){	
 											if($DayPrice == 0){
@@ -464,12 +463,12 @@
 											}else{
 												if($HavePromo){
 													echo "<span class='bloque' style='text-decoration: line-through; font-size:0.8rem;'>";
-													echo Yii::app()->params['currency']." $".number_format((float) $_oP,0);
+													echo Yii::app()->params['Moneda']." $".number_format((float) $_oP,0);
 													echo "</span><br>";
 												}
 																						
 												echo "<span class='bloque' >";
-												echo Yii::app()->params['currency']." $".number_format($DayPrice,0);
+												echo Yii::app()->params['Moneda']." $".number_format($DayPrice,0);
 												echo "</span>";
 											}
 										}else{
@@ -494,7 +493,7 @@
 										
 										echo "<td class='td_precioH' >";
 										$curTime = mktime(0,0,0,date("m",strtotime($fecha_noche_ND)),date("d",strtotime($fecha_noche_ND)),date("Y",strtotime($fecha_noche_ND)));
-										echo  "<div class='hotelRoomsTableFecha'>".date("l",$curTime)." ".date("j",$curTime)."</div>";
+										echo  "<div class='hotelRoomsTableFecha'>".GenericFunctions::mostrar_dias($curTime)." ".date("j",$curTime)."</div>";
 										echo Yii::t("global","N/D");
 										echo "</td>";
 										
@@ -564,19 +563,19 @@
 										}
 																	
 										echo "<input name='pgR' type='hidden' value='" . Yii::app()->GenericFunctions->ProtectVar(serialize(Yii::app()->_Hotels->Config)) . "' />";
-										$Noches ="Night";
+										$Noches ="Noches";
 										if($_noches>1){
-											$Noches ="Nights";
+											$Noches ="Nochess";
 										}								
 										echo "<div class='elementPriceInfo'>Total ".$_noches." ".$Noches." </div>";								
-										echo "<div class='elementPrice room-type-price-total room-price-font'><span class='currency_code'>". Yii::app()->params['currency']."</span> $" . number_format($total,0) . " </div>";
-										echo "<div class='elementPriceInfo'>Taxes included</div>";								
+										echo "<div class='elementPrice room-type-price-total room-price-font'><span class='currency_code'>". Yii::app()->params['Moneda']."</span> $" . number_format($total,0) . " </div>";
+										echo "<div class='elementPriceInfo'>Impuestos incluidos</div>";								
 										echo "<div class='elementBook'>";
 										//Ezequiel Hoteles bajo solicitud 201405005	
 										if($Hotel->attributes()->hotelVenta==1){
 											echo '<input type="submit" class="book curved btnBlueSelectRoom  btn btn-large" rel="abrirChat" value="ON REQUEST >">';
 										}else{
-											echo "<input type='submit' value='BOOK' class='book btnBlueSelectRoom  btn btn-large' />";
+											echo "<input type='submit' value='RESERVE' class='book btnBlueSelectRoom  btn btn-large' />";
 										}
 																		
 										echo "</form>";
@@ -601,28 +600,28 @@
 												echo "<br>".Yii::t("global","Adults only");
 											}else{
 												if($hab_minimo==1){
-													echo "<br>".Yii::t("global","Minimum occupancy required (".$minHab." persons)");
+													echo "<br>".Yii::t("global","Ocupación mínima requerida (".$minHab." persons)");
 												}else if($hab_max_ad==1){
-													echo "<br>".Yii::t("global","Exceeds the maximum capacity of the room");
+													echo "<br>".Yii::t("global","Se excede de la capacidad máxima de la habitación");
 												}else if($hab_max_mn==1){
-													echo "<br>".Yii::t("global","Exceeds the maximum capacity of the room");
+													echo "<br>".Yii::t("global","Se excede de la capacidad máxima de la habitación");
 												}else if($hab_max_cap==1){
-													echo "<br>".Yii::t("global","Exceeds the maximum capacity of the room");
+													echo "<br>".Yii::t("global","Se excede de la capacidad máxima de la habitación");
 												}else if($hab_max_in==1){
 													echo "<br>Infants are not accepted of ".(int) $Hotel->Ages->attributes()->infante_min." to ". (int) $Hotel->Ages->attributes()->infante_max." ages";
 												}else if($hab_max_ad==0 && $hab_max_mn==0 && $hab_max_cap==0 && $hab_max_in==0){
-													echo "<br><span class='notAvailable'>Hotel not available in the selected dates, please change your dates or contact our call center: <br>414-755-0592</span>";
+													echo "<br><span class='notAvailable'>El hotel no está disponible en estas fechas, modifíquelas o llámenos al<br>01800-00-LOMAS</span>";
 												}																	
 											}
 										}else{
 											if($hab_minimo==1){
-												echo "<br>".Yii::t("global","Minimum occupancy required (".$minHab." persons)");
+												echo "<br>".Yii::t("global","Ocupación mínima requerida (".$minHab." persons)");
 											}else if($hab_max_ad==1){
-												echo "<br>".Yii::t("global","Exceeds the maximum capacity of the room");
+												echo "<br>".Yii::t("global","Se excede de la capacidad máxima de la habitación");
 											}else if($hab_max_cap==1){
-												echo "<br>".Yii::t("global","Exceeds the maximum capacity of the room");
+												echo "<br>".Yii::t("global","Se excede de la capacidad máxima de la habitación");
 											}else if($hab_max_ad==0 && $hab_max_mn==0 && $hab_max_cap==0){
-												echo "<br><span class='notAvailable'>Hotel not available in the selected dates, please change your dates or contact our call center: <br>414-755-0592</span>";
+												echo "<br><span class='notAvailable'>El hotel no está disponible en estas fechas, modifíquelas o llámenos al<br>01800-00-LOMAS</span>";
 											}
 										}														
 																
@@ -641,9 +640,9 @@
 								//Termina Div room_detailed_option_choose
 								if ($room>5){
 									echo "<div class='moreRooms'>";
-										echo "<a href='#' title='More...' class='bloque show_info_room_all' >
-											<span class='show_more_opt_room'><h6>Show ".$room_res." room categories &darr; </h6></span>
-											<span class='show_less_opt_room' style='display: none;'><h6>Hide ".$room_res." room categories &uarr; </h6></span>	
+										echo "<a href='#' title='Más...' class='bloque show_info_room_all' >
+											<span class='show_more_opt_room'><h6>Mostrar ".$room_res." habitaciones &darr; </h6></span>
+											<span class='show_less_opt_room' style='display: none;'><h6>Ocultar ".$room_res." habitaciones &uarr; </h6></span>	
 										</a>";
 									echo "</div>";
 								}
@@ -658,20 +657,20 @@
 							<?php
 								echo "</div>";
 								if($room==0){
-									echo "<br><strong>Hotel not available, contact our call center: 414-755-0592</strong>";
+									echo "<br><strong>Hotel no disponible, póngase en contacto con nuestro centro de llamadas : 01800-00-LOMAS</strong>";
 								}						
 							?>
 						</div>
 								<article class="detailInfo">
-								<div class="readyBook">HOTEL DESCRIPTION</div>
+								<div class="readyBook">DESCRIPCIÓN DEL HOTEL</div>
 								
 								<ul class="collapsible popout" data-collapsible="accordion">
 									<li>
-										<div class="collapsible-header red-text"><i class="material-icons">filter_drama</i>Description </div>
+										<div class="collapsible-header red-text"><i class="material-icons">filter_drama</i>Descripción </div>
 										<div class="collapsible-body"><p class="black-text"><?= nl2br(utf8_encode(base64_decode($Hotel->Descriptions->longDescription))); ?></p></div>
 									</li>
 									<li>
-										<div class="collapsible-header red-text"><i class="material-icons">filter_drama</i>Rooms </div>
+										<div class="collapsible-header red-text"><i class="material-icons">filter_drama</i>Habitaciones </div>
 										<div class="collapsible-body">
 											<div class="row">
 												<?php foreach($_HL as $_il){
@@ -681,7 +680,7 @@
 												}?>
 
 												<div class="col s12 m4">
-													<h6 class="roomsTitle center-align blue-grey-text">Arrival</h6>
+													<h6 class="roomsTitle center-align blue-grey-text">Llegada</h6>
 													<? if($Hotel['hotel_checkin']==""){?>
 														<h6 class="black-text center-align">15:00 hrs.</h6>
 													<?}else{?>
@@ -690,7 +689,7 @@
 												</div>
 
 												<div class="col s12 m4">
-													<h6 class="roomsTitle center-align blue-grey-text">Check Out</h6>
+													<h6 class="roomsTitle center-align blue-grey-text">Salida</h6>
 													<? if($Hotel['hotel_checkout']==""){?>
 														<h6 class="black-text center-align">12:00 hrs.</h6>
 													<?}else{?>
@@ -700,13 +699,13 @@
 
 												<div class="col s12 m4">
 													<h6 class="roomsTitle center-align blue-grey-text">Total</h6>
-													<h6 class="black-text center-align"><? echo $Room_habitacion . ' Rooms'; ?></h6>
+													<h6 class="black-text center-align"><? echo $Room_habitacion . ' Habitaciones'; ?></h6>
 												</div>		
 											</div>
 										</div>
 									</li>
 									<li>
-										<div class="collapsible-header red-text"><i class="material-icons">filter_drama</i>Category </div>
+										<div class="collapsible-header red-text"><i class="material-icons">filter_drama</i>Categoria </div>
 										<div class="collapsible-body">
 											<div class="row">
 												<?php $hotelCategories = explode("," , $Hotel->attributes()->category);?>
@@ -715,7 +714,7 @@
 													<div class="row">
 														<?php 
 														foreach ($hotelCategories as $hc):
-															 echo '<div class=" col s4 m3 l2 black-text center-align"><h6>' . utf8_decode($hc) . "</h6></div>";
+															 echo '<div class=" col s4 m3 l2 black-text center-align"><h6>' . $hc . "</h6></div>";
 														endforeach; 
 														?>
 													</div>
@@ -724,7 +723,7 @@
 										</div>
 									</li>																		
 									<li>
-										<div class="collapsible-header red-text"><i class="material-icons">filter_drama</i>Services </div>
+										<div class="collapsible-header red-text"><i class="material-icons">filter_drama</i>Servicios </div>
 										<div class="collapsible-body">
 											<div class="row">
 												<div class="col s12">
@@ -736,9 +735,9 @@
 																	echo '<li class="collection-item black-text center-align">';
 							             							$s =  Yii::app()->GenericFunctions->obtenerHotelCargos($_a->attributes()->amenityID,$Hotel->attributes()->hotelId);
 																	if($s["cargo"]){
-							                                            echo ucfirst(strtolower($_a->attributes()->name))," <span style='color:red;'> $</span>",($s["habitaciones_cuenta"]==0 ? "" : "(".$s["habitaciones_cuenta"].")");
+							                                            echo $_a->attributes()->name," <span style='color:red;'> $</span>",($s["habitaciones_cuenta"]==0 ? "" : "(".$s["habitaciones_cuenta"].")");
 							               					        }else{
-							               					        	echo ucfirst(strtolower($_a->attributes()->name))," ",($s["habitaciones_cuenta"]==0 ? "" : "(".$s["habitaciones_cuenta"].")");
+							               					        	echo $_a->attributes()->name," ",($s["habitaciones_cuenta"]==0 ? "" : "(".$s["habitaciones_cuenta"].")");
 							                                        }
 							                                        echo "</li>";                                   
 										                 		}
@@ -751,7 +750,7 @@
 										</div>
 									</li>									
 									<li>
-										<div class="collapsible-header red-text"><i class="material-icons">filter_drama</i>Facilities </div>
+										<div class="collapsible-header red-text"><i class="material-icons">filter_drama</i>Facilidades </div>
 										<div class="collapsible-body">
 											<div class="row">
 												<div class="col s12">
@@ -759,13 +758,14 @@
 														<?php
 							                            if(sizeof($Hotel->Amenities->Amenity) > 0){
 															foreach($Hotel->Amenities->Amenity as $_a){
+																
 																if($_a->attributes()->amenityTipo ==2){
 																	echo '<li class="collection-item black-text center-align">';
 							             							$s =  Yii::app()->GenericFunctions->obtenerHotelCargos($_a->attributes()->amenityID,$Hotel->attributes()->hotelId);
 																	if($s["cargo"]){
-							                                            echo ucfirst(strtolower($_a->attributes()->name))," <span style='color:red;'> $</span>",($s["habitaciones_cuenta"]==0 ? "" : "(".$s["habitaciones_cuenta"].")");
+							                                            echo $_a->attributes()->name," <span style='color:red;'> $</span>",($s["habitaciones_cuenta"]==0 ? "" : "(".$s["habitaciones_cuenta"].")");
 							               					        }else{
-							               					        	echo ucfirst(strtolower($_a->attributes()->name))," ",($s["habitaciones_cuenta"]==0 ? "" : "(".$s["habitaciones_cuenta"].")");
+							               					        	echo  $_a->attributes()->name," ",($s["habitaciones_cuenta"]==0 ? "" : "(".$s["habitaciones_cuenta"].")");
 							                                        }
 							                                        echo "</li>";                                   
 										                 		}
@@ -778,7 +778,7 @@
 										</div>
 									</li>
 									<li>
-										<div class="collapsible-header red-text"><i class="material-icons">filter_drama</i>Activities </div>
+										<div class="collapsible-header red-text"><i class="material-icons">filter_drama</i>Actividades </div>
 										<div class="collapsible-body">
 											<div class="row">
 												<div class="col s12">
@@ -791,11 +791,11 @@
 																if($_xl["descripcion"] != ""){
 																	if(!in_array($_xl["descripcion"], $activities)){
 																		if($_xl["con_costo"] == 1){
-																			echo '<li class="collection-item black-text center-align">'.ucfirst(strtolower($_xl["descripcion"]))." <span style='color:red;'> $</span></li>";	
+																			echo '<li class="collection-item black-text center-align">'.$_xl["descripcion"]." <span style='color:red;'> $</span></li>";	
 																		}else{
-																			echo '<li class="collection-item black-text center-align">'.ucfirst(strtolower($_xl["descripcion"]))."</li>";
+																			echo '<li class="collection-item black-text center-align">'.$_xl["descripcion"]."</li>";
 																		}
-																		$activities[]=ucfirst(strtolower($_xl["descripcion"]));
+																		$activities[]=$_xl["descripcion"];
 																	}
 																}
 															}
@@ -807,7 +807,7 @@
 										</div>
 									</li>									
 									<li>
-										<div class="collapsible-header red-text"><i class="material-icons">filter_drama</i>Restaurants & Bars </div>
+										<div class="collapsible-header red-text"><i class="material-icons">filter_drama</i>Restaurantes & Bars </div>
 										<div class="collapsible-body">
 											<div class="row">
 
@@ -857,8 +857,8 @@
 
 									</li>								
 									<li>
-										<div class="collapsible-header red-text"><i class="material-icons">filter_drama</i>Policies </div>
-										<div class="collapsible-body"><p class="black-text"><?= nl2br(base64_decode(utf8_encode($Hotel->Descriptions->legal))); ?></p></div>
+										<div class="collapsible-header red-text"><i class="material-icons">filter_drama</i>Politicas </div>
+										<div class="collapsible-body"><p class="black-text"><?= nl2br(utf8_encode(base64_decode($Hotel->Descriptions->legal))); ?></p></div>
 									</li>									
 								</ul>
 								</article>

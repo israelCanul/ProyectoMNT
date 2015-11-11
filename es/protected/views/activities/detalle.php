@@ -93,9 +93,9 @@
 
 						//Convierte a dolares la tarifa si la tarifa_tipo_cobro es MXN
 						if ($z["tarifa_tipo_tarifa"] == 2) {
-							$price = Yii::app()->Currency->convertMXN($_SESSION["config"]["currency"],$price);
+							$price = Yii::app()->Currency->convertMXN($_SESSION["config_es"]["currency"],$price);
 						}else{
-							$price = Yii::app()->Currency->convert($_SESSION["config"]["currency"],$price);
+							$price = Yii::app()->Currency->convert($_SESSION["config_es"]["currency"],$price);
 						}
 					?>
 					
@@ -124,20 +124,20 @@
 							echo "<div class='rate-description'>";		
 							//Convierte a dolares la tarifa si la tarifa_tipo_cobro es MXN
 							if ($z["tarifa_tipo_tarifa"] == 2) {
-								$tarifa_precio_adulto = Yii::app()->Currency->convertMXN($_SESSION["config"]["currency"],$z["tarifa_precio_adulto"]);
-								$tarifa_precio_menor = Yii::app()->Currency->convertMXN($_SESSION["config"]["currency"],$z["tarifa_precio_menor"]);
+								$tarifa_precio_adulto = Yii::app()->Currency->convertMXN($_SESSION["config_es"]["currency"],$z["tarifa_precio_adulto"]);
+								$tarifa_precio_menor = Yii::app()->Currency->convertMXN($_SESSION["config_es"]["currency"],$z["tarifa_precio_menor"]);
 							}else{
-								$tarifa_precio_adulto = Yii::app()->Currency->convert($_SESSION["config"]["currency"],$z["tarifa_precio_adulto"]);
-								$tarifa_precio_menor = Yii::app()->Currency->convert($_SESSION["config"]["currency"],$z["tarifa_precio_menor"]);
+								$tarifa_precio_adulto = Yii::app()->Currency->convert($_SESSION["config_es"]["currency"],$z["tarifa_precio_adulto"]);
+								$tarifa_precio_menor = Yii::app()->Currency->convert($_SESSION["config_es"]["currency"],$z["tarifa_precio_menor"]);
 							}
 
 							if ((int) $z["tarifa_precio_adulto"] != 0) {
-								echo "<div class='rate-amount'><span>" . Yii::t("global","Adultos") . ":</span> <span class = 'currency_code' > ". $_SESSION["config"]["currency"]."</span> <span>$" . number_format($tarifa_precio_adulto,0) . "</span></div>";
+								echo "<div class='rate-amount'><span>" . Yii::t("global","Adultos") . ":</span> <span class = 'currency_code' > ". $_SESSION["config_es"]["currency"]."</span> <span>$" . number_format($tarifa_precio_adulto,0) . "</span></div>";
 							}					
 			
 							if($_t["tour_id"] != 73){
 								if($z["tarifa_precio_menor"] != 0){
-									echo "<div class='rate-amount'><span>Children:</span> <span class = 'currency_code' > ". $_SESSION["config"]["currency"]."</span> <span>$" . number_format($tarifa_precio_menor,0) . "</span></div>";
+									echo "<div class='rate-amount'><span>Children:</span> <span class = 'currency_code' > ". $_SESSION["config_es"]["currency"]."</span> <span>$" . number_format($tarifa_precio_menor,0) . "</span></div>";
 								}
 							}
 							echo "</div>";
@@ -153,7 +153,7 @@
 							$openTk=1;
 						}
 						if ($z["opera_Dia"] == "true") {
-							echo '<div class="rate-book prod_total_list"> <label> <span class = "currency_code" > '.$_SESSION["config"]["currency"].'  </span> $ '.number_format($price,0).'</label> <input type="submit"  class="misc_select_btn_green" value="' . "BOOK" .'" /></div>';
+							echo '<div class="rate-book prod_total_list"> <label> <span class = "currency_code" > '.$_SESSION["config_es"]["currency"].'  </span> $ '.number_format($price,0).'</label> <input type="submit"  class="misc_select_btn_green" value="' . "BOOK" .'" /></div>';
 							if($x == 0){													
 								echo "<input type=\"hidden\" name=\"jnfe\" value=\"" . Yii::app()->GenericFunctions->ProtectVar($z["tarifa_id"] . "@@" . $_t["tour_id"] . "@@" . $z["servicio_id"] . "@@" . ((Yii::app()->language == "es") ? $_t["tour_nombre_es"] : $_t["tour_nombre"]) . "@@"  . $z["tarifa_nombre_" . Yii::app()->language] . "@@" . $_t["descripcion_corta"] . "@@" . $z["tarifa_precio_adulto_mxp"] . "@@" . $price . "@@" . $_t["tour_reservable"] . "@@" . $_fecha . "@@" . $_ad . "@@" . $_mn . "@@" . $_t["tour_destino"] . "@@//apstatic.lomastravel.com.mx/180/" . $_imgPrincipal . "@@" . $openTk . "@@" . number_format($tarifa_precio_adulto,0,",",""). "@@" . number_format($tarifa_precio_menor,0,",",""). "") . "\" checked=\"checked\" /></td>";	
 							}else{				
@@ -166,7 +166,7 @@
 														
 						/*echo "<div class='rate-book prod_total_list'>";
 						if ((int) $price != 0) {
-							echo "<strong>$ ". number_format($price,0) . " " . $_SESSION["config"]["currency"]  . "</strong>";
+							echo "<strong>$ ". number_format($price,0) . " " . $_SESSION["config_es"]["currency"]  . "</strong>";
 						}
 						echo "</div>";*/
 						echo "</div>";

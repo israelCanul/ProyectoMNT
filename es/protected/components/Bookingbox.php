@@ -5,7 +5,7 @@
 		public $cProd = "hotels";
 		public $selfReturn = false;
 		public $returnTo = "";
-		public $selectAdulto = 0;
+		public $selectAdulto = 0; 
 		
 		public function run(){
 			$cs = Yii::app()->getclientScript();
@@ -28,10 +28,10 @@
 
 			
 			if(!isset($_REQUEST['hotelCheckin'])){
-				$_REQUEST['hotelCheckin']=date('m/d/Y', strtotime('+2 day'));
+				$_REQUEST['hotelCheckin']=date('d/m/Y', strtotime('+2 day'));
 			}
 			if(!isset($_REQUEST['hotelCheckout'])){
-				$_REQUEST['hotelCheckout']=date('m/d/Y', strtotime('+5 day'));
+				$_REQUEST['hotelCheckout']=date('d/m/Y', strtotime('+5 day'));
 			}
 
 

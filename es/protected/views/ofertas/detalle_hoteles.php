@@ -107,7 +107,7 @@
 							</div>
 
 							<div class="elementPrice red-text">
-								<span class='currency_code '><?php echo $_SESSION["config"]["currency"]; ?></span> $ <?= number_format($total,0); ?>
+								<span class='currency_code '><?php echo $_SESSION["config_es"]["currency"]; ?></span> $ <?= number_format($total,0); ?>
 							</div>
 
 							<div class="elementPriceInfo">

@@ -12,7 +12,7 @@
 		
 		public function __construct(){
 
-			if ($_SESSION["config"]["currency"] != 'MXN') {
+			if ($_SESSION["config_es"]["currency"] != 'MXN') {
 				$this->Moneda = 'USD';
 				$this->WSDL = "http://extranet.lomastravel.com.mx/ServicesUS/";
 			}

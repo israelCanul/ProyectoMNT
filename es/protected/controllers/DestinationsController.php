@@ -125,7 +125,7 @@ class DestinationsController extends Controller
 		//$_banner = new Banner();
 
 		$code 	 = $_REQUEST['hotel'];		
-		$hotelId = $_hotel->getHotelIdByKeyword($code);		
+		$hotelId = $_hotel->getHotelIdPorClave($code);		
 		$_REQUEST["HotelId"] = $hotelId;
 		
 
@@ -175,6 +175,7 @@ class DestinationsController extends Controller
 		
 
 		Yii::app()->_Hotels->Config = $stopOk;
+		//print_r("<pre>"); 
 		//print_r(Yii::app()->_Hotels->Config);
 		$wsdl 	 = Yii::app()->_Hotels->WSDL;
 		//print_r(Yii::app()->_Hotels);				
@@ -265,8 +266,9 @@ class DestinationsController extends Controller
         $_HA 	= $_hotel->getActivitiesHotel();
 		$_PM 	= $_hotel->getDealsHotel(); 
 		//$_BannersLaterales = $_banner->getBannersLaterales();
-		
-		
+		/*print_r($Hoteles);
+		exit();*/
+		$this->layout='checkout';
 		$this->render('detalle',array(
 			"Hoteles" 	=> $Hoteles, 
 			"_RoomH" 	=> $_RoomH,
@@ -387,9 +389,9 @@ class DestinationsController extends Controller
 						}
 
 					$xml  = $_XML;
+
 					$iService = Yii::app()->WebServices->consumeServiceXML($wsdl,$xml);
-					/*print_r($iService);
-					exit();*/
+					
 					array_push($Hoteles, $iService->SearchHotelsByIDResult->HotelList);
 					Yii::app()->_Hotels->Config["Rooms"] = $Rooms;
 				}							
@@ -468,16 +470,16 @@ class DestinationsController extends Controller
 			else
 				$valor_agregado = "";
 
-			$_sql = "Select venta_id from venta where venta_session_id Like '" . $_SESSION["config"]["token"] . "' and venta_estt = '1' and venta_fecha Like '" . date("Y-m-d") . "%'";
+			$_sql = "Select venta_id from venta where venta_session_id Like '" . $_SESSION["config_es"]["token"] . "' and venta_estt = '1' and venta_fecha Like '" . date("Y-m-d") . "%'";
 			$_vValidator = Venta::model()->findAllBySql($_sql);
 
 			if( !($_vValidator[0]->venta_id == 0 || $_vValidator[0]->venta_id == "")){
 				$Venta = $_vValidator[0]->venta_id;
 			}else{
 				$_venta = new Venta;
-				$_SESSION["config"]["token"] = Yii::app()->WebServices->getSecureKey(150);
-				$_venta->venta_session_id = $_SESSION["config"]["token"];
-				$_venta->venta_moneda = $_SESSION["config"]["currency"];
+				$_SESSION["config_es"]["token"] = Yii::app()->WebServices->getSecureKey(150);
+				$_venta->venta_session_id = $_SESSION["config_es"]["token"];
+				$_venta->venta_moneda = $_SESSION["config_es"]["currency"];
 				$_venta->venta_site_id = ((Yii::app()->language == "es") ? 27 : 26);
 				$_venta->venta_user_id = 0;
 				$_venta->venta_estt = 1;
@@ -589,13 +591,13 @@ class DestinationsController extends Controller
 					$tPax = $p;
 					$ta = $_Tarifas;
 					if($tPax>=$ta["tarifa_cap_ini"] && $tPax <= $ta["tarifa_cap_fin"]){
-						$total = number_format(Yii::app()->Currency->convert($_SESSION["config"]["currency"],$ta["tarifa_precio"]),0,".","");
+						$total = number_format(Yii::app()->Currency->convert($_SESSION["config_es"]["currency"],$ta["tarifa_precio"]),0,".","");
 					}else{
 						if($ta["tarifa_tipo"]==1 || $ta["tarifa_tipo"]==2 || $ta["tarifa_tipo"]==3 || $ta["tarifa_tipo"]==4){
 							if($tPax > $ta["tarifa_cap_fin"]){
 								$ta["tarifa_precio"] = $ta["tarifa_precio"] + (($tPax - $ta["tarifa_cap_fin"]) * $ta["tarifa_pax_ext"]);
 							}
-							$total = number_format(Yii::app()->Currency->convert($_SESSION["config"]["currency"],$ta["tarifa_precio"]),0,".","");
+							$total = number_format(Yii::app()->Currency->convert($_SESSION["config_es"]["currency"],$ta["tarifa_precio"]),0,".","");
 						}else{
 
 						}
@@ -622,15 +624,15 @@ class DestinationsController extends Controller
 						'chekoutTransfer' => '1'
 					);
 					//print_r( explode("@@", Yii::app()->GenericFunctions->ShowVar($jnfe)));
-					$this->redirect('/traslados/agregar?'.http_build_query($params));
+					$this->redirect('/es/traslados/agregar?'.http_build_query($params));
 					exit();
 				}
 
 			}
-			$this->redirect(array("checkout/index"));
+			$this->redirect(array("/es/checkout/index"));
 			exit();
 		}else{
-			$this->redirect(array("hoteles/index"));
+			$this->redirect(array("/es/hoteles/index"));
 		}
 	}
 

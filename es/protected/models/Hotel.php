@@ -1,34 +1,56 @@
 <?php
 
-class Hotel{ 
+class Hotel{
 
-	public function getHotelByCode($code){
-		$hotel = Yii::app()->dbWeblt->createCommand()
-			->select("hotel_id")
-			->from('hoteles')	
-			->where("hotel_ciudad=".$code."")
+	public function getDestinosLocales(){
+		$locales = Yii::app()->db->createCommand()
+			->select("destino_extranet_codigo as id")
+			->from('destino')	
+			->where('destino_pais=1 and destino_extranet_codigo != ""')
 			->queryAll();
-		return $hotel;
+
+		$ids = array();
+		foreach($locales as $local){
+			array_push($ids, $local['id']);
+		}
+		$ids = implode(",", $ids);
+		return $ids;
 	}
 
-	public function getHotelIdByKeyword($keyword){
+	public function getTopDestinos(){
+		$locales 		= $this->getDestinosLocales();
+		$destinations 	= Yii::app()->dbWeblt->createCommand()
+			->select("DISTINCT(h.hotel_ciudad), c.ciudad_nombre, c.ciudad_clave")
+			->from("hoteles h, ciudades c")
+			->where("h.hotel_sitio IN (0,2) AND h.hotel_ciudad = c.ciudad_id AND h.hotel_status='1' AND c.active = '1' AND h.hotel_ciudad IN (".$locales.")")
+			->order("c.ciudad_nombre ASC")
+			->queryAll();
+
+		return $destinations;
+	}
+
+	public function getMasDestinos(){
+		$locales 		= $this->getDestinosLocales();
+		$destinations 	= Yii::app()->dbWeblt->createCommand()
+			->select("DISTINCT(h.hotel_ciudad), c.ciudad_nombre, c.ciudad_clave")
+			->from("hoteles h, ciudades c")
+			->where("h.hotel_sitio IN (0,2) AND h.hotel_ciudad = c.ciudad_id AND h.hotel_status='1' AND c.active = '1' AND h.hotel_ciudad NOT IN (".$locales.")")
+			->order("c.ciudad_nombre ASC")
+			->queryAll();
+
+		return $destinations;
+	}
+
+
+	public function getHotelIdPorClave($clave){
 		$hotel = Yii::app()->dbWeblt->createCommand()
 			->select("hotel_id")
 			->from('hoteles')	
-			->where("hotel_keyword='".$keyword."' and hotel_status = 1 ")
+			->where("hotel_keyword='".$clave."' and hotel_status = 1 ")
 			->queryScalar();
 		return $hotel;
 	}
 
-	public function getInterestHotels(){
-  		$interests = Yii::app()->dbWeblt->createCommand()
-			->select("*")
-			->from('hoteles_tipo')
-			->order('tipo_nombre_en','ASC')		
-			->queryAll();
-		return $interests;
-	}
-	
   	public function getDestinationHotels(){
   		$destinations = Yii::app()->db->createCommand()
 			->select("destino_id,nombre_en as nombre,destino_tourico_iata,destino_clave,destino_extranet_codigo")
@@ -36,6 +58,15 @@ class Hotel{
 			->where('destino_pais=1 and destino_extranet_codigo != ""')
 			->queryAll();
 		return $destinations;
+  	}
+
+  	public function getDestinoClavePorId($id){
+  		$code = Yii::app()->dbWeblt->createCommand()
+			->select("ciudad_clave")
+			->from('ciudades')
+			->where('ciudad_id = :id',  array(':id' => $id))
+			->queryScalar();
+		return $code;
   	}
 
   	public function esDestino($clave){
@@ -53,9 +84,9 @@ class Hotel{
 
 	public function esInteres($clave){
 		$interes = Yii::app()->dbWeblt->createCommand()
-			->select('tipo_nombre_en')
+			->select('tipo_nombre_es')
 			->from('hoteles_tipo')
-			->where('tipo_keyword_en = :clave',  array(':clave' => $clave))
+			->where('tipo_keyword_es = :clave',  array(':clave' => $clave))
 			->queryScalar();
 		if(empty($interes)){
 			return false;
@@ -64,7 +95,15 @@ class Hotel{
 		}
 	}
 
-  	
+  	public function getInterestHotels(){
+  		$interests = Yii::app()->dbWeblt->createCommand()
+			->select("*")
+			->from('hoteles_tipo')
+			->order('tipo_nombre_es','ASC')		
+			->queryAll();
+		return $interests;
+	}
+	
   	public function getDestinationByCode($code){
 		$destination = Yii::app()->db->createCommand()
 			->select("destino_id, nombre_en as nombre, destino_extranet_codigo")
@@ -75,7 +114,14 @@ class Hotel{
 	}
 
 
-
+	public function getCategoryHotel($category){
+		$categoryinfo = Yii::app()->dbWeblt->createCommand()
+			->select("tipo_id, tipo_nombre_es as nombre")
+			->from('hoteles_tipo')	
+			->where("tipo_keyword_es = :category",array(":category" => $category))
+			->queryRow();
+		return $categoryinfo;
+	}
 
 	public function getClaveByDestination($destination){
 		$destination = Yii::app()->db->createCommand()
@@ -99,7 +145,7 @@ class Hotel{
 		$descriptions = Yii::app()->dbWeblt->createCommand()
 			->selectDistinct("descripcion_larga,descripcion_habitacion")
 			->from('habitaciones_descripcion')									    
-			->where('descripcion_idioma=1')								    
+			->where('descripcion_idioma=2')								    
 			->queryAll();
 		return $descriptions;
 	}
@@ -120,6 +166,15 @@ class Hotel{
 		return $info;
 	}
 
+	public function getActivitiesHotel(){
+		$activities = Yii::app()->dbWeblt->createCommand()
+			->select("hotel,descripcion,con_costo")
+			->from('actividades')
+            ->join("hoteles_actividades","actividad = actividades_id")
+            ->queryAll();
+    	return $activities;
+	}
+	
 	public function getDealsHotel(){
 		$deals = Yii::app()->dbWeblt->createCommand()
 			->select("*")
@@ -128,20 +183,12 @@ class Hotel{
 		return $deals;
 	}
 
-	public function getActivitiesHotel(){
-		$activities = Yii::app()->dbWeblt->createCommand()
-			->select("hotel,descripcion_en as descripcion,con_costo")
-			->from('actividades')
-            ->join("hoteles_actividades","actividad = actividades_id")
-            ->queryAll();
-    	return $activities;
-	}
-	
+
 	public function getHotelsSearch(){
 		$hotels = Yii::app()->dbWeblt->createCommand()
 			->selectDistinct("hotel_id, hotel_nombre, hotel_keyword")
 			->from('hoteles')									    
-			->where("hotel_status = '1' and hotel_sitio IN(0,1)")								    
+			->where("hotel_status = '1' and hotel_sitio IN(0,2)")								    
 			->order("hotel_nombre ASC")								    
 			->queryAll();
 		return $hotels; 
@@ -157,21 +204,11 @@ class Hotel{
 		return $ciudades;
 	}
 
-	
-	public function getCategoryHotel($category){
-		$categoryinfo = Yii::app()->dbWeblt->createCommand()
-			->select("tipo_nombre_en")
-			->from('hoteles_tipo')	
-			->where("tipo_keyword_en = :category",array(":category" => $category))
-			->queryRow();
-		return $categoryinfo['tipo_nombre_en'];
-	}
-
 	public function getIdInteres($interes){
 		$interes = Yii::app()->dbWeblt->createCommand()
 			->select("tipo_id")
 			->from('hoteles_tipo')	
-			->where("tipo_keyword_en = :interes",array(":interes" => $interes))
+			->where("tipo_keyword_es = :interes",array(":interes" => $interes))
 			->queryRow();
 		return $interes;
 	}
@@ -202,6 +239,25 @@ class Hotel{
 			->where("ciudad_id = :id",array(":id" => $idCiudad))    
 			->queryRow();
 		return $ciudad['ciudad_clave'];
+	}
+
+	public function getCiudadClavePorHotelId($hotelId){
+		$ciudad = Yii::app()->dbWeblt->createCommand()
+			->select("ciudad_clave")
+			->from('ciudades')
+			->join('hoteles', 'hotel_ciudad = ciudad_id')
+			->where("hotel_id = :id",array(":id" => $hotelId))    
+			->queryScalar();
+		return $ciudad;
+	}
+
+	public function getHotelClavePorId($id){
+		$keyword = Yii::app()->dbWeblt->createCommand()
+			->select("hotel_keyword")
+			->from('hoteles')
+			->where("hotel_id = :id",array(":id" => $id))    
+			->queryScalar();
+		return $keyword;
 	}
 	
 }

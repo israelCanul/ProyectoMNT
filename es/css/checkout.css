@@ -1,5 +1,5 @@
 /* fuente de la pagina */
-@font-face {font-family: Junction;src: url("/font/Junction.otf") format("opentype");}
+@font-face {font-family: Junction;src: url("/es/font/Junction_02.ttf") format("opentype");}
 body{	font-family:Junction, serif;}
 .txtCant{font-family:serif;}
 /* declaracion del header*/

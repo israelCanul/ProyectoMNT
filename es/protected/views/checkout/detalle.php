@@ -385,7 +385,7 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
 										</td>
 										<td>
 											<div class="bloque gateway_selector_displayer" style="display: block;" id="debito1">
-												1 x $<?= number_format(($Total / 1),0) . " " . $_SESSION["config"]["currency"]; ?>
+												1 x $<?= number_format(($Total / 1),0) . " " . $_SESSION["config_es"]["currency"]; ?>
 											</div>											
 										</td>
 									</tr>
@@ -520,7 +520,7 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
 						<span class="card-title activator grey-text text-darken-4"><?= $_p->descripcion_producto ?></span>
 						<br><br>
 						<h6 class="shopping_Price">
-							<?=  $_SESSION["config"]["currency"] ." $". number_format($_p->descripcion_total,0); ?>
+							<?=  $_SESSION["config_es"]["currency"] ." $". number_format($_p->descripcion_total,0); ?>
 						</h6>
 						<i class='activator red-text' style='cursor:pointer'><i class="material-icons red-text">info_outline</i> More Info</i>						
 						<div class="shopping_moreInformation card-reveal">
@@ -587,7 +587,7 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
 				<table class="shopping_table" >
 					<tr>
 						<td>TOTAL </td>
-						<td><?= $_SESSION["config"]["currency"]. " $". number_format($Total,0); ?></td>
+						<td><?= $_SESSION["config_es"]["currency"]. " $". number_format($Total,0); ?></td>
 					</tr>
 				</table>
 			</div>

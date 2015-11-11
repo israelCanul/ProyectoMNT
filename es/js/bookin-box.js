@@ -269,7 +269,7 @@ $('.datepicker-hotel').pickadate({
     clear: 'Clear',
     close: 'Enter',
     // The format to show on the `input` element
-        format: 'mm/dd/yyyy',
+        format: 'dd/mm/yyyy',
           onOpen: function() {
             //console.log('Opened up!')
           },
@@ -318,8 +318,8 @@ $('.datepicker-hotel').pickadate({
     // When something is selected, update the “from” and “to” limits.
     from_picker.on('set', function(event) {
         if ( event.select ) {
-            to_picker.set('min', from_picker.get('select'),{ format:'mm/dd/yyyy'}),
-                to_picker.set('clear',{ format:'mm/dd/yyyy'}),
+            to_picker.set('min', from_picker.get('select'),{ format:'dd/mm/yyyy'}),
+                to_picker.set('clear',{ format:'dd/mm/yyyy'}),
                 from_picker.close(),
                 setTimeout(function(){
                    to_picker.open(); 
@@ -327,16 +327,16 @@ $('.datepicker-hotel').pickadate({
             console.log('entro');
         }
         else if ( 'clear' in event ) {
-            to_picker.set('min', false,{ format:'mm/dd/yyyy'})
+            to_picker.set('min', false,{ format:'dd/mm/yyyy'})
         }
     });
     to_picker.on('set', function(event) {
         if ( event.select ) {
-            from_picker.set('max', to_picker.get('select'),{ format:'mm/dd/yyyy'}),
+            from_picker.set('max', to_picker.get('select'),{ format:'dd/mm/yyyy'}),
             to_picker.close()
         }
         else if ( 'clear' in event ) {
-            from_picker.set('max', false,{ format:'mm/dd/yyyy'})
+            from_picker.set('max', false,{ format:'dd/mm/yyyy'})
         }
     });
 

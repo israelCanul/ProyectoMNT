@@ -9310,3 +9310,43 @@ Stack trace:
 #1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
 #2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
 #3 {main} REQUEST_URI=/offer/gran_marat%E3%B3n_de_mazatl%E3%A1n-1198.html?seg=L1198
+2015/11/09 09:34:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2015/11/10 09:27:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2015/11/11 12:02:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2015/11/11 13:11:27 [error] [php] simplexml_load_string() [<a href='function.simplexml-load-string'>function.simplexml-load-string</a>]: Entity: line 1: parser error : Start tag expected, '&lt;' not found (C:\AppServ\www\mexico-news-travel\protected\components\WebServices.php:81)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\actions\CInlineAction.php(50): DestinationsController->actionDetalle()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): DestinationsController->runAction()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): DestinationsController->runActionWithFilters()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): DestinationsController->run()
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#6 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#7 C:\AppServ\www\mexico-news-travel\index.php(23): CWebApplication->run()
+REQUEST_URI=/destination/el-dorado-casitas-royale.html
+2015/11/11 13:11:58 [error] [php] simplexml_load_string() [<a href='function.simplexml-load-string'>function.simplexml-load-string</a>]: Entity: line 1: parser error : Start tag expected, '&lt;' not found (C:\AppServ\www\mexico-news-travel\protected\components\WebServices.php:81)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\actions\CInlineAction.php(50): DestinationsController->actionDetalle()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): DestinationsController->runAction()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): DestinationsController->runActionWithFilters()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): DestinationsController->run()
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#6 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#7 C:\AppServ\www\mexico-news-travel\index.php(23): CWebApplication->run()
+REQUEST_URI=/destination/el-dorado-casitas-royale.html

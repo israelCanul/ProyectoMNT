@@ -38,6 +38,15 @@ class Hotel{
 		return $destinations;
   	}
 
+  	public function getDestinationCodeById($id){
+  		$code = Yii::app()->dbWeblt->createCommand()
+			->select("ciudad_clave")
+			->from('ciudades')
+			->where('ciudad_id = :id',  array(':id' => $id))
+			->queryScalar();
+		return $code;
+  	}
+
   	public function esDestino($clave){
 		$destino = Yii::app()->dbWeblt->createCommand()
 			->select('ciudad_nombre')
@@ -202,6 +211,16 @@ class Hotel{
 			->where("ciudad_id = :id",array(":id" => $idCiudad))    
 			->queryRow();
 		return $ciudad['ciudad_clave'];
+	}
+
+	public function getCiudadClavePorHotelId($hotelId){
+		$ciudad = Yii::app()->dbWeblt->createCommand()
+			->select("ciudad_clave")
+			->from('ciudades')
+			->join('hoteles', 'hotel_ciudad = ciudad_id')
+			->where("hotel_id = :id",array(":id" => $hotelId))    
+			->queryScalar();
+		return $ciudad;
 	}
 	
 }

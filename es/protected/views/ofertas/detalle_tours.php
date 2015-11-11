@@ -79,7 +79,7 @@ if($p["promocion_aplica_descripcion"] == 1){
 							<span><?= Yii::t("global","desde"); ?></span>
 						</div>
 						<div class="elementPrice red-text">
-							<span class="currency_code"><?php echo $_SESSION["config"]["currency"]; ?>$ <?=number_format((float)$r["tarifa"],0);?></span>
+							<span class="currency_code"><?php echo $_SESSION["config_es"]["currency"]; ?>$ <?=number_format((float)$r["tarifa"],0);?></span>
 						</div>
 						<div class="elementBook">
 							<a class="book btn btn-large curved misc_select_btn_green" href='<?= $this->createUrl("activities/detalle", array("dest" => $r["destino_clave"], "prod" => $r["tour_clave"], "seg" => $_REQUEST["seg"])); ?>' title="<?php str_replace("&","&amp;",utf8_decode($r["nombre"])); ?>">

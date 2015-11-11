@@ -633,7 +633,7 @@
 									<div class="elementPrice">
 										<p class="price"><?php echo number_format($totalAVG,0); ?></p>
 										<p class="priceTotal"><?php echo number_format((float)$total,0); ?></p>
-										<span class='currency_code'><?php echo $_SESSION["config"]["currency"]; ?></span> $ <?php echo number_format((float)$_h->attributes()->minAverPrice,0); ?>
+										<span class='currency_code'><?php echo $_SESSION["config_es"]["currency"]; ?></span> $ <?php echo number_format((float)$_h->attributes()->minAverPrice,0); ?>
 									</div>
 							
 									<div class="elementPriceInfo">

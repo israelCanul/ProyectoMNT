@@ -81,10 +81,10 @@
                         <!-- Book de la actividad -->
                         <div class="elementTax">
                             <?php $tarifaGeneral = ($p["precio_adulto"] > 0 )? $p["precio_adulto"]: $p['precio_menor'] ; ?>
-                            <div  style="display:none;" class="price"><?php echo number_format(Yii::app()->Currency->convert($_SESSION["config"]["currency"],$tarifaGeneral),0); ?></div>
+                            <div  style="display:none;" class="price"><?php echo number_format(Yii::app()->Currency->convert($_SESSION["config_es"]["currency"],$tarifaGeneral),0); ?></div>
                             <span class="bloque"><? echo Yii::t("global","desde"); ?></span>
                             <div class="elementPrice">
-                                <span class='currency_code'><?php echo $_SESSION["config"]["currency"]; ?></span> $ <?php echo number_format(Yii::app()->Currency->convert($_SESSION["config"]["currency"],$tarifaGeneral),0) ?>
+                                <span class='currency_code'><?php echo $_SESSION["config_es"]["currency"]; ?></span> $ <?php echo number_format(Yii::app()->Currency->convert($_SESSION["config_es"]["currency"],$tarifaGeneral),0) ?>
                             </div>
 
                             <div class="elementBook">

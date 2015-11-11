@@ -7,6 +7,7 @@ class CheckoutController extends Controller
     public $pageBase;
 
     public function actionIndex() {
+
         if (isset($_REQUEST["query"])) {
             $id = intval(Yii::app()->GenericFunctions->ShowVar($_REQUEST["query"]));
             $_prod = VentaDescripcion::model()->findByPk($id);
@@ -16,15 +17,14 @@ class CheckoutController extends Controller
             ));
         }
 
-
-        $_sql = "Select venta_id from venta where venta_session_id Like '" . $_SESSION["config"]["token"] . "' and venta_estt = '1' and venta_fecha Like '" . date("Y-m-d") . "%'";
+        $_sql = "Select venta_id from venta where venta_session_id Like '" . $_SESSION["config_es"]["token"] . "' and venta_estt = '1' and venta_fecha Like '" . date("Y-m-d") . "%'";
         $_vValidator = Venta::model()->findAllBySql($_sql);
 
         $destinationId = array(0);
 
         if ($_vValidator[0]->venta_id == 0 || $_vValidator[0]->venta_id == "") {
             $_venta = new Venta;
-            $_venta->venta_session_id = $_SESSION["config"]["token"];
+            $_venta->venta_session_id = $_SESSION["config_es"]["token"];
             $_venta->venta_moneda     = Yii::app()->params['Moneda'];
             $_venta->venta_site_id    = ((Yii::app()->language == "es") ? 2 : 1);
             $_venta->venta_user_id    = 0;
@@ -103,6 +103,7 @@ class CheckoutController extends Controller
             }
         }
 
+
         //Agregar servicio extra
         foreach ($_Productos as $_p) {
             if ($_p->descripcion_tipo_producto == 2 ) {
@@ -154,7 +155,8 @@ class CheckoutController extends Controller
         }        
         /*print_r($_Productos[0]->descripcion_id);
         exit()*/;
-
+/*print_r("expression");
+exit();*/
         /*se regreso seccion*/
         if (sizeof($Productos) > 0) {
             $this->pageTitle = ((Yii::app()->language == "es") ? "Lomas Travel: Traslados, Hoteles en Cancun, Vallarta, Los Cabos" : "Lomas Travel: Transfers & Hotels in Cancun, Vallarta, Cabos & Riviera ");
@@ -301,8 +303,8 @@ class CheckoutController extends Controller
                         $pgr = array(
                             'transfer_from_id' => 1,
                             'transfer_to_id'   => $hotel_id.":".$hotel['hotel_transportacion_zona'],
-                            'transfer_arrival' => date_format($transfer_FechaIN, 'm/d/Y'),
-                            'transfer_return'  => date_format($transfer_FechaOUT, 'm/d/Y'),
+                            'transfer_arrival' => date_format($transfer_FechaIN, 'd/m/Y'),
+                            'transfer_return'  => date_format($transfer_FechaOUT, 'd/m/Y'),
                             'transfer_adults'  => $adultos,
                             'transfer_child'   => $menores
                         );
@@ -313,7 +315,7 @@ class CheckoutController extends Controller
                             'pgR'            => Yii::app()->GenericFunctions->ProtectVar(serialize($pgr))
                         );
 
-                        $urlAddTransfer = '/traslados/agregar?'.http_build_query($params);
+                        $urlAddTransfer = '/es/traslados/agregar?'.http_build_query($params);
                         if ($total > 0) {
                             $infotTransfer[$ta['tipo_id']] = (object) array(
                                 'descripcion_hotel1' => 'Cancun Airport',
@@ -426,7 +428,7 @@ class CheckoutController extends Controller
             
         }
         if(isset($_REQUEST['TryAgain']) && $_REQUEST['TryAgain']==1){
-            $_sql = "Select venta_id from venta where venta_session_id Like '" . $_SESSION["config"]["token"] . "' and venta_estt != '2' and venta_fecha Like '" . date("Y-m-d") . "%'";
+            $_sql = "Select venta_id from venta where venta_session_id Like '" . $_SESSION["config_es"]["token"] . "' and venta_estt != '2' and venta_fecha Like '" . date("Y-m-d") . "%'";
             $_vValidator = Venta::model()->findAllBySql($_sql);
             $_venta = Venta::model()->findByPk($_vValidator[0]->venta_id);
             $_venta->venta_estt = 1;
@@ -435,13 +437,13 @@ class CheckoutController extends Controller
         }
 
         
-        $_sql = "Select venta_id from venta where venta_session_id Like '" . $_SESSION["config"]["token"] . "' and venta_estt = '1' and venta_fecha Like '" . date("Y-m-d") . "%'";
+        $_sql = "Select venta_id from venta where venta_session_id Like '" . $_SESSION["config_es"]["token"] . "' and venta_estt = '1' and venta_fecha Like '" . date("Y-m-d") . "%'";
         $_vValidator = Venta::model()->findAllBySql($_sql);
 
 
         if ($_vValidator[0]->venta_id == 0 || $_vValidator[0]->venta_id == "") {
             $_venta = new Venta;
-            $_venta->venta_session_id = $_SESSION["config"]["token"];
+            $_venta->venta_session_id = $_SESSION["config_es"]["token"];
             $_venta->venta_moneda = Yii::app()->params['Moneda'];
             $_venta->venta_site_id = ((Yii::app()->language == "es") ? 2 : 1);
             $_venta->venta_user_id = 0;
@@ -455,7 +457,7 @@ class CheckoutController extends Controller
             $Venta = $_vValidator[0]->venta_id;
         }
         /*print_r($Venta."<br>");
-        print_r($_SESSION["config"]["token"]);
+        print_r($_SESSION["config_es"]["token"]);
         exit();*/
         $_Productos = VentaDescripcion::model()->findAll("descripcion_venta = :venta", array(
             ":venta" => $Venta
@@ -519,7 +521,7 @@ class CheckoutController extends Controller
             $sucess = false;
             $auth = "";
             $authCode = "";
-            $_sql = "Select venta_id from venta where venta_session_id Like '" . $_SESSION["config"]["token"] . "' and venta_estt = '1' and venta_fecha Like '" . date("Y-m-d") . "%'";
+            $_sql = "Select venta_id from venta where venta_session_id Like '" . $_SESSION["config_es"]["token"] . "' and venta_estt = '1' and venta_fecha Like '" . date("Y-m-d") . "%'";
             $_vValidator = Venta::model()->findAllBySql($_sql);
 
             if ($_vValidator[0]->venta_id == 0 || $_vValidator[0]->venta_id == "") {
@@ -994,8 +996,8 @@ class CheckoutController extends Controller
                         "total" => $total
                     ));
 
-                    unset($_SESSION["config"]["token"]);
-                    $_SESSION["config"]["token"] = Yii::app()->WebServices->getSecureKey(150);
+                    unset($_SESSION["config_es"]["token"]);
+                    $_SESSION["config_es"]["token"] = Yii::app()->WebServices->getSecureKey(150);
                     print_r("llego hasta aqui ");
             }else{
                 print_r("no success");

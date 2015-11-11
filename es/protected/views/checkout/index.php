@@ -9,6 +9,7 @@
     <div class="col s12 m10 offset-m1"
 <?
 
+$hayHotel=false;
 $checkInDate='';
 $checkOutDate='';
 ?>
@@ -17,8 +18,8 @@ $checkOutDate='';
 
             <div class="bloque normal_right" style="float: left;">
                 <div class='checkout_header'>
-                    <label class="background_green">Your Reservation</label>
-                    <label class="background_white">Payment</label>
+                    <label class="background_green">Su Reservación</label>
+                    <label class="background_white">Pago</label>
                 </div>
                 <?	$totalReservation = 0;
                 foreach($Productos as $tipo){
@@ -29,7 +30,7 @@ $checkOutDate='';
                 ?>
                 <div class = "div_white">
                     <label class="total_tablet">
-                        Total  <?=  $_SESSION["config"]["currency"] ." $". number_format($totalReservation,0); ?>
+                        Total  <?=  $_SESSION["config_es"]["currency"] ." $". number_format($totalReservation,0); ?>
                     </label>
                 </div>
 
@@ -49,6 +50,7 @@ $checkOutDate='';
                             ?>
 
                             <?php if(sizeof($Productos[1]) > 0): // If productos ?>
+                                <? $hayHotel=true; ?>
                                 <!-- Si hay Hoteles -->
                                 <?php $temp_HotelTranfer=$Productos[1]; ?>
                                 <?php foreach($Productos[1] as $_p): ?>
@@ -57,7 +59,7 @@ $checkOutDate='';
                                     $checkInDate = date_create($_p->descripcion_fecha1);
                                     $checkOutDate = date_create($_p->descripcion_fecha2);
 
-                                    $temp_InDate = date("m/d/Y",strtotime($_p->descripcion_fecha1."+1 day"));
+                                    $temp_InDate = date("d/m/Y",strtotime($_p->descripcion_fecha1."+1 day"));
                                     $temp_InDate = date_create($temp_InDate);
                                     $temp_Adults = $_p['descripcion_adultos'];
                                     $temp_Childs = $_p['descripcion_menores'];
@@ -66,7 +68,7 @@ $checkOutDate='';
                                         <img src='<?= $_p->descripcion_thumb ?>' alt='Hotel' />
 
                                         <div class="div_misc_info_producto">
-                                            <label><?= $_p->descripcion_producto ?></label>
+                                            <h6><strong><?= $_p->descripcion_producto ?></strong></h6>
                                                     <span  >
                                                         <?= Yii::app()->GenericFunctions->makeStars($ProductoStarsLevel[$_p->descripcion_producto_id]); ?>
                                                     </span>
@@ -74,19 +76,19 @@ $checkOutDate='';
                                                 <tr>
 
 
-                                                    <td>Check-In:  <?= date_format($checkInDate, 'l M/d/Y'); ?></td>
+                                                    <td>Entrada:  <?= GenericFunctions::convierteFechaLetra(date_format($checkInDate, 'd/m/Y'),2,1); ?></td>
                                                     <td class="hide_mobil"><?= $_p->descripcion_tarifa ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Check-Out:  <?= date_format($checkOutDate, 'l M/d/Y'); ?></td>
+                                                    <td>Salida:  <?= GenericFunctions::convierteFechaLetra(date_format($checkOutDate, 'd/m/Y'),2,1); ?></td>
                                                     <td class="hide_mobil"><?= $_p->descripcion_add_val_1 ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><?= Yii::app()->GenericFunctions->difDays($_p->descripcion_fecha1,$_p->descripcion_fecha2) ?> Nights</td>
+                                                    <td><?= Yii::app()->GenericFunctions->difDays($_p->descripcion_fecha1,$_p->descripcion_fecha2) ?> Noches</td>
                                                     <td class="hide_mobil">
-                                                        <?= $_p->descripcion_adultos ?> Adult(s)
+                                                        <?= $_p->descripcion_adultos ?> Adulto(s)
                                                         <? if($_p->descripcion_menores > 0) : ?>
-                                                            <?= $_p->descripcion_menores ?> Children
+                                                            <?= $_p->descripcion_menores ?> Niños
                                                         <? endif ?>
                                                     </td>
                                                 </tr>
@@ -94,7 +96,7 @@ $checkOutDate='';
 
                                         </div>
                                                 <span class = "shopping_continue_tablet">
-                                                    <label> <?= $_SESSION["config"]["currency"]. " $". number_format($_p->descripcion_total,0); ?> </label>
+                                                    <label> <?= $_SESSION["config_es"]["currency"]. " $". number_format($_p->descripcion_total,0); ?> </label>
                                                     <?= CHtml::link(Yii::t("global","Pagar"),array("checkout/detalle"),array("title"=>"Pagar","class"=>"")); ?>
                                                 </span>
                                         <div class="clear"></div>
@@ -116,7 +118,7 @@ $checkOutDate='';
 
                                     $temp_Adults = $_p['descripcion_adultos'];
                                     $temp_Childs = $_p['descripcion_menores'];
-                                    $temp_InDate = date("m/d/Y",strtotime($_p->descripcion_fecha1."+1 day"));
+                                    $temp_InDate = date("d/m/Y",strtotime($_p->descripcion_fecha1."+1 day"));
                                     $temp_InDate = date_create($temp_InDate);
                                     ?>
                                     <div class='checkoutProducto borderGray'>
@@ -124,14 +126,14 @@ $checkOutDate='';
                                         <img src='<?= $_p->descripcion_thumb ?>' alt='Tour' />
 
                                         <div class='div_misc_info_producto' >
-                                            <label ><?= $_p->descripcion_producto ?></label>
+                                            <h6 ><?= $_p->descripcion_producto ?></h6>
 
                                             <table >
                                                 <tr>
                                                     <? if($_p->descripcion_id_cupon==1){?>
-                                                        <td>Valid to:  <?= date_format($dateTour, 'l M/d/Y') ?></td>
+                                                        <td>Válido para:  <?= GenericFunctions::convierteFechaLetra(date_format($dateTour, 'd/m/Y'),2,1); ?></td>
                                                     <?}else{?>
-                                                        <td>Date:  <?= date_format($dateTour, 'l M/d/Y') ?></td>
+                                                        <td>Fecha:  <?= GenericFunctions::convierteFechaLetra(date_format($dateTour, 'd/m/Y'),2,1); ?></td>
                                                     <?}?>
                                                 </tr>
                                                 <tr>
@@ -139,16 +141,16 @@ $checkOutDate='';
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <?= $_p->descripcion_adultos ?> Adult(s)
+                                                        <?= $_p->descripcion_adultos ?> Adulto(s)
                                                         <? if($_p->descripcion_menores > 0) : ?>
-                                                            <?= $_p->descripcion_menores ?> Children
+                                                            <?= $_p->descripcion_menores ?> Niños
                                                         <? endif ?>
                                                     </td>
                                                 </tr>
                                             </table>
                                         </div>
                                             <span class = "shopping_continue_tablet">
-                                                <label> <?= $_SESSION["config"]["currency"]. " $". number_format($_p->descripcion_total,0); ?> </label>
+                                                <label> <?= $_SESSION["config_es"]["currency"]. " $". number_format($_p->descripcion_total,0); ?> </label>
                                                 <?= CHtml::link(Yii::t("global","Pagar"),array("checkout/detalle"),array("title"=>"Pagar","class"=>"")); ?>
                                             </span>
                                         <div class="clear"></div>
@@ -169,31 +171,35 @@ $checkOutDate='';
                                     $temp_InDate = date("m/d/Y",strtotime($_p->descripcion_fecha1."+1 day"));
                                     $temp_InDate = date_create($temp_InDate);
                                     $transferId[$_p->descripcion_producto_id] =  Yii::app()->GenericFunctions->ProtectVar($_p->descripcion_id);
+                                    /*print_r("<pre>");
+                                    print_r($_p->descripcion_fecha2);
+                                    exit();*/
+
                                     ?>
                                     <div class='checkoutProducto borderGray'>
                                         <img src='<?= $_p->descripcion_thumb ?>' alt='Tour' />
 
                                         <div class='div_misc_info_producto'>
-                                            <label ><?= $_p->descripcion_tarifa  ?></label>
+                                            <h6 ><?= $_p->descripcion_tarifa  ?></h6>
                                                     <span  >
 
                                                     </span>
                                             <table >
                                                 <tr>
                                                     <td>
-                                                        Transfer: <?= $_p->descripcion_adultos ?> Adult(s)
+                                                        Transfer: <?= $_p->descripcion_adultos ?> Adulto(s)
                                                         <? if($_p->descripcion_menores > 0) : ?>
-                                                            , <?= $_p->descripcion_menores ?> Children
+                                                            , <?= $_p->descripcion_menores ?> Niños
                                                         <? endif ?>
                                                     </td>
                                                 <tr>
                                                     <td>
-                                                        Destination: <?= $_p->descripcion_hotel1 . " - " . $_p->descripcion_hotel2; ?>
+                                                        Destino: <?= $_p->descripcion_hotel1 . " - " . $_p->descripcion_hotel2; ?>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        Arriving:  <?= Yii::app()->GenericFunctions->convertPresentableDates($_p->descripcion_fecha1); ?>
+                                                        Llegada:  <?= Yii::app()->GenericFunctions->convertPresentableDates($_p->descripcion_fecha1); ?>
                                                         <? if($_p->tipo_translado == 1 || $_p->tipo_translado == 5){?>
                                                             - Returning: <?= Yii::app()->GenericFunctions->convertPresentableDates($_p->descripcion_fecha2); ?>
                                                         <? } ?>
@@ -203,7 +209,7 @@ $checkOutDate='';
                                             </table>
                                         </div>
                                                 <span class = "shopping_continue_tablet">
-                                                    <label> <?= $_SESSION["config"]["currency"]. " $". number_format($_p->descripcion_total,0); ?> </label>
+                                                    <label> <?= $_SESSION["config_es"]["currency"]. " $". number_format($_p->descripcion_total,0); ?> </label>
                                                     <?= CHtml::link(Yii::t("global","Pagar"),array("checkout/detalle"),array("title"=>"Pagar","class"=>"")); ?>
                                                 </span>
                                         <div class="clear"></div>
@@ -231,28 +237,28 @@ $checkOutDate='';
                                         <img src='<?= $_p->descripcion_thumb ?>' alt='Extra' />
 
                                         <div class='div_misc_info_producto' >
-                                            <label ><?= $_p->descripcion_producto ?></label>
+                                            <h6 ><?= $_p->descripcion_producto ?></h6>
 
                                             <table >
                                                 <tr>
-                                                    <td>Date :  <?=  Yii::app()->GenericFunctions->convertPresentableDates(date_format($dateTour, 'm/d/Y'),2,1); ?></td>
-                                                    <td>to     <?=  Yii::app()->GenericFunctions->convertPresentableDates(date_format($dateTour2, 'm/d/Y'),2,1); ?></td>
+                                                    <td>Date :  <?=  Yii::app()->GenericFunctions->convertPresentableDates(date_format($dateTour, 'd/m/Y'),2,1); ?></td>
+                                                    <td>to     <?=  Yii::app()->GenericFunctions->convertPresentableDates(date_format($dateTour2, 'd/m/Y'),2,1); ?></td>
                                                 </tr>
                                                 <tr>
                                                     <td><?= $_p->descripcion_tarifa ?></td>
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <?= $_p->descripcion_adultos ?> Adult(s)
+                                                        <?= $_p->descripcion_adultos ?> Adulto(s)
                                                         <? if($_p->descripcion_menores > 0) : ?>
-                                                            <?= $_p->descripcion_menores ?> Children
+                                                            <?= $_p->descripcion_menores ?> Niños
                                                         <? endif ?>
                                                     </td>
                                                 </tr>
                                             </table>
                                         </div>
                                             <span class = "shopping_continue_tablet">
-                                                <label> <?= $_SESSION["config"]["currency"]. " $". number_format($_p->descripcion_total,0); ?> </label>
+                                                <label> <?= $_SESSION["config_es"]["currency"]. " $". number_format($_p->descripcion_total,0); ?> </label>
                                                 <?= CHtml::link(Yii::t("global","Pagar"),array("checkout/detalle"),array("title"=>"Pagar","class"=>"")); ?>
                                             </span>
                                         <div class="clear"></div>
@@ -272,7 +278,7 @@ $checkOutDate='';
 
                 <? if( $temp_Hotel == true && (isset($infotTransfer[16]) || isset($infotTransfer[6]))) {?>
                     <? $transfer = $infotTransfer[2]; ?>
-                    <label class="title_product_recomendation borderGray ">Enhance your travel experience <span style = "font-size:1rem;"> ( <?=  $transfer->descripcion_hotel1 ?> - <?= $transfer->descripcion_hotel2 ?> )</span></label>
+                    <label class="title_product_recomendation borderGray ">Mejora tu experiencia de viaje <span style = "font-size:1rem;"> ( <?=  $transfer->descripcion_hotel1 ?> - <?= $transfer->descripcion_hotel2 ?> )</span></label>
 
                     <div class="bloque prod_detail_contained borderGray checkout_box_prod_transfer" >
                         <ul>
@@ -285,24 +291,24 @@ $checkOutDate='';
                                         <?= $transfer->descripcion_tarifa ?>
                                     </label>
 
-                                    <label class="linkInformation">More Information</label>
+                                    <label class="linkInformation">Mas información</label>
 
                                     <label class="price">
-                                        <?=  $_SESSION["config"]["currency"] ." $". number_format($transfer->descripcion_total,0); ?>
+                                        <?=  $_SESSION["config_es"]["currency"] ." $". number_format($transfer->descripcion_total,0); ?>
                                         <? if ($transfer->numVehiculo > 1) { ?>
-                                            <span style = "display:block"> ( <?= $transfer->numVehiculo ?> Vehicles ) </span> <span style = "display:block"> <?= $transfer->tarifa_cap_fin ?> Passengers per vehicle  </span>
+                                            <span style = "display:block"> ( <?= $transfer->numVehiculo ?> Vehículos ) </span> <span style = "display:block"> <?= $transfer->tarifa_cap_fin ?> Pasajeros por vehículo  </span>
 
                                         <? } ?>
                                     </label>
-                                    <a class="hide" href="<?= $transfer->urladd; ?>&chekoutTransfer=1 ">add</a>
+                                    <a class="hide" href="<?= $transfer->urladd; ?>&chekoutTransfer=1 ">Agregar</a>
                                     <div class="moreInformation hide">
                                         <img src="/img/traslados/<?= $transfer->tipo_imagen ?>.jpg" class="moreinformationImg">
                                         <p class="elementDesc">
                                             <?php echo $transfer->descripcion_tipo; ?>
                                             </br>
-                                            From <?= $transfer->tarifa_cap_ini ?> to <?= $transfer->tarifa_cap_fin ?> Passenger(s)
+                                            Desde <?= $transfer->tarifa_cap_ini ?> a <?= $transfer->tarifa_cap_fin ?> Pasajero(s)
                                             </br>
-                                            Rate per vehicle
+                                            Precio por vehículo
                                         </p>
                                     </div>
                                 </li>
@@ -316,24 +322,24 @@ $checkOutDate='';
                                         <?= $transfer->descripcion_tarifa ?>
                                     </label>
 
-                                    <label class="linkInformation">More Information</label>
+                                    <label class="linkInformation">Mas información</label>
 
                                     <label class="price">
-                                        <?=  $_SESSION["config"]["currency"] ." $". number_format($transfer->descripcion_total,0); ?>
+                                        <?=  $_SESSION["config_es"]["currency"] ." $". number_format($transfer->descripcion_total,0); ?>
                                         <? if ($transfer->numVehiculo > 1) { ?>
-                                            <span style = "display:block"> ( <?= $transfer->numVehiculo ?> Vehicles ) </span> <span style = "display:block"> <?= $transfer->tarifa_cap_fin ?> Passengers per vehicle  </span>
+                                            <span style = "display:block"> ( <?= $transfer->numVehiculo ?> Vehicles ) </span> <span style = "display:block"> <?= $transfer->tarifa_cap_fin ?> Pasajeros por vehículo  </span>
 
                                         <? } ?>
                                     </label>
-                                    <a class="hide" href="<?= $transfer->urladd; ?>&chekoutTransfer=1 ">add</a>
+                                    <a class="hide" href="<?= $transfer->urladd; ?>&chekoutTransfer=1 ">Agregar</a>
                                     <div class="moreInformation hide">
                                         <img src="/img/traslados/<?= $transfer->tipo_imagen ?>.jpg" class="moreinformationImg">
                                         <p class="elementDesc">
                                             <?php echo $transfer->descripcion_tipo; ?>
                                             </br>
-                                            From <?= $transfer->tarifa_cap_ini ?> to <?= $transfer->tarifa_cap_fin ?> Passenger(s)
+                                            Desde <?= $transfer->tarifa_cap_ini ?> a <?= $transfer->tarifa_cap_fin ?> Pasajero(s)
                                             </br>
-                                            Rate per vehicle
+                                            Precio por vehículo
                                         </p>
                                     </div>
                                 </li>
@@ -346,12 +352,12 @@ $checkOutDate='';
                                         <?= $transfer->descripcion_tarifa ?>
                                     </label>
 
-                                    <label class="linkInformation">More Information</label>
+                                    <label class="linkInformation">Mas información</label>
 
                                     <label class="price">
-                                        <?=  $_SESSION["config"]["currency"] ." $". number_format($transfer->descripcion_total,0); ?>
+                                        <?=  $_SESSION["config_es"]["currency"] ." $". number_format($transfer->descripcion_total,0); ?>
                                         <? if ($transfer->numVehiculo > 1) { ?>
-                                            <span style = "display:block"> ( <?= $transfer->numVehiculo ?> Vehicles ) </span> <span style = "display:block"> <?= $transfer->tarifa_cap_fin ?> Passengers per vehicle </span>
+                                            <span style = "display:block"> ( <?= $transfer->numVehiculo ?> Vehicles ) </span> <span style = "display:block"> <?= $transfer->tarifa_cap_fin ?> Pasajeros por vehículo </span>
 
                                         <? } ?>
                                     </label>
@@ -361,9 +367,9 @@ $checkOutDate='';
                                         <p class="elementDesc">
                                             <?php echo $transfer->descripcion_tipo; ?>
                                             </br>
-                                            From <?= $transfer->tarifa_cap_ini ?> to <?= $transfer->tarifa_cap_fin ?> Passenger(s)
+                                            Desde <?= $transfer->tarifa_cap_ini ?> a <?= $transfer->tarifa_cap_fin ?> Pasajero(s)
                                             </br>
-                                            Rate per vehicle
+                                            Precio por vehículo
                                         </p>
                                     </div>
                                 </li>
@@ -372,18 +378,18 @@ $checkOutDate='';
                             <? if (isset($infotTransfer[16])) { ?>
                                 <? $transfer = $infotTransfer[16]; ?>
                                 <li class="upscale">
-                                    The upscale comfort you deserve
+                                    El confort de alto nivel que se merece
                                 </li>
                                 <li>
                                     <label class="nameZona transfer_radio"  ><input type="radio" <?= (isset($transferId[16]))? "checked" : "" ; ?> name="transfer_radio"  value="lincon"  >
                                         <?= $transfer->descripcion_tarifa ?>
                                     </label>
-                                    <label class="linkInformation" >More Information</label>
+                                    <label class="linkInformation" >Mas información</label>
 
                                     <label class="price" >
-                                        <?=  $_SESSION["config"]["currency"] ." $". number_format($transfer->descripcion_total,0); ?>
+                                        <?=  $_SESSION["config_es"]["currency"] ." $". number_format($transfer->descripcion_total,0); ?>
                                         <? if ($transfer->numVehiculo > 1) { ?>
-                                            <span style = "display:block" > ( <?= $transfer->numVehiculo ?> Vehicles ) </span> <span style = "display:block"> <?= $transfer->tarifa_cap_fin ?> Passengers per vehicle  </span>
+                                            <span style = "display:block" > ( <?= $transfer->numVehiculo ?> Vehicles ) </span> <span style = "display:block"> <?= $transfer->tarifa_cap_fin ?> Pasajeros por vehículo  </span>
 
                                         <? } ?>
                                     </label>
@@ -395,9 +401,9 @@ $checkOutDate='';
                                         <p class="elementDesc">
                                             <?php echo $transfer->descripcion_tipo; ?>
                                             </br>
-                                            From <?= $transfer->tarifa_cap_ini ?> to <?= $transfer->tarifa_cap_fin ?> Passenger(s)
+                                            Desde <?= $transfer->tarifa_cap_ini ?> a <?= $transfer->tarifa_cap_fin ?> Pasajero(s)
                                             </br>
-                                            Rate per vehicle
+                                            Precio por vehículo
                                         </p>
                                     </div>
                                 </li>
@@ -409,7 +415,7 @@ $checkOutDate='';
                 <div class="bloque prod_detail_contained borderGray checkout_box_prod_transfer" >
                     <ul>
                         <li class="upscale">
-                            Assistance for your trip
+                            Asistencia en tu viaje
                         </li>
                         <? foreach($serv_ex as $_se){?>
                             <li>
@@ -417,10 +423,10 @@ $checkOutDate='';
                                 <label class="nameZona servicio_radio"  ><input type="radio" <? if(in_array($_se['folio'],$extras_folio)) echo "checked" ?> name="servicio_radio"  value="lincon"  >
                                     <?=$_se['nombre']?>
                                 </label>
-                                <label class="linkInformation" >More information</label>
+                                <label class="linkInformation" >Mas información</label>
 
                                 <label class="price" >
-                                    <?=  $_SESSION["config"]["currency"] ." $". number_format($_se['precio_total'],0); ?>
+                                    <?=  $_SESSION["config_es"]["currency"] ." $". number_format($_se['precio_total'],0); ?>
                                 </label>
 
                                 <a class="hide" href="<?= $_se['urladd']; ?>&chekoutExtra=1">add</a>
@@ -435,9 +441,12 @@ $checkOutDate='';
                         <? }?>
                     </ul>
                 </div>
-
-                <?php if(sizeof($_Htls->Hotel) > 0 && !empty($_Htls->Hotel)){?>
-                    <label class="title_product_recomendation borderGray ">Hotels</label>
+                <?  
+                /*print_r(sizeof($_Htls->Hotel));
+                exit();*/
+                ?>
+                <?php if(sizeof($_Htls->Hotel) > 0 && !empty($_Htls->Hotel) && !$hayHotel){ ?>
+                    <label class="title_product_recomendation borderGray ">Hoteles</label>
 
                     <div class="bloque prod_detail_contained borderGray" id="checkout_box_prod">
 
@@ -471,10 +480,10 @@ $checkOutDate='';
 
 
                                             $d = $p["tour_destino"];
-                                            $preciosaB = "$" . number_format(Yii::app()->Currency->convert($_SESSION["config"]["currency"],$p["tarifa_precio_adulto"],0)) . "<span class='currency_code'>" . $_SESSION["config"]["currency"] . "</span>";
+                                            $preciosaB = "$" . number_format(Yii::app()->Currency->convert($_SESSION["config_es"]["currency"],$p["tarifa_precio_adulto"],0)) . "<span class='currency_code'>" . $_SESSION["config_es"]["currency"] . "</span>";
 
                                             if($p["tarifa_precio_adulto"] == 0){
-                                                $preciosaB = "871". "<span class='currency_code'>" . $_SESSION["config"]["currency"] . "</span>";
+                                                $preciosaB = "871". "<span class='currency_code'>" . $_SESSION["config_es"]["currency"] . "</span>";
                                             }?>
                                             <div class="promotion_home_info_displayer checkout">
                                                 <a href="/destination/<?php echo $urlHotel; ?>.html" title="<?= $p->attributes()->name; ?>"  class="btn_img_tour_link curved">
@@ -495,13 +504,13 @@ $checkOutDate='';
                                                                 <a  href='/destination/<?php echo $urlHotel; ?>.html' title='<?php echo Yii::app()->GenericFunctions->makeSinAcento(utf8_decode($p->attributes()->name)); ?>'><span class="titleHotel"><?php echo Yii::app()->GenericFunctions->makeSinAcento($p->attributes()->name); ?><span></a>
                                                             <?}?>
                                                         </h1>
-                                                        <h6 >Location: <?= Yii::app()->GenericFunctions->makeSinAcento($p->Location->attributes()->city); ?></h6>
+                                                        <h6 >Locación: <?= Yii::app()->GenericFunctions->makeSinAcento($p->Location->attributes()->city); ?></h6>
                                                         <label>
                                                             <?php
                                                             echo substr($p->attributes()->desc,0,190);
                                                             ?>
                                                         </label>
-                                                        <a class = 'checkut_moredetails' href="/destination/<?php echo $urlHotel; ?>.html">More Details</a>
+                                                        <a class = 'checkut_moredetails' href="/destination/<?php echo $urlHotel; ?>.html">Mas detalles</a>
                                                     </div>
                                                     <div class="checkout_div_price row">
                                                         <span class="elementCategory"><?php echo Yii::app()->GenericFunctions->makeStars((float)$p->attributes()->starsLevel); ?></span>
@@ -515,7 +524,7 @@ $checkOutDate='';
                                                                 </article>
                                                             <?php }else{ ?>
                                                                 <article class="elementPrice">
-                                                                    <span class='currency_code'><?php echo $_SESSION["config"]["currency"]; ?></span> $ <?php echo number_format((float)$p->attributes()->minAverPrice,0); ?>
+                                                                    <span class='currency_code'><?php echo $_SESSION["config_es"]["currency"]; ?></span> $ <?php echo number_format((float)$p->attributes()->minAverPrice,0); ?>
                                                                 </article>
                                                             <?php } ?>
                                                         </label>
@@ -588,7 +597,7 @@ $checkOutDate='';
 
                 <?} if(sizeof($_Tours) > 0){?>
 
-                    <label class="title_product_recomendation borderGray ">Activities</label>
+                    <label class="title_product_recomendation borderGray ">Actividades</label>
 
                     <div class="bloque prod_detail_contained borderGray" id="checkout_box_prod">
 
@@ -625,24 +634,26 @@ $checkOutDate='';
                                             //Agrego el Hotel a un Array para el Filtro
                                             $_Tr = array("Price"=>$p["tarifa_precio_adulto"],"Id"=>$p["tour_id"],"Name"=>((Yii::app()->language == "en") ? $p["tour_nombre"] : $p["tour_nombre_es"] ),"Category"=>"");
 
-                                            if( Yii::app()->language != "es"){
+                                            if( Yii::app()->language == "es"){
                                                 $tParams = array(
-                                                    "tours/detalle",
+                                                    "activities/detalle",
                                                     "pax_adulto"       => $temp_Adults,
                                                     "pax_menor"        => $temp_Childs,
-                                                    "fecha"            => date_format($temp_InDate,'m/d/Y'),
+                                                    "fecha"            => date_format($temp_InDate,'d/m/Y'),
                                                     "dest"             => $p["destino_clave"],
-                                                    "prod"             => $p["tour_clave"],
+                                                    "prod"             => $p["tour_clave_es"],
                                                     "isTourCategory"   => 0,
-                                                    "tour_destination" =>  $p["tour_nombre"],
+                                                    "tour_destination" =>  $p["tour_nombre_es"],
                                                     "TourId"           => $p['tour_id'],
                                                     "ProveedorId"      => 0,
-                                                    "tour_fecha"       => date_format($temp_InDate,'m/d/Y'),
+                                                    "tour_fecha"       => date_format($temp_InDate,'d/m/Y'),
                                                     "tour_adults"      => $temp_Adults,
                                                     "tour_childs"      => $temp_Childs
                                                 );
-                                                $link_tourDetalle = $this->createUrl("tours/detalle",$tParams);
-
+                                               /* print_r("<pre>");
+                                                print_r($tParams);*/
+                                                //exit();
+                                                $link_tourDetalle = $this->createUrl("activities/detalle",$tParams);
                                             }
 
                                             if($howManyProds == 10){
@@ -659,10 +670,10 @@ $checkOutDate='';
 
                                             if($i_real != $p["tour_id"]){
                                                 $d = $p["tour_destino"];
-                                                $preciosaB = "$" . number_format(Yii::app()->Currency->convert($_SESSION["config"]["currency"],$p["tarifa_precio_adulto"],0)) . "<span class='currency_code'>" . $_SESSION["config"]["currency"] . "</span>";
+                                                $preciosaB = "$" . number_format(Yii::app()->Currency->convert($_SESSION["config_es"]["currency"],$p["tarifa_precio_adulto"],0)) . "<span class='currency_code'>" . $_SESSION["config_es"]["currency"] . "</span>";
 
                                                 if($p["tarifa_precio_adulto"] == 0){
-                                                    $preciosaB = "871". "<span class='currency_code'>" . $_SESSION["config"]["currency"] . "</span>";
+                                                    $preciosaB = "871". "<span class='currency_code'>" . $_SESSION["config_es"]["currency"] . "</span>";
                                                 }?>
                                                 <div class="promotion_home_info_displayer checkout">
                                                     <a href="<?= $link_tourDetalle ?>" title="<?= $p["tour_nombre_es"]; ?>" style="overflow:hidden" class="btn_img_tour_link curved">
@@ -670,7 +681,7 @@ $checkOutDate='';
                                                     </a>
                                                     <h1 class="misc_book_info_txt_home nametur_mobile ">
                                                         <?php
-                                                        echo CHtml::link($p["tour_nombre"],$tParams,array("title"=>$p["tour_nombre"]));
+                                                        echo CHtml::link($p["tour_nombre_es"],$tParams,array("title"=>$p["tour_nombre_es"]));
                                                         ?>
                                                     </h1>
 
@@ -678,13 +689,13 @@ $checkOutDate='';
                                                         <div class="fontsize_mobil">
                                                             <h1 class="misc_book_info_txt_home nametour_desk">
                                                                 <?php
-                                                                echo CHtml::link(Yii::app()->GenericFunctions->makeSinAcento($p["tour_nombre"]),$tParams,array("title"=>$p["tour_nombre"]));
+                                                                echo CHtml::link($p["tour_nombre_es"],$tParams,array("title"=>$p["tour_nombre_es"]));
                                                                 ?>
                                                             </h1>
-                                                            <label >Location: <?= utf8_decode($p["nombre_" . Yii::app()->language]); ?></label>
-                                                            <label>Duration: <?= utf8_decode($p['tour_duracion'])  ?></label>
+                                                            <label >Locación: <?= $p["nombre_" . Yii::app()->language]; ?></label><br>
+                                                            <label>Duración: <?= $p['tour_duracion']  ?></label><br>
                                                             <label>
-                                                                Categories:
+                                                                Categorias:
                                                                 <?php
                                                                 $_cats = "";
                                                                 if(isset($Categorias[$p["tour_id"]])){
@@ -695,17 +706,17 @@ $checkOutDate='';
                                                                 echo substr($_cats,1);
                                                                 ?>
                                                             </label>
-                                                            <a class = 'checkut_moredetails' href="<?= $link_tourDetalle ?>">More Details</a>
+                                                            <a class = 'checkut_moredetails' href="<?= $link_tourDetalle ?>">Mas detalles</a>
                                                         </div>
                                                         <div class="checkout_div_price row">
                                                             <label class="description_price col s12 m8 offset-m2">
-                                                                From :
+                                                                Desde :
                                                             </label>
                                                             <label class="label_price col s12 m8 offset-m2">
                                                                 <? $tarifaGeneral = ($p["tarifa_precio_adulto"] > 0 )? $p["tarifa_precio_adulto"]: $p['tarifa_precio_menor'] ; ?>
-                                                                <?= $_SESSION["config"]["currency"] . " $" . number_format(Yii::app()->Currency->convert($_SESSION["config"]["currency"],$tarifaGeneral),0) ?>
+                                                                <?= $_SESSION["config_es"]["currency"] . " $" . number_format(Yii::app()->Currency->convert($_SESSION["config_es"]["currency"],$tarifaGeneral),0) ?>
                                                             </label>
-                                                            <button class="fontsize_mobil a_selectDatesTour btn waves-effect waves-light" style="padding:1px" href="<?= $link_tourDetalle ?>">Select Dates
+                                                            <button class="fontsize_mobil a_selectDatesTour btn waves-effect waves-light" style="padding:1px" href="<?= $link_tourDetalle ?>">Seleccionar Fechas
                                                                 <i class="material-icons right">today</i>
                                                             </button>
                                                         </div>
@@ -720,19 +731,19 @@ $checkOutDate='';
                                                             <input type="hidden" name="ProveedorId"		 value="0"/>
                                                             <input type="hidden" name="checkout_tour" 	value="ajax"/>
                                                             <div class="input-field col s4">
-                                                                <label>Dates: </label>
+                                                                <label>Fecha: </label>
                                                                 <input type="text" name="fecha" value="<?= date_format($temp_InDate, 'm/d/Y')?>" class="datepicker-tour-checkout"/>
                                                             </div>
                                                             <div class="input-field col s4">
 
                                                                 <input type="number" name="tour_adults" value="<?= $temp_Adults ?>" id="adult-<?= $p["tour_clave"] ?>" class="" />
-                                                                <label for="adult-<?= $p["tour_clave"] ?>">Adults: </label>
+                                                                <label for="adult-<?= $p["tour_clave"] ?>">Adultos: </label>
                                                             </div>
                                                             <div class="input-field col s4">
-                                                                <label>Children: </label>
+                                                                <label>Niños: </label>
                                                                 <input type= "number" name="tour_childs" value="<?= $temp_Childs ?>" class=""/>
                                                             </div>
-                                                            <button type="submit" class="btn waves-effect waves-light submitForm" />Update Rates
+                                                            <button type="submit" class="btn waves-effect waves-light submitForm" />Actualizar Tarifas
                                                             <i class="material-icons">payment</i>
                                                             </button>
                                                         </form>
@@ -783,7 +794,7 @@ $checkOutDate='';
             <div class="bloque normal_left shopping_cart" style="float: right;">
                 <div class="prod_service_resume bloque curved">
                     <label class="enc_prod_resume bloque" >
-                        Your Reservation
+                        Su Reservación
                     </label>
                     <? $Total = 0; ?>
                     <? foreach($_Productos as $_p){ ?>
@@ -792,7 +803,7 @@ $checkOutDate='';
                             <div class="col s12">
                                 <div class="col s12"><label class="completo"> <?= $_p->descripcion_producto ?> </label></div>
                                 <div class="col s12">
-                                <label class="completo shopping_moreDetails">More Details</label>
+                                <label class="completo shopping_moreDetails">Mas detalles</label>
                                 <div><? echo CHtml::link("x|Remove",array("checkout/index","query"=> Yii::app()->GenericFunctions->ProtectVar($_p->descripcion_id)),array("title"=>"Remove Item","class"=>"remove_link_checkout_prod"))," "; ?></div>
 
                                     <div class="shopping_moreInformation hide completo">
@@ -827,7 +838,7 @@ $checkOutDate='';
                                         <br />
 
                                         <? if($_p->descripcion_tipo_producto == 1){ ?>
-                                            <strong><?= Yii::t("global","Habitaci�n") ?>:</strong>
+                                            <strong><?= Yii::t("global","Habitación") ?>:</strong>
                                         <? }else{ ?>
                                             <strong><?= Yii::t("global","Servicio") ?>:</strong>
                                         <? } ?>
@@ -851,7 +862,7 @@ $checkOutDate='';
                                 </div>
                                 <div class="col s12" >
                                     <label class="shopping_Price " style="float:right;">
-                                    <?=  $_SESSION["config"]["currency"] ." $". number_format($_p->descripcion_total,0); ?>
+                                    <?=  $_SESSION["config_es"]["currency"] ." $". number_format($_p->descripcion_total,0); ?>
                                     </label>
                                 </div>
                             </div>
@@ -861,7 +872,7 @@ $checkOutDate='';
                         <table class="shopping_table" >
                             <tr>
                                 <td>TOTAL </td>
-                                <td><?= $_SESSION["config"]["currency"]. " $". number_format($Total,0); ?></td>
+                                <td><?= $_SESSION["config_es"]["currency"]. " $". number_format($Total,0); ?></td>
                             </tr>
                         </table>
                     </div>
@@ -899,9 +910,9 @@ $checkOutDate='';
                     labelMonthSelect: 'Select a Month',
                     labelYearSelect: 'Select a year',
                     // Months and weekdays
-                    //monthsFull: [ 'Janeiro', 'Fevereiro', 'Mar�o', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro' ],
+                    //monthsFull: [ 'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro' ],
                     //monthsShort: [ 'Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez' ],
-                    //weekdaysFull: [ 'Domingo', 'Segunda', 'Ter�a', 'Quarta', 'Quinta', 'Sexta', 'S�bado' ],
+                    //weekdaysFull: [ 'Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado' ],
                     //weekdaysShort: [ 'Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab' ],
                     // Materialize modified
                     //weekdaysLetter: [ 'D', 'S', 'T', 'Q', 'Q', 'S', 'S' ],
@@ -947,9 +958,9 @@ $checkOutDate='';
                     labelMonthSelect: 'Select a Month',
                     labelYearSelect: 'Select a year',
                     // Months and weekdays
-                    //monthsFull: [ 'Janeiro', 'Fevereiro', 'Mar�o', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro' ],
+                    //monthsFull: [ 'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro' ],
                     //monthsShort: [ 'Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez' ],
-                    //weekdaysFull: [ 'Domingo', 'Segunda', 'Ter�a', 'Quarta', 'Quinta', 'Sexta', 'S�bado' ],
+                    //weekdaysFull: [ 'Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado' ],
                     //weekdaysShort: [ 'Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab' ],
                     // Materialize modified
                     //weekdaysLetter: [ 'D', 'S', 'T', 'Q', 'Q', 'S', 'S' ],
@@ -994,7 +1005,7 @@ $checkOutDate='';
                     console.log(element);
                 });
 
-                var dateFormat="mm/dd/yy";
+                var dateFormat="dd/mm/yy";
                 $( ".dateInput").datepicker({
                     defaultDate: 1,
                     changeMonth: false,

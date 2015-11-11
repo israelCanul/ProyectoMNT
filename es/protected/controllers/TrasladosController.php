@@ -11,16 +11,16 @@ class TrasladosController extends CController
 
         if (isset($_REQUEST["jnfe"])) {
 
-            $_sql = "Select venta_id from venta where venta_session_id Like '" . $_SESSION["config"]["token"] . "' and venta_estt = '1' and venta_fecha Like '" . date("Y-m-d") . "%'";
+            $_sql = "Select venta_id from venta where venta_session_id Like '" . $_SESSION["config_es"]["token"] . "' and venta_estt = '1' and venta_fecha Like '" . date("Y-m-d") . "%'";
             $_vValidator = Venta::model()->findAllBySql($_sql);
 
             if (!($_vValidator[0]->venta_id == 0 || $_vValidator[0]->venta_id == "")) {
                 $Venta = $_vValidator[0]->venta_id;
             } else {
                 $_venta = new Venta;
-                $_SESSION["config"]["token"] = Yii::app()->WebServices->getSecureKey(150);
-                $_venta->venta_session_id = $_SESSION["config"]["token"];
-                $_venta->venta_moneda = $_SESSION["config"]["currency"];
+                $_SESSION["config_es"]["token"] = Yii::app()->WebServices->getSecureKey(150);
+                $_venta->venta_session_id = $_SESSION["config_es"]["token"];
+                $_venta->venta_moneda = $_SESSION["config_es"]["currency"];
                 $_venta->venta_site_id = ((Yii::app()->language == "es") ? 27 : 26);
                 $_venta->venta_user_id = 0;
                 $_venta->venta_estt = 1;
@@ -71,7 +71,7 @@ class TrasladosController extends CController
                 $optArrival = explode(":", $Parameters["transfer_to_id"]);
 
                 $t = new VentaDescripcion;
-                $t->descripcion_producto = Yii::t("global", "Transfer");
+                $t->descripcion_producto = Yii::t("global", "Translado");
                 $t->descripcion_destino = $_Destino["zona_destino"];
                 $t->descripcion_tarifa = $data[6];
                 $t->descripcion_thumb = $data[7];
@@ -105,7 +105,7 @@ class TrasladosController extends CController
             }else{
                 $parametros=unserialize(GenericFunctions::ShowVar($_REQUEST["jnfe"]));
                 $t = new VentaDescripcion;
-                $t->descripcion_producto = Yii::t("global", "Transfer");
+                $t->descripcion_producto = Yii::t("global", "Translado");
                 $t->descripcion_destino = $parametros['descripcion_servicio_id'];
                 $t->descripcion_tarifa = $parametros['descripcion_tarifa'];
                 $t->descripcion_thumb = $parametros['tdescripcion_thumb'];
@@ -143,7 +143,7 @@ class TrasladosController extends CController
             ));
 
         } else {
-            $this->redirect("/");
+            $this->redirect("/es");
         }
     }
 
