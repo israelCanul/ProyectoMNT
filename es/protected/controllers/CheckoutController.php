@@ -361,10 +361,10 @@ exit();*/
 
                     $jnfe = Yii::app()->GenericFunctions->ProtectVar($ta["folio"] . "@@" . $ta["nombre"] . "@@" . $ta['precio_total'] . "@@/img/servicio_extra/" . $ta["foto"] . "@@" . "Assistance for your trip" . "@@" . 1);
 
-                    $pgr = array( 'extra_folio' => $ta['folio'], 'extra_adults'  => $adultosExtra, 'extra_child'   => $menoresExtra,'extra_arrival' => date_format($FechaIniExtra, 'm/d/Y'), 'extra_return'  => date_format($FechaFinExtra, 'm/d/Y'));
+                    $pgr = array( 'extra_folio' => $ta['folio'], 'extra_adults'  => $adultosExtra, 'extra_child'   => $menoresExtra,'extra_arrival' => date_format($FechaIniExtra, 'd/m/Y'), 'extra_return'  => date_format($FechaFinExtra, 'd/m/Y'));
 
                     $params  = array('jnfe'=> $jnfe,	'pgR'=> Yii::app()->GenericFunctions->ProtectVar(serialize($pgr) ) );
-                    $urlAddTransfer = '/extras/agregar?'.http_build_query($params);
+                    $urlAddTransfer = '/es/extras/agregar?'.http_build_query($params);
                     $ta['urladd']=$urlAddTransfer;
 
                     $serv_ex[$a]=$ta;
@@ -376,7 +376,7 @@ exit();*/
 
             $cs = Yii::app()->getclientScript();
             //$cs->registerCssFile('http://cdn.lomastravel.com/css/page/checkout.min.css');
-            $cs->registerCssFile('/css/page/checkout/checkout.css');
+            $cs->registerCssFile(Yii::app()->params["baseUrl"].'/css/page/checkout/checkout.css');
             $cs->registerScriptFile(Yii::app()->params["baseUrl"].'/js/page/checkout/checkout.js?a='. Yii::app()->params['assets'],CClientScript::POS_END);
 
             /*print_r($Productos);

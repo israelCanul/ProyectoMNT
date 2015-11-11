@@ -560,3 +560,9 @@ Stack trace:
 #1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
 #2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
 #3 {main} REQUEST_URI=/es//js/page/activities-detail.min.js?a=1
+2015/11/11 17:25:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "es/checkout/index"' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('es/checkout/ind...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es/es/checkout/index.html

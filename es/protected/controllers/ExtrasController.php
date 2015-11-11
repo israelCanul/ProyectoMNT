@@ -51,7 +51,8 @@ class ExtrasController extends CController
             foreach ($Parameters as $k => $v) {
                 $Parameters[$k] = urldecode($v);
             }
-
+        /*print_r($Parameters);
+        exit();*/
             $t = new VentaDescripcion;
 
             $t->descripcion_destino = 0;
@@ -80,7 +81,7 @@ class ExtrasController extends CController
 
 
             $this->redirect(array(
-                "/es/checkout/index"
+                "/checkout/index"
             ));
         } else {
             $this->redirect("/traslados/index");

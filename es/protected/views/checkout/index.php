@@ -201,7 +201,7 @@ $checkOutDate='';
                                                     <td>
                                                         Llegada:  <?= Yii::app()->GenericFunctions->convertPresentableDates($_p->descripcion_fecha1); ?>
                                                         <? if($_p->tipo_translado == 1 || $_p->tipo_translado == 5){?>
-                                                            - Returning: <?= Yii::app()->GenericFunctions->convertPresentableDates($_p->descripcion_fecha2); ?>
+                                                            - Regreso: <?= Yii::app()->GenericFunctions->convertPresentableDates($_p->descripcion_fecha2); ?>
                                                         <? } ?>
                                                     </td>
                                                 </tr>
@@ -241,8 +241,8 @@ $checkOutDate='';
 
                                             <table >
                                                 <tr>
-                                                    <td>Date :  <?=  Yii::app()->GenericFunctions->convertPresentableDates(date_format($dateTour, 'd/m/Y'),2,1); ?></td>
-                                                    <td>to     <?=  Yii::app()->GenericFunctions->convertPresentableDates(date_format($dateTour2, 'd/m/Y'),2,1); ?></td>
+                                                    <td>Date :  <?=  Yii::app()->GenericFunctions->convierteFechaLetra(date_format($dateTour, 'd/m/Y'),2,1); ?></td>
+                                                    <td>to     <?=  Yii::app()->GenericFunctions->convierteFechaLetra(date_format($dateTour2, 'd/m/Y'),2,1); ?></td>
                                                 </tr>
                                                 <tr>
                                                     <td><?= $_p->descripcion_tarifa ?></td>
@@ -804,13 +804,13 @@ $checkOutDate='';
                                 <div class="col s12"><label class="completo"> <?= $_p->descripcion_producto ?> </label></div>
                                 <div class="col s12">
                                 <label class="completo shopping_moreDetails">Mas detalles</label>
-                                <div><? echo CHtml::link("x|Remove",array("checkout/index","query"=> Yii::app()->GenericFunctions->ProtectVar($_p->descripcion_id)),array("title"=>"Remove Item","class"=>"remove_link_checkout_prod"))," "; ?></div>
+                                <div><? echo CHtml::link("x|Remover",array("checkout/index","query"=> Yii::app()->GenericFunctions->ProtectVar($_p->descripcion_id)),array("title"=>"Remove Item","class"=>"remove_link_checkout_prod"))," "; ?></div>
 
                                     <div class="shopping_moreInformation hide completo">
                                         <? if($_p->descripcion_id_cupon==1){?>
-                                            Valid to:
+                                            Valido para:
                                         <?}else{?>
-                                            Date:
+                                            Fecha:
                                         <?}?>
                                         <?= Yii::app()->GenericFunctions->convertPresentableDates($_p->descripcion_fecha1); ?>
 
