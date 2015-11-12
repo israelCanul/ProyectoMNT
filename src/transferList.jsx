@@ -57,7 +57,7 @@ var Transfer=React.createClass({
                         <span>$ {this.props.params.currency}</span><span className="price"> {this.props.data.rate.total}</span>
                     </div>
                     <div className="col s12 m8 offset-m2 l6 offset-l4">
-                        <a href={"/transfers/agregar.html?jnfe="+this.props.data.rate.jnfe} className="col s12 btn red">
+                        <a href={"/traslados/agregar.html?jnfe="+this.props.data.rate.jnfe} className="col s12 btn red">
                             BOOK
                         </a>
                     </div>

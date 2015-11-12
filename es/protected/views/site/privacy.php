@@ -1,82 +1,94 @@
 <div class="row">
 <div class="col s12 m10 offset-m1">
-   <section id="text" class="section">
-        <h1>Privacy and Data Protection Policy</h1>
-				
-        <p>In compliance with the Mexican Federal Law for the Protection of Personal Data in Possession of Private Entities (hereafter the law), which has the purpose of protecting the personal data held by private parties (hereafter the information), <strong>Lomas Travel</strong> provides the following Privacy and Data Protection Policy.</p>
+     <section id="text" class="section">
+
+        <h1>Aviso de Privacidad</h1>
         
-         <article class="point">
-           <h3>Data Protection Liability</h3>
-            <p>Viajes Turquesa del Caribe Mexicano, S.A. de C.V. (hereby Lomas Travel), located in Calle Acceso L28, Manzana 16, Lote 37, Supermanzana 309, Cancun, Quintana Roo, Mexico, Post Code 77560. The Web Development department, located in the address specified before, is liable for the protection of the information and may be contacted via e-mail to the following address: webmaster@lomas-travel.com</p>
-         </article>
-
-
-         <article class="point">
-            <h3>Personal Information Requested</h3>
-            <p><strong>Lomas Travel</strong> will request personal information to all the people who uses our online and call centre services, in order to process, follow-up, and confirm the service(s) hired to <strong>Lomas Travel</strong>. The information requested to the users includes, but is not limited to: full name, e-mail address, mailing address, postcode, birth date, credit card information and additional information important for the reserve and payment processes. The credit card information is used for the payment process during the hiring of the services provided by <strong>Lomas Travel</strong>.</p>
-            <p>When filling the registry forms or giving the information to any representative of the call centre, the information owner gives full and voluntary consent to providing the personal information that may be requested on the understanding that in case that the user decides not to share any of the mandatory information he/she will not be able to access to the services which necessitate such information; nonetheless, will be able to access to all the other services provided inasmuch as the personal information is not required. <strong>Lomas Travel</strong> in no case and in no circumstance will keep, store, nor file any sensitive personal information such as race, ethnicity, health status, genetic information, religion a/o belief, membership to any union or such group, political conviction, sexual preference, etc.</p>
-            <p>Furthermore, <strong>Lomas Travel</strong> compiles the e-mail addresses of all the people that use these services to communicate with <strong>Lomas Travel</strong>, the additional information regarding the web pages visited through their visit to the website, and any other information given voluntarily, including but not limited to polls, surveys, or online registry forms.</p>
-            <p>The information provided as a user of the website may be utilized to: contact the user provided that any change on the reservation is made, detect a/o prevent possible cyber-crimes, to make customer surveys and polls, manage the customer-company relations and improve the website’s content. In the case that the user provides <strong>Lomas Travel</strong> with its phone number, it will be used as a means of communication in the event that any change in the reservations is made, or in any concern related to the payment process.</p>
-            <p>The personal information that, as a user of our website a/o Call centre, is provided to <strong>Lomas Travel</strong> must be true and in accordance with your present situation.</p>
+        <p>En cumplimiento a lo establecido en la Ley Federal de Datos Personales en Posesi&oacute;n de los Particulares (la Ley), que tiene por objetivo la protecci&oacute;n de la informaci&oacute;n personal proporcionada por cada persona (la Informaci&oacute;n), Lomas Travel  pone a su disposici&oacute;n el siguiente Aviso de Privacidad.</p>
+          
+        <article class="point">
+          <h3>Responsable de la protecci&oacute;n de sus datos personales</h3>
+        
+          <p>Viajes Turquesa del Caribe Mexicano, S.A. de C.V. (en adelante, "Lomas Travel"), con domicilio en Calle de Acceso L28, Manzana 16 Lote 37 Supermanzana 309, Canc&uacute;n, Quintana Roo, M&eacute;xico, C&oacute;digo Postal 77560.</p>
+          <p>El responsable de la protecci&oacute;n de los datos es el Departamento de Desarrollo Web, ubicado en el mismo domicilio, se puede contactar en el correo electr&oacute;nico webmaster@lomas-travel.com </p>
         </article>
 
-         <article class="point">
-            <h3>Data Transfer</h2>
-            <p>Personal data may be transferred a/o shared with trading partners, associates, suppliers; financial, banking and credit institutions, subsidiary partners, subsidiaries, affiliates, branches and third parties such as hotels, leasing companies, airlines, tour suppliers, etc., <strong>to verify and confirm the reservation(s) made</strong>.</p>
+        <article class="point">
+          <h3>Informaci&oacute;n Personal Solicitada</h3>
+
+          <p><strong>Lomas Travel </strong> solicitar&aacute; informaci&oacute;n de car&aacute;cter personal a los usuarios de los servicios a trav&eacute;s de nuestro Sitio de Internet y Centro de Atenci&oacute;n Telef&oacute;nica, con fines de procesamiento, seguimiento, actualizaci&oacute;n, modificaci&oacute;n, cancelaci&oacute;n y confirmaci&oacute;n de los servicios reservados con <strong>Lomas Travel </strong>. El tipo de informaci&oacute;n que se solicita a los usuarios de los servicios incluye, de manera enunciativa m&aacute;s no limitativa, nombre, direcci&oacute;n de correo electr&oacute;nico (e-mail), domicilio, c&oacute;digo postal, fecha de nacimiento, informaci&oacute;n de tarjetas de cr&eacute;dito e informaci&oacute;n adicional importante para el proceso de reservaci&oacute;n y pago. La informaci&oacute;n relativa a su tarjeta de cr&eacute;dito es utilizada exclusivamente en el momento en que se contratan los servicios ofrecidos por <strong>Lomas Travel </strong>.</p>
+          <p>El titular de los datos, al registrarse, otorga su pleno consentimiento libre y voluntariamente de proporcionar los datos personales que le sean requeridos, en el entendido de que si el usuario decidiera no proporcionar la Informaci&oacute;n obligatoria, este no podr&aacute; acceder a los servicios que efectivamente requieran dicha informaci&oacute;n, sin embargo, podr&aacute; tener acceso a todos los dem&aacute;s servicios que no requieran dicha Informaci&oacute;n. <strong>Lomas Travel </strong> en ning&uacute;n caso y bajo ninguna circunstancia almacena informaci&oacute;n de datos personales sensibles como origen racial o &eacute;tnico, estado de salud actual, informaci&oacute;n gen&eacute;tica, creencias religiosas, filos&oacute;ficas y morales, afiliaci&oacute;n sindical, opiniones pol&iacute;ticas, preferencia sexual, etc.</p>
+          <p>Asimismo, recolectamos las direcciones de correo electr&oacute;nico de aquellos que se comunican con nosotros por esta v&iacute;a, informaci&oacute;n agregada de cuales p&aacute;ginas son las que visita, as&iacute; como cualquier otra informaci&oacute;n que de manera voluntaria nos proporciona, tal como la relativa a encuestas o registros en el sitio. </p>
+          <p>La informaci&oacute;n que proporcione como usuario de nuestro Sitio de Internet podr&aacute; ser usada para: contactarlo en caso de cambios de reservaciones, detectar o prevenir la comisi&oacute;n de posibles delitos cibern&eacute;ticos, para llevar a cabo encuestas a clientes, administrar la relaci&oacute;n con el cliente y mejorar el contenido del Sitio. En caso de que nos proporcione su n&uacute;mero telef&oacute;nico, s&oacute;lo le contactaremos por este medio en caso de cambio de reservaciones o cuestiones relacionadas con el proceso de pago. </p>
+          <p>La informaci&oacute;n personal que como usuario de nuestro Sitio de Internet y Centro de Atenci&oacute;n Telef&oacute;nica nos proporcione deber&aacute; ser veraz y corresponder a su situaci&oacute;n actual.</p>
+        </article>
+          
+        <article class="point">
+            <h3>Transferencia de Datos</h3>
+            <p>Los datos personales podr&aacute;n ser transferidos y/o compartidos a socios comerciales, afiliados, proveedores, instituciones financieras, bancarias y crediticias, sociedades subsidiarias, filiales, afiliadas y terceros, como lo son hoteles, arrendadoras, aerol&iacute;neas, proveedores de tours, etc&eacute;tera, <strong>para confirmar reservaciones.</strong></p>
+        </article>
+        
+        <article class="point">
+            <h3>Privacidad y Protecci&oacute;n de Datos Personales</h3>
+            
+            <p><strong>Lomas Travel </strong> utiliza la tecnolog&iacute;a m&aacute;s avanzada y los procesos para la protecci&oacute;n de la informaci&oacute;n proporcionada por los titulares de los datos personales. Esta tecnolog&iacute;a cifra, codifica y previene la intercepci&oacute;n de la informaci&oacute;n suministrada v&iacute;a Internet y del Centro de Atenci&oacute;n Telef&oacute;nica, incluyendo tarjetas de cr&eacute;dito y direcciones de correo electr&oacute;nico. <strong>Lomas Travel </strong> establece y mantiene medidas de seguridad administrativas, t&eacute;cnicas y f&iacute;sicas que permiten proteger los datos personales contra: da&ntilde;os, p&eacute;rdida o alteraci&oacute;n, destrucci&oacute;n, o el uso, acceso o tratamiento no autorizado. El Sitio de Internet de <strong>Lomas Travel </strong> contiene hiperv&iacute;nculos o hipertextos, anuncios, botones y herramientas de b&uacute;squeda en la red mundial que al ser oprimidos o utilizados por los usuarios conectan a otros portales o sitios de Internet propiedad de terceros. No obstante que en algunos casos estos sitios o portales de terceros se encuentran enmarcados con la barra de navegaci&oacute;n o el estilo y apariencia de Lomas Travel, la Informaci&oacute;n que el Usuario llegase a proporcionar a trav&eacute;s de esos sitios o portales no se encuentra cubierta o contemplada por este aviso de privacidad y su manejo o utilizaci&oacute;n no es responsabilidad de Lomas Travel, por lo que recomendamos a nuestros usuarios verificar los avisos y pol&iacute;ticas de privacidad desplegadas o aplicables a estos sitios o portales de terceros.</p>
+            <p>Nos comprometemos a no transferir su informaci&oacute;n personal a terceros sin su consentimiento, salvo las excepciones previstas en el art&iacute;culo 37 de la Ley Federal de Protecci&oacute;n de Datos Personales en Posesi&oacute;n de los Particulares, as&iacute; como a realizar esta transferencia en los t&eacute;rminos que fija la ley.</p>
+            <p>Art&iacute;culo 37 de la Ley Federal de Protecci&oacute;n de Datos Personales en Posesi&oacute;n de los Particulares.</p>
+            <p>Art&iacute;culo 37.- Las transferencias nacionales o internacionales de datos podr&aacute;n llevarse a cabo sin el consentimiento del titular cuando se d&eacute; alguno de los siguientes supuestos:</p>
+            
+            <ol class="lower-roman">
+              <li><span>Cuando la transferencia est&eacute; prevista en una Ley o Tratado en los que M&eacute;xico sea parte;</span></li>
+              <li><span>Cuando la transferencia sea necesaria para la prevenci&oacute;n o el diagn&oacute;stico m&eacute;dico, la prestaci&oacute;n de asistencia sanitaria, tratamiento m&eacute;dico o la gesti&oacute;n de servicios sanitarios;</span></li>
+              <li><span>Cuando la transferencia sea efectuada a sociedades controladoras, subsidiarias o afiliadas bajo el control com&uacute;n del responsable, o a una sociedad matriz o a cualquier sociedad del mismo grupo del responsable que opere bajo los mismos procesos y pol&iacute;ticas internas;</span></li>
+              <li><span>Cuando la transferencia sea necesaria por virtud de un contrato celebrado o por celebrar en inter&eacute;s del titular, por el responsable y un tercero;</span></li>
+              <li><span>Cuando la transferencia sea necesaria o legalmente exigida para la salvaguarda de un inter&eacute;s p&uacute;blico, o para la procuraci&oacute;n o administraci&oacute;n de justicia;</span></li>
+              <li><span>Cuando la transferencia sea precisa para el reconocimiento, ejercicio o defensa de un derecho en un proceso judicial, y</span></li>
+              <li><span>Cuando la transferencia sea precisa para el mantenimiento o cumplimiento de una relaci&oacute;n jur&iacute;dica entre el responsable y el titular.</span></li>
+            </ol>
         </article>
 
-         <article class="point">
-           <h3>Privacy and Personal Data Protection</h3>
-            <p><strong>Lomas Travel</strong> uses the most advanced technologies and processes for the protection of the information provided by the data owners. These technologies encode, cipher, and prevent the interception of any data a/o information provided through the internet and the Call centre, including but not limited to: credit card numbers and e-mail addresses. <strong>Lomas Travel</strong> establishes and maintains administrative, technical and physical measures in order to safekeeping the personal data from: damages, loss or alteration, destruction or misuse, breach or unauthorized processing. The <strong>Lomas Travel</strong> website encloses links a/o hypertexts, advertising, buttons, and search engine tools onto the internet that, when clicked on or accessed by, connect the user to other portals and websites owned by third parties. Notwithstanding the fact that in some particular cases some of this third-party-owned websites are framed with the navigation bar a/o the design and appearance of the <strong>Lomas Travel</strong> website; the information that the user provides to any and all of these websites and portals is not covered under these Privacy Policy and <strong>Lomas Travel</strong> will not be liable for the navigation and use of personal information within third-party-owned portals and websites, consequently, it is recommended that the user of the website to verify the notices and privacy policies established or applicable to these third-party-owned portals and websites.</p>
-            <p><strong>Lomas Travel</strong> commits to keep the user’s information undisclosed, and will not transfer the information to any third party unless prior consent from the user; with the exceptions mentioned on the Federal Law on Protection of Personal Data Held by Private Parties in its art.37; as well as executing the Data Transfer in observance of the present Law.</p>
-            <p><strong>Article 37</strong>. Domestic or international transfers of data may be carried out without the consent of the data owner in the following cases:</p>
-              <ol class="lower-roman">
-                <li><span>Where the transfer is pursuant to a Law or Treaty to which Mexico is party;</span></li>
-                <li><span>Where the transfer is necessary for medical diagnosis or prevention, health care delivery, medical treatment or health services management;</span></li>
-                <li><span>Where the transfer is made to holding companies, subsidiaries or affiliates under common control of the data controller, or to a parent company or any company of the same group as the data controller, operating under the same internal processes and policies; </span></li>
-                <li><span>Where the transfer is necessary by virtue of a contract executed or to be executed in the interest of the data owner between the data controller and a third party;</span></li>
-                <li><span>Where the transfer is necessary or legally required to safeguard public interest or for the administration of justice; </span></li>
-                <li><span>Where the transfer is necessary for the recognition, exercise or defence of a right in a judicial proceeding, and </span></li>
-                <li><span>Where the transfer is necessary to maintain or fulfil a legal relationship between the data controller and the data owner. </span></li>
-              </ol>
-       </article>
+        <article class="point">
+            <h3>Responsabilidad sobre el Uso de la Informaci&oacute;n de Tarjetas Bancarias</h3>
 
-         <article class="point">
-            <h3>Use of Bank Card Information Liability</h3>
-            <p><strong>Lomas Travel</strong> commits to respect the privacy of all its customers; in the particular aspect of this website, to all those who make online booking or book through the Call centre. In order to ensure the safety of all the online operations a SSL certificate is used in its website, which protects the data sent from the user’s web navigator onto <strong>Lomas Travel’s</strong> website and databases. All the information regarding the transactions made with a credit card is ciphered in order to keep the user’s information safe and private.</p>
-            <p>All the personal information provided by <strong>Lomas Travel</strong> customers, such as full name, mailing address, e-mail address, telephone number, and any other data concerning the booking through the online payment process, will be considered as strictly confidential, unless specified otherwise by the customers.</p>
+            <p><strong>Lomas Travel </strong> tiene un compromiso de respeto a la privacidad de todos sus clientes, y en el caso de esta p&aacute;gina, a todos los que realizan sus reservaciones en l&iacute;nea o a trav&eacute;s del Centro de Atenci&oacute;n Telef&oacute;nica. Para garantizar la seguridad de sus operaciones en l&iacute;nea, utilizamos en nuestro Sitio de Internet un certificado SSL, el cual protege los datos que env&iacute;a desde su navegador a nuestro sitio y base de datos. Toda la informaci&oacute;n relativa a las transacciones que realice con su tarjeta de cr&eacute;dito es encriptada, salvaguardando as&iacute; su privacidad y seguridad. </p>
+            <p>Toda la informaci&oacute;n que proporcionan los clientes a <strong>Lomas Travel </strong>, tal como nombre, direcci&oacute;n, correo electr&oacute;nico, tel&eacute;fono y otros datos acerca de la reserva durante los procesos de pago en l&iacute;nea, ser&aacute; tratada de manera estrictamente confidencial, salvo que se especifique lo contrario a los clientes.</p>
         </article>
-
-         <article class="point">
-            <h3>Use of "cookies" and IP Addresses</h3>
-            <p><strong>Lomas Travel’</strong> data server will send data to the user’s web navigator, same that will be stored in the user’s computer hard drive. This allows <strong>Lomas Travel</strong> to identify the devises employed by the user to access to its portal. This whole process is known as the use of “cookies” or IP address. Through the use of these “cookies” or IP address <strong>Lomas Travel</strong> is able to offer a personalized service to all its users for it permits, among other things, to issue publicity and promotion campaigns, measure the online audience and traffic in its websites visited by the user. Through these “cookies” or IP address the user is not personally identified, what is identified is the public  
-              IP address from where the user is accessing the website.</p>
-        </article>
-
-         <article class="point">
-            <h3>Access to Personal Data</h3>
-            <p>Users of the services provided by <strong>Lomas Travel</strong> have the right to access the personal data they provide to its database, and to the detail of the treatment given to them, the right to rectify the data in cases where such data is inaccurate and incomplete, cancel them when deemed as unnecessary for any of the purposes mentioned in the present Privacy Policy, or when considered that such data is being used for the aim agreed in the present  document, or when the contractual relationship of the service(s) or good(s) has ended, when disagreeing to the treatment of such for the specific means.</p>
-            <p>The Law grants four rights to assert (the ARCO rights):</p>
+          
+        <article class="point">
+            <h3>Uso de "cookies" y "Direcciones de IP"</h3>
+            
+            <p>El servidor de datos de <strong>Lomas Travel </strong> enviar&aacute; datos al navegador del Usuario para que ser almacenados en el disco duro de su computadora. Esto nos permite identificar las computadoras utilizadas por los Usuarios al tener acceso a nuestro Portal. Este proceso es conocido como el uso de "cookies" o "direcciones de IP", mediante el uso de "cookies" o "direcciones de IP". Mediante este proceso <strong>Lomas Travel </strong> puede ofrecer un servicio m&aacute;s personalizado a sus Usuarios ya que nos permite, entre otras cosas, publicar campa&ntilde;as publicitarias y de promoci&oacute;n, medir el tama&ntilde;o de nuestra audiencia y el flujo de tr&aacute;fico en los distintos sitios que el Usuario visita. Mediante "cookies" o "direcciones de IP" no se identifica personalmente a los usuarios, pero s&iacute; a la IP p&uacute;blica de donde se conecta el usuario.</p>
+          </article>
+          
+          <article class="point">
+            <h3>Acceso a los Datos Personales</h3>
+            
+            <p>Como usuario de los servicios proporcionados por Lomas Travel tiene derecho de acceder a sus datos personales que proporciona y a los detalles del tratamiento de los mismos, as&iacute; como a rectificarlos en caso de ser inexactos o incompletos; cancelarlos cuando considere que no se requieren para alguna de las finalidades se&ntilde;alados en el presente Aviso de Privacidad, est&eacute;n siendo utilizados para finalidades no consentidas o haya finalizado la relaci&oacute;n contractual o de servicio, o bien, oponerse al tratamiento de los mismos para fines espec&iacute;ficos.</p>
+            <p>La Ley le otorga cuatro derechos a ejercer (Derechos ARCO):</p>
               <ul class="disc">
-                <li><span>Access to your personal data to learn which of it is being in safekeeping, if they are correct or updated and the means by which they are being used.</span></li>
-                <li><span>Rectification of such data in the case it is inaccurate, incorrect or not updated.</span></li>
-                <li><span>Cancellation, consisting of erasing such personal data when considered that it is not being used in compliance with the means established in the present Privacy Policy.</span></li>
-                <li><span>Opposition to the treatment given to your personal data regarding any of the means established in the present Privacy Policy.</span></li>
+                <li><span>Acceso a sus datos personales para conocer cu&aacute;les se encuentran resguardados, si son correctos o actualizados y para qu&eacute; finalidad se utilizan.</span></li>
+                <li><span>Rectificaci&oacute;n en caso de ser inexactos, incorrectos o est&eacute;n desactualizados.</span></li>
+                <li><span>Cancelaci&oacute;n consistente en la eliminaci&oacute;n de sus datos personales cuando considere que no est&aacute;n siendo utilizados para el cumplimiento de los fines establecidos en el presente Aviso de Privacidad.</span></li>
+                <li><span>Oposici&oacute;n al tratamiento de sus datos personales respecto a alguno de los fines establecidos en el presente Aviso de Privacidad.</span></li>
               </ul>
-              <p>Users have the right to abrogate the given consent for the treatment of their Personal Data in order for them not to be used furthermore, in addition to this, the consent to receive promotions and special offers by telephone or e-mail can be revoked.</p>
-              <p>In order to exercise the ARCOst rights or the right to revoke the consent for the use of personal data, the User must send a written notification in Spanish to <strong>Lomas Travel</strong> to the following e-mail address: webmaster@lomas-travel.com, or send it to the Web Development Department to the following mailing address: Calle de Acceso L28, Manzana 16 Lote 37 Supermanzana 309, Cancún, Quintana Roo, México, Post Code 77560. In such written notification it must be specified: Full name, registered e-mail, mailing address, a telephone number, and a copy of the user’s ID must be attached.</p>
-              <p><strong>Lomas Travel</strong> will contact the user in follow up to the request in the consecutive 15 working days of the reception of such notification and attachments hereby solicited, to communicate whether the revoke proceeds or not, inform its rectification, perform the necessary steps to cancel the utilization of the user’s personal data, or end its usage.</p> 
-        </article>
+            <p>Tiene el derecho de revocar el consentimiento otorgado para el tratamiento de sus datos personales, con el prop&oacute;sito que se deje de hacer uso de los mismos, asimismo, puede revocar su consentimiento a recibir promociones y ofertas de manera telef&oacute;nica o por correo electr&oacute;nico.</p>
+            <p>Para ejercer sus Derechos ARCO o su derecho a revocar el consentimiento para el tratamiento de sus datos personales, deber&aacute; presentar su solicitud respectiva por escrito y en idioma espa&ntilde;ol, y la deber&aacute; hacer llegar a Lomas Travel a trav&eacute;s del siguiente correo electr&oacute;nico: webmaster@lomas-travel.com , o enviar su escrito por correo, mensajer&iacute;a o entregar en mano al Departamento de Desarrollo Web, localizada en Calle de Acceso L28, Manzana 16 Lote 37 Supermanzana 309, Canc&uacute;n, Quintana Roo, M&eacute;xico, C&oacute;digo Postal 77560.</p>
+            <p>Su escrito de solicitud deber&aacute; indicar su nombre completo con apellidos, anexar copia simple de su identificaci&oacute;n oficial, indicar su correo electr&oacute;nico o direcci&oacute;n f&iacute;sica que designe para notificaciones y alg&uacute;n n&uacute;mero telef&oacute;nico de contacto.</p>
+            <p>Lomas Travel le dar&aacute; seguimiento a su solicitud en un lapso de 15 d&iacute;as h&aacute;biles contados a partir de la recepci&oacute;n de dicha solicitud con la documentaci&oacute;n completa, para comunicarle s&iacute; procedi&oacute; o no dicha solicitud, informando su rectificaci&oacute;n, realizar las gestiones necesarias para la cancelaci&oacute;n de sus datos personales, o finalizar el uso de los mismos.</p>
+          </article>
+          
+          <article class="point">
+            <h3>Modificaciones al Aviso de Privacidad</h3>
+            
+            <p><strong>Lomas Travel </strong> se reserva el derecho de modificar total o parcialmente los t&eacute;rminos y condiciones de este Aviso de Privacidad si es necesario, Los cambios entraran en vigor al momento de su publicaci&oacute;n en su Sitio de Internet.</p>
+          </article>
 
-         <article class="point">
-            <h3>Modification of the Privacy Policy</h3>
-            <p><strong>Lomas Travel</strong> reserves the right to modify or amend totally or partially the present Privacy Policy if necessary; such amendments will be valid upon the date of publication in its website</p>
-       </article>
+          <article class="point">
+            <h3>Aceptaci&oacute;n de T&eacute;rminos</h2>
+            
+            <p>Esta declaraci&oacute;n de Confidencialidad / Privacidad est&aacute; sujeta a los t&eacute;rminos y condiciones del Sitio de Internet de Viajes Turquesa del Caribe Mexicano, S.A. de C.V. / <a href="/">www.lomas-travel.com.mx</a> antes descritos, lo cual constituye un acuerdo legal entre usted como usuario y Viajes Turquesa del Caribe Mexicano, S.A. de C.V. Si como usuario utiliza los servicios de Viajes Turquesa del Caribe Mexicano, S.A. de C.V. y/o <a href="/">www.lomas-travel.com.mx</a> significa que ha le&iacute;do, entendido y acordado los t&eacute;rminos antes expuestos.</p>
+          </article>
 
-         <article class="point">
-            <h3>Acceptance of the Terms</h3>
-            <p>This Privacy Policy is subject to the terms and conditions in the website of Viajes Turquesa del Caribe Mexicano S.A. de C.V. /<a href="/">www.lomas-travel.com.mx</a> hereby described; which constitutes a legal agreement between you and Viajes Turquesa del Caribe Mexicano S.A. de C.V. If, as a user you utilize the services of Viajes Turquesa del Caribe Mexicano S.A. de C.V. a/o <a href="/">www.lomas-travel.com.mx</a> it will be understood that you have read, comprehended and agreed with the terms hereby presented. </p>
-        </article>
-   </section>
+    </section>     
 </div>
 </div>

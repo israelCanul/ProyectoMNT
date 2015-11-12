@@ -12,6 +12,7 @@ var Transfers = React.createClass({
         };
     },
     render: function render() {
+
         return React.createElement(
             'div',
             { classname: 'row' },
@@ -25,15 +26,29 @@ var Transfer = React.createClass({
     displayName: 'Transfer',
 
     render: function render() {
-        var numberPassenger = function numberPassenger(num) {
+        var numberPassenger = function numberPassenger(num, moneda) {
+            //console.log(this.state.transfers);
             if (num.max_cap > 1) {
+                return React.createElement(
+                    'div',
+                    null,
+                    React.createElement(
+                        'h6',
+                        null,
+                        "From " + num.min_cap + " to " + num.max_cap + " Passenger(s)"
+                    ),
+                    React.createElement(
+                        'h6',
+                        null,
+                        "Precio por Vehiculo"
+                    )
+                );
+            } else {
                 return React.createElement(
                     'h6',
                     null,
-                    "From " + num.min_cap + " to " + num.max_cap + " Passenger(s)"
+                    "Precio por Persona : $ " + Math.round(num.price) + " " + moneda
                 );
-            } else {
-                return React.createElement('h6', null);
             }
         };
 
@@ -59,12 +74,8 @@ var Transfer = React.createClass({
                     null,
                     this.props.data.type.description
                 ),
-                numberPassenger(this.props.data.rate),
-                React.createElement(
-                    'h6',
-                    null,
-                    'Rate per vehicle'
-                )
+                numberPassenger(this.props.data.rate, this.props.params.currency),
+                React.createElement('h6', null)
             ),
             React.createElement(
                 'div',
@@ -75,7 +86,7 @@ var Transfer = React.createClass({
                     React.createElement(
                         'small',
                         null,
-                        'From'
+                        'Total'
                     )
                 ),
                 React.createElement(
@@ -84,8 +95,8 @@ var Transfer = React.createClass({
                     React.createElement(
                         'span',
                         null,
-                        '$ ',
-                        this.props.params.currency
+                        this.props.params.currency,
+                        ' $'
                     ),
                     React.createElement(
                         'span',
@@ -99,8 +110,8 @@ var Transfer = React.createClass({
                     { className: 'col s12 m8 offset-m2 l6 offset-l4' },
                     React.createElement(
                         'a',
-                        { href: "/transfers/agregar.html?jnfe=" + this.props.data.rate.jnfe, className: 'col s12 btn red' },
-                        'BOOK'
+                        { href: "/es/traslados/agregar.html?oftransfer=oftransfer&jnfe=" + this.props.data.rate.jnfe, className: 'col s12 btn red' },
+                        'RESERVE'
                     )
                 )
             )
@@ -162,12 +173,12 @@ var Titulo = React.createClass({
                 'h5',
                 { className: 'titulosColor' },
                 ' ',
-                "Transfer " + this.props.destination.dest_ini.name + " to " + this.props.destination.dest_end.name
+                "Translado de " + this.props.destination.dest_ini.name + " a " + this.props.destination.dest_end.name
             ),
             React.createElement(
                 'h6',
                 { className: 'titulosColor' },
-                "Adults: " + this.props.params.adults + " - Children: " + this.props.params.ninos
+                "Adultos: " + this.props.params.adults + " - Niños: " + this.props.params.ninos
             )
         );
     }

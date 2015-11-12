@@ -43,7 +43,7 @@
 				$_REQUEST['tipo']='destination';
 			}
 			if(!isset($_REQUEST['tour-Checkin'])){
-				$_REQUEST['tour-Checkin']=date('m/d/Y', strtotime('+2 day'));
+				$_REQUEST['tour-Checkin']=date('d/m/Y', strtotime('+2 day'));
 			}
 			if(!isset($_REQUEST['tour_adults'])){
 				$_REQUEST['tour_adults']=2;
@@ -103,11 +103,11 @@
 			}
 			//date1 salida
 			if(!isset($_REQUEST['date1'])){
-				$_REQUEST['date1']=date('m/d/Y', strtotime('+6 day'));
+				$_REQUEST['date1']=date('d/m/Y', strtotime('+6 day'));
 			}
 			//date 2 llegada
 			if(!isset($_REQUEST['date2'])){
-				$_REQUEST['date2']=date('m/d/Y', strtotime('+6 day'));
+				$_REQUEST['date2']=date('d/m/Y', strtotime('+6 day'));
 			}
 			// numero de adultos
 			if(!isset($_REQUEST['transfer_adult'])){

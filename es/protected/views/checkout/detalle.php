@@ -147,7 +147,7 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
 				</p>
 
 				<p class="p_especial_request">
-					<?= Yii::t("global","Special Request"); ?>
+					<?= Yii::t("global","Petición Especial"); ?>
 					<br />
 					<textarea name="special_request"></textarea>
 				</p>
@@ -176,13 +176,14 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
 					<? if($_p1->descripcion_tipo_producto == 3){
 						$tieneTransfer=true; ?>
 				
-						<h2 class="bloque main_enc_with_border"><?= Yii::t("global","Transportation Additional Information"); ?></h2>
+						<h2 class="bloque main_enc_with_border"><?= Yii::t("global","Información Adicional de Transportación"); ?></h2>
 						
 						<?php if($_p1->tipo_translado == 1 || $_p1->tipo_translado == 3): ?>
-							<strong>We remind you that you have to check in to your flight 2hrs before in case of national flights. For international flights you must check in 3hrs before your departure time.</strong>
+							<strong>Le recordamos que debe registrarse dos horas antes de su vuelo en caso de ser nacional.
+							Para vuelos internacionales debe registrarse 3 horas antes de su salida.</strong>
 							
 							<div class="bloque" style="padding: 15px 0px 15px 0px; font-weight: bold; color: #FF5A14;">
-								Transportation Service <?= $_p1->descripcion_tarifa; ?> from <?= $_p1->descripcion_hotel1; ?> to <?= $_p1->descripcion_hotel2; ?> for <?= Yii::t("global","{n} Adulto|{n} Adultos",$_p1->descripcion_adultos); ?>  
+								Servicio de Transportación <?= $_p1->descripcion_tarifa; ?> desde <?= $_p1->descripcion_hotel1; ?> hasta <?= $_p1->descripcion_hotel2; ?> por <?= Yii::t("global","{n} Adulto|{n} Adultos",$_p1->descripcion_adultos); ?>  
 								<?php if($_p1->descripcion_menores > 0): ?>
 									and <?= Yii::t("global","{n} Child|{n} Children",$_p1->descripcion_menores); ?> 
 								<?php endif; ?>
@@ -192,24 +193,24 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
 							
 						<?php if($_p1->tipo_translado == 1 || $_p1->tipo_translado == 2): ?>
 							<div class="bloque" style="padding: 10px 0px 5px 0px;font-weight: bold;font-size: 17px;">
-									Transfer Airport &rarr; Hotel - <?= date("m/d/Y",strtotime($_p1->descripcion_fecha1)); ?>
+									Transportación Aeropuerto &rarr; Hotel - <?= date("d/d/Y",strtotime($_p1->descripcion_fecha1)); ?>
 							</div>
 
 							<div class="bloque">
 								<p class="bloque" >
-									Arrival Time
+									Tiempo de Llegada
 									<br />
 									<select name="TransferAddInfo[<?= $_p1->descripcion_id; ?>][descripcion_hora_llegada_vuelo1]" >
 										<?= Yii::app()->GenericFunctions->buildFlightTimeCombo(); ?>
 									</select>
 								</p>
 								<p >
-									Flight Number<br>
+									Vuelo Numero<br>
 
 									<input type="text" class="notNull" name="TransferAddInfo[<?= $_p1->descripcion_id; ?>][descripcion_num_vuelo1]" value="">
 								</p>
 								<p >
-									Airline <br>
+									Aerolinea <br>
 									<input type="text" class="notNull" name="TransferAddInfo[<?= $_p1->descripcion_id; ?>][descripcion_linea_area1]" value="">
 								</p>
 							
@@ -219,23 +220,23 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
 							
 							<?php if($_p1->tipo_translado == 1 || $_p1->tipo_translado == 3): ?>
 							<div class="bloque" style="padding: 10px 0px 5px 0px;font-weight: bold;font-size: 17px;">
-									Transfer Hotel &rarr; Airport - <?= date("m/d/Y",strtotime($_p1->descripcion_fecha2)); ?>
+									Transportación Hotel &rarr; Aeropuerto - <?= date("d/m/Y",strtotime($_p1->descripcion_fecha2)); ?>
 							</div>
 							<div class="bloque" >
 								<p class="bloque" >
-									Departure Time
+									Salida
 									<br />
 									<select name="TransferAddInfo[<?= $_p1->descripcion_id; ?>][descripcion_hora_llegada_vuelo2]" >
 										<?= Yii::app()->GenericFunctions->buildFlightTimeCombo(); ?>
 									</select>
 								</p>
 								<p >
-									Flight Number<br>
+									Vuelo Numero<br>
 
 									<input type="text" class="notNull" name="TransferAddInfo[<?= $_p1->descripcion_id; ?>][descripcion_num_vuelo2]" value="">
 								</p>
 								<p >
-									Ariline <br>
+									Aerolinea <br>
 									<input type="text" class="notNull" name="TransferAddInfo[<?= $_p1->descripcion_id; ?>][descripcion_linea_area2]" value="">
 								</p>
 							
@@ -245,18 +246,18 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
 							
 							<?php if($_p1->tipo_translado == 4 || $_p1->tipo_translado == 5): ?>
 							<div class="bloque" style="padding: 10px 0px 5px 0px;font-weight: bold;font-size: 17px;">
-								Transportation Service <?= $_p1->descripcion_tarifa; ?> from <?= $_p1->descripcion_hotel2; ?> to <?= $_p1->descripcion_hotel1; ?> for <?= Yii::t("global","{n} Adult|{n} Adults",$_p1->descripcion_adultos); ?>  
+								Servicio de Transportación <?= $_p1->descripcion_tarifa; ?> desde <?= $_p1->descripcion_hotel2; ?> hasta <?= $_p1->descripcion_hotel1; ?> por <?= Yii::t("global","{n} Adult|{n} Adults",$_p1->descripcion_adultos); ?>  
 								<?php if($_p1->descripcion_menores > 0): ?>
-								and <?= Yii::t("global","{n} Child|{n} Children",$_p1->descripcion_menores); ?> 
+								y <?= Yii::t("global","{n} Child|{n} Children",$_p1->descripcion_menores); ?> 
 								<?php endif; ?>
 							</div>
 							
 							<div class="bloque" style="padding: 5px 0px;">
 								<div class="bloque" style="float: left; width: 50%;">
 									<div class="bloque" style="padding: 0px 0px 5px 0px; font-weight: bold; color: #FF5A14;">
-										Hotel &rarr; Hotel Transfer - <?= date("m/d/Y",strtotime($_p1->descripcion_fecha1)); ?>
+										Hotel &rarr; Hotel Transportación - <?= date("d/m/Y",strtotime($_p1->descripcion_fecha1)); ?>
 									</div>
-									Hotel Departure Time
+									Hora salida de Hotel
 									<br />
 									<select name="TransferAddInfo[<?= $_p1->descripcion_id; ?>][descripcion_hora_llegada_vuelo1]" style="color: black;margin-top:7px;">
 										<?= Yii::app()->GenericFunctions->buildFlightTimeCombo(); ?>
@@ -266,9 +267,9 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
 								<?php if($_p1->tipo_translado == 5): ?>
 								<div class="bloque" style="float: left; width: 50%;">
 									<div class="bloque" style="padding: 0px 0px 5px 0px; font-weight: bold; color: #FF5A14;">
-										Hotel &rarr; Hotel Transfer - <?= date("m/d/Y",strtotime($_p1->descripcion_fecha2)); ?>
+										Transportación	Hotel &rarr; Hotel - <?= date("d/m/Y",strtotime($_p1->descripcion_fecha2)); ?>
 									</div>
-									Hotel Return Time
+									Hotel Tiempo de Regreso
 									<br />
 									<select name="TransferAddInfo[<?= $_p1->descripcion_id; ?>][descripcion_hora_llegada_vuelo2]" style="color: black;margin-top:7px;">
 										<?= Yii::app()->GenericFunctions->buildFlightTimeCombo(); ?>
@@ -281,13 +282,14 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
 								
 							<?php endif; ?>
 							<div class="bloque" style="padding: 10px 0px 5px 0px; font-weight: bold; font-size: 17px;">
-								Passenger's Name
+								Nombre del pasajero
 							</div>
-							<strong>As per applicable laws, this information is mandatory for travel insurance purposes. Without this information it would not be possible to reserve your transportation.</strong>
+							<strong>Por Ley, esta información es obligatoria para propositos de su seguro.
+							Sin esta información no sera posible reservar su transportación.</strong>
 							<div class="bloque">
 								<?php for($xCount=1;$xCount<=$_p1->descripcion_adultos;$xCount++): ?>
 								<p class="bloque">
-									Passenger #<?= $xCount; ?>
+									Pasajeros #<?= $xCount; ?>
 									<br />
 									<input type="text" class="notNull" name="TransferInfoPasajeros[<?= $_p1->descripcion_id; ?>][Adults][]" class="notNull"  />
 								</p>
@@ -295,7 +297,7 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
 								
 								<?php for($xCount=1;$xCount<=$_p1->descripcion_menores;$xCount++): ?>
 								<p class="bloque">
-									Child #<?= $xCount; ?>
+									Niños #<?= $xCount; ?>
 									<br />
 									<input type="text" class="notNull" name="TransferInfoPasajeros[<?= $_p1->descripcion_id; ?>][Children][]" />
 								</p>
@@ -315,12 +317,12 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
 									if($_p1->descripcion_tipo_producto == 4){
 										//if($_p1->descripcion_producto_id==1 || $_p1->descripcion_producto_id==2){?>
 									<div class="bloque" style="padding: 10px 0px 5px 0px; font-weight: bold; color: #FF5A14; font-size: 11pt;">
-										Name of passenger for travel assistance service
+										Nombre del pasajero para el servicio de asistencia de viaje
 									</div>
 									<div class="bloque">
 										<?php for($xCount=1;$xCount<=$_p1->descripcion_adultos;$xCount++): ?>
 										<p class="bloque">
-											Passengers #<?= $xCount; ?>
+											Pasajeros #<?= $xCount; ?>
 											<br />
 											<input type="text" class="notNull" name="TransferInfoPasajeros[<?= $_p1->descripcion_id; ?>][Adults][]" class="notNull"  />
 										</p>
@@ -328,7 +330,7 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
 										
 										<?php for($xCount=1;$xCount<=$_p1->descripcion_menores;$xCount++): ?>
 										<p class="bloque">
-											Passengers #<?= $xCount; ?>
+											Niños #<?= $xCount; ?>
 											<br />
 											<input type="text" class="notNull" name="TransferInfoPasajeros[<?= $_p1->descripcion_id; ?>][Children][]" />
 										</p>
@@ -356,7 +358,7 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
 					<div class="bloque card-panel method_payment" >
 						<p class="bloque fontsize_mobil" >
 							<input id="cards" checked="checked" type="radio" name="payment_method" value="2"> 
-							<label for="cards">Foreign or National</label>
+							<label for="cards">Nacional o Extranjera</label>
 							<img src="/images/tarjetas.png" alt=""/>
 						</p>
 					</div>
@@ -368,27 +370,54 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
 								<tbody>
 									<tr>
 										<td>
-											
+											<? echo "Mensualidades sin Intereses"; ?>
 										</td>
 										<td>
 											<?= Yii::t("global","One Payment"); ?>
 										</td>
+										<?  if ($_SESSION["config_es"]["currency"] == "MXN") { ?>
+											<td> 3 pagos </td>
+											<td> 6 pagos </td>
+										<? } ?>				
 										<td>
-											<?= Yii::t("global","Amount"); ?>
+											<?= Yii::t("global","Mensualidades"); ?>
 										</td>
 									</tr>
 									<tr>
-										<td>Debit or Credit Card</td>
+										<td><?= Yii::t("global","Tarjetas de Débito y/o Crédito"); ?></td>
 										<td>
 											<input class="method_gateway_selector" checked="checked" type="radio" name="gateway_method" id='gateway_method' value="santander_1" role="needcard_debito1" />
 											<label for="gateway_method"></label>
 										</td>
+										<? if ($_SESSION["config_es"]["currency"] == "MXN") { ?>
+											<td></td>
+											<td></td>
+										<? } ?>										
 										<td>
 											<div class="bloque gateway_selector_displayer" style="display: block;" id="debito1">
 												1 x $<?= number_format(($Total / 1),0) . " " . $_SESSION["config_es"]["currency"]; ?>
 											</div>											
 										</td>
 									</tr>
+									<? if ($_SESSION["config_es"]["currency"] == "MXN") { ?>
+										<tr>
+											<td style="text-align: center; vertical-align: middle;"><img src="/img/bancos/santander.png" alt="" style="height: 30px;" /></label></td>
+											<td style="vertical-align: middle;" ><input class="method_gateway_selector" type="radio" name="gateway_method" value="santander_1" role="needcard_santander1" id="needcard_santander1" /><label for="needcard_santander1">1</label></td>
+											<td style="vertical-align: middle;" ><input class="method_gateway_selector" type="radio" name="gateway_method" value="santander_3" role="needcard_santander3" id="needcard_santander3" /><label for="needcard_santander3">3</label></td>
+											<td style="vertical-align: middle;" ><input class="method_gateway_selector" type="radio" name="gateway_method" value="santander_6" role="needcard_santander6" id="needcard_santander6" /><label for="needcard_santander6">6</label></td>
+											<td>
+												<div class="bloque gateway_selector_displayer" id="santander1" style="display:none">
+													1 x $<?= number_format(($Total / 1),0) . " " . $_SESSION["config_es"]["currency"]; ?>
+												</div>
+												<div class="bloque gateway_selector_displayer" id="santander3"  style="display:none">
+													3 x $<?= number_format(($Total / 3),0) . " " . $_SESSION["config_es"]["currency"]; ?> <br /><?= Yii::t("global","meses sin intereses"); ?>
+												</div>
+												<div class="bloque gateway_selector_displayer" id="santander6"  style="display:none">
+													6 x $<?= number_format(($Total / 6),0) . " " . $_SESSION["config_es"]["currency"]; ?> <br /><?= Yii::t("global","meses sin intereses");?>
+												</div>
+											</td>
+										</tr>
+									<? } ?>									
 								</tbody>
 							</table>						
 						</div>
@@ -411,7 +440,7 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
 								<h6><?= Yii::t("global","Fecha que expira"); ?></h6>
 								<div class="row">
 									<div class="col s6 m2">
-										<h6 class="red-text">Month</h6>
+										<h6 class="red-text">Mes</h6>
 										<select name="cc_month" id="cc_month" class="decorated" style="margin-top: 10px;">						
 											<option <?= ((isset($Param["cc_month"]) && $Param["cc_month"] == "01") ? "selected='selected'" : ""); ?> value="01"><?= Yii::t("global","Enero"); ?></option>
 											<option <?= ((isset($Param["cc_month"]) && $Param["cc_month"] == "02") ? "selected='selected'" : ""); ?> value="02"><?= Yii::t("global","Febrero"); ?></option>
@@ -431,7 +460,7 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
 
 									</div>
 									<div class="col s5 m2">
-										<h6 class="red-text">Year</h6>
+										<h6 class="red-text">Año</h6>
 										<select name="cc_year" id="cc_year" class="decorated req nonempty " style="margin-top: 10px;">
 											<?php
 											
@@ -472,7 +501,7 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
 						</div> 
 					</div>
 					<div>
-						<a class="btnback btn" href="<?= $this->createUrl("checkout/index"); ?>" title="">&laquo; <?= Yii::t("global","Regresar")?></a>
+						<a class="btn black-text" href="<?= $this->createUrl("checkout/index"); ?>" title="">&laquo; <?= Yii::t("global","Regresar")?></a>
 						<input type="submit" class="btnBlueSelectRoom btn" disabled="disabled" value="<?= Yii::t("global","Continuar")?> &raquo;" />
 					</div>
 				</div>
@@ -510,7 +539,7 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
 <div class="bloque normal_left shopping_cart" style="float: right;margin-right: 10px;">
 		<div class="prod_service_resume bloque curved">
 			<h5 class="enc_prod_resume bloque" >
-				Your Reservation
+				Su Reservación
 			</h5>
 			<? $Total = 0; ?>
 			<? foreach($_Productos as $_p){ ?>
@@ -522,16 +551,16 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
 						<h6 class="shopping_Price">
 							<?=  $_SESSION["config_es"]["currency"] ." $". number_format($_p->descripcion_total,0); ?>
 						</h6>
-						<i class='activator red-text' style='cursor:pointer'><i class="material-icons red-text">info_outline</i> More Info</i>						
+						<i class='activator red-text' style='cursor:pointer'><i class="material-icons red-text">info_outline</i> Más Info</i>						
 						<div class="shopping_moreInformation card-reveal">
 							<span class="card-title grey-text text-darken-4">
-								<?= $_p->descripcion_producto ?>
-								<i class="material-icons right">close</i>
+								<h6><?= $_p->descripcion_producto ?>
+								<i class="material-icons right">close</i></h6>
 							</span>
 							<? if($_p->descripcion_id_cupon==1){?>
-								Valid to:
+								Valido para:
 							<?}else{?>
-								Date:
+								Fecha:
 							<?}?>
 							
 							<?= Yii::app()->GenericFunctions->convertPresentableDates($_p->descripcion_fecha1); ?>					

@@ -53,7 +53,7 @@ var Detalle = React.createClass({
                 React.createElement(
                     'h6',
                     null,
-                    'Duration:'
+                    'Duración:'
                 ),
                 React.createElement(
                     'p',
@@ -67,7 +67,7 @@ var Detalle = React.createClass({
                 React.createElement(
                     'h6',
                     null,
-                    'Available on the following days'
+                    'Disponible los días'
                 ),
                 React.createElement(
                     'div',
@@ -75,7 +75,7 @@ var Detalle = React.createClass({
                     React.createElement(
                         'h6',
                         null,
-                        'Monday'
+                        'Lunes'
                     ),
                     React.createElement('img', { src: "/images/icon/" + this.props.disponibilidad.lunes, className: 'responsive-img' })
                 ),
@@ -85,7 +85,7 @@ var Detalle = React.createClass({
                     React.createElement(
                         'h6',
                         null,
-                        'Tuesday'
+                        'Martes'
                     ),
                     React.createElement('img', { src: "/images/icon/" + this.props.disponibilidad.martes, className: 'responsive-img' })
                 ),
@@ -95,7 +95,7 @@ var Detalle = React.createClass({
                     React.createElement(
                         'h6',
                         null,
-                        'Wednesday'
+                        'Miércoles'
                     ),
                     React.createElement('img', { src: "/images/icon/" + this.props.disponibilidad.miercoles, className: 'responsive-img' })
                 ),
@@ -105,7 +105,7 @@ var Detalle = React.createClass({
                     React.createElement(
                         'h6',
                         null,
-                        'Thursday'
+                        'Jueves'
                     ),
                     React.createElement('img', { src: "/images/icon/" + this.props.disponibilidad.jueves, className: 'responsive-img' })
                 ),
@@ -115,7 +115,7 @@ var Detalle = React.createClass({
                     React.createElement(
                         'h6',
                         null,
-                        'Friday'
+                        'Viernes'
                     ),
                     React.createElement('img', { src: "/images/icon/" + this.props.disponibilidad.viernes, className: 'responsive-img' })
                 ),
@@ -125,7 +125,7 @@ var Detalle = React.createClass({
                     React.createElement(
                         'h6',
                         null,
-                        'Saturday'
+                        'Sábado'
                     ),
                     React.createElement('img', { src: "/images/icon/" + this.props.disponibilidad.sabado, className: 'responsive-img' })
                 ),
@@ -135,7 +135,7 @@ var Detalle = React.createClass({
                     React.createElement(
                         'h6',
                         null,
-                        'Sunday'
+                        'Domingo'
                     ),
                     React.createElement('img', { src: "/images/icon/" + this.props.disponibilidad.domingo, className: 'responsive-img' })
                 )
@@ -146,7 +146,7 @@ var Detalle = React.createClass({
                 React.createElement(
                     'h6',
                     null,
-                    'Departure'
+                    'Salidas'
                 ),
                 React.createElement('p', { dangerouslySetInnerHTML: { __html: departure } })
             ),
@@ -156,7 +156,7 @@ var Detalle = React.createClass({
                 React.createElement(
                     'h6',
                     null,
-                    'Included'
+                    'Incluye'
                 ),
                 React.createElement('p', { dangerouslySetInnerHTML: { __html: inclutions } })
             ),
@@ -166,7 +166,7 @@ var Detalle = React.createClass({
                 React.createElement(
                     'h6',
                     null,
-                    'Not Included'
+                    'No Incluye'
                 ),
                 React.createElement('p', { dangerouslySetInnerHTML: { __html: noinclutions } })
             ),
@@ -176,7 +176,7 @@ var Detalle = React.createClass({
                 React.createElement(
                     'h6',
                     null,
-                    'Recommendations'
+                    'Recomendaciones'
                 ),
                 React.createElement('p', { dangerouslySetInnerHTML: { __html: recommendations } })
             ),
@@ -186,7 +186,7 @@ var Detalle = React.createClass({
                 React.createElement(
                     'h6',
                     null,
-                    'Regulations'
+                    'Regulaciones'
                 ),
                 React.createElement('p', { dangerouslySetInnerHTML: { __html: regulations } })
             ),
@@ -196,7 +196,7 @@ var Detalle = React.createClass({
                 React.createElement(
                     'h6',
                     null,
-                    'Cancellation Policies'
+                    'Politica de cancelación'
                 ),
                 React.createElement('p', { dangerouslySetInnerHTML: { __html: policies } })
             )
@@ -219,7 +219,7 @@ var Rates = React.createClass({
                     return React.createElement(
                         'div',
                         { className: 'col 12' },
-                        "Adults: " + params.currency + " " + rate.tarifaAdult
+                        "Adultos: " + params.currency + " " + rate.tarifaAdult
                     );
                 }
             };
@@ -228,7 +228,7 @@ var Rates = React.createClass({
                     return React.createElement(
                         'div',
                         { className: 'col 12' },
-                        "Children: " + params.currency + " " + rate.tarifaNino
+                        "Niños: " + params.currency + " " + rate.tarifaNino
                     );
                 }
             };
@@ -237,7 +237,7 @@ var Rates = React.createClass({
                     return React.createElement(
                         'div',
                         { className: 'col s12 m6 rateRight' },
-                        React.createElement('input', { type: 'submit', value: 'Book', className: 'btn btn-large col s12 red' }),
+                        React.createElement('input', { type: 'submit', value: 'RESERVE', className: 'btn btn-large col s12 red' }),
                         React.createElement('input', { type: 'hidden', value: '1', name: 'fromDetails', className: 'btn btn-large col s12 red' }),
                         React.createElement('input', { name: 'jnfe', value: rate.jnfe, type: 'hidden' })
                     );
@@ -259,7 +259,7 @@ var Rates = React.createClass({
                 { className: 'col s12 rate' },
                 React.createElement(
                     'form',
-                    { method: 'Post', action: '/tour/agregar.html' },
+                    { method: 'Post', action: '/es/tour/agregar.html' },
                     React.createElement(
                         'h6',
                         { className: 'red-text' },
@@ -348,7 +348,7 @@ var Titulo = React.createClass({
                     React.createElement(
                         'h5',
                         { className: 'infoSearch' },
-                        "Tour-" + this.props.titulo.name
+                        "Tour -" + this.props.titulo.name
                     ),
                     React.createElement(
                         'h6',
@@ -358,7 +358,7 @@ var Titulo = React.createClass({
                     React.createElement(
                         'h6',
                         { className: 'infoSearch' },
-                        "On " + this.props.fecha + ", " + this.props.params.adults + " Adults, " + this.props.params.ninos + " Children"
+                        "" + this.props.fecha + ", " + this.props.params.adults + " Adultos, " + this.props.params.ninos + " Niños"
                     )
                 ),
                 React.createElement(
@@ -367,7 +367,7 @@ var Titulo = React.createClass({
                     React.createElement(
                         'div',
                         { className: 'textoTitulo' },
-                        "Operated by: " + this.props.supplier
+                        "Operado por: " + this.props.supplier
                     )
                 )
             )

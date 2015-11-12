@@ -169,7 +169,7 @@ class DestinationsController extends Controller
 		$minBook =  strtotime ( '+2 day' , strtotime ( date('Y-m-j') ) ) ;
 		if ($minBook >  strtotime($stopOk["Dates"]["CheckIn"])) {
 			$stopOk["Dates"]["CheckIn"] = date('Y-m-d',$minBook );
-			$stopOk["hotelCheckin"] = date('m/d/Y',$minBook );
+			$stopOk["hotelCheckin"] = date('d/m/Y',$minBook );
 			$_REQUEST = $stopOk;
 		}
 		
@@ -206,8 +206,8 @@ class DestinationsController extends Controller
 		$Hotel 	= $Hoteles[0];  
 		//Se valida que tenga dos dias de diferencia a la fecha actual 
 		$TarifasBloquedas = false;
-		$dateBook 		  = date("m/d/Y", strtotime($stopOk["Dates"]["CheckIn"]));
-		$fechaActual 	  = date("m/d/Y");
+		$dateBook 		  = date("d/m/Y", strtotime($stopOk["Dates"]["CheckIn"]));
+		$fechaActual 	  = date("d/m/Y");
 		
 		$_diasReserva 	  = Yii::app()->GenericFunctions->difDays($dateBook,$fechaActual);
 		if($_diasReserva<2){
@@ -611,8 +611,8 @@ class DestinationsController extends Controller
 					$pgr = array(
 						'transfer_from_id' => 1,
 						'transfer_to_id'   => $data[1].":".$hotel['hotel_transportacion_zona'],
-						'transfer_arrival' => date_format($transfer_FechaIN, 'm/d/Y'),
-						'transfer_return'  => date_format($transfer_FechaOUT, 'm/d/Y'),
+						'transfer_arrival' => date_format($transfer_FechaIN, 'd/m/Y'),
+						'transfer_return'  => date_format($transfer_FechaOUT, 'd/m/Y'),
 						'transfer_adults'  => $adultos,
 						'transfer_child'   => $menores
 					);

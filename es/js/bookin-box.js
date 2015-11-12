@@ -171,7 +171,7 @@ $(document).ready(function(){
         clear: 'Clear',
         close: 'Enter',
         // The format to show on the `input` element
-        format: 'mm/dd/yyyy',
+        format: 'dd/mm/yyyy',
         onOpen: function() {
             //console.log('Opened up!')
         },
@@ -220,23 +220,23 @@ $(document).ready(function(){
     // When something is selected, update the “from” and “to” limits.
     from_picker_trans.on('set', function(event) {
         if ( event.select ) {
-            to_picker.set('min', from_picker_trans.get('select'),{ format:'mm/dd/yyyy'}),
-                to_picker.set('clear',{ format:'mm/dd/yyyy'}),
+            to_picker.set('min', from_picker_trans.get('select'),{ format:'dd/mm/yyyy'}),
+                to_picker.set('clear',{ format:'dd/mm/yyyy'}),
                 from_picker_trans.close(),
                 to_picker.open()
             console.log('entro');
         }
         else if ( 'clear' in event ) {
-            to_picker.set('min', false,{ format:'mm/dd/yyyy'})
+            to_picker.set('min', false,{ format:'dd/mm/yyyy'})
         }
     });
     to_picker.on('set', function(event) {
         if ( event.select ) {
-            from_picker_trans.set('max', to_picker.get('select'),{ format:'mm/dd/yyyy'})
+            from_picker_trans.set('max', to_picker.get('select'),{ format:'dd/mm/yyyy'})
 
         }
         else if ( 'clear' in event ) {
-            from_picker_trans.set('max', false,{ format:'mm/dd/yyyy'})
+            from_picker_trans.set('max', false,{ format:'dd/mm/yyyy'})
         }
     });
 
@@ -363,7 +363,7 @@ $('.datepicker').pickadate({
     clear: 'Clear',
     close: 'Close',
     // The format to show on the `input` element
-      format: 'mm/dd/yyyy',
+      format: 'dd/mm/yyyy',
       onOpen: function() {
             //console.log('Opened up!')
       },

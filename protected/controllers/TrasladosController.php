@@ -108,7 +108,7 @@ class TrasladosController extends CController
                 $t->descripcion_producto = Yii::t("global", "Transfer");
                 $t->descripcion_destino = $parametros['descripcion_servicio_id'];
                 $t->descripcion_tarifa = $parametros['descripcion_tarifa'];
-                $t->descripcion_thumb = $parametros['tdescripcion_thumb'];
+                $t->descripcion_thumb = "/img/".$parametros['tdescripcion_thumb'];
                 $t->descripcion_venta = $Venta;
                 $t->descripcion_fecha = date("Y-m-d H:i:s");
                 $t->descripcion_fecha1 = $parametros['descripcion_fecha1'];

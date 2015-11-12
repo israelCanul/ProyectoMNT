@@ -2,15 +2,15 @@
 
 	<section class="contentSide detail col s12 m10 offset-m1">
 		<div class="detailHead">
-			<span class="operated">Operated by: <span class="supplier"><?=utf8_encode($_t["proveedores"]);?></span></span>
-			<h1>Tour - <?php echo utf8_encode($_t["tour_nombre"]);?></h1>
-			<h2><?php echo utf8_encode($_t["nombre_en"]); ?></h2>
-			<h3>on <?php echo Yii::app()->GenericFunctions->convertDate($_REQUEST["tour_fecha"]); ?> - <?php echo $_REQUEST["tour_adults"]; ?> <?php echo ($_REQUEST["tour_adults"] == 1) ? "Adult" : "Adults"; ?>, <?php echo $_REQUEST["tour_childs"]; ?> <?php echo ($_REQUEST["tour_childs"] == 1) ? "Child" : "Children"; ?></h3>
+			<span class="operated">Operado por: <span class="supplier"><?=$_t["proveedores"];?></span></span>
+			<h1>Tour - <?php echo $_t["tour_nombre_es"];?></h1>
+			<h2><?php echo $_t["nombre_es"]; ?></h2>
+			<h3><?php echo Yii::app()->GenericFunctions->convertDate($_REQUEST["fecha"]); ?> - <?php echo $_REQUEST["tour_adults"]; ?> <?php echo ($_REQUEST["tour_adults"] == 1) ? "Adulto" : "Adultos"; ?>, <?php echo $_REQUEST["tour_childs"]; ?> <?php echo ($_REQUEST["tour_childs"] == 1) ? "Niño" : "Niños"; ?></h3>
 		</div>
 
 		<!-- DESCRIPCION -->
 		<div class="detailDescription">
-			<p><?php echo nl2br( utf8_encode($_t["descripcion_larga"]) ); ?></p>
+			<p><?php echo nl2br( $_t["descripcion_larga"]); ?></p>
 		</div>
 
 		<?php if(sizeof($Imagenes) > 0): ?>
@@ -191,13 +191,13 @@
 								<table cellpadding="5" cellspacing="1" border="0" width="100%">
 									<tbody>
 										<tr>
-											<td>Monday</td>
-											<td>Tuesday</td>
-											<td>Wednesday</td>
-											<td>Thursday</td>
-											<td>Friday</td>
-											<td>Saturday</td>
-											<td>Sunday</td>										
+											<td>Lunes</td>
+											<td>Martes</td>
+											<td>Miércoles</td>
+											<td>Jueves</td>
+											<td>Viernes</td>
+											<td>Sábado</td>
+											<td>Domingo</td>										
 										</tr>
 										<tr>
 											<td><img src="<?= (($_t["opera_lunes"] == 1) ? "/images/icon/1.png" : "/images/icon/0.png"); ?>" alt="" /></td>
@@ -217,37 +217,37 @@
 						<!-- HORARIOS DE SALIDA -->
 						<?php if(trim($_t["descripcion_horarios_salida"]) != "" ): ?>
 							<h3><?= Yii::t("global","Salidas"); ?></h3>
-							<div class="bloque db_content"><p><?php echo nl2br( utf8_encode($_t["descripcion_horarios_salida"])); ?></p></div>
+							<div class="bloque db_content"><p><?php echo nl2br( $_t["descripcion_horarios_salida"]); ?></p></div>
 						<?php endif; ?>
 						
 						<!-- iINCLUSIONES -->
 						<?php if(trim($_t["descripcion_inclusiones"]) != "" ): ?>
 							<h3><?= Yii::t("global","Incluye"); ?></h3>
-							<div class="bloque db_content"><p><?php echo nl2br(utf8_encode($_t["descripcion_inclusiones"])); ?></p></div>						
+							<div class="bloque db_content"><p><?php echo nl2br($_t["descripcion_inclusiones"]); ?></p></div>						
 						<?php endif; ?>
 						
 						<!-- EXCLUSIONES -->
 						<?php if(trim($_t["descripcion_exclusiones"]) != "" ): ?>
 							<h3><?= Yii::t("global","No Incluye"); ?></h3>
-							<div class="bloque db_content"><p><?php echo nl2br(utf8_encode($_t["descripcion_exclusiones"]) ); ?></p></div>
+							<div class="bloque db_content"><p><?php echo nl2br($_t["descripcion_exclusiones"]); ?></p></div>
 						<?php endif; ?>
 						
 						<!-- RECOMENDACIONES -->
 						<?php if(trim($_t["descripcion_recomendaciones"]) != "" ): ?>
 							<h3><?= Yii::t("global","Recomendaciones"); ?></h3>
-							<div class="bloque db_content"><p><?php echo nl2br(utf8_encode($_t["descripcion_recomendaciones"]) ); ?></p></div>
+							<div class="bloque db_content"><p><?php echo nl2br($_t["descripcion_recomendaciones"]); ?></p></div>
 						<?php endif; ?>
 						
 						<!-- REGULACIONES -->
 						<?php if(trim($_t["descripcion_regulaciones"]) != "" ): ?>
 							<h3><?= Yii::t("global","Regulaciones"); ?></h3>
-							<div class="bloque db_content"><p><?php echo nl2br(utf8_encode($_t["descripcion_regulaciones"]) ); ?></p></div>
+							<div class="bloque db_content"><p><?php echo nl2br($_t["descripcion_regulaciones"]); ?></p></div>
 						<?php endif; ?>
 						
 						<!-- POLITICAS -->
 						<?php if(trim($_t["descripcion_politicas"]) != "" ): ?>
-							<h3><?= Yii::t("global","Cancellation Policies"); ?></h3>
-							<div class="bloque db_content"><p><?php echo nl2br( utf8_encode($_t["descripcion_politicas"])); ?></p></div>
+							<h3><?= Yii::t("global","Política de cancelación"); ?></h3>
+							<div class="bloque db_content"><p><?php echo nl2br( $_t["descripcion_politicas"]); ?></p></div>
 						<?php endif; ?>
 						
 					</div>

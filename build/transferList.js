@@ -99,7 +99,7 @@ var Transfer = React.createClass({
                     { className: 'col s12 m8 offset-m2 l6 offset-l4' },
                     React.createElement(
                         'a',
-                        { href: "/transfers/agregar.html?jnfe=" + this.props.data.rate.jnfe, className: 'col s12 btn red' },
+                        { href: "/traslados/agregar.html?oftransfer=oftransfer&jnfe=" + this.props.data.rate.jnfe, className: 'col s12 btn red' },
                         'BOOK'
                     )
                 )

@@ -566,3 +566,102 @@ Stack trace:
 #1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
 #2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
 #3 {main} REQUEST_URI=/es/es/checkout/index.html
+2015/11/12 11:46:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "js/page/activities-detail.min.js"' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('js/page/activit...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//js/page/activities-detail.min.js?a=1
+2015/11/12 11:46:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "js/page/activities-detail.min.js"' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('js/page/activit...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//js/page/activities-detail.min.js?a=1
+2015/11/12 11:49:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "js/page/activities-detail.min.js"' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('js/page/activit...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//js/page/activities-detail.min.js?a=1
+2015/11/12 11:50:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "js/page/activities-detail.min.js"' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('js/page/activit...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//js/page/activities-detail.min.js?a=1
+2015/11/12 11:50:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "js/page/activities-detail.min.js"' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('js/page/activit...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//js/page/activities-detail.min.js?a=1
+2015/11/12 11:59:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "js/page/activities-detail.min.js"' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('js/page/activit...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//js/page/activities-detail.min.js?a=1
+2015/11/12 11:59:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "js/page/activities-detail.min.js"' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('js/page/activit...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//js/page/activities-detail.min.js?a=1
+2015/11/12 12:03:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "js/page/activities-detail.min.js"' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('js/page/activit...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//js/page/activities-detail.min.js?a=1
+2015/11/12 12:08:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "js/page/activities-detail.min.js"' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('js/page/activit...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//js/page/activities-detail.min.js?a=1
+2015/11/12 12:15:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "js/page/activities-detail.min.js"' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('js/page/activit...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//js/page/activities-detail.min.js?a=1
+2015/11/12 12:23:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "js/page/activities-detail.min.js"' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('js/page/activit...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//js/page/activities-detail.min.js?a=1
+2015/11/12 12:24:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "js/page/activities-detail.min.js"' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('js/page/activit...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//js/page/activities-detail.min.js?a=1
+2015/11/12 14:54:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "transfers/agregar"' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('transfers/agreg...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es/transfers/agregar.html?jnfe=pmb2AQN6VzR6ZGH6r3Z6ZwR6VzEyp2AlnKOwnJ9hK3EupzyzLI9cMPV7pmbkBvVmVwgmBwVmBvWxMKAwpzyjL2yioy9jpz9xqJA0o19cMPV7pmbkBvVlVwgmBwR4BvWxMKAwpzyjL2yioy9jpzIwnJ8vB3Z6ZmbvBQZ4VwgmBwV0BvWxMKAwpzyjL2yioy9mMKW2nJAco19cozxvB3Z6ZGbvZFV7pmblZmbvMTImL3WcpTAco25sp2IlqzywnJ9snJDvB3Z6ZwbvAGpvB3Z6ZGt6VzEyp2AlnKOwnJ9hK2uiqTIfZFV7pmblAmbvDJIlo3O1MKW0olOxMFOQLJ5wj7chVPuQIH4cVwgmBwR4BvWxMKAwpzyjL2yioy9bo3EyoQVvB3Z6ZGV6VxSfo2M0VRAuozA1ovV7pmbkAQbvqTyjo190pzShp2kuMT8vB3Z6ZGbvZFV7pmbkBQbvMTImL3WcpTAco25sqTSlnJMuVwgmBwR4BvWQo21jLKW0nJEiVSWyMT9hMT8vB3Z6ZGt6VaExMKAwpzyjL2yioy90nUIgLvV7pmbkAwbvY3ElLKAfLJEipl8kYzcjMlV7pmbkAmbvMTImL3WcpTAco25sqT90LJjvB3Z6ZmbvBQZ4VwgmBwR4BvWxMKAwpzyjL2yioy9zMJAbLGRvB3Z6ZGN6VwVjZGHgZGRgZGtvB3Z6ZGt6VzEyp2AlnKOwnJ9hK2MyL2uuZvV7pmbkZQbvZwNkAF0kZF0kBPV7pmbkBGbvMTImL3WcpTAco25sLJE1oUEiplV7pmbkBvVlVwgmBwR5BvWxMKAwpzyjL2yioy9gMJ5ipzImVwgcBwN7sHkioJSmD2yDnUWup2HvBj==
+2015/11/12 14:56:38 [error] [php] Invalid argument supplied for foreach() (C:\AppServ\www\mexico-news-travel\es\protected\controllers\TrasladosController.php:60)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): TrasladosController->runAction()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): TrasladosController->runActionWithFilters()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): TrasladosController->run()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#5 C:\AppServ\www\mexico-news-travel\es\index.php(24): CWebApplication->run()
+REQUEST_URI=/es/traslados/agregar.html?jnfe=pmb2AGD6VzR6ZGH6r3Z6ZwR6VzEyp2AlnKOwnJ9hK3EupzyzLI9cMPV7pmbkBvV1VwgmBwVmBvWxMKAwpzyjL2yioy9jpz9xqJA0o19cMPV7pmbkBvV0VwgmBwR4BvWxMKAwpzyjL2yioy9jpzIwnJ8vB3Z6AQbvZGZ3APV7pmblAQbvMTImL3WcpTAco25sp2IlqzywnJ9snJ5cVwgmBwR6VwRvB3Z6ZwZ6VzEyp2AlnKOwnJ9hK3AypaMcL2yiK2yxVwgmBwV6VwH3VwgmBwR4BvWxMKAwpzyjL2yioy9bo3EyoQRvB3Z6Zwp6VxSypz9jqJIlqT8tMTHtD2ShL8B6ovNbD1IBXFV7pmbkBQbvMTImL3WcpTAco25snT90MJjlVwgmBwRlBvWOoT9zqPOQLJ5wqJ4vB3Z6ZGD6VaEcpT9sqUWuoaAfLJEiVwgmBwR6VwRvB3Z6ZGt6VzEyp2AlnKOwnJ9hK3EupzyzLFV7pmbmZQbvD29gpTSlqTyxolOGnJ4tEKAwLJkuplOFMJEiozEiVwgmBwR4BvW0MTImL3WcpTAco25sqTu1oJVvB3Z6ZGL6Vv90pzSmoTSxo3ZiZF5dpTpvB3Z6ZGp6VzEyp2AlnKOwnJ9hK3EiqTSfVwgmBwD6VwRmAmDvB3Z6ZGt6VzEyp2AlnKOwnJ9hK2MyL2uuZFV7pmbkZQbvZwNkAF0kZF0kBPV7pmbkBQbvMTImL3WcpTAco25sMzIwnTRlVwgmBwRjBvVlZQR1YGRkYGR4VwgmBwR5BvWxMKAwpzyjL2yioy9uMUIfqT9mVwgmBwR6VwVvB3Z6ZGx6VzEyp2AlnKOwnJ9hK21yoz9lMKZvB2x6ZQg9GT9gLKAQnIObpzSmMFV7
+2015/11/12 16:20:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "css/page/text.min.css"' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('css/page/text.m...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//css/page/text.min.css?a=1
+2015/11/12 16:21:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "css/page/text.min.css"' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('css/page/text.m...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#3 {main} REQUEST_URI=/es//css/page/text.min.css?a=1

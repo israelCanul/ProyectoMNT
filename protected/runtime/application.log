@@ -9350,3 +9350,126 @@ Stack trace:
 #6 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
 #7 C:\AppServ\www\mexico-news-travel\index.php(23): CWebApplication->run()
 REQUEST_URI=/destination/el-dorado-casitas-royale.html
+2015/11/12 09:39:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('favicon.ico')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2015/11/12 14:56:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "transfers/agregar".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('transfers/agreg...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/transfers/agregar.html?jnfe=pmb2ZmN6VzR6ZGH6r3Z6ZwR6VzEyp2AlnKOwnJ9hK3EupzyzLI9cMPV7pmbkBvVmVwgmBwVmBvWxMKAwpzyjL2yioy9jpz9xqJA0o19cMPV7pmbkBvVlVwgmBwR4BvWxMKAwpzyjL2yioy9jpzIwnJ8vB3Z6ZwbvAGNvB3Z6ZwD6VzEyp2AlnKOwnJ9hK3AypaMcL2yiK2yhnFV7pmbkBvVkVwgmBwVmBvWxMKAwpzyjL2yioy9mMKW2nJAco19cMPV7pmblBvV1AlV7pmbkBQbvMTImL3WcpTAco25snT90MJjkVwgmBwVjBvWQLJ5wqJ4tDJylpT9lqPNbD1IBXFV7pmbkBQbvMTImL3WcpTAco25snT90MJjlVwgmBwRlBvWOoT9zqPOQLJ5wqJ4vB3Z6ZGD6VaEcpT9sqUWuoaAfLJEiVwgmBwR6VwRvB3Z6ZGt6VzEyp2AlnKOwnJ9hK3EupzyzLFV7pmbkAmbvH2uupzIxVSWiqJ5xVSElnKNvB3Z6ZGt6VaExMKAwpzyjL2yioy90nUIgLvV7pmbkAwbvY3ElLKAfLJEipl8kYzcjMlV7pmbkAmbvMTImL3WcpTAco25sqT90LJjvB3Z6ZwbvAGNvB3Z6ZGt6VzEyp2AlnKOwnJ9hK2MyL2uuZFV7pmbkZQbvZwNkAF0kZF0kBPV7pmbkBQbvMTImL3WcpTAco25sMzIwnTRlVwgmBwRjBvVlZQR1YGRkYGR4VwgmBwR5BvWxMKAwpzyjL2yioy9uMUIfqT9mVwgmBwR6VwVvB3Z6ZGx6VzEyp2AlnKOwnJ9hK21yoz9lMKZvB2x6ZQg9GT9gLKAQnIObpzSmMFV7
+2015/11/12 14:59:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('1.jpg')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('1.jpg')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('traslados/1.jpg')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#5 {main} REQUEST_URI=/traslados/1.jpg
+2015/11/12 15:11:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "transfers/agregar".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('transfers/agreg...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/transfers/agregar.html?jnfe=pmb2ZmV6VzR6ZGH6r3Z6ZwR6VzEyp2AlnKOwnJ9hK3EupzyzLI9cMPV7pmbkBvV1VwgmBwVmBvWxMKAwpzyjL2yioy9jpz9xqJA0o19cMPV7pmbkBvV0VwgmBwR4BvWxMKAwpzyjL2yioy9jpzIwnJ8vB3Z6ZwbvBQVvB3Z6ZwD6VzEyp2AlnKOwnJ9hK3AypaMcL2yiK2yhnFV7pmbkBvVkVwgmBwVmBvWxMKAwpzyjL2yioy9mMKW2nJAco19cMPV7pmblBvV1AlV7pmbkBQbvMTImL3WcpTAco25snT90MJjkVwgmBwVjBvWQLJ5wqJ4tDJylpT9lqPNbD1IBXFV7pmbkBQbvMTImL3WcpTAco25snT90MJjlVwgmBwRlBvWOoT9zqPOQLJ5wqJ4vB3Z6ZGD6VaEcpT9sqUWuoaAfLJEiVwgmBwR6VwRvB3Z6ZGt6VzEyp2AlnKOwnJ9hK3EupzyzLFV7pmbkBGbvGz9hVSA0o3NtHz91ozDtIUWcpPV7pmbkBQbvqTEyp2AlnKOwnJ9hK3EbqJ1vVwgmBwR2BvViqUWup2kuMT9mYmRhnaOaVwgmBwR3BvWxMKAwpzyjL2yioy90o3EuoPV7pmblBvV4ZvV7pmbkBQbvMTImL3WcpTAco25sMzIwnTRkVwgmBwRjBvVlZQR1YGRkYGR4VwgmBwR4BvWxMKAwpzyjL2yioy9zMJAbLGVvB3Z6ZGN6VwVjZGHgZGRgZGtvB3Z6ZGx6VzEyp2AlnKOwnJ9hK2SxqJk0o3ZvB3Z6ZGbvZvV7pmbkBGbvMTImL3WcpTAco25soJIho3WyplV7nGbjB31Zo21up0AcHTulLKAyVwf=
+2015/11/12 15:11:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "transfers/agregar".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('transfers/agreg...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/transfers/agregar.html?jnfe=pmb2ZmV6VzR6ZGH6r3Z6ZwR6VzEyp2AlnKOwnJ9hK3EupzyzLI9cMPV7pmbkBvV1VwgmBwVmBvWxMKAwpzyjL2yioy9jpz9xqJA0o19cMPV7pmbkBvV0VwgmBwR4BvWxMKAwpzyjL2yioy9jpzIwnJ8vB3Z6ZwbvBQVvB3Z6ZwD6VzEyp2AlnKOwnJ9hK3AypaMcL2yiK2yhnFV7pmbkBvVkVwgmBwVmBvWxMKAwpzyjL2yioy9mMKW2nJAco19cMPV7pmblBvV1AlV7pmbkBQbvMTImL3WcpTAco25snT90MJjkVwgmBwVjBvWQLJ5wqJ4tDJylpT9lqPNbD1IBXFV7pmbkBQbvMTImL3WcpTAco25snT90MJjlVwgmBwRlBvWOoT9zqPOQLJ5wqJ4vB3Z6ZGD6VaEcpT9sqUWuoaAfLJEiVwgmBwR6VwRvB3Z6ZGt6VzEyp2AlnKOwnJ9hK3EupzyzLFV7pmbkBGbvGz9hVSA0o3NtHz91ozDtIUWcpPV7pmbkBQbvqTEyp2AlnKOwnJ9hK3EbqJ1vVwgmBwR2BvViqUWup2kuMT9mYmRhnaOaVwgmBwR3BvWxMKAwpzyjL2yioy90o3EuoPV7pmblBvV4ZvV7pmbkBQbvMTImL3WcpTAco25sMzIwnTRkVwgmBwRjBvVlZQR1YGRkYGR4VwgmBwR4BvWxMKAwpzyjL2yioy9zMJAbLGVvB3Z6ZGN6VwVjZGHgZGRgZGtvB3Z6ZGx6VzEyp2AlnKOwnJ9hK2SxqJk0o3ZvB3Z6ZGbvZvV7pmbkBGbvMTImL3WcpTAco25soJIho3WyplV7nGbjB31Zo21up0AcHTulLKAyVwf=
+2015/11/12 15:24:13 [error] [php] Invalid argument supplied for foreach() (C:\AppServ\www\mexico-news-travel\protected\controllers\TrasladosController.php:60)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): TrasladosController->runAction()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): TrasladosController->runActionWithFilters()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): TrasladosController->run()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#5 C:\AppServ\www\mexico-news-travel\index.php(23): CWebApplication->run()
+REQUEST_URI=/traslados/agregar.html?jnfe=pmb2ZmV6VzR6ZGH6r3Z6ZwR6VzEyp2AlnKOwnJ9hK3EupzyzLI9cMPV7pmbkBvV1VwgmBwVmBvWxMKAwpzyjL2yioy9jpz9xqJA0o19cMPV7pmbkBvV0VwgmBwR4BvWxMKAwpzyjL2yioy9jpzIwnJ8vB3Z6ZwbvBQVvB3Z6ZwD6VzEyp2AlnKOwnJ9hK3AypaMcL2yiK2yhnFV7pmbkBvVkVwgmBwVmBvWxMKAwpzyjL2yioy9mMKW2nJAco19cMPV7pmblBvV1AlV7pmbkBQbvMTImL3WcpTAco25snT90MJjkVwgmBwVjBvWQLJ5wqJ4tDJylpT9lqPNbD1IBXFV7pmbkBQbvMTImL3WcpTAco25snT90MJjlVwgmBwRlBvWOoT9zqPOQLJ5wqJ4vB3Z6ZGD6VaEcpT9sqUWuoaAfLJEiVwgmBwR6VwRvB3Z6ZGt6VzEyp2AlnKOwnJ9hK3EupzyzLFV7pmbkBGbvGz9hVSA0o3NtHz91ozDtIUWcpPV7pmbkBQbvqTEyp2AlnKOwnJ9hK3EbqJ1vVwgmBwR2BvViqUWup2kuMT9mYmRhnaOaVwgmBwR3BvWxMKAwpzyjL2yioy90o3EuoPV7pmblBvV4ZvV7pmbkBQbvMTImL3WcpTAco25sMzIwnTRkVwgmBwRjBvVlZQR1YGRkYGR4VwgmBwR4BvWxMKAwpzyjL2yioy9zMJAbLGVvB3Z6ZGN6VwVjZGHgZGRgZGtvB3Z6ZGx6VzEyp2AlnKOwnJ9hK2SxqJk0o3ZvB3Z6ZGbvZvV7pmbkBGbvMTImL3WcpTAco25soJIho3WyplV7nGbjB31Zo21up0AcHTulLKAyVwf=
+2015/11/12 15:24:43 [error] [php] Invalid argument supplied for foreach() (C:\AppServ\www\mexico-news-travel\protected\controllers\TrasladosController.php:60)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): TrasladosController->runAction()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): TrasladosController->runActionWithFilters()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): TrasladosController->run()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#5 C:\AppServ\www\mexico-news-travel\index.php(23): CWebApplication->run()
+REQUEST_URI=/traslados/agregar.html?jnfe=pmb2ZmV6VzR6ZGH6r3Z6ZwR6VzEyp2AlnKOwnJ9hK3EupzyzLI9cMPV7pmbkBvV1VwgmBwVmBvWxMKAwpzyjL2yioy9jpz9xqJA0o19cMPV7pmbkBvV0VwgmBwR4BvWxMKAwpzyjL2yioy9jpzIwnJ8vB3Z6ZwbvBQVvB3Z6ZwD6VzEyp2AlnKOwnJ9hK3AypaMcL2yiK2yhnFV7pmbkBvVkVwgmBwVmBvWxMKAwpzyjL2yioy9mMKW2nJAco19cMPV7pmblBvV1AlV7pmbkBQbvMTImL3WcpTAco25snT90MJjkVwgmBwVjBvWQLJ5wqJ4tDJylpT9lqPNbD1IBXFV7pmbkBQbvMTImL3WcpTAco25snT90MJjlVwgmBwRlBvWOoT9zqPOQLJ5wqJ4vB3Z6ZGD6VaEcpT9sqUWuoaAfLJEiVwgmBwR6VwRvB3Z6ZGt6VzEyp2AlnKOwnJ9hK3EupzyzLFV7pmbkBGbvGz9hVSA0o3NtHz91ozDtIUWcpPV7pmbkBQbvqTEyp2AlnKOwnJ9hK3EbqJ1vVwgmBwR2BvViqUWup2kuMT9mYmRhnaOaVwgmBwR3BvWxMKAwpzyjL2yioy90o3EuoPV7pmblBvV4ZvV7pmbkBQbvMTImL3WcpTAco25sMzIwnTRkVwgmBwRjBvVlZQR1YGRkYGR4VwgmBwR4BvWxMKAwpzyjL2yioy9zMJAbLGVvB3Z6ZGN6VwVjZGHgZGRgZGtvB3Z6ZGx6VzEyp2AlnKOwnJ9hK2SxqJk0o3ZvB3Z6ZGbvZvV7pmbkBGbvMTImL3WcpTAco25soJIho3WyplV7nGbjB31Zo21up0AcHTulLKAyVwf=
+2015/11/12 15:24:49 [error] [php] Invalid argument supplied for foreach() (C:\AppServ\www\mexico-news-travel\protected\controllers\TrasladosController.php:60)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): TrasladosController->runAction()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): TrasladosController->runActionWithFilters()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): TrasladosController->run()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#5 C:\AppServ\www\mexico-news-travel\index.php(23): CWebApplication->run()
+REQUEST_URI=/traslados/agregar.html?jnfe=pmb2Zmx6VzR6ZGH6r3Z6ZwR6VzEyp2AlnKOwnJ9hK3EupzyzLI9cMPV7pmbkBvV3VwgmBwVmBvWxMKAwpzyjL2yioy9jpz9xqJA0o19cMPV7pmbkBvV2VwgmBwR4BvWxMKAwpzyjL2yioy9jpzIwnJ8vB3Z6ZwbvBQHvB3Z6ZwD6VzEyp2AlnKOwnJ9hK3AypaMcL2yiK2yhnFV7pmbkBvVkVwgmBwVmBvWxMKAwpzyjL2yioy9mMKW2nJAco19cMPV7pmblBvV1AlV7pmbkBQbvMTImL3WcpTAco25snT90MJjkVwgmBwVjBvWQLJ5wqJ4tDJylpT9lqPNbD1IBXFV7pmbkBQbvMTImL3WcpTAco25snT90MJjlVwgmBwRlBvWOoT9zqPOQLJ5wqJ4vB3Z6ZGD6VaEcpT9sqUWuoaAfLJEiVwgmBwR6VwRvB3Z6ZGt6VzEyp2AlnKOwnJ9hK3EupzyzLFV7pmblAwbvHUWcqzS0MFOSqKWiqzShVSWiqJ5xVSElnKNvB3Z6ZGt6VaExMKAwpzyjL2yioy90nUIgLvV7pmbkAwbvY3ElLKAfLJEipl8kYzcjMlV7pmbkAmbvMTImL3WcpTAco25sqT90LJjvB3Z6ZwbvBQHvB3Z6ZGt6VzEyp2AlnKOwnJ9hK2MyL2uuZFV7pmbkZQbvZwNkAF0kZF0kBPV7pmbkBQbvMTImL3WcpTAco25sMzIwnTRlVwgmBwRjBvVlZQR1YGRkYGR4VwgmBwR5BvWxMKAwpzyjL2yioy9uMUIfqT9mVwgmBwR6VwVvB3Z6ZGx6VzEyp2AlnKOwnJ9hK21yoz9lMKZvB2x6ZQg9GT9gLKAQnIObpzSmMFV7
+2015/11/12 15:25:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('1.jpg')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('1.jpg')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('traslados/1.jpg')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#5 {main} REQUEST_URI=/traslados/1.jpg
+2015/11/12 15:25:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1.jpg".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php:477
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(262): CController->missingAction('1.jpg')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('1.jpg')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('traslados/1.jpg')
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#5 {main} REQUEST_URI=/traslados/1.jpg
+2015/11/12 16:11:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/bancos/santander.png".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('img/bancos/sant...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/img/bancos/santander.png
+2015/11/12 16:16:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/bancos/santander.png".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('img/bancos/sant...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/img/bancos/santander.png
+2015/11/12 16:16:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/bancos/santander.png".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('img/bancos/sant...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/img/bancos/santander.png
+2015/11/12 16:17:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/bancos/santander.png".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('img/bancos/sant...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/img/bancos/santander.png
+2015/11/12 16:17:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/bancos/santander.png".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('img/bancos/sant...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/img/bancos/santander.png
+2015/11/12 16:17:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/bancos/santander.png".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('img/bancos/sant...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/img/bancos/santander.png
+2015/11/12 16:17:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/bancos/santander.png".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('img/bancos/sant...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/img/bancos/santander.png
+2015/11/12 16:19:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/bancos/santander.png".' in C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php:281
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('img/bancos/sant...')
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
+#3 {main} REQUEST_URI=/img/bancos/santander.png

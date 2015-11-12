@@ -8,6 +8,7 @@ var Transfers=React.createClass({
       };
     },
     render:function(){
+
         return(
             <div classname='row'>
                 <Titulo params={this.state.params} fecha={this.state.fecha} destination={this.state.destination} />
@@ -19,17 +20,23 @@ var Transfers=React.createClass({
 
 var Transfer=React.createClass({
     render: function() {
-        var numberPassenger=function(num){
+        var numberPassenger=function(num,moneda){
+            //console.log(this.state.transfers);
             if(num.max_cap>1){
                 return(
+                    <div>
                     <h6>
                     {"From "+num.min_cap+" to "+num.max_cap+" Passenger(s)"}
                     </h6>
+                    <h6>
+                    {"Precio por Vehiculo"}
+                    </h6>
+                    </div>
                     );
             }else{
                 return(
                     <h6>
-                    
+                    {"Precio por Persona : $ "+ Math.round(num.price)+" "+moneda}
                     </h6>
                     );
             }
@@ -41,24 +48,25 @@ var Transfer=React.createClass({
                     <img  src={"/images/transfers/"+this.props.data.type.img} className="responsive-img"/>
                 </div>
                 <div className="col s12 m5 l6">
+
                     <h5 className="tituloCard red-text left-align">{this.props.data.type.name}</h5>
                     <input type="hidden" name="idTour" value={this.props.data.type.id} />
                     <p>
                         {this.props.data.type.description}
                     </p>
-                    {numberPassenger(this.props.data.rate)}
-                    <h6>Rate per vehicle</h6>
+                    {numberPassenger(this.props.data.rate,this.props.params.currency)}
+                    <h6></h6>
                 </div>
                 <div className="col s12 m4 l4 precioDetalle">
                     <div className="right-align col s10 from">
-                        <small>From</small>
+                        <small>Total</small>
                     </div>
                     <div className="right-align col s10 price">
-                        <span>$ {this.props.params.currency}</span><span className="price"> {this.props.data.rate.total}</span>
+                        <span>{this.props.params.currency} $</span><span className="price"> {this.props.data.rate.total}</span>
                     </div>
                     <div className="col s12 m8 offset-m2 l6 offset-l4">
-                        <a href={"/transfers/agregar.html?jnfe="+this.props.data.rate.jnfe} className="col s12 btn red">
-                            BOOK
+                        <a href={"/es/traslados/agregar.html?oftransfer=oftransfer&jnfe="+this.props.data.rate.jnfe} className="col s12 btn red">
+                            RESERVE
                         </a>
                     </div>
                 </div>
@@ -108,8 +116,8 @@ var Titulo=React.createClass({
         return(
             <div classname='col s12'>
                 <h6 className='titulosColor'>{this.props.fecha}</h6>
-                <h5 className='titulosColor'> {"Transfer "+this.props.destination.dest_ini.name+" to "+this.props.destination.dest_end.name}</h5>
-                <h6 className='titulosColor'>{"Adults: "+this.props.params.adults+" - Children: "+this.props.params.ninos}</h6>
+                <h5 className='titulosColor'> {"Translado de "+this.props.destination.dest_ini.name+" a "+this.props.destination.dest_end.name}</h5>
+                <h6 className='titulosColor'>{"Adultos: "+this.props.params.adults+" - Niños: "+this.props.params.ninos}</h6>
             </div>
         );
     }

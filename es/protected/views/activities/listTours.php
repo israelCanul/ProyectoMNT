@@ -12,10 +12,10 @@ $pax_menor=$_REQUEST['tour_child'];
 <div class="row">
     <section id="toursLF" class="contentSide listContainer box jplist">
         <div class="col s12 m10 offset-m1">
-            <h1 class="infoResult">Activities in <?php echo $_REQUEST["tour_destination"]; ?></h1>
+            <h1 class="infoResult">Actividades en <?php echo $_REQUEST["tour_destination"]; ?></h1>
             <h2 class="infoSearch">
-                Traveling on <?php echo Yii::app()->GenericFunctions->convertDate($tour_fecha); ?>
-                - <?php echo $pax_adulto; ?> <?php echo ($pax_adulto == 1) ? "Adult" : "Adults"; ?>, <?php echo $pax_menor; ?> <?php echo ($pax_menor == 1) ? "Child" : "Children"; ?>
+                Viajando el <?php echo Yii::app()->GenericFunctions->convertDate($tour_fecha); ?>
+                - <?php echo $pax_adulto; ?> <?php echo ($pax_adulto == 1) ? "Adulto" : "Adultos"; ?>, <?php echo $pax_menor; ?> <?php echo ($pax_menor == 1) ? "Niño" : "Niños"; ?>
             </h2>
         </div>
         <!-- PANEL DE CONTROLES -->
@@ -27,17 +27,17 @@ $pax_menor=$_REQUEST['tour_child'];
 
                 <!-- Selector de elementos por pagina -->
                 <select id="jplist-select-paging" class="jplist-select browser-default" data-control-type="items-per-page-select" data-control-name="paging" data-control-action="paging">
-                    <option data-number="3"> 3 per page </option>
-                    <option data-number="5" data-default="true"> 5 per page </option>
-                    <option data-number="10"> 10 per page </option>
-                    <option data-number="all"> View All </option>
+                    <option data-number="3"> 3 por página </option>
+                    <option data-number="5" data-default="true"> 5 por página </option>
+                    <option data-number="10"> 10 por página </option>
+                    <option data-number="all"> Ver Todos </option>
                 </select>
 
                 <!-- Selector de ordenacion -->
                 <select id="jplist-select-sort" class="jplist-select browser-default" data-control-type="sort-select" data-control-name="sort" data-control-action="sort">
-                    <option data-path="default">Sort by</option>
-                    <option data-path=".price" data-order="asc" data-type="number"> Price (low to high) </option>
-                    <option data-path=".price" data-order="desc" data-type="number"> Price (high to low) </option>
+                    <option data-path="default">Ordenar por</option>
+                    <option data-path=".price" data-order="asc" data-type="number"> Precio (Menor a Mayor) </option>
+                    <option data-path=".price" data-order="desc" data-type="number"> Precio (Mayor a Menor) </option>
                 </select>
             </div>
 

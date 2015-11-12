@@ -34,7 +34,7 @@ var Tour = React.createClass({
         React.createElement(
           "a",
           { href: urlBase + "toursByDest/" + this.props.data.destination.clave + ".html?" + dataUrl + "&tour_destination=" + encodeURIComponent(this.props.data.destination.name).replace(/%20/g, '+') + "&dest=" + this.props.data.destination.id, className: "red-text" },
-          "Destination : " + this.props.data.destination.name
+          "Destino : " + this.props.data.destination.name
         )
       ),
       React.createElement(
@@ -46,7 +46,7 @@ var Tour = React.createClass({
           React.createElement(
             "small",
             null,
-            "From"
+            "Desde"
           )
         ),
         React.createElement(
@@ -71,7 +71,7 @@ var Tour = React.createClass({
           React.createElement(
             "a",
             { href: urlBase + "tours/" + this.props.data.tour.clave + ".html?" + dataUrl + "&TourId=" + this.props.data.tour.id + "&tour_destination=" + encodeURIComponent(this.props.data.tour.name).replace(/%20/g, '+'), className: "col s12 btn red" },
-            "BOOK"
+            "Reservar"
           )
         )
       )

@@ -38,7 +38,7 @@ class ActivitiesController extends Controller
 
 	public function actionBuscarTours(){
 		 $_REQUEST['lan']=Yii::app()->language;
-		$_REQUEST['moneda']=Yii::app()->params['currency'];
+		$_REQUEST['moneda']=$_SESSION["config_es"]["currency"]; 
 
 
 		switch($_REQUEST['tipo']){
@@ -56,10 +56,12 @@ class ActivitiesController extends Controller
 
 	public function actionFindByDest(){
 
+		/*print_r($_REQUEST);
+		exit();*/
 		$fecha=explode("/", $_REQUEST['tour-Checkin']);
-		$fecha=$fecha[2]."-".$fecha[0]."-".$fecha[1];
+		$fecha=$fecha[2]."-".$fecha[1]."-".$fecha[0];
 
-
+		
 		$tours= file_get_contents(Yii::app()->params['api']."/RestTours/ListByZona/".$_REQUEST['dest'].".html?date=".$fecha."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda']."&ninos=0&adults=2");
 		$dataUrl="tour-Checkin=".$_REQUEST['tour-Checkin']."&tour_adults=".$_REQUEST['tour_adults']."&tour_child=".$_REQUEST['tour_child']."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda'];
 
@@ -70,7 +72,7 @@ class ActivitiesController extends Controller
 	public function actionFindByCat(){
 
 		$fecha=explode("/", $_REQUEST['tour-Checkin']);
-		$fecha=$fecha[2]."-".$fecha[0]."-".$fecha[1];
+		$fecha=$fecha[2]."-".$fecha[1]."-".$fecha[0];
 
 		$tours= file_get_contents(Yii::app()->params['api']."/RestTours/ListByCat/".$_REQUEST['cat'].".html?date=".$fecha."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda']."&ninos=0&adults=2");
 		$dataUrl="tour-Checkin=".$_REQUEST['tour-Checkin']."&tour_adults=".$_REQUEST['tour_adults']."&tour_child=".$_REQUEST['tour_child']."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda'];
@@ -83,7 +85,7 @@ class ActivitiesController extends Controller
 
 		// fechas
 		$fechaTem=explode("/", $_REQUEST['tour-Checkin']);
-		$fechaTem=$fechaTem[2]."-".$fechaTem[0]."-".$fechaTem[1];
+		$fechaTem=$fechaTem[2]."-".$fechaTem[1]."-".$fechaTem[0];
 
 		// url y data para los tours
 		$tours= file_get_contents(Yii::app()->params['api']."/RestTours/ListBySup/".$_REQUEST['sup'].".html?date=".$fechaTem."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda']."&ninos=0&adults=2");
@@ -100,7 +102,7 @@ class ActivitiesController extends Controller
 		// fechas
 		$fechaTem=explode("/", $_REQUEST['tour-Checkin']);
 		$fechaTitulo=$fechaTem[0]."/".$fechaTem[1]."/".$fechaTem[2];
-		$fechaTem=$fechaTem[2]."-".$fechaTem[0]."-".$fechaTem[1];
+		$fechaTem=$fechaTem[2]."-".$fechaTem[1]."-".$fechaTem[0];
 
 		// url y data para los tours
 		$tours= file_get_contents(Yii::app()->params['api']."/RestTours/tour/".$_REQUEST['TourId'].".html?date=".$fechaTem."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda']."&ninos=".$_REQUEST['tour_child']."&adults=".$_REQUEST['tour_adults']);

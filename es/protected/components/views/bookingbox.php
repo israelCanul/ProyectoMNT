@@ -6,8 +6,8 @@
 
 <script type="text/javascript">
 	var HotelsData=<?=file_get_contents(Yii::app()->params["baseUrl"]."destinations/destinations.html")?>;
-	var ToursData=<?=file_get_contents(Yii::app()->params['api']."/restTours/destinations?lan=en"); ?>;
-	var transferData=<?=file_get_contents(Yii::app()->params['api']."/RestTransfers/destinations.html?lan=en");?>;
+	var ToursData=<?=file_get_contents(Yii::app()->params['api']."/restTours/destinations?lan=es"); ?>;
+	var transferData=<?=file_get_contents(Yii::app()->params['api']."/RestTransfers/destinations.html?lan=es");?>;
 	//var transferDataCun=<? //file_get_contents("http://apilomas.dev/RestTransfers/destinationsOptions.html?h=0&a=1:1&lan=en");?>;
 	//var transferDataCoz=<? //file_get_contents("http://apilomas.dev/RestTransfers/destinationsOptions.html?h=0&a=361:11&lan=en");?>;
 	var fecha="<?=date('Y,m,d', strtotime('+2 day'))?>";
@@ -103,7 +103,7 @@
 								<script type="text/javascript">
 									var hab_var_name="Room";
 									var menor_var_name="Children ages";
-								</script>
+								</script> 
 							</div></form>
 
 						</div>
@@ -123,6 +123,7 @@
 										<input class="" type="hidden" name="clave" id="clave" value="<?=$_REQUEST["clave"]; ?>"/>
 										<input class="" type="hidden" name="openTk" id="openTk" value="<?= (($openTk != 1) ? 0 : 1); ?>"/>
 										<input class="" type="hidden" name="seg" id="seg" value="<?=$_REQUEST["seg"]; ?>"/>
+										<input class="" type="hidden" name="moneda" id="seg" value="<?=Yii::app()->params['Moneda']?>"/>
 									</div>
 									<div class="input-field col s12 m6 l2">
 										<input required="required" value="<?=$_REQUEST["tour-Checkin"]?>"  type="date" name="tour-Checkin" id="tour-Checkin" class="datepicker" >

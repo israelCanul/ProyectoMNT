@@ -41,69 +41,69 @@ var Detalle=React.createClass({
         return(
             <div className='col s12 detalles descriptionTour'>
                 <div className="col s12">
-                    <h6>Duration:</h6>
+                    <h6>Duración:</h6>
                     <p>
                         {this.props.titulo.duracion}
                     </p>
                 </div>
                 <div className='col s12'>
-                    <h6>Available on the following days</h6>
+                    <h6>Disponible los días</h6>
                     <div className='dayAvailable col s4 m3 l1'>
-                        <h6>Monday</h6>
+                        <h6>Lunes</h6>
                         <img src={"/images/icon/"+this.props.disponibilidad.lunes} className='responsive-img'/>
                     </div>
                     <div className='dayAvailable col s4 m3 l1'>
-                        <h6>Tuesday</h6>
+                        <h6>Martes</h6>
                         <img src={"/images/icon/"+this.props.disponibilidad.martes} className='responsive-img'/>
                     </div>
                     <div className='dayAvailable col s4 m3 l1'>
-                        <h6>Wednesday</h6>
+                        <h6>Miércoles</h6>
                         <img src={"/images/icon/"+this.props.disponibilidad.miercoles} className='responsive-img'/>
                     </div>
                     <div className='dayAvailable col s4 m3 l1'>
-                        <h6>Thursday</h6>
+                        <h6>Jueves</h6>
                         <img src={"/images/icon/"+this.props.disponibilidad.jueves} className='responsive-img'/>
                     </div>
                     <div className='dayAvailable col s4 m3 l1'>
-                        <h6>Friday</h6>
+                        <h6>Viernes</h6>
                         <img src={"/images/icon/"+this.props.disponibilidad.viernes} className='responsive-img'/>
                     </div>
                     <div className='dayAvailable col s4 m3 l1'>
-                        <h6>Saturday</h6>
+                        <h6>Sábado</h6>
                         <img src={"/images/icon/"+this.props.disponibilidad.sabado} className='responsive-img'/>
                     </div>
                     <div className='dayAvailable col s4 m3 l1'>
-                        <h6>Sunday</h6>
+                        <h6>Domingo</h6>
                         <img src={"/images/icon/"+this.props.disponibilidad.domingo} className='responsive-img'/>
                     </div>
                 </div>
                 <div className="col s12">
-                    <h6>Departure</h6>
+                    <h6>Salidas</h6>
                     <p dangerouslySetInnerHTML={{__html: departure}}>
                     </p>
                 </div>
                 <div className="col s12">
-                    <h6>Included</h6>
+                    <h6>Incluye</h6>
                     <p dangerouslySetInnerHTML={{__html: inclutions}}>
                     </p>
                 </div>
                 <div className="col s12">
-                    <h6>Not Included</h6>
+                    <h6>No Incluye</h6>
                     <p dangerouslySetInnerHTML={{__html: noinclutions}}>
                     </p>
                 </div>
                 <div className="col s12">
-                    <h6>Recommendations</h6>
+                    <h6>Recomendaciones</h6>
                     <p dangerouslySetInnerHTML={{__html: recommendations}}>
                     </p>
                 </div>
                 <div className="col s12">
-                    <h6>Regulations</h6>
+                    <h6>Regulaciones</h6>
                     <p dangerouslySetInnerHTML={{__html: regulations}}>
                     </p>
                 </div>
                 <div className="col s12">
-                    <h6>Cancellation Policies</h6>
+                    <h6>Politica de cancelación</h6>
                     <p dangerouslySetInnerHTML={{__html: policies}}>
                     </p>
                 </div>
@@ -124,7 +124,7 @@ var Rates=React.createClass({
             if(params.adults>0){
                 return(
                     <div className='col 12'>
-                        {"Adults: "+params.currency+" "+rate.tarifaAdult}
+                        {"Adultos: "+params.currency+" "+rate.tarifaAdult}
                     </div>
                 );
             }
@@ -133,7 +133,7 @@ var Rates=React.createClass({
             if(params.ninos>0){
                 return(
                     <div className='col 12'>
-                        {"Children: "+params.currency+" "+rate.tarifaNino}
+                        {"Niños: "+params.currency+" "+rate.tarifaNino}
                     </div>
                 );
             }
@@ -142,7 +142,7 @@ var Rates=React.createClass({
             if(rate.tarifaDisponible==1){
                 return(
                     <div className='col s12 m6 rateRight'>
-                        <input type='submit' value='Book' className='btn btn-large col s12 red'/>
+                        <input type='submit' value='RESERVE' className='btn btn-large col s12 red'/>
                         <input type='hidden' value='1' name='fromDetails' className='btn btn-large col s12 red'/>
                         <input  name='jnfe' value={rate.jnfe} type='hidden' />
                     </div>
@@ -162,7 +162,7 @@ var Rates=React.createClass({
         }
         return(
             <div className='col s12 rate'>
-                <form method="Post" action='/tour/agregar.html'>
+                <form method="Post" action='/es/tour/agregar.html'>
                 <h6 className='red-text'>{rate.tarifaNombre}</h6>
                 <div className='col s12 m6 l8 rateLeft'>
                     {tarifaNino(rate)}
@@ -214,12 +214,12 @@ var Titulo=React.createClass({
               <div className='col s12'>
                 <div className='descriptionTour row'>
                     <div className='col s12 m8'>
-                    <h5 className='infoSearch'>{"Tour-"+this.props.titulo.name}</h5>
+                    <h5 className='infoSearch'>{"Tour -"+this.props.titulo.name}</h5>
                     <h6 className='infoSearch'>{this.props.destination.name}</h6>
-                    <h6 className='infoSearch'>{"On "+this.props.fecha+", "+this.props.params.adults+" Adults, "+this.props.params.ninos+" Children"}</h6>
+                    <h6 className='infoSearch'>{""+this.props.fecha+", "+this.props.params.adults+" Adultos, "+this.props.params.ninos+" Niños"}</h6>
                     </div>
                     <div className='col s12 m4'>
-                        <div className='textoTitulo'>{"Operated by: "+this.props.supplier}</div>
+                        <div className='textoTitulo'>{"Operado por: "+this.props.supplier}</div>
                     </div>
                 </div>
               </div>
