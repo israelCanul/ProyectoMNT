@@ -603,7 +603,7 @@ class DestinationsController extends Controller
 						}
 					}
 
-					$jnfe           = Yii::app()->GenericFunctions->ProtectVar($ta["tarifa_id"] . "@@" . $ta["tarifa_tipo"] . "@@" . $ta["tarifa_transportacion"] . "@@" . $total . "@@" . 'Cancun Airport' . "@@" . $data[3] . "@@" . $ta["tipo_nombre_" . Yii::app()->language] . "@@/images/traslados/" . $ta["tipo_imagen"] . ".jpg@@" . 1);
+					$jnfe           = Yii::app()->GenericFunctions->ProtectVar($ta["tarifa_id"] . "@@" . $ta["tarifa_tipo"] . "@@" . $ta["tarifa_transportacion"] . "@@" . $total . "@@" . 'Cancun Airport' . "@@" . $data[3] . "@@" . $ta["tipo_nombre_" . Yii::app()->language] . "@@/img/traslados/" . $ta["tipo_imagen"] . ".jpg@@" . 1);
 					$tipo_translado = 2;
 
 					$transfer_FechaIN = date_create($Parameters["Dates"]["CheckIn"]);

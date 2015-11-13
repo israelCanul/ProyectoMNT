@@ -9479,3 +9479,23 @@ Stack trace:
 #1 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
 #2 C:\AppServ\www\mexico-news-travel\index.php(23): CApplication->run()
 #3 {main} REQUEST_URI=/favicon.ico
+2015/11/13 17:01:25 [error] [php] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed (C:\AppServ\www\mexico-news-travel\protected\controllers\GruposController.php:36)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): GruposController->runAction()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): GruposController->runActionWithFilters()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): GruposController->run()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#6 C:\AppServ\www\mexico-news-travel\index.php(23): CWebApplication->run()
+REQUEST_URI=/grupos/Solicitud
+2015/11/13 17:03:18 [error] [php] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed (C:\AppServ\www\mexico-news-travel\protected\controllers\GruposController.php:36)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): GruposController->runAction()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): GruposController->runActionWithFilters()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): GruposController->run()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#6 C:\AppServ\www\mexico-news-travel\index.php(23): CWebApplication->run()
+REQUEST_URI=/grupos/Solicitud

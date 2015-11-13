@@ -2,7 +2,7 @@ $(document).ready(function(e) {
 
    var html = "<img src='/img/flag-EN.gif' style='height: 20px;''> 414-921-99-(34 / 35)";
    $("#contact_live").html(html);
-   var dateFormat='mm/dd/yy';
+   var dateFormat='dd/mm/yy';
 	var tour_dates = $( "#group_fecha").datepicker({
 		defaultDate: 1,
 		changeMonth: false,
@@ -28,7 +28,7 @@ $(document).ready(function(e) {
         	//console.log('Datos serializados: '+dataString);
         	$.ajax({
             	type: "POST",
-            	url: "/grupos/Solicitud",
+            	url: "/es/grupos/Solicitud",
             	data: dataString,
             	success: function(data) {
                   console.log(data);

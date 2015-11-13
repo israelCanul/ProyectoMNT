@@ -8,7 +8,7 @@ $(document).ready(function(){
 		    var dataString 	= $('#form_contact').serialize();
 			$.ajax({
             	type: "POST",
-            	url: "/site/contact",
+            	url: "/es/site/contact",
             	data: dataString,
 
             	success: function(data) {

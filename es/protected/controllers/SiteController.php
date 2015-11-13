@@ -141,9 +141,9 @@ class SiteController extends Controller
 		$mail->MsgHTML( $message );
 		
 		if(!$mail->Send()) {
-			echo 'WE ARE HAVING TECHNICAL DIFFICULTIES, Please try again later';
+			echo 'Estamos experimentando dificultades técnicas. Por favor inténtelo más tarde';
 		} else {
-			echo 'YOUR REQUEST HAS BEEN SUCCESFULLY SENT, You will be contacted soon';
+			echo 'Gracias por suscribirse a nuestro boletín. ¡Pronto recibirá información y nuestras mejores promociones!';
 		}
 	}
 
