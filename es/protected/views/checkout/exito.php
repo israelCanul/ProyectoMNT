@@ -26,7 +26,7 @@
 	</div>
 	
 	<div class="bloque" style="width: 300px; text-align: center; float: right; padding-top: 20px; padding-bottom:20px;">
-		<form method="get" action="/">
+		<form method="get" action="/es">
 			
 			<input type="submit" style="font-size: 20pt; padding: 10px 15px; background-color:#00aaa6; color: #FFF;" class="btnBlueSelectRoom" value="<?= Yii::t("global","Continuar")?>">
 		</form>

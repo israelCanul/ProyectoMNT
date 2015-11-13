@@ -65,7 +65,7 @@
 				$_REQUEST['trans_act']="";
 				$_REQUEST['tour_act']="active";
 				$_REQUEST['hotel_act']="";
-				$_REQUEST["clave"]=$_REQUEST["prod"];
+				$_REQUEST["clave"]=$_REQUEST["clave"];
 				$_REQUEST['request']=1;
 			}
 

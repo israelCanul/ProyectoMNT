@@ -495,7 +495,7 @@ exit();*/
             $cs = Yii::app()->getclientScript();
             $cs->registerScriptFile(Yii::app()->params["baseUrl"] . '/js/page/checkout/checkout.js', CClientScript::POS_END);
             $cs->registerCssFile(Yii::app()->params["baseUrl"] . '/css/page/checkout/checkout.css');
-            $email_test = array("egonzalez@dexabyte.com.mx","lcaballero@dexabyte.com.mx","malvarez@dexabyte.com.mx","icanul@dexabyte.com.mx");
+            $email_test = array("egonzalez@dexabyte.com.mx","lcaballero@dexabyte.com.mx","malvarez@dexabyte.com.mx");
             
             //-> Es un pago con Tarjeta de Credito
             $GatewayMethod = explode("_", $_REQUEST["gateway_method"]);
@@ -503,20 +503,23 @@ exit();*/
             if (Yii::app()->params['Moneda'] == "MXN" && $GatewayMethod[0] == "santander") {
                 if ($GatewayMethod[1] == 1) {
                     Yii::app()->Santander->setVars("4018", "001", "MEX", "4018WEUS0", "4018WEUS0", "15365", "3", "MXN", "A7BEC7D1", "prod");
+                    //Pruebas de pago
+                    if(in_array($_REQUEST["email"],$email_test)){
+                        Yii::app()->Santander->setVars("1141", "002", "MEX", "1141SIUS0", "1141SIUS0", "52863", "3", "MXN", "114AF671", "dev");
+                    } 
                 } else if ($GatewayMethod[1] == 3) {
                     Yii::app()->Santander->setVars("4018", "001", "MEX", "4018WEUS0", "4018WEUS0", "15531", "3", "MXN", "A7BEC7D1", "prod");
                 } else if ($GatewayMethod[1] == 6) {
                     Yii::app()->Santander->setVars("4018", "001", "MEX", "4018WEUS0", "4018WEUS0", "15532", "3", "MXN", "A7BEC7D1", "prod");
                 }
-                if(in_array($_REQUEST["email"],$email_test)){
-                   Yii::app()->Santander->setVars("1141", "002", "MEX", "1141SIUS0", "1141SIUS0", "52863", "3", "MXN", "114AF671", "dev");
-                } 
             }else{
                 if(in_array($txtEmail,$email_test)){
                     Yii::app()->Santander->setVars("1141", "002", "MEX", "1141SIUS0", "1141SIUS0", "52868", "3", "USD", "114AF671", "dev");
                 }
             }
             
+            
+
             $status = 2;
             $sucess = false;
             $auth = "";

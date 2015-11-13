@@ -98,7 +98,7 @@ class ActivitiesController extends Controller
 	}
 
 	public function actionDetalleTour(){
-
+		
 		// fechas
 		$fechaTem=explode("/", $_REQUEST['tour-Checkin']);
 		$fechaTitulo=$fechaTem[0]."/".$fechaTem[1]."/".$fechaTem[2];

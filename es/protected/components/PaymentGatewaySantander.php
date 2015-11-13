@@ -32,7 +32,21 @@
 			$this->Semilla = $Semilla;
 			$this->tUrl = $tUrl;
 		}
-		
+		public function getVars(){
+			return array( 
+			'idCompany'=>$this->idCompany,
+			'idBranch'=>$this->idBranch,
+			'Country'=>$this->Country,
+			'User'=>$this->User,
+			'Pwd'=>$this->Pwd,
+			'Merchant'=>$this->Merchant,
+			'Crypto'=>$this->Crypto,
+			'Currency'=>$this->Currency,
+			'Semilla'=>$this->Semilla,
+			'tUrl'=>$this->tUrl,
+			'operacion'=>$this->Operacion,
+			);
+		}	
 		public function limpiaVariable($str){
 			$str = str_replace("%0D","",$str);
 			$str = str_replace("%0A","",$str);

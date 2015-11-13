@@ -12,6 +12,8 @@
 $hayHotel=false;
 $checkInDate='';
 $checkOutDate='';
+$fecha_temp='';
+$temp_InDate='0';
 ?>
         <?php $languaje=strtoupper(Yii::app()->language); ?>
         <div class="content contentPage">
@@ -60,9 +62,10 @@ $checkOutDate='';
                                     $checkOutDate = date_create($_p->descripcion_fecha2);
 
                                     $temp_InDate = date("d/m/Y",strtotime($_p->descripcion_fecha1."+1 day"));
-                                    $temp_InDate = date_create($temp_InDate);
+                                    //$temp_InDate = date_create($temp_InDate);
                                     $temp_Adults = $_p['descripcion_adultos'];
                                     $temp_Childs = $_p['descripcion_menores'];
+                                    /*print_r("Hotel ".$temp_InDate);*/
                                     ?>
                                     <div class="checkoutProducto borderGray">
                                         <img src='<?= $_p->descripcion_thumb ?>' alt='Hotel' />
@@ -118,8 +121,13 @@ $checkOutDate='';
 
                                     $temp_Adults = $_p['descripcion_adultos'];
                                     $temp_Childs = $_p['descripcion_menores'];
+                                    /*print_r($_p->descripcion_fecha1);
+                                    print_r(strtotime($_p->descripcion_fecha1)."<br>");
+                                    print_r(date("d/m/Y",strtotime($_p->descripcion_fecha1."+1 day")));
+                                    exit();*/
                                     $temp_InDate = date("d/m/Y",strtotime($_p->descripcion_fecha1."+1 day"));
-                                    $temp_InDate = date_create($temp_InDate);
+                                    //$temp_InDate = date_create($temp_InDate);
+                                    /*print_r($temp_InDate);*/
                                     ?>
                                     <div class='checkoutProducto borderGray'>
 
@@ -168,9 +176,11 @@ $checkOutDate='';
                                     $temp_Transfer = 'true';
                                     $temp_Adults = $_p['descripcion_adultos'];
                                     $temp_Childs = $_p['descripcion_menores'];
-                                    $temp_InDate = date("m/d/Y",strtotime($_p->descripcion_fecha1."+1 day"));
-                                    $temp_InDate = date_create($temp_InDate);
+                                    $temp_InDate = date("d/m/Y",strtotime($_p->descripcion_fecha1."+1 day"));
+                                    //$temp_InDate = date_create($temp_InDate);
                                     $transferId[$_p->descripcion_producto_id] =  Yii::app()->GenericFunctions->ProtectVar($_p->descripcion_id);
+                                    /*print_r("trans ");
+                                    print_r($temp_InDate);*/
                                     /*print_r("<pre>");
                                     print_r($_p->descripcion_fecha2);
                                     exit();*/
@@ -275,7 +285,7 @@ $checkOutDate='';
 
 
                 <!--<label class="suplement_your_trip">Making your trip better</label>-->
-
+                
                 <? if( $temp_Hotel == true && (isset($infotTransfer[16]) || isset($infotTransfer[6]))) {?>
                     <? $transfer = $infotTransfer[2]; ?>
                     <label class="title_product_recomendation borderGray ">Mejora tu experiencia de viaje <span style = "font-size:1rem;"> ( <?=  $transfer->descripcion_hotel1 ?> - <?= $transfer->descripcion_hotel2 ?> )</span></label>
@@ -445,157 +455,7 @@ $checkOutDate='';
                 /*print_r(sizeof($_Htls->Hotel));
                 exit();*/
                 ?>
-                <?php if(sizeof($_Htls->Hotel) > 0 && !empty($_Htls->Hotel) && !$hayHotel){ ?>
-                    <label class="title_product_recomendation borderGray ">Hoteles</label>
-
-                    <div class="bloque prod_detail_contained borderGray" id="checkout_box_prod">
-
-                        <div class="bloque prod_home_displayer_option_visualizer" id="option_visualizer_selected_tours" style="display: block;">
-                            <div class="main_enc_blue_gray curved">
-                                <div class="clear"></div>
-                            </div>
-
-                            <div class="clear" style="padding:0px;"></div>
-
-                            <div class="bloque"id="main_hotels">
-
-                                <div class="bloque prod_pagination" id="pagination_1">
-                                    <?php
-                                    $howManyProds = 0;
-                                    $howManyPages = 1;
-                                    $Trs          = array();
-                                    if(sizeof($_Htls->Hotel) > 0){
-                                        foreach($_Htls->Hotel as $p){
-                                            $urlHotel = $p->attributes()->hotel_keyword;
-                                            //Agrego el Hotel a un Array para el Filtro
-                                            $_Tr = array("Price"=>$p["tarifa_precio_adulto"],"Id"=>$p["tour_id"],"Name"=>((Yii::app()->language == "en") ? $p["tour_nombre"] : $p["tour_nombre_es"] ),"Category"=>"");
-
-
-                                            if($howManyProds == 10){
-                                                $howManyProds = 0;
-                                                $howManyPages++;
-                                                echo "</div>";
-                                                echo '<div class="bloque prod_pagination" id="pagination_'. $howManyPages . '" style="display: none;">';
-                                            }
-
-
-                                            $d = $p["tour_destino"];
-                                            $preciosaB = "$" . number_format(Yii::app()->Currency->convert($_SESSION["config_es"]["currency"],$p["tarifa_precio_adulto"],0)) . "<span class='currency_code'>" . $_SESSION["config_es"]["currency"] . "</span>";
-
-                                            if($p["tarifa_precio_adulto"] == 0){
-                                                $preciosaB = "871". "<span class='currency_code'>" . $_SESSION["config_es"]["currency"] . "</span>";
-                                            }?>
-                                            <div class="promotion_home_info_displayer checkout">
-                                                <a href="/destination/<?php echo $urlHotel; ?>.html" title="<?= $p->attributes()->name; ?>"  class="btn_img_tour_link curved">
-                                                    <img class="full-width" src='<?php echo $p->attributes()->thumb; ?>' alt='<?php echo utf8_decode($p->attributes()->name); ?>' />
-                                                </a>
-                                                <h1 class="misc_book_info_txt_home nametur_mobile ">
-                                                    <?php
-                                                    echo utf8_decode($p->attributes()->name);
-                                                    ?>
-                                                </h1>
-
-                                                <div class="div_misc_info_producto">
-                                                    <div class="fontsize_mobil">
-                                                        <h1 class="misc_book_info_txt_home nametour_desk">
-                                                            <?php if((float)$p->attributes()->minAverPrice == 99999999 || (float)$p->attributes()->minAverPrice == 0){ ?>
-                                                                <a  href='/destination/<?php echo $urlHotel; ?>.html' title='<?php echo Yii::app()->GenericFunctions->makeSinAcento(utf8_decode($p->attributes()->name)); ?>'><span class="titleHotel"><div style="display:none">z</div><?php echo Yii::app()->GenericFunctions->makeSinAcento($p->attributes()->name); ?><span></a>
-                                                            <?}else{?>
-                                                                <a  href='/destination/<?php echo $urlHotel; ?>.html' title='<?php echo Yii::app()->GenericFunctions->makeSinAcento(utf8_decode($p->attributes()->name)); ?>'><span class="titleHotel"><?php echo Yii::app()->GenericFunctions->makeSinAcento($p->attributes()->name); ?><span></a>
-                                                            <?}?>
-                                                        </h1>
-                                                        <h6 >Locación: <?= Yii::app()->GenericFunctions->makeSinAcento($p->Location->attributes()->city); ?></h6>
-                                                        <label>
-                                                            <?php
-                                                            echo substr($p->attributes()->desc,0,190);
-                                                            ?>
-                                                        </label>
-                                                        <a class = 'checkut_moredetails' href="/destination/<?php echo $urlHotel; ?>.html">Mas detalles</a>
-                                                    </div>
-                                                    <div class="checkout_div_price row">
-                                                        <span class="elementCategory"><?php echo Yii::app()->GenericFunctions->makeStars((float)$p->attributes()->starsLevel); ?></span>
-                                                        <label class="description_price col s12">
-                                                            From :
-                                                        </label>
-                                                        <label class="label_price  col s12">
-                                                            <?php if((float)$p->attributes()->minAverPrice == 99999999 || (float)$p->attributes()->minAverPrice == 0){ ?>
-                                                                <article class="elementPrice">
-                                                                    <span><?php echo Yii::t("global","Agotado"); ?>	</span>
-                                                                </article>
-                                                            <?php }else{ ?>
-                                                                <article class="elementPrice">
-                                                                    <span class='currency_code'><?php echo $_SESSION["config_es"]["currency"]; ?></span> $ <?php echo number_format((float)$p->attributes()->minAverPrice,0); ?>
-                                                                </article>
-                                                            <?php } ?>
-                                                        </label>
-                                                        <a class="fontsize_mobil a_selectDatesHotel  col s12" href="/destination/<?php echo $urlHotel; ?>.html" >BOOK</a>
-                                                    </div>
-                                                </div>
-                                                <div class="hide div_hotelExtra">
-                                                    <form class="cotiza_hotel_extra" action="<?= $this->createUrl('tours/buscar') ?>">
-                                                        <input type="hidden" name="dest"			 value="<?= $p["destino_clave"] ?>"/>
-                                                        <input type="hidden" name="prod"			 value="<?= $p["tour_clave"] ?>"/>
-                                                        <input type="hidden" name="isTourCategory"	 value="0"/>
-                                                        <input type="hidden" name="tour_destination" value="<?=  $p["tour_nombre"] ?>"/>
-                                                        <input type="hidden" name="TourId"			 value="<?= $p['tour_id'] ?>"/>
-                                                        <input type="hidden" name="ProveedorId"		 value="0"/>
-                                                        <input type="hidden" name="checkout_tour" 	value="ajax"/>
-                                                        <div>
-                                                            <label>Dates: </label>
-                                                            <input type="text" name="fecha" value="<?= date_format($temp_InDate, 'm/d/Y')?>" class="dateInput"/>
-
-                                                        </div>
-                                                        <div>
-                                                            <label>Adults: </label>
-                                                            <input type="number" name="tour_adults" value="<?= $temp_Adults ?>" class="num_adults" />
-                                                        </div>
-                                                        <div>
-                                                            <label>Children: </label>
-                                                            <input type= "number" name="tour_childs" value="<?= $temp_Childs ?>" class="num_childs"/>
-                                                        </div>
-                                                        <input type="submit" value="Update Rates" class="submitForm"/>
-                                                    </form>
-                                                    <div class="rate_hotel_extra">
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <?php
-                                            array_push($Trs,$_Tr);
-                                            $howManyProds++;
-                                            $i_real = $p["tour_id"];
-
-                                        }
-                                        $_SESSION["TourSearch"][$_Cr]["Tours"] = $Trs;
-                                    }else{
-                                        //-> No hubo resultados
-                                    }
-                                    ?>
-                                </div>
-
-                                <div class="bloque" id="pagination_product">
-                                    <div class="bloque" id="misc_pagination_show_howmany">
-                                        <?= Yii::t("global","Mostrar"); ?>:
-                                        &nbsp;&nbsp;
-                                        <span class="howmany_show_counter curved">10</span>
-                                    </div>
-                                    <div class="bloque" id="misc_controls_pages_show" style="margin-top: -11px;">
-                                        <a href="#" title="Anterior" class="curved btn_nav_prev_pagination">&laquo; <?= Yii::t("global","Anterior"); ?></a>
-
-                                        <? for($i=1;$i<=$howManyPages;$i++){?>
-                                            <a href="#" title="Pagina <?= $i; ?>" rel="<?= $i; ?>" class="misc_pagination_page_selector_option curved <?= (($i == 1) ? "active" : ""); ?>"><?= $i; ?></a>
-
-                                        <? }?>
-
-                                        <a href="#" title="Siguiente" class="curved btn_nav_next_pagination"><?= Yii::t("global","Siguiente"); ?> &raquo;</a>
-                                        <a href="#" title="Arriba" class="curved">&uarr; <?= Yii::t("global","Ir arriba"); ?></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                <?} if(sizeof($_Tours) > 0){?>
+                <? if(sizeof($_Tours) > 0){?>
 
                     <label class="title_product_recomendation borderGray ">Actividades</label>
 
@@ -639,14 +499,14 @@ $checkOutDate='';
                                                     "activities/detalle",
                                                     "pax_adulto"       => $temp_Adults,
                                                     "pax_menor"        => $temp_Childs,
-                                                    "fecha"            => date_format($temp_InDate,'d/m/Y'),
+                                                    "fecha"            => $temp_InDate,
                                                     "dest"             => $p["destino_clave"],
                                                     "prod"             => $p["tour_clave_es"],
                                                     "isTourCategory"   => 0,
                                                     "tour_destination" =>  $p["tour_nombre_es"],
                                                     "TourId"           => $p['tour_id'],
                                                     "ProveedorId"      => 0,
-                                                    "tour_fecha"       => date_format($temp_InDate,'d/m/Y'),
+                                                    "tour_fecha"       => $temp_InDate,
                                                     "tour_adults"      => $temp_Adults,
                                                     "tour_childs"      => $temp_Childs
                                                 );
@@ -732,7 +592,7 @@ $checkOutDate='';
                                                             <input type="hidden" name="checkout_tour" 	value="ajax"/>
                                                             <div class="input-field col s4">
                                                                 <label>Fecha: </label>
-                                                                <input type="text" name="fecha" value="<?= date_format($temp_InDate, 'm/d/Y')?>" class="datepicker-tour-checkout"/>
+                                                                <input type="text" name="fecha" value="<?=$temp_InDate?>" class="datepicker-tour-checkout"/>
                                                             </div>
                                                             <div class="input-field col s4">
 
@@ -921,7 +781,7 @@ $checkOutDate='';
                     clear: 'Clear',
                     close: 'Close',
                     // The format to show on the `input` element
-                    format: 'mm/dd/yyyy',
+                    format: 'dd/mm/yyyy',
                     onOpen: function() {
                         //console.log('Opened up!')
                     },
@@ -969,7 +829,7 @@ $checkOutDate='';
                     clear: 'Clear',
                     close: 'Close',
                     // The format to show on the `input` element
-                    format: 'mm/dd/yyyy',
+                    format: 'dd/mm/yyyy',
                     onOpen: function() {
                     //console.log('Opened up!')
                 },

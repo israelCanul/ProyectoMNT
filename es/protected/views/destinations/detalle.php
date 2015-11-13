@@ -573,13 +573,17 @@
 										echo "<div class='elementBook'>";
 										//Ezequiel Hoteles bajo solicitud 201405005	
 										if($Hotel->attributes()->hotelVenta==1){
-											echo '<input type="submit" class="book curved btnBlueSelectRoom  btn btn-large" rel="abrirChat" value="ON REQUEST >">';
+											echo "</form>";
+											echo "</div>";
+											echo '<input type="submit" class="book curved btnBlueSelectRoom  btn btn-large" rel="abrirChat" value="Bajo solicitud >">';
 										}else{
 											echo "<input type='submit' value='RESERVE' class='book btnBlueSelectRoom  btn btn-large' />";
+											echo "</form>";
+											echo "</div>";
 										}
 																		
-										echo "</form>";
-										echo "</div>";
+										
+										
 									}else{
 										$tNights = (int) $_r->attributes()->nights;
 										$minStay = (int) $_r->attributes()->min_stay;
