@@ -1,3 +1,7 @@
+<?
+unset($_SESSION['datosKey']);
+unset($_SESSION['datosKeypgR']);
+?>
 <div class="row"></div>
 <div class="row bookin-form1" style="z-index:10;position: relative;">
 	<div class="col s12">
@@ -326,10 +330,24 @@
 									$promoImprimidas = array();
 									foreach($_r->Occup->Price as $ppHall){
 										if((int)$ppHall->attributes()->promotion>0&&!in_array((string)$ppHall->attributes()->promotion,$promoImprimidas)&&(int)$ppHall->attributes()->available==1){
-										echo "<div class='hotelPromotion'>Promoción: <span>" . (string) $ppHall->attributes()->promotiondescrip."</span></div>";
+											echo "<span class='bloque promotion_name_displayer' style='padding: 0px; margin-top: 3px; text-align: left !important; '>";														
+											echo "Promoción: <strong style='color: #00aaa6; font-size: 1rem;'>" .  (string) $ppHall->attributes()->promotiondescrip."</strong>";
+											echo "</span><br/>";
+												$promoImprimidas[]=(string)$ppHall->attributes()->promotion;
+											
+											$promotionini = Yii::app()->GenericFunctions->convierteFechaLetra(date('d/m/Y', strtotime($ppHall->attributes()->promotionini)), 2, 2);
+											$promotionfin = Yii::app()->GenericFunctions->convierteFechaLetra(date('d/m/Y', strtotime($ppHall->attributes()->promotionfin)), 2, 2);
+											$promotionestadiaini= Yii::app()->GenericFunctions->convierteFechaLetra(date('d/m/Y', strtotime($ppHall->attributes()->promotionestadiaini)), 2, 2);
+											$promotionestadiafin = Yii::app()->GenericFunctions->convierteFechaLetra(date('d/m/Y', strtotime($ppHall->attributes()->promotionestadiafin)), 2, 2);
+											
+											echo "Reservando del: <strong style='color: #00aaa6; font-size: 1rem;'>".$promotionini." al ".$promotionfin.".</strong>";
+											echo "<br/> Válido: <strong style='color: #00aaa6; font-size: 1rem;'>".$promotionestadiaini." al ".$promotionestadiafin.".</strong>";
+											echo "<br/>";
+
+										/*echo "<div class='hotelPromotion'>Promoción: <span>" . (string) $ppHall->attributes()->promotiondescrip."</span></div>";
 										$promoImprimidas[]=(string)$ppHall->attributes()->promotion;
 										echo "<div class='hotelBookWindow'>Reservando del : <span>" . GenericFunctions::convierteFechaLetra(date('d/m/Y', strtotime($ppHall->attributes()->promotionini)),2,2)." a ". GenericFunctions::convierteFechaLetra(date('d/m/Y', strtotime($ppHall->attributes()->promotionfin)),2,2).".</span></div>";
-										echo "<div class='hotelPromoValid'> Válido: <span>" . GenericFunctions::convierteFechaLetra(date('d/m/Y', strtotime($ppHall->attributes()->promotionestadiaini)),2,2)." a ".GenericFunctions::convierteFechaLetra(date('d/m/Y', strtotime($ppHall->attributes()->promotionestadiafin)),2,2).".</span></div>";	
+										echo "<div class='hotelPromoValid'> Válido: <span>" . GenericFunctions::convierteFechaLetra(date('d/m/Y', strtotime($ppHall->attributes()->promotionestadiaini)),2,2)." a ".GenericFunctions::convierteFechaLetra(date('d/m/Y', strtotime($ppHall->attributes()->promotionestadiafin)),2,2).".</span></div>";*/	
 										}
 									}
 									                    	
@@ -433,6 +451,11 @@
 											$countHotel++;
 										}
 									
+										if($totalNinos>0){
+											if($hab_noacepta_mn==1){
+											$thisDayAvailable=0;
+											}									
+										}
 										
 										if($i==0){
 											echo "<tr >";
@@ -478,8 +501,7 @@
 										echo "</td>";
 										
 										$i++;
-										$index++;
-										
+										$index++;										
 										
 									}
 									
@@ -488,6 +510,9 @@
 									$periodo = explode("-",$fecha_noche);
 									
 									for($a=$index;$a<$_noches;$a++){
+										if($i == 7){
+											echo "</tr>";
+										}
 										$i++;
 										$fecha_noche_ND = $periodo[0]."-".$periodo[1]."-".($periodo[2]+$masD);
 										
@@ -544,7 +569,7 @@
 										}
 
 										$_dtPrice = array($_dataPrice,$RoomInfo);
-										
+										$_SESSION['datosKey'][]=Yii::app()->GenericFunctions->ProtectVar($ocupid . "@@" . $Hotel->attributes()->hotelId . "@@" . $_r->attributes()->name . "@@" . $Hotel->attributes()->name . "@@" . $total . "@@" . $Hotel->attributes()->desc . "@@" . $Price->Board->attributes()->bbId . "@@" . $Price->Board->attributes()->price . "@@". str_replace("/110/","/160/",$Hotel->attributes()->thumb) . "@@". $Price->Board->attributes()->name . "@@" . (string) $Hotel->Location->attributes()->address . "@@" . base64_encode(serialize($_dtPrice)));
 										echo "<input class='misc_btn_rate_select' type=\"hidden\" name=\"jnfe\" value=\"" . Yii::app()->GenericFunctions->ProtectVar($ocupid . "@@" . $Hotel->attributes()->hotelId . "@@" . $_r->attributes()->name . "@@" . $Hotel->attributes()->name . "@@" . $total . "@@" . $Hotel->attributes()->desc . "@@" . $Price->Board->attributes()->bbId . "@@" . $Price->Board->attributes()->price . "@@". str_replace("/110/","/160/",$Hotel->attributes()->thumb) . "@@". $Price->Board->attributes()->name . "@@" . (string) $Hotel->Location->attributes()->address . "@@" . base64_encode(serialize($_dtPrice))) . "\" />";
 										echo "<input type='hidden' name='promo_id'  value=".$Price->Discount->attributes()->id.">";
 										echo "<input type='hidden' name='promo_seg'  value=".$_REQUEST["seg"].">";
@@ -561,7 +586,7 @@
 												$ParametersSend[$k] = ($v);
 											}
 										}
-																	
+										$_SESSION['datosKeypgR'][]=Yii::app()->GenericFunctions->ProtectVar( serialize(Yii::app()->_Hotels->Config) );							
 										echo "<input name='pgR' type='hidden' value='" . Yii::app()->GenericFunctions->ProtectVar(serialize(Yii::app()->_Hotels->Config)) . "' />";
 										$Noches ="Noches";
 										if($_noches>1){
@@ -599,33 +624,61 @@
 											);
 										}
 													
-										if($RoomInfo[0]['Childs']>0){
-											if($hab_noacepta_mn==1){
-												echo "<br>".Yii::t("global","Adults only");
+										if((int) $Hotel->attributes()->onlyAdults != 1){
+											$no_menores=false;
+										
+											
+											if($totalNinos>0){
+												if($hab_noacepta_mn==1){
+													echo "<br>".Yii::t("global","No se aceptan menores");
+												}
+												else{
+													if($hab_minimo==1){
+														echo "<br>".Yii::t("global","No cumple la ocupación mínima de la habitación de ".$minHab." adultos");
+													}else if($hab_max_ad==1){
+														echo "<br>".Yii::t("global","Se excede de la capacidad máxima de la habitación");
+													}else if($hab_max_mn==1){
+														echo "<br>".Yii::t("global","Se excede de la capacidad máxima de la habitación");
+													}else if($hab_max_cap==1){
+														echo "<br>".Yii::t("global","Se excede de la capacidad máxima de la habitación");
+													}else if($hab_max_in==1){
+														echo "<br> No se aceptan infantes de ".(int) $Hotel->Ages->attributes()->infante_min." a ". (int) $Hotel->Ages->attributes()->infante_max." años";
+													}else if($hab_max_ad==0 && $hab_max_mn==0 && $hab_max_cap==0 && $hab_max_in==0){												
+														echo "<br>".Yii::t("global","El hotel no está disponible en estas fechas, modifíquelas o llámenos al 01800-00-LOMAS");
+													}																	
+												}
 											}else{
 												if($hab_minimo==1){
-													echo "<br>".Yii::t("global","Ocupación mínima requerida (".$minHab." persons)");
+													echo "<br>".Yii::t("global","No cumple la ocupación mínima de la habitación de ".$minHab." adultos");
+												}else if($hab_max_ad==1){
+													echo "<br>".Yii::t("global","Se excede de la capacidad máxima de la habitación");
+												}else if($hab_max_cap==1){
+													echo "<br>".Yii::t("global","Se excede de la capacidad máxima de la habitación");
+												}else if($hab_max_ad==0 && $hab_max_mn==0 && $hab_max_cap==0){
+													echo "<br>".Yii::t("global","El hotel no está disponible en estas fechas, modifíquelas o llámenos al 01800-00-LOMAS");
+												}
+											}
+										}else{
+											if($totalNinos>0){
+												echo "<br>".Yii::t("global","No se aceptan menores");
+												$no_menores=true;
+											}else{
+												if($hab_minimo==1){
+													echo "<br>".Yii::t("global","No cumple la ocupación mínima de la habitación de ".$minHab." adultos");
 												}else if($hab_max_ad==1){
 													echo "<br>".Yii::t("global","Se excede de la capacidad máxima de la habitación");
 												}else if($hab_max_mn==1){
 													echo "<br>".Yii::t("global","Se excede de la capacidad máxima de la habitación");
 												}else if($hab_max_cap==1){
 													echo "<br>".Yii::t("global","Se excede de la capacidad máxima de la habitación");
-												}else if($hab_max_in==1){
-													echo "<br>Infants are not accepted of ".(int) $Hotel->Ages->attributes()->infante_min." to ". (int) $Hotel->Ages->attributes()->infante_max." ages";
-												}else if($hab_max_ad==0 && $hab_max_mn==0 && $hab_max_cap==0 && $hab_max_in==0){
-													echo "<br><span class='notAvailable'>El hotel no está disponible en estas fechas, modifíquelas o llámenos al<br>01800-00-LOMAS</span>";
-												}																	
-											}
-										}else{
-											if($hab_minimo==1){
-												echo "<br>".Yii::t("global","Ocupación mínima requerida (".$minHab." persons)");
-											}else if($hab_max_ad==1){
-												echo "<br>".Yii::t("global","Se excede de la capacidad máxima de la habitación");
-											}else if($hab_max_cap==1){
-												echo "<br>".Yii::t("global","Se excede de la capacidad máxima de la habitación");
-											}else if($hab_max_ad==0 && $hab_max_mn==0 && $hab_max_cap==0){
-												echo "<br><span class='notAvailable'>El hotel no está disponible en estas fechas, modifíquelas o llámenos al<br>01800-00-LOMAS</span>";
+												}else if($hab_max_ad==0 && $hab_max_mn==0 && $hab_max_cap==0){
+													if($_r->attributes()->roomId==7666 || $_r->attributes()->roomId==7667){
+														echo "<br>".Yii::t("global","Disponibles a partir del 16 de Diciembre 2015");
+													}else{
+														echo "<br>".Yii::t("global","El hotel no está disponible en estas fechas, modifíquelas o llámenos al 01800-00-LOMAS");	
+													}
+													
+												}
 											}
 										}														
 																

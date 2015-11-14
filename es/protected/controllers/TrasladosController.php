@@ -50,6 +50,11 @@ class TrasladosController extends CController
             
             
             if(!isset($_REQUEST['oftransfer'])){
+                
+                if(!in_array($_REQUEST["jnfe"], $_SESSION['datosKey']) || !in_array($_REQUEST["pgR"], $_SESSION['datosKeypgR']) ){
+                    header("Location: /error");
+                    exit();
+                }                
                 //$cs = Yii::app()->getclientScript();
                 //$cs->registerScriptFile(Yii::app()->params["baseUrl"] . '/js/suscripcion.js', CClientScript::POS_END);
                 //$cs->registerScriptFile(Yii::app()->params["baseUrl"] . '/js/traslados.js?v=1', CClientScript::POS_END);

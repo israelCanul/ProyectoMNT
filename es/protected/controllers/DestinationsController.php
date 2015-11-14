@@ -28,10 +28,10 @@ class DestinationsController extends Controller
 
 		$strDest = "";
 		foreach($destinos as $l){
-			$strDest .= '{id: "' . $l["ciudad_id"] . '", label : "' .  Yii::app()->GenericFunctions->makeSinAcento($l["ciudad_nombre"]) . '",tipo : "1",categoria:"Destinations"},';
+			$strDest .= '{id: "' . $l["ciudad_id"] . '", label : "' . $l["ciudad_nombre"] . '",tipo : "1",categoria:"Destinations"},';
 		}
 		foreach($Hoteles as $l){
-			$strDest .= '{id: "' . $l["hotel_id"] . '", label : "' .  Yii::app()->GenericFunctions->makeSinAcento($l["hotel_nombre"]) . '", keyword: "' . $l["hotel_keyword"] . '", tipo : "2",categoria:"Hotels"},';
+			$strDest .= '{id: "' . $l["hotel_id"] . '", label : "' .  $l["hotel_nombre"]. '", keyword: "' . $l["hotel_keyword"] . '", tipo : "2",categoria:"Hotels"},';
 		}
 		
 		echo "[" . substr($strDest,0,-1) . "]";		
@@ -431,7 +431,11 @@ class DestinationsController extends Controller
 	}
 
 	public function actionAgregar(){
-
+		// corrobora que la variable de session no este corrupta al llegar a este paso
+		if(!in_array($_REQUEST["jnfe"], $_SESSION['datosKey']) || !in_array($_REQUEST["pgR"], $_SESSION['datosKeypgR']) ){
+			header("Location: /error");
+			exit();
+		}
 
 		if(isset($_REQUEST["jnfe"])){
 
@@ -616,11 +620,16 @@ class DestinationsController extends Controller
 						'transfer_adults'  => $adultos,
 						'transfer_child'   => $menores
 					);
+	                
+	                $pgR = Yii::app()->GenericFunctions->ProtectVar(serialize($pgr));
+	                
+	                $_SESSION['datosKey'][]=$jnfe;
+	                $_SESSION['datosKeypgR'][]=$pgR;
 
 					$params  = array(
 						'jnfe'           => $jnfe,
 						'tipo_translado' => $tipo_translado,
-						'pgR'            => Yii::app()->GenericFunctions->ProtectVar(serialize($pgr)),
+						'pgR'            => $pgr,
 						'chekoutTransfer' => '1'
 					);
 					//print_r( explode("@@", Yii::app()->GenericFunctions->ShowVar($jnfe)));
