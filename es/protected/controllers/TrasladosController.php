@@ -9,6 +9,8 @@ class TrasladosController extends CController
 
     public function actionAgregar() {
 
+       
+
         if (isset($_REQUEST["jnfe"])) {
 
             $_sql = "Select venta_id from venta where venta_session_id Like '" . $_SESSION["config_es"]["token"] . "' and venta_estt = '1' and venta_fecha Like '" . date("Y-m-d") . "%'";
@@ -52,7 +54,7 @@ class TrasladosController extends CController
             if(!isset($_REQUEST['oftransfer'])){
                 
                 if(!in_array($_REQUEST["jnfe"], $_SESSION['datosKey']) || !in_array($_REQUEST["pgR"], $_SESSION['datosKeypgR']) ){
-                    header("Location: /error");
+                    header("Location: /es/error.html?error=La session a caducado");
                     exit();
                 }                
                 //$cs = Yii::app()->getclientScript();
@@ -108,6 +110,12 @@ class TrasladosController extends CController
 
                 }
             }else{
+
+                if(!in_array($_REQUEST["jnfe"], $_SESSION['datosKey']) ){
+                    header("Location: /es/error.html?error=La session a caducado");
+                    exit();
+                } 
+
                 $parametros=unserialize(GenericFunctions::ShowVar($_REQUEST["jnfe"]));
                 $t = new VentaDescripcion;
                 $t->descripcion_producto = Yii::t("global", "Translado");
@@ -157,6 +165,9 @@ class TrasladosController extends CController
         $this->redirect($this->createUrl("traslados/detalle",$_REQUEST));
     }
     public function actionDetalle(){
+        unset($_SESSION['datosKey']);
+
+
         $dias = array("Dom","Lun","Mar","Mie","Jue","Vie","Sáb");
         $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
         
@@ -196,6 +207,14 @@ class TrasladosController extends CController
                 $transfers=file_get_contents(Yii::app()->params['api']."/RestTransfers/rates.html?moneda=".Yii::app()->params['Moneda']."&lan=".Yii::app()->language."&adults=".$_REQUEST['transfer_adult']."&ninos=".$_REQUEST['transfer_child']."&dest_ini=".$_REQUEST['dest_from']."&dest_end=".$_REQUEST['dest_end']."&round_trip=".$_REQUEST['round_trip']."&transfer_option_type=".$_REQUEST['transfer_option_type']."&date=".$date1."&date2=".$date2."");
                 break;
         }
+
+        // guardado de las variables jnfe para evitar modificaciones sobre el html 
+        $listaTransfer=json_decode($transfers);
+        foreach ($listaTransfer->transfers as $key => $value) {
+            $_SESSION['datosKey'][]=$value->rate->jnfe;
+        }
+        
+        // scripts y css del apartado de transfers
         GenericFunctions::scriptsTransfer();
         $this->render('traslados',array('transfers' => $transfers,'fecha'=> $textoFecha));
     }

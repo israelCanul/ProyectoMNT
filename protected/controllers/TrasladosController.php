@@ -53,7 +53,11 @@ class TrasladosController extends CController
                 //$cs = Yii::app()->getclientScript();
                 //$cs->registerScriptFile(Yii::app()->params["baseUrl"] . '/js/suscripcion.js', CClientScript::POS_END);
                 //$cs->registerScriptFile(Yii::app()->params["baseUrl"] . '/js/traslados.js?v=1', CClientScript::POS_END);
-
+                if(!in_array($_REQUEST["jnfe"], $_SESSION['datosKey']) || !in_array($_REQUEST["pgR"], $_SESSION['datosKeypgR']) ){
+                    header("Location: /error.html?error=Your session has Changed");
+                    exit();
+                }
+                
                 $data = explode("@@", Yii::app()->GenericFunctions->ShowVar($_REQUEST["jnfe"]));
 
                 $Parameters = unserialize(Yii::app()->GenericFunctions->ShowVar($_REQUEST["pgR"]));
@@ -103,6 +107,12 @@ class TrasladosController extends CController
 
                 }
             }else{
+
+                if(!in_array($_REQUEST["jnfe"], $_SESSION['datosKey']) ){
+                    header("Location: /error.html?error=Your session has Changed");
+                    exit();
+                } 
+
                 $parametros=unserialize(GenericFunctions::ShowVar($_REQUEST["jnfe"]));
                 $t = new VentaDescripcion;
                 $t->descripcion_producto = Yii::t("global", "Transfer");
@@ -181,6 +191,13 @@ class TrasladosController extends CController
                 $transfers=file_get_contents(Yii::app()->params['api']."/RestTransfers/rates.html?moneda=USD&lan=en&adults=".$_REQUEST['transfer_adult']."&ninos=".$_REQUEST['transfer_child']."&dest_ini=".$_REQUEST['dest_from']."&dest_end=".$_REQUEST['dest_end']."&round_trip=".$_REQUEST['round_trip']."&transfer_option_type=".$_REQUEST['transfer_option_type']."&date=".$date1."&date2=".$date2."");
                 break;
         }
+
+        // guardado de las variables jnfe para evitar modificaciones sobre el html 
+        $listaTransfer=json_decode($transfers);
+        foreach ($listaTransfer->transfers as $key => $value) {
+            $_SESSION['datosKey'][]=$value->rate->jnfe;
+        }
+
         GenericFunctions::scriptsTransfer();
         $this->render('traslados',array('transfers' => $transfers,'fecha'=> $textoFecha));
     }

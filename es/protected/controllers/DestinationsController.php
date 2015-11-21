@@ -17,6 +17,7 @@ class DestinationsController extends Controller
 		
 		$cs = Yii::app()->getclientScript(); 
 		$cs->registerCssFile(Yii::app()->baseUrl.'/css/page/destinations/destinations.css');
+		$cs->registerCssFile(Yii::app()->baseUrl.'/css/page/destinations/destinations_background.css');
 		$params=array('destinos'=>$ciudades);
 		$this->render('index',$params);
 	}
@@ -433,7 +434,8 @@ class DestinationsController extends Controller
 	public function actionAgregar(){
 		// corrobora que la variable de session no este corrupta al llegar a este paso
 		if(!in_array($_REQUEST["jnfe"], $_SESSION['datosKey']) || !in_array($_REQUEST["pgR"], $_SESSION['datosKeypgR']) ){
-			header("Location: /error");
+			
+			header("Location: /es/error.html?error=La session a caducado");
 			exit();
 		}
 
@@ -622,14 +624,15 @@ class DestinationsController extends Controller
 					);
 	                
 	                $pgR = Yii::app()->GenericFunctions->ProtectVar(serialize($pgr));
-	                
+	                // variable para guardar la session del transfer 
 	                $_SESSION['datosKey'][]=$jnfe;
 	                $_SESSION['datosKeypgR'][]=$pgR;
+	                ////////////////////////////////////////////////
 
 					$params  = array(
 						'jnfe'           => $jnfe,
 						'tipo_translado' => $tipo_translado,
-						'pgR'            => $pgr,
+						'pgR'            => $pgR,
 						'chekoutTransfer' => '1'
 					);
 					//print_r( explode("@@", Yii::app()->GenericFunctions->ShowVar($jnfe)));

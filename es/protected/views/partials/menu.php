@@ -2,7 +2,7 @@
 	<div class="row">
 		<div class="col s12 m10 offset-m1 hide-on-med-and-down" style="">
 			<div class="col s12 m6 menuLogo">
-			 	<a href="/"><img class="imgLogo " src="<?=Yii::app()->params['baseUrl']?>/images/icon/logo.svg"></a>
+			 	<a href="/"><img class="imgLogo " src="<?=Yii::app()->params['baseUrl']?>/images/icon/MexicoNewsTravel.png"></a>
 			</div>
 			<div class="col s12 m6 menuLogo">
 				<ul class="menuLogoItems">
@@ -16,7 +16,7 @@
 	<div class="row" style="margin-bottom: 100px;">
 	  <nav>
 	    <div class="nav-wrapper">
-	      <a href="#!" class="brand-logo hide-on-large-only"><img class="imgLogo" src="<?=Yii::app()->params['baseUrl']?>/images/icon/logo.svg"></a>
+	      <a href="#!" class="brand-logo hide-on-large-only"><img class="imgLogo" src="<?=Yii::app()->params['baseUrl']?>/images/icon/MexicoNewsTravel.png"></a>
 	      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons red-text">menu</i></a>
 	      <div class="row">
 		    <div class="col m10 l10 offset-m1 offset-l1">

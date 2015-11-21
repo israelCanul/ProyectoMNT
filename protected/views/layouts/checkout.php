@@ -66,6 +66,17 @@ $this->renderPartial('application.views.partials.form_contact',true);
 
 </body>
 </html>
+<!-- This code must be installed within the body tags -->
+<script type="text/javascript">
+        var lhnAccountN = "20895-1";
+          var lhnButtonN = 5798;
+          var lhnChatPosition = 'bottomright';
+          var lhnInviteEnabled = 38771;
+          var lhnWindowN = 23005;
+          var lhnDepartmentN = 23227;
+</script>
+<a  href="http://www.livehelpnow.net/products/live-chat-system" target="_blank" style="font-size:10px;" id="lhnHelp">Live Chat Support  Software</a>
+<script async type="text/javascript" src="//www.livehelpnow.net/lhn/widgets/chatbutton/lhnchatbutton-current.min.js" id="lhnscript"></script>
 
 <!-- Compiled and minified JavaScript -->
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/main.js"></script>

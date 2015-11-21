@@ -32,7 +32,7 @@ class ActivitiesController extends Controller
 			if(Yii::app()->request->isAjaxRequest)
 				echo $error['message'];
 			else
-				$this->render('error', $error);
+				$this->render('error', $error); 
 		}
 	}
 
@@ -105,9 +105,13 @@ class ActivitiesController extends Controller
 		// url y data para los tours
 		$tours= file_get_contents(Yii::app()->params['api']."/RestTours/tour/".$_REQUEST['TourId'].".html?date=".$fechaTem."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda']."&ninos=".$_REQUEST['tour_child']."&adults=".$_REQUEST['tour_adults']);
 		$dataUrl="tour-Checkin=".$_REQUEST['tour-Checkin']."&tour_adults=".$_REQUEST['tour_adults']."&tour_child=".$_REQUEST['tour_child']."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda'];
-		/*print_r("<pre>");
-		print_r($tours);
-		exit();*/
+ 
+ 		$listaTarifas=json_decode($tours); 		
+ 		/*print_r($listaTarifas->tarifas);
+ 		exit();*/
+		foreach ($listaTarifas->tarifas as $key => $value) {
+			$_SESSION['datosKey'][]=$value->jnfe;
+		}
 		// se importan los css y js de react
 		Yii::app()->GenericFunctions->scriptsTour();
 
@@ -572,6 +576,12 @@ class ActivitiesController extends Controller
 
 
 	public function actionAgregar(){
+		// variables para determinar que no hubo un cambio de datos en la configuracion del tour
+		if(!in_array($_REQUEST["jnfe"], $_SESSION['datosKey'])){
+			header("Location: /error.html?error=Your session has Changed");
+			exit();
+		}
+
 		if(isset($_REQUEST["jnfe"])){
 			$_sql = "Select venta_id from venta where venta_session_id Like '" . $_SESSION["config"]["token"] . "' and venta_estt = '1' and venta_fecha Like '" . date("Y-m-d") . "%'";
 			$_vValidator = Venta::model()->findAllBySql($_sql);
@@ -598,6 +608,12 @@ class ActivitiesController extends Controller
 			));
 			/* From the CheckOut */
 			if(!isset($_REQUEST['fromDetails'])) {
+				
+				if(!in_array($_REQUEST["jnfe"], $_SESSION['datosKey'])){
+					header("Location: /error.html?error=Your session has Changed");
+					exit();
+				}
+		
 				$data = explode("@@", Yii::app()->GenericFunctions->ShowVar($_REQUEST["jnfe"]));
 
 				foreach ($_Productos as $p) {

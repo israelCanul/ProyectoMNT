@@ -15,7 +15,7 @@ class GenericFunctions extends CApplicationComponent{
 	}
 
 	public function notasFooter(){
-		$notasFooter=Yii::app()->dbNews->CreateCommand("SELECT c.idcontenido, c.titulo,c.meta_description
+		$notasFooter=Yii::app()->dbNews->CreateCommand("SELECT c.idcontenido, c.titulo,c.meta_description,c.uri
 												FROM ws_contenido AS c 
 												WHERE idcategoria='23' 
 												AND idstatus='1' 

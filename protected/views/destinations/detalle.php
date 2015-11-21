@@ -1,4 +1,8 @@
+<?
+	unset($_SESSION['datosKey']);
+	unset($_SESSION['datosKeypgR']);
 
+?>
 <div class="row">
 	<div class="col s12 m10 offset-m1">
 		<style>
@@ -433,7 +437,12 @@
 											}																		
 											$countHotel++;
 										}
-									
+										
+										if($totalNinos>0){
+											if($hab_noacepta_mn==1){
+												$thisDayAvailable=0;
+											}
+		 								}
 										
 										if($i==0){
 											echo "<tr >";
@@ -489,6 +498,11 @@
 									$periodo = explode("-",$fecha_noche);
 									
 									for($a=$index;$a<$_noches;$a++){
+										
+										if($i == 7){
+											echo "</tr>";
+										}
+
 										$i++;
 										$fecha_noche_ND = $periodo[0]."-".$periodo[1]."-".($periodo[2]+$masD);
 										
@@ -546,6 +560,8 @@
 
 										$_dtPrice = array($_dataPrice,$RoomInfo);
 										
+										$_SESSION['datosKey'][]= Yii::app()->GenericFunctions->ProtectVar($ocupid . "@@" . $Hotel->attributes()->hotelId . "@@" . $_r->attributes()->name . "@@" . $Hotel->attributes()->name . "@@" . $total . "@@" . $Hotel->attributes()->desc . "@@" . $Price->Board->attributes()->bbId . "@@" . $Price->Board->attributes()->price . "@@". str_replace("/110/","/160/",$Hotel->attributes()->thumb) . "@@". $Price->Board->attributes()->name . "@@" . (string) $Hotel->Location->attributes()->address . "@@" . base64_encode(serialize($_dtPrice)));
+										
 										echo "<input class='misc_btn_rate_select' type=\"hidden\" name=\"jnfe\" value=\"" . Yii::app()->GenericFunctions->ProtectVar($ocupid . "@@" . $Hotel->attributes()->hotelId . "@@" . $_r->attributes()->name . "@@" . $Hotel->attributes()->name . "@@" . $total . "@@" . $Hotel->attributes()->desc . "@@" . $Price->Board->attributes()->bbId . "@@" . $Price->Board->attributes()->price . "@@". str_replace("/110/","/160/",$Hotel->attributes()->thumb) . "@@". $Price->Board->attributes()->name . "@@" . (string) $Hotel->Location->attributes()->address . "@@" . base64_encode(serialize($_dtPrice))) . "\" />";
 										echo "<input type='hidden' name='promo_id'  value=".$Price->Discount->attributes()->id.">";
 										echo "<input type='hidden' name='promo_seg'  value=".$_REQUEST["seg"].">";
@@ -562,7 +578,8 @@
 												$ParametersSend[$k] = ($v);
 											}
 										}
-																	
+
+										$_SESSION['datosKeypgR'][]=Yii::app()->GenericFunctions->ProtectVar(serialize(Yii::app()->_Hotels->Config));							
 										echo "<input name='pgR' type='hidden' value='" . Yii::app()->GenericFunctions->ProtectVar(serialize(Yii::app()->_Hotels->Config)) . "' />";
 										$Noches ="Night";
 										if($_noches>1){
@@ -574,13 +591,17 @@
 										echo "<div class='elementBook'>";
 										//Ezequiel Hoteles bajo solicitud 201405005	
 										if($Hotel->attributes()->hotelVenta==1){
+											echo "</form>";
+											echo "</div>";											
 											echo '<input type="submit" class="book curved btnBlueSelectRoom  btn btn-large" rel="abrirChat" value="ON REQUEST >">';
 										}else{
 											echo "<input type='submit' value='BOOK' class='book btnBlueSelectRoom  btn btn-large' />";
+											echo "</form>";
+											echo "</div>";										
 										}
 																		
-										echo "</form>";
-										echo "</div>";
+										
+										
 									}else{
 										$tNights = (int) $_r->attributes()->nights;
 										$minStay = (int) $_r->attributes()->min_stay;

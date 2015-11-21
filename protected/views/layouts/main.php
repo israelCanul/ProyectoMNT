@@ -8,7 +8,7 @@
 	<img class="img-intro" src="/images/bg/puertaLeft.jpg">
 </div>
 <div id="animacionIntroLogo">
-	<div class="row"><div class="col s12 m8 offset-m2 l6 offset-l3"><center><img style="width: 40%;" class="responsive-img" src="<?=Yii::app()->params['baseUrl']?>/images/icon/logo.svg"></center></div></div>
+	<div class="row"><div class="col s12 m8 offset-m2 l6 offset-l3"><center><img style="width: 40%;" class="responsive-img" src="<?=Yii::app()->params['baseUrl']?>/images/icon/MexicoNewsTravel.png"></center></div></div>
 	<h3 style="font-size:3rem;text-align: center;">Behind this doors you will find the best of Mexico and the world</h3>
 </div>
 <div id="animacionIntroRight">
@@ -70,6 +70,18 @@ $this->renderPartial('application.views.partials.form_contact',true);
 ?>
 </body>
 </html>
+
+<!-- This code must be installed within the body tags -->
+<script type="text/javascript">
+	  	var lhnAccountN = "20895-1";
+	      var lhnButtonN = 5798;
+	      var lhnChatPosition = 'bottomright';
+	      var lhnInviteEnabled = 38771;
+	      var lhnWindowN = 23005;
+	      var lhnDepartmentN = 23227;
+</script>
+<a  href="http://www.livehelpnow.net/products/live-chat-system" target="_blank" style="font-size:10px;" id="lhnHelp">Live Chat Support  Software</a>
+<script async type="text/javascript" src="//www.livehelpnow.net/lhn/widgets/chatbutton/lhnchatbutton-current.min.js" id="lhnscript"></script>
 
 <!-- Compiled and minified JavaScript -->
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/main.js"></script>

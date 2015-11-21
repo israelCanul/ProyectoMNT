@@ -2,7 +2,13 @@ header {
     background: url('/images/bg/activities.jpg');
     background-size: cover;
 }
-
+/*.popup{
+  position: fixed;
+  top: 30px;
+  width:320px;
+  height:200px;
+  left:calc(50% - 160px);
+}*/
 #labelInBookin {
     color: white;
 }
@@ -47,7 +53,7 @@ body {
   height:100%;
   z-index:19;
   background-color:rgba(0,0,0,0.8);
-  overflow:hidden;
+  overflow:auto;
 }
 .cerrar-close{
   cursor:pointer;
@@ -467,7 +473,7 @@ a,a:hover{color:black}
 }
 
 .error{
-    background-color: white;
+    background-color: transparent;
     color: red;
     z-index: 1;
 }

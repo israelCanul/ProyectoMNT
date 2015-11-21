@@ -7,6 +7,11 @@ class ExtrasController extends CController
 
     public function actionAgregar() {
 
+        if(!in_array($_REQUEST["jnfe"], $_SESSION['datosKey']) || !in_array($_REQUEST["pgR"], $_SESSION['datosKeypgR']) ){
+           header("Location: /es/error.html?error=La session a caducado");
+           exit();
+        }
+
         if (isset($_REQUEST["jnfe"])) {
 
             $_sql = "Select venta_id from venta where venta_session_id Like '" . $_SESSION["config_es"]["token"] . "' and venta_estt = '1' and venta_fecha Like '" . date("Y-m-d") . "%'";

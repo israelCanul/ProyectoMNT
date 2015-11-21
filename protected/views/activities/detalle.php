@@ -1,3 +1,4 @@
+<? unset($_SESSION['datosKey']); ?>
 <div class="row">
 
 	<section class="contentSide detail col s12 m10 offset-m1">
@@ -154,10 +155,18 @@
 						}
 						if ($z["opera_Dia"] == "true") {
 							echo '<div class="rate-book prod_total_list"> <label> <span class = "currency_code" > '.$_SESSION["config"]["currency"].'  </span> $ '.number_format($price,0).'</label> <input type="submit"  class="misc_select_btn_green" value="' . "BOOK" .'" /></div>';
-							if($x == 0){													
-								echo "<input type=\"hidden\" name=\"jnfe\" value=\"" . Yii::app()->GenericFunctions->ProtectVar($z["tarifa_id"] . "@@" . $_t["tour_id"] . "@@" . $z["servicio_id"] . "@@" . ((Yii::app()->language == "es") ? $_t["tour_nombre_es"] : $_t["tour_nombre"]) . "@@"  . $z["tarifa_nombre_" . Yii::app()->language] . "@@" . $_t["descripcion_corta"] . "@@" . $z["tarifa_precio_adulto_mxp"] . "@@" . $price . "@@" . $_t["tour_reservable"] . "@@" . $_fecha . "@@" . $_ad . "@@" . $_mn . "@@" . $_t["tour_destino"] . "@@//apstatic.lomastravel.com.mx/180/" . $_imgPrincipal . "@@" . $openTk . "@@" . number_format($tarifa_precio_adulto,0,",",""). "@@" . number_format($tarifa_precio_menor,0,",",""). "") . "\" checked=\"checked\" /></td>";	
-							}else{				
-								echo "<input type=\"hidden\" name=\"jnfe\" value=\"" . Yii::app()->GenericFunctions->ProtectVar($z["tarifa_id"] . "@@" . $_t["tour_id"] . "@@" . $z["servicio_id"] . "@@" .((Yii::app()->language == "es") ? $_t["tour_nombre_es"] : $_t["tour_nombre"])  . "@@" . $z["tarifa_nombre_" . Yii::app()->language] . "@@" . $_t["descripcion_corta"] . "@@" . $z["tarifa_precio_adulto_mxp"] . "@@" . $price . "@@" . $_t["tour_reservable"] . "@@" . $_fecha . "@@" . $_ad . "@@" . $_mn . "@@" . $_t["tour_destino"] . "@@//apstatic.lomastravel.com.mx/180/" . $_imgPrincipal . "@@" . $openTk . "@@" . number_format($tarifa_precio_adulto,0,",",""). "@@" . number_format($tarifa_precio_menor,0,",",""). "") . "\" />";
+							if($x == 0){
+								// creacion de la variable se session para guardar los datos del tour
+								$jnfe=Yii::app()->GenericFunctions->ProtectVar($z["tarifa_id"] . "@@" . $_t["tour_id"] . "@@" . $z["servicio_id"] . "@@" . ((Yii::app()->language == "es") ? $_t["tour_nombre_es"] : $_t["tour_nombre"]) . "@@"  . $z["tarifa_nombre_" . Yii::app()->language] . "@@" . $_t["descripcion_corta"] . "@@" . $z["tarifa_precio_adulto_mxp"] . "@@" . $price . "@@" . $_t["tour_reservable"] . "@@" . $_fecha . "@@" . $_ad . "@@" . $_mn . "@@" . $_t["tour_destino"] . "@@//apstatic.lomastravel.com.mx/180/" . $_imgPrincipal . "@@" . $openTk . "@@" . number_format($tarifa_precio_adulto,0,",",""). "@@" . number_format($tarifa_precio_menor,0,",",""). "") ;													
+								$_SESSION['datosKey'][]=$jnfe;
+								// creacion de la variable se session para guardar los datos del tour
+								echo "<input type=\"hidden\" name=\"jnfe\" value=\"" .$jnfe. "\" checked=\"checked\" /></td>";	
+							}else{
+								// creacion de la variable se session para guardar los datos del tour
+								$jnfe=Yii::app()->GenericFunctions->ProtectVar($z["tarifa_id"] . "@@" . $_t["tour_id"] . "@@" . $z["servicio_id"] . "@@" .((Yii::app()->language == "es") ? $_t["tour_nombre_es"] : $_t["tour_nombre"])  . "@@" . $z["tarifa_nombre_" . Yii::app()->language] . "@@" . $_t["descripcion_corta"] . "@@" . $z["tarifa_precio_adulto_mxp"] . "@@" . $price . "@@" . $_t["tour_reservable"] . "@@" . $_fecha . "@@" . $_ad . "@@" . $_mn . "@@" . $_t["tour_destino"] . "@@//apstatic.lomastravel.com.mx/180/" . $_imgPrincipal . "@@" . $openTk . "@@" . number_format($tarifa_precio_adulto,0,",",""). "@@" . number_format($tarifa_precio_menor,0,",",""). "");				
+								$_SESSION['datosKey'][]=$jnfe;
+								// creacion de la variable se session para guardar los datos del tour
+								echo "<input type=\"hidden\" name=\"jnfe\" value=\"" .$jnfe. "\" />";
 							}	
 						}else{
 							echo '<div class="rate-nobook prod_total_list"><span>Not available</span>';

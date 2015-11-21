@@ -1,9 +1,10 @@
+
 <footer class='grey darken-4'>
 	<div class="row ">
 		<div class="row"></div>
 		<div class="col s12 ">
 			<div class="col s12 m2">
-				<img class="responsive-img imagen-footer" src="<?=Yii::app()->params['baseUrl']?>/images/icon/logo.svg">
+				<img class="responsive-img imagen-footer" src="<?=Yii::app()->params['baseUrl']?>/images/icon/MexicoNewsTravel.png">
 			</div>
 			<div class="col s12 m10">
 				 <div class="container">

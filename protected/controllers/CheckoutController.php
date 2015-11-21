@@ -307,10 +307,16 @@ class CheckoutController extends Controller
                             'transfer_child'   => $menores
                         );
 
+                        $pgR = Yii::app()->GenericFunctions->ProtectVar(serialize($pgr));
+                        //variables de session para guardado de las configuraciones del transfer //
+                        $_SESSION['datosKey'][]=$jnfe;
+                        $_SESSION['datosKeypgR'][]=$pgR;
+                        //variables de session para transfer
+
                         $params  = array(
                             'jnfe'           => $jnfe,
                             'tipo_translado' => $tipo_translado,
-                            'pgR'            => Yii::app()->GenericFunctions->ProtectVar(serialize($pgr))
+                            'pgR'            => $pgR
                         );
 
                         $urlAddTransfer = '/traslados/agregar?'.http_build_query($params);
@@ -361,7 +367,14 @@ class CheckoutController extends Controller
 
                     $pgr = array( 'extra_folio' => $ta['folio'], 'extra_adults'  => $adultosExtra, 'extra_child'   => $menoresExtra,'extra_arrival' => date_format($FechaIniExtra, 'm/d/Y'), 'extra_return'  => date_format($FechaFinExtra, 'm/d/Y'));
 
-                    $params  = array('jnfe'=> $jnfe,	'pgR'=> Yii::app()->GenericFunctions->ProtectVar(serialize($pgr) ) );
+                    $pgR = Yii::app()->GenericFunctions->ProtectVar(serialize($pgr));
+                    //las variables de session de la pagina para que no existan modificaciones
+                    $_SESSION['datosKey'][]=$jnfe;
+                    $_SESSION['datosKeypgR'][]=$pgR;
+                    // fin de variables de session
+
+                    $params  = array('jnfe'=> $jnfe,    'pgR'=> $pgR ); 
+             
                     $urlAddTransfer = '/extras/agregar?'.http_build_query($params);
                     $ta['urladd']=$urlAddTransfer;
 
@@ -493,7 +506,7 @@ class CheckoutController extends Controller
             $cs = Yii::app()->getclientScript();
             $cs->registerScriptFile(Yii::app()->params["baseUrl"] . '/js/page/checkout/checkout.js', CClientScript::POS_END);
             $cs->registerCssFile(Yii::app()->params["baseUrl"] . '/css/page/checkout/checkout.css');
-            $email_test = array("egonzalez@dexabyte.com.mx","lcaballero@dexabyte.com.mx","malvarez@dexabyte.com.mx","icanul@dexabyte.com.mx");
+            $email_test = array("egonzalez@dexabyte.com.mx","lcaballero@dexabyte.com.mx","malvarez@dexabyte.com.mx");
             
             //-> Es un pago con Tarjeta de Credito
             $GatewayMethod = explode("_", $_REQUEST["gateway_method"]);
@@ -705,12 +718,11 @@ class CheckoutController extends Controller
                           
                             $_vD->descripcion_serialized = serialize($_REQUEST["TransferInfoPasajeros"][$vdId]);                            
                             $_vD->save();
-
                         }
                 }       
                 
-
-
+                print_r($_REQUEST["TransferAddInfo"]);
+                exit();
                 if ($sucess) {
 
                     foreach ($_Productos as $v) {
@@ -740,9 +752,9 @@ class CheckoutController extends Controller
                                 $mailAC->AddBCC("lcaballero@dexabyte.com.mx");*/
                                 
                                 // Produccion
-                                //$link = "http://www.lomastravel.com.mx/extras/asistencia.html?id=" . Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);
+                                $link = "http://www.lomastravel.com.mx/extras/asistencia.html?id=" . Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);
                                 // Pruebas
-                                $link = "http://lomasmx.dev/extras/asistencia.html?id=" . Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);
+                                //$link = "http://lomasmx.dev/extras/asistencia.html?id=" . Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);
                                 //print_r($link);
                                 $info = file_get_contents($link);
                                 $mailAC->AddBCC("icanul@dexabyte.com.mx","Correo Prueba Extras");
@@ -828,9 +840,9 @@ class CheckoutController extends Controller
                                 }
                             }
             
-                            //$link_papeleta = "http://www.lomastravel.com.mx/preconfirma.html?id=" . Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);
+                            $link_papeleta = "http://www.lomastravel.com.mx/preconfirma.html?id=" . Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);
                             // Pruebas
-                            $link_papeleta = "http://lomasmx.dev/preconfirma.html?id=" . Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);
+                            //$link_papeleta = "http://lomasmx.dev/preconfirma.html?id=" . Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);
 
                             $m["mail_titulo"] = "Lomas Travel | Solicitud de Reservacion | #" . $v->descripcion_id;
                             $mail2 = new PHPMailer(true);
@@ -883,9 +895,9 @@ class CheckoutController extends Controller
                             
                             //////////////////////////////////////////////////////////////////////////////
                             //Produccion
-                            //$link_factura = "http://www.lomastravel.com.mx/factura.html?id=" . Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);
+                            $link_factura = "http://www.lomastravel.com.mx/factura.html?id=" . Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);
                             // Pruebas
-                            $link_factura = "http://lomasmx.dev/factura.html?id=" . Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);
+                            //$link_factura = "http://lomasmx.dev/factura.html?id=" . Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);
 
                             $m["mail_titulo"] = "Lomas Travel | Solicitud de Factura | #" . $v->descripcion_id;
                             $mail3 = new PHPMailer(true);
@@ -930,18 +942,18 @@ class CheckoutController extends Controller
                         }
                     }           
                 //Produccion                
-                //$link = "http://www.lomastravel.com/voucher.html?id=" . Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);
+                $link = "http://www.lomastravel.com/voucher.html?id=" . Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);
                 // Pruebas
-                $link = "http://lomasbeta.dev/voucher.html?id=" . Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);                
+                //$link = "http://lomasbeta.dev/voucher.html?id=" . Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);                
 
 
                 $m["mail_titulo"] = "Lomas Travel | Confirmation Letter | #" . $v->descripcion_id;
             
                     if($vende_hotel){
                         //Produccion
-                        //$link = "http://www.lomastravel.com/booking-request.html?id=" . Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);
+                        $link = "http://www.lomastravel.com/booking-request.html?id=" . Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);
                         //Pruebas
-                        $link = "http://lomasbeta.dev/booking-request.html?id=" . Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);
+                        //$link = "http://lomasbeta.dev/booking-request.html?id=" . Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);
                         $m["mail_titulo"] = "Lomas Travel | Online Booking Request | #" . $v->descripcion_id; 
                     }           
             

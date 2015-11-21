@@ -8,7 +8,7 @@
 	<img class="img-intro" src="/images/bg/puertaLeft.jpg">
 </div>
 <div id="animacionIntroLogo">
-	<div class="row"><div class="col s12 m8 offset-m2 l6 offset-l3"><center><img style="width: 40%;" class="responsive-img" src="<?=Yii::app()->params['baseUrl']?>/images/icon/logo.svg"></center></div></div>
+	<div class="row"><div class="col s12 m8 offset-m2 l6 offset-l3"><center><img style="width: 40%;" class="responsive-img" src="<?=Yii::app()->params['baseUrl']?>/images/icon/MexicoNewsTravel.png"></center></div></div>
 	<h3 style="font-size:3rem;text-align: center;">Behind this doors you will find the best of Mexico and the world</h3>
 </div>
 <div id="animacionIntroRight">

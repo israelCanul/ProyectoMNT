@@ -38,7 +38,7 @@
 		
 		<nav>
 		  <div class="nav-wrapper">
-		    <a href="/" class="brand-logo"><img class="imgLogo " src="<?=Yii::app()->params['baseUrl']?>/images/icon/logo.svg"></a>
+		    <a href="/" class="brand-logo"><img class="imgLogo " src="<?=Yii::app()->params['baseUrl']?>/images/icon/MexicoNewsTravel.png"></a>
 				   <?php
 				   $this->widget('zii.widgets.CMenu',array(
 					   'activeCssClass'=>'active',

@@ -13,7 +13,7 @@
 			          <div class="card-destinos">
 				          <div class="card ">
 				            <div class="card-image hoverable">
-				          		<img src="<?php echo Yii::app()->params['cdnLomas'] ?>/img/destinations/<?php echo strtolower($_destino->getClave());?>.jpg" alt="<?php echo $_destino->getNombre();?>">
+				          		<img src="<?php echo Yii::app()->params['cdnLomas'] ?>/img/activities/destinations/<?php echo strtolower($_destino->getClave());?>.jpg" alt="<?php echo $_destino->getNombre();?>">
 				              	<span class="card-title"></span>
 				            </div>
 				            <div class="card-content card-action hoverable contenidoDestinos">

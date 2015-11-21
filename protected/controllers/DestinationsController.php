@@ -17,6 +17,7 @@ class DestinationsController extends Controller
 		
 		$cs = Yii::app()->getclientScript(); 
 		$cs->registerCssFile(Yii::app()->baseUrl.'/css/page/destinations/destinations.css');
+		$cs->registerCssFile(Yii::app()->baseUrl.'/css/page/destinations/destinations_background.css');
 		$params=array('destinos'=>$ciudades);
 		$this->render('index',$params);
 	}
@@ -430,6 +431,10 @@ class DestinationsController extends Controller
 
 	public function actionAgregar(){
 
+		if(!in_array($_REQUEST["jnfe"], $_SESSION['datosKey']) || !in_array($_REQUEST["pgR"], $_SESSION['datosKeypgR']) ){
+			header("Location: /error.html?error=Your session has Changed");
+			exit();
+		}
 
 		if(isset($_REQUEST["jnfe"])){
 
@@ -601,7 +606,7 @@ class DestinationsController extends Controller
 						}
 					}
 
-					$jnfe           = Yii::app()->GenericFunctions->ProtectVar($ta["tarifa_id"] . "@@" . $ta["tarifa_tipo"] . "@@" . $ta["tarifa_transportacion"] . "@@" . $total . "@@" . 'Cancun Airport' . "@@" . $data[3] . "@@" . $ta["tipo_nombre_" . Yii::app()->language] . "@@/images/traslados/" . $ta["tipo_imagen"] . ".jpg@@" . 1);
+					$jnfe           = Yii::app()->GenericFunctions->ProtectVar($ta["tarifa_id"] . "@@" . $ta["tarifa_tipo"] . "@@" . $ta["tarifa_transportacion"] . "@@" . $total . "@@" . 'Cancun Airport' . "@@" . $data[3] . "@@" . $ta["tipo_nombre_" . Yii::app()->language] . "@@/img/traslados/" . $ta["tipo_imagen"] . ".jpg@@" . 1);
 					$tipo_translado = 2;
 
 					$transfer_FechaIN = date_create($Parameters["Dates"]["CheckIn"]);
@@ -614,7 +619,14 @@ class DestinationsController extends Controller
 						'transfer_adults'  => $adultos,
 						'transfer_child'   => $menores
 					);
-
+					
+	                // serializado de las variables de pgR
+					$pgR = Yii::app()->GenericFunctions->ProtectVar(serialize($pgr));
+					///// guardado de las variables de traslado /////////
+	                $_SESSION['datosKey'][]=$jnfe;
+	                $_SESSION['datosKeypgR'][]=$pgR;
+	                ///////////// guardado de las variables de traslado
+					
 					$params  = array(
 						'jnfe'           => $jnfe,
 						'tipo_translado' => $tipo_translado,

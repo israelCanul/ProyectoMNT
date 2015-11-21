@@ -1,5 +1,31 @@
 /* Inicializar componentes */
 $(document).ready(function(){
+
+   $("#submit_suscribe").on("click",function(){
+	    
+	    $("#submitSubcriptionOutlet").validate({
+	    	submitHandler: function(form) {
+	    		var request="title=Suscripción a Newsletter&email="+ $("#email_suscribe").val()+"&type=N&name="+$("#name_suscribe").val()+"&country="+$("#country_suscribe").val()+"&city="+$("#city_suscribe").val();
+				$.ajax({cache: false,
+					dataType: "html",
+					url: "/site/Enviamail", // direccion del servicio
+					data: request,
+					success: function(data) {
+
+  							Materialize.toast(data, 4000,'',function(){
+  								$("#submitSubcriptionOutlet")[0].reset();
+  							});			
+						},
+					error: function(data) {
+						alert(data);
+					}
+				});
+			}
+	    });
+
+	});
+
+
 	//validate del formulario de contacto 
 	$('#form_contact').validate({
 		
@@ -10,7 +36,6 @@ $(document).ready(function(){
             	type: "POST",
             	url: "/site/contact",
             	data: dataString,
-
             	success: function(data) {
                   console.log(data);
                   alert(data);
@@ -22,7 +47,6 @@ $(document).ready(function(){
 				} 
         	});
 		}
-
 	});
 	//scroll para el menu fixeado 
 	$(window).on("scroll", function() {

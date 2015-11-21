@@ -132,6 +132,29 @@ function abrirContenedor(){
 }
 
 $(document).ready(function(){
+        $(".curved").on("click", function() {
+        var valor = $(this).attr("rel");
+        var reservaChat = new Array();
+        reservaChat["abrirChat"] = "true";
+        reservaChat["17"] = "true";
+        reservaChat["18"] = "true";
+        reservaChat["12"] = "true";
+        reservaChat["13"] = "true";
+        reservaChat["19"] = "true";
+        reservaChat["20"] = "true";
+        reservaChat["23"] = "true";
+        reservaChat["24"] = "true";
+        reservaChat["25"] = "true";
+        reservaChat["26"] = "true";
+        reservaChat["27"] = "true";
+        reservaChat["28"] = "true";
+        reservaChat["31"] = "true";
+        reservaChat["32"] = "true";
+        if (reservaChat[valor]) {
+            $("#lhnchatimg").trigger("click");
+            return false;
+        }
+    });
 
     // realizar que al seleccionar una tab si el bookin esta replegado .. cambie de estado y se despliege
     $('li.tab a').on("click",function(){

@@ -829,3 +829,21 @@ Stack trace:
 #10 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
 #11 C:\AppServ\www\mexico-news-travel\es\index.php(24): CWebApplication->run()
 REQUEST_URI=/es/checkout/index.html
+2015/11/20 11:46:22 [error] [php] Invalid argument supplied for foreach() (C:\AppServ\www\mexico-news-travel\es\protected\controllers\ActivitiesController.php:114)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): ActivitiesController->runAction()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): ActivitiesController->runActionWithFilters()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): ActivitiesController->run()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#5 C:\AppServ\www\mexico-news-travel\es\index.php(24): CWebApplication->run()
+REQUEST_URI=/es/tours/bonanza-jungle-horseback-ride.html?tour_destination=Bonanza+Tour+a+Caballo+por+la+Selva&tipo=tour&cat=&dest=&TourId=1005&sup=&openTk=0&seg=&moneda=MXN&tour-Checkin=22%2F11%2F2015&tour_adults=2&tour_child=0&action=&PHPSESSID=378e3e970b571053c0db53a1d589fbd4&lan=es
+2015/11/20 12:11:51 [error] [php] Invalid argument supplied for foreach() (C:\AppServ\www\mexico-news-travel\es\protected\controllers\TrasladosController.php:213)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): TrasladosController->runAction()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): TrasladosController->runActionWithFilters()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): TrasladosController->run()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#5 C:\AppServ\www\mexico-news-travel\es\index.php(24): CWebApplication->run()
+REQUEST_URI=/es/traslados/aeropuerto-de-cancun-a-cancun.html?round_trip=1&dest_from=1&transfer_option_type=1&AirportCode=1&transfer_from=&transfer_end=Aloft+Cancun+%28Canc%C3%BAn%29&dest_end=57&date1=26%2F11%2F2015&date2=26%2F11%2F2015&transfer_adult=2&transfer_child=0&PHPSESSID=378e3e970b571053c0db53a1d589fbd4

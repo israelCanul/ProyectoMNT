@@ -1,3 +1,4 @@
+<? unset($_SESSION['datosKey']); ?>
 <div class="row">
 
 	<section class="contentSide detail col s12 m10 offset-m1">
@@ -154,16 +155,26 @@
 						}
 						if ($z["opera_Dia"] == "true") {
 							echo '<div class="rate-book prod_total_list"> <label> <span class = "currency_code" > '.$_SESSION["config_es"]["currency"].'  </span> $ '.number_format($price,0).'</label> <input type="submit"  class="misc_select_btn_green" value="' . "BOOK" .'" /></div>';
-							if($x == 0){													
-								echo "<input type=\"hidden\" name=\"jnfe\" value=\"" . Yii::app()->GenericFunctions->ProtectVar($z["tarifa_id"] . "@@" . $_t["tour_id"] . "@@" . $z["servicio_id"] . "@@" . ((Yii::app()->language == "es") ? $_t["tour_nombre_es"] : $_t["tour_nombre"]) . "@@"  . $z["tarifa_nombre_" . Yii::app()->language] . "@@" . $_t["descripcion_corta"] . "@@" . $z["tarifa_precio_adulto_mxp"] . "@@" . $price . "@@" . $_t["tour_reservable"] . "@@" . $_fecha . "@@" . $_ad . "@@" . $_mn . "@@" . $_t["tour_destino"] . "@@//apstatic.lomastravel.com.mx/180/" . $_imgPrincipal . "@@" . $openTk . "@@" . number_format($tarifa_precio_adulto,0,",",""). "@@" . number_format($tarifa_precio_menor,0,",",""). "") . "\" checked=\"checked\" /></td>";	
+							if($x == 0){
+								$jnfe=Yii::app()->GenericFunctions->ProtectVar($z["tarifa_id"] . "@@" . $_t["tour_id"] . "@@" . $z["servicio_id"] . "@@" . ((Yii::app()->language == "es") ? $_t["tour_nombre_es"] : $_t["tour_nombre"]) . "@@"  . $z["tarifa_nombre_" . Yii::app()->language] . "@@" . $_t["descripcion_corta"] . "@@" . $z["tarifa_precio_adulto_mxp"] . "@@" . $price . "@@" . $_t["tour_reservable"] . "@@" . $_fecha . "@@" . $_ad . "@@" . $_mn . "@@" . $_t["tour_destino"] . "@@//apstatic.lomastravel.com.mx/180/" . $_imgPrincipal . "@@" . $openTk . "@@" . number_format($tarifa_precio_adulto,0,",",""). "@@" . number_format($tarifa_precio_menor,0,",",""). "");													
+								echo "<input type=\"hidden\" name=\"jnfe\" value=\"" .$jnfe. "\" checked=\"checked\" /></td>";	
 							}else{				
-								echo "<input type=\"hidden\" name=\"jnfe\" value=\"" . Yii::app()->GenericFunctions->ProtectVar($z["tarifa_id"] . "@@" . $_t["tour_id"] . "@@" . $z["servicio_id"] . "@@" .((Yii::app()->language == "es") ? $_t["tour_nombre_es"] : $_t["tour_nombre"])  . "@@" . $z["tarifa_nombre_" . Yii::app()->language] . "@@" . $_t["descripcion_corta"] . "@@" . $z["tarifa_precio_adulto_mxp"] . "@@" . $price . "@@" . $_t["tour_reservable"] . "@@" . $_fecha . "@@" . $_ad . "@@" . $_mn . "@@" . $_t["tour_destino"] . "@@//apstatic.lomastravel.com.mx/180/" . $_imgPrincipal . "@@" . $openTk . "@@" . number_format($tarifa_precio_adulto,0,",",""). "@@" . number_format($tarifa_precio_menor,0,",",""). "") . "\" />";
-							}	
+								$jnfe=Yii::app()->GenericFunctions->ProtectVar($z["tarifa_id"] . "@@" . $_t["tour_id"] . "@@" . $z["servicio_id"] . "@@" .((Yii::app()->language == "es") ? $_t["tour_nombre_es"] : $_t["tour_nombre"])  . "@@" . $z["tarifa_nombre_" . Yii::app()->language] . "@@" . $_t["descripcion_corta"] . "@@" . $z["tarifa_precio_adulto_mxp"] . "@@" . $price . "@@" . $_t["tour_reservable"] . "@@" . $_fecha . "@@" . $_ad . "@@" . $_mn . "@@" . $_t["tour_destino"] . "@@//apstatic.lomastravel.com.mx/180/" . $_imgPrincipal . "@@" . $openTk . "@@" . number_format($tarifa_precio_adulto,0,",","");
+								echo "<input type=\"hidden\" name=\"jnfe\" value=\"" .$jnfe. "@@" . number_format($tarifa_precio_menor,0,",",""). "") . "\" />";
+							}
+							$_SESSION['datosKey'][]=$jnfe;	
 						}else{
-							echo '<div class="rate-nobook prod_total_list"><span>Not available</span>';
+							echo '<div class="rate-nobook prod_total_list"><span>No Disponible</span>';
 							echo "<div class = 'rate-notabalible'>".$z["opera_Dia_descripcion"]."</div></div>";
 						}
-														
+
+						if ($z["tarifa_tipo_cobro"] != 1) {
+							if ($z['tarifa_compartido'] == '0') {
+								echo "<div class = 'rate-msj' style='clear:both; text-align:right; padding-right:10px;'> Tarifa: desde " .$z["tarifa_min_adultos"] . " a " .$z["tarifa_max_adultos"]. " personas   </div>";
+							}else{
+								echo "<div class = 'rate-msj' style='clear:both; text-align:right; padding-right:10px;''> Tarifa por pareja  </div>";
+							}
+						}														
 						/*echo "<div class='rate-book prod_total_list'>";
 						if ((int) $price != 0) {
 							echo "<strong>$ ". number_format($price,0) . " " . $_SESSION["config_es"]["currency"]  . "</strong>";

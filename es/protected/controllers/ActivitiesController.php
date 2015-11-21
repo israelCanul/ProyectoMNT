@@ -66,6 +66,8 @@ class ActivitiesController extends Controller
 		$dataUrl="tour-Checkin=".$_REQUEST['tour-Checkin']."&tour_adults=".$_REQUEST['tour_adults']."&tour_child=".$_REQUEST['tour_child']."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda'];
 
 		Yii::app()->GenericFunctions->scriptsTours();
+
+
 		$this->render('listTours',array("tours"=>$tours,'dataUrl'=>$dataUrl,"tour_fecha"=>$_REQUEST['tour-Checkin']));
 	}
 
@@ -98,7 +100,7 @@ class ActivitiesController extends Controller
 	}
 
 	public function actionDetalleTour(){
-		
+		unset($_SESSION['datosKey']);
 		// fechas
 		$fechaTem=explode("/", $_REQUEST['tour-Checkin']);
 		$fechaTitulo=$fechaTem[0]."/".$fechaTem[1]."/".$fechaTem[2];
@@ -107,9 +109,13 @@ class ActivitiesController extends Controller
 		// url y data para los tours
 		$tours= file_get_contents(Yii::app()->params['api']."/RestTours/tour/".$_REQUEST['TourId'].".html?date=".$fechaTem."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda']."&ninos=".$_REQUEST['tour_child']."&adults=".$_REQUEST['tour_adults']);
 		$dataUrl="tour-Checkin=".$_REQUEST['tour-Checkin']."&tour_adults=".$_REQUEST['tour_adults']."&tour_child=".$_REQUEST['tour_child']."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda'];
-		/*print_r("<pre>");
-		print_r($tours);
-		exit();*/
+ 		
+ 		$listaTarifas=json_decode($tours);
+ 		/*print_r($listaTarifas->tarifas);
+ 		exit();*/
+		foreach ($listaTarifas->tarifas as $key => $value) {
+			$_SESSION['datosKey'][]=$value->jnfe;
+		}
 		// se importan los css y js de react
 		Yii::app()->GenericFunctions->scriptsTour();
 
@@ -574,7 +580,14 @@ class ActivitiesController extends Controller
 
 
 	public function actionAgregar(){
+		
+		if(!in_array($_REQUEST["jnfe"], $_SESSION['datosKey'])){
+					header("Location: /es/error.html?error=La session a caducado");
+					exit();
+		}
+		
 		if(isset($_REQUEST["jnfe"])){
+			
 			$_sql = "Select venta_id from venta where venta_session_id Like '" . $_SESSION["config_es"]["token"] . "' and venta_estt = '1' and venta_fecha Like '" . date("Y-m-d") . "%'";
 			$_vValidator = Venta::model()->findAllBySql($_sql);
 
@@ -600,6 +613,9 @@ class ActivitiesController extends Controller
 			));
 			/* From the CheckOut */
 			if(!isset($_REQUEST['fromDetails'])) {
+
+				
+				
 				$data = explode("@@", Yii::app()->GenericFunctions->ShowVar($_REQUEST["jnfe"]));
 
 				foreach ($_Productos as $p) {

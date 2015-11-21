@@ -3,10 +3,6 @@
                     
 					<?php
 						
-							
-						
-						
-					
 						$MealPlans = array();
 							
 							echo "<div class='bloque OptionHotel MainHotelOption' id='' >";
