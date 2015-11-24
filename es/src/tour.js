@@ -25,7 +25,7 @@ var Tour=React.createClass({
         	<div className="right-align col s10 price">
         		<span>$ {this.props.data.price.currency}</span><span className="price"> {" "+Math.round(this.props.data.price.average)}</span>
         	</div>
-        	<div className="col s12 m8 offset-m2 l6 offset-l3">
+        	<div className="right-align col s10">
         		<a href={urlBase+"tours/"+this.props.data.tour.clave+".html?"+dataUrl+"&TourId="+this.props.data.tour.id+"&tour_destination="+encodeURIComponent(this.props.data.tour.name).replace(/%20/g,'+')} className="col s12 btn red">
         			Reservar
         		</a>

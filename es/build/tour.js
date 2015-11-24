@@ -67,7 +67,7 @@ var Tour = React.createClass({
         ),
         React.createElement(
           "div",
-          { className: "col s12 m8 offset-m2 l6 offset-l3" },
+          { className: "right-align col s10" },
           React.createElement(
             "a",
             { href: urlBase + "tours/" + this.props.data.tour.clave + ".html?" + dataUrl + "&TourId=" + this.props.data.tour.id + "&tour_destination=" + encodeURIComponent(this.props.data.tour.name).replace(/%20/g, '+'), className: "col s12 btn red" },

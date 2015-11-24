@@ -14,7 +14,7 @@
 			              <span class="card-title"></span>
 			            </div>
 			            <div class="card-content card-action hoverable contenidoDestinos">
-			              <a class="red-text" href="/es/destinations/<? echo $value['clave'] ?>.html?hotel_keyword=&cCode=<? echo $value['codigo']?>&HotelId=&hotel_destination=<? echo urlencode( GenericFunctions::makeSinAcento( $value['nombre'])) ?>&hotelCheckin=<? echo urlencode(date('m/d/Y', strtotime('+2 day')));?>&hotelCheckout=<? echo urlencode(date('m/d/Y', strtotime('+5 day')));?>&hotelRoom=1&hotelAdults_0=2&hotelChild_0=0&action=&Room%5B0%5D%5BAdults%5D=2&Room%5B0%5D%5BChilds%5D=0">
+			              <a class="red-text" href="/es/destinations/<? echo $value['clave'] ?>.html?hotel_keyword=&cCode=<? echo $value['codigo']?>&HotelId=&hotel_destination=<? echo urlencode( GenericFunctions::makeSinAcento( $value['nombre'])) ?>&hotelCheckin=<? echo urlencode(date('d/m/Y', strtotime('+2 day')));?>&hotelCheckout=<? echo urlencode(date('d/m/Y', strtotime('+5 day')));?>&hotelRoom=1&hotelAdults_0=2&hotelChild_0=0&action=&Room%5B0%5D%5BAdults%5D=2&Room%5B0%5D%5BChilds%5D=0">
 			              <?
 			              
 			              ?>

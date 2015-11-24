@@ -2,7 +2,9 @@
 	.promo-div-coined-desc h3{
 		margin:5px;
 	}
-
+	.promo-div-coined-desc h1{
+		margin:5px;
+	}
 </style>	
 
  <div class="row">

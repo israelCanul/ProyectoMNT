@@ -13,11 +13,11 @@
 			          <div class="card-destinos">
 				          <div class="card ">
 				            <div class="card-image hoverable">
-				          		<img src="<?php echo Yii::app()->params['cdnLomas'] ?>/img/destinations/<?php echo strtolower($_destino->getClave());?>.jpg" alt="<?php echo $_destino->getNombre();?>">
+				          		<img src="<?php echo Yii::app()->params['cdnLomas'] ?>/img/activities/destinations/<?php echo strtolower($_destino->getClave());?>.jpg" alt="<?php echo $_destino->getNombre();?>">
 				              	<span class="card-title"></span>
 				            </div>
 				            <div class="card-content card-action hoverable contenidoDestinos">
-				              <a title="<?php echo $_destino->getNombre();?>" href="/es/toursByDest/<?php echo $_destino->getClave();?>.html?isTourCategory=0&amp;tour_destination=<?php echo  urlencode($_destino->getNombre());?>&amp;tipo=destination&cat=&dest=<?php echo $_destino->id;?>&TourId=&sup=&openTk=0&seg=&tour-Checkin=<?echo urlencode(date('m/d/Y', strtotime('+2 day'))); ?>&tour_adults=2&tour_child=0&action=&lan=en&moneda=USD">
+				              <a title="<?php echo $_destino->getNombre();?>" href="/es/toursByDest/<?php echo $_destino->getClave();?>.html?isTourCategory=0&amp;tour_destination=<?php echo  urlencode($_destino->getNombre());?>&amp;tipo=destination&cat=&dest=<?php echo $_destino->id;?>&TourId=&sup=&openTk=0&seg=&tour-Checkin=<?echo urlencode(date('d/m/Y', strtotime('+2 day'))); ?>&tour_adults=2&tour_child=0&action=&lan=es&moneda=<?echo $_SESSION["config_es"]["currency"]?>">
 				             	 <p class="center-align textoCaja red-text"><?=$_destino->getNombre()?></p>
 				              </a>
 				            </div>
@@ -51,7 +51,7 @@
 				              	<span class="card-title"></span>
 				            </div>
 				            <div class="card-content card-action hoverable contenidoDestinos">
-				              <a  title="<?php echo $_categoria->getNombre();?>" href="/es/toursByCat/Category.html?tour_destination=<?php echo urlencode($_categoria->getNombre());?>&tipo=category&cat=<?=$_categoria->getId(); ?>&dest=&TourId=&sup=&openTk=0&seg=&tour-Checkin=<?echo urlencode(date('m/d/Y', strtotime('+2 day'))); ?>&tour_adults=2&tour_child=0&action=&lan=en&moneda=USD">
+				              <a  title="<?php echo $_categoria->getNombre();?>" href="/es/toursByCat/Category.html?tour_destination=<?php echo urlencode($_categoria->getNombre());?>&tipo=category&cat=<?=$_categoria->getId(); ?>&dest=&TourId=&sup=&openTk=0&seg=&tour-Checkin=<?echo urlencode(date('d/m/Y', strtotime('+2 day'))); ?>&tour_adults=2&tour_child=0&action=&lan=es&moneda=<?echo $_SESSION["config_es"]["currency"]?>">
 				              <p class="center-align textoCaja red-text"><?=$_categoria->getNombre()?></p>
 				              </a>
 				            </div>
@@ -83,7 +83,7 @@
 							              	<span class="card-title"></span>
 							            </div>
 							            <div class="card-content card-action hoverable contenidoDestinos">
-							              <a  title="<?php echo $_categoria->getNombre();?>" href="/es/toursByCat/Category.html?tour_destination=<?php echo urlencode($_categoria->getNombre());?>&tipo=category&cat=<?=$_categoria->getId(); ?>&dest=&TourId=&sup=&openTk=0&seg=&tour-Checkin=<?echo urlencode(date('m/d/Y', strtotime('+2 day'))); ?>&tour_adults=2&tour_child=0&action=&lan=en&moneda=USD">
+							              <a  title="<?php echo $_categoria->getNombre();?>" href="/es/toursByCat/Category.html?tour_destination=<?php echo urlencode($_categoria->getNombre());?>&tipo=category&cat=<?=$_categoria->getId(); ?>&dest=&TourId=&sup=&openTk=0&seg=&tour-Checkin=<?echo urlencode(date('d/m/Y', strtotime('+2 day'))); ?>&tour_adults=2&tour_child=0&action=&lan=es&moneda=<?echo $_SESSION["config_es"]["currency"]?>">
 							              <p class="center-align textoCaja red-text"><?=$_categoria->getNombre()?></p>
 							              </a>
 							            </div>

@@ -2,6 +2,12 @@ header{
     background:url('/images/bg/news.jpg');
     background-size:cover;
 }
+h1 {
+    font-size: 1rem;
+    line-height: 110%;
+    margin: 1.78rem 0 1.424rem 0;
+
+}
 h2 {
     font-size: 1rem;
     line-height: 110%;
