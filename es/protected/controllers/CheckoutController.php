@@ -819,10 +819,13 @@ exit();*/
                             $vende_hotel=true;
                             
                             //Nuevo Habitacion extra
-                            $_sqlVentaD = "Select descripcion_serialized from venta_descripcion where descripcion_venta = " . $Venta->venta_id;
-                            $_vDescrip = VentaDescripcion::model()->findAllBySql($_sqlVentaD);
-                            $hab_allotment= unserialize($_vDescrip[0]->descripcion_serialized);
-                
+                           $_sqlVentaD = "Select descripcion_serialized from venta_descripcion where descripcion_venta = '" . $Venta->venta_id."' and descripcion_tipo_producto='1' ";
+                            // solo para esta ocacion se usa el modelo de ventadescripcion_latin ya que el serialize se guardo en ese formato.
+                            $_vDescrip = VentaDescripcion_latin::model()->findAllBySql($_sqlVentaD);
+                            $hab_allotment=unserialize($_vDescrip[0]->descripcion_serialized);
+                            /*print_r($_vDescrip[0]->descripcion_serialized);
+                            print_r($hab_allotment);
+                            exit();*/
                             //Ezequiel 20141229 Descuenta 1 habitacion del inventario extra
                             foreach($hab_allotment[0] as $key=>$info){
                                 for($i=0;$i<count($info);$i++){
@@ -841,7 +844,7 @@ exit();*/
                                     }
                                 }
                             }
-            
+
                             $link_papeleta = "http://www.lomastravel.com.mx/preconfirma.html?id=".Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);
                             // Pruebas
                             //$link_papeleta = "http://lomasmx.dev/preconfirma.html?id=" . Yii::app()->GenericFunctions->ProtectVar($v->descripcion_id);
@@ -1001,15 +1004,16 @@ exit();*/
                     $mail->MsgHTML($info);
                     $mail->Send();
                         
+                    unset($_SESSION["config_es"]["token"]);
+                    $_SESSION["config_es"]["token"] = Yii::app()->WebServices->getSecureKey(150);
                     
                     $this->render("exito", array(
-                        "_Productos" => $_Productos,
+                         "_Productos" => $_Productos,
                         "vv_Venta" => $Venta->venta_id,
                         "total" => $total
                     ));
 
-                    unset($_SESSION["config_es"]["token"]);
-                    $_SESSION["config_es"]["token"] = Yii::app()->WebServices->getSecureKey(150);
+                    
                     print_r("llego hasta aqui ");
             }else{
                 print_r("no success");

@@ -59,11 +59,11 @@
 										<label for="hotel_destination" class="label-activo" >Destino/Hotel</label>
 									</div>
 									<div class="input-field col s12 m3 l3">
-									  <input required="required" value="<?=$_REQUEST['hotelCheckin']?>"  type="date" name="hotelCheckin" id="hotelCheckin" class="datepicker-hotel" >
+									  <input required="required" value="<?=$_REQUEST['hotelCheckin']?>"  type="text" name="hotelCheckin" id="hotelCheckin" class="datepicker-hotel" >
 									  <label for="hotelCheckin" class="active">Check-In *</label>
 									</div>
 									<div class="input-field col s12 m3 l3">
-									  <input required="required" value="<?=$_REQUEST['hotelCheckout']?>" type="date" name="hotelCheckout" id="hotelCheckout" class="datepicker-hotel" >
+									  <input required="required" value="<?=$_REQUEST['hotelCheckout']?>" type="text" name="hotelCheckout" id="hotelCheckout" class="datepicker-hotel" >
 									  <label for="hotelCheckout" class="active" >Check-Out *</label>
 									</div>
 									<div class="input-field col s12 m4 l1">

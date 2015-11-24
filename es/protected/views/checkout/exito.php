@@ -50,6 +50,8 @@ foreach ($_Productos as $_p) {
 	$items[] =array("sku"=>$_p->descripcion_id, "name"=>str_replace("'"," ",$_p->descripcion_producto), "category"=> $tipo_producto[$_p->descripcion_tipo_producto], "price"=>$_p->descripcion_total, "quantity"=>"1");
 }
 $trans = array("id"=>$vv_Venta, "affiliation"=>"Lomas Travel COM", "revenue"=> $total, "shipping"=>"0", "tax"=>"0");
+
+
 ?>
 <?php
 // Function to return the JavaScript representation of a TransactionData object.

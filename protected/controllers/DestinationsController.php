@@ -483,7 +483,7 @@ class DestinationsController extends Controller
 				$_SESSION["config"]["token"] = Yii::app()->WebServices->getSecureKey(150);
 				$_venta->venta_session_id = $_SESSION["config"]["token"];
 				$_venta->venta_moneda = $_SESSION["config"]["currency"];
-				$_venta->venta_site_id = ((Yii::app()->language == "es") ? 27 : 26);
+				$_venta->venta_site_id = ((Yii::app()->language == "es") ? 26 : 27);
 				$_venta->venta_user_id = 0;
 				$_venta->venta_estt = 1;
 				$_venta->venta_total = 0;

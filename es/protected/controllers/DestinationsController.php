@@ -251,7 +251,7 @@ class DestinationsController extends Controller
 			 if($HotelVisto["HotelId"] == $_SESSION["hotelesVistos"][$x]['HotelId']){
 				$existe = "Si";
 				continue;
-			} 
+			}  
 		}
 		
 		if($_SESSION["hotelesVistos"] == "" && $existe == ""){
@@ -444,7 +444,6 @@ class DestinationsController extends Controller
 			$Parameters = unserialize(Yii::app()->GenericFunctions->ShowVar($_REQUEST["pgR"]));
 			$ParametersNative = unserialize(Yii::app()->GenericFunctions->ShowVar($_REQUEST["pgR"]));
 
-
 			foreach($Parameters as $k=>$v){
 				if(!is_array($v)){
 					$Parameters[$k] = urldecode($v);
@@ -486,7 +485,7 @@ class DestinationsController extends Controller
 				$_SESSION["config_es"]["token"] = Yii::app()->WebServices->getSecureKey(150);
 				$_venta->venta_session_id = $_SESSION["config_es"]["token"];
 				$_venta->venta_moneda = $_SESSION["config_es"]["currency"];
-				$_venta->venta_site_id = ((Yii::app()->language == "es") ? 27 : 26);
+				$_venta->venta_site_id = ((Yii::app()->language == "es") ? 26 : 27);
 				$_venta->venta_user_id = 0;
 				$_venta->venta_estt = 1;
 				$_venta->venta_total = 0;
@@ -507,6 +506,7 @@ class DestinationsController extends Controller
 	        }
 
 			$data = explode("@@",Yii::app()->GenericFunctions->ShowVar($_REQUEST["jnfe"]));
+
 
 			$t = new VentaDescripcion;
 			$adultos = 0;
@@ -551,7 +551,7 @@ class DestinationsController extends Controller
 			$t->descripcion_thumb = $data[8];
 			$t->descripcion_add_val_1 = $data[9];
 			$t->descripcion_add_val_2 = $data[10];
-			$t->descripcion_serialized = base64_decode($data[11]);
+			//$t->descripcion_serialized = base64_decode($data[11]);
 			$t->descripcion_reservable = 1;
 			$t->descripcion_pagado = 0;
 			$t->descripcion_promo_id = $promo_id;  //guardo la promo
@@ -561,7 +561,21 @@ class DestinationsController extends Controller
 			$t->descripcion_seg_tipo = substr($promo_seg,0,1);	//guarda valor del tipo de ofertas
 			//$t->save();
 
+
 			if ($t->save()) {
+
+			$_sql = "Select venta_id from venta where descripcion_venta='".$Venta."' and venta_estt = '1' and venta_site_id = '26' and venta_fecha Like '" . date("Y-m-d") . "%'";
+			$_vValidator = Venta::model()->findByPk($Venta);			
+			 if ($_vValidator->venta_id>0) {
+			     $venta_id=$_vValidator->venta_id;
+			     Yii::app()->dbCharset
+			  ->createCommand("UPDATE venta_descripcion SET descripcion_serialized = '".base64_decode($data[11])."' WHERE descripcion_tipo_producto='1' AND descripcion_venta=:descripcion_venta")
+			  ->bindValues(array(":descripcion_venta" => $venta_id))
+			  ->execute();
+			 }
+
+
+
 				$hotel = $hotelInfo = Yii::app()->dbWeblt->createCommand()
 					->select('hotel_ciudad, hotel_transportacion_zona')
 					->from('hoteles')

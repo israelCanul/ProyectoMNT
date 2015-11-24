@@ -1,4 +1,6 @@
-<?php /* @var $this Controller */ ?>
+<?php /* @var $this Controller */ 
+/*$this->renderPartial('application.views.partials.menu_fixed',true);
+exit();*/?>
 <!DOCTYPE html>
 <html>
 
@@ -46,6 +48,7 @@ $_SESSION['home']='listo';
 </head>
 <body >
 <?
+
 $this->renderPartial('application.views.partials.menu_fixed',true);
 $this->renderPartial('application.views.partials.menu',true);
 ?>

@@ -721,8 +721,8 @@ class CheckoutController extends Controller
                         }
                 }       
                 
-                print_r($_REQUEST["TransferAddInfo"]);
-                exit();
+                /*print_r($_REQUEST["TransferAddInfo"]);
+                exit();*/
                 if ($sucess) {
 
                     foreach ($_Productos as $v) {
@@ -817,7 +817,7 @@ class CheckoutController extends Controller
                             $vende_hotel=true;
                             
                             //Nuevo Habitacion extra
-                            $_sqlVentaD = "Select descripcion_serialized from venta_descripcion where descripcion_venta = " . $Venta->venta_id;
+                            $_sqlVentaD = "Select descripcion_serialized from venta_descripcion where descripcion_venta ='" . $Venta->venta_id."' and descripcion_tipo_producto=1 ";
                             $_vDescrip = VentaDescripcion::model()->findAllBySql($_sqlVentaD);
                             $hab_allotment= unserialize($_vDescrip[0]->descripcion_serialized);
                 

@@ -847,3 +847,130 @@ Stack trace:
 #4 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
 #5 C:\AppServ\www\mexico-news-travel\es\index.php(24): CWebApplication->run()
 REQUEST_URI=/es/traslados/aeropuerto-de-cancun-a-cancun.html?round_trip=1&dest_from=1&transfer_option_type=1&AirportCode=1&transfer_from=&transfer_end=Aloft+Cancun+%28Canc%C3%BAn%29&dest_end=57&date1=26%2F11%2F2015&date2=26%2F11%2F2015&transfer_adult=2&transfer_child=0&PHPSESSID=378e3e970b571053c0db53a1d589fbd4
+2015/11/23 14:13:28 [error] [php] Invalid argument supplied for foreach() (C:\AppServ\www\mexico-news-travel\es\protected\controllers\CheckoutController.php:828)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): CheckoutController->runAction()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): CheckoutController->runActionWithFilters()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CheckoutController->run()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#5 C:\AppServ\www\mexico-news-travel\es\index.php(24): CWebApplication->run()
+REQUEST_URI=/es/checkout/validar.html
+2015/11/23 14:15:16 [error] [php] Invalid argument supplied for foreach() (C:\AppServ\www\mexico-news-travel\es\protected\controllers\CheckoutController.php:828)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): CheckoutController->runAction()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): CheckoutController->runActionWithFilters()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CheckoutController->run()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#5 C:\AppServ\www\mexico-news-travel\es\index.php(24): CWebApplication->run()
+REQUEST_URI=/es/checkout/validar.html
+2015/11/23 14:20:28 [error] [php] Invalid argument supplied for foreach() (C:\AppServ\www\mexico-news-travel\es\protected\controllers\CheckoutController.php:829)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): CheckoutController->runAction()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): CheckoutController->runActionWithFilters()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CheckoutController->run()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#5 C:\AppServ\www\mexico-news-travel\es\index.php(24): CWebApplication->run()
+REQUEST_URI=/es/checkout/validar.html
+2015/11/23 14:20:33 [error] [php] Invalid argument supplied for foreach() (C:\AppServ\www\mexico-news-travel\es\protected\controllers\CheckoutController.php:829)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): CheckoutController->runAction()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): CheckoutController->runActionWithFilters()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CheckoutController->run()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#5 C:\AppServ\www\mexico-news-travel\es\index.php(24): CWebApplication->run()
+REQUEST_URI=/es/checkout/validar.html
+2015/11/23 15:58:54 [error] [php] file_get_contents(http://www.lomastravel.com.mx/preconfirma.html?id=pmbkBQbvBQVlAmAZo21up0AcHTulLKAyVwf=) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: HTTP request failed! HTTP/1.1 500 PHP Error
+ (C:\AppServ\www\mexico-news-travel\es\protected\controllers\CheckoutController.php:893)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): CheckoutController->runAction()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): CheckoutController->runActionWithFilters()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CheckoutController->run()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#6 C:\AppServ\www\mexico-news-travel\es\index.php(24): CWebApplication->run()
+REQUEST_URI=/es/checkout/validar.html
+2015/11/23 16:49:48 [error] [php] in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument (C:\AppServ\www\mexico-news-travel\es\protected\controllers\DestinationsController.php:436)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): DestinationsController->runAction()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): DestinationsController->runActionWithFilters()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): DestinationsController->run()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#6 C:\AppServ\www\mexico-news-travel\es\index.php(24): CWebApplication->run()
+REQUEST_URI=/es/agregar.html
+2015/11/23 16:51:15 [error] [php] in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument (C:\AppServ\www\mexico-news-travel\es\protected\controllers\DestinationsController.php:436)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): DestinationsController->runAction()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): DestinationsController->runActionWithFilters()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): DestinationsController->run()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#6 C:\AppServ\www\mexico-news-travel\es\index.php(24): CWebApplication->run()
+REQUEST_URI=/es/agregar.html
+2015/11/23 16:51:17 [error] [php] in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument (C:\AppServ\www\mexico-news-travel\es\protected\controllers\DestinationsController.php:436)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): DestinationsController->runAction()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): DestinationsController->runActionWithFilters()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): DestinationsController->run()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#6 C:\AppServ\www\mexico-news-travel\es\index.php(24): CWebApplication->run()
+REQUEST_URI=/es/agregar.html
+2015/11/23 16:52:24 [error] [php] in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument (C:\AppServ\www\mexico-news-travel\es\protected\controllers\DestinationsController.php:436)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): DestinationsController->runAction()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): DestinationsController->runActionWithFilters()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): DestinationsController->run()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#6 C:\AppServ\www\mexico-news-travel\es\index.php(24): CWebApplication->run()
+REQUEST_URI=/es/agregar.html
+2015/11/23 16:55:28 [error] [exception.CException] exception 'CException' with message 'Propiedad "CWebApplication"."dbCharset" no se encuentra definida.' in C:\AppServ\www\mexico-news-travel\lib\yii\base\CComponent.php:131
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\base\CModule.php(88): CComponent->__get('dbCharset')
+#1 C:\AppServ\www\mexico-news-travel\es\protected\controllers\DestinationsController.php(570): CModule->__get('dbCharset')
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\actions\CInlineAction.php(50): DestinationsController->actionAgregar()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(300): CInlineAction->runWithParams(Array)
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): CController->runAction(Object(CInlineAction))
+#5 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CController->run('agregar')
+#7 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController('destinations/ag...')
+#8 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#9 C:\AppServ\www\mexico-news-travel\es\index.php(24): CApplication->run()
+#10 {main} REQUEST_URI=/es/agregar.html
+2015/11/23 17:14:08 [error] [php] Invalid argument supplied for foreach() (C:\AppServ\www\mexico-news-travel\es\protected\controllers\CheckoutController.php:827)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): CheckoutController->runAction()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): CheckoutController->runActionWithFilters()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CheckoutController->run()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#5 C:\AppServ\www\mexico-news-travel\es\index.php(24): CWebApplication->run()
+REQUEST_URI=/es/checkout/validar.html
+2015/11/23 17:22:43 [error] [php] Invalid argument supplied for foreach() (C:\AppServ\www\mexico-news-travel\es\protected\controllers\CheckoutController.php:827)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): CheckoutController->runAction()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): CheckoutController->runActionWithFilters()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CheckoutController->run()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#5 C:\AppServ\www\mexico-news-travel\es\index.php(24): CWebApplication->run()
+REQUEST_URI=/es/checkout/validar.html
+2015/11/23 17:22:53 [error] [php] Invalid argument supplied for foreach() (C:\AppServ\www\mexico-news-travel\es\protected\controllers\CheckoutController.php:827)
+Stack trace:
+#0 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(278): CheckoutController->runAction()
+#1 C:\AppServ\www\mexico-news-travel\lib\yii\web\CController.php(257): CheckoutController->runActionWithFilters()
+#2 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(277): CheckoutController->run()
+#3 C:\AppServ\www\mexico-news-travel\lib\yii\web\CWebApplication.php(136): CWebApplication->runController()
+#4 C:\AppServ\www\mexico-news-travel\lib\yii\base\CApplication.php(158): CWebApplication->processRequest()
+#5 C:\AppServ\www\mexico-news-travel\es\index.php(24): CWebApplication->run()
+REQUEST_URI=/es/checkout/validar.html
