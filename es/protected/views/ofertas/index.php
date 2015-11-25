@@ -188,7 +188,7 @@
 </div>
  <script type="text/javascript">
 	 $(document).ready(function(){
-		 $("#txtBanner").html("ALL SUITES, ALL BUTLERS, ALL GOURMET");
-		 $("#txtBanner1").html("");
+		 $("#txtBanner").html("AHORRE EN SUS VACACIONES");
+		 $("#txtBanner1").html("DESTINOS DE TODO MÉXICO");
 	 });
  </script>

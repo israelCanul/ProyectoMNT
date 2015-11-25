@@ -1,4 +1,9 @@
-<? unset($_SESSION['datosKey']); ?>
+<? unset($_SESSION['datosKey']); 
+/*print_r($_fecha);
+print_r("<br>");*/
+//$_fecha=date('d/m/Y', strtotime($_fecha));
+//exit();
+?>
 <div class="row">
 
 	<section class="contentSide detail col s12 m10 offset-m1">
@@ -6,7 +11,7 @@
 			<span class="operated">Operado por: <span class="supplier"><?=$_t["proveedores"];?></span></span>
 			<h1>Tour - <?php echo $_t["tour_nombre_es"];?></h1>
 			<h2><?php echo $_t["nombre_es"]; ?></h2>
-			<h3><?php echo Yii::app()->GenericFunctions->convertDate($_REQUEST["fecha"]); ?> - <?php echo $_REQUEST["tour_adults"]; ?> <?php echo ($_REQUEST["tour_adults"] == 1) ? "Adulto" : "Adultos"; ?>, <?php echo $_REQUEST["tour_childs"]; ?> <?php echo ($_REQUEST["tour_childs"] == 1) ? "Niño" : "Niños"; ?></h3>
+			<h3><?php echo Yii::app()->GenericFunctions->convertDate($_REQUEST["tour_fecha"]); ?> - <?php echo $_REQUEST["tour_adults"]; ?> <?php echo ($_REQUEST["tour_adults"] == 1) ? "Adulto" : "Adultos"; ?>, <?php echo $_REQUEST["tour_childs"]; ?> <?php echo ($_REQUEST["tour_childs"] == 1) ? "Niño" : "Niños"; ?></h3>
 		</div>
 
 		<!-- DESCRIPCION -->
@@ -154,13 +159,13 @@
 							$openTk=1;
 						}
 						if ($z["opera_Dia"] == "true") {
-							echo '<div class="rate-book prod_total_list"> <label> <span class = "currency_code" > '.$_SESSION["config_es"]["currency"].'  </span> $ '.number_format($price,0).'</label> <input type="submit"  class="misc_select_btn_green" value="' . "BOOK" .'" /></div>';
+							echo '<div class="rate-book prod_total_list"> <label> <span class = "currency_code" > '.$_SESSION["config_es"]["currency"].'  </span> $ '.number_format($price,0).'</label> <input type="submit"  class="misc_select_btn_green" value="' . "RESERVE" .'" /></div>';
 							if($x == 0){
 								$jnfe=Yii::app()->GenericFunctions->ProtectVar($z["tarifa_id"] . "@@" . $_t["tour_id"] . "@@" . $z["servicio_id"] . "@@" . ((Yii::app()->language == "es") ? $_t["tour_nombre_es"] : $_t["tour_nombre"]) . "@@"  . $z["tarifa_nombre_" . Yii::app()->language] . "@@" . $_t["descripcion_corta"] . "@@" . $z["tarifa_precio_adulto_mxp"] . "@@" . $price . "@@" . $_t["tour_reservable"] . "@@" . $_fecha . "@@" . $_ad . "@@" . $_mn . "@@" . $_t["tour_destino"] . "@@//apstatic.lomastravel.com.mx/180/" . $_imgPrincipal . "@@" . $openTk . "@@" . number_format($tarifa_precio_adulto,0,",",""). "@@" . number_format($tarifa_precio_menor,0,",",""). "");													
 								echo "<input type=\"hidden\" name=\"jnfe\" value=\"" .$jnfe. "\" checked=\"checked\" /></td>";	
 							}else{				
-								$jnfe=Yii::app()->GenericFunctions->ProtectVar($z["tarifa_id"] . "@@" . $_t["tour_id"] . "@@" . $z["servicio_id"] . "@@" .((Yii::app()->language == "es") ? $_t["tour_nombre_es"] : $_t["tour_nombre"])  . "@@" . $z["tarifa_nombre_" . Yii::app()->language] . "@@" . $_t["descripcion_corta"] . "@@" . $z["tarifa_precio_adulto_mxp"] . "@@" . $price . "@@" . $_t["tour_reservable"] . "@@" . $_fecha . "@@" . $_ad . "@@" . $_mn . "@@" . $_t["tour_destino"] . "@@//apstatic.lomastravel.com.mx/180/" . $_imgPrincipal . "@@" . $openTk . "@@" . number_format($tarifa_precio_adulto,0,",","");
-								echo "<input type=\"hidden\" name=\"jnfe\" value=\"" .$jnfe. "@@" . number_format($tarifa_precio_menor,0,",",""). "") . "\" />";
+								$jnfe=Yii::app()->GenericFunctions->ProtectVar( $z["tarifa_id"] . "@@" . $_t["tour_id"] . "@@" . $z["servicio_id"] . "@@" .((Yii::app()->language == "es") ? $_t["tour_nombre_es"] : $_t["tour_nombre"])  . "@@" . $z["tarifa_nombre_" . Yii::app()->language] . "@@" . $_t["descripcion_corta"] . "@@" . $z["tarifa_precio_adulto_mxp"] . "@@" . $price . "@@" . $_t["tour_reservable"] . "@@" . $_fecha . "@@" . $_ad . "@@" . $_mn . "@@" . $_t["tour_destino"] . "@@//apstatic.lomastravel.com.mx/180/" . $_imgPrincipal . "@@" . $openTk . "@@" . number_format($tarifa_precio_adulto,0,",",""). "@@" . number_format($tarifa_precio_menor,0,",",""). "");
+								echo "<input type=\"hidden\" name=\"jnfe\" value=\"" .$jnfe . "\"/>";
 							}
 							$_SESSION['datosKey'][]=$jnfe;	
 						}else{
@@ -180,7 +185,7 @@
 							echo "<strong>$ ". number_format($price,0) . " " . $_SESSION["config_es"]["currency"]  . "</strong>";
 						}
 						echo "</div>";*/
-						echo "</div>";
+						echo "</div>"; 
 						
 						$x++;
 						echo "</form>";	

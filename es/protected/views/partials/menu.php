@@ -97,7 +97,7 @@
 	    <div class="row"></div>
 		<div class="textoBanner">
 			<h5 class="txtTextoBanner"><center id="txtBanner">RELAJATE, NADA Y DISFRUTA</center></h5>
-			<h4 class="txtTextoBanner"><center id="txtBanner1">THE <span class='txtCant'>10</span>MEJORES PLAYAS EN MÉXICO</center></h4>
+			<h4 class="txtTextoBanner"><center id="txtBanner1">LAS <span class='txtCant'>10</span> MEJORES PLAYAS EN MÉXICO</center></h4>
 		</div>
 	</div>
 </header>

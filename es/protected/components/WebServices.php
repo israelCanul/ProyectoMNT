@@ -48,7 +48,7 @@ class WebServices extends CApplicationComponent{
 		$header[] = "Content-type: application/x-www-form-urlencoded";
 		$ch = curl_init();
 		$postfields = "info_asj3=1".$vars;
-
+		
 
 		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
 		curl_setopt($ch, CURLOPT_URL,$url);
@@ -67,6 +67,7 @@ class WebServices extends CApplicationComponent{
 			print_r($data);
 
 			echo "</pre>";
+			exit();
 
 		}
 

@@ -40,7 +40,8 @@ class CheckoutController extends Controller
         $_Productos         = VentaDescripcion::model()->findAll("descripcion_venta = :venta", array(":venta" => $Venta ));
         $Productos          = array();
         $ProductoStarsLevel = array();
-
+        /*print_r($Venta);
+        exit();*/
         foreach ($_Productos as $_p) {
             if (!isset($Productos[$_p->descripcion_tipo_producto])) {
                 $Productos[$_p->descripcion_tipo_producto] = array();
@@ -61,6 +62,7 @@ class CheckoutController extends Controller
                     $_XML = Yii::app()->_Hotels->wsGetByDestination();
                     $wsdl = Yii::app()->_Hotels->WSDL;
                     $xml = $_XML;
+                    
                     $iService = Yii::app()->WebServices->consumeServiceXML($wsdl,$xml);
                     $Hoteles = $iService->SearchHotelsByIDResult->HotelList;
 

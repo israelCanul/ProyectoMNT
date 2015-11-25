@@ -57,7 +57,7 @@
 </div>
 <script type="text/javascript">
 	$(document).ready(function(){
-		$("#txtBanner").html("CANCUN, RIVIERA MAYA");
-		$("#txtBanner1").html("& COZUMEL");
+		$("#txtBanner").html("LOS MEJORES HOTELES DE PLAYA EN CANCÚN");
+		$("#txtBanner1").html("RIVIERA MAYA Y COZUMEL");
 	});
 </script>

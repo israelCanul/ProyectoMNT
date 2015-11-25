@@ -35,7 +35,7 @@
 </div>
 <script type="text/javascript">
 	$(document).ready(function(){
-		$("#txtBanner").html("BEST FAMILY FRIENDLY VACATIONS");
-		$("#txtBanner1").html("-ANYWHERE-");
+		$("#txtBanner").html("LOS MEJORES RESORTS EN MÉXICO");
+		$("#txtBanner1").html("DE ACUERDO A TRIPADVISOR");
 	});
 </script>

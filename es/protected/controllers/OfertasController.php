@@ -30,7 +30,7 @@ class OfertasController extends CController
 		$p = Yii::app()->db->createCommand()
 						    ->select("*")
 						    ->from('promos')									    
-						    ->where(':date BETWEEN promocion_inicio and promocion_fin and promocion_id = :id and promocion_sitio_aplica IN (0,1) and promocion_en_listado = 1',array(":id" => $_REQUEST["cod"], ":date"=>date("Y-m-d")))								    
+						    ->where(':date BETWEEN promocion_inicio and promocion_fin and promocion_id = :id and promocion_sitio_aplica IN (0,2) and promocion_en_listado = 1',array(":id" => $_REQUEST["cod"], ":date"=>date("Y-m-d")))								    
 						    ->queryRow();
 		
 		//var_dump($p["promocion_producto"]);
@@ -41,6 +41,9 @@ class OfertasController extends CController
 						    ->from('promos_rows')									    
 						    ->where('promocion = :id',array(":id"=> $_REQUEST["cod"] ))								    
 						    ->queryAll();
+
+		/*print_r($_REQUEST);
+		exit();*/
 		
 		$cs = Yii::app()->getclientScript(); 
 		$cs->registerCssFile(Yii::app()->baseUrl.'/css/page/ofertas.css');

@@ -124,7 +124,7 @@
 </div>
 <script type="text/javascript">
 	$(document).ready(function(){
-		$("#txtBanner").html("PRE-HISPANIC CITY OF CHICHEN-ITZA");
+		$("#txtBanner").html("CIUDAD PREHISPÁNICA DE CHICHEN-ITZÁ");
 		$("#txtBanner1").html("");
 	});
 </script>

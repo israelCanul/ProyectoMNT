@@ -327,7 +327,7 @@ class ActivitiesController extends Controller
 			$_ad 	= (isset($_REQUEST["tour_adults"]) ? $_REQUEST["tour_adults"] : (isset($_REQUEST["pax_adulto"]) ? $_REQUEST["pax_adulto"] : 2));
 			$_mn 	= (isset($_REQUEST["tour_childs"]) ? $_REQUEST["tour_childs"] : (isset($_REQUEST["pax_menor"]) ? $_REQUEST["pax_menor"] : 0));
 			$_fecha = (isset($_REQUEST["tour_fecha"]) ? Yii::app()->GenericFunctions->convertUsableDates($_REQUEST["tour_fecha"]) : date("Y-m-d",mktime(0,0,0,date("m"),date("d")+3,date("Y"))) );
-			$_REQUEST['tour_fecha'] 		= date('m/d/Y', strtotime($_fecha));
+			$_REQUEST['tour_fecha'] 		= date('d/m/Y', strtotime($_fecha));
 
 			//print_r($_REQUEST);
 			$_REQUEST['tour_adults'] 		= $_ad;
@@ -342,7 +342,7 @@ class ActivitiesController extends Controller
 			$minBook =  strtotime ( '+2 day' , strtotime ( date('Y-m-j') ) );
 			if ($minBook >  strtotime($_fecha)) {
 				$_fecha = date('Y-m-d',$minBook );
-				$_REQUEST['tour_fecha'] = date('m/d/Y',$minBook );
+				$_REQUEST['tour_fecha'] = date('d/m/Y',$minBook );
 			}
 
 			$Connection = Yii::app()->db;
@@ -411,7 +411,8 @@ class ActivitiesController extends Controller
 			if ($_diasReserva<2) {
 				$Tarifas = array();
 			}
-
+			/*print_r($fechaActual);
+			exit();*/
 			if ($Tour["tour_id"] == 1457) {
 				$selectAdulto["min"]     = 0;
 				$selectAdulto["max"]     = 0;

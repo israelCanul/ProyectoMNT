@@ -111,13 +111,13 @@
 							</div>
 
 							<div class="elementPriceInfo">
-								<span>Average per night<br/>Taxes included</span>
+								<span>Precio promedio por noche<br/>Impuestos incluidos</span>
 							</div>
 							
 										
 						<div class="elementBook">
 							<a class="book btn btn-large curved misc_select_btn_green" href='<?php echo $this->createUrl('destinations/detalle', array('clave' => $_h->Location->attributes()->cityClave, 'hotel' => $_h->attributes()->hotel_keyword) ).urldecode($url_promo); ?>' title="<?= str_replace("&","&amp;",utf8_decode($_h->attributes()->name)); ?>">
-								BOOK				
+								RESERVE				
 							</a>	
 						</div>
 						<?php
@@ -133,9 +133,9 @@
 									$ro=0;
 									foreach($RoomInfo as $InfoRoom){
 										if($RoomInfo[$ro]['Childs']>0){
-											echo "<span style='font-size: 17px; color: #9a999f;'>" . Yii::t("global","Adults only") . "</span>";
+											echo "<span style='font-size: 17px; color: #9a999f;'>" . Yii::t("global","Solo Adultos") . "</span>";
 										}else{
-											echo "<span style='font-size: 17px; color: #9a999f;'>This hotel is not available in the selected dates,<br> please change your dates or contact us at our call center: <br>314-669-6871</span>";
+												echo Yii::t("global","El hotel no está disponible en estas fechas, modifíquelas o llámenos al 01800-00-LOMAS");		
 										}
 										$ro++;
 										if($ro==1){
@@ -144,8 +144,8 @@
 									}
 									
 								}else{
-									echo "<span style='font-size: 17px; color: #9a999f;'>This hotel is not available in the selected dates,<br> please change your dates or contact us at our call center: <br>314-669-6871</span>";
 
+										echo "<br>".Yii::t("global","El hotel no está disponible en estas fechas, modifíquelas o llámenos al 01800-00-LOMAS");
 
 								}
 
