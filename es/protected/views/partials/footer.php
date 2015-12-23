@@ -32,8 +32,8 @@
 		              <div class="col l8 s12">
 		                <h5 class="white-text">Más</h5>
 		                <ul>
-		                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Privacy Guidelines" href="#!">Privacy guidelines /</a></li>
-		                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Terms of Service" href="#!">Términos de Servicio /</a></li>
+		                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Privacy Guidelines" href="<?php echo $this->createUrl("site/Privacy"); ?>">Políticas de Privacidad /</a></li>
+		                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Terms of Service" href="<?php echo $this->createUrl("site/Terms_Conditions"); ?>">Términos de Servicio /</a></li>
 		                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Site Map" href="#!">Mapa del sitio /</a></li>
 		                  <li><a class="grey-text text-lighten-3 tooltipped followBtn" data-open='contac_us' data-position="bottom" data-delay="50" data-tooltip="Contact US" href="#">Contáctenos /</a></li>
 		                </ul>

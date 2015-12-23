@@ -4,3 +4,5 @@
 sftp-config.json
 /es/protected/config
 sftp-config.json
+.hg
+/es/.hg

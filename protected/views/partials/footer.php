@@ -33,9 +33,9 @@
 		              <div class="col l8 s12">
 		                <h5 class="white-text">More</h5>
 		                <ul>
-		                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Privacy Guidelines" href="#!">Privacy guidelines /</a></li>
-		                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Terms of Service" href="#!">Terms of service /</a></li>
-		                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Site Map" href="#!">Site Map /</a></li>
+		                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Privacy Guidelines" href="<?php echo $this->createUrl("site/Privacy"); ?>">Privacy guidelines /</a></li>
+		                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Terms of Service" href="<?php echo $this->createUrl("site/Terms_Conditions"); ?>">Terms of service /</a></li>
+		                  <li><a class="grey-text text-lighten-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Site Map" href="<?php echo $this->createUrl("/activities"); ?>">Site Map /</a></li>
 		                  <li><a class="grey-text text-lighten-3 tooltipped followBtn" data-open='contac_us' data-position="bottom" data-delay="50" data-tooltip="Contact US" href="#">Contact US /</a></li>
 		                </ul>
 		              </div>

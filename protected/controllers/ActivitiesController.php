@@ -101,7 +101,8 @@ class ActivitiesController extends Controller
 		$fechaTem=explode("/", $_REQUEST['tour-Checkin']);
 		$fechaTitulo=$fechaTem[0]."/".$fechaTem[1]."/".$fechaTem[2];
 		$fechaTem=$fechaTem[2]."-".$fechaTem[0]."-".$fechaTem[1];
-
+		/*print_r(Yii::app()->params['api']."/RestTours/tour/".$_REQUEST['TourId'].".html?date=".$fechaTem."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda']."&ninos=".$_REQUEST['tour_child']."&adults=".$_REQUEST['tour_adults']);
+		exit();*/
 		// url y data para los tours
 		$tours= file_get_contents(Yii::app()->params['api']."/RestTours/tour/".$_REQUEST['TourId'].".html?date=".$fechaTem."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda']."&ninos=".$_REQUEST['tour_child']."&adults=".$_REQUEST['tour_adults']);
 		$dataUrl="tour-Checkin=".$_REQUEST['tour-Checkin']."&tour_adults=".$_REQUEST['tour_adults']."&tour_child=".$_REQUEST['tour_child']."&lan=".$_REQUEST['lan']."&moneda=".$_REQUEST['moneda'];

@@ -1,2 +1,1 @@
-estilo en la parte de destinos
-creacion de la vista de actividades, categorizando las actividades tanto en destino como categoria
+repositorio de MNT

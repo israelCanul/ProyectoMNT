@@ -1,82 +1,74 @@
-<div class="row">
-<div class="col s12 m10 offset-m1">
-   <section id="text" class="section">
-        <h1>Privacy and Data Protection Policy</h1>
-				
-        <p>In compliance with the Mexican Federal Law for the Protection of Personal Data in Possession of Private Entities (hereafter the law), which has the purpose of protecting the personal data held by private parties (hereafter the information), <strong>Lomas Travel</strong> provides the following Privacy and Data Protection Policy.</p>
-        
-         <article class="point">
-           <h3>Data Protection Liability</h3>
-            <p>Viajes Turquesa del Caribe Mexicano, S.A. de C.V. (hereby Lomas Travel), located in Calle Acceso L28, Manzana 16, Lote 37, Supermanzana 309, Cancun, Quintana Roo, Mexico, Post Code 77560. The Web Development department, located in the address specified before, is liable for the protection of the information and may be contacted via e-mail to the following address: webmaster@lomas-travel.com</p>
-         </article>
 
-
-         <article class="point">
-            <h3>Personal Information Requested</h3>
-            <p><strong>Lomas Travel</strong> will request personal information to all the people who uses our online and call centre services, in order to process, follow-up, and confirm the service(s) hired to <strong>Lomas Travel</strong>. The information requested to the users includes, but is not limited to: full name, e-mail address, mailing address, postcode, birth date, credit card information and additional information important for the reserve and payment processes. The credit card information is used for the payment process during the hiring of the services provided by <strong>Lomas Travel</strong>.</p>
-            <p>When filling the registry forms or giving the information to any representative of the call centre, the information owner gives full and voluntary consent to providing the personal information that may be requested on the understanding that in case that the user decides not to share any of the mandatory information he/she will not be able to access to the services which necessitate such information; nonetheless, will be able to access to all the other services provided inasmuch as the personal information is not required. <strong>Lomas Travel</strong> in no case and in no circumstance will keep, store, nor file any sensitive personal information such as race, ethnicity, health status, genetic information, religion a/o belief, membership to any union or such group, political conviction, sexual preference, etc.</p>
-            <p>Furthermore, <strong>Lomas Travel</strong> compiles the e-mail addresses of all the people that use these services to communicate with <strong>Lomas Travel</strong>, the additional information regarding the web pages visited through their visit to the website, and any other information given voluntarily, including but not limited to polls, surveys, or online registry forms.</p>
-            <p>The information provided as a user of the website may be utilized to: contact the user provided that any change on the reservation is made, detect a/o prevent possible cyber-crimes, to make customer surveys and polls, manage the customer-company relations and improve the website’s content. In the case that the user provides <strong>Lomas Travel</strong> with its phone number, it will be used as a means of communication in the event that any change in the reservations is made, or in any concern related to the payment process.</p>
-            <p>The personal information that, as a user of our website a/o Call centre, is provided to <strong>Lomas Travel</strong> must be true and in accordance with your present situation.</p>
-        </article>
-
-         <article class="point">
-            <h3>Data Transfer</h2>
-            <p>Personal data may be transferred a/o shared with trading partners, associates, suppliers; financial, banking and credit institutions, subsidiary partners, subsidiaries, affiliates, branches and third parties such as hotels, leasing companies, airlines, tour suppliers, etc., <strong>to verify and confirm the reservation(s) made</strong>.</p>
-        </article>
-
-         <article class="point">
-           <h3>Privacy and Personal Data Protection</h3>
-            <p><strong>Lomas Travel</strong> uses the most advanced technologies and processes for the protection of the information provided by the data owners. These technologies encode, cipher, and prevent the interception of any data a/o information provided through the internet and the Call centre, including but not limited to: credit card numbers and e-mail addresses. <strong>Lomas Travel</strong> establishes and maintains administrative, technical and physical measures in order to safekeeping the personal data from: damages, loss or alteration, destruction or misuse, breach or unauthorized processing. The <strong>Lomas Travel</strong> website encloses links a/o hypertexts, advertising, buttons, and search engine tools onto the internet that, when clicked on or accessed by, connect the user to other portals and websites owned by third parties. Notwithstanding the fact that in some particular cases some of this third-party-owned websites are framed with the navigation bar a/o the design and appearance of the <strong>Lomas Travel</strong> website; the information that the user provides to any and all of these websites and portals is not covered under these Privacy Policy and <strong>Lomas Travel</strong> will not be liable for the navigation and use of personal information within third-party-owned portals and websites, consequently, it is recommended that the user of the website to verify the notices and privacy policies established or applicable to these third-party-owned portals and websites.</p>
-            <p><strong>Lomas Travel</strong> commits to keep the user’s information undisclosed, and will not transfer the information to any third party unless prior consent from the user; with the exceptions mentioned on the Federal Law on Protection of Personal Data Held by Private Parties in its art.37; as well as executing the Data Transfer in observance of the present Law.</p>
-            <p><strong>Article 37</strong>. Domestic or international transfers of data may be carried out without the consent of the data owner in the following cases:</p>
-              <ol class="lower-roman">
-                <li><span>Where the transfer is pursuant to a Law or Treaty to which Mexico is party;</span></li>
-                <li><span>Where the transfer is necessary for medical diagnosis or prevention, health care delivery, medical treatment or health services management;</span></li>
-                <li><span>Where the transfer is made to holding companies, subsidiaries or affiliates under common control of the data controller, or to a parent company or any company of the same group as the data controller, operating under the same internal processes and policies; </span></li>
-                <li><span>Where the transfer is necessary by virtue of a contract executed or to be executed in the interest of the data owner between the data controller and a third party;</span></li>
-                <li><span>Where the transfer is necessary or legally required to safeguard public interest or for the administration of justice; </span></li>
-                <li><span>Where the transfer is necessary for the recognition, exercise or defence of a right in a judicial proceeding, and </span></li>
-                <li><span>Where the transfer is necessary to maintain or fulfil a legal relationship between the data controller and the data owner. </span></li>
-              </ol>
-       </article>
-
-         <article class="point">
-            <h3>Use of Bank Card Information Liability</h3>
-            <p><strong>Lomas Travel</strong> commits to respect the privacy of all its customers; in the particular aspect of this website, to all those who make online booking or book through the Call centre. In order to ensure the safety of all the online operations a SSL certificate is used in its website, which protects the data sent from the user’s web navigator onto <strong>Lomas Travel’s</strong> website and databases. All the information regarding the transactions made with a credit card is ciphered in order to keep the user’s information safe and private.</p>
-            <p>All the personal information provided by <strong>Lomas Travel</strong> customers, such as full name, mailing address, e-mail address, telephone number, and any other data concerning the booking through the online payment process, will be considered as strictly confidential, unless specified otherwise by the customers.</p>
-        </article>
-
-         <article class="point">
-            <h3>Use of "cookies" and IP Addresses</h3>
-            <p><strong>Lomas Travel’</strong> data server will send data to the user’s web navigator, same that will be stored in the user’s computer hard drive. This allows <strong>Lomas Travel</strong> to identify the devises employed by the user to access to its portal. This whole process is known as the use of “cookies” or IP address. Through the use of these “cookies” or IP address <strong>Lomas Travel</strong> is able to offer a personalized service to all its users for it permits, among other things, to issue publicity and promotion campaigns, measure the online audience and traffic in its websites visited by the user. Through these “cookies” or IP address the user is not personally identified, what is identified is the public  
-              IP address from where the user is accessing the website.</p>
-        </article>
-
-         <article class="point">
-            <h3>Access to Personal Data</h3>
-            <p>Users of the services provided by <strong>Lomas Travel</strong> have the right to access the personal data they provide to its database, and to the detail of the treatment given to them, the right to rectify the data in cases where such data is inaccurate and incomplete, cancel them when deemed as unnecessary for any of the purposes mentioned in the present Privacy Policy, or when considered that such data is being used for the aim agreed in the present  document, or when the contractual relationship of the service(s) or good(s) has ended, when disagreeing to the treatment of such for the specific means.</p>
-            <p>The Law grants four rights to assert (the ARCO rights):</p>
-              <ul class="disc">
-                <li><span>Access to your personal data to learn which of it is being in safekeeping, if they are correct or updated and the means by which they are being used.</span></li>
-                <li><span>Rectification of such data in the case it is inaccurate, incorrect or not updated.</span></li>
-                <li><span>Cancellation, consisting of erasing such personal data when considered that it is not being used in compliance with the means established in the present Privacy Policy.</span></li>
-                <li><span>Opposition to the treatment given to your personal data regarding any of the means established in the present Privacy Policy.</span></li>
-              </ul>
-              <p>Users have the right to abrogate the given consent for the treatment of their Personal Data in order for them not to be used furthermore, in addition to this, the consent to receive promotions and special offers by telephone or e-mail can be revoked.</p>
-              <p>In order to exercise the ARCOst rights or the right to revoke the consent for the use of personal data, the User must send a written notification in Spanish to <strong>Lomas Travel</strong> to the following e-mail address: webmaster@lomas-travel.com, or send it to the Web Development Department to the following mailing address: Calle de Acceso L28, Manzana 16 Lote 37 Supermanzana 309, Cancún, Quintana Roo, México, Post Code 77560. In such written notification it must be specified: Full name, registered e-mail, mailing address, a telephone number, and a copy of the user’s ID must be attached.</p>
-              <p><strong>Lomas Travel</strong> will contact the user in follow up to the request in the consecutive 15 working days of the reception of such notification and attachments hereby solicited, to communicate whether the revoke proceeds or not, inform its rectification, perform the necessary steps to cancel the utilization of the user’s personal data, or end its usage.</p> 
-        </article>
-
-         <article class="point">
-            <h3>Modification of the Privacy Policy</h3>
-            <p><strong>Lomas Travel</strong> reserves the right to modify or amend totally or partially the present Privacy Policy if necessary; such amendments will be valid upon the date of publication in its website</p>
-       </article>
-
-         <article class="point">
-            <h3>Acceptance of the Terms</h3>
-            <p>This Privacy Policy is subject to the terms and conditions in the website of Viajes Turquesa del Caribe Mexicano S.A. de C.V. /<a href="/">www.lomas-travel.com.mx</a> hereby described; which constitutes a legal agreement between you and Viajes Turquesa del Caribe Mexicano S.A. de C.V. If, as a user you utilize the services of Viajes Turquesa del Caribe Mexicano S.A. de C.V. a/o <a href="/">www.lomas-travel.com.mx</a> it will be understood that you have read, comprehended and agreed with the terms hereby presented. </p>
-        </article>
-   </section>
-</div>
+<div class="row"></div>
+<style type="text/css">
+  #terminos p{
+    text-align: justify;
+  }
+  strong{
+    font-weight:bold;
+  }
+<?= Yii::t("terms",''); ?>
+</style>
+<div class="row" id="terminos">
+  <div class="col s12 m10 offset-m1">
+    <h3><?= Yii::t("terms","AVISO DE PRIVACIDAD"); ?></h3>
+    <p>
+      <?= Yii::t("terms",'En cumplimiento a lo establecido en la Ley Federal de Datos Personales en Posesión de los Particulares (la Ley), que tiene por objetivo la protección de la información personal proporcionada por cada persona (la Información), Mexico News pone a su disposición el siguiente Aviso de Privacidad.'); ?>
+    </p> 
+    <h5><?= Yii::t("terms",'1. Responsable de la protección de sus datos personales'); ?></h5>
+    <p>
+      <?= Yii::t("terms",'Viajes Turquesa del Caribe Mexicano, S.A. de C.V. (en adelante, "<strong>Mexico News</strong>"), con domicilio en Calle de Acceso L28, Manzana 16 Lote 37 Supermanzana 309, Cancún, Quintana Roo, México, Código Postal 77560.<br>
+El responsable de la protección de los datos es el Departamento de Desarrollo Web, ubicado en el mismo domicilio, se puede contactar en el correo electrónico webmaster@lomas-travel.com
+'); ?>
+    </p>
+    <h5><?= Yii::t("terms",'2. Información Personal Solicitada'); ?></h5>
+    <p>
+      <?= Yii::t("terms",'<strong>Mexico News</strong> solicitará información de carácter personal a los usuarios de los servicios a través de nuestro Sitio de Internet y Centro de Atención Telefónica, con fines de procesamiento, seguimiento, actualización, modificación, cancelación y confirmación de los servicios reservados con <strong>Mexico News</strong>. El tipo de información que se solicita a los usuarios de los servicios incluye, de manera enunciativa más no limitativa, nombre, dirección de correo electrónico (e-mail), domicilio, código postal, fecha de nacimiento, información de tarjetas de crédito e información adicional importante para el proceso de reservación y pago. La información relativa a su tarjeta de crédito es utilizada exclusivamente en el momento en que se contratan los servicios ofrecidos por <strong>Mexico News</strong>.<br>
+El titular de los datos, al registrarse, otorga su pleno consentimiento libre y voluntariamente de proporcionar los datos personales que le sean requeridos, en el entendido de que si el usuario decidiera no proporcionar la Información obligatoria, este no podrá acceder a los servicios que efectivamente requieran dicha información, sin embargo, podrá tener acceso a todos los demás servicios que no requieran dicha Información. <strong>Mexico News</strong> en ningún caso y bajo ninguna circunstancia almacena información de datos personales sensibles como origen racial o étnico, estado de salud actual, información genética, creencias religiosas, filosóficas y morales, afiliación sindical, opiniones políticas, preferencia sexual, etc.<br>
+Asimismo, recolectamos las direcciones de correo electrónico de aquellos que se comunican con nosotros por esta vía, información agregada de cuales páginas son las que visita, así como cualquier otra información que de manera voluntaria nos proporciona, tal como la relativa a encuestas o registros en el sitio.<br> 
+La información que proporcione como usuario de nuestro Sitio de Internet podrá ser usada para: contactarlo en caso de cambios de reservaciones, detectar o prevenir la comisión de posibles delitos cibernéticos, para llevar a cabo encuestas a clientes, administrar la relación con el cliente y mejorar el contenido del Sitio. En caso de que nos proporcione su número telefónico, sólo le contactaremos por este medio en caso de cambio de reservaciones o cuestiones relacionadas con el proceso de pago.<br> 
+La información personal que como usuario de nuestro Sitio de Internet y Centro de Atención Telefónica nos proporcione deberá ser veraz y corresponder a su situación actual.
+'); ?>
+    </p>  
+    <h5><?= Yii::t("terms",'3. Transferencia de datos'); ?></h5>
+    <p>
+      <?= Yii::t("terms",'Los datos personales podrán ser transferidos y/o compartidos a socios comerciales, afiliados, proveedores, instituciones financieras, bancarias y crediticias, sociedades subsidiarias, filiales, afiliadas y terceros, como lo son hoteles, arrendadoras, aerolíneas, proveedores de tours, etcétera, <strong>para confirmar reservaciones</strong>.'); ?>
+    </p>  
+     <h5><?= Yii::t("terms",'4. Privacidad y Protección de Datos Personales'); ?></h5>
+    <p>
+      <?= Yii::t("terms",'Mexico News utiliza la tecnología más avanzada y los procesos para la rotección de la información proporcionada por los titulares de los datos personales. Esta ecnología cifra, codifica y previene la intercepción de la información suministrada vía nternet y del Centro de Atención Telefónica, incluyendo tarjetas de crédito y direcciones de correo electrónico. Mexico News establece y mantiene medidas de seguridad administrativas, técnicas y físicas que permiten proteger los datos personales contra: daños, pérdida o alteración, destrucción, o el uso, acceso o tratamiento no autorizado. El Sitio de Internet de Mexico News contiene hipervínculos o hipertextos, anuncios, botones y herramientas de búsqueda en la red mundial que al ser oprimidos o utilizados por los usuarios conectan a otros portales o sitios de Internet propiedad de terceros. No obstante que en algunos casos estos sitios o portales de terceros se encuentran enmarcados con la barra de navegación o el estilo y apariencia de Mexico News, la Información que el Usuario llegase a proporcionar a través de esos sitios o portales no se encuentra cubierta o contemplada por este aviso de privacidad y su manejo o utilización no es responsabilidad de Mexico News, por lo que recomendamos a nuestros usuarios verificar los avisos y políticas de privacidad desplegadas o aplicables a estos sitios o portales de terceros.<br>Nos comprometemos a no transferir su información personal a terceros sin su consentimiento, salvo las excepciones previstas en el artículo 37 de la Ley Federal de Protección de Datos Personales en Posesión de los Particulares, así como a realizar esta transferencia en los términos que fija la ley.<br>Artículo 37 de la Ley Federal de Protección de Datos Personales en Posesión de los Particulares.<br>Artículo 37.- Las transferencias nacionales o internacionales de datos podrán llevarse a cabo sin el consentimiento del titular cuando se dé alguno de los siguientes supuestos:<br>I. Cuando la transferencia esté prevista en una Ley o Tratado en los que México sea parte;<br>II. Cuando la transferencia sea necesaria para la prevención o el diagnóstico médico, la prestación de asistencia sanitaria, tratamiento médico o la gestión de servicios sanitarios;<br>III. Cuando la transferencia sea efectuada a sociedades controladoras, subsidiarias o afiliadas bajo el control común del responsable, o a una sociedad matriz o a cualquier sociedad del mismo grupo del responsable que opere bajo los mismos procesos y políticas internas;<br>IV. Cuando la transferencia sea necesaria por virtud de un contrato celebrado o por celebrar en interés del titular, por el responsable y un tercero;<br>V. Cuando la transferencia sea necesaria o legalmente exigida para la salvaguarda de un interés público, o para la procuración o administración de justicia;<br>VI. Cuando la transferencia sea precisa para el reconocimiento, ejercicio o defensa de un derecho en un proceso judicial.<br>VII. Cuando la transferencia sea precisa para el mantenimiento o cumplimiento de una relación jurídica entre el responsable y el titular.'); ?>
+    </p> 
+     <h5><?= Yii::t("terms",'5. Responsabilidad sobre el uso de la Información de tarjetas bancarias'); ?></h5>
+    <p>
+      <?= Yii::t("terms",'<strong>Mexico News</strong> tiene un compromiso de respeto a la privacidad de todos sus clientes, y en el caso de esta página, a todos los que realizan sus reservaciones en línea o a través del Centro de Atención Telefónica. Para garantizar la seguridad de sus operaciones en línea, utilizamos en nuestro Sitio de Internet un certificado SSL, el cual protege los datos que envía desde su navegador a nuestro sitio y base de datos. Toda la información relativa a las transacciones que realice con su tarjeta de crédito es encriptada, salvaguardando así su privacidad y seguridad. 
+Toda la información que proporcionan los clientes a <strong>Mexico News</strong>, tal como nombre, dirección, correo electrónico, teléfono y otros datos acerca de la reserva durante los procesos de pago en línea, será tratada de manera estrictamente confidencial, salvo que se especifique lo contrario a los clientes.
+'); ?>
+    </p> 
+     <h5><?= Yii::t("terms",'6. Uso de "cookies" y "direcciones de IP"'); ?></h5>
+    <p>
+      <?= Yii::t("terms",'El servidor de datos de Mexico News enviará datos al navegador del Usuario para que ser almacenados en el disco duro de su computadora. Esto nos permite identificar las computadoras utilizadas por los Usuarios al tener acceso a nuestro Portal. Este proceso es conocido como el uso de "cookies" o "direcciones de IP", mediante el uso de "cookies" o "direcciones de IP". Mediante este proceso Mexico News puede ofrecer un servicio más personalizado a sus Usuarios ya que nos permite, entre otras cosas, publicar campañas publicitarias y de promoción, medir el tamaño de nuestra audiencia y el flujo de tráfico en los distintos sitios que el Usuario visita. Mediante "cookies" o "direcciones de IP" no se identifica personalmente a los usuarios, pero sí a la IP pública de donde se conecta el usuario.'); ?>
+    </p> 
+     <h5><?= Yii::t("terms",'7. Acceso a los datos personales'); ?></h5>
+    <p>
+      <?= Yii::t("terms",'Como usuario de los servicios proporcionados por Mexico News tiene derecho de acceder a sus datos personales que proporciona y a los detalles del tratamiento de los mismos, así como a rectificarlos en caso de ser inexactos o incompletos; cancelarlos cuando considere que no se requieren para alguna de las finalidades señalados en el presente Aviso de Privacidad, estén siendo utilizados para finalidades no consentidas o haya finalizado la relación contractual o de servicio, o bien, oponerse al tratamiento de los mismos para fines específicos.<br>
+La Ley le otorga cuatro derechos a ejercer (Derechos ARCO):<br>
+• Acceso a sus datos personales para conocer cuáles se encuentran resguardados, si son correctos o actualizados y para qué finalidad se utilizan.<br>
+• Rectificación en caso de ser inexactos, incorrectos o estén desactualizados.<br>
+• Cancelación consistente en la eliminación de sus datos personales cuando considere que no están siendo utilizados para el cumplimiento de los fines establecidos en el presente Aviso de Privacidad.<br>
+• Oposición al tratamiento de sus datos personales respecto a alguno de los fines establecidos en el presente Aviso de Privacidad.<br>
+Tiene el derecho de revocar el consentimiento otorgado para el tratamiento de sus datos personales, con el propósito que se deje de hacer uso de los mismos, asimismo, puede revocar su consentimiento a recibir promociones y ofertas de manera telefónica o por correo electrónico.<br>
+Para ejercer sus Derechos ARCO o su derecho a revocar el consentimiento para el tratamiento de sus datos personales, deberá presentar su solicitud respectiva por escrito y en idioma español, y la deberá hacer llegar a Mexico News a través del siguiente correo electrónico: webmaster@lomas-travel.com, o enviar su escrito por correo, mensajería o entregar en mano al Departamento de Desarrollo Web, localizada en Calle de Acceso L28, Manzana 16 Lote 37 Supermanzana 309, Cancún, Quintana Roo, México, Código Postal 77560.<br>
+Su escrito de solicitud deberá indicar su nombre completo con apellidos, anexar copia simple de su identificación oficial, indicar su correo electrónico o dirección física que designe para notificaciones y algún número telefónico de contacto.<br>
+Mexico News le dará seguimiento a su solicitud en un lapso de 15 días hábiles contados a partir de la recepción de dicha solicitud con la documentación completa, para comunicarle sí procedió o no dicha solicitud, informando su rectificación, realizar las gestiones necesarias para la cancelación de sus datos personales, o finalizar el uso de los mismos.<br>
+'); ?>
+    </p>  
+     <h5><?= Yii::t("terms",'8. Modificaciones al Aviso de Privacidad'); ?></h5>
+    <p>
+      <?= Yii::t("terms",'Mexico News se reserva el derecho de modificar total o parcialmente los términos y condiciones de este Aviso de Privacidad si es necesario, Los cambios entraran en vigor al momento de su publicación en su Sitio de Internet.'); ?>
+    </p>     
+     <h5><?= Yii::t("terms",'9. Aceptación de términos'); ?></h5>
+    <p>
+      <?= Yii::t("terms",'Esta declaración de Confidencialidad / Privacidad está sujeta a los términos y condiciones del Sitio de Internet de Viajes Turquesa del Caribe Mexicano, S.A. de C.V. / www.mexiconewsnetwork.com antes descritos, lo cual constituye un acuerdo legal entre usted como usuario y Viajes Turquesa del Caribe Mexicano, S.A. de C.V. Si como usuario utiliza los servicios de Viajes Turquesa del Caribe Mexicano, S.A. de C.V. y/o www.lomas-travel.com.mx significa que ha leído, entendido y acordado los términos antes expuestos.'); ?>
+    </p>                            
+  </div>
 </div>

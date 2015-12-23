@@ -71,6 +71,11 @@ body {
   }
 }
 
+.collapsible-body p {
+    margin: 0;
+    padding: 0rem;
+}
+
 /*  */
   .reset{
     float: left;

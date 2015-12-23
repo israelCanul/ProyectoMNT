@@ -102,6 +102,13 @@ class SiteController extends Controller
 		$this->layout='checkout';
 		$this->render("privacy");	    	
 	}
+	public function actionTerms_Conditions(){	    	
+		$cs = Yii::app()->getclientScript();
+		$cs->registerCssFile(Yii::app()->params["baseUrl"].'/css/page/text.min.css?a='. Yii::app()->params['assets'],'screen, projection');
+		$cs->registerCssFile(Yii::app()->params["baseUrl"].'/css/page/checkout/checkout.css?a='. Yii::app()->params['assets'],'screen, projection');
+		$this->layout='checkout';
+		$this->render("terms");	    	
+	}	
 	public function actionContact(){
 
 		$mail = new PHPMailer(true);

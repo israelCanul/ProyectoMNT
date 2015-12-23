@@ -9,7 +9,7 @@
 		  	<?php foreach($_destinos as $_destino): ?>
 
 	  			<?php if($_destino->getEnLista()){ ?>
-					<div class="small col s12 m6 l4 " style=" height: 250px;overflow: hidden;">
+					<div class="small col s12 m6 l4 " style=" height: 275px;overflow: hidden;">
 			          <div class="card-destinos">
 				          <div class="card ">
 				            <div class="card-image hoverable">
@@ -43,7 +43,7 @@
 		?>
 			<?php foreach ($_categorias as $_categoria):?>
 				<?php if($_categoria->getEnLista() && $lista<9){ ?>
-					<div class="small col s12 m6 l4 " style="height: 250px;overflow: hidden;">
+					<div class="small col s12 m6 l4 " style="height: 275px;overflow: hidden;">
 			          <div class="card-destinos">
 				          <div class="card ">
 				            <div class="card-image hoverable">
